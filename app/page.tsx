@@ -97,18 +97,18 @@ export default function HomePage() {
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">BUILD</h3>
-              <p className="text-gray-600 mb-6">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
+              <p className="text-gray-600 mb-6">Semi personal training in een vaste groep.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ Semi personal training</li>
-                <li>✓ Maximaal 6 personen</li>
+                <li>✓ De voordelen van personal training</li>
+                <li>✓ In een vaste groep van maximaal 6 personen</li>
                 <li>✓ Een gestructureerd schema</li>
-                <li>✓ Train in je vaste groep</li>
+                <li>✓ Met jouw vaste coaches</li>
               </ul>
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">Groepslessen</h3>
-              <p className="text-gray-600 mb-6">Specifiek krachtprogramma. Focus op sterker worden met barbells.</p>
+              <p className="text-gray-600 mb-6">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
                 <li>✓ De beste coaches van Alkmaar</li>
                 <li>✓ Flexibel in- en uitschrijven</li>
