@@ -82,38 +82,38 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Of je nu wilt starten, structuur zoekt, of specifiek aan kracht wilt werken.</p>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
-              <p className="text-gray-600 mb-6">Ideaal om te starten. 4 weken begeleide training en een solide basis.</p>
+              <p className="text-gray-600 mb-6">Hier start iedereen. 4 weken begeleide training en een solide basis.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ 8 trainingen in 4 weken</li>
+                <li>✓ 12 trainingen in 4 weken</li>
                 <li>✓ Extra aandacht en uitleg</li>
-                <li>✓ Kleine groepen (max 8)</li>
-                <li>✓ Doorstromen naar regulier</li>
+                <li>✓ Kleine groepen (max 6)</li>
+                <li>✓ Basis leefstijladvies</li>
               </ul>
               <Link href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold mb-3">Algemeen trainen</h3>
+              <h3 className="text-2xl font-bold mb-3">BUILD</h3>
               <p className="text-gray-600 mb-6">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ Onbeperkt trainen</li>
-                <li>✓ Elke training andere focus</li>
-                <li>✓ Ervaren coaches</li>
-                <li>✓ Alle niveaus welkom</li>
+                <li>✓ Semi personal training</li>
+                <li>✓ Maximaal 6 personen</li>
+                <li>✓ Een gestructureerd schema</li>
+                <li>✓ Train in je vaste groep</li>
               </ul>
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold mb-3">BUILD</h3>
+              <h3 className="text-2xl font-bold mb-3">Groepslessen</h3>
               <p className="text-gray-600 mb-6">Specifiek krachtprogramma. Focus op sterker worden met barbells.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ 2x per week, vaste tijden</li>
-                <li>✓ Maximaal 6 personen</li>
-                <li>✓ Progressief schema</li>
-                <li>✓ Ideaal voor 40+</li>
+                <li>✓ De beste coaches van Alkmaar</li>
+                <li>✓ Flexibel in- en uitschrijven</li>
+                <li>✓ Ontmoet nieuwe vrienden</li>
+                <li>✓ Voor alle niveaus</li>
               </ul>
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
