@@ -20,9 +20,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">Contact</h4>
             <ul className="space-y-2">
-              <li>Straatnaam 123</li>
-              <li>1234 AB Alkmaar</li>
-              <li><a href="tel:0721234567" className="hover:text-white transition">072-123 4567</a></li>
+              <li>Robonsbosweg 7</li>
+              <li>1816 MK Alkmaar</li>
+              <li><a href="tel:0729200812" className="hover:text-white transition">072-9200812</a></li>
               <li><a href="mailto:info@crossfitalkmaar.nl" className="hover:text-white transition">info@crossfitalkmaar.nl</a></li>
             </ul>
           </div>
