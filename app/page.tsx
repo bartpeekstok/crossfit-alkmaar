@@ -27,8 +27,7 @@ export default function HomePage() {
               href="/contact"
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
             >
-              Plan een gratis kennismaking
-            </Link>
+              Gratis intake            </Link>
             <Link
               href="/kickstart"
               className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
