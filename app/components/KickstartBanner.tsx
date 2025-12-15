@@ -13,7 +13,7 @@ export default function KickstartBanner() {
     <>
       <div className="bg-blue-900 text-white py-4 px-4 text-center sticky top-0 z-[60]">
         <p className="text-lg md:text-xl font-bold mb-2">
-          🔥 Kickstart {currentMonth} is VOLGEBOEKT 🔥— {nextMonth} bijna vol!
+          🔥 Kickstart {currentMonth} is VOLGEBOEKT 🔥 {NextMonth} bijna vol!
         </p>
         <button
           onClick={() => setPopupOpen(true)}
