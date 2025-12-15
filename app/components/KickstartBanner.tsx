@@ -19,7 +19,7 @@ export default function KickstartBanner() {
           onClick={() => setPopupOpen(true)}
           className="bg-white text-blue-900 font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition animate-pulse"
         >
-          Zet mij op de wachtlijst →
+          Zet mij op de lijst →
         </button>
       </div>
 
