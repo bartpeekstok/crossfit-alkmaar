@@ -5,14 +5,13 @@ import { useState } from "react";
 export default function KickstartBanner() {
   const [popupOpen, setPopupOpen] = useState(false);
 
-  // Dynamische maandnamen
   const now = new Date();
   const currentMonth = now.toLocaleString('nl-NL', { month: 'long' });
   const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1).toLocaleString('nl-NL', { month: 'long' });
 
   return (
     <>
-      <div className="bg-[#1e3a5f] text-white py-3 px-4 text-center sticky top-0 z-[60]">
+      <div className="bg-blue-900 text-white py-3 px-4 text-center sticky top-0 z-[60]">
         <p className="text-lg md:text-xl font-semibold">
           🎉 Onze Kickstart zit vol in {currentMonth}!
         </p>
@@ -24,7 +23,6 @@ export default function KickstartBanner() {
         </button>
       </div>
 
-      {/* Popup */}
       {popupOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
