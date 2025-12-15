@@ -1,15 +1,15 @@
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative bg-gray-900 text-white py-20 px-6 min-h-[600px] flex items-center">
-        <img 
-          src="/images/hero.jpg" 
-          alt="CrossFit Alkmaar" 
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
-        
-        <div className="max-w-4xl mx-auto text-center relative z-20">
+      <section 
+        className="relative text-white py-20 px-6 min-h-[600px] flex items-center"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(/images/hero.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center relative">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Word sterker, beweeg beter, voel je fitter
           </h1>
