@@ -11,15 +11,15 @@ export default function KickstartBanner() {
 
   return (
     <>
-      <div className="bg-blue-900 text-white py-3 px-4 text-center sticky top-0 z-[60]">
-        <p className="text-lg md:text-xl font-semibold">
-          🎉 Onze Kickstart zit vol in {currentMonth}!
+      <div className="bg-blue-900 text-white py-4 px-4 text-center sticky top-0 z-[60]">
+        <p className="text-lg md:text-xl font-bold mb-2">
+          🔥 Kickstart {currentMonth} is VOLGEBOEKT — {nextMonth} bijna vol!
         </p>
         <button
           onClick={() => setPopupOpen(true)}
-          className="text-base md:text-lg underline hover:text-gray-300 transition mt-1 block mx-auto"
+          className="bg-white text-blue-900 font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition animate-pulse"
         >
-          Zet jezelf op de wachtlijst voor {nextMonth} →
+          Zet mij op de wachtlijst →
         </button>
       </div>
 
@@ -33,8 +33,8 @@ export default function KickstartBanner() {
               </svg>
             </button>
             <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
-              <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
-              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
+              <h2 className="text-2xl font-bold mb-2">RESERVEER JE PLEK VOOR {nextMonth.toUpperCase()}</h2>
+              <p className="text-gray-300">Je staat op de wachtlijst. Wij nemen snel contact op!</p>
             </div>
             <div className="bg-white p-6">
               <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
