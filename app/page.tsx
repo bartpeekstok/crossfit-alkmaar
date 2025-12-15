@@ -36,19 +36,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 1 - Boven de stappen */}
+      {/* Video 1 */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Zie wat onze leden zeggen</h2>
-          <p className="text-center text-gray-600 mb-8">Echte verhalen van leden die net als jij begonnen zijn.</p>
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe 
-              className="w-full h-full" 
-              src="https://www.youtube.com/embed/G9HkOnSsKg8" 
-              title="CrossFit Alkmaar - Testimonial"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -77,19 +69,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 2 - Onder de stappen */}
+      {/* Video 2 */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Training voor elk niveau</h2>
-          <p className="text-center text-gray-600 mb-8">Of je nu beginner bent of ervaren, onze coaches helpen je vooruit.</p>
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe 
-              className="w-full h-full" 
-              src="https://www.youtube.com/embed/a2zbZIlU27Y" 
-              title="CrossFit Alkmaar - Training"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen
-            ></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -120,7 +104,7 @@ export default function HomePage() {
                 <li>✓ Ervaren coaches</li>
                 <li>✓ Alle niveaus welkom</li>
               </ul>
-              <Link href="/programmas" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
+              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">BUILD</h3>
@@ -131,33 +115,38 @@ export default function HomePage() {
                 <li>✓ Progressief schema</li>
                 <li>✓ Ideaal voor 40+</li>
               </ul>
-              <Link href="/programmas" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
+              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Resultaten */}
       <section className="py-16 px-6 bg-gray-50">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Resultaten van echte leden</h2>
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <a 
+              href="https://www.google.com/search?q=crossfit+alkmaar#lrd=0x47cf573834f8b5b7:0x4a55c3c9c9a67e0e,1"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-center hover:scale-105 transition cursor-pointer"
+            >
+              <div className="text-5xl font-bold text-blue-900 mb-2">260+</div>
+              <p className="text-gray-600">Google Reviews ⭐</p>
+            </a>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">200+</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">300+</div>
               <p className="text-gray-600">Actieve leden</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">15+</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">12+</div>
               <p className="text-gray-600">Jaar ervaring</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">50+</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">35+</div>
               <p className="text-gray-600">Gemiddelde leeftijd</p>
             </div>
-          </div>
-          <div className="max-w-3xl mx-auto bg-white p-8 rounded-lg">
-            <p className="text-lg italic text-gray-700 mb-4">Ik ben 58 en dacht dat dit niets voor mij was. Na de Kickstart train ik nu 3x per week en voel me beter dan 10 jaar geleden.</p>
-            <p className="font-semibold">— Petra, 58 jaar, lid sinds 2023</p>
           </div>
         </div>
       </section>
@@ -177,7 +166,7 @@ export default function HomePage() {
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met CrossFit te beginnen?</h3>
-              <p className="text-gray-600">Absoluut niet. Onze gemiddelde leeftijd is 50+. We hebben leden van 60, 65, 70+ die veilig trainen.</p>
+              <p className="text-gray-600">Absoluut niet. Onze gemiddelde leeftijd is 35+. We hebben leden van 20 tot 70+ die veilig trainen.</p>
             </div>
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="text-xl font-semibold mb-2">Wat als ik blessures of beperkingen heb?</h3>
