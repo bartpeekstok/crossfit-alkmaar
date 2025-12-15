@@ -1,22 +1,21 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import Header from "./components/Header";
 import KickstartBanner from "./components/KickstartBanner";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
+import "./globals.css";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
-  description: "Professionele begeleiding, schaalbare trainingen en resultaten voor beginners tot gevorderden.",
+export const metadata = {
+  title: "CrossFit Alkmaar - Word sterker, beweeg beter, voel je fitter",
+  description: "Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="nl">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body>
         <KickstartBanner />
         <Header />
         {children}
