@@ -10,22 +10,12 @@ export default function HomePage() {
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Word sterker, beweeg beter, voel je fitter
-          </h1>
-          <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.
-          </p>
-          <p className="text-lg mb-8 text-gray-400">
-            Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
-          </p>
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Word sterker, beweeg beter, voel je fitter</h1>
+          <p className="text-xl md:text-2xl mb-4 text-gray-300">Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.</p>
+          <p className="text-lg mb-8 text-gray-400">Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer">
-              Plan een gratis kennismaking
-            </a>
-            <a href="#kickstart" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition cursor-pointer">
-              Bekijk de 28-Day Kickstart
-            </a>
+            <a href="/contact" className="bg-blue-700 hover:bg-blue-800 text-white font-semibold py-4 px-8 rounded-lg transition">Plan een gratis kennismaking</a>
+            <a href="/kickstart" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition">Bekijk de 28-Day Kickstart</a>
           </div>
         </div>
       </section>
@@ -90,7 +80,7 @@ export default function HomePage() {
                 <li>✓ Kleine groepen (max 8 personen)</li>
                 <li>✓ Daarna doorstromen naar regulier</li>
               </ul>
-              <a href="#kickstart" className="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <a href="/kickstart" className="block w-full text-center bg-blue-700 hover:bg-blue-800 text-white font-semibold py-3 rounded-lg transition">Meer info</a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">Algemeen trainen</h3>
@@ -101,7 +91,7 @@ export default function HomePage() {
                 <li>✓ Begeleiding door ervaren coaches</li>
                 <li>✓ Alle niveaus welkom</li>
               </ul>
-              <a href="#algemeen" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <a href="/programmas" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition">Meer info</a>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">BUILD</h3>
@@ -112,7 +102,7 @@ export default function HomePage() {
                 <li>✓ Progressief krachtschema</li>
                 <li>✓ Ideaal voor 40+</li>
               </ul>
-              <a href="#build" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <a href="/programmas" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition">Meer info</a>
             </div>
           </div>
         </div>
@@ -170,16 +160,9 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen, gewoon kennismaken en kijken of het bij je past.</p>
-          <a href="#contact" className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer">Plan je gratis kennismaking</a>
+          <a href="/contact" className="inline-block bg-white hover:bg-gray-100 text-blue-700 font-semibold py-4 px-8 rounded-lg transition text-lg">Plan je gratis kennismaking</a>
         </div>
       </section>
-
-      <footer className="bg-gray-900 text-gray-400 py-8 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="mb-2">CrossFit Alkmaar</p>
-          <p className="text-sm">Adres placeholder • contact@crossfitalkmaar.nl • 072-123 4567</p>
-        </div>
-      </footer>
     </div>
   );
 }
