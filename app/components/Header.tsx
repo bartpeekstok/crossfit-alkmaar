@@ -7,6 +7,7 @@ import { useState } from "react";
 export default function Header() {
   const [popupOpen, setPopupOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <>
@@ -22,6 +23,7 @@ export default function Header() {
             />
           </Link>
           
+          {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {/* Programma's Dropdown */}
             <div 
@@ -38,19 +40,19 @@ export default function Header() {
               
               {dropdownOpen && (
                 <div className="absolute top-full left-0 bg-gray-900 py-2 min-w-[200px] shadow-lg">
-                  <Link href="/kickstart" className="block px-4 py-2 hover:bg-gray-800 transition">
+                  <Link href="/kickstart" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     28 DAY KICKSTART
                   </Link>
-                  <Link href="/personal-training" className="block px-4 py-2 hover:bg-gray-800 transition">
+                  <Link href="/personal-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     PERSONAL TRAINING
                   </Link>
-                  <Link href="/small-group-training" className="block px-4 py-2 hover:bg-gray-800 transition">
+                  <Link href="/small-group-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     SMALL GROUP TRAINING
                   </Link>
-                  <Link href="/groepslessen" className="block px-4 py-2 hover:bg-gray-800 transition">
+                  <Link href="/groepslessen" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     GROEPSLESSEN
                   </Link>
-                  <Link href="/voedingsadvies" className="block px-4 py-2 hover:bg-gray-800 transition">
+                  <Link href="/voedingsadvies" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     VOEDINGSADVIES
                   </Link>
                 </div>
@@ -69,12 +71,73 @@ export default function Header() {
           </nav>
 
           {/* Mobile menu button */}
-          <button className="md:hidden text-white">
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
+          <button 
+            className="md:hidden text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
           </button>
         </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
+            {/* Programma's Dropdown Mobile */}
+            <div className="mb-2">
+              <button 
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="w-full flex items-center justify-between py-2 hover:text-gray-300 transition"
+              >
+                Programma's
+                <svg className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {dropdownOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  <Link href="/kickstart" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    28 DAY KICKSTART
+                  </Link>
+                  <Link href="/personal-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    PERSONAL TRAINING
+                  </Link>
+                  <Link href="/small-group-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    SMALL GROUP TRAINING
+                  </Link>
+                  <Link href="/groepslessen" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    GROEPSLESSEN
+                  </Link>
+                  <Link href="/voedingsadvies" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    VOEDINGSADVIES
+                  </Link>
+                </div>
+              )}
+            </div>
+
+            <Link href="/blog" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/over-ons" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Over ons</Link>
+            <Link href="/contact" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            
+            <button
+              onClick={() => {
+                setPopupOpen(true);
+                setMobileMenuOpen(false);
+              }}
+              className="w-full mt-4 bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-4 rounded-lg transition"
+            >
+              Gratis intake
+            </button>
+          </nav>
+        )}
       </header>
 
       {/* Popup */}
