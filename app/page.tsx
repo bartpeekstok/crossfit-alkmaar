@@ -66,6 +66,15 @@ export default function HomePage() {
               <p className="text-gray-600">Binnen weken voel je je sterker, energieker en fitter. We meten je voortgang samen.</p>
             </div>
           </div>
+          {/* Button onder 1,2,3 blok */}
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+            >
+              Gratis intake
+            </button>
+          </div>
         </div>
       </section>
 
@@ -117,6 +126,15 @@ export default function HomePage() {
               </ul>
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
+          </div>
+          {/* Button onder programma blok */}
+          <div className="text-center mt-12">
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+            >
+              Gratis intake
+            </button>
           </div>
         </div>
       </section>

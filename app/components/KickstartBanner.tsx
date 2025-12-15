@@ -5,22 +5,23 @@ import { useState } from "react";
 export default function KickstartBanner() {
   const [popupOpen, setPopupOpen] = useState(false);
 
+  // Dynamische maandnamen
+  const now = new Date();
+  const currentMonth = now.toLocaleString('nl-NL', { month: 'long' });
+  const nextMonth = new Date(now.getFullYear(), now.getMonth() + 1, 1).toLocaleString('nl-NL', { month: 'long' });
+
   return (
     <>
-      <div className="bg-blue-900 text-white py-4 px-6 sticky top-0 z-[60]">
-        <div className="max-w-6xl mx-auto text-center">
-          <p className="text-lg md:text-xl font-semibold">
-            🎉 Onze Kickstart zit vol deze maand!
-          </p>
-          <p className="text-base md:text-lg mt-1">
-            <button 
-              onClick={() => setPopupOpen(true)}
-              className="underline hover:no-underline cursor-pointer"
-            >
-              Zet jezelf op de wachtlijst voor volgende maand →
-            </button>
-          </p>
-        </div>
+      <div className="bg-[#1e3a5f] text-white py-3 px-4 text-center sticky top-0 z-[60]">
+        <p className="text-lg md:text-xl font-semibold">
+          🎉 Onze Kickstart zit vol in {currentMonth}!
+        </p>
+        <button
+          onClick={() => setPopupOpen(true)}
+          className="text-base md:text-lg underline hover:text-gray-300 transition mt-1 block mx-auto"
+        >
+          Zet jezelf op de wachtlijst voor {nextMonth} →
+        </button>
       </div>
 
       {/* Popup */}
