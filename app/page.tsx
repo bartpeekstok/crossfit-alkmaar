@@ -66,11 +66,17 @@ export default function HomePage() {
               <p className="text-gray-600">Binnen weken voel je je sterker, energieker en fitter. We meten je voortgang samen.</p>
             </div>
           </div>
-          {/* Button onder 1,2,3 blok */}
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      {/* CTA Card 1 */}
+      <section className="py-12 px-6 bg-gray-200">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+            <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
             <button
               onClick={() => setPopupOpen(true)}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
             >
               Gratis intake
             </button>
@@ -127,11 +133,18 @@ export default function HomePage() {
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
-          {/* Button onder programma blok */}
-          <div className="text-center mt-12">
+        </div>
+      </section>
+
+      {/* CTA Card 2 */}
+      <section className="py-12 px-6 bg-gray-200">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+            <h3 className="text-2xl font-bold mb-4">Weet je het nog niet zeker?</h3>
+            <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit bij je past.</p>
             <button
               onClick={() => setPopupOpen(true)}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
             >
               Gratis intake
             </button>
