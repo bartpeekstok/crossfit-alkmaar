@@ -5,65 +5,76 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Header() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <>
-      <header className="bg-gray-900 text-white py-4 px-6 sticky top-[72px] z-50">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+      <header className="bg-gray-900 text-white py-3 px-6 sticky top-[72px] z-50">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
-            <Image 
-              src="/images/logo.png" 
-              alt="CrossFit Alkmaar" 
-              width={50} 
-              height={50}
-              className="h-12 w-auto"
+            <Image
+              src="/images/logo.png"
+              alt="CrossFit Alkmaar"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
             />
           </Link>
-
-          <nav className="hidden md:flex space-x-8">
-            <Link href="/programmas" className="hover:text-blue-400 transition">Programma's</Link>
-            <Link href="/kickstart" className="hover:text-blue-400 transition">Kickstart</Link>
-            <Link href="/over-ons" className="hover:text-blue-400 transition">Over ons</Link>
-            <Link href="/contact" className="hover:text-blue-400 transition">Contact</Link>
-          </nav>
-
-          <button 
-            onClick={() => setPopupOpen(true)}
-            className="hidden md:block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-2 px-4 rounded-lg transition"
-          >
-            Gratis intake
-          </button>
-
-          <button 
-            className="md:hidden text-white"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              {menuOpen ? (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              ) : (
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          
+          <nav className="hidden md:flex items-center space-x-8">
+            {/* Programma's Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+              <button className="hover:text-gray-300 transition flex items-center gap-1">
+                Programma's
+                <svg className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {dropdownOpen && (
+                <div className="absolute top-full left-0 bg-gray-900 py-2 min-w-[200px] shadow-lg">
+                  <Link href="/kickstart" className="block px-4 py-2 hover:bg-gray-800 transition">
+                    28 DAY KICKSTART
+                  </Link>
+                  <Link href="/personal-training" className="block px-4 py-2 hover:bg-gray-800 transition">
+                    PERSONAL TRAINING
+                  </Link>
+                  <Link href="/small-group-training" className="block px-4 py-2 hover:bg-gray-800 transition">
+                    SMALL GROUP TRAINING
+                  </Link>
+                  <Link href="/groepslessen" className="block px-4 py-2 hover:bg-gray-800 transition">
+                    GROEPSLESSEN
+                  </Link>
+                  <Link href="/voedingsadvies" className="block px-4 py-2 hover:bg-gray-800 transition">
+                    VOEDINGSADVIES
+                  </Link>
+                </div>
               )}
-            </svg>
-          </button>
-        </div>
+            </div>
 
-        {menuOpen && (
-          <nav className="md:hidden mt-4 space-y-4 text-center">
-            <Link href="/programmas" className="block hover:text-blue-400 transition" onClick={() => setMenuOpen(false)}>Programma's</Link>
-            <Link href="/kickstart" className="block hover:text-blue-400 transition" onClick={() => setMenuOpen(false)}>Kickstart</Link>
-            <Link href="/over-ons" className="block hover:text-blue-400 transition" onClick={() => setMenuOpen(false)}>Over ons</Link>
-            <Link href="/contact" className="block hover:text-blue-400 transition" onClick={() => setMenuOpen(false)}>Contact</Link>
-            <button 
-              onClick={() => { setPopupOpen(true); setMenuOpen(false); }}
-              className="block w-full bg-blue-900 hover:bg-blue-950 text-white font-semibold py-2 px-4 rounded-lg transition mx-auto max-w-xs"
+            <Link href="/blog" className="hover:text-gray-300 transition">Blog</Link>
+            <Link href="/over-ons" className="hover:text-gray-300 transition">Over ons</Link>
+            <Link href="/contact" className="hover:text-gray-300 transition">Contact</Link>
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-2 px-4 rounded-lg transition"
             >
               Gratis intake
             </button>
           </nav>
-        )}
+
+          {/* Mobile menu button */}
+          <button className="md:hidden text-white">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
       </header>
 
       {/* Popup */}
