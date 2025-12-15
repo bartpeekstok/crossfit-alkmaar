@@ -41,19 +41,19 @@ export default function Header() {
               {dropdownOpen && (
                 <div className="absolute top-full left-0 bg-gray-900 py-2 min-w-[200px] shadow-lg">
                   <Link href="/kickstart" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
-                    28 DAY KICKSTART
+                    28 Day Kickstart
                   </Link>
                   <Link href="/personal-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
-                    PERSONAL TRAINING
+                    Personal Training
                   </Link>
                   <Link href="/small-group-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
-                    SMALL GROUP TRAINING
+                    Small Group Training
                   </Link>
                   <Link href="/groepslessen" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
-                    GROEPSLESSEN
+                    Groepslessen
                   </Link>
                   <Link href="/voedingsadvies" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
-                    VOEDINGSADVIES
+                    Voedingsadvies
                   </Link>
                 </div>
               )}
@@ -105,19 +105,19 @@ export default function Header() {
               {dropdownOpen && (
                 <div className="pl-4 space-y-2 mt-2">
                   <Link href="/kickstart" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
-                    28 DAY KICKSTART
+                    28 Day Kickstart
                   </Link>
                   <Link href="/personal-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
-                    PERSONAL TRAINING
+                    Personal Training
                   </Link>
                   <Link href="/small-group-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
-                    SMALL GROUP TRAINING
+                    Small Group Training
                   </Link>
                   <Link href="/groepslessen" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
-                    GROEPSLESSEN
+                    Groepslessen
                   </Link>
                   <Link href="/voedingsadvies" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
-                    VOEDINGSADVIES
+                    Voedingsadvies
                   </Link>
                 </div>
               )}
