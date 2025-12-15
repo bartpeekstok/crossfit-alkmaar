@@ -66,28 +66,39 @@ export default function Header() {
         )}
       </header>
 
+      {/* Popup met header */}
       {popupOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center">
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div 
             className="absolute inset-0 bg-black bg-opacity-50"
             onClick={() => setPopupOpen(false)}
           ></div>
           
-          <div className="relative bg-white rounded-lg shadow-xl w-full max-w-lg mx-4">
+          <div className="relative w-full max-w-lg bg-[#1e3a5f] rounded-lg overflow-hidden shadow-2xl">
+            {/* Close button */}
             <button 
               onClick={() => setPopupOpen(false)}
-              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 z-10 bg-white rounded-full p-1"
+              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
+
+            {/* Header */}
+            <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
+              <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
+              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
+            </div>
             
-            <iframe
-              src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
-              style={{ width: "100%", height: "450px", border: "none", borderRadius: "7px" }}
-              title="Website Form"
-            ></iframe>
+            {/* Form */}
+            <div className="bg-white p-6">
+              <iframe
+                src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
+                style={{ width: "100%", height: "350px", border: "none" }}
+                title="Website Form"
+              ></iframe>
+            </div>
           </div>
         </div>
       )}
