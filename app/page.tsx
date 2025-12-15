@@ -3,12 +3,12 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
       <section className="relative bg-gray-900 text-white py-20 px-6 min-h-[600px] flex items-center">
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            background: 'linear-gradient(135deg, #1e3a8a 0%, #64748b 50%, #334155 100%)',
+            backgroundImage: 'url(/images/hero.jpg)',
           }}
         ></div>
-        <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
         
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
@@ -84,21 +84,14 @@ export default function HomePage() {
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4 flex items-center justify-center relative group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900"></div>
-                <a 
-                  href="https://www.youtube.com/watch?v=esc-52ZNdPY" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex flex-col items-center"
-                >
-                  <svg className="w-20 h-20 text-white opacity-90 group-hover:opacity-100 transition mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                  <span className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-semibold transition">
-                    Bekijk video op YouTube
-                  </span>
-                </a>
+              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/G9HkOnSsKg8"
+                  title="CrossFit Alkmaar testimonial 1"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Ik dacht dat CrossFit niets voor mij was
@@ -109,21 +102,14 @@ export default function HomePage() {
             </div>
 
             <div>
-              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4 flex items-center justify-center relative group cursor-pointer">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-900 to-gray-900"></div>
-                <a 
-                  href="https://www.youtube.com/watch?v=8NZc7sw9UDI" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="relative z-10 flex flex-col items-center"
-                >
-                  <svg className="w-20 h-20 text-white opacity-90 group-hover:opacity-100 transition mb-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                  <span className="bg-blue-700 hover:bg-blue-800 text-white px-6 py-2 rounded-lg font-semibold transition">
-                    Bekijk video op YouTube
-                  </span>
-                </a>
+              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4">
+                <iframe
+                  className="w-full h-full"
+                  src="https://www.youtube.com/embed/a2zbZIlU27Y"
+                  title="CrossFit Alkmaar testimonial 2"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                ></iframe>
               </div>
               <h3 className="text-xl font-semibold mb-2">
                 Geen tijd was altijd mijn excuus
