@@ -13,13 +13,13 @@ export default function KickstartBanner() {
     <>
       <div className="bg-blue-900 text-white py-4 px-4 text-center sticky top-0 z-[60]">
         <p className="text-lg md:text-xl font-bold mb-2">
-          🔥 Kickstart {currentMonth} is VOLGEBOEKT — {nextMonth} bijna vol!
+          🔥 Kickstart {currentMonth} is VOLGEBOEKT 🔥— {nextMonth} bijna vol!
         </p>
         <button
           onClick={() => setPopupOpen(true)}
           className="bg-white text-blue-900 font-bold py-2 px-6 rounded-full hover:bg-gray-100 transition animate-pulse"
         >
-          Zet mij op de lijst →
+          Zet mij op de lijst!
         </button>
       </div>
 
