@@ -5,11 +5,11 @@ export default function HomePage() {
         <img 
           src="/images/hero.jpg" 
           alt="CrossFit Alkmaar" 
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover z-0"
         />
-        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div className="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
         
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="max-w-4xl mx-auto text-center relative z-20">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Word sterker, beweeg beter, voel je fitter
           </h1>
