@@ -34,7 +34,7 @@ export default function KickstartBanner() {
             </button>
             <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
               <h2 className="text-2xl font-bold mb-2">RESERVEER JE PLEK VOOR {nextMonth.toUpperCase()}</h2>
-              <p className="text-gray-300">Je staat op de wachtlijst. Wij nemen snel contact op!</p>
+              <p className="text-gray-300">Zet jezelf op de wachtlijst. Wij nemen snel contact op!</p>
             </div>
             <div className="bg-white p-6">
               <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
