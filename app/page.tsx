@@ -7,7 +7,7 @@ export default function HomePage() {
   const [popupOpen, setPopupOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-200">
       {/* Hero Section */}
       <section
         className="relative text-white py-20 px-6 min-h-[600px] flex items-center"
@@ -37,7 +37,7 @@ export default function HomePage() {
       </section>
 
       {/* Video 1 */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -46,7 +46,7 @@ export default function HomePage() {
       </section>
 
       {/* Hoe werkt het - 3 stappen */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -70,7 +70,7 @@ export default function HomePage() {
       </section>
 
       {/* Video 2 */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -79,7 +79,7 @@ export default function HomePage() {
       </section>
 
       {/* Programmas */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
@@ -122,7 +122,7 @@ export default function HomePage() {
       </section>
 
       {/* Resultaten */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -152,23 +152,23 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6 bg-white">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
           <div className="space-y-6">
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ik ben niet fit genoeg om te starten</h3>
               <p className="text-gray-600">Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau.</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ik heb geen tijd voor 5x per week trainen</h3>
               <p className="text-gray-600">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten.</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met CrossFit te beginnen?</h3>
               <p className="text-gray-600">Absoluut niet. Onze gemiddelde leeftijd is 35+. We hebben leden van 20 tot 70+ die veilig trainen.</p>
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat als ik blessures of beperkingen heb?</h3>
               <p className="text-gray-600">We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie.</p>
             </div>
