@@ -1,6 +1,10 @@
-import Link from "next/link";
+"use client";
+
+import { useState } from "react";
 
 export default function KickstartPage() {
+  const [popupOpen, setPopupOpen] = useState(false);
+
   const maanden = [
     "januari", "februari", "maart", "april", "mei", "juni",
     "juli", "augustus", "september", "oktober", "november", "december"
@@ -10,35 +14,42 @@ export default function KickstartPage() {
   const volgendeMaand = maanden[(huidigeMaandIndex + 1) % 12];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-200">
       {/* Hero */}
-      <section className="bg-gray-900 text-white py-20 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section
+        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/kickstart-header.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             28-Day Kickstart
           </h1>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl md:text-2xl text-gray-200 mb-8">
             De perfecte start voor iedereen die wil beginnen met CrossFit. In 4 weken bouw je een sterke basis op.
           </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition"
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Claim je plek voor {volgendeMaand}
-          </Link>
+          </button>
         </div>
       </section>
 
       {/* Wat is de Kickstart */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Wat is de 28-Day Kickstart?</h2>
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
-              De Kickstart is speciaal ontworpen voor mensen die nieuw zijn bij CrossFit. Gedurende 4 weken krijg je 8 trainingen waarin je alle basis bewegingen leert, onder begeleiding van ervaren coaches.
+              De Kickstart is speciaal ontworpen voor mensen die nieuw zijn bij CrossFit. Gedurende 4 weken krijg je 12 trainingen waarin je alle basis bewegingen leert, onder begeleiding van ervaren coaches.
             </p>
             <p className="mb-4">
-              Je traint in een kleine groep van maximaal 8 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om elke beweging goed uit te leggen en te oefenen.
+              Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om elke beweging goed uit te leggen en te oefenen.
             </p>
             <p>
               Na de Kickstart kun je met vertrouwen doorstromen naar onze reguliere groepstrainingen.
@@ -48,25 +59,25 @@ export default function KickstartPage() {
       </section>
 
       {/* Wat je krijgt */}
-      <section className="py-16 px-6 bg-gray-50">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">✓ 8 trainingen in 4 weken</h3>
-              <p className="text-gray-600">Twee trainingen per week op vaste tijden, zodat het in je schema past.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ 12 trainingen in 4 weken</h3>
+              <p className="text-gray-600">Drie trainingen per week op vaste tijden, zodat het in je schema past.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">✓ Kleine groepen</h3>
-              <p className="text-gray-600">Maximaal 8 personen per groep voor persoonlijke aandacht.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ Kleine groepen (max 6)</h3>
+              <p className="text-gray-600">Maximaal 6 personen per groep voor persoonlijke aandacht.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Alle basis bewegingen</h3>
               <p className="text-gray-600">Je leert squats, deadlifts, presses en olympische liften veilig uitvoeren.</p>
             </div>
-            <div className="bg-white p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-3">✓ Ervaren coaches</h3>
-              <p className="text-gray-600">Onze coaches hebben jarenlange ervaring met beginners.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ Basis leefstijladvies</h3>
+              <p className="text-gray-600">Naast training krijg je tips over voeding en herstel.</p>
             </div>
           </div>
         </div>
@@ -79,14 +90,35 @@ export default function KickstartPage() {
           <p className="text-xl mb-8">
             De Kickstart van {volgendeMaand} heeft nog plekken beschikbaar. Schrijf je nu in!
           </p>
-          <Link
-            href="/contact"
+          <button
+            onClick={() => setPopupOpen(true)}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Meld je aan
-          </Link>
+          </button>
         </div>
       </section>
+
+      {/* Popup */}
+      {popupOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
+          <div className="relative w-full max-w-lg bg-[#1e3a5f] rounded-lg overflow-hidden shadow-2xl">
+            <button onClick={() => setPopupOpen(false)} className="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
+              <h2 className="text-2xl font-bold mb-2">RESERVEER JE PLEK VOOR {volgendeMaand.toUpperCase()}</h2>
+              <p className="text-gray-300">Zet jezelf op de wachtlijst. Wij nemen snel contact op!</p>
+            </div>
+            <div className="bg-white p-6">
+              <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
