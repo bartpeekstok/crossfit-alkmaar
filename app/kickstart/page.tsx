@@ -29,7 +29,7 @@ export default function KickstartPage() {
             28-Day Kickstart
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            De perfecte start voor iedereen die wil beginnen met CrossFit. In 4 weken bouw je een sterke basis op.
+            De perfecte start naar een fitter en sterker leven. In 4 weken bouw je een sterke basis op.
           </p>
           <button
             onClick={() => setPopupOpen(true)}
@@ -43,16 +43,16 @@ export default function KickstartPage() {
       {/* Wat is de Kickstart */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Wat is de 28-Day Kickstart?</h2>
+          <h2 className="text-3xl font-bold mb-8">Wat is de 28 day Kickstart?</h2>
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
-              De Kickstart is speciaal ontworpen voor mensen die nieuw zijn bij CrossFit. Gedurende 4 weken krijg je 12 trainingen waarin je alle basis bewegingen leert, onder begeleiding van ervaren coaches.
+              De Kickstart is speciaal ontworpen voor drukke mensen die willen werken aan een fitter en sterker lijf. Gedurende 4 weken krijg je 12 trainingen waarin je een goede basis aanleert, onder begeleiding van ervaren coaches.
             </p>
             <p className="mb-4">
               Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om elke beweging goed uit te leggen en te oefenen.
             </p>
             <p>
-              Na de Kickstart kun je met vertrouwen doorstromen naar onze reguliere groepstrainingen.
+              Na de Kickstart kun je met vertrouwen doorstromen naar onze BUILD lessen of reguliere groepstrainingen.
             </p>
           </div>
         </div>
@@ -72,8 +72,8 @@ export default function KickstartPage() {
               <p className="text-gray-600">Maximaal 6 personen per groep voor persoonlijke aandacht.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Alle basis bewegingen</h3>
-              <p className="text-gray-600">Je leert squats, deadlifts, presses en olympische liften veilig uitvoeren.</p>
+              <h3 className="text-xl font-semibold mb-3">✓ Een goede basis</h3>
+              <p className="text-gray-600">Onder leiding van onze coaches leer je de basis van kracht- en conditietraining.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Basis leefstijladvies</h3>
