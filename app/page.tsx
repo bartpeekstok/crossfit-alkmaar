@@ -36,7 +36,24 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Hoe werkt het */}
+      {/* Video 1 - Boven de stappen */}
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">Zie wat onze leden zeggen</h2>
+          <p className="text-center text-gray-600 mb-8">Echte verhalen van leden die net als jij begonnen zijn.</p>
+          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe 
+              className="w-full h-full" 
+              src="https://www.youtube.com/embed/G9HkOnSsKg8" 
+              title="CrossFit Alkmaar - Testimonial"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Hoe werkt het - 3 stappen */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
@@ -60,26 +77,19 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Videos */}
+      {/* Video 2 - Onder de stappen */}
       <section className="py-16 px-6 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Zie wat onze leden zeggen</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Echte verhalen van leden die net als jij begonnen zijn.</p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Echte resultaten van echte leden</h3>
-              <p className="text-gray-600">Ontdek hoe onze leden sterker en fitter worden met professionele begeleiding.</p>
-            </div>
-            <div>
-              <div className="bg-gray-800 rounded-lg overflow-hidden aspect-video mb-4">
-                <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              </div>
-              <h3 className="text-xl font-semibold mb-2">Training voor elk niveau</h3>
-              <p className="text-gray-600">Of je nu beginner bent of ervaren, onze coaches helpen je vooruit.</p>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-4">Training voor elk niveau</h2>
+          <p className="text-center text-gray-600 mb-8">Of je nu beginner bent of ervaren, onze coaches helpen je vooruit.</p>
+          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe 
+              className="w-full h-full" 
+              src="https://www.youtube.com/embed/a2zbZIlU27Y" 
+              title="CrossFit Alkmaar - Training"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen
+            ></iframe>
           </div>
         </div>
       </section>
@@ -191,32 +201,22 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Popup met header */}
+      {/* Popup */}
       {popupOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
-          
           <div className="relative w-full max-w-lg bg-[#1e3a5f] rounded-lg overflow-hidden shadow-2xl">
-            <button 
-              onClick={() => setPopupOpen(false)}
-              className="absolute top-4 right-4 text-white hover:text-gray-300 z-10"
-            >
+            <button onClick={() => setPopupOpen(false)} className="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-
             <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
               <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
               <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
             </div>
-            
             <div className="bg-white p-6">
-              <iframe
-                src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
-                style={{ width: "100%", height: "350px", border: "none" }}
-                title="Website Form"
-              ></iframe>
+              <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
             </div>
           </div>
         </div>
