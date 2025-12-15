@@ -2,23 +2,11 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [popupOpen, setPopupOpen] = useState(false);
-
-  useEffect(() => {
-    // Load the form embed script
-    const script = document.createElement("script");
-    script.src = "https://kilo.gymleadmachine.com/js/form_embed.js";
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
 
   return (
     <>
@@ -34,7 +22,6 @@ export default function Header() {
             />
           </Link>
 
-          {/* Desktop Menu */}
           <nav className="hidden md:flex space-x-8">
             <Link href="/programmas" className="hover:text-blue-400 transition">Programma's</Link>
             <Link href="/kickstart" className="hover:text-blue-400 transition">Kickstart</Link>
@@ -42,7 +29,6 @@ export default function Header() {
             <Link href="/contact" className="hover:text-blue-400 transition">Contact</Link>
           </nav>
 
-          {/* CTA Button */}
           <button 
             onClick={() => setPopupOpen(true)}
             className="hidden md:block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-2 px-4 rounded-lg transition"
@@ -50,7 +36,6 @@ export default function Header() {
             Gratis intake
           </button>
 
-          {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-white"
             onClick={() => setMenuOpen(!menuOpen)}
@@ -65,7 +50,6 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {menuOpen && (
           <nav className="md:hidden mt-4 space-y-4 text-center">
             <Link href="/programmas" className="block hover:text-blue-400 transition" onClick={() => setMenuOpen(false)}>Programma's</Link>
@@ -82,43 +66,26 @@ export default function Header() {
         )}
       </header>
 
-      {/* Popup Modal */}
       {popupOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center">
-          {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black bg-opacity-50"
             onClick={() => setPopupOpen(false)}
           ></div>
           
-          {/* Modal */}
-          <div className="relative bg-white rounded-lg shadow-xl w-full max-w-lg mx-4 max-h-[90vh] overflow-auto">
-            {/* Close button */}
+          <div className="relative bg-white rounded-lg shadow-xl w-full max-w-lg mx-4">
             <button 
               onClick={() => setPopupOpen(false)}
-              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 z-10"
+              className="absolute top-2 right-2 text-gray-500 hover:text-gray-700 z-10 bg-white rounded-full p-1"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
             
-            {/* Form iframe */}
             <iframe
               src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
-              style={{ width: "100%", height: "400px", border: "none", borderRadius: "7px" }}
-              id="popup-peswXaJSSZHHMPxZQ4es"
-              data-layout="{'id':'POPUP'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Website Form"
-              data-height="340"
-              data-layout-iframe-id="popup-peswXaJSSZHHMPxZQ4es"
-              data-form-id="peswXaJSSZHHMPxZQ4es"
+              style={{ width: "100%", height: "450px", border: "none", borderRadius: "7px" }}
               title="Website Form"
             ></iframe>
           </div>
