@@ -120,7 +120,7 @@ export default function HomePage() {
                 <li>✓ Een gestructureerd schema</li>
                 <li>✓ Met jouw vaste coaches</li>
               </ul>
-              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
+              <Link href="/small-group-training" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">Groepslessen</h3>
@@ -131,7 +131,7 @@ export default function HomePage() {
                 <li>✓ Ontmoet nieuwe vrienden</li>
                 <li>✓ Voor alle niveaus</li>
               </ul>
-              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
+              <Link href="/groepslessen" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
         </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
             <h3 className="text-2xl font-bold mb-4">Weet je het nog niet zeker?</h3>
-            <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit bij je past.</p>
+            <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit Alkmaar bij je past.</p>
             <button
               onClick={openPopup}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
