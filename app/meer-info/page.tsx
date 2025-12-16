@@ -18,13 +18,10 @@ export default function MeerInfoPage() {
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-8">
             Meer info
           </h1>
-          <p className="text-xl text-gray-200 mb-6">
-            Bekijk ons lesrooster en onze tarieven
-          </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <a 
               href="#rooster" 
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition"
@@ -37,6 +34,12 @@ export default function MeerInfoPage() {
             >
               Tarieven
             </a>
+            <button
+              onClick={openPopup}
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition"
+            >
+              Gratis intake
+            </button>
           </div>
         </div>
       </section>
