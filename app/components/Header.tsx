@@ -11,7 +11,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-gray-900 text-white py-3 px-6 sticky top-[88px] z-40">
+      {/* Fixed header - direct onder de banner */}
+      <header className="fixed top-[88px] left-0 right-0 bg-gray-900 text-white py-3 px-6 z-40">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
@@ -139,6 +140,9 @@ export default function Header() {
           </nav>
         )}
       </header>
+      
+      {/* Spacer om ruimte te maken voor de fixed header */}
+      <div className="h-[80px]"></div>
 
       {/* Popup */}
       {popupOpen && (

@@ -16,7 +16,8 @@ export default function KickstartBanner() {
 
   return (
     <>
-      <div className="sticky top-0 z-50 bg-blue-900 text-white py-3 px-4 text-center">
+      {/* Fixed banner - altijd bovenaan */}
+      <div className="fixed top-0 left-0 right-0 z-50 bg-blue-900 text-white py-3 px-4 text-center">
         <p className="text-sm md:text-base mb-2">
           🔥 Kickstart {huidigeMaand} is <strong>VOLGEBOEKT</strong> 🔥 {volgendeMaand} bijna vol!
         </p>
@@ -27,6 +28,9 @@ export default function KickstartBanner() {
           Meer informatie →
         </button>
       </div>
+      
+      {/* Spacer om ruimte te maken voor de fixed banner */}
+      <div className="h-[88px]"></div>
 
       {/* Popup */}
       {popupOpen && (
