@@ -144,9 +144,9 @@ export default function Header() {
       {/* Spacer om ruimte te maken voor de fixed header */}
       <div className="h-[56px] md:h-[80px]"></div>
 
-      {/* Popup */}
+      {/* Popup - z-[9999] zodat hij BOVEN ALLES komt */}
       {popupOpen && (
-        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
           <div className="relative w-full max-w-lg bg-blue-900 rounded-lg overflow-hidden shadow-2xl">
             <button onClick={() => setPopupOpen(false)} className="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
