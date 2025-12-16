@@ -21,7 +21,7 @@ export default function SmallGroupTrainingPage() {
             Small Group Training
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Train in een kleine groep van maximaal 4 personen. Persoonlijke aandacht, samen trainen.
+            Train in een kleine groep van maximaal 6 personen. Persoonlijke aandacht, samen trainen.
           </p>
           <button
             onClick={openPopup}
@@ -56,7 +56,7 @@ export default function SmallGroupTrainingPage() {
           <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Maximaal 4 personen</h3>
+              <h3 className="text-xl font-semibold mb-3">✓ Maximaal 6 personen</h3>
               <p className="text-gray-600">Kleine groep betekent meer aandacht van de coach en beter zicht op je techniek.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
