@@ -9,8 +9,15 @@ export default function MeerInfoPage() {
   return (
     <div className="min-h-screen bg-gray-200">
       {/* Hero */}
-      <section className="bg-blue-900 text-white py-12 px-6">
-        <div className="max-w-4xl mx-auto text-center">
+      <section
+        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/meer-info-header.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Meer info
           </h1>
@@ -20,13 +27,13 @@ export default function MeerInfoPage() {
           <div className="flex justify-center gap-4">
             <a 
               href="#rooster" 
-              className="bg-white hover:bg-gray-100 text-blue-900 font-semibold py-3 px-6 rounded-lg transition"
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition"
             >
               Rooster
             </a>
             <a 
               href="#tarieven" 
-              className="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-semibold py-3 px-6 rounded-lg transition"
+              className="bg-white hover:bg-gray-100 text-blue-900 font-semibold py-3 px-6 rounded-lg transition"
             >
               Tarieven
             </a>
@@ -60,7 +67,7 @@ export default function MeerInfoPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
           <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-            Onze abonnementen starten al vanaf €95 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
+            Onze abonnementen starten al vanaf €99 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
           </p>
           <div className="text-center">
             <button
