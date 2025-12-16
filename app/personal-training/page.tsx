@@ -13,7 +13,7 @@ export default function PersonalTrainingPage() {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/personal-training-header.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundPosition: 'center bottom',
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
