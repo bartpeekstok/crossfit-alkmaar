@@ -1,10 +1,6 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-
 export default function VacaturesPage() {
-  const { openPopup } = usePopup();
-
   const vacatures = [
     {
       title: "Coach",
@@ -52,7 +48,7 @@ export default function VacaturesPage() {
       {/* Intro Section */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="text-lg text-gray-700 mb-4">
+          <p className="text-gray-600 mb-4">
             Bij CrossFit Alkmaar zijn we altijd op zoek naar helden om ons team te versterken. Ervaring in de sportbranche is mooi meegenomen, maar geen vereiste. We leiden al onze coaches en andere functies intern op.
           </p>
           <p className="text-gray-600">
@@ -67,9 +63,6 @@ export default function VacaturesPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {/* Missie */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                01
-              </div>
               <h2 className="text-2xl font-bold mb-4">Missie</h2>
               <p className="text-gray-600">
                 Bij CrossFit Alkmaar helpen we onze leden elke dag een beetje sterker te worden – niet alleen in de gym, maar ook daarbuiten. We creëren een plek waar iedereen zich welkom voelt, waar hard gewerkt wordt en waar we elkaar motiveren om het beste uit onszelf te halen.
@@ -78,9 +71,6 @@ export default function VacaturesPage() {
 
             {/* Visie */}
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-blue-900 text-white rounded-full flex items-center justify-center text-xl font-bold mb-4">
-                02
-              </div>
               <h2 className="text-2xl font-bold mb-4">Visie</h2>
               <p className="text-gray-600">
                 Wij geloven dat sport veel meer is dan alleen trainen. Het gaat om zelfvertrouwen, doorzettingsvermogen en samen groeien. Daarom bouwen we aan een community waarin coaches, leden én teamleden elkaar kennen, respecteren en uitdagen.
@@ -120,12 +110,14 @@ export default function VacaturesPage() {
                     </span>
                   </div>
                 </div>
-                <button
-                  onClick={openPopup}
-                  className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition"
+                <a
+                  href="https://kilo.gymleadmachine.com/widget/survey/TIMRkxtc9zfvKxJ3i7oo"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition text-center"
                 >
                   Solliciteer
-                </button>
+                </a>
               </div>
             ))}
           </div>
