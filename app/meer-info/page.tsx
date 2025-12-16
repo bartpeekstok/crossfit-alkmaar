@@ -37,7 +37,11 @@ export default function MeerInfoPage() {
       {/* Rooster sectie */}
       <section id="rooster" className="py-16 px-6 bg-gray-100 scroll-mt-20">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Lesrooster</h2>
+          <h2 className="text-3xl font-bold mb-4 text-center">Lesrooster</h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            We hebben ruime openingstijden zodat je altijd een moment kunt vinden dat bij jou past. 
+            Van vroege ochtendtrainingen tot avondlessen - er is altijd een les die in je schema past.
+          </p>
           
           {/* Sportbit Rooster Embed */}
           <div className="bg-white p-4 rounded-lg shadow-sm">
@@ -52,25 +56,18 @@ export default function MeerInfoPage() {
       </section>
 
       {/* Tarieven sectie */}
-      <section id="tarieven" className="py-16 px-6 scroll-mt-20">
+      <section id="tarieven" className="py-16 px-6 bg-gray-200 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
-          <div 
-            className="rounded-lg p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-6"
-            style={{
-              background: 'linear-gradient(135deg, #1e3a5f 0%, #0d1b2a 100%)',
-            }}
-          >
-            <div className="text-white">
-              <h2 className="text-3xl font-bold mb-3">TARIEVEN</h2>
-              <p className="text-lg text-gray-200">
-                Onze abonnementen starten al vanaf €95 per maand. Meer informatie? Klik op deze knop.
-              </p>
-            </div>
+          <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
+          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            Onze abonnementen starten al vanaf €95 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
+          </p>
+          <div className="text-center">
             <button
               onClick={openPopup}
-              className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition whitespace-nowrap"
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
             >
-              MEER INFO
+              Vraag meer informatie aan
             </button>
           </div>
         </div>

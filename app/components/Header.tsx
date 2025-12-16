@@ -33,12 +33,12 @@ export default function Header() {
             onMouseEnter={() => setMeerInfoOpen(true)}
             onMouseLeave={() => setMeerInfoOpen(false)}
           >
-            <button className="flex items-center hover:text-gray-300 transition">
+            <Link href="/meer-info" className="flex items-center hover:text-gray-300 transition">
               Meer info
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
-            </button>
+            </Link>
             {meerInfoOpen && (
               <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[200px] shadow-lg">
                 <Link href="/meer-info#rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
@@ -117,15 +117,14 @@ export default function Header() {
         <div className="md:hidden mt-4 pb-4">
           <div className="flex flex-col space-y-2">
             {/* Meer Info Mobile */}
-            <button
-              onClick={() => setMeerInfoOpen(!meerInfoOpen)}
-              className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]"
-            >
-              Meer info
-              <svg className={`w-4 h-4 transition-transform ${meerInfoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-              </svg>
-            </button>
+            <div className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]">
+              <Link href="/meer-info">Meer info</Link>
+              <button onClick={() => setMeerInfoOpen(!meerInfoOpen)}>
+                <svg className={`w-4 h-4 transition-transform ${meerInfoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+            </div>
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
                 <Link href="/meer-info#rooster" className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
