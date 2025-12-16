@@ -12,15 +12,15 @@ export default function Header() {
   return (
     <>
       {/* Fixed header - direct onder de banner */}
-      <header className="fixed top-[88px] left-0 right-0 bg-gray-900 text-white py-3 px-6 z-40">
+      <header className="fixed top-[72px] md:top-[88px] left-0 right-0 bg-gray-900 text-white py-2 md:py-3 px-4 md:px-6 z-40">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-center flex-shrink-0">
             <Image
               src="/images/logo.png"
               alt="CrossFit Alkmaar"
               width={180}
               height={60}
-              className="h-14 w-auto"
+              className="h-10 md:h-14 w-auto"
             />
           </Link>
           
@@ -73,7 +73,7 @@ export default function Header() {
 
           {/* Mobile menu button */}
           <button 
-            className="md:hidden text-white"
+            className="md:hidden text-white p-1"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             {mobileMenuOpen ? (
@@ -142,7 +142,7 @@ export default function Header() {
       </header>
       
       {/* Spacer om ruimte te maken voor de fixed header */}
-      <div className="h-[80px]"></div>
+      <div className="h-[56px] md:h-[80px]"></div>
 
       {/* Popup */}
       {popupOpen && (

@@ -17,20 +17,20 @@ export default function KickstartBanner() {
   return (
     <>
       {/* Fixed banner - altijd bovenaan */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-blue-900 text-white py-3 px-4 text-center">
-        <p className="text-sm md:text-base mb-2">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-blue-900 text-white py-2 md:py-3 px-4 text-center">
+        <p className="text-xs md:text-base mb-1 md:mb-2">
           🔥 Kickstart {huidigeMaand} is <strong>VOLGEBOEKT</strong> 🔥 {volgendeMaand} bijna vol!
         </p>
         <button
           onClick={() => setPopupOpen(true)}
-          className="bg-white text-blue-900 font-semibold px-6 py-2 rounded-full text-sm hover:bg-gray-100 transition animate-pulse"
+          className="bg-white text-blue-900 font-semibold px-4 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-sm hover:bg-gray-100 transition animate-pulse"
         >
           Meer informatie →
         </button>
       </div>
       
-      {/* Spacer om ruimte te maken voor de fixed banner */}
-      <div className="h-[88px]"></div>
+      {/* Spacer - responsive voor mobiel en desktop */}
+      <div className="h-[72px] md:h-[88px]"></div>
 
       {/* Popup */}
       {popupOpen && (
