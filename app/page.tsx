@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Script from "next/script";
 import { usePopup } from "./components/PopupContext";
 
 export default function HomePage() {
@@ -133,6 +134,15 @@ export default function HomePage() {
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat onze leden zeggen</h2>
+          <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
+          <div className="elfsight-app-441b4eee-fe67-40af-9775-caf184c8ed7f" data-elfsight-app-lazy></div>
         </div>
       </section>
 
