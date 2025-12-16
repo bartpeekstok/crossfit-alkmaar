@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import KickstartBanner from "./components/KickstartBanner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { PopupProvider } from "./components/PopupContext";
+import IntakePopup from "./components/IntakePopup";
+import KickstartBanner from "./components/KickstartBanner";
 
 export const metadata: Metadata = {
-  title: "CrossFit Alkmaar - Word sterker, beweeg beter, voel je fitter",
-  description: "Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau. Plan je gratis kennismaking.",
+  title: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
+  description:
+    "Professionele begeleiding, schaalbare trainingen en resultaten voor beginners tot gevorderden. Plan je gratis kennismaking.",
 };
 
 export default function RootLayout({
@@ -19,10 +21,11 @@ export default function RootLayout({
     <html lang="nl">
       <body className="antialiased">
         <PopupProvider>
-          <KickstartBanner />
           <Header />
-          {children}
+          <main className="pb-16">{children}</main>
           <Footer />
+          <IntakePopup />
+          <KickstartBanner />
         </PopupProvider>
       </body>
     </html>
