@@ -12,7 +12,7 @@ export default function BlogPage() {
       slug: "waarom-krachttraining-voor-50-plussers",
       title: "Waarom krachttraining juist voor 50-plussers essentieel is",
       excerpt: "Spieren worden zwakker naarmate je ouder wordt. Maar dat hoeft niet! Ontdek waarom krachttraining na je 50e belangrijker is dan ooit.",
-      image: "/images/blog/krachttraining-50plus.jpg",
+      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
       date: "12 december 2024",
       category: "Gezondheid"
     },
@@ -21,7 +21,7 @@ export default function BlogPage() {
       slug: "5-tips-om-consistent-te-blijven",
       title: "5 tips om consistent te blijven met trainen",
       excerpt: "We kennen het allemaal: vol goede moed beginnen en na een paar weken afhaken. Deze 5 tips helpen je om wél vol te houden.",
-      image: "/images/blog/consistent-trainen.jpg",
+      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
       date: "8 december 2024",
       category: "Mindset"
     },
@@ -30,7 +30,7 @@ export default function BlogPage() {
       slug: "wat-eet-je-voor-en-na-training",
       title: "Wat eet je het beste voor en na je training?",
       excerpt: "Voeding en training gaan hand in hand. Leer wat je het beste kunt eten om maximaal resultaat te halen uit je workouts.",
-      image: "/images/blog/voeding-training.jpg",
+      image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800&q=80",
       date: "1 december 2024",
       category: "Voeding"
     },
@@ -39,7 +39,7 @@ export default function BlogPage() {
       slug: "crossfit-voor-beginners",
       title: "CrossFit voor beginners: wat kun je verwachten?",
       excerpt: "Nieuwsgierig naar CrossFit maar geen idee wat je te wachten staat? We leggen uit wat je kunt verwachten bij je eerste les.",
-      image: "/images/blog/crossfit-beginners.jpg",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
       date: "25 november 2024",
       category: "CrossFit"
     },
@@ -48,7 +48,7 @@ export default function BlogPage() {
       slug: "blessures-voorkomen",
       title: "Zo voorkom je blessures tijdens het sporten",
       excerpt: "Niemand wil geblesseerd raken. Met deze tips minimaliseer je het risico en kun je veilig blijven trainen.",
-      image: "/images/blog/blessures-voorkomen.jpg",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
       date: "18 november 2024",
       category: "Gezondheid"
     },
@@ -57,7 +57,7 @@ export default function BlogPage() {
       slug: "meer-energie-door-beweging",
       title: "Waarom beweging je juist meer energie geeft",
       excerpt: "Het klinkt tegenstrijdig: moe zijn en dan gaan sporten. Toch geeft regelmatige beweging je meer energie. Dit is waarom.",
-      image: "/images/blog/energie-beweging.jpg",
+      image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=800&q=80",
       date: "10 november 2024",
       category: "Gezondheid"
     },
@@ -69,7 +69,7 @@ export default function BlogPage() {
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/blog-header.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
@@ -96,15 +96,15 @@ export default function BlogPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
-                {/* Placeholder image */}
-                <div 
-                  className="h-48 bg-gray-300 flex items-center justify-center"
-                  style={{
-                    backgroundImage: `linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%)`,
-                  }}
-                >
-                  <span className="text-white text-sm opacity-75">Afbeelding: {post.title.substring(0, 30)}...</span>
-                </div>
+                {/* Image from Unsplash */}
+                <Link href={`/blog/${post.slug}`}>
+                  <div 
+                    className="h-48 bg-gray-300 bg-cover bg-center cursor-pointer hover:opacity-90 transition"
+                    style={{
+                      backgroundImage: `url('${post.image}')`,
+                    }}
+                  />
+                </Link>
                 <div className="p-6">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-xs font-semibold text-blue-900 bg-blue-100 px-2 py-1 rounded">

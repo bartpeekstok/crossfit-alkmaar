@@ -9,7 +9,7 @@ const blogPosts: { [key: string]: any } = {
     title: "Waarom krachttraining juist voor 50-plussers essentieel is",
     date: "12 december 2024",
     category: "Gezondheid",
-    image: "/images/blog/krachttraining-50plus.jpg",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
     content: `
       <p class="lead">Vanaf je 30e verlies je elk decennium zo'n 3-5% van je spiermassa. Na je 50e versnelt dit proces. Maar hier is het goede nieuws: krachttraining kan dit niet alleen stoppen, maar zelfs omkeren.</p>
 
@@ -54,7 +54,7 @@ const blogPosts: { [key: string]: any } = {
     title: "5 tips om consistent te blijven met trainen",
     date: "8 december 2024",
     category: "Mindset",
-    image: "/images/blog/consistent-trainen.jpg",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
     content: `
       <p class="lead">Beginnen met sporten is makkelijk. Volhouden is de uitdaging. Deze 5 bewezen tips helpen je om van trainen een blijvende gewoonte te maken.</p>
 
@@ -91,7 +91,7 @@ const blogPosts: { [key: string]: any } = {
     title: "Wat eet je het beste voor en na je training?",
     date: "1 december 2024",
     category: "Voeding",
-    image: "/images/blog/voeding-training.jpg",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80",
     content: `
       <p class="lead">De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training. Maar wat eet je nou precies? En wanneer?</p>
 
@@ -157,7 +157,7 @@ const blogPosts: { [key: string]: any } = {
     title: "CrossFit voor beginners: wat kun je verwachten?",
     date: "25 november 2024",
     category: "CrossFit",
-    image: "/images/blog/crossfit-beginners.jpg",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
     content: `
       <p class="lead">Je hebt misschien video's gezien van extreme workouts en vraagt je af: is dit wel iets voor mij? Spoiler: ja, waarschijnlijk wel. Dit is wat je écht kunt verwachten.</p>
 
@@ -208,7 +208,7 @@ const blogPosts: { [key: string]: any } = {
     title: "Zo voorkom je blessures tijdens het sporten",
     date: "18 november 2024",
     category: "Gezondheid",
-    image: "/images/blog/blessures-voorkomen.jpg",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
     content: `
       <p class="lead">Een blessure is de snelste manier om je vooruitgang te stoppen. Gelukkig zijn de meeste sportblessures te voorkomen. Dit zijn de belangrijkste tips.</p>
 
@@ -256,7 +256,7 @@ const blogPosts: { [key: string]: any } = {
     title: "Waarom beweging je juist meer energie geeft",
     date: "10 november 2024",
     category: "Gezondheid",
-    image: "/images/blog/energie-beweging.jpg",
+    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=1200&q=80",
     content: `
       <p class="lead">"Ik ben te moe om te sporten." We hebben het allemaal weleens gedacht. Maar wat als sporten juist de oplossing is voor je vermoeidheid?</p>
 
