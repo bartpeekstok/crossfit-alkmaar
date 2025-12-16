@@ -1,11 +1,12 @@
+import type { Metadata } from "next";
+import "./globals.css";
 import KickstartBanner from "./components/KickstartBanner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import "./globals.css";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "CrossFit Alkmaar - Word sterker, beweeg beter, voel je fitter",
-  description: "Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.",
+  description: "Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau. Plan je gratis kennismaking.",
 };
 
 export default function RootLayout({
@@ -15,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="nl">
-      <body>
+      <body className="antialiased">
         <KickstartBanner />
         <Header />
         {children}
