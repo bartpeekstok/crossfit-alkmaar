@@ -9,15 +9,15 @@ export default function Header() {
 
   return (
     <>
-      {/* Spacer to prevent content from hiding behind fixed header */}
-      <div className="h-[80px]"></div>
+      {/* Spacer for banner + header */}
+      <div className="h-[124px] md:h-[132px]"></div>
       
-      <header className="fixed top-[88px] left-0 right-0 z-[60] bg-gray-900 text-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex items-center justify-between h-20">
+      <header className="fixed top-[44px] md:top-[52px] left-0 right-0 z-[60] bg-gray-900 text-white shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 md:px-6">
+          <div className="flex items-center justify-between h-16 md:h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
-              <span className="text-2xl font-bold">CrossFit Alkmaar</span>
+            <Link href="/" className="flex-shrink-0">
+              <span className="text-xl md:text-2xl font-bold whitespace-nowrap">CrossFit Alkmaar</span>
             </Link>
 
             {/* Desktop Navigation */}
