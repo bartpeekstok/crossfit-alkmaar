@@ -12,7 +12,7 @@ export default function Header() {
   const { openPopup } = usePopup();
 
   return (
-    <header className="bg-[#1a1a2e] text-white py-4 px-6 relative z-40">
+    <header className="bg-[#1a1a2e] text-white py-4 px-6 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link href="/">
