@@ -11,11 +11,17 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openPopup } = usePopup();
 
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setProgrammasOpen(false);
+    setMeerInfoOpen(false);
+  };
+
   return (
     <header className="bg-[#1a1a2e] text-white py-4 px-6 sticky top-0 z-50">
       <div className="max-w-6xl mx-auto flex justify-between items-center">
         {/* Logo */}
-        <Link href="/">
+        <Link href="/" onClick={closeMobileMenu}>
           <Image
             src="/images/logo.png"
             alt="CrossFit Alkmaar"
@@ -118,7 +124,7 @@ export default function Header() {
           <div className="flex flex-col space-y-2">
             {/* Meer Info Mobile */}
             <div className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]">
-              <Link href="/meer-info">Meer info</Link>
+              <Link href="/meer-info" onClick={closeMobileMenu}>Meer info</Link>
               <button onClick={() => setMeerInfoOpen(!meerInfoOpen)}>
                 <svg className={`w-4 h-4 transition-transform ${meerInfoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -127,10 +133,10 @@ export default function Header() {
             </div>
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
-                <Link href="/meer-info#rooster" className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
-                <Link href="/meer-info#tarieven" className="px-4 py-2 hover:bg-[#2a2a4e]">Tarieven</Link>
-                <Link href="/onze-leden" className="px-4 py-2 hover:bg-[#2a2a4e]">Onze leden</Link>
-                <Link href="/vacatures" className="px-4 py-2 hover:bg-[#2a2a4e]">Vacatures</Link>
+                <Link href="/meer-info#rooster" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
+                <Link href="/meer-info#tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Tarieven</Link>
+                <Link href="/onze-leden" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Onze leden</Link>
+                <Link href="/vacatures" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Vacatures</Link>
               </div>
             )}
 
@@ -146,17 +152,17 @@ export default function Header() {
             </button>
             {programmasOpen && (
               <div className="pl-4 flex flex-col space-y-2">
-                <Link href="/kickstart" className="px-4 py-2 hover:bg-[#2a2a4e]">28 Days Kickstart</Link>
-                <Link href="/groepslessen" className="px-4 py-2 hover:bg-[#2a2a4e]">Groepslessen</Link>
-                <Link href="/personal-training" className="px-4 py-2 hover:bg-[#2a2a4e]">Personal Training</Link>
-                <Link href="/small-group-training" className="px-4 py-2 hover:bg-[#2a2a4e]">Small Group Training</Link>
-                <Link href="/voedingsadvies" className="px-4 py-2 hover:bg-[#2a2a4e]">Voedingsadvies</Link>
+                <Link href="/kickstart" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">28 Days Kickstart</Link>
+                <Link href="/groepslessen" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Groepslessen</Link>
+                <Link href="/personal-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Personal Training</Link>
+                <Link href="/small-group-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Small Group Training</Link>
+                <Link href="/voedingsadvies" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Voedingsadvies</Link>
               </div>
             )}
 
-            <Link href="/blog" className="px-4 py-2 hover:bg-[#2a2a4e]">Blog</Link>
+            <Link href="/blog" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Blog</Link>
             <button
-              onClick={openPopup}
+              onClick={() => { openPopup(); closeMobileMenu(); }}
               className="mx-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition"
             >
               Gratis intake
