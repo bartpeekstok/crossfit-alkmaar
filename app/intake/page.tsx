@@ -32,7 +32,7 @@ export default function IntakePage() {
             <div className="rounded-lg overflow-hidden shadow-2xl aspect-video max-w-xl">
               <iframe 
                 className="w-full h-full" 
-                src="https://www.youtube.com/embed/G9HkOnSsKg8" 
+                src="https://www.youtube.com/embed/-3KF7VGVzdk" 
                 title="Inside the Box: CrossFit Alkmaar" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowFullScreen
@@ -41,14 +41,14 @@ export default function IntakePage() {
           </div>
 
           {/* Right side - Booking Widget */}
-          <div className="bg-white rounded-lg shadow-2xl p-2 min-h-[500px]">
+          <div className="bg-white rounded-lg shadow-2xl p-2 max-w-md">
             <Script 
               src="https://kilo.gymleadmachine.com/js/form_embed.js" 
               strategy="lazyOnload"
             />
             <iframe 
               src="https://kilo.gymleadmachine.com/widget/booking/FWSWLWpfUeNwh536AGL0"
-              className="w-full min-h-[600px] border-0"
+              className="w-full min-h-[500px] border-0"
               scrolling="no"
               title="Boek een gratis intake"
             ></iframe>
