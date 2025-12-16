@@ -156,7 +156,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <a 
               href="https://www.google.com/search?q=crossfit+alkmaar#lrd=0x47cf573834f8b5b7:0x4a55c3c9c9a67e0e,1"
               target="_blank" 
@@ -177,6 +177,10 @@ export default function HomePage() {
             <div className="text-center">
               <div className="text-5xl font-bold text-blue-900 mb-2">35+</div>
               <p className="text-gray-600">Gemiddelde leeftijd</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-900 mb-2">50K</div>
+              <p className="text-gray-600">Bakjes koffie ☕</p>
             </div>
           </div>
         </div>
