@@ -30,7 +30,7 @@ export default function KickstartBanner() {
                De 28 day kickstart van {huidigeMaand} zit nu VOL! De inschrijving voor {volgendeMaand} opent binnenkort 🔥🔥
               </span>
               <span className="sm:hidden">
-              Kickstart {huidigeMaand} zit VOL! {volgendeMaand} opent binnenkort🔥🔥
+              Kickstart {huidigeMaand} zit VOL! Inschrijving {volgendeMaand} opent binnenkort🔥🔥
               </span>
             </p>
           </div>
