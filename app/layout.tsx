@@ -3,6 +3,7 @@ import "./globals.css";
 import KickstartBanner from "./components/KickstartBanner";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { PopupProvider } from "./components/PopupContext";
 
 export const metadata: Metadata = {
   title: "CrossFit Alkmaar - Word sterker, beweeg beter, voel je fitter",
@@ -17,10 +18,12 @@ export default function RootLayout({
   return (
     <html lang="nl">
       <body className="antialiased">
-        <KickstartBanner />
-        <Header />
-        {children}
-        <Footer />
+        <PopupProvider>
+          <KickstartBanner />
+          <Header />
+          {children}
+          <Footer />
+        </PopupProvider>
       </body>
     </html>
   );

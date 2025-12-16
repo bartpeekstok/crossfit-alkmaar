@@ -1,7 +1,11 @@
+"use client";
+
 import Link from "next/link";
-import { IntakeButton } from "./components/IntakePopup";
+import { usePopup } from "./components/PopupContext";
 
 export default function HomePage() {
+  const { openPopup } = usePopup();
+
   return (
     <div className="min-h-screen bg-gray-200">
       {/* Hero Section */}
@@ -23,9 +27,12 @@ export default function HomePage() {
           <p className="text-lg mb-8 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
           </p>
-          <IntakeButton className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer">
+          <button
+            onClick={openPopup}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+          >
             Gratis intake
-          </IntakeButton>
+          </button>
         </div>
       </section>
 
@@ -67,9 +74,12 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
             <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
-            <IntakeButton className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer">
+            <button
+              onClick={openPopup}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
+            >
               Gratis intake
-            </IntakeButton>
+            </button>
           </div>
         </div>
       </section>
@@ -132,9 +142,12 @@ export default function HomePage() {
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
             <h3 className="text-2xl font-bold mb-4">Weet je het nog niet zeker?</h3>
             <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit bij je past.</p>
-            <IntakeButton className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer">
+            <button
+              onClick={openPopup}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
+            >
               Gratis intake
-            </IntakeButton>
+            </button>
           </div>
         </div>
       </section>
@@ -199,9 +212,12 @@ export default function HomePage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen.</p>
-          <IntakeButton className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer">
+          <button
+            onClick={openPopup}
+            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer"
+          >
             Gratis intake
-          </IntakeButton>
+          </button>
         </div>
       </section>
     </div>
