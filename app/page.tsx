@@ -32,10 +32,7 @@ export default function HomePage() {
             >
               Plan een gratis kennismaking
             </button>
-            
-              href="/kickstart"
-              className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-            >
+            <a href="/kickstart" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition cursor-pointer">
               Bekijk de 28-Day Kickstart
             </a>
           </div>
@@ -45,30 +42,14 @@ export default function HomePage() {
       {/* Video Section */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Zie wat onze leden zeggen
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Echte verhalen van leden die net als jij begonnen zijn.
-          </p>
+          <h2 className="text-3xl font-bold text-center mb-4">Zie wat onze leden zeggen</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Echte verhalen van leden die net als jij begonnen zijn.</p>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/G9HkOnSsKg8"
-                title="CrossFit Alkmaar testimonial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
             <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe
-                className="w-full h-full"
-                src="https://www.youtube.com/embed/a2zbZIlU27Y"
-                title="CrossFit Alkmaar testimonial"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
+              <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
           </div>
         </div>
@@ -77,36 +58,22 @@ export default function HomePage() {
       {/* Hoe werkt het - 3 stappen */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Zo werkt trainen bij CrossFit Alkmaar
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                1
-              </div>
+              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-semibold mb-3">Gratis kennismaking</h3>
-              <p className="text-gray-600">
-                We kijken naar jouw doel, ervaring en eventuele beperkingen. Geen verplichtingen.
-              </p>
+              <p className="text-gray-600">We kijken naar jouw doel, ervaring en eventuele beperkingen. Geen verplichtingen.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                2
-              </div>
+              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-semibold mb-3">Persoonlijk trainingsplan</h3>
-              <p className="text-gray-600">
-                Elke training wordt aangepast aan jouw niveau. Onze coaches begeleiden je stap voor stap.
-              </p>
+              <p className="text-gray-600">Elke training wordt aangepast aan jouw niveau. Onze coaches begeleiden je stap voor stap.</p>
             </div>
             <div className="text-center">
-              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
-                3
-              </div>
+              <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-semibold mb-3">Resultaten zien en voelen</h3>
-              <p className="text-gray-600">
-                Binnen weken voel je je sterker, energieker en fitter. We meten je voortgang samen.
-              </p>
+              <p className="text-gray-600">Binnen weken voel je je sterker, energieker en fitter. We meten je voortgang samen.</p>
             </div>
           </div>
         </div>
@@ -117,12 +84,7 @@ export default function HomePage() {
         <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-lg shadow-sm p-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
-            <button
-              onClick={() => setPopupOpen(true)}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg"
-            >
-              Gratis intake
-            </button>
+            <button onClick={() => setPopupOpen(true)} className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg">Gratis intake</button>
           </div>
         </div>
       </section>
@@ -154,71 +116,41 @@ export default function HomePage() {
       {/* Programma's */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Kies het programma dat bij je past
-          </h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Of je nu wilt starten, structuur zoekt, of specifiek aan kracht wilt werken: wij hebben een programma voor jou.
-          </p>
+          <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Of je nu wilt starten, structuur zoekt, of specifiek aan kracht wilt werken: wij hebben een programma voor jou.</p>
           <div className="grid md:grid-cols-3 gap-8">
-            {/* 28-Day Kickstart */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
-              <p className="text-gray-600 mb-6">
-                Hier start iedereen. 4 weken begeleide training en een solide basis.
-              </p>
+              <p className="text-gray-600 mb-6">Hier start iedereen. 4 weken begeleide training en een solide basis.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
                 <li>✓ 12 trainingen in 4 weken</li>
                 <li>✓ Extra aandacht en uitleg</li>
                 <li>✓ Kleine groepen (max 6)</li>
                 <li>✓ Basis leefstijladvies</li>
               </ul>
-              
-                href="/kickstart"
-                className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
-              >
-                Meer info
-              </a>
+              <a href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
             </div>
-
-            {/* BUILD */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">BUILD</h3>
-              <p className="text-gray-600 mb-6">
-                Semi personal training in een vaste groep.
-              </p>
+              <p className="text-gray-600 mb-6">Semi personal training in een vaste groep.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
                 <li>✓ De voordelen van personal training</li>
                 <li>✓ In een vaste groep van maximaal 6 personen</li>
                 <li>✓ Een gestructureerd schema</li>
                 <li>✓ Met jouw vaste coaches</li>
               </ul>
-              
-                href="/build"
-                className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
-              >
-                Meer info
-              </a>
+              <a href="/build" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
             </div>
-
-            {/* Groepslessen */}
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">Groepslessen</h3>
-              <p className="text-gray-600 mb-6">
-                Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.
-              </p>
+              <p className="text-gray-600 mb-6">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
                 <li>✓ De beste coaches van Alkmaar</li>
                 <li>✓ Flexibel in- en uitschrijven</li>
                 <li>✓ Ontmoet nieuwe vrienden</li>
                 <li>✓ Voor alle niveaus</li>
               </ul>
-              
-                href="/groepslessen"
-                className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer"
-              >
-                Meer info
-              </a>
+              <a href="/groepslessen" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
             </div>
           </div>
         </div>
@@ -230,12 +162,7 @@ export default function HomePage() {
           <div className="bg-white rounded-lg shadow-sm p-8 text-center">
             <h3 className="text-2xl font-bold mb-2">Weet je het nog niet zeker?</h3>
             <p className="text-gray-600 mb-6">Plan een vrijblijvend gesprek en ontdek welk programma bij je past.</p>
-            <button
-              onClick={() => setPopupOpen(true)}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg"
-            >
-              Gratis intake
-            </button>
+            <button onClick={() => setPopupOpen(true)} className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg">Gratis intake</button>
           </div>
         </div>
       </section>
@@ -243,41 +170,23 @@ export default function HomePage() {
       {/* FAQ */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">
-            Veelgestelde vragen
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">
-                Ik ben niet fit genoeg om te starten
-              </h3>
-              <p className="text-gray-600">
-                Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau. Je traint in je eigen tempo, met begeleiding. De meeste leden begonnen net als jij.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Ik ben niet fit genoeg om te starten</h3>
+              <p className="text-gray-600">Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau. Je traint in je eigen tempo, met begeleiding. De meeste leden begonnen net als jij.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">
-                Ik heb geen tijd voor 5x per week trainen
-              </h3>
-              <p className="text-gray-600">
-                Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten. Consistentie is belangrijker dan frequentie. We helpen je een realistisch schema te maken.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Ik heb geen tijd voor 5x per week trainen</h3>
+              <p className="text-gray-600">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten. Consistentie is belangrijker dan frequentie. We helpen je een realistisch schema te maken.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">
-                Ben ik niet te oud om met CrossFit te beginnen?
-              </h3>
-              <p className="text-gray-600">
-                Absoluut niet. We hebben leden van 60, 65, 70+ die veilig en effectief trainen. Juist op latere leeftijd is krachtraining essentieel voor mobiliteit en gezondheid.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met CrossFit te beginnen?</h3>
+              <p className="text-gray-600">Absoluut niet. We hebben leden van 60, 65, 70+ die veilig en effectief trainen. Juist op latere leeftijd is krachtraining essentieel voor mobiliteit en gezondheid.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">
-                Wat als ik blessures of beperkingen heb?
-              </h3>
-              <p className="text-gray-600">
-                Tijdens de kennismaking bespreken we dit. We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie en kunnen veilig met beperkingen werken.
-              </p>
+              <h3 className="text-xl font-semibold mb-2">Wat als ik blessures of beperkingen heb?</h3>
+              <p className="text-gray-600">Tijdens de kennismaking bespreken we dit. We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie en kunnen veilig met beperkingen werken.</p>
             </div>
           </div>
         </div>
@@ -286,18 +195,9 @@ export default function HomePage() {
       {/* Final CTA */}
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Klaar om te starten?
-          </h2>
-          <p className="text-xl mb-8">
-            Plan een gratis kennismaking. Geen verplichtingen, gewoon kennismaken en kijken of het bij je past.
-          </p>
-          <button
-            onClick={() => setPopupOpen(true)}
-            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
+          <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen, gewoon kennismaken en kijken of het bij je past.</p>
+          <button onClick={() => setPopupOpen(true)} className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer">Plan je gratis kennismaking</button>
         </div>
       </section>
 
