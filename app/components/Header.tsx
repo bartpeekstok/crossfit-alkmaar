@@ -2,12 +2,18 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
 
 export default function Header() {
   const [popupOpen, setPopupOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <>
@@ -144,8 +150,8 @@ export default function Header() {
       {/* Spacer om ruimte te maken voor de fixed header */}
       <div className="h-[56px] md:h-[80px]"></div>
 
-      {/* Popup - z-[9999] zodat hij BOVEN ALLES komt */}
-      {popupOpen && (
+      {/* Popup via Portal - rendert direct in body, boven ALLES */}
+      {mounted && popupOpen && createPortal(
         <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
           <div className="relative w-full max-w-lg bg-blue-900 rounded-lg overflow-hidden shadow-2xl">
@@ -162,7 +168,8 @@ export default function Header() {
               <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );
