@@ -1,187 +1,169 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
 
 export default function Header() {
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [aanbodOpen, setAanbodOpen] = useState(false);
 
   return (
     <>
-      {/* Spacer for banner + header */}
-      <div className="h-[124px] md:h-[132px]"></div>
-      
-      <header className="fixed top-[44px] md:top-[52px] left-0 right-0 z-[60] bg-gray-900 text-white shadow-lg">
-        <div className="max-w-6xl mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between h-16 md:h-20">
-            {/* Logo */}
-            <Link href="/" className="flex-shrink-0">
-              <span className="text-xl md:text-2xl font-bold whitespace-nowrap">CrossFit Alkmaar</span>
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              {/* Aanbod Dropdown */}
-              <div className="relative">
-                <button
-                  onClick={() => setAanbodOpen(!aanbodOpen)}
-                  className="flex items-center hover:text-gray-300 transition font-medium"
-                >
-                  Aanbod
-                  <svg
-                    className={`ml-1 w-4 h-4 transition-transform ${aanbodOpen ? "rotate-180" : ""}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                  </svg>
-                </button>
-
-                {/* Dropdown Menu */}
-                {aanbodOpen && (
-                  <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl py-2 z-[100]">
-                    <Link
-                      href="/groepslessen"
-                      className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
-                      onClick={() => setAanbodOpen(false)}
-                    >
-                      <span className="font-medium">Groepslessen</span>
-                      <span className="block text-sm text-gray-500">Samen trainen in een groep</span>
-                    </Link>
-                    <Link
-                      href="/personal-training"
-                      className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
-                      onClick={() => setAanbodOpen(false)}
-                    >
-                      <span className="font-medium">Personal Training</span>
-                      <span className="block text-sm text-gray-500">1-op-1 begeleiding</span>
-                    </Link>
-                    <Link
-                      href="/small-group-training"
-                      className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
-                      onClick={() => setAanbodOpen(false)}
-                    >
-                      <span className="font-medium">Small Group Training</span>
-                      <span className="block text-sm text-gray-500">Training in kleine groepen</span>
-                    </Link>
-                    <Link
-                      href="/voedingsadvies"
-                      className="block px-4 py-3 text-gray-800 hover:bg-gray-100 transition"
-                      onClick={() => setAanbodOpen(false)}
-                    >
-                      <span className="font-medium">Voedingsadvies</span>
-                      <span className="block text-sm text-gray-500">Persoonlijk voedingsplan</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              <Link href="/over-ons" className="hover:text-gray-300 transition font-medium">
-                Over Ons
-              </Link>
-              <Link href="/tarieven" className="hover:text-gray-300 transition font-medium">
-                Tarieven
-              </Link>
-              <Link href="/rooster" className="hover:text-gray-300 transition font-medium">
-                Rooster
-              </Link>
-              <Link href="/contact" className="hover:text-gray-300 transition font-medium">
-                Contact
-              </Link>
-            </nav>
-
-            {/* Mobile Menu Button */}
-            <button
-              className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              aria-label="Menu"
+      {/* Fixed header - direct onder de banner */}
+      <header className="fixed top-[88px] left-0 right-0 bg-gray-900 text-white py-3 px-6 z-40">
+        <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="CrossFit Alkmaar"
+              width={180}
+              height={60}
+              className="h-14 w-auto"
+            />
+          </Link>
+          
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center space-x-8">
+            {/* Programma's Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
             >
-              {mobileMenuOpen ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              <button className="hover:text-gray-300 transition flex items-center gap-1">
+                Programma's
+                <svg className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                </svg>
-              )}
-            </button>
-          </div>
-
-          {/* Mobile Menu */}
-          {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-700">
-              <nav className="flex flex-col space-y-2">
-                {/* Aanbod Section */}
-                <div className="py-2">
-                  <span className="block px-2 text-gray-400 text-sm font-medium mb-2">Aanbod</span>
-                  <Link
-                    href="/groepslessen"
-                    className="block py-2 px-4 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Groepslessen
+              </button>
+              
+              {dropdownOpen && (
+                <div className="absolute top-full left-0 bg-gray-900 py-2 min-w-[200px] shadow-lg">
+                  <Link href="/kickstart" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
+                    28 Day Kickstart
                   </Link>
-                  <Link
-                    href="/personal-training"
-                    className="block py-2 px-4 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href="/personal-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     Personal Training
                   </Link>
-                  <Link
-                    href="/small-group-training"
-                    className="block py-2 px-4 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href="/small-group-training" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     Small Group Training
                   </Link>
-                  <Link
-                    href="/voedingsadvies"
-                    className="block py-2 px-4 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
+                  <Link href="/groepslessen" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
+                    Groepslessen
+                  </Link>
+                  <Link href="/voedingsadvies" className="block px-4 py-2 text-sm hover:bg-gray-800 transition">
                     Voedingsadvies
                   </Link>
                 </div>
+              )}
+            </div>
 
-                <div className="border-t border-gray-700 pt-2">
-                  <Link
-                    href="/over-ons"
-                    className="block py-2 px-2 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Over Ons
+            <Link href="/blog" className="hover:text-gray-300 transition">Blog</Link>
+            <Link href="/over-ons" className="hover:text-gray-300 transition">Over ons</Link>
+            <Link href="/contact" className="hover:text-gray-300 transition">Contact</Link>
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-2 px-4 rounded-lg transition"
+            >
+              Gratis intake
+            </button>
+          </nav>
+
+          {/* Mobile menu button */}
+          <button 
+            className="md:hidden text-white"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          >
+            {mobileMenuOpen ? (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <nav className="md:hidden mt-4 pb-4 border-t border-gray-800 pt-4">
+            {/* Programma's Dropdown Mobile */}
+            <div className="mb-2">
+              <button 
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+                className="w-full flex items-center justify-between py-2 hover:text-gray-300 transition"
+              >
+                Programma's
+                <svg className={`w-4 h-4 transition-transform ${dropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              
+              {dropdownOpen && (
+                <div className="pl-4 space-y-2 mt-2">
+                  <Link href="/kickstart" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    28 Day Kickstart
                   </Link>
-                  <Link
-                    href="/tarieven"
-                    className="block py-2 px-2 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Tarieven
+                  <Link href="/personal-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    Personal Training
                   </Link>
-                  <Link
-                    href="/rooster"
-                    className="block py-2 px-2 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Rooster
+                  <Link href="/small-group-training" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    Small Group Training
                   </Link>
-                  <Link
-                    href="/contact"
-                    className="block py-2 px-2 hover:bg-gray-800 rounded-lg transition"
-                    onClick={() => setMobileMenuOpen(false)}
-                  >
-                    Contact
+                  <Link href="/groepslessen" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    Groepslessen
+                  </Link>
+                  <Link href="/voedingsadvies" className="block py-1 text-sm text-gray-300 hover:text-white transition" onClick={() => setMobileMenuOpen(false)}>
+                    Voedingsadvies
                   </Link>
                 </div>
-              </nav>
+              )}
             </div>
-          )}
-        </div>
+
+            <Link href="/blog" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+            <Link href="/over-ons" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Over ons</Link>
+            <Link href="/contact" className="block py-2 hover:text-gray-300 transition" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+            
+            <button
+              onClick={() => {
+                setPopupOpen(true);
+                setMobileMenuOpen(false);
+              }}
+              className="w-full mt-4 bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-4 rounded-lg transition"
+            >
+              Gratis intake
+            </button>
+          </nav>
+        )}
       </header>
+      
+      {/* Spacer om ruimte te maken voor de fixed header */}
+      <div className="h-[80px]"></div>
+
+      {/* Popup */}
+      {popupOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
+          <div className="relative w-full max-w-lg bg-[#1e3a5f] rounded-lg overflow-hidden shadow-2xl">
+            <button onClick={() => setPopupOpen(false)} className="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
+              <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
+              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
+            </div>
+            <div className="bg-white p-6">
+              <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
