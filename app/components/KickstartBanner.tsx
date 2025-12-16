@@ -27,10 +27,10 @@ export default function KickstartBanner() {
           <div className="flex-1">
             <p className="font-semibold text-sm sm:text-base">
               <span className="hidden sm:inline">
-                🔥 De 28 day kickstart van {huidigeMaand} zit VOL! 🔥 Er zijn nog plekken vrij voor {volgendeMaand}!
+                🔥 De 28 day kickstart van {huidigeMaand} zit VOL! 🔥 {volgendeMaand} opent binnenkort!
               </span>
               <span className="sm:hidden">
-                🔥 Kickstart {huidigeMaand} VOL! Plekken vrij voor {volgendeMaand}!
+                🔥 Kickstart {huidigeMaand} VOL! {volgendeMaand} opent binnenkort!
               </span>
             </p>
           </div>
