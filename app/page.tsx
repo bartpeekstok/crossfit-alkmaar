@@ -180,7 +180,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-blue-900 mb-2">50K</div>
-              <p className="text-gray-600">Bakjes koffie ☕</p>
+              <p className="text-gray-600">Bakjes koffie per jaar ☕</p>
             </div>
           </div>
         </div>
