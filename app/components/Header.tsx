@@ -17,7 +17,7 @@ export default function Header() {
         {/* Logo */}
         <Link href="/">
           <Image
-            src="/images/cfa-logo.png"
+            src="/images/logo.png"
             alt="CrossFit Alkmaar"
             width={80}
             height={80}
@@ -41,10 +41,10 @@ export default function Header() {
             </button>
             {meerInfoOpen && (
               <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[200px] shadow-lg">
-                <Link href="/rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                <Link href="/meer-info#rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   Rooster
                 </Link>
-                <Link href="/tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                <Link href="/meer-info#tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   Tarieven
                 </Link>
                 <Link href="/onze-leden" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
@@ -128,8 +128,8 @@ export default function Header() {
             </button>
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
-                <Link href="/rooster" className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
-                <Link href="/tarieven" className="px-4 py-2 hover:bg-[#2a2a4e]">Tarieven</Link>
+                <Link href="/meer-info#rooster" className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
+                <Link href="/meer-info#tarieven" className="px-4 py-2 hover:bg-[#2a2a4e]">Tarieven</Link>
                 <Link href="/onze-leden" className="px-4 py-2 hover:bg-[#2a2a4e]">Onze leden</Link>
                 <Link href="/vacatures" className="px-4 py-2 hover:bg-[#2a2a4e]">Vacatures</Link>
               </div>
