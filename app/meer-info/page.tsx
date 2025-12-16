@@ -21,26 +21,12 @@ export default function MeerInfoPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-8">
             Meer info
           </h1>
-          <div className="flex flex-wrap justify-center gap-4">
-            <a 
-              href="#rooster" 
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition"
-            >
-              Rooster
-            </a>
-            <a 
-              href="#tarieven" 
-              className="bg-white hover:bg-gray-100 text-blue-900 font-semibold py-3 px-6 rounded-lg transition"
-            >
-              Tarieven
-            </a>
-            <button
-              onClick={openPopup}
-              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition"
-            >
-              Gratis intake
-            </button>
-          </div>
+          <button
+            onClick={openPopup}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
+          >
+            Gratis intake
+          </button>
         </div>
       </section>
 
