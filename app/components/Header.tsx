@@ -11,7 +11,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-gray-900 text-white py-3 px-6 sticky top-[72px] z-50">
+      <header className="bg-gray-900 text-white py-3 px-6 sticky top-[88px] z-40">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link href="/" className="flex items-center">
             <Image
