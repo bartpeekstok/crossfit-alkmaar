@@ -41,7 +41,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/5ThBJD4lJ0g" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </section>
