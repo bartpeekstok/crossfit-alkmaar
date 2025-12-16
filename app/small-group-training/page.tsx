@@ -2,7 +2,7 @@
 
 import { usePopup } from "../components/PopupContext";
 
-export default function SmallGroupPage() {
+export default function SmallGroupTrainingPage() {
   const { openPopup } = usePopup();
 
   return (
@@ -11,9 +11,9 @@ export default function SmallGroupPage() {
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/small-group-header.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/small-group-training-header.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center 80%',
+          backgroundPosition: 'center top',
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
