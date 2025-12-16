@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 export default function HomePage() {
@@ -8,14 +9,15 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-gray-200">
       {/* Hero Section */}
-      <section className="relative text-white py-20 px-6 min-h-[600px] flex items-center">
-        <img
-          src="/images/hero.jpg"
-          alt="CrossFit Alkmaar"
-          className="absolute inset-0 w-full h-full object-cover z-0"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-60 z-10"></div>
-        <div className="max-w-4xl mx-auto text-center relative z-20">
+      <section
+        className="relative text-white py-20 px-6 min-h-[600px] flex items-center"
+        style={{
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Word sterker, beweeg beter, voel je fitter
           </h1>
@@ -25,32 +27,20 @@ export default function HomePage() {
           <p className="text-lg mb-8 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button
-              onClick={() => setPopupOpen(true)}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-            >
-              Plan een gratis kennismaking
-            </button>
-            <a href="/kickstart" className="bg-white hover:bg-gray-100 text-gray-900 font-semibold py-4 px-8 rounded-lg transition cursor-pointer">
-              Bekijk de 28-Day Kickstart
-            </a>
-          </div>
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
+          >
+            Gratis intake
+          </button>
         </div>
       </section>
 
-      {/* Video Section */}
+      {/* Video 1 */}
       <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-4">Zie wat onze leden zeggen</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Echte verhalen van leden die net als jij begonnen zijn.</p>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
-            <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-              <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar testimonial" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/G9HkOnSsKg8" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
         </div>
       </section>
@@ -79,45 +69,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA na stappen */}
-      <section className="py-12 px-6 bg-gray-100">
+      {/* CTA Card 1 */}
+      <section className="py-12 px-6 bg-gray-200">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-sm p-8 text-center">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
             <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
-            <button onClick={() => setPopupOpen(true)} className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg">Gratis intake</button>
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
+            >
+              Gratis intake
+            </button>
           </div>
         </div>
       </section>
 
-      {/* Statistieken */}
+      {/* Video 2 */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Programmas */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">500+</div>
-              <p className="text-gray-600">Tevreden leden</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">10+</div>
-              <p className="text-gray-600">Jaar ervaring</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">50+</div>
-              <p className="text-gray-600">Klassen per week</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl md:text-5xl font-bold text-blue-900 mb-2">4.9</div>
-              <p className="text-gray-600">Google rating</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Programma's */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Of je nu wilt starten, structuur zoekt, of specifiek aan kracht wilt werken: wij hebben een programma voor jou.</p>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
@@ -128,7 +108,7 @@ export default function HomePage() {
                 <li>✓ Kleine groepen (max 6)</li>
                 <li>✓ Basis leefstijladvies</li>
               </ul>
-              <a href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <Link href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">BUILD</h3>
@@ -139,7 +119,7 @@ export default function HomePage() {
                 <li>✓ Een gestructureerd schema</li>
                 <li>✓ Met jouw vaste coaches</li>
               </ul>
-              <a href="/build" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">Groepslessen</h3>
@@ -150,43 +130,78 @@ export default function HomePage() {
                 <li>✓ Ontmoet nieuwe vrienden</li>
                 <li>✓ Voor alle niveaus</li>
               </ul>
-              <a href="/groepslessen" className="block w-full text-center bg-gray-900 hover:bg-gray-800 text-white font-semibold py-3 rounded-lg transition cursor-pointer">Meer info</a>
+              <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA na programma's */}
+      {/* CTA Card 2 */}
       <section className="py-12 px-6 bg-gray-200">
         <div className="max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-sm p-8 text-center">
-            <h3 className="text-2xl font-bold mb-2">Weet je het nog niet zeker?</h3>
-            <p className="text-gray-600 mb-6">Plan een vrijblijvend gesprek en ontdek welk programma bij je past.</p>
-            <button onClick={() => setPopupOpen(true)} className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 rounded-lg transition text-lg">Gratis intake</button>
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+            <h3 className="text-2xl font-bold mb-4">Weet je het nog niet zeker?</h3>
+            <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit bij je past.</p>
+            <button
+              onClick={() => setPopupOpen(true)}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
+            >
+              Gratis intake
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Resultaten */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <a 
+              href="https://www.google.com/search?q=crossfit+alkmaar#lrd=0x47cf573834f8b5b7:0x4a55c3c9c9a67e0e,1"
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-center hover:scale-105 transition cursor-pointer"
+            >
+              <div className="text-5xl font-bold text-blue-900 mb-2">260+</div>
+              <p className="text-gray-600">Google Reviews ⭐</p>
+            </a>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-900 mb-2">300+</div>
+              <p className="text-gray-600">Actieve leden</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-900 mb-2">12+</div>
+              <p className="text-gray-600">Jaar ervaring</p>
+            </div>
+            <div className="text-center">
+              <div className="text-5xl font-bold text-blue-900 mb-2">35+</div>
+              <p className="text-gray-600">Gemiddelde leeftijd</p>
+            </div>
           </div>
         </div>
       </section>
 
       {/* FAQ */}
-      <section className="py-16 px-6 bg-gray-100">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ik ben niet fit genoeg om te starten</h3>
-              <p className="text-gray-600">Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau. Je traint in je eigen tempo, met begeleiding. De meeste leden begonnen net als jij.</p>
+              <p className="text-gray-600">Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ik heb geen tijd voor 5x per week trainen</h3>
-              <p className="text-gray-600">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten. Consistentie is belangrijker dan frequentie. We helpen je een realistisch schema te maken.</p>
+              <p className="text-gray-600">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met CrossFit te beginnen?</h3>
-              <p className="text-gray-600">Absoluut niet. We hebben leden van 60, 65, 70+ die veilig en effectief trainen. Juist op latere leeftijd is krachtraining essentieel voor mobiliteit en gezondheid.</p>
+              <p className="text-gray-600">Absoluut niet. Onze gemiddelde leeftijd is 35+. We hebben leden van 20 tot 70+ die veilig trainen.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat als ik blessures of beperkingen heb?</h3>
-              <p className="text-gray-600">Tijdens de kennismaking bespreken we dit. We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie en kunnen veilig met beperkingen werken.</p>
+              <p className="text-gray-600">We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie.</p>
             </div>
           </div>
         </div>
@@ -196,8 +211,13 @@ export default function HomePage() {
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
-          <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen, gewoon kennismaken en kijken of het bij je past.</p>
-          <button onClick={() => setPopupOpen(true)} className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer">Plan je gratis kennismaking</button>
+          <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen.</p>
+          <button
+            onClick={() => setPopupOpen(true)}
+            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer"
+          >
+            Gratis intake
+          </button>
         </div>
       </section>
 
@@ -205,15 +225,15 @@ export default function HomePage() {
       {popupOpen && (
         <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black bg-opacity-50" onClick={() => setPopupOpen(false)}></div>
-          <div className="relative w-full max-w-lg bg-blue-900 rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative w-full max-w-lg bg-[#1e3a5f] rounded-lg overflow-hidden shadow-2xl">
             <button onClick={() => setPopupOpen(false)} className="absolute top-4 right-4 text-white hover:text-gray-300 z-10">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
-            <div className="bg-blue-900 text-white text-center py-6 px-8">
-              <h2 className="text-2xl font-bold mb-2">PLAN JE GRATIS INTAKE</h2>
-              <p className="text-gray-300">Laat je gegevens achter, we nemen snel contact met je op.</p>
+            <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
+              <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
+              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
             </div>
             <div className="bg-white p-6">
               <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>

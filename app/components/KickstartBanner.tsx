@@ -16,7 +16,7 @@ export default function KickstartBanner() {
 
   return (
     <>
-      <div className="bg-blue-900 text-white py-3 px-4 text-center sticky top-0 z-[60]">
+      <div className="bg-blue-900 text-white py-3 px-4 text-center">
         <p className="text-sm md:text-base mb-2">
           🔥 Kickstart {huidigeMaand} is <strong>VOLGEBOEKT</strong> 🔥 {volgendeMaand} bijna vol!
         </p>
