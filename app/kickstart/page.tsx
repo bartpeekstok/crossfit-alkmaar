@@ -21,7 +21,7 @@ export default function KickstartPage() {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/kickstart-header.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center top',
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
@@ -46,13 +46,13 @@ export default function KickstartPage() {
           <h2 className="text-3xl font-bold mb-8">Wat is de 28 day Kickstart?</h2>
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
-              De Kickstart is speciaal ontworpen voor drukke mensen die willen werken aan een fitter en sterker lijf. Gedurende 4 weken krijg je 12 trainingen waarin je een goede basis aanleert, onder begeleiding van ervaren coaches.
+              De Kickstart is speciaal ontworpen voor drukke mensen die nieuw zijn bij CrossFit maar niet weten waar te beginnen. Gedurende 4 weken krijg je 12 trainingen waarin je alle basis bewegingen leert, onder begeleiding van ervaren coaches.
             </p>
             <p className="mb-4">
               Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om elke beweging goed uit te leggen en te oefenen.
             </p>
             <p>
-              Na de Kickstart kun je met vertrouwen doorstromen naar onze BUILD lessen of reguliere groepstrainingen.
+              Na de Kickstart kun je met vertrouwen doorstromen naar onze BUILD programma of groepslessen.
             </p>
           </div>
         </div>
@@ -73,7 +73,7 @@ export default function KickstartPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Een goede basis</h3>
-              <p className="text-gray-600">Onder leiding van onze coaches leer je de basis van kracht- en conditietraining.</p>
+              <p className="text-gray-600">Je leert de basis van kracht- en conditietraining veilig uitvoeren.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Basis leefstijladvies</h3>
@@ -88,7 +88,7 @@ export default function KickstartPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Start in {volgendeMaand}</h2>
           <p className="text-xl mb-8">
-            De Kickstart van {volgendeMaand} heeft nog plekken beschikbaar. Schrijf je nu in!
+            De Kickstart van {volgendeMaand} heeft nog plekken beschikbaar.
           </p>
           <button
             onClick={() => setPopupOpen(true)}
