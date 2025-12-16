@@ -2,7 +2,7 @@
 
 import { usePopup } from "../../components/PopupContext";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { useParams } from "next/navigation";
 
 const blogPosts: { [key: string]: any } = {
   "waarom-krachttraining-voor-50-plussers": {
@@ -300,12 +300,24 @@ const blogPosts: { [key: string]: any } = {
   }
 };
 
-export default function BlogPostPage({ params }: { params: { slug: string } }) {
+export default function BlogPostPage() {
   const { openPopup } = usePopup();
-  const post = blogPosts[params.slug];
+  const params = useParams();
+  const slug = params.slug as string;
+  const post = blogPosts[slug];
 
   if (!post) {
-    notFound();
+    return (
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold mb-4">404</h1>
+          <p className="text-gray-600 mb-8">Dit artikel bestaat niet.</p>
+          <Link href="/blog" className="text-blue-900 font-semibold hover:underline">
+            ← Terug naar blog
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
