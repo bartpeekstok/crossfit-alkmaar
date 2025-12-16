@@ -58,8 +58,23 @@ export default function KickstartPage() {
         </div>
       </section>
 
-      {/* Wat je krijgt */}
+      {/* Video */}
       <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/esc-52ZNdPY"
+              title="28-Day Kickstart"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      {/* Wat je krijgt */}
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
           <div className="grid md:grid-cols-2 gap-6">
