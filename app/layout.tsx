@@ -9,21 +9,27 @@ import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: {
-    default: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
+    default: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
     template: "%s | CrossFit Alkmaar",
   },
   description:
-    "CrossFit Alkmaar: professionele begeleiding, schaalbare trainingen voor alle niveaus. Of je nu 30, 50 of 60+ bent - wij helpen je sterker worden. Plan je gratis intake!",
+    "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+. Plan je gratis intake!",
   keywords: [
-    "CrossFit Alkmaar",
-    "CrossFit",
+    "sportschool Alkmaar",
     "fitness Alkmaar",
+    "krachttraining Alkmaar",
+    "small group training Alkmaar",
+    "afvallen Alkmaar",
     "personal training Alkmaar",
     "groepslessen Alkmaar",
-    "krachttraining",
-    "functionele fitness",
-    "50+ fitness",
-    "beginners CrossFit",
+    "gym Alkmaar",
+    "CrossFit Alkmaar",
+    "fitness 50+ Alkmaar",
+    "beginners fitness Alkmaar",
+    "krachttraining voor vrouwen Alkmaar",
+    "functionele fitness Alkmaar",
+    "afvallen met begeleiding Alkmaar",
+    "sportschool met begeleiding Alkmaar",
   ],
   authors: [{ name: "CrossFit Alkmaar" }],
   creator: "CrossFit Alkmaar",
@@ -42,35 +48,35 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    url: "https://crossfitalkmaar.nl",
+    url: "https://crossfitalkmaar.com",
     siteName: "CrossFit Alkmaar",
-    title: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
     description:
-      "Professionele begeleiding, schaalbare trainingen voor alle niveaus. Plan je gratis intake!",
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis intake!",
     images: [
       {
-        url: "https://crossfitalkmaar.nl/images/hero.jpg",
+        url: "https://crossfitalkmaar.com/images/hero.jpg",
         width: 1200,
         height: 630,
-        alt: "CrossFit Alkmaar",
+        alt: "CrossFit Alkmaar - Sportschool in Alkmaar",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
     description:
-      "Professionele begeleiding, schaalbare trainingen voor alle niveaus. Plan je gratis intake!",
-    images: ["https://crossfitalkmaar.nl/images/hero.jpg"],
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
+    images: ["https://crossfitalkmaar.com/images/hero.jpg"],
   },
   verification: {
     // Voeg hier je Google Search Console verificatie code toe
     // google: "jouw-verificatie-code",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.nl",
+    canonical: "https://crossfitalkmaar.com",
   },
-  metadataBase: new URL("https://crossfitalkmaar.nl"),
+  metadataBase: new URL("https://crossfitalkmaar.com"),
 };
 
 export default function RootLayout({
@@ -86,6 +92,8 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e3a8a" />
         <meta name="geo.region" content="NL-NH" />
         <meta name="geo.placename" content="Alkmaar" />
+        <meta name="geo.position" content="52.6324;4.7534" />
+        <meta name="ICBM" content="52.6324, 4.7534" />
       </head>
       <body className="antialiased">
         <PopupProvider>

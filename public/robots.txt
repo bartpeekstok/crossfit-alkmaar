@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://crossfitalkmaar.nl/sitemap.xml
+Sitemap: https://crossfitalkmaar.com/sitemap.xml
