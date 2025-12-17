@@ -78,16 +78,16 @@ export default function Header() {
             {programmasOpen && (
               <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[200px] shadow-lg">
                 <Link href="/kickstart" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  28 Days Kickstart
+                  28 day kickstart
                 </Link>
                 <Link href="/groepslessen" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   Groepslessen
                 </Link>
                 <Link href="/personal-training" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Personal Training
+                  Personal training
                 </Link>
                 <Link href="/small-group-training" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Small Group Training
+                  Small group training
                 </Link>
                 <Link href="/voedingsadvies" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   Voedingsadvies
