@@ -1,60 +1,39 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { PopupProvider } from "./components/PopupContext";
+import IntakePopup from "./components/IntakePopup";
+import KickstartBanner from "./components/KickstartBanner";
 import CookieBanner from "./components/CookieBanner";
-import GoogleAnalytics from "./components/GoogleAnalytics";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://crossfitalkmaar.com'),
   title: {
     default: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
-    template: "%s | CrossFit Alkmaar"
+    template: "%s | CrossFit Alkmaar",
   },
-  description: "CrossFit Alkmaar: dé sportschool voor krachttraining, fitness en small group training in Alkmaar. Geschikt voor alle niveaus, van beginner tot gevorderd. Persoonlijke begeleiding, effectieve workouts. Start vandaag!",
+  description:
+    "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+. Plan je gratis intake!",
   keywords: [
     "sportschool Alkmaar",
-    "fitness Alkmaar", 
+    "fitness Alkmaar",
     "krachttraining Alkmaar",
-    "CrossFit Alkmaar",
     "small group training Alkmaar",
-    "personal training Alkmaar",
     "afvallen Alkmaar",
-    "gym Alkmaar",
-    "fitnesscentrum Alkmaar",
+    "personal training Alkmaar",
     "groepslessen Alkmaar",
-    "strength training Alkmaar",
-    "functioneel trainen Alkmaar",
-    "beginner fitness Alkmaar",
-    "sport Alkmaar",
-    "gezond leven Alkmaar"
+    "gym Alkmaar",
+    "CrossFit Alkmaar",
+    "fitness 50+ Alkmaar",
+    "beginners fitness Alkmaar",
+    "krachttraining voor vrouwen Alkmaar",
+    "functionele fitness Alkmaar",
+    "afvallen met begeleiding Alkmaar",
+    "sportschool met begeleiding Alkmaar",
   ],
   authors: [{ name: "CrossFit Alkmaar" }],
   creator: "CrossFit Alkmaar",
   publisher: "CrossFit Alkmaar",
-  openGraph: {
-    type: "website",
-    locale: "nl_NL",
-    url: "https://crossfitalkmaar.com",
-    siteName: "CrossFit Alkmaar",
-    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
-    description: "CrossFit Alkmaar: dé sportschool voor krachttraining, fitness en small group training in Alkmaar. Start vandaag met je gratis proefles!",
-    images: [
-      {
-        url: "/images/hero.jpg",
-        width: 1200,
-        height: 630,
-        alt: "CrossFit Alkmaar - Sportschool"
-      }
-    ]
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "CrossFit Alkmaar | Sportschool & Krachttraining",
-    description: "Dé sportschool voor krachttraining en fitness in Alkmaar. Start vandaag!",
-    images: ["/images/hero.jpg"]
-  },
   robots: {
     index: true,
     follow: true,
@@ -63,18 +42,41 @@ export const metadata: Metadata = {
       follow: true,
       "max-video-preview": -1,
       "max-image-preview": "large",
-      "max-snippet": -1
-    }
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "nl_NL",
+    url: "https://crossfitalkmaar.com",
+    siteName: "CrossFit Alkmaar",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    description:
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis intake!",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CrossFit Alkmaar - Sportschool in Alkmaar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    description:
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
+    images: ["https://crossfitalkmaar.com/images/hero.jpg"],
+  },
+  verification: {
+    // Voeg hier je Google Search Console verificatie code toe
+    // google: "jouw-verificatie-code",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com"
+    canonical: "https://crossfitalkmaar.com",
   },
-  other: {
-    "geo.region": "NL-NH",
-    "geo.placename": "Alkmaar",
-    "geo.position": "52.6324;4.7534",
-    "ICBM": "52.6324, 4.7534"
-  }
+  metadataBase: new URL("https://crossfitalkmaar.com"),
 };
 
 export default function RootLayout({
@@ -86,12 +88,22 @@ export default function RootLayout({
     <html lang="nl">
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#1e3a8a" />
+        <meta name="geo.region" content="NL-NH" />
+        <meta name="geo.placename" content="Alkmaar" />
+        <meta name="geo.position" content="52.6324;4.7534" />
+        <meta name="ICBM" content="52.6324, 4.7534" />
       </head>
-      <body className={inter.className}>
-        <GoogleAnalytics />
-        {children}
-        <CookieBanner />
+      <body className="antialiased">
+        <PopupProvider>
+          <Header />
+          <main className="pb-16">{children}</main>
+          <Footer />
+          <IntakePopup />
+          <KickstartBanner />
+          <CookieBanner />
+        </PopupProvider>
       </body>
     </html>
   );
