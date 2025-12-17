@@ -6,6 +6,7 @@ import { PopupProvider } from "./components/PopupContext";
 import IntakePopup from "./components/IntakePopup";
 import KickstartBanner from "./components/KickstartBanner";
 import CookieBanner from "./components/CookieBanner";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
 export const metadata: Metadata = {
   title: {
@@ -96,6 +97,7 @@ export default function RootLayout({
         <meta name="ICBM" content="52.6324, 4.7534" />
       </head>
       <body className="antialiased">
+        <GoogleAnalytics />
         <PopupProvider>
           <Header />
           <main className="pb-16">{children}</main>
