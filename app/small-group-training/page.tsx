@@ -38,7 +38,7 @@ export default function SmallGroupTrainingPage() {
           <h2 className="text-3xl font-bold mb-8">Wat is Small Group Training?</h2>
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
-              Small Group Training combineert het beste van twee werelden: de persoonlijke aandacht van personal training met de energie en motivatie van samen trainen. Je traint in een kleine groep van maximaal 4 personen.
+              Small Group Training combineert het beste van twee werelden: de persoonlijke aandacht van personal training met de energie en motivatie van samen trainen. Je traint in een kleine groep van maximaal 6 personen.
             </p>
             <p className="mb-4">
               Elke sessie wordt begeleid door een ervaren coach die iedereen individueel in de gaten houdt. Je krijgt feedback op je techniek en het programma wordt aangepast aan jouw niveau.
