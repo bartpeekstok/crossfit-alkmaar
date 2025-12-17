@@ -1,0 +1,6 @@
+# robots.txt for CrossFit Alkmaar
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://crossfitalkmaar.nl/sitemap.xml
