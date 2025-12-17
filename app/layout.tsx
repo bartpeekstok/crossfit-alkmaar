@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import { PopupProvider } from "./components/PopupContext";
 import IntakePopup from "./components/IntakePopup";
 import KickstartBanner from "./components/KickstartBanner";
+import CookieBanner from "./components/CookieBanner";
 
 export const metadata: Metadata = {
   title: "CrossFit Alkmaar - Train veilig en effectief op elk niveau",
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Footer />
           <IntakePopup />
           <KickstartBanner />
+          <CookieBanner />
         </PopupProvider>
       </body>
     </html>
