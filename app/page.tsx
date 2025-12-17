@@ -189,7 +189,7 @@ export default function HomePage() {
               <p className="text-gray-600">Gemiddelde leeftijd</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">50K</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">25K</div>
               <p className="text-gray-600">Bakjes koffie per jaar ☕</p>
             </div>
           </div>
