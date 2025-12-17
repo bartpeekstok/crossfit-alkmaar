@@ -20,10 +20,10 @@ export default function HomePage() {
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Word sterker, beweeg beter, voel je fitter
+            Hier word je wél sterker en fitter
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.
+            Kleine groepen, professionele coaches en schaalbaar op elk niveau.
           </p>
           <p className="text-lg mb-8 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
