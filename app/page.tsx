@@ -101,11 +101,11 @@ export default function HomePage() {
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
-              <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
-              <p className="text-gray-600 mb-6">Hier start iedereen. 4 weken begeleide training en een solide basis.</p>
+              <h3 className="text-2xl font-bold mb-3">28 day kickstart</h3>
+              <p className="text-gray-600 mb-6">Hier start iedereen. In vier weken leggen we samen een solide basis.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ 12 trainingen in 4 weken</li>
-                <li>✓ Extra aandacht en uitleg</li>
+                <li>✓ Wordt sterker en fitter</li>
+                <li>✓ Structuur en acountability</li>
                 <li>✓ Kleine groepen (max 6)</li>
                 <li>✓ Basis leefstijladvies</li>
               </ul>
@@ -189,7 +189,7 @@ export default function HomePage() {
               <p className="text-gray-600">Gemiddelde leeftijd</p>
             </div>
             <div className="text-center">
-              <div className="text-5xl font-bold text-blue-900 mb-2">25K</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">15K</div>
               <p className="text-gray-600">Bakjes koffie per jaar ☕</p>
             </div>
           </div>
@@ -210,7 +210,7 @@ export default function HomePage() {
               <p className="text-gray-600">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met CrossFit te beginnen?</h3>
+              <h3 className="text-xl font-semibold mb-2">Ben ik niet te oud om met trainen te beginnen?</h3>
               <p className="text-gray-600">Absoluut niet. Onze gemiddelde leeftijd is 35+. We hebben leden van 20 tot 70+ die veilig trainen.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">

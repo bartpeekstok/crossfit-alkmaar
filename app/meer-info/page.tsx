@@ -69,23 +69,7 @@ export default function MeerInfoPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-blue-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
-          <p className="text-xl mb-8">
-            Plan een gratis intake en kom langs voor een proefles.
-          </p>
-          <button
-            onClick={openPopup}
-            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Gratis intake
-          </button>
-        </div>
-      </section>
-
-      {/* Sportbit Script */}
+            {/* Sportbit Script */}
       <Script 
         src="https://cfalkmaar.sportbitapp.nl/cbm/embed/rooster/cdn/"
         strategy="afterInteractive"
