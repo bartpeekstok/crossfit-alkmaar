@@ -156,12 +156,8 @@ export default function KickstartPopup() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-gray-900">
-            Start met de 28-Day Kickstart
-          </h2>
-          <p className="text-gray-600 mt-2">
-            Kies een startdatum die bij jou past
-          </p>
+          <h2 className="text-2xl font-bold text-gray-900">Start met de 28-Day Kickstart</h2>
+          <p className="text-gray-600 mt-2">Kies een startdatum die bij jou past</p>
         </div>
 
         {/* Loading state */}
@@ -197,9 +193,7 @@ export default function KickstartPopup() {
                     <p className="text-gray-600">{event.tijd} uur</p>
                   </div>
                   <div className="text-right">
-                    <p className={`font-bold ${
-                      event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'
-                    }`}>
+                    <p className={`font-bold ${event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'}`}>
                       {event.vrijePlekken} {event.vrijePlekken === 1 ? 'plek' : 'plekken'} vrij
                     </p>
                     {event.vrijePlekken <= 2 && (
@@ -213,10 +207,10 @@ export default function KickstartPopup() {
         )}
 
         {/* CTA Button */}
-        
+        <a
           href="/kickstart"
-          className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
           onClick={closePopup}
+          className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
         >
           Bekijk de Kickstart
         </a>
