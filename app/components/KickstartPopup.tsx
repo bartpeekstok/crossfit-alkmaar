@@ -3,8 +3,6 @@
 import { useState, useEffect } from 'react';
 import { useKickstartPopup } from './KickstartPopupContext';
 
-console.log('📦 KickstartPopup FILE LOADED');
-
 interface KickstartEvent {
   datum: string;
   tijd: string;
@@ -18,34 +16,18 @@ export default function KickstartPopup() {
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
 
-  console.log('🔵 KickstartPopup rendered, isOpen:', isOpen, 'dataReady:', dataReady);
-
   // Fetch data bij laden
   useEffect(() => {
-    console.log('🟡 Starting fetchKickstartData...');
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden (één keer per sessie) - ALLEEN als data geladen is
+  // Auto-open na 5 seconden (één keer per sessie)
   useEffect(() => {
-    console.log('🟢 Auto-open useEffect triggered, dataReady:', dataReady);
-    
-    if (typeof window === 'undefined') {
-      console.log('🔴 Window undefined, skipping');
-      return;
-    }
-    if (!dataReady) {
-      console.log('🔴 Data not ready yet, skipping');
-      return;
-    }
-    if (sessionStorage.getItem('kickstartPopupShown')) {
-      console.log('🔴 Popup already shown this session, skipping');
-      return;
-    }
+    if (typeof window === 'undefined') return;
+    if (!dataReady) return;
+    if (sessionStorage.getItem('kickstartPopupShown')) return;
 
-    console.log('🟢 Setting 5 second timer for popup...');
     const timer = setTimeout(() => {
-      console.log('🟢 Timer fired! Opening popup...');
       openPopup();
       sessionStorage.setItem('kickstartPopupShown', 'true');
     }, 5000);
@@ -60,18 +42,13 @@ export default function KickstartPopup() {
       
       const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
       
-      console.log('🟡 Fetching from:', url);
       const response = await fetch(url);
       const text = await response.text();
-      console.log('🟡 Response received, length:', text.length);
       
       const jsonString = text.substring(47, text.length - 2);
       const json = JSON.parse(jsonString);
       
-      console.log('🟡 Parsed JSON:', json);
-      
       if (!json.table || !json.table.rows) {
-        console.log('🔴 No table or rows in response');
         setLoading(false);
         setDataReady(true);
         return;
@@ -124,14 +101,12 @@ export default function KickstartPopup() {
         return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
       });
 
-      console.log('🟢 Found events:', kickstartEvents);
       setEvents(kickstartEvents.slice(0, 2));
       setLoading(false);
       setDataReady(true);
-      console.log('🟢 Data ready set to true!');
       
     } catch (error) {
-      console.error('🔴 Error fetching Kickstart data:', error);
+      console.error('Error fetching Kickstart data:', error);
       setLoading(false);
       setDataReady(true);
     }
@@ -163,7 +138,6 @@ export default function KickstartPopup() {
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
-        {/* Sluit knop */}
         <button
           onClick={closePopup}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
@@ -174,7 +148,6 @@ export default function KickstartPopup() {
           </svg>
         </button>
 
-        {/* Header */}
         <div className="text-center mb-6">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
             <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +158,6 @@ export default function KickstartPopup() {
           <p className="text-gray-600 mt-2">Kies een startdatum die bij jou past</p>
         </div>
 
-        {/* Loading state */}
         {loading && (
           <div className="text-center py-8">
             <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
@@ -193,14 +165,12 @@ export default function KickstartPopup() {
           </div>
         )}
 
-        {/* Geen events */}
         {!loading && events.length === 0 && (
           <div className="text-center py-4 mb-4">
             <p className="text-gray-600">Neem contact op voor de eerstvolgende startdatum.</p>
           </div>
         )}
 
-        {/* Events lijst */}
         {!loading && events.length > 0 && (
           <div className="space-y-3 mb-6">
             {events.map((event, index) => (
@@ -231,7 +201,6 @@ export default function KickstartPopup() {
           </div>
         )}
 
-        {/* CTA Button */}
         <a
           href="/kickstart"
           onClick={closePopup}
@@ -240,7 +209,6 @@ export default function KickstartPopup() {
           Bekijk de Kickstart
         </a>
 
-        {/* Footer tekst */}
         <p className="text-center text-sm text-gray-500 mt-4">
           4 weken • 2x per week • Kleine groepen
         </p>
