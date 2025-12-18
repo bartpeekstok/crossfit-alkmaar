@@ -3,8 +3,9 @@ import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { PopupProvider } from "./components/PopupContext";
+import { KickstartPopupProvider } from "./components/KickstartPopupContext";
 import IntakePopup from "./components/IntakePopup";
-import KickstartBanner from "./components/KickstartBanner";
+import KickstartPopup from "./components/KickstartPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
@@ -99,12 +100,14 @@ export default function RootLayout({
       <body className="antialiased">
         <GoogleAnalytics />
         <PopupProvider>
-          <Header />
-          <main className="pb-16">{children}</main>
-          <Footer />
-          <IntakePopup />
-          <KickstartBanner />
-          <CookieBanner />
+          <KickstartPopupProvider>
+            <Header />
+            <main className="pb-16">{children}</main>
+            <Footer />
+            <IntakePopup />
+            <KickstartPopup />
+            <CookieBanner />
+          </KickstartPopupProvider>
         </PopupProvider>
       </body>
     </html>
