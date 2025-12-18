@@ -30,7 +30,7 @@ export default function IntakePopup() {
         {/* Blue header */}
         <div className="bg-blue-900 px-6 py-5 text-center">
           <h2 className="text-xl font-bold text-white uppercase">Laat hier je gegevens achter</h2>
-          <p className="text-blue-200 mt-1">We nemen snel contact met je op</p>
+          <p className="text-white mt-1">We nemen snel contact met je op</p>
         </div>
 
         {/* GHL Form Embed */}
@@ -42,6 +42,9 @@ export default function IntakePopup() {
             title="Website Form"
           />
         </div>
+
+        {/* Blue footer */}
+        <div className="bg-blue-900 h-4"></div>
       </div>
     </div>
   );
