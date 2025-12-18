@@ -34,7 +34,7 @@ export default function IntakePopup() {
         </div>
 
         {/* GHL Form Embed */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '320px' }}>
           <iframe
             src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
             style={{ width: '100%', height: '100%', border: 'none' }}
@@ -44,7 +44,7 @@ export default function IntakePopup() {
         </div>
 
         {/* Blue footer */}
-        <div className="bg-blue-900 h-4"></div>
+        <div className="bg-blue-900 h-8"></div>
       </div>
     </div>
   );
