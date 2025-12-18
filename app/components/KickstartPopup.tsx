@@ -25,7 +25,6 @@ export default function KickstartPopup() {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
-    if (events.length === 0) return;
     if (sessionStorage.getItem('kickstartPopupShown')) return;
 
     const timer = setTimeout(() => {
@@ -34,20 +33,18 @@ export default function KickstartPopup() {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [openPopup, dataReady, events]);
+  }, [openPopup, dataReady]);
 
   const fetchKickstartData = async () => {
     try {
       const SHEET_ID = '1wGEcBMfrUPWWXNGubqpr_KmbIyxh4bMyJ33mnA4gXK4';
       const SHEET_NAME = 'Overzicht';
       
-      // Alleen de samenvatting-rijen ophalen (A2:C8), niet de detail-rijen
       const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
       
       const response = await fetch(url);
       const text = await response.text();
       
-      // Google Sheets API geeft data terug wrapped in een functie-call
       const jsonString = text.substring(47, text.length - 2);
       const json = JSON.parse(jsonString);
       
@@ -63,27 +60,21 @@ export default function KickstartPopup() {
       const kickstartEvents: KickstartEvent[] = [];
 
       for (const row of json.table.rows) {
-        // Skip lege rijen
         if (!row.c || !row.c[0] || !row.c[1] || !row.c[2]) continue;
         
-        // Haal formatted values op
         const datumFormatted = row.c[0].f || '';
         const tijdFormatted = row.c[1].f || '';
         const aantalRaw = row.c[2].v;
         
-        // Check of aantal een getal is (skip tekst zoals "Iris Glorie")
         const aantal = typeof aantalRaw === 'number' ? aantalRaw : parseInt(aantalRaw);
         if (isNaN(aantal)) continue;
         
-        // Alleen 20:00 edities (filter 9:00 ochtend-sessies uit)
         if (!tijdFormatted.includes('20:00')) continue;
         
-        // Parse datum
         let eventDate: Date;
         const datumValue = row.c[0].v;
         
         if (typeof datumValue === 'string' && datumValue.startsWith('Date(')) {
-          // Parse Google Sheets Date format: Date(2026,0,9) = 9 januari 2026
           const match = datumValue.match(/Date\((\d+),(\d+),(\d+)\)/);
           if (match) {
             eventDate = new Date(parseInt(match[1]), parseInt(match[2]), parseInt(match[3]));
@@ -91,14 +82,11 @@ export default function KickstartPopup() {
             continue;
           }
         } else {
-          // Fallback: parse Nederlandse datum string
           eventDate = parseNLDate(datumFormatted);
         }
         
-        // Alleen toekomstige events
         if (eventDate < today) continue;
         
-        // Bereken vrije plekken (max 6 per sessie)
         const vrijePlekken = Math.max(0, 6 - aantal);
         
         kickstartEvents.push({
@@ -109,12 +97,10 @@ export default function KickstartPopup() {
         });
       }
 
-      // Sorteer op datum (vroegste eerst)
       kickstartEvents.sort((a, b) => {
         return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
       });
 
-      // Neem alleen de eerste 2 aankomende sessies
       setEvents(kickstartEvents.slice(0, 2));
       setLoading(false);
       setDataReady(true);
@@ -145,7 +131,6 @@ export default function KickstartPopup() {
     return new Date();
   };
 
-  // Verberg popup als deze niet open is
   if (!isOpen) {
     return null;
   }
@@ -228,7 +213,7 @@ export default function KickstartPopup() {
         )}
 
         {/* CTA Button */}
-        <a
+        
           href="/kickstart"
           className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
           onClick={closePopup}
