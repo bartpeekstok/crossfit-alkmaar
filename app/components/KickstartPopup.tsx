@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import { useKickstartPopup } from './KickstartPopupContext';
 
+console.log('📦 KickstartPopup FILE LOADED');
+
 interface KickstartEvent {
   datum: string;
   tijd: string;

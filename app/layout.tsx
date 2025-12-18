@@ -9,6 +9,8 @@ import KickstartPopup from "./components/KickstartPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
+console.log('🏠 Layout.tsx FILE LOADED');
+
 export const metadata: Metadata = {
   title: {
     default: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
