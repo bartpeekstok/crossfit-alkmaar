@@ -28,9 +28,13 @@ export default function IntakePopup() {
         </button>
 
         {/* Blue header */}
-        <div className="bg-blue-900 px-6 py-5 text-center">
-          <h2 className="text-xl font-bold text-white uppercase">Laat hier je gegevens achter</h2>
-          <p className="text-white mt-1">We nemen snel contact met je op</p>
+        <div style={{ backgroundColor: '#1e3a8a', padding: '20px 24px', textAlign: 'center' }}>
+          <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', textTransform: 'uppercase', margin: 0 }}>
+            Laat hier je gegevens achter
+          </h2>
+          <p style={{ color: '#ffffff', marginTop: '4px', marginBottom: 0 }}>
+            We nemen snel contact met je op
+          </p>
         </div>
 
         {/* GHL Form Embed */}
@@ -44,7 +48,7 @@ export default function IntakePopup() {
         </div>
 
         {/* Blue footer */}
-        <div className="bg-blue-900 h-8"></div>
+        <div style={{ backgroundColor: '#1e3a8a', height: '32px' }}></div>
       </div>
     </div>
   );
