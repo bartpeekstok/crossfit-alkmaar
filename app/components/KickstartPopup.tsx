@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useKickstartPopup } from './KickstartPopupContext';
+import { usePopup } from './PopupContext';
 
 interface KickstartEvent {
   datum: string;
@@ -12,6 +13,7 @@ interface KickstartEvent {
 
 export default function KickstartPopup() {
   const { isOpen, closePopup, openPopup } = useKickstartPopup();
+  const { openPopup: openIntakePopup } = usePopup();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
@@ -34,6 +36,11 @@ export default function KickstartPopup() {
 
     return () => clearTimeout(timer);
   }, [openPopup, dataReady]);
+
+  const handleMeerInfo = () => {
+    closePopup();
+    openIntakePopup();
+  };
 
   const fetchKickstartData = async () => {
     try {
@@ -185,7 +192,6 @@ export default function KickstartPopup() {
                 <div className="flex justify-between items-center">
                   <div>
                     <p className="font-semibold text-gray-900">{event.datum}</p>
-                    <p className="text-gray-600">{event.tijd} uur</p>
                   </div>
                   <div className="text-right">
                     <p className={`font-bold ${event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'}`}>
@@ -201,17 +207,12 @@ export default function KickstartPopup() {
           </div>
         )}
 
-        <a
-          href="/kickstart"
-          onClick={closePopup}
+        <button
+          onClick={handleMeerInfo}
           className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
         >
-          Bekijk de Kickstart
-        </a>
-
-        <p className="text-center text-sm text-gray-500 mt-4">
-          4 weken • 2x per week • Kleine groepen
-        </p>
+          Meer info
+        </button>
       </div>
     </div>
   );
