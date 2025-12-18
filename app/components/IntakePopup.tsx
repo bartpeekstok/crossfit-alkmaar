@@ -47,8 +47,7 @@ export default function IntakePopup() {
           />
         </div>
 
-        {/* Blue footer */}
-        <div style={{ backgroundColor: '#1e3a8a', height: '32px' }}></div>
+
       </div>
     </div>
   );
