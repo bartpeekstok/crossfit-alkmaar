@@ -14,44 +14,46 @@ export default function KickstartPopup() {
   const { isOpen, closePopup, openPopup } = useKickstartPopup();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
+  const [dataReady, setDataReady] = useState(false);
 
   // Fetch data bij laden
   useEffect(() => {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden (één keer per sessie)
+  // Auto-open na 5 seconden (één keer per sessie) - ALLEEN als data geladen is
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    if (sessionStorage.getItem('kickstartPopupShown')) {
-      return;
-    }
+    if (!dataReady) return;
+    if (events.length === 0) return;
+    if (sessionStorage.getItem('kickstartPopupShown')) return;
 
     const timer = setTimeout(() => {
-      if (!sessionStorage.getItem('kickstartPopupShown')) {
-        openPopup();
-        sessionStorage.setItem('kickstartPopupShown', 'true');
-      }
+      openPopup();
+      sessionStorage.setItem('kickstartPopupShown', 'true');
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [openPopup]);
+  }, [openPopup, dataReady, events]);
 
   const fetchKickstartData = async () => {
     try {
       const SHEET_ID = '1wGEcBMfrUPWWXNGubqpr_KmbIyxh4bMyJ33mnA4gXK4';
       const SHEET_NAME = 'Overzicht';
       
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C20`;
+      // Alleen de samenvatting-rijen ophalen (A2:C8), niet de detail-rijen
+      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
       
       const response = await fetch(url);
       const text = await response.text();
       
+      // Google Sheets API geeft data terug wrapped in een functie-call
       const jsonString = text.substring(47, text.length - 2);
       const json = JSON.parse(jsonString);
       
       if (!json.table || !json.table.rows) {
         setLoading(false);
+        setDataReady(true);
         return;
       }
 
@@ -61,24 +63,27 @@ export default function KickstartPopup() {
       const kickstartEvents: KickstartEvent[] = [];
 
       for (const row of json.table.rows) {
+        // Skip lege rijen
         if (!row.c || !row.c[0] || !row.c[1] || !row.c[2]) continue;
         
-        // Gebruik formatted values (f) voor datum en tijd
-        const datumFormatted = row.c[0].f;
-        const tijdFormatted = row.c[1].f;
-        const aantalValue = row.c[2].v;
+        // Haal formatted values op
+        const datumFormatted = row.c[0].f || '';
+        const tijdFormatted = row.c[1].f || '';
+        const aantalRaw = row.c[2].v;
         
-        // Check of aantal een getal is (skip namen zoals "Iris Glorie")
-        const aantal = parseInt(aantalValue);
+        // Check of aantal een getal is (skip tekst zoals "Iris Glorie")
+        const aantal = typeof aantalRaw === 'number' ? aantalRaw : parseInt(aantalRaw);
         if (isNaN(aantal)) continue;
         
-        // Alleen 20:00 edities
-        if (tijdFormatted !== '20:00') continue;
+        // Alleen 20:00 edities (filter 9:00 ochtend-sessies uit)
+        if (!tijdFormatted.includes('20:00')) continue;
         
-        // Parse datum voor sorteren
+        // Parse datum
         let eventDate: Date;
         const datumValue = row.c[0].v;
+        
         if (typeof datumValue === 'string' && datumValue.startsWith('Date(')) {
+          // Parse Google Sheets Date format: Date(2026,0,9) = 9 januari 2026
           const match = datumValue.match(/Date\((\d+),(\d+),(\d+)\)/);
           if (match) {
             eventDate = new Date(parseInt(match[1]), parseInt(match[2]), parseInt(match[3]));
@@ -86,12 +91,14 @@ export default function KickstartPopup() {
             continue;
           }
         } else {
+          // Fallback: parse Nederlandse datum string
           eventDate = parseNLDate(datumFormatted);
         }
         
         // Alleen toekomstige events
         if (eventDate < today) continue;
         
+        // Bereken vrije plekken (max 6 per sessie)
         const vrijePlekken = Math.max(0, 6 - aantal);
         
         kickstartEvents.push({
@@ -102,16 +109,20 @@ export default function KickstartPopup() {
         });
       }
 
-      // Sorteer op datum en neem eerste 2
+      // Sorteer op datum (vroegste eerst)
       kickstartEvents.sort((a, b) => {
         return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
       });
 
+      // Neem alleen de eerste 2 aankomende sessies
       setEvents(kickstartEvents.slice(0, 2));
       setLoading(false);
+      setDataReady(true);
+      
     } catch (error) {
       console.error('Error fetching Kickstart data:', error);
       setLoading(false);
+      setDataReady(true);
     }
   };
 
@@ -134,14 +145,15 @@ export default function KickstartPopup() {
     return new Date();
   };
 
-  if (!isOpen || loading || events.length === 0) {
+  // Verberg popup als deze niet open is
+  if (!isOpen) {
     return null;
   }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
       <div className="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
-        {/* Close button */}
+        {/* Sluit knop */}
         <button
           onClick={closePopup}
           className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
@@ -167,36 +179,53 @@ export default function KickstartPopup() {
           </p>
         </div>
 
-        {/* Events */}
-        <div className="space-y-3 mb-6">
-          {events.map((event, index) => (
-            <div
-              key={index}
-              className={`border-2 rounded-xl p-4 transition ${
-                event.vrijePlekken <= 2
-                  ? 'border-orange-300 bg-orange-50'
-                  : 'border-gray-200 hover:border-blue-300'
-              }`}
-            >
-              <div className="flex justify-between items-center">
-                <div>
-                  <p className="font-semibold text-gray-900">{event.datum}</p>
-                  <p className="text-gray-600">{event.tijd} uur</p>
-                </div>
-                <div className="text-right">
-                  <p className={`font-bold ${
-                    event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'
-                  }`}>
-                    {event.vrijePlekken} {event.vrijePlekken === 1 ? 'plek' : 'plekken'} vrij
-                  </p>
-                  {event.vrijePlekken <= 2 && (
-                    <p className="text-xs text-orange-600">Bijna vol!</p>
-                  )}
+        {/* Loading state */}
+        {loading && (
+          <div className="text-center py-8">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+            <p className="text-gray-500 mt-2">Laden...</p>
+          </div>
+        )}
+
+        {/* Geen events */}
+        {!loading && events.length === 0 && (
+          <div className="text-center py-4 mb-4">
+            <p className="text-gray-600">Neem contact op voor de eerstvolgende startdatum.</p>
+          </div>
+        )}
+
+        {/* Events lijst */}
+        {!loading && events.length > 0 && (
+          <div className="space-y-3 mb-6">
+            {events.map((event, index) => (
+              <div
+                key={index}
+                className={`border-2 rounded-xl p-4 transition ${
+                  event.vrijePlekken <= 2
+                    ? 'border-orange-300 bg-orange-50'
+                    : 'border-gray-200 hover:border-blue-300'
+                }`}
+              >
+                <div className="flex justify-between items-center">
+                  <div>
+                    <p className="font-semibold text-gray-900">{event.datum}</p>
+                    <p className="text-gray-600">{event.tijd} uur</p>
+                  </div>
+                  <div className="text-right">
+                    <p className={`font-bold ${
+                      event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'
+                    }`}>
+                      {event.vrijePlekken} {event.vrijePlekken === 1 ? 'plek' : 'plekken'} vrij
+                    </p>
+                    {event.vrijePlekken <= 2 && (
+                      <p className="text-xs text-orange-600">Bijna vol!</p>
+                    )}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
         {/* CTA Button */}
         <a
@@ -207,7 +236,7 @@ export default function KickstartPopup() {
           Bekijk de Kickstart
         </a>
 
-        {/* Footer text */}
+        {/* Footer tekst */}
         <p className="text-center text-sm text-gray-500 mt-4">
           4 weken • 2x per week • Kleine groepen
         </p>
