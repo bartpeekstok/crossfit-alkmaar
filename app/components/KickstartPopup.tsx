@@ -16,18 +16,34 @@ export default function KickstartPopup() {
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
 
+  console.log('🔵 KickstartPopup rendered, isOpen:', isOpen, 'dataReady:', dataReady);
+
   // Fetch data bij laden
   useEffect(() => {
+    console.log('🟡 Starting fetchKickstartData...');
     fetchKickstartData();
   }, []);
 
   // Auto-open na 5 seconden (één keer per sessie) - ALLEEN als data geladen is
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (!dataReady) return;
-    if (sessionStorage.getItem('kickstartPopupShown')) return;
+    console.log('🟢 Auto-open useEffect triggered, dataReady:', dataReady);
+    
+    if (typeof window === 'undefined') {
+      console.log('🔴 Window undefined, skipping');
+      return;
+    }
+    if (!dataReady) {
+      console.log('🔴 Data not ready yet, skipping');
+      return;
+    }
+    if (sessionStorage.getItem('kickstartPopupShown')) {
+      console.log('🔴 Popup already shown this session, skipping');
+      return;
+    }
 
+    console.log('🟢 Setting 5 second timer for popup...');
     const timer = setTimeout(() => {
+      console.log('🟢 Timer fired! Opening popup...');
       openPopup();
       sessionStorage.setItem('kickstartPopupShown', 'true');
     }, 5000);
@@ -42,13 +58,18 @@ export default function KickstartPopup() {
       
       const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
       
+      console.log('🟡 Fetching from:', url);
       const response = await fetch(url);
       const text = await response.text();
+      console.log('🟡 Response received, length:', text.length);
       
       const jsonString = text.substring(47, text.length - 2);
       const json = JSON.parse(jsonString);
       
+      console.log('🟡 Parsed JSON:', json);
+      
       if (!json.table || !json.table.rows) {
+        console.log('🔴 No table or rows in response');
         setLoading(false);
         setDataReady(true);
         return;
@@ -101,12 +122,14 @@ export default function KickstartPopup() {
         return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
       });
 
+      console.log('🟢 Found events:', kickstartEvents);
       setEvents(kickstartEvents.slice(0, 2));
       setLoading(false);
       setDataReady(true);
+      console.log('🟢 Data ready set to true!');
       
     } catch (error) {
-      console.error('Error fetching Kickstart data:', error);
+      console.error('🔴 Error fetching Kickstart data:', error);
       setLoading(false);
       setDataReady(true);
     }
