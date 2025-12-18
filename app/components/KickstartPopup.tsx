@@ -22,6 +22,7 @@ export default function KickstartPopup() {
 
   // Auto-open na 5 seconden (één keer per sessie)
   useEffect(() => {
+    if (typeof window === 'undefined') return;
     if (sessionStorage.getItem('kickstartPopupShown')) {
       return;
     }
@@ -62,15 +63,21 @@ export default function KickstartPopup() {
       for (const row of json.table.rows) {
         if (!row.c || !row.c[0] || !row.c[1] || !row.c[2]) continue;
         
-        const datumValue = row.c[0].v;
-        const tijd = row.c[1].v;
-        const aantal = parseInt(row.c[2].v) || 0;
+        // Gebruik formatted values (f) voor datum en tijd
+        const datumFormatted = row.c[0].f;
+        const tijdFormatted = row.c[1].f;
+        const aantalValue = row.c[2].v;
+        
+        // Check of aantal een getal is (skip namen zoals "Iris Glorie")
+        const aantal = parseInt(aantalValue);
+        if (isNaN(aantal)) continue;
         
         // Alleen 20:00 edities
-        if (tijd !== '20:00') continue;
+        if (tijdFormatted !== '20:00') continue;
         
-        // Parse datum
+        // Parse datum voor sorteren
         let eventDate: Date;
+        const datumValue = row.c[0].v;
         if (typeof datumValue === 'string' && datumValue.startsWith('Date(')) {
           const match = datumValue.match(/Date\((\d+),(\d+),(\d+)\)/);
           if (match) {
@@ -78,10 +85,8 @@ export default function KickstartPopup() {
           } else {
             continue;
           }
-        } else if (row.c[0].f) {
-          eventDate = parseNLDate(row.c[0].f);
         } else {
-          continue;
+          eventDate = parseNLDate(datumFormatted);
         }
         
         // Alleen toekomstige events
@@ -90,8 +95,8 @@ export default function KickstartPopup() {
         const vrijePlekken = Math.max(0, 6 - aantal);
         
         kickstartEvents.push({
-          datum: row.c[0].f || formatDate(eventDate),
-          tijd: tijd,
+          datum: datumFormatted,
+          tijd: tijdFormatted,
           aantal: aantal,
           vrijePlekken: vrijePlekken
         });
@@ -127,12 +132,6 @@ export default function KickstartPopup() {
       }
     }
     return new Date();
-  };
-
-  const formatDate = (date: Date): string => {
-    const months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni',
-                    'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
-    return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
   };
 
   if (!isOpen || loading || events.length === 0) {
