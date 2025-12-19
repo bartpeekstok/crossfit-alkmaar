@@ -29,19 +29,17 @@ export default function KickstartPopup() {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden - 1x per sessie (ook bij navigatie naar andere pagina's)
+  // Auto-open na 5 seconden - 1x per page load
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
     if (hasAutoOpened.current) return;
-    if (sessionStorage.getItem('kickstartPopupShown')) return;
     
     // Niet openen op uitgesloten pagina's
     if (excludedPages.includes(pathname)) return;
 
     const timer = setTimeout(() => {
       hasAutoOpened.current = true;
-      sessionStorage.setItem('kickstartPopupShown', 'true');
       openPopup();
     }, 5000);
 
