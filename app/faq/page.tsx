@@ -359,9 +359,9 @@ export default function FAQPage() {
       <section
         className="relative text-white py-20 px-6 min-h-[400px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/faq-header.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/faq-header.jpg')`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: "center top",
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { useKickstartPopup } from './KickstartPopupContext';
 import { usePopup } from './PopupContext';
 
@@ -18,25 +19,34 @@ export default function KickstartPopup() {
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
   const hasAutoOpened = useRef(false);
+  const pathname = usePathname();
+
+  // Pagina's waar de popup NIET automatisch moet openen
+  const excludedPages = ['/faq'];
 
   // Fetch data bij laden
   useEffect(() => {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden - 1x per pagina bezoek
+  // Auto-open na 5 seconden - 1x per sessie (ook bij navigatie naar andere pagina's)
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
     if (hasAutoOpened.current) return;
+    if (sessionStorage.getItem('kickstartPopupShown')) return;
+    
+    // Niet openen op uitgesloten pagina's
+    if (excludedPages.includes(pathname)) return;
 
     const timer = setTimeout(() => {
       hasAutoOpened.current = true;
+      sessionStorage.setItem('kickstartPopupShown', 'true');
       openPopup();
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [openPopup, dataReady]);
+  }, [openPopup, dataReady, pathname]);
 
   const handleMeerInfo = () => {
     closePopup();
