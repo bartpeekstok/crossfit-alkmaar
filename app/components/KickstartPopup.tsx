@@ -23,15 +23,13 @@ export default function KickstartPopup() {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden (één keer per sessie)
+  // Auto-open na 5 seconden - ALTIJD, ook bij terugkerende bezoekers
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
-    if (sessionStorage.getItem('kickstartPopupShown')) return;
 
     const timer = setTimeout(() => {
       openPopup();
-      sessionStorage.setItem('kickstartPopupShown', 'true');
     }, 5000);
 
     return () => clearTimeout(timer);
