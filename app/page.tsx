@@ -105,7 +105,7 @@ export default function HomePage() {
               <p className="text-gray-600 mb-6">Hier start iedereen. In vier weken leggen we samen een solide basis.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
                 <li>✓ Wordt sterker en fitter</li>
-                <li>✓ Structuur en acountability</li>
+                <li>✓ Structuur en accountability</li>
                 <li>✓ Kleine groepen (max 6)</li>
                 <li>✓ Basis leefstijladvies</li>
               </ul>
