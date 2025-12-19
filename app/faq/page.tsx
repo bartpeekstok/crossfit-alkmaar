@@ -361,7 +361,7 @@ export default function FAQPage() {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/faq-header.jpg')`,
           backgroundSize: "cover",
-          backgroundPosition: "center 80%",
+          backgroundPosition: "center 30%",
         }}
       >
         <div className="max-w-4xl mx-auto text-center relative z-10">
