@@ -46,13 +46,13 @@ export default function KickstartPage() {
           <h2 className="text-3xl font-bold mb-8">Wat is de 28 day Kickstart?</h2>
           <div className="prose prose-lg text-gray-600">
             <p className="mb-4">
-              De Kickstart is speciaal ontworpen voor drukke mensen die nieuw zijn bij CrossFit maar niet weten waar te beginnen. Gedurende 4 weken krijg je 12 trainingen waarin je alle basis bewegingen leert, onder begeleiding van ervaren coaches.
+              De Kickstart is speciaal ontworpen voor drukke mensen die (weer) willen starten met trainen maar niet weten waar te beginnen. Wij maken trainen leuk, veilig en effectief. Zo leggen we een goede basis om op verder te bouwen.
             </p>
             <p className="mb-4">
-              Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om elke beweging goed uit te leggen en te oefenen.
+              Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om alles goed uit te leggen en te oefenen.
             </p>
             <p>
-              Na de Kickstart kun je met vertrouwen doorstromen naar onze BUILD programma of groepslessen.
+              Na de Kickstart kun je met vertrouwen doorstromen naar ons BUILD programma of de groepslessen. Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij jou past.
             </p>
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function KickstartPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Een goede basis</h3>
-              <p className="text-gray-600">Je leert de basis van kracht- en conditietraining veilig uitvoeren.</p>
+              <p className="text-gray-600">Je leert de basis van kracht- en conditietraining en we laten je ervaren dat trainen leuk is!</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Basis leefstijladvies</h3>
