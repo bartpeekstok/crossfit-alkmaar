@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useKickstartPopup } from './KickstartPopupContext';
 import { usePopup } from './PopupContext';
 
@@ -17,18 +17,21 @@ export default function KickstartPopup() {
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
+  const hasAutoOpened = useRef(false);
 
   // Fetch data bij laden
   useEffect(() => {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden - ALTIJD, ook bij terugkerende bezoekers
+  // Auto-open na 5 seconden - 1x per pagina bezoek
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
+    if (hasAutoOpened.current) return;
 
     const timer = setTimeout(() => {
+      hasAutoOpened.current = true;
       openPopup();
     }, 5000);
 
