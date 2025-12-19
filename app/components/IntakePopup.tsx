@@ -9,9 +9,9 @@ export default function IntakePopup() {
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center">
-      {/* Overlay */}
+      {/* Overlay - lichter zodat site zichtbaar blijft */}
       <div 
-        className="absolute inset-0 bg-black bg-opacity-50"
+        className="absolute inset-0 bg-black/30"
         onClick={closePopup}
       ></div>
       
@@ -46,8 +46,6 @@ export default function IntakePopup() {
             title="Website Form"
           />
         </div>
-
-
       </div>
     </div>
   );
