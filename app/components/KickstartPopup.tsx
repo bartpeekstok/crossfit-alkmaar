@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useKickstartPopup } from './KickstartPopupContext';
-import { useKickstartFormPopup } from './KickstartFormPopupContext';
+import { usePopup } from './PopupContext';
 
 interface KickstartEvent {
   datum: string;
@@ -13,7 +13,7 @@ interface KickstartEvent {
 
 export default function KickstartPopup() {
   const { isOpen, closePopup, openPopup } = useKickstartPopup();
-  const { openPopup: openFormPopup } = useKickstartFormPopup();
+  const { openPopup: openIntakePopup } = usePopup();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
@@ -149,7 +149,7 @@ export default function KickstartPopup() {
 
   const handleMeerInfoClick = () => {
     closePopup();
-    openFormPopup();
+    openIntakePopup();
   };
 
   // Verberg popup als deze niet open is
@@ -234,7 +234,7 @@ export default function KickstartPopup() {
           </div>
         )}
 
-        {/* CTA Button - opent nu de form popup */}
+        {/* CTA Button - opent nu de IntakePopup */}
         <button
           onClick={handleMeerInfoClick}
           className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
