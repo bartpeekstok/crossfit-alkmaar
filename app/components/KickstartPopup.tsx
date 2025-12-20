@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import { useKickstartPopup } from './KickstartPopupContext';
 import { usePopup } from './PopupContext';
 
@@ -14,6 +15,7 @@ interface KickstartEvent {
 export default function KickstartPopup() {
   const { isOpen, closePopup, openPopup } = useKickstartPopup();
   const { openPopup: openIntakePopup } = usePopup();
+  const pathname = usePathname();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
@@ -23,11 +25,16 @@ export default function KickstartPopup() {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden (één keer per sessie) - ALLEEN als data geladen is
+  // Auto-open na 5 seconden (één keer per sessie, niet op faq en free-intro)
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
     if (events.length === 0) return;
+    
+    // Niet tonen op faq en free-intro pagina's
+    if (pathname === '/faq' || pathname === '/free-intro') return;
+    
+    // Check of popup al getoond is in deze sessie
     if (sessionStorage.getItem('kickstartPopupShown')) return;
 
     const timer = setTimeout(() => {
@@ -36,7 +43,7 @@ export default function KickstartPopup() {
     }, 5000);
 
     return () => clearTimeout(timer);
-  }, [openPopup, dataReady, events]);
+  }, [openPopup, dataReady, events, pathname]);
 
   const fetchKickstartData = async () => {
     try {
