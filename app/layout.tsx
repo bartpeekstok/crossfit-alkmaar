@@ -5,9 +5,17 @@ import Footer from "./components/Footer";
 import { PopupProvider } from "./components/PopupContext";
 import { KickstartPopupProvider } from "./components/KickstartPopupContext";
 import { KickstartFormPopupProvider } from "./components/KickstartFormPopupContext";
+import { PersonalTrainingPopupProvider } from "./components/PersonalTrainingPopupContext";
+import { SmallGroupPopupProvider } from "./components/SmallGroupPopupContext";
+import { VoedingsadviesPopupProvider } from "./components/VoedingsadviesPopupContext";
+import { GroepslessenPopupProvider } from "./components/GroepslessenPopupContext";
 import IntakePopup from "./components/IntakePopup";
 import KickstartPopup from "./components/KickstartPopup";
 import KickstartFormPopup from "./components/KickstartFormPopup";
+import PersonalTrainingPopup from "./components/PersonalTrainingPopup";
+import SmallGroupPopup from "./components/SmallGroupPopup";
+import VoedingsadviesPopup from "./components/VoedingsadviesPopup";
+import GroepslessenPopup from "./components/GroepslessenPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
@@ -104,13 +112,25 @@ export default function RootLayout({
         <PopupProvider>
           <KickstartPopupProvider>
             <KickstartFormPopupProvider>
-              <Header />
-              <main className="pb-16">{children}</main>
-              <Footer />
-              <IntakePopup />
-              <KickstartPopup />
-              <KickstartFormPopup />
-              <CookieBanner />
+              <PersonalTrainingPopupProvider>
+                <SmallGroupPopupProvider>
+                  <VoedingsadviesPopupProvider>
+                    <GroepslessenPopupProvider>
+                      <Header />
+                      <main className="pb-16">{children}</main>
+                      <Footer />
+                      <IntakePopup />
+                      <KickstartPopup />
+                      <KickstartFormPopup />
+                      <PersonalTrainingPopup />
+                      <SmallGroupPopup />
+                      <VoedingsadviesPopup />
+                      <GroepslessenPopup />
+                      <CookieBanner />
+                    </GroepslessenPopupProvider>
+                  </VoedingsadviesPopupProvider>
+                </SmallGroupPopupProvider>
+              </PersonalTrainingPopupProvider>
             </KickstartFormPopupProvider>
           </KickstartPopupProvider>
         </PopupProvider>
