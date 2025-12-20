@@ -1,9 +1,9 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
+import { useSmallGroupPopup } from "../components/SmallGroupPopupContext";
 
 export default function SmallGroupTrainingPage() {
-  const { openPopup } = usePopup();
+  const { openPopup } = useSmallGroupPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">

@@ -1,9 +1,9 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
+import { useGroepslessenPopup } from "../components/GroepslessenPopupContext";
 
 export default function GroepslessenPage() {
-  const { openPopup } = usePopup();
+  const { openPopup } = useGroepslessenPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">

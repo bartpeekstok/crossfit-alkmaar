@@ -1,9 +1,9 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
+import { useVoedingsadviesPopup } from "../components/VoedingsadviesPopupContext";
 
 export default function VoedingsadviesPage() {
-  const { openPopup } = usePopup();
+  const { openPopup } = useVoedingsadviesPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">

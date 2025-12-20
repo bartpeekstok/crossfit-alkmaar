@@ -1,9 +1,9 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
+import { usePersonalTrainingPopup } from "../components/PersonalTrainingPopupContext";
 
 export default function PersonalTrainingPage() {
-  const { openPopup } = usePopup();
+  const { openPopup } = usePersonalTrainingPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
