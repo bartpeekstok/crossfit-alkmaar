@@ -4,8 +4,10 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import { PopupProvider } from "./components/PopupContext";
 import { KickstartPopupProvider } from "./components/KickstartPopupContext";
+import { KickstartFormPopupProvider } from "./components/KickstartFormPopupContext";
 import IntakePopup from "./components/IntakePopup";
 import KickstartPopup from "./components/KickstartPopup";
+import KickstartFormPopup from "./components/KickstartFormPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 
@@ -101,12 +103,15 @@ export default function RootLayout({
         <GoogleAnalytics />
         <PopupProvider>
           <KickstartPopupProvider>
-            <Header />
-            <main className="pb-16">{children}</main>
-            <Footer />
-            <IntakePopup />
-            <KickstartPopup />
-            <CookieBanner />
+            <KickstartFormPopupProvider>
+              <Header />
+              <main className="pb-16">{children}</main>
+              <Footer />
+              <IntakePopup />
+              <KickstartPopup />
+              <KickstartFormPopup />
+              <CookieBanner />
+            </KickstartFormPopupProvider>
           </KickstartPopupProvider>
         </PopupProvider>
       </body>

@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 import { useKickstartPopup } from './KickstartPopupContext';
-import { usePopup } from './PopupContext';
+import { useKickstartFormPopup } from './KickstartFormPopupContext';
 
 // Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
 let popupShownThisPageLoad = false;
@@ -17,7 +17,7 @@ interface KickstartEvent {
 
 export default function KickstartPopup() {
   const { isOpen, closePopup, openPopup } = useKickstartPopup();
-  const { openPopup: openIntakePopup } = usePopup();
+  const { openPopup: openKickstartFormPopup } = useKickstartFormPopup();
   const pathname = usePathname();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -146,7 +146,7 @@ export default function KickstartPopup() {
 
   const handleMeerInfoClick = () => {
     closePopup();
-    openIntakePopup();
+    openKickstartFormPopup();
   };
 
   if (!isOpen) {
