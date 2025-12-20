@@ -1,252 +1,115 @@
-'use client';
+import type { Metadata } from "next";
+import "./globals.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { PopupProvider } from "./components/PopupContext";
+import { KickstartPopupProvider } from "./components/KickstartPopupContext";
+import IntakePopup from "./components/IntakePopup";
+import KickstartPopup from "./components/KickstartPopup";
+import CookieBanner from "./components/CookieBanner";
+import GoogleAnalytics from "./components/GoogleAnalytics";
 
-import { useState, useEffect } from 'react';
-import { useKickstartPopup } from './KickstartPopupContext';
-import { usePopup } from './PopupContext';
+export const metadata: Metadata = {
+  title: {
+    default: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    template: "%s | CrossFit Alkmaar",
+  },
+  description:
+    "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+. Plan je gratis intake!",
+  keywords: [
+    "sportschool Alkmaar",
+    "fitness Alkmaar",
+    "krachttraining Alkmaar",
+    "small group training Alkmaar",
+    "afvallen Alkmaar",
+    "personal training Alkmaar",
+    "groepslessen Alkmaar",
+    "gym Alkmaar",
+    "CrossFit Alkmaar",
+    "fitness 50+ Alkmaar",
+    "beginners fitness Alkmaar",
+    "krachttraining voor vrouwen Alkmaar",
+    "functionele fitness Alkmaar",
+    "afvallen met begeleiding Alkmaar",
+    "sportschool met begeleiding Alkmaar",
+  ],
+  authors: [{ name: "CrossFit Alkmaar" }],
+  creator: "CrossFit Alkmaar",
+  publisher: "CrossFit Alkmaar",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  openGraph: {
+    type: "website",
+    locale: "nl_NL",
+    url: "https://crossfitalkmaar.com",
+    siteName: "CrossFit Alkmaar",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    description:
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis intake!",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "CrossFit Alkmaar - Sportschool in Alkmaar",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    description:
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
+    images: ["https://crossfitalkmaar.com/images/hero.jpg"],
+  },
+  verification: {
+    // Voeg hier je Google Search Console verificatie code toe
+    // google: "jouw-verificatie-code",
+  },
+  alternates: {
+    canonical: "https://crossfitalkmaar.com",
+  },
+  metadataBase: new URL("https://crossfitalkmaar.com"),
+};
 
-interface KickstartEvent {
-  datum: string;
-  tijd: string;
-  aantal: number;
-  vrijePlekken: number;
-}
-
-export default function KickstartPopup() {
-  const { isOpen, closePopup, openPopup } = useKickstartPopup();
-  const { openPopup: openIntakePopup } = usePopup();
-  const [events, setEvents] = useState<KickstartEvent[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [dataReady, setDataReady] = useState(false);
-
-  // Fetch data bij laden
-  useEffect(() => {
-    fetchKickstartData();
-  }, []);
-
-  // Auto-open na 5 seconden (één keer per sessie) - ALLEEN als data geladen is
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (!dataReady) return;
-    if (events.length === 0) return;
-    if (sessionStorage.getItem('kickstartPopupShown')) return;
-
-    const timer = setTimeout(() => {
-      openPopup();
-      sessionStorage.setItem('kickstartPopupShown', 'true');
-    }, 5000);
-
-    return () => clearTimeout(timer);
-  }, [openPopup, dataReady, events]);
-
-  const fetchKickstartData = async () => {
-    try {
-      const SHEET_ID = '1wGEcBMfrUPWWXNGubqpr_KmbIyxh4bMyJ33mnA4gXK4';
-      const SHEET_NAME = 'Overzicht';
-      
-      // Alleen de samenvatting-rijen ophalen (A2:C8), niet de detail-rijen
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
-      
-      const response = await fetch(url);
-      const text = await response.text();
-      
-      // Google Sheets API geeft data terug wrapped in een functie-call
-      const jsonString = text.substring(47, text.length - 2);
-      const json = JSON.parse(jsonString);
-      
-      if (!json.table || !json.table.rows) {
-        setLoading(false);
-        setDataReady(true);
-        return;
-      }
-
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-
-      const kickstartEvents: KickstartEvent[] = [];
-
-      for (const row of json.table.rows) {
-        // Skip lege rijen
-        if (!row.c || !row.c[0] || !row.c[1] || !row.c[2]) continue;
-        
-        // Haal formatted values op
-        const datumFormatted = row.c[0].f || '';
-        const tijdFormatted = row.c[1].f || '';
-        const aantalRaw = row.c[2].v;
-        
-        // Check of aantal een getal is (skip tekst zoals "Iris Glorie")
-        const aantal = typeof aantalRaw === 'number' ? aantalRaw : parseInt(aantalRaw);
-        if (isNaN(aantal)) continue;
-        
-        // Alleen 20:00 edities (filter 9:00 ochtend-sessies uit)
-        if (!tijdFormatted.includes('20:00')) continue;
-        
-        // Parse datum
-        let eventDate: Date;
-        const datumValue = row.c[0].v;
-        
-        if (typeof datumValue === 'string' && datumValue.startsWith('Date(')) {
-          // Parse Google Sheets Date format: Date(2026,0,9) = 9 januari 2026
-          const match = datumValue.match(/Date\((\d+),(\d+),(\d+)\)/);
-          if (match) {
-            eventDate = new Date(parseInt(match[1]), parseInt(match[2]), parseInt(match[3]));
-          } else {
-            continue;
-          }
-        } else {
-          // Fallback: parse Nederlandse datum string
-          eventDate = parseNLDate(datumFormatted);
-        }
-        
-        // Alleen toekomstige events
-        if (eventDate < today) continue;
-        
-        // Bereken vrije plekken (max 6 per sessie)
-        const vrijePlekken = Math.max(0, 6 - aantal);
-        
-        kickstartEvents.push({
-          datum: datumFormatted,
-          tijd: tijdFormatted,
-          aantal: aantal,
-          vrijePlekken: vrijePlekken
-        });
-      }
-
-      // Sorteer op datum (vroegste eerst)
-      kickstartEvents.sort((a, b) => {
-        return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
-      });
-
-      // Neem alleen de eerste 2 aankomende sessies
-      setEvents(kickstartEvents.slice(0, 2));
-      setLoading(false);
-      setDataReady(true);
-      
-    } catch (error) {
-      console.error('Error fetching Kickstart data:', error);
-      setLoading(false);
-      setDataReady(true);
-    }
-  };
-
-  const parseNLDate = (dateStr: string): Date => {
-    const months: { [key: string]: number } = {
-      'januari': 0, 'februari': 1, 'maart': 2, 'april': 3,
-      'mei': 4, 'juni': 5, 'juli': 6, 'augustus': 7,
-      'september': 8, 'oktober': 9, 'november': 10, 'december': 11
-    };
-    
-    const parts = dateStr.toLowerCase().split(' ');
-    if (parts.length >= 3) {
-      const day = parseInt(parts[0]);
-      const month = months[parts[1]];
-      const year = parseInt(parts[2]);
-      if (!isNaN(day) && month !== undefined && !isNaN(year)) {
-        return new Date(year, month, day);
-      }
-    }
-    return new Date();
-  };
-
-  const handleMeerInfoClick = () => {
-    closePopup();
-    openIntakePopup();
-  };
-
-  // Verberg popup als deze niet open is
-  if (!isOpen) {
-    return null;
-  }
-
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl max-w-md w-full p-6 relative shadow-2xl">
-        {/* Sluit knop */}
-        <button
-          onClick={closePopup}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
-          aria-label="Sluiten"
-        >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-
-        {/* Header */}
-        <div className="text-center mb-6">
-          <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
-            <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h2 className="text-2xl font-bold text-gray-900">
-            Start met de 28-Day Kickstart
-          </h2>
-          <p className="text-gray-600 mt-2">
-            Kies een startdatum die bij jou past
-          </p>
-        </div>
-
-        {/* Loading state */}
-        {loading && (
-          <div className="text-center py-8">
-            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-            <p className="text-gray-500 mt-2">Laden...</p>
-          </div>
-        )}
-
-        {/* Geen events */}
-        {!loading && events.length === 0 && (
-          <div className="text-center py-4 mb-4">
-            <p className="text-gray-600">Neem contact op voor de eerstvolgende startdatum.</p>
-          </div>
-        )}
-
-        {/* Events lijst */}
-        {!loading && events.length > 0 && (
-          <div className="space-y-3 mb-6">
-            {events.map((event, index) => (
-              <div
-                key={index}
-                className={`border-2 rounded-xl p-4 transition ${
-                  event.vrijePlekken <= 2
-                    ? 'border-orange-300 bg-orange-50'
-                    : 'border-gray-200 hover:border-blue-300'
-                }`}
-              >
-                <div className="flex justify-between items-center">
-                  <div>
-                    <p className="font-semibold text-gray-900">{event.datum}</p>
-                    <p className="text-gray-600">{event.tijd} uur</p>
-                  </div>
-                  <div className="text-right">
-                    <p className={`font-bold ${
-                      event.vrijePlekken <= 2 ? 'text-orange-600' : 'text-green-600'
-                    }`}>
-                      {event.vrijePlekken} {event.vrijePlekken === 1 ? 'plek' : 'plekken'} vrij
-                    </p>
-                    {event.vrijePlekken <= 2 && (
-                      <p className="text-xs text-orange-600">Bijna vol!</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* CTA Button - opent nu de IntakePopup */}
-        <button
-          onClick={handleMeerInfoClick}
-          className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl text-center transition"
-        >
-          Meer info
-        </button>
-
-        {/* Footer tekst */}
-        <p className="text-center text-sm text-gray-500 mt-4">
-          4 weken • 2x per week • Kleine groepen
-        </p>
-      </div>
-    </div>
+    <html lang="nl">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <meta name="theme-color" content="#1e3a8a" />
+        <meta name="geo.region" content="NL-NH" />
+        <meta name="geo.placename" content="Alkmaar" />
+        <meta name="geo.position" content="52.6324;4.7534" />
+        <meta name="ICBM" content="52.6324, 4.7534" />
+      </head>
+      <body className="antialiased">
+        <GoogleAnalytics />
+        <PopupProvider>
+          <KickstartPopupProvider>
+            <Header />
+            <main className="pb-16">{children}</main>
+            <Footer />
+            <IntakePopup />
+            <KickstartPopup />
+            <CookieBanner />
+          </KickstartPopupProvider>
+        </PopupProvider>
+      </body>
+    </html>
   );
 }
