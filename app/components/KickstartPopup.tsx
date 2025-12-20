@@ -5,6 +5,9 @@ import { usePathname } from 'next/navigation';
 import { useKickstartPopup } from './KickstartPopupContext';
 import { usePopup } from './PopupContext';
 
+// Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
+let popupShownThisPageLoad = false;
+
 interface KickstartEvent {
   datum: string;
   tijd: string;
@@ -25,7 +28,7 @@ export default function KickstartPopup() {
     fetchKickstartData();
   }, []);
 
-  // Auto-open na 5 seconden (één keer per sessie, niet op faq en free-intro)
+  // Auto-open na 5 seconden
   useEffect(() => {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
@@ -34,12 +37,12 @@ export default function KickstartPopup() {
     // Niet tonen op faq en free-intro pagina's
     if (pathname === '/faq' || pathname === '/free-intro') return;
     
-    // Check of popup al getoond is in deze sessie
-    if (sessionStorage.getItem('kickstartPopupShown')) return;
+    // Niet opnieuw tonen als al getoond is tijdens deze page load
+    if (popupShownThisPageLoad) return;
 
     const timer = setTimeout(() => {
       openPopup();
-      sessionStorage.setItem('kickstartPopupShown', 'true');
+      popupShownThisPageLoad = true;
     }, 5000);
 
     return () => clearTimeout(timer);
