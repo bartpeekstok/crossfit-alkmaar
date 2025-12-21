@@ -42,21 +42,21 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <button onClick={openPopup} className="text-center hover:scale-105 transition cursor-pointer">
               <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
               <h3 className="text-xl font-semibold mb-3">Gratis intake</h3>
               <p className="text-gray-600">Kom langs voor een gratis intake. We horen graag alles over je doelen, waar je tegenaan loopt en wat je al hebt geprobeerd.</p>
-            </div>
-            <div className="text-center">
+            </button>
+            <button onClick={openPopup} className="text-center hover:scale-105 transition cursor-pointer">
               <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
               <h3 className="text-xl font-semibold mb-3">Persoonlijk trainingsplan</h3>
               <p className="text-gray-600">Elke training wordt aangepast aan jouw niveau, doelen en eventuele beperkingen. Je traint altijd onder leiding van professionele coaches.</p>
-            </div>
-            <div className="text-center">
+            </button>
+            <button onClick={openPopup} className="text-center hover:scale-105 transition cursor-pointer">
               <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
               <h3 className="text-xl font-semibold mb-3">Resultaten zien en voelen</h3>
               <p className="text-gray-600">Binnen weken voel je je sterker, energieker en fitter. Elke drie maanden heb je een check-in gesprek met één van de coaches. Zo houden we contact en kunnen we je plan aanpassen waar nodig.</p>
-            </div>
+            </button>
           </div>
         </div>
       </section>
