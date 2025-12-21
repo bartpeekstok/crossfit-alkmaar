@@ -37,12 +37,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 1 */}
+      {/* Video 1 - Souad */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/5ThBJD4lJ0g" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
+          <p className="text-center text-gray-700 mt-4 italic text-lg">
+            Souad: 'Vooral denken in mogelijkheden'
+          </p>
         </div>
       </section>
 
@@ -85,12 +88,15 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 2 */}
+      {/* Video 2 - Bert */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
+          <p className="text-center text-gray-700 mt-4 italic text-lg">
+            Bert: 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
+          </p>
         </div>
       </section>
 
