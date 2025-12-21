@@ -50,8 +50,26 @@ export default function SmallGroupTrainingPage() {
         </div>
       </section>
 
-      {/* Wat je krijgt */}
+      {/* Video */}
       <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/HlqFX84ue3o"
+              title="Small Group Training CrossFit Alkmaar"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
+            Tim (10 jaar lid): 'Ik zit een stuk lekkerder in m'n vel, ik voel me fit en m'n hartslag in rust is ook omlaaggegaan, dus ik voel me er écht heel goed bij!'
+          </p>
+        </div>
+      </section>
+
+      {/* Wat je krijgt */}
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
           <div className="grid md:grid-cols-2 gap-6">
