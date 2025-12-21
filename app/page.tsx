@@ -37,20 +37,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 1 - Souad */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/5ThBJD4lJ0g" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-          </div>
-          <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
-            Souad (10 jaar lid): 'Vooral denken in mogelijkheden'
-          </p>
-        </div>
-      </section>
-
       {/* Hoe werkt het - 3 stappen */}
-      <section className="py-16 px-6 bg-gray-200">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -73,35 +61,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Card 1 */}
-      <section className="py-12 px-6 bg-gray-200">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-            <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
-            <button
-              onClick={openPopup}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
-            >
-              Gratis intake
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Video 2 - Bert */}
-      <section className="py-16 px-6 bg-gray-100">
+      {/* Video - Jarrald */}
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1qhbmRPtysU" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
-            Bert (2 jaar lid): 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
+            Jarrald (deelnemer kickstart november 2024): 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging, nu 20 kilo afgevallen.'
           </p>
         </div>
       </section>
 
       {/* Programmas */}
-      <section className="py-16 px-6 bg-gray-200">
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
@@ -143,14 +116,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Video 3 - Jarrald */}
+      {/* CTA Card */}
+      <section className="py-12 px-6 bg-gray-200">
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+            <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
+            <button
+              onClick={openPopup}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
+            >
+              Gratis intake
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Video - Bert */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1qhbmRPtysU" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
-            Jarrald (deelnemer kickstart november 2024): 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging, nu 20 kilo afgevallen.'
+            Bert (2 jaar lid): 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
           </p>
         </div>
       </section>
@@ -161,22 +149,6 @@ export default function HomePage() {
           <h2 className="text-3xl font-bold text-center mb-12">Wat onze leden zeggen</h2>
           <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
           <div className="elfsight-app-441b4eee-fe67-40af-9775-caf184c8ed7f" data-elfsight-app-lazy></div>
-        </div>
-      </section>
-
-      {/* CTA Card 2 */}
-      <section className="py-12 px-6 bg-gray-200">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-            <h3 className="text-2xl font-bold mb-4">Weet je het nog niet zeker?</h3>
-            <p className="text-gray-600 mb-6">Kom vrijblijvend kennismaken en ontdek of CrossFit Alkmaar bij je past.</p>
-            <button
-              onClick={openPopup}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
-            >
-              Gratis intake
-            </button>
-          </div>
         </div>
       </section>
 
