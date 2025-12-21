@@ -44,7 +44,7 @@ export default function HomePage() {
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/5ThBJD4lJ0g" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
-            Souad: 'Vooral denken in mogelijkheden'
+            Souad (10 jaar lid): 'Vooral denken in mogelijkheden'
           </p>
         </div>
       </section>
@@ -95,7 +95,7 @@ export default function HomePage() {
             <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
-            Bert: 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
+            Bert (2 jaar lid): 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
           </p>
         </div>
       </section>
