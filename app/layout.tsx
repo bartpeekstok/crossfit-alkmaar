@@ -20,6 +20,7 @@ import GroepslessenPopup from "./components/GroepslessenPopup";
 import PricingPopup from "./components/PricingPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import ChatWidget from "./components/ChatWidget";
 
 export const metadata: Metadata = {
   title: {
@@ -139,6 +140,9 @@ export default function RootLayout({
             </KickstartFormPopupProvider>
           </KickstartPopupProvider>
         </PopupProvider>
+        
+        {/* GoHighLevel Chat Widget */}
+        <ChatWidget />
       </body>
     </html>
   );
