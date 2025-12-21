@@ -50,8 +50,26 @@ export default function GroepslessenPage() {
         </div>
       </section>
 
-      {/* Wat je krijgt */}
+      {/* Video */}
       <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/G9HkOnSsKg8"
+              title="Groepslessen CrossFit Alkmaar"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+          <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
+            Malou (9 jaar lid): 'Ik ben door het sporten bij CFA meer gaan beseffen hoe fijn het is om lekker in je vel te zitten.'
+          </p>
+        </div>
+      </section>
+
+      {/* Wat je krijgt */}
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
           <div className="grid md:grid-cols-2 gap-6">
