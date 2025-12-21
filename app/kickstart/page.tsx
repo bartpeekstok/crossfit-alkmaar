@@ -70,6 +70,9 @@ export default function KickstartPage() {
               allowFullScreen
             ></iframe>
           </div>
+          <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
+            Steven, deelnemer kickstart november 2024: 'Houding en techniek zijn heel belangrijk, en daar zijn de trainers hier ongelooflijk goed in.'
+          </p>
         </div>
       </section>
 
