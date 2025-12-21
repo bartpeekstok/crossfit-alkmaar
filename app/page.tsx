@@ -143,8 +143,20 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Google Reviews */}
+      {/* Video 3 - Jarrald */}
       <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/WuOyAWYDeG0" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+          </div>
+          <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
+            Jarrald (deelnemer kickstart november 2024): 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging, nu 20 kilo afgevallen.'
+          </p>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Wat onze leden zeggen</h2>
           <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
