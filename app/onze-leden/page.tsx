@@ -6,20 +6,20 @@ export default function OnzeLedenPage() {
   const { openPopup } = usePopup();
 
   const videos = [
-    { id: "G9HkOnSsKg8", type: "normal" },
-    { id: "esc-52ZNdPY", type: "normal" },
-    { id: "rG7rY2_BguQ", type: "normal" },
-    { id: "Pj-4CcdcVwA", type: "normal" },
-    { id: "xpIP0VP_OEM", type: "normal" },
-    { id: "a2zbZIlU27Y", type: "normal" },
-    { id: "vzUzbwCCHEk", type: "normal" },
-    { id: "1qhbmRPtysU", type: "short" },
-    { id: "atUYhclLhEE", type: "short" },
-    { id: "WuOyAWYDeG0", type: "normal" },
-    { id: "PigB4z1ZCB8", type: "normal" },
-    { id: "14v6cnGlI7g", type: "normal" },
-    { id: "5ThBJD4lJ0g", type: "normal" },
-    { id: "HlqFX84ue3o", type: "short" },
+    { id: "G9HkOnSsKg8", type: "normal", caption: "Malou (9 jaar lid): 'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
+    { id: "esc-52ZNdPY", type: "normal", caption: "Steven (kickstart nov 2024): 'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'" },
+    { id: "rG7rY2_BguQ", type: "normal", caption: "Jeanine (2 jaar lid): 'Toen ik hier voor het eerst kwam dacht ik: dit is het!'" },
+    { id: "Pj-4CcdcVwA", type: "normal", caption: "Aaike (2 jaar lid): 'De sfeer is gewoon super goed en de trainers zijn van een goed niveau!'" },
+    { id: "xpIP0VP_OEM", type: "normal", caption: "Demi (1 jaar lid): 'Iedereen gaat voor je juichen, dan krijg je een boost om door te gaan!'" },
+    { id: "a2zbZIlU27Y", type: "normal", caption: "Bert (2 jaar lid): 'Ik had niet verwacht dat ik het zó leuk zou vinden'" },
+    { id: "vzUzbwCCHEk", type: "normal", caption: "Paula (kickstart sept 2024): 'Die zware boodschappentassen? Dat gaat nu gewoon een stuk beter!'" },
+    { id: "1qhbmRPtysU", type: "short", caption: "Jarrald (kickstart nov 2024): 'Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen'" },
+    { id: "atUYhclLhEE", type: "short", caption: "Maarten (3,5 jaar lid): 'CFA is voor mij een veilige haven'" },
+    { id: "WuOyAWYDeG0", type: "normal", caption: "Lisette (1,5 jaar lid): 'Ik voel me sindsdien een stuk fitter!'" },
+    { id: "PigB4z1ZCB8", type: "normal", caption: "Simon (4,5 jaar lid, nu coach): 'Je ziet mensen bij iedere workout fitter en sterker worden'" },
+    { id: "14v6cnGlI7g", type: "normal", caption: "Simone (4 jaar lid): 'Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.'" },
+    { id: "5ThBJD4lJ0g", type: "normal", caption: "Souad (10 jaar lid): 'Vooral denken in mogelijkheden'" },
+    { id: "HlqFX84ue3o", type: "short", caption: "Tim (10 jaar lid): 'Ik voel me fit en m'n hartslag in rust is ook omlaaggegaan'" },
   ];
 
   const normalVideos = videos.filter(v => v.type === "normal");
@@ -76,6 +76,9 @@ export default function OnzeLedenPage() {
                         allowFullScreen
                       ></iframe>
                     </div>
+                    <p className="text-center text-gray-900 p-4 text-sm font-medium italic">
+                      {video.caption}
+                    </p>
                   </div>
                 ))}
               </div>
@@ -96,6 +99,9 @@ export default function OnzeLedenPage() {
                     allowFullScreen
                   ></iframe>
                 </div>
+                <p className="text-center text-gray-900 p-4 text-lg font-medium italic">
+                  {video.caption}
+                </p>
               </div>
             ))}
           </div>
