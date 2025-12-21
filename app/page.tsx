@@ -147,7 +147,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/WuOyAWYDeG0" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1qhbmRPtysU" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Jarrald (deelnemer kickstart november 2024): 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging, nu 20 kilo afgevallen.'
