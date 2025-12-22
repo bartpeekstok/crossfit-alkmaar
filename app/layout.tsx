@@ -21,7 +21,6 @@ import PricingPopup from "./components/PricingPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import ChatWidget from "./components/ChatWidget";
-import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   title: {
@@ -144,9 +143,6 @@ export default function RootLayout({
         
         {/* GoHighLevel Chat Widget */}
         <ChatWidget />
-        
-        {/* Vercel Analytics */}
-        <Analytics />
       </body>
     </html>
   );
