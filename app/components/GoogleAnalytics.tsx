@@ -6,12 +6,6 @@ import { useEffect, Suspense } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-TXV3GLCW7D';
 
-declare global {
-  interface Window {
-    gtag: (...args: unknown[]) => void;
-  }
-}
-
 function GoogleAnalyticsTracking() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
