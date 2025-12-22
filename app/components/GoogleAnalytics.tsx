@@ -6,14 +6,23 @@ import { useEffect, Suspense } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-TXV3GLCW7D';
 
+declare global {
+  interface Window {
+    gtag: (...args: unknown[]) => void;
+  }
+}
+
 function GoogleAnalyticsTracking() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (pathname && window.gtag) {
-      window.gtag('config', GA_MEASUREMENT_ID, {
-        page_path: pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : ''),
+    const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
+    
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'page_view', {
+        page_path: url,
+        page_title: document.title,
       });
     }
   }, [pathname, searchParams]);
@@ -33,7 +42,9 @@ export default function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', '${GA_MEASUREMENT_ID}');
+          gtag('config', '${GA_MEASUREMENT_ID}', {
+            send_page_view: false
+          });
         `}
       </Script>
       <Suspense fallback={null}>
