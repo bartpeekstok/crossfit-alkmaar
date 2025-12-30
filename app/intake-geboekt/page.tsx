@@ -23,7 +23,7 @@ export default function IntakeGeboektPage() {
           </p>
           <Link
             href="/"
-            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
+            className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Terug naar home
           </Link>
@@ -34,7 +34,7 @@ export default function IntakeGeboektPage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">
-            Zo ziet een intake eruit
+            Zo ziet je intake eruit
           </h2>
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
             <iframe
