@@ -15,7 +15,10 @@ export default function IntakeGeboektPage() {
         }}
       >
         <div className="max-w-2xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+          <h1 
+            className="text-4xl md:text-5xl font-bold mb-6"
+            style={{ color: 'white' }}
+          >
             Je intake is geboekt!
           </h1>
           <p className="text-xl text-white mb-8">
