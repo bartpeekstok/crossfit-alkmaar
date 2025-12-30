@@ -15,14 +15,11 @@ export default function IntakeGeboektPage() {
         }}
       >
         <div className="max-w-2xl mx-auto text-center relative z-10">
-          <div className="w-20 h-20 bg-white text-blue-900 rounded-full flex items-center justify-center text-4xl mx-auto mb-8">
-            ✓
-          </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
             Je intake is geboekt!
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            We nemen zo snel mogelijk contact met je op om een moment te prikken. Tot snel!
+          <p className="text-xl text-white mb-8">
+            We sturen je een bevestiging via e-mail en Whatsapp, tot snel bij CrossFit Alkmaar!
           </p>
           <Link
             href="/"
@@ -30,6 +27,24 @@ export default function IntakeGeboektPage() {
           >
             Terug naar home
           </Link>
+        </div>
+      </section>
+
+      {/* Video sectie */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">
+            Zo ziet een intake eruit
+          </h2>
+          <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+            <iframe
+              className="w-full h-full"
+              src="https://www.youtube.com/embed/-3KF7VGVzdk"
+              title="Intake bij CrossFit Alkmaar"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
         </div>
       </section>
     </div>
