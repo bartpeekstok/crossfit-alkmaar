@@ -19,6 +19,7 @@ export default function OnzeLedenPage() {
     { id: "PigB4z1ZCB8", type: "normal", caption: "Simon (4,5 jaar lid, nu coach): 'Je ziet mensen bij iedere workout fitter en sterker worden'" },
     { id: "14v6cnGlI7g", type: "normal", caption: "Simone (4 jaar lid): 'Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.'" },
     { id: "5ThBJD4lJ0g", type: "normal", caption: "Souad (10 jaar lid): 'Vooral denken in mogelijkheden'" },
+    { id: "iJ6KoiK5QZk", type: "normal", caption: "Renze (8 maanden lid): 'Ik houd niet van fitness, dat vind ik veel te saai'" },
     { id: "HlqFX84ue3o", type: "short", caption: "Tim (10 jaar lid): 'Ik voel me fit en m'n hartslag in rust is ook omlaaggegaan'" },
   ];
 
