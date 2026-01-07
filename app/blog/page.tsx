@@ -8,6 +8,33 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 7,
+      slug: "de-kracht-van-goede-voeding",
+      title: "De kracht van goede voeding: brandstof voor je prestaties",
+      excerpt: "Voeding is de basis van al je resultaten. Ontdek hoe de juiste voedingskeuzes je training naar een hoger niveau tillen.",
+      image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+      date: "5 januari 2025",
+      category: "Voeding"
+    },
+    {
+      id: 8,
+      slug: "herstel-de-vergeten-component",
+      title: "Herstel: de vergeten component van vooruitgang",
+      excerpt: "Je wordt niet sterker tijdens de training, maar tijdens het herstel. Leer hoe je optimaal herstelt voor maximale resultaten.",
+      image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=800&q=80",
+      date: "3 januari 2025",
+      category: "Herstel"
+    },
+    {
+      id: 9,
+      slug: "mindset-de-sleutel-tot-succes",
+      title: "Mindset: de sleutel tot blijvend succes",
+      excerpt: "Je lichaam kan meer dan je denkt. Ontdek hoe de juiste mindset het verschil maakt tussen opgeven en doorzetten.",
+      image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      date: "1 januari 2025",
+      category: "Mindset"
+    },
+    {
       id: 1,
       slug: "waarom-krachttraining-voor-50-plussers",
       title: "Waarom krachttraining juist voor 50-plussers essentieel is",

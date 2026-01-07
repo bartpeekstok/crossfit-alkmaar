@@ -5,6 +5,318 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 const blogPosts: { [key: string]: any } = {
+  "de-kracht-van-goede-voeding": {
+    title: "De kracht van goede voeding: brandstof voor je prestaties",
+    date: "5 januari 2025",
+    category: "Voeding",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=80",
+    content: `
+      <p class="lead">Voeding is de fundering waarop al je trainingsresultaten worden gebouwd. Zonder de juiste brandstof presteert zelfs de beste motor niet optimaal.</p>
+
+      <br/>
+
+      <h2>Voeding als fundament</h2>
+      <p>Je kunt trainen tot je erbij neervalt, maar zonder de juiste voeding zul je nooit je volledige potentieel bereiken.</p>
+
+      <p>Voeding levert de bouwstenen voor spieropbouw, de energie voor je workouts, en de nutriënten die je lichaam nodig heeft om te herstellen.</p>
+
+      <p>Zie het als het bouwen van een huis: training is de architect, maar voeding levert de stenen.</p>
+
+      <br/>
+
+      <h2>Pijler 1: Eiwitten</h2>
+      <p>Eiwitten zijn de bouwstenen van je spieren. Na elke training ontstaan er kleine scheurtjes in je spiervezels. Eiwitten repareren deze en maken je spieren sterker.</p>
+
+      <p><strong>Hoeveel heb je nodig?</strong><br/>
+      Richt op 1.6-2.2 gram eiwit per kilo lichaamsgewicht per dag.</p>
+
+      <p><strong>Goede bronnen:</strong></p>
+      <ul>
+        <li>Kip, kalkoen en ander gevogelte</li>
+        <li>Vis en zeevruchten</li>
+        <li>Eieren</li>
+        <li>Zuivel (kwark, yoghurt, kaas)</li>
+        <li>Peulvruchten en tofu</li>
+      </ul>
+
+      <br/>
+
+      <h2>Pijler 2: Koolhydraten</h2>
+      <p>Koolhydraten zijn je primaire energiebron tijdens intensieve training. Ze vullen je glycogeenvoorraden aan, waardoor je langer en harder kunt trainen.</p>
+
+      <p><strong>Kies voor complexe koolhydraten:</strong></p>
+      <ul>
+        <li>Volkoren brood, pasta en rijst</li>
+        <li>Aardappelen en zoete aardappelen</li>
+        <li>Havermout</li>
+        <li>Fruit en groenten</li>
+      </ul>
+
+      <br/>
+
+      <h2>Pijler 3: Gezonde vetten</h2>
+      <p>Vetten zijn cruciaal voor hormoonproductie, gewrichtsgezondheid en opname van vitamines.</p>
+
+      <p><strong>Goede bronnen:</strong></p>
+      <ul>
+        <li>Avocado</li>
+        <li>Noten en zaden</li>
+        <li>Olijfolie</li>
+        <li>Vette vis (zalm, makreel)</li>
+      </ul>
+
+      <br/>
+
+      <h2>Praktische tips</h2>
+
+      <p><strong>Meal prep</strong><br/>
+      Besteed een paar uur in het weekend aan het voorbereiden van maaltijden. Zo heb je doordeweeks altijd gezonde opties binnen handbereik.</p>
+
+      <p><strong>Eet regelmatig</strong><br/>
+      Probeer elke 3-4 uur te eten. Dit houdt je energieniveau stabiel.</p>
+
+      <p><strong>Drink genoeg water</strong><br/>
+      Minimaal 2 liter per dag, meer als je zweet tijdens training.</p>
+
+      <br/>
+
+      <h2>De 80/20 regel</h2>
+      <p>Perfectie is niet nodig.</p>
+
+      <p>Als 80% van je voeding uit voedzame, onbewerkte producten bestaat, is er ruimte voor 20% flexibiliteit.</p>
+
+      <p>Een stuk taart bij een verjaardag of een pizza op vrijdagavond past prima in een gezond eetpatroon. Geniet ervan zonder schuldgevoel.</p>
+
+      <br/>
+
+      <h2>Begin klein</h2>
+      <p>Je hoeft niet alles tegelijk te veranderen. Begin met één verbetering per week:</p>
+      <ul>
+        <li><strong>Week 1:</strong> Drink 2 liter water per dag</li>
+        <li><strong>Week 2:</strong> Eet bij elke maaltijd groenten</li>
+        <li><strong>Week 3:</strong> Voeg eiwit toe aan elke maaltijd</li>
+        <li><strong>Week 4:</strong> Prep je lunches voor de werkweek</li>
+      </ul>
+
+      <p>Kleine, consistente veranderingen leiden tot grote resultaten.</p>
+    `
+  },
+  "herstel-de-vergeten-component": {
+    title: "Herstel: de vergeten component van vooruitgang",
+    date: "3 januari 2025",
+    category: "Herstel",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+    content: `
+      <p class="lead">Hard trainen is slechts de helft van het verhaal. Wat je doet tussen je trainingen door bepaalt hoeveel vooruitgang je boekt.</p>
+
+      <br/>
+
+      <h2>Het grote misverstand</h2>
+      <p>Veel mensen denken dat je sterker wordt tijdens het trainen.</p>
+
+      <p>Maar dat is niet waar.</p>
+
+      <p>Tijdens training breek je je lichaam af – je spieren krijgen microscheurtjes, je energievoorraden raken uitgeput, en je zenuwstelsel wordt belast.</p>
+
+      <p>Het is tijdens het <strong>herstel</strong> dat de magie gebeurt. Dan repareert je lichaam de schade en bouwt het sterkere spieren op.</p>
+
+      <br/>
+
+      <h2>Pijler 1: Slaap</h2>
+      <p>Slaap is de belangrijkste factor voor herstel.</p>
+
+      <p>Tijdens de slaap produceert je lichaam groeihormoon, repareert het weefsel, en consolideert je brein de bewegingspatronen die je hebt geoefend.</p>
+
+      <p><strong>Tips voor betere slaap:</strong></p>
+      <ul>
+        <li>Streef naar 7-9 uur per nacht</li>
+        <li>Houd een vast slaapschema aan</li>
+        <li>Maak je slaapkamer donker en koel</li>
+        <li>Vermijd schermen 1 uur voor het slapen</li>
+      </ul>
+
+      <br/>
+
+      <h2>Pijler 2: Voeding</h2>
+      <p>Je lichaam heeft materiaal nodig om te repareren en te bouwen.</p>
+
+      <p>Eiwitten leveren de bouwstenen voor spieren. Koolhydraten vullen je energievoorraden aan. Micronutriënten ondersteunen alle herstelprocessen.</p>
+
+      <p>Eet voldoende, vooral na zware trainingen.</p>
+
+      <br/>
+
+      <h2>Pijler 3: Actief herstel</h2>
+      <p>Stilzitten op rustdagen is niet altijd het beste.</p>
+
+      <p>Lichte beweging stimuleert de bloedcirculatie, wat helpt bij het afvoeren van afvalstoffen.</p>
+
+      <p><strong>Voorbeelden:</strong></p>
+      <ul>
+        <li>Een rustige wandeling van 20-30 minuten</li>
+        <li>Licht fietsen of zwemmen</li>
+        <li>Yoga of stretching</li>
+        <li>Foam rolling</li>
+      </ul>
+
+      <br/>
+
+      <h2>Pijler 4: Stressmanagement</h2>
+      <p>Chronische stress houdt je cortisol hoog, wat herstel belemmert.</p>
+
+      <p>Je lichaam maakt geen onderscheid tussen stress van training en stress van werk of privéleven – het telt allemaal op.</p>
+
+      <p><strong>Wat helpt:</strong></p>
+      <ul>
+        <li>Meditatie of ademhalingsoefeningen</li>
+        <li>Tijd in de natuur</li>
+        <li>Hobby's die je ontspannen</li>
+      </ul>
+
+      <br/>
+
+      <h2>Signalen van te weinig herstel</h2>
+      <p>Je lichaam geeft signalen als het herstel tekortschiet:</p>
+      <ul>
+        <li>Aanhoudende vermoeidheid</li>
+        <li>Dalende prestaties</li>
+        <li>Slaapproblemen</li>
+        <li>Prikkelbaar voelen</li>
+        <li>Vaker ziek worden</li>
+        <li>Geen motivatie om te trainen</li>
+      </ul>
+
+      <p>Herken je dit? Neem een stapje terug.</p>
+
+      <br/>
+
+      <h2>Rust is geen zwakte</h2>
+      <p>Er heerst een cultuur van "harder is beter" in de fitnesswereld.</p>
+
+      <p>Maar de beste atleten ter wereld nemen hun herstel net zo serieus als hun training. Ze weten dat rust geen luxe is, maar een noodzaak.</p>
+
+      <p>Een rustdag nemen is geen teken van zwakte. Het is een teken van wijsheid.</p>
+
+      <br/>
+
+      <h2>Samengevat</h2>
+      <ul>
+        <li>Plan minimaal 2 rustdagen per week</li>
+        <li>Prioriteer je slaap</li>
+        <li>Eet voldoende</li>
+        <li>Luister naar je lichaam</li>
+      </ul>
+    `
+  },
+  "mindset-de-sleutel-tot-succes": {
+    title: "Mindset: de sleutel tot blijvend succes",
+    date: "1 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+    content: `
+      <p class="lead">Je lichaam is tot veel meer in staat dan je denkt. Het is je geest die meestal opgeeft voordat je lichaam moet stoppen.</p>
+
+      <br/>
+
+      <h2>De kracht van je gedachten</h2>
+      <p>Elke workout begint in je hoofd.</p>
+
+      <p>De stem die zegt "dit is te zwaar" of "ik kan niet meer" is niet je lichaam – het is je brein dat je probeert te beschermen.</p>
+
+      <p>Maar die bescherming is vaak overdreven. Je hebt altijd meer in de tank dan je denkt.</p>
+
+      <br/>
+
+      <h2>Fixed vs. Growth mindset</h2>
+      <p>Psycholoog Carol Dweck onderscheidt twee types mindsets:</p>
+
+      <p><strong>Fixed mindset:</strong><br/>
+      "Ik ben nu eenmaal niet sportief." Met deze mindset zie je uitdagingen als bewijs van je beperkingen.</p>
+
+      <p><strong>Growth mindset:</strong><br/>
+      "Ik kan alles leren met oefening." Met deze mindset zie je uitdagingen als kansen om te groeien.</p>
+
+      <p>Het goede nieuws? Je mindset is niet vast. Je kunt leren om te verschuiven.</p>
+
+      <br/>
+
+      <h2>Techniek 1: Herformuleer je dialoog</h2>
+      <p>Let op wat je tegen jezelf zegt.</p>
+
+      <p>Vervang "ik kan dit niet" door "ik kan dit <strong>nog</strong> niet."</p>
+
+      <p>Dat kleine woordje maakt een wereld van verschil.</p>
+
+      <br/>
+
+      <h2>Techniek 2: Focus op het proces</h2>
+      <p>Niet: "Ik wil 10 kilo afvallen."</p>
+
+      <p>Wel: "Ik ga 3x per week trainen en gezonder eten."</p>
+
+      <p>Je hebt controle over het proces, niet over het resultaat. Als je het proces goed doet, volgt het resultaat vanzelf.</p>
+
+      <br/>
+
+      <h2>Techniek 3: Omarm het ongemak</h2>
+      <p>Groei gebeurt buiten je comfortzone.</p>
+
+      <p>Dat ongemakkelijke gevoel tijdens een zware set? Dat is het gevoel van vooruitgang.</p>
+
+      <p>Leer ervan te houden in plaats van het te vermijden.</p>
+
+      <br/>
+
+      <h2>Techniek 4: Vier kleine overwinningen</h2>
+      <p>Wacht niet tot je je einddoel bereikt.</p>
+
+      <p>Vier elke vooruitgang:</p>
+      <ul>
+        <li>Je eerste pull-up</li>
+        <li>5 kilo meer op je deadlift</li>
+        <li>Een week consistent getraind</li>
+      </ul>
+
+      <p>Deze kleine overwinningen bouwen momentum.</p>
+
+      <br/>
+
+      <h2>Omgaan met tegenslagen</h2>
+      <p>Tegenslagen zijn onvermijdelijk.</p>
+
+      <p>Je zult trainingen missen. Je zult periodes hebben waarin het minder gaat. Misschien raak je zelfs geblesseerd.</p>
+
+      <p>Dit is niet het einde – het is onderdeel van de reis.</p>
+
+      <p>Het verschil tussen mensen die slagen en mensen die opgeven? <strong>De eerste groep staat telkens weer op.</strong></p>
+
+      <br/>
+
+      <h2>De kracht van community</h2>
+      <p>Je omgeving beïnvloedt je mindset enorm.</p>
+
+      <p>Omring jezelf met mensen die je steunen, die je uitdagen, en die dezelfde doelen nastreven.</p>
+
+      <p>Bij CrossFit Alkmaar vind je die community – mensen die elkaar aanmoedigen, ongeacht niveau.</p>
+
+      <br/>
+
+      <h2>Begin vandaag</h2>
+      <p>Je mindset veranderen is als een spier trainen – het kost tijd en consistente oefening.</p>
+
+      <p><strong>Kleine stappen:</strong></p>
+      <ul>
+        <li>Let op je innerlijke dialoog</li>
+        <li>Schrijf elke avond 3 dingen op waar je trots op bent</li>
+        <li>Vervang "ik moet" door "ik mag"</li>
+        <li>Zoek een trainingsmaatje</li>
+      </ul>
+
+      <p>Je gedachten bepalen je acties. Je acties bepalen je gewoontes. Je gewoontes bepalen je resultaten.</p>
+
+      <p><strong>Het begint allemaal met hoe je denkt.</strong></p>
+    `
+  },
   "waarom-krachttraining-voor-50-plussers": {
     title: "Waarom krachttraining juist voor 50-plussers essentieel is",
     date: "12 december 2024",
