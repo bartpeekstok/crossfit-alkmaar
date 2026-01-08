@@ -1,12 +1,18 @@
 "use client";
 
 import { useVoedingsadviesPopup } from "../components/VoedingsadviesPopupContext";
+import ServiceSchema from "../components/ServiceSchema";
 
 export default function VoedingsadviesPage() {
   const { openPopup } = useVoedingsadviesPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <ServiceSchema
+        name="Voedingsadvies"
+        description="Persoonlijk voedingsadvies dat past bij jouw levensstijl. Geen strenge diëten maar praktische tips voor optimale resultaten."
+        url="https://crossfitalkmaar.com/voedingsadvies"
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"

@@ -94,7 +94,12 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com",
+    languages: {
+      "nl-NL": "https://crossfitalkmaar.com",
+    },
   },
+  category: "fitness",
+  classification: "Health & Fitness",
   metadataBase: new URL("https://crossfitalkmaar.com"),
 };
 

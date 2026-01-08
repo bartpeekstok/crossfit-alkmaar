@@ -1,12 +1,18 @@
 "use client";
 
 import { usePersonalTrainingPopup } from "../components/PersonalTrainingPopupContext";
+import ServiceSchema from "../components/ServiceSchema";
 
 export default function PersonalTrainingPage() {
   const { openPopup } = usePersonalTrainingPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <ServiceSchema
+        name="Personal Training"
+        description="Eén-op-één personal training volledig afgestemd op jouw doelen. Maximale persoonlijke aandacht van je eigen coach."
+        url="https://crossfitalkmaar.com/personal-training"
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"

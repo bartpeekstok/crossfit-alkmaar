@@ -1,12 +1,18 @@
 "use client";
 
 import { useGroepslessenPopup } from "../components/GroepslessenPopupContext";
+import ServiceSchema from "../components/ServiceSchema";
 
 export default function GroepslessenPage() {
   const { openPopup } = useGroepslessenPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <ServiceSchema
+        name="Groepslessen"
+        description="CrossFit groepslessen met gevarieerde workouts. Kracht, conditie en mobiliteit onder begeleiding van ervaren coaches."
+        url="https://crossfitalkmaar.com/groepslessen"
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"

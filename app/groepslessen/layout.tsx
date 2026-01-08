@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Groepslessen",
+  title: "Groepslessen Alkmaar - CrossFit & Fitness Classes",
   description:
-    "Samen trainen in gevarieerde groepslessen bij CrossFit Alkmaar. Elke les combineert kracht, conditie en mobiliteit onder begeleiding van ervaren coaches.",
+    "Groepslessen bij CrossFit Alkmaar. Gevarieerde workouts met kracht, conditie en mobiliteit. Professionele coaches, alle niveaus welkom. Probeer gratis!",
+  keywords: ["groepslessen Alkmaar", "fitness classes Alkmaar", "CrossFit lessen", "groepstraining Alkmaar"],
   openGraph: {
-    title: "Groepslessen | CrossFit Alkmaar",
+    title: "Groepslessen | Samen Sterker Worden",
     description:
-      "Samen trainen in gevarieerde groepslessen. Elke les combineert kracht, conditie en mobiliteit onder begeleiding van ervaren coaches.",
+      "Gevarieerde workouts in een motiverende groep. Elke les anders, altijd uitdagend.",
     url: "https://crossfitalkmaar.com/groepslessen",
   },
   alternates: {

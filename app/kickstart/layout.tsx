@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "28 Day Kickstart",
+  title: "28 Day Kickstart - Start Nu met Trainen in Alkmaar",
   description:
-    "Start jouw fitnessreis met onze 28 Day Kickstart. In 4 weken bouw je een sterke basis op met begeleide trainingen en voedingsadvies bij CrossFit Alkmaar.",
+    "Start jouw fitnessreis met onze 28 Day Kickstart in Alkmaar. In 4 weken bouw je een sterke basis op met begeleide trainingen en voedingsadvies. Gratis intake!",
+  keywords: ["kickstart programma Alkmaar", "beginnen met fitness Alkmaar", "4 weken trainingsprogramma"],
   openGraph: {
-    title: "28 Day Kickstart | CrossFit Alkmaar",
+    title: "28 Day Kickstart | Begin Jouw Transformatie",
     description:
-      "Start jouw fitnessreis met onze 28 Day Kickstart. In 4 weken bouw je een sterke basis op met begeleide trainingen en voedingsadvies.",
+      "In 4 weken van beginner naar fit. Persoonlijke begeleiding, voedingsadvies en een sterke basis.",
     url: "https://crossfitalkmaar.com/kickstart",
   },
   alternates: {

@@ -1,12 +1,18 @@
 "use client";
 
 import { useSmallGroupPopup } from "../components/SmallGroupPopupContext";
+import ServiceSchema from "../components/ServiceSchema";
 
 export default function SmallGroupTrainingPage() {
   const { openPopup } = useSmallGroupPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <ServiceSchema
+        name="Small Group Training"
+        description="Train in een kleine groep van max 6 personen. Persoonlijke aandacht gecombineerd met de motivatie van samen trainen."
+        url="https://crossfitalkmaar.com/small-group-training"
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"

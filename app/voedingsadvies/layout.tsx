@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Voedingsadvies",
+  title: "Voedingsadvies Alkmaar - Praktische Voedingstips",
   description:
-    "Persoonlijk voedingsadvies bij CrossFit Alkmaar. Geen strenge diëten maar praktische tips die passen bij jouw levensstijl voor optimale resultaten.",
+    "Persoonlijk voedingsadvies in Alkmaar bij CrossFit Alkmaar. Geen strenge diëten, wel resultaat. Afvallen of spiermassa opbouwen? Wij helpen je!",
+  keywords: ["voedingsadvies Alkmaar", "voedingscoach Alkmaar", "afvallen Alkmaar", "diëtist sportschool"],
   openGraph: {
-    title: "Voedingsadvies | CrossFit Alkmaar",
+    title: "Voedingsadvies | Eet Slim, Presteer Beter",
     description:
-      "Persoonlijk voedingsadvies. Geen strenge diëten maar praktische tips die passen bij jouw levensstijl voor optimale resultaten.",
+      "Praktisch voedingsadvies dat past bij jouw levensstijl. Geen diëten, wel resultaat.",
     url: "https://crossfitalkmaar.com/voedingsadvies",
   },
   alternates: {

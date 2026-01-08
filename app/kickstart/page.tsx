@@ -1,6 +1,7 @@
 "use client";
 
 import { useKickstartPopup } from "../components/KickstartPopupContext";
+import ServiceSchema from "../components/ServiceSchema";
 
 export default function KickstartPage() {
   const { openPopup } = useKickstartPopup();
@@ -15,6 +16,11 @@ export default function KickstartPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <ServiceSchema
+        name="28 Day Kickstart"
+        description="4 weken introductieprogramma voor beginners. Bouw een sterke basis op met begeleide trainingen en voedingsadvies."
+        url="https://crossfitalkmaar.com/kickstart"
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"

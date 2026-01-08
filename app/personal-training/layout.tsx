@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Personal Training",
+  title: "Personal Training Alkmaar - 1-op-1 Coaching",
   description:
-    "Eén-op-één personal training bij CrossFit Alkmaar. Volledig afgestemd op jouw doelen met maximale persoonlijke aandacht van je eigen coach.",
+    "Personal training in Alkmaar bij CrossFit Alkmaar. Eén-op-één begeleiding afgestemd op jouw doelen. Afvallen, sterker worden of fitter? Boek je gratis intake!",
+  keywords: ["personal training Alkmaar", "personal trainer Alkmaar", "1 op 1 coaching Alkmaar", "PT Alkmaar"],
   openGraph: {
-    title: "Personal Training | CrossFit Alkmaar",
+    title: "Personal Training | Maximaal Resultaat",
     description:
-      "Eén-op-één personal training volledig afgestemd op jouw doelen met maximale persoonlijke aandacht van je eigen coach.",
+      "Eén-op-één coaching volledig afgestemd op jouw doelen. Sneller resultaat met persoonlijke aandacht.",
     url: "https://crossfitalkmaar.com/personal-training",
   },
   alternates: {

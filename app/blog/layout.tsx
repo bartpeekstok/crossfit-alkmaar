@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog",
+  title: "Blog - Fitness Tips & Adviezen",
   description:
-    "Tips over training, voeding, herstel en mindset van CrossFit Alkmaar. Lees onze artikelen en verbeter je fitness kennis.",
+    "Fitness blog van CrossFit Alkmaar. Tips over training, voeding, herstel en mindset. Gratis kennis om je fit te houden en je doelen te bereiken.",
+  keywords: ["fitness blog", "training tips", "voeding tips", "workout advies", "fitness artikelen"],
   openGraph: {
-    title: "Blog | CrossFit Alkmaar",
+    title: "Blog | Fitness Tips & Inspiratie",
     description:
-      "Tips over training, voeding, herstel en mindset. Lees onze artikelen en verbeter je fitness kennis.",
+      "Gratis tips over training, voeding en mindset. Alles wat je nodig hebt om je doelen te bereiken.",
     url: "https://crossfitalkmaar.com/blog",
   },
   alternates: {
