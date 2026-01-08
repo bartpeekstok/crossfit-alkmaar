@@ -43,23 +43,6 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-
-  // Redirects for SEO (www to non-www)
-  async redirects() {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.crossfitalkmaar.com",
-          },
-        ],
-        destination: "https://crossfitalkmaar.com/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
