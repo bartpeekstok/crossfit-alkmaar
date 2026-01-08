@@ -56,6 +56,14 @@ export default function JsonLd() {
       "https://www.instagram.com/crossfitalkmaar",
       "https://www.facebook.com/crossfitalkmaar",
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5.0",
+      bestRating: "5",
+      worstRating: "1",
+      ratingCount: "89",
+      reviewCount: "89",
+    },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Trainingen",

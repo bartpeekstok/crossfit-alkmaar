@@ -3,6 +3,8 @@
 import { usePopup } from "../../components/PopupContext";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import ArticleSchema from "../../components/ArticleSchema";
+import { getBlogPost } from "./blogData";
 
 const blogPosts: { [key: string]: any } = {
   "waarom-warming-up-onmisbaar-is": {
@@ -884,8 +886,22 @@ export default function BlogPostPage() {
     );
   }
 
+  const blogData = getBlogPost(slug);
+
   return (
     <div className="min-h-screen bg-gray-200">
+      {/* Article Schema for SEO */}
+      {blogData && (
+        <ArticleSchema
+          title={post.title}
+          description={blogData.excerpt}
+          image={post.image}
+          datePublished={post.date}
+          slug={slug}
+          category={post.category}
+        />
+      )}
+
       {/* Hero with blog image */}
       <section
         className="relative text-white py-20 px-6 min-h-[400px] flex items-center"

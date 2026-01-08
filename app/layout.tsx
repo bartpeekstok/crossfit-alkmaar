@@ -24,6 +24,7 @@ import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import ChatWidget from "./components/ChatWidget";
 import JsonLd from "./components/JsonLd";
+import BreadcrumbSchema from "./components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: {
@@ -116,6 +117,7 @@ export default function RootLayout({
       </head>
       <body className="antialiased">
         <GoogleAnalytics />
+        <BreadcrumbSchema />
         <PopupProvider>
           <KickstartPopupProvider>
             <KickstartFormPopupProvider>
