@@ -1,0 +1,116 @@
+// Blog post data extracted for both client and server usage
+export interface BlogPost {
+  title: string;
+  date: string;
+  category: string;
+  image: string;
+  excerpt: string;
+  content: string;
+}
+
+export const blogPosts: { [key: string]: BlogPost } = {
+  "waarom-warming-up-onmisbaar-is": {
+    title: "Waarom een goede warming-up onmisbaar is",
+    date: "8 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+    excerpt: "Geen tijd voor warming-up? Dan heb je ook geen tijd voor resultaten. Die 10 minuten maken het verschil tussen een goede en een geweldige training.",
+    content: "" // Content stays in page.tsx for now
+  },
+  "doelen-stellen-die-werken": {
+    title: "Doelen stellen die echt werken",
+    date: "7 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80",
+    excerpt: "Waarom 'afvallen' geen goed doel is. En hoe je wél doelen stelt die je motiveren én resultaat opleveren.",
+    content: ""
+  },
+  "training-als-stressverlichter": {
+    title: "Training als de ultieme stressverlichter",
+    date: "6 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
+    excerpt: "Gestrest? Ga sporten. De wetenschap is duidelijk: beweging is een van de beste remedies tegen stress die er bestaat.",
+    content: ""
+  },
+  "de-kracht-van-goede-voeding": {
+    title: "De kracht van goede voeding: brandstof voor je prestaties",
+    date: "5 januari 2025",
+    category: "Voeding",
+    image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=1200&q=80",
+    excerpt: "Voeding is de fundering waarop al je trainingsresultaten worden gebouwd. Zonder de juiste brandstof presteert zelfs de beste motor niet optimaal.",
+    content: ""
+  },
+  "herstel-de-vergeten-component": {
+    title: "Herstel: de vergeten component van vooruitgang",
+    date: "3 januari 2025",
+    category: "Herstel",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+    excerpt: "Hard trainen is slechts de helft van het verhaal. Wat je doet tussen je trainingen door bepaalt hoeveel vooruitgang je boekt.",
+    content: ""
+  },
+  "mindset-de-sleutel-tot-succes": {
+    title: "Mindset: de sleutel tot blijvend succes",
+    date: "1 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+    excerpt: "Je lichaam is tot veel meer in staat dan je denkt. Het is je geest die meestal opgeeft voordat je lichaam moet stoppen.",
+    content: ""
+  },
+  "waarom-krachttraining-voor-50-plussers": {
+    title: "Waarom krachttraining juist voor 50-plussers essentieel is",
+    date: "12 december 2024",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+    excerpt: "Vanaf je 30e verlies je elk decennium zo'n 3-5% van je spiermassa. Na je 50e versnelt dit proces. Maar krachttraining kan dit omkeren.",
+    content: ""
+  },
+  "5-tips-om-consistent-te-blijven": {
+    title: "5 tips om consistent te blijven met trainen",
+    date: "8 december 2024",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
+    excerpt: "Beginnen met sporten is makkelijk. Volhouden is de uitdaging. Deze 5 bewezen tips helpen je om van trainen een blijvende gewoonte te maken.",
+    content: ""
+  },
+  "wat-eet-je-voor-en-na-training": {
+    title: "Wat eet je het beste voor en na je training?",
+    date: "1 december 2024",
+    category: "Voeding",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80",
+    excerpt: "De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training.",
+    content: ""
+  },
+  "crossfit-voor-beginners": {
+    title: "CrossFit voor beginners: wat kun je verwachten?",
+    date: "25 november 2024",
+    category: "CrossFit",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+    excerpt: "Je hebt misschien video's gezien van extreme workouts. Is dit wel iets voor mij? Spoiler: ja, waarschijnlijk wel.",
+    content: ""
+  },
+  "blessures-voorkomen": {
+    title: "Zo voorkom je blessures tijdens het sporten",
+    date: "18 november 2024",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=1200&q=80",
+    excerpt: "Een blessure is de snelste manier om je vooruitgang te stoppen. Gelukkig zijn de meeste sportblessures te voorkomen.",
+    content: ""
+  },
+  "meer-energie-door-beweging": {
+    title: "Waarom beweging je juist meer energie geeft",
+    date: "10 november 2024",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=1200&q=80",
+    excerpt: "'Ik ben te moe om te sporten.' We hebben het allemaal weleens gedacht. Maar wat als sporten juist de oplossing is?",
+    content: ""
+  }
+};
+
+export function getBlogPost(slug: string): BlogPost | undefined {
+  return blogPosts[slug];
+}
+
+export function getAllBlogSlugs(): string[] {
+  return Object.keys(blogPosts);
+}
