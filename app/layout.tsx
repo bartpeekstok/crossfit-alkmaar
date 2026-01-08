@@ -89,8 +89,7 @@ export const metadata: Metadata = {
     images: ["https://crossfitalkmaar.com/images/hero.jpg"],
   },
   verification: {
-    // Voeg hier je Google Search Console verificatie code toe
-    // google: "jouw-verificatie-code",
+    google: "l6SVjEQksVtawGRXtAB5FgBSmmw0Xl6r-DhsxPQg9aU",
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com",
