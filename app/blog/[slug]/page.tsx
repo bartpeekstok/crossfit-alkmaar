@@ -5,6 +5,258 @@ import Link from "next/link";
 import { useParams } from "next/navigation";
 
 const blogPosts: { [key: string]: any } = {
+  "waarom-warming-up-onmisbaar-is": {
+    title: "Waarom een goede warming-up onmisbaar is",
+    date: "8 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+    content: `
+      <p class="lead">Geen tijd voor warming-up? Dan heb je ook geen tijd voor resultaten. Die 10 minuten maken het verschil tussen een goede en een geweldige training.</p>
+
+      <br/>
+
+      <h2>Waarom warmen we op?</h2>
+      <p>Je lichaam is als een auto in de winter. Spring je er direct in en ga je vol gas, dan loopt de motor niet lekker.</p>
+
+      <p>Een warming-up bereidt je lichaam voor op wat komen gaat. Je verhoogt je lichaamstemperatuur, maakt je spieren soepeler, en activeert je zenuwstelsel.</p>
+
+      <br/>
+
+      <h2>Wat gebeurt er in je lichaam?</h2>
+
+      <p><strong>Betere doorbloeding</strong><br/>
+      Je hartslag gaat omhoog en je bloedvaten verwijden. Meer bloed naar je spieren betekent meer zuurstof en voedingsstoffen.</p>
+
+      <p><strong>Soepelere spieren</strong><br/>
+      Warme spieren zijn elastischer. Ze kunnen meer kracht leveren en zijn minder vatbaar voor blessures.</p>
+
+      <p><strong>Geactiveerd zenuwstelsel</strong><br/>
+      Je reflexen worden scherper. De communicatie tussen hersenen en spieren verbetert.</p>
+
+      <br/>
+
+      <h2>De ideale warming-up</h2>
+      <p>Een goede warming-up duurt 10-15 minuten en bestaat uit drie onderdelen:</p>
+
+      <p><strong>1. Algemene opwarming (3-5 min)</strong></p>
+      <ul>
+        <li>Licht roeien of fietsen</li>
+        <li>Touwtje springen</li>
+        <li>Joggen op de plaats</li>
+      </ul>
+
+      <p><strong>2. Dynamisch stretchen (3-5 min)</strong></p>
+      <ul>
+        <li>Beenzwaaien</li>
+        <li>Armcirkels</li>
+        <li>Heup openers</li>
+        <li>Lunges met rotatie</li>
+      </ul>
+
+      <p><strong>3. Bewegingsvoorbereiding (3-5 min)</strong></p>
+      <ul>
+        <li>Lichte versies van de oefeningen die je gaat doen</li>
+        <li>Opbouwen in intensiteit</li>
+      </ul>
+
+      <br/>
+
+      <h2>Veelgemaakte fouten</h2>
+
+      <p><strong>Statisch stretchen</strong><br/>
+      Stilstaan en rekken voor je training vermindert juist je kracht en power. Bewaar dit voor na de training.</p>
+
+      <p><strong>Te kort</strong><br/>
+      Twee minuten joggen is geen warming-up. Neem de tijd die je lichaam nodig heeft.</p>
+
+      <p><strong>Overslaan bij tijdgebrek</strong><br/>
+      Liever 10 minuten warming-up en 20 minuten trainen dan 30 minuten trainen zonder warming-up.</p>
+
+      <br/>
+
+      <h2>Het verschil merk je direct</h2>
+      <p>Na een goede warming-up voel je je sterker, beweeglijker en mentaal scherper.</p>
+
+      <p>Je eerste rep voelt niet meer stroef. Je kunt dieper squatten. Je hebt meer energie.</p>
+
+      <p>Probeer het eens: neem een week lang écht de tijd voor je warming-up en merk het verschil.</p>
+    `
+  },
+  "doelen-stellen-die-werken": {
+    title: "Doelen stellen die echt werken",
+    date: "7 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=1200&q=80",
+    content: `
+      <p class="lead">Waarom 'afvallen' geen goed doel is. En hoe je wél doelen stelt die je motiveren én resultaat opleveren.</p>
+
+      <br/>
+
+      <h2>Het probleem met vage doelen</h2>
+      <p>"Ik wil fitter worden."</p>
+      <p>"Ik wil afvallen."</p>
+      <p>"Ik wil sterker worden."</p>
+
+      <p>Klinkt bekend? Deze doelen hebben één probleem: ze zijn te vaag om te bereiken.</p>
+
+      <p>Wanneer ben je "fit genoeg"? Hoeveel is "afvallen"? Wat betekent "sterker"?</p>
+
+      <br/>
+
+      <h2>SMART doelen</h2>
+      <p>Effectieve doelen zijn SMART:</p>
+
+      <p><strong>Specifiek</strong><br/>
+      Niet "sterker worden", maar "10 kilo meer squatten".</p>
+
+      <p><strong>Meetbaar</strong><br/>
+      Je moet kunnen meten of je vooruitgang boekt.</p>
+
+      <p><strong>Acceptabel</strong><br/>
+      Het doel moet bij jou passen en je motiveren.</p>
+
+      <p><strong>Realistisch</strong><br/>
+      Uitdagend maar haalbaar binnen de gestelde tijd.</p>
+
+      <p><strong>Tijdgebonden</strong><br/>
+      Een deadline zorgt voor focus en urgentie.</p>
+
+      <br/>
+
+      <h2>Voorbeelden van goede doelen</h2>
+
+      <p><strong>In plaats van "afvallen":</strong><br/>
+      "Over 3 maanden pas ik in mijn favoriete broek."</p>
+
+      <p><strong>In plaats van "fitter worden":</strong><br/>
+      "Over 8 weken kan ik 5 km hardlopen zonder te stoppen."</p>
+
+      <p><strong>In plaats van "sterker worden":</strong><br/>
+      "Over 12 weken deadlift ik 100 kg."</p>
+
+      <br/>
+
+      <h2>Proces vs. resultaat</h2>
+      <p>Er zijn twee soorten doelen:</p>
+
+      <p><strong>Resultaatdoelen</strong><br/>
+      Wat je wilt bereiken. "Ik wil 5 kg afvallen."</p>
+
+      <p><strong>Procesdoelen</strong><br/>
+      Wat je gaat doen. "Ik train 3x per week en eet elke dag groenten."</p>
+
+      <p>Focus op procesdoelen. Je hebt controle over wat je doet, niet over het resultaat. Als je het proces goed doet, volgt het resultaat vanzelf.</p>
+
+      <br/>
+
+      <h2>Schrijf ze op</h2>
+      <p>Doelen in je hoofd zijn wensen. Doelen op papier zijn commitments.</p>
+
+      <p>Schrijf je doelen op en hang ze ergens zichtbaar. Deel ze met iemand die je accountable houdt.</p>
+
+      <br/>
+
+      <h2>Vier de kleine overwinningen</h2>
+      <p>De weg naar een groot doel bestaat uit kleine stappen.</p>
+
+      <p>Vier elke milestone. Eerste keer 3x per week getraind? Vier het. Eerste pull-up? Vier het.</p>
+
+      <p>Deze kleine overwinningen bouwen momentum en houden je gemotiveerd.</p>
+
+      <br/>
+
+      <h2>Aan de slag</h2>
+      <p>Pak nu pen en papier. Schrijf één concreet doel op voor de komende 3 maanden.</p>
+
+      <p>Maak het SMART. Deel het met iemand. En begin vandaag.</p>
+    `
+  },
+  "training-als-stressverlichter": {
+    title: "Training als de ultieme stressverlichter",
+    date: "6 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=1200&q=80",
+    content: `
+      <p class="lead">Gestrest? Ga sporten. De wetenschap is duidelijk: beweging is een van de beste remedies tegen stress die er bestaat.</p>
+
+      <br/>
+
+      <h2>Stress in je lichaam</h2>
+      <p>Wanneer je gestrest bent, maakt je lichaam cortisol aan. Dit "stresshormoon" was ooit nuttig – het hielp onze voorouders vluchten voor gevaar.</p>
+
+      <p>Maar in onze moderne wereld is de stress chronisch. Deadlines, files, social media – je lichaam staat constant "aan".</p>
+
+      <p>Het resultaat? Slechte slaap, gewichtstoename, vermoeidheid, en een verminderd immuunsysteem.</p>
+
+      <br/>
+
+      <h2>Wat beweging doet</h2>
+
+      <p><strong>Verlaagt cortisol</strong><br/>
+      Beweging helpt je lichaam om overtollig cortisol af te breken. Na een workout is je cortisolniveau lager dan ervoor.</p>
+
+      <p><strong>Maakt endorfines vrij</strong><br/>
+      De beroemde "runner's high". Endorfines zijn je lichaamseigen pijnstillers en gelukshormonen.</p>
+
+      <p><strong>Verbetert je slaap</strong><br/>
+      Regelmatige beweging verbetert je slaapkwaliteit. Betere slaap betekent minder stress.</p>
+
+      <p><strong>Geeft je controle</strong><br/>
+      In een wereld vol onzekerheid is training iets wat jij controleert. Die autonomie vermindert gevoelens van stress.</p>
+
+      <br/>
+
+      <h2>De beste training tegen stress</h2>
+      <p>Elke vorm van beweging helpt. Maar sommige trainingen zijn extra effectief:</p>
+
+      <p><strong>Intensieve training</strong><br/>
+      Een zware workout dwingt je om in het moment te zijn. Je kunt niet piekeren terwijl je een zware deadlift doet.</p>
+
+      <p><strong>Groepstraining</strong><br/>
+      Sociale connectie vermindert stress. Samen trainen combineert beweging met community.</p>
+
+      <p><strong>Buiten bewegen</strong><br/>
+      Natuur heeft een kalmerend effect. Een wandeling of run buiten werkt dubbel zo goed.</p>
+
+      <br/>
+
+      <h2>De paradox</h2>
+      <p>Wanneer je gestrest bent, is sporten vaak het laatste waar je zin in hebt.</p>
+
+      <p>"Ik ben te moe."<br/>
+      "Ik heb geen tijd."<br/>
+      "Ik moet eerst dit afmaken."</p>
+
+      <p>Maar juist dan heb je het het hardst nodig.</p>
+
+      <p>De energie die je erin stopt, krijg je dubbel terug. Na een workout voel je je opgeladen, helder en kalmer.</p>
+
+      <br/>
+
+      <h2>Begin klein</h2>
+      <p>Je hoeft geen uur te trainen om het effect te voelen.</p>
+
+      <p>Al 20 minuten matige beweging maakt verschil. Een korte wandeling in de pauze. Een paar oefeningen thuis.</p>
+
+      <p>Het gaat om regelmaat, niet om perfectie.</p>
+
+      <br/>
+
+      <h2>Training als medicijn</h2>
+      <p>Als je elke dag een pil kon nemen die:</p>
+      <ul>
+        <li>Stress vermindert</li>
+        <li>Je humeur verbetert</li>
+        <li>Je energie verhoogt</li>
+        <li>Je slaap verbetert</li>
+        <li>Geen bijwerkingen heeft</li>
+      </ul>
+
+      <p>Zou je hem nemen?</p>
+
+      <p>Die pil bestaat. Het heet beweging.</p>
+    `
+  },
   "de-kracht-van-goede-voeding": {
     title: "De kracht van goede voeding: brandstof voor je prestaties",
     date: "5 januari 2025",

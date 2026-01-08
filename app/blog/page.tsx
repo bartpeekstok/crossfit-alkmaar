@@ -8,6 +8,33 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 10,
+      slug: "waarom-warming-up-onmisbaar-is",
+      title: "Waarom een goede warming-up onmisbaar is",
+      excerpt: "Geen tijd voor warming-up? Dan heb je ook geen tijd voor resultaten. Ontdek waarom die 10 minuten het verschil maken.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+      date: "8 januari 2025",
+      category: "Training"
+    },
+    {
+      id: 11,
+      slug: "doelen-stellen-die-werken",
+      title: "Doelen stellen die echt werken",
+      excerpt: "Waarom 'afvallen' geen goed doel is en hoe je wél doelen stelt die je motiveert en resultaat opleveren.",
+      image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
+      date: "7 januari 2025",
+      category: "Mindset"
+    },
+    {
+      id: 12,
+      slug: "training-als-stressverlichter",
+      title: "Training als de ultieme stressverlichter",
+      excerpt: "Gestrest? Ga sporten. De wetenschap achter waarom beweging een van de beste remedies tegen stress is.",
+      image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&q=80",
+      date: "6 januari 2025",
+      category: "Gezondheid"
+    },
+    {
       id: 7,
       slug: "de-kracht-van-goede-voeding",
       title: "De kracht van goede voeding: brandstof voor je prestaties",
