@@ -3,12 +3,14 @@
 import Link from "next/link";
 import Script from "next/script";
 import { usePopup } from "./components/PopupContext";
+import FaqSchema from "./components/FaqSchema";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <FaqSchema />
       {/* Hero Section */}
       <section
         className="relative text-white py-20 px-6 min-h-[600px] flex items-center"

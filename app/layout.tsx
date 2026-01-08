@@ -23,6 +23,7 @@ import PricingPopup from "./components/PricingPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
 import ChatWidget from "./components/ChatWidget";
+import JsonLd from "./components/JsonLd";
 
 export const metadata: Metadata = {
   title: {
@@ -111,6 +112,7 @@ export default function RootLayout({
         <meta name="geo.placename" content="Alkmaar" />
         <meta name="geo.position" content="52.6324;4.7534" />
         <meta name="ICBM" content="52.6324, 4.7534" />
+        <JsonLd />
       </head>
       <body className="antialiased">
         <GoogleAnalytics />
