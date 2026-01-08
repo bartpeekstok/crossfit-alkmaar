@@ -1,6 +1,23 @@
-# robots.txt for CrossFit Alkmaar
+# Robots.txt voor CrossFit Alkmaar
+# https://crossfitalkmaar.com
+
 User-agent: *
 Allow: /
 
-# Sitemap
+# Sitemap locatie
 Sitemap: https://crossfitalkmaar.com/sitemap.xml
+
+# Blokkeer interne API routes
+Disallow: /api/
+
+# Blokkeer Next.js interne routes
+Disallow: /_next/static/
+Disallow: /_next/image/
+
+# Sta crawlers toe voor afbeeldingen
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
