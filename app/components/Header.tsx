@@ -3,13 +3,38 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { usePopup } from "./PopupContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Header() {
   const [programmasOpen, setProgrammasOpen] = useState(false);
   const [meerInfoOpen, setMeerInfoOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openPopup } = usePopup();
+  const pathname = usePathname();
+
+  // Determine current language
+  const isEnglish = pathname.startsWith("/en");
+  const isGerman = pathname.startsWith("/de");
+  const langPrefix = isEnglish ? "/en" : isGerman ? "/de" : "";
+
+  // Translations
+  const t = {
+    moreInfo: isEnglish ? "More info" : isGerman ? "Mehr Info" : "Meer info",
+    schedule: isEnglish ? "Schedule" : isGerman ? "Stundenplan" : "Rooster",
+    pricing: isEnglish ? "Pricing" : isGerman ? "Preise" : "Tarieven",
+    ourMembers: isEnglish ? "Our members" : isGerman ? "Unsere Mitglieder" : "Onze leden",
+    jobs: isEnglish ? "Jobs" : isGerman ? "Stellenangebote" : "Vacatures",
+    programs: isEnglish ? "Programs" : isGerman ? "Programme" : "Programma's",
+    kickstart: "28 Day Kickstart",
+    groupClasses: isEnglish ? "Group classes" : isGerman ? "Gruppenkurse" : "Groepslessen",
+    personalTraining: "Personal Training",
+    smallGroup: "Small Group Training",
+    nutrition: isEnglish ? "Nutrition coaching" : isGerman ? "Ernährungsberatung" : "Voedingsadvies",
+    blog: "Blog",
+    freeIntro: isEnglish ? "Free intro" : isGerman ? "Kostenloses Probetraining" : "Gratis intake",
+  };
 
   const closeMobileMenu = () => {
     setMobileMenuOpen(false);
@@ -40,7 +65,7 @@ export default function Header() {
             onMouseLeave={() => setMeerInfoOpen(false)}
           >
             <Link href="/meer-info" className="flex items-center hover:text-gray-300 transition">
-              Meer info
+              {t.moreInfo}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
@@ -48,16 +73,16 @@ export default function Header() {
             {meerInfoOpen && (
               <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[200px] shadow-lg">
                 <Link href="/meer-info#rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Rooster
+                  {t.schedule}
                 </Link>
                 <Link href="/meer-info#tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Tarieven
+                  {t.pricing}
                 </Link>
                 <Link href="/onze-leden" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Onze leden
+                  {t.ourMembers}
                 </Link>
                 <Link href="/vacatures" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Vacatures
+                  {t.jobs}
                 </Link>
               </div>
             )}
@@ -70,41 +95,47 @@ export default function Header() {
             onMouseLeave={() => setProgrammasOpen(false)}
           >
             <button className="flex items-center hover:text-gray-300 transition">
-              Programma's
+              {t.programs}
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {programmasOpen && (
               <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[200px] shadow-lg">
-                <Link href="/kickstart" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  28 day kickstart
+                <Link href={`${langPrefix}/kickstart`} className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                  {t.kickstart}
                 </Link>
                 <Link href="/groepslessen" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Groepslessen
+                  {t.groupClasses}
                 </Link>
                 <Link href="/personal-training" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Personal training
+                  {t.personalTraining}
                 </Link>
                 <Link href="/small-group-training" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Small group training
+                  {t.smallGroup}
                 </Link>
                 <Link href="/voedingsadvies" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                  Voedingsadvies
+                  {t.nutrition}
                 </Link>
               </div>
             )}
           </div>
 
-          <Link href="/blog" className="hover:text-gray-300 transition">
-            Blog
-          </Link>
+          {/* Only show Blog for Dutch */}
+          {!isEnglish && !isGerman && (
+            <Link href="/blog" className="hover:text-gray-300 transition">
+              {t.blog}
+            </Link>
+          )}
+
           <button
             onClick={openPopup}
             className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition"
           >
-            Gratis intake
+            {t.freeIntro}
           </button>
+
+          <LanguageSwitcher />
         </nav>
 
         {/* Mobile Menu Button */}
@@ -124,7 +155,7 @@ export default function Header() {
           <div className="flex flex-col space-y-2">
             {/* Meer Info Mobile */}
             <div className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]">
-              <Link href="/meer-info" onClick={closeMobileMenu}>Meer info</Link>
+              <Link href="/meer-info" onClick={closeMobileMenu}>{t.moreInfo}</Link>
               <button onClick={() => setMeerInfoOpen(!meerInfoOpen)}>
                 <svg className={`w-4 h-4 transition-transform ${meerInfoOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
@@ -133,10 +164,10 @@ export default function Header() {
             </div>
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
-                <Link href="/meer-info#rooster" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Rooster</Link>
-                <Link href="/meer-info#tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Tarieven</Link>
-                <Link href="/onze-leden" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Onze leden</Link>
-                <Link href="/vacatures" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Vacatures</Link>
+                <Link href="/meer-info#rooster" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.schedule}</Link>
+                <Link href="/meer-info#tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.pricing}</Link>
+                <Link href="/onze-leden" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.ourMembers}</Link>
+                <Link href="/vacatures" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.jobs}</Link>
               </div>
             )}
 
@@ -145,28 +176,36 @@ export default function Header() {
               onClick={() => setProgrammasOpen(!programmasOpen)}
               className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]"
             >
-              Programma's
+              {t.programs}
               <svg className={`w-4 h-4 transition-transform ${programmasOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
               </svg>
             </button>
             {programmasOpen && (
               <div className="pl-4 flex flex-col space-y-2">
-                <Link href="/kickstart" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">28 Days Kickstart</Link>
-                <Link href="/groepslessen" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Groepslessen</Link>
-                <Link href="/personal-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Personal Training</Link>
-                <Link href="/small-group-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Small Group Training</Link>
-                <Link href="/voedingsadvies" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Voedingsadvies</Link>
+                <Link href={`${langPrefix}/kickstart`} onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.kickstart}</Link>
+                <Link href="/groepslessen" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.groupClasses}</Link>
+                <Link href="/personal-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.personalTraining}</Link>
+                <Link href="/small-group-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.smallGroup}</Link>
+                <Link href="/voedingsadvies" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.nutrition}</Link>
               </div>
             )}
 
-            <Link href="/blog" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">Blog</Link>
+            {/* Only show Blog for Dutch */}
+            {!isEnglish && !isGerman && (
+              <Link href="/blog" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.blog}</Link>
+            )}
             <button
               onClick={() => { openPopup(); closeMobileMenu(); }}
               className="mx-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition"
             >
-              Gratis intake
+              {t.freeIntro}
             </button>
+
+            {/* Language Switcher Mobile */}
+            <div className="px-4 py-2">
+              <LanguageSwitcher />
+            </div>
           </div>
         </div>
       )}

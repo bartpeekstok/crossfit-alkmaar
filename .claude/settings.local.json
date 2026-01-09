@@ -1,0 +1,36 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(tree:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run dev:*)",
+      "Bash(taskkill:*)",
+      "Bash(rm:*)",
+      "Bash(timeout:*)",
+      "Bash(ping:*)",
+      "Bash(curl:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(npx tsc:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd 3 new blog posts: voeding, herstel, mindset\n\n- De kracht van goede voeding: eiwitten, koolhydraten, vetten, 80/20 regel\n- Herstel: slaap, voeding, actief herstel, stressmanagement\n- Mindset: growth mindset, technieken, omgaan met tegenslagen\n\nAll blogs have improved readability with shorter paragraphs and more whitespace.\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push)",
+      "Bash(git commit:*)",
+      "Bash(npm run build:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(npx shadcn@latest add:*)",
+      "Bash(cat:*)",
+      "Bash(ls:*)",
+      "Bash(npm run sync:visible:*)",
+      "Bash(npm run sync:*)",
+      "Bash(node -e:*)",
+      "Bash(npx playwright install chromium)",
+      "Bash(npx tsx:*)",
+      "Bash(tasklist:*)",
+      "Bash(node test-revenue.js:*)",
+      "Bash(tr:*)",
+      "Bash(SPORTBIT_HEADLESS=false npx tsx:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
+    ]
+  }
+}
