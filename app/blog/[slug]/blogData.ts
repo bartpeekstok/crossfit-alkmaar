@@ -104,6 +104,30 @@ export const blogPosts: { [key: string]: BlogPost } = {
     image: "https://images.unsplash.com/photo-1549576490-b0b4831ef60a?w=1200&q=80",
     excerpt: "'Ik ben te moe om te sporten.' We hebben het allemaal weleens gedacht. Maar wat als sporten juist de oplossing is?",
     content: ""
+  },
+  "functioneel-trainen-vs-machines": {
+    title: "Functioneel trainen vs. machines: wat werkt beter?",
+    date: "9 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1200&q=80",
+    excerpt: "Waarom functionele oefeningen zoals squats en deadlifts effectiever zijn dan geïsoleerde machine-oefeningen. De wetenschap is duidelijk.",
+    content: ""
+  },
+  "de-kracht-van-samen-trainen": {
+    title: "De kracht van samen trainen: waarom community werkt",
+    date: "10 januari 2025",
+    category: "Community",
+    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80",
+    excerpt: "Alleen trainen is lastig volhouden. Ontdek waarom mensen die samen trainen betere resultaten behalen én langer volhouden.",
+    content: ""
+  },
+  "hoe-vaak-moet-je-trainen": {
+    title: "Hoe vaak moet je trainen voor resultaat?",
+    date: "11 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&q=80",
+    excerpt: "2x per week? 5x per week? De optimale trainingsfrequentie hangt af van je doelen, ervaring en herstelvermogen.",
+    content: ""
   }
 };
 
