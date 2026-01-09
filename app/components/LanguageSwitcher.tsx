@@ -96,7 +96,7 @@ export default function LanguageSwitcher() {
     <div className="relative" ref={dropdownRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded bg-blue-600 hover:bg-blue-700 transition"
+        className="flex items-center gap-2 px-3 py-2 rounded bg-blue-900 hover:bg-blue-950 transition"
         aria-label="Select language"
       >
         <CurrentFlag />

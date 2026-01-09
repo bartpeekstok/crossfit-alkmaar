@@ -130,7 +130,7 @@ export default function Header() {
 
           <button
             onClick={openPopup}
-            className="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition"
+            className="bg-blue-900 hover:bg-blue-950 px-4 py-2 rounded transition"
           >
             {t.freeIntro}
           </button>
@@ -197,7 +197,7 @@ export default function Header() {
             )}
             <button
               onClick={() => { openPopup(); closeMobileMenu(); }}
-              className="mx-4 bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded transition"
+              className="mx-4 bg-blue-900 hover:bg-blue-950 px-4 py-2 rounded transition"
             >
               {t.freeIntro}
             </button>
