@@ -5,6 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts = [
+    "hoe-vaak-moet-je-trainen",
+    "de-kracht-van-samen-trainen",
+    "functioneel-trainen-vs-machines",
     "waarom-warming-up-onmisbaar-is",
     "doelen-stellen-die-werken",
     "training-als-stressverlichter",
@@ -24,6 +27,26 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: new Date(),
     changeFrequency: "monthly" as const,
     priority: 0.7,
+  }));
+
+  // English pages
+  const englishPages = [
+    { url: `${baseUrl}/en`, priority: 0.8 },
+    { url: `${baseUrl}/en/kickstart`, priority: 0.7 },
+  ].map((page) => ({
+    ...page,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+  }));
+
+  // German pages
+  const germanPages = [
+    { url: `${baseUrl}/de`, priority: 0.8 },
+    { url: `${baseUrl}/de/kickstart`, priority: 0.7 },
+  ].map((page) => ({
+    ...page,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
   }));
 
   return [
@@ -88,5 +111,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.3,
     },
+    {
+      url: `${baseUrl}/faq`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/meer-info`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/onze-leden`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.5,
+    },
+    {
+      url: `${baseUrl}/vacatures`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.4,
+    },
+    // English pages
+    ...englishPages,
+    // German pages
+    ...germanPages,
   ];
 }
