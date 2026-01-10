@@ -5,6 +5,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts = [
+    "personal-training-alkmaar",
+    "fitness-voor-50-plussers",
+    "sportschool-voor-beginners",
+    "afvallen-in-alkmaar",
+    "krachttraining-alkmaar",
     "hoe-vaak-moet-je-trainen",
     "de-kracht-van-samen-trainen",
     "functioneel-trainen-vs-machines",

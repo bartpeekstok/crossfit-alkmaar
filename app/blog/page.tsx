@@ -8,6 +8,51 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 20,
+      slug: "personal-training-alkmaar",
+      title: "Personal training in Alkmaar: is het de investering waard?",
+      excerpt: "Personal training kost al snel €50-100 per sessie. Is dat de investering waard? En zijn er alternatieven die net zo effectief zijn?",
+      image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=800&q=80",
+      date: "16 januari 2025",
+      category: "Training"
+    },
+    {
+      id: 19,
+      slug: "fitness-voor-50-plussers",
+      title: "Fitness voor 50+: sterker worden op latere leeftijd",
+      excerpt: "Op zoek naar een sportschool in Alkmaar die geschikt is voor 50-plussers? Dit is waarom krachttraining op latere leeftijd juist zo belangrijk is.",
+      image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80",
+      date: "15 januari 2025",
+      category: "Gezondheid"
+    },
+    {
+      id: 18,
+      slug: "sportschool-voor-beginners",
+      title: "Sportschool voor beginners: waar moet je op letten?",
+      excerpt: "Voor het eerst naar een sportschool? Begrijpelijk dat je niet weet waar je moet beginnen. Dit is alles wat je moet weten als beginner.",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+      date: "14 januari 2025",
+      category: "Tips"
+    },
+    {
+      id: 17,
+      slug: "afvallen-in-alkmaar",
+      title: "Afvallen in Alkmaar: de eerlijke waarheid over gewichtsverlies",
+      excerpt: "Zoek je een sportschool in Alkmaar om af te vallen? Voor je je inschrijft, moet je dit weten over wat écht werkt bij gewichtsverlies.",
+      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80",
+      date: "13 januari 2025",
+      category: "Gezondheid"
+    },
+    {
+      id: 16,
+      slug: "krachttraining-alkmaar",
+      title: "Krachttraining in Alkmaar: waar begin je?",
+      excerpt: "Krachttraining is de beste investering in je gezondheid. Maar waar begin je in Alkmaar? Een overzicht van je opties.",
+      image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=800&q=80",
+      date: "12 januari 2025",
+      category: "Training"
+    },
+    {
       id: 15,
       slug: "hoe-vaak-moet-je-trainen",
       title: "Hoe vaak moet je trainen voor resultaat?",

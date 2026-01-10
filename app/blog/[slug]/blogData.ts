@@ -128,6 +128,46 @@ export const blogPosts: { [key: string]: BlogPost } = {
     image: "https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1200&q=80",
     excerpt: "2x per week? 5x per week? De optimale trainingsfrequentie hangt af van je doelen, ervaring en herstelvermogen.",
     content: ""
+  },
+  "krachttraining-alkmaar": {
+    title: "Krachttraining in Alkmaar: waar begin je?",
+    date: "12 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
+    excerpt: "Krachttraining is de beste investering in je gezondheid. Maar waar begin je in Alkmaar? Een overzicht van je opties.",
+    content: ""
+  },
+  "afvallen-in-alkmaar": {
+    title: "Afvallen in Alkmaar: de eerlijke waarheid over gewichtsverlies",
+    date: "13 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+    excerpt: "Zoek je een sportschool in Alkmaar om af te vallen? Voor je je inschrijft, moet je dit weten over wat écht werkt bij gewichtsverlies.",
+    content: ""
+  },
+  "sportschool-voor-beginners": {
+    title: "Sportschool voor beginners: waar moet je op letten?",
+    date: "14 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+    excerpt: "Voor het eerst naar een sportschool? Begrijpelijk dat je niet weet waar je moet beginnen. Dit is alles wat je moet weten als beginner.",
+    content: ""
+  },
+  "fitness-voor-50-plussers": {
+    title: "Fitness voor 50+: sterker worden op latere leeftijd",
+    date: "15 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+    excerpt: "Op zoek naar een sportschool in Alkmaar die geschikt is voor 50-plussers? Dit is waarom krachttraining op latere leeftijd juist zo belangrijk is.",
+    content: ""
+  },
+  "personal-training-alkmaar": {
+    title: "Personal training in Alkmaar: is het de investering waard?",
+    date: "16 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=1200&q=80",
+    excerpt: "Personal training kost al snel €50-100 per sessie. Is dat de investering waard? En zijn er alternatieven die net zo effectief zijn?",
+    content: ""
   }
 };
 

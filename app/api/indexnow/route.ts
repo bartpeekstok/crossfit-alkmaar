@@ -66,6 +66,14 @@ export async function POST(request: NextRequest) {
 // GET endpoint to manually trigger indexing of all blog posts
 export async function GET() {
   const blogSlugs = [
+    "personal-training-alkmaar",
+    "fitness-voor-50-plussers",
+    "sportschool-voor-beginners",
+    "afvallen-in-alkmaar",
+    "krachttraining-alkmaar",
+    "hoe-vaak-moet-je-trainen",
+    "de-kracht-van-samen-trainen",
+    "functioneel-trainen-vs-machines",
     "waarom-warming-up-onmisbaar-is",
     "doelen-stellen-die-werken",
     "training-als-stressverlichter",
@@ -89,6 +97,12 @@ export async function GET() {
     `${SITE_URL}/small-group-training`,
     `${SITE_URL}/voedingsadvies`,
     `${SITE_URL}/contact`,
+    // English pages
+    `${SITE_URL}/en`,
+    `${SITE_URL}/en/kickstart`,
+    // German pages
+    `${SITE_URL}/de`,
+    `${SITE_URL}/de/kickstart`,
     ...blogSlugs.map((slug) => `${SITE_URL}/blog/${slug}`),
   ];
 

@@ -1195,6 +1195,589 @@ const blogPosts: { [key: string]: any } = {
 
       <p>Begin realistisch. Bouw langzaam op. En vergeet niet: dit is een marathon, geen sprint.</p>
     `
+  },
+  "krachttraining-alkmaar": {
+    title: "Krachttraining in Alkmaar: waar begin je?",
+    date: "12 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1200&q=80",
+    content: `
+      <p class="lead">Krachttraining is de beste investering in je gezondheid. Maar waar begin je in Alkmaar? Een overzicht van je opties en waar je op moet letten.</p>
+
+      <br/>
+
+      <h2>Waarom krachttraining?</h2>
+      <p>De voordelen van krachttraining zijn wetenschappelijk bewezen en indrukwekkend:</p>
+
+      <ul>
+        <li><strong>Meer spiermassa</strong> – Spieren verbranden calorieën, ook in rust</li>
+        <li><strong>Sterkere botten</strong> – Voorkomt osteoporose op latere leeftijd</li>
+        <li><strong>Betere houding</strong> – Minder rugklachten en nekpijn</li>
+        <li><strong>Meer energie</strong> – Je voelt je fitter in het dagelijks leven</li>
+        <li><strong>Mentale gezondheid</strong> – Vermindert stress, angst en depressie</li>
+        <li><strong>Langer leven</strong> – Spiermassa is een voorspeller van levensverwachting</li>
+      </ul>
+
+      <p>Kort gezegd: krachttraining is niet alleen voor bodybuilders. Het is voor iedereen die gezond oud wil worden.</p>
+
+      <br/>
+
+      <h2>De basis van krachttraining</h2>
+      <p>Effectieve krachttraining hoeft niet ingewikkeld te zijn. Deze bewegingspatronen vormen de basis:</p>
+
+      <p><strong>Squat (hurken)</strong><br/>
+      Traint je hele onderbenen. De meest functionele beweging die er is – je hurkt elke dag als je gaat zitten.</p>
+
+      <p><strong>Deadlift (optillen)</strong><br/>
+      Iets van de grond tillen. Traint je rug, bilspieren en hamstrings. Essentieel voor een sterke rug.</p>
+
+      <p><strong>Press (duwen)</strong><br/>
+      Boven je hoofd of voor je uit duwen. Traint schouders, borst en triceps.</p>
+
+      <p><strong>Pull (trekken)</strong><br/>
+      Naar je toe trekken. Traint je rug en biceps. Denk aan roeien of pull-ups.</p>
+
+      <p><strong>Carry (dragen)</strong><br/>
+      Gewicht dragen terwijl je loopt. Traint je hele lichaam, vooral je core.</p>
+
+      <br/>
+
+      <h2>Krachttraining opties in Alkmaar</h2>
+
+      <p><strong>Budget sportscholen (Basic Fit, Fit for Free)</strong></p>
+      <ul>
+        <li>Pro: Goedkoop, veel apparaten</li>
+        <li>Con: Druk, geen begeleiding, focus op machines</li>
+        <li>Geschikt voor: Ervaren sporters die zelfstandig trainen</li>
+      </ul>
+
+      <p><strong>Lokale sportscholen</strong></p>
+      <ul>
+        <li>Pro: Vaak betere sfeer, meer aandacht</li>
+        <li>Con: Kwaliteit verschilt sterk</li>
+        <li>Geschikt voor: Wie persoonlijke aandacht zoekt</li>
+      </ul>
+
+      <p><strong>CrossFit / Functional fitness</strong></p>
+      <ul>
+        <li>Pro: Begeleide training, focus op vrije gewichten, community</li>
+        <li>Con: Vast lesrooster</li>
+        <li>Geschikt voor: Beginners en wie motivatie zoekt</li>
+      </ul>
+
+      <br/>
+
+      <h2>Machines vs vrije gewichten</h2>
+      <p>In veel sportscholen staan vooral machines. Maar vrije gewichten (barbells, dumbbells, kettlebells) zijn effectiever:</p>
+
+      <ul>
+        <li>Trainen meer spiergroepen tegelijk</li>
+        <li>Verbeteren balans en coördinatie</li>
+        <li>Zijn functioneler – ze bootsen echte bewegingen na</li>
+        <li>Bouwen een sterke core</li>
+      </ul>
+
+      <p>Machines hebben hun plaats (bijvoorbeeld bij revalidatie), maar zouden niet de basis van je training moeten zijn.</p>
+
+      <br/>
+
+      <h2>Hoeveel keer per week?</h2>
+      <p>Voor beginners is 2-3 keer per week voldoende. Dit geeft:</p>
+
+      <ul>
+        <li>Genoeg stimulus om sterker te worden</li>
+        <li>Voldoende hersteltijd tussen sessies</li>
+        <li>Een haalbaar schema dat je volhoudt</li>
+      </ul>
+
+      <p>Gevorderden kunnen opbouwen naar 4-5 keer per week, maar meer is niet altijd beter. Herstel is cruciaal.</p>
+
+      <br/>
+
+      <h2>Waar moet je op letten?</h2>
+
+      <p><strong>Begeleiding</strong><br/>
+      Vooral als beginner heb je feedback nodig op je techniek. Slechte techniek leidt tot blessures en mindere resultaten.</p>
+
+      <p><strong>Progressie</strong><br/>
+      Je moet zwaarder kunnen gaan trainen naarmate je sterker wordt. Check of er voldoende gewichten beschikbaar zijn.</p>
+
+      <p><strong>Sfeer</strong><br/>
+      Voel je je welkom? De sfeer bepaalt of je blijft komen. Probeer altijd een proefles.</p>
+
+      <p><strong>Programma</strong><br/>
+      Ga je zelf bedenken wat je doet, of volg je een programma? Structuur leidt tot betere resultaten.</p>
+
+      <br/>
+
+      <h2>Krachttraining bij CrossFit Alkmaar</h2>
+      <p>Bij ons staat krachttraining centraal. Elke training bevat een krachtcomponent:</p>
+
+      <ul>
+        <li>Squats, deadlifts, presses – de basis die werkt</li>
+        <li>Professionele coaches die je techniek bewaken</li>
+        <li>Geprogrammeerd schema voor optimale progressie</li>
+        <li>Variatie die je gemotiveerd houdt</li>
+        <li>Community die je pusht om beter te worden</li>
+      </ul>
+
+      <p>Of je nu net begint of al jaren traint, wij hebben een plek voor je.</p>
+
+      <br/>
+
+      <h2>Start nu met krachttraining</h2>
+      <p>De beste tijd om te beginnen met krachttraining was 10 jaar geleden. De op één na beste tijd is nu.</p>
+
+      <p>Plan een gratis intake bij CrossFit Alkmaar. We bespreken je doelen en laten je ervaren hoe effectieve krachttraining voelt.</p>
+    `
+  },
+  "afvallen-in-alkmaar": {
+    title: "Afvallen in Alkmaar: de eerlijke waarheid over gewichtsverlies",
+    date: "13 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&q=80",
+    content: `
+      <p class="lead">Zoek je een sportschool in Alkmaar om af te vallen? Voor je je inschrijft, moet je dit weten over wat écht werkt bij gewichtsverlies.</p>
+
+      <br/>
+
+      <h2>De harde waarheid</h2>
+      <p>Laten we eerlijk zijn: 95% van de mensen die afvallen, komt het binnen 2 jaar weer aan. Dat is geen gebrek aan wilskracht – dat is een fundamenteel probleem met hoe de meeste mensen afvallen proberen.</p>
+
+      <p>Crashdiëten, urenlang cardio, maaltijdvervangers – ze werken tijdelijk, maar zijn niet vol te houden.</p>
+
+      <br/>
+
+      <h2>Waarom de meeste diëten falen</h2>
+
+      <p><strong>Te grote caloriebeperkingen</strong><br/>
+      Je lichaam reageert op honger door je metabolisme te vertragen. Hoe strenger je dieet, hoe meer je lichaam zich verzet.</p>
+
+      <p><strong>Alleen focus op de weegschaal</strong><br/>
+      Het getal op de weegschaal zegt weinig over je gezondheid. Je kunt spiermassa verliezen en vet behouden – en toch "afvallen".</p>
+
+      <p><strong>Geen gedragsverandering</strong><br/>
+      Als je tijdelijk je gedrag verandert, krijg je tijdelijke resultaten. Punt.</p>
+
+      <br/>
+
+      <h2>Wat wél werkt</h2>
+
+      <p><strong>1. Krachttraining</strong><br/>
+      Spieren verbranden meer calorieën dan vet, ook in rust. Door spiermassa op te bouwen, verhoog je je metabolisme permanent. Dit is de sleutel tot blijvend gewichtsverlies.</p>
+
+      <p><strong>2. Eiwitrijke voeding</strong><br/>
+      Eiwit houdt je langer verzadigd en voorkomt spierverlies tijdens het afvallen. Streef naar 1,6-2g eiwit per kg lichaamsgewicht.</p>
+
+      <p><strong>3. Geduld</strong><br/>
+      Gezond afvallen is 0,5-1kg per week. Meer dan dat en je verliest ook spiermassa. Sneller afvallen = sneller terugkomen.</p>
+
+      <p><strong>4. Beweging die je leuk vindt</strong><br/>
+      De beste training is de training die je volhoudt. Daarom is groepstraining zo effectief – het is leuk en je blijft komen.</p>
+
+      <br/>
+
+      <h2>De rol van cardio</h2>
+      <p>Cardio is niet de heilige graal van afvallen. Ja, je verbrandt calorieën, maar:</p>
+
+      <ul>
+        <li>Je lichaam past zich aan en verbrandt steeds minder</li>
+        <li>Teveel cardio kan spiermassa kosten</li>
+        <li>Het maakt je hongerig</li>
+      </ul>
+
+      <p>Cardio is nuttig voor je gezondheid, maar krachttraining is effectiever voor lichaamscompositie.</p>
+
+      <br/>
+
+      <h2>Waarom CrossFit werkt voor gewichtsverlies</h2>
+      <p>CrossFit combineert precies wat je nodig hebt:</p>
+
+      <ul>
+        <li><strong>Krachttraining</strong> – bouw spiermassa, verhoog je metabolisme</li>
+        <li><strong>High-intensity</strong> – verbrand veel calorieën in korte tijd</li>
+        <li><strong>Variatie</strong> – je lichaam blijft zich aanpassen</li>
+        <li><strong>Community</strong> – je blijft komen omdat het leuk is</li>
+        <li><strong>Coaching</strong> – je krijgt begeleiding en accountability</li>
+      </ul>
+
+      <br/>
+
+      <h2>Realistische verwachtingen</h2>
+      <p>Na 4 weken consistent trainen en gezond eten kun je verwachten:</p>
+
+      <ul>
+        <li>2-4 kg vetmassa verlies</li>
+        <li>Merkbaar meer energie</li>
+        <li>Betere slaap</li>
+        <li>Kleding die losser zit</li>
+        <li>Verbeterde kracht en uithoudingsvermogen</li>
+      </ul>
+
+      <p>Na 12 weken:</p>
+      <ul>
+        <li>Zichtbare lichaamsverandering</li>
+        <li>6-12 kg vetmassa verlies (afhankelijk van startpunt)</li>
+        <li>Significant sterkere spieren</li>
+        <li>Nieuwe gewoontes die beklijven</li>
+      </ul>
+
+      <br/>
+
+      <h2>Afvallen bij CrossFit Alkmaar</h2>
+      <p>Wij geloven niet in quick fixes. Wij geloven in:</p>
+
+      <ul>
+        <li>Duurzame resultaten door gedragsverandering</li>
+        <li>Sterker worden, niet alleen lichter</li>
+        <li>Voeding als brandstof, niet als vijand</li>
+        <li>Training die je volhoudt omdat je het leuk vindt</li>
+      </ul>
+
+      <p>Onze leden vallen niet alleen af – ze houden het af. Omdat ze een levensstijl hebben gevonden die werkt, niet een dieet dat ze haten.</p>
+
+      <br/>
+
+      <h2>Start vandaag</h2>
+      <p>Ben je klaar om het anders aan te pakken? Plan een gratis intake en ontdek hoe wij je kunnen helpen je gewichtsdoelen te bereiken – en te behouden.</p>
+    `
+  },
+  "sportschool-voor-beginners": {
+    title: "Sportschool voor beginners: waar moet je op letten?",
+    date: "14 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+    content: `
+      <p class="lead">Voor het eerst naar een sportschool? Begrijpelijk dat je niet weet waar je moet beginnen. Dit is alles wat je moet weten als beginner.</p>
+
+      <br/>
+
+      <h2>De drempel is hoger dan de werkelijkheid</h2>
+      <p>De meeste mensen die nog nooit naar een sportschool zijn geweest, hebben dezelfde angsten:</p>
+
+      <ul>
+        <li>"Iedereen kijkt naar me"</li>
+        <li>"Ik weet niet wat ik moet doen"</li>
+        <li>"Ik ben niet fit genoeg"</li>
+        <li>"Ik hoor daar niet thuis"</li>
+      </ul>
+
+      <p>De werkelijkheid? Niemand let op je. Iedereen is bezig met zichzelf. En elke ervaren sporter was ooit beginner.</p>
+
+      <br/>
+
+      <h2>Soorten sportscholen</h2>
+
+      <p><strong>Budgetketen (Basic Fit, Fit for Free)</strong></p>
+      <ul>
+        <li>Pro: Goedkoop, veel locaties</li>
+        <li>Con: Weinig begeleiding, kan overweldigend zijn</li>
+        <li>Geschikt voor: Zelfstandige sporters met ervaring</li>
+      </ul>
+
+      <p><strong>Personal training studio</strong></p>
+      <ul>
+        <li>Pro: 1-op-1 begeleiding, volledig op maat</li>
+        <li>Con: Duur, kan eenzaam zijn</li>
+        <li>Geschikt voor: Wie budget heeft en individuele aandacht wil</li>
+      </ul>
+
+      <p><strong>CrossFit / Functional fitness</strong></p>
+      <ul>
+        <li>Pro: Begeleide groepstraining, community, effectief</li>
+        <li>Con: Groepsformat past niet bij iedereen</li>
+        <li>Geschikt voor: Wie motivatie zoekt en van variatie houdt</li>
+      </ul>
+
+      <br/>
+
+      <h2>Waar moet je als beginner op letten?</h2>
+
+      <p><strong>1. Begeleiding</strong><br/>
+      Als beginner heb je uitleg nodig. Kijk of er trainers zijn die je helpen, of dat je aan je lot wordt overgelaten.</p>
+
+      <p><strong>2. Sfeer</strong><br/>
+      Voel je je welkom? Is het intimiderend of juist uitnodigend? De sfeer bepaalt of je blijft komen.</p>
+
+      <p><strong>3. Flexibiliteit</strong><br/>
+      Kun je je abonnement pauzeren? Opzeggen? Lees de kleine lettertjes.</p>
+
+      <p><strong>4. Proefles</strong><br/>
+      Elke goede sportschool biedt een proefles of intake. Maak hier gebruik van.</p>
+
+      <br/>
+
+      <h2>De eerste weken als beginner</h2>
+      <p>Dit is wat je kunt verwachten:</p>
+
+      <p><strong>Week 1-2: Wennen</strong><br/>
+      Alles is nieuw. Je bent moe en mogelijk spierpijn. Dit is normaal.</p>
+
+      <p><strong>Week 3-4: Routine</strong><br/>
+      Je begint de bewegingen te snappen. Het wordt makkelijker om te komen.</p>
+
+      <p><strong>Week 5-8: Progressie</strong><br/>
+      Je merkt dat je sterker wordt. Gewichten gaan omhoog, je bent minder moe.</p>
+
+      <p><strong>Na 8 weken</strong><br/>
+      Training is een gewoonte geworden. Je mist het als je niet gaat.</p>
+
+      <br/>
+
+      <h2>Tips voor beginners</h2>
+
+      <p><strong>Start langzaam</strong><br/>
+      Begin met 2x per week. Bouw pas op als dat routine is. Te snel beginnen leidt tot burnout of blessures.</p>
+
+      <p><strong>Focus op techniek</strong><br/>
+      Het maakt niet uit hoeveel gewicht je tilt. Goeie techniek voorkomt blessures en geeft betere resultaten.</p>
+
+      <p><strong>Vergelijk niet</strong><br/>
+      Die persoon die alles makkelijk lijkt te doen, traint al jaren. Vergelijk jezelf alleen met wie je gisteren was.</p>
+
+      <p><strong>Wees geduldig</strong><br/>
+      Resultaten komen, maar niet in een week. Geef jezelf minimaal 3 maanden.</p>
+
+      <br/>
+
+      <h2>Waarom CrossFit goed is voor beginners</h2>
+      <p>Veel mensen denken dat CrossFit alleen voor fitties is. Het tegendeel is waar:</p>
+
+      <ul>
+        <li>Elke oefening wordt aangepast aan jouw niveau</li>
+        <li>Je hebt altijd een coach die je helpt</li>
+        <li>Je hoeft niet zelf te bedenken wat je gaat doen</li>
+        <li>De groep motiveert je om te blijven komen</li>
+        <li>Je leert de basis: squats, deadlifts, presses</li>
+      </ul>
+
+      <p>Bij CrossFit Alkmaar verwelkomen we complete beginners. We beginnen bij de basis en bouwen van daaruit op.</p>
+
+      <br/>
+
+      <h2>Neem de eerste stap</h2>
+      <p>De moeilijkste stap is de eerste. Plan een gratis intake en ontdek of CrossFit Alkmaar bij je past. Geen verplichtingen, wel een eerlijk gesprek over je doelen.</p>
+    `
+  },
+  "fitness-voor-50-plussers": {
+    title: "Fitness voor 50+: sterker worden op latere leeftijd",
+    date: "15 januari 2025",
+    category: "Gezondheid",
+    image: "https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1200&q=80",
+    content: `
+      <p class="lead">Op zoek naar een sportschool in Alkmaar die geschikt is voor 50-plussers? Dit is waarom krachttraining op latere leeftijd juist zo belangrijk is.</p>
+
+      <br/>
+
+      <h2>Het probleem: sarcopenie</h2>
+      <p>Vanaf je 30e verlies je gemiddeld 3-5% spiermassa per decennium. Na je 50e versnelt dit proces. Dit heet sarcopenie.</p>
+
+      <p>De gevolgen:</p>
+      <ul>
+        <li>Minder kracht voor dagelijkse activiteiten</li>
+        <li>Hoger valrisico</li>
+        <li>Langzamer metabolisme (makkelijker aankomen)</li>
+        <li>Verminderde zelfstandigheid op latere leeftijd</li>
+      </ul>
+
+      <p>Het goede nieuws? Dit is te voorkomen én zelfs terug te draaien. Met krachttraining.</p>
+
+      <br/>
+
+      <h2>Waarom krachttraining essentieel is na 50</h2>
+
+      <p><strong>1. Spierbehoud en -opbouw</strong><br/>
+      Je kunt op elke leeftijd spiermassa opbouwen. Onderzoek toont aan dat zelfs 90-jarigen sterker kunnen worden met de juiste training.</p>
+
+      <p><strong>2. Botdichtheid</strong><br/>
+      Krachttraining stimuleert botaanmaak. Dit vermindert het risico op osteoporose en botbreuken.</p>
+
+      <p><strong>3. Balans en coördinatie</strong><br/>
+      Functionele oefeningen verbeteren je balans. Minder valrisico betekent langer zelfstandig blijven.</p>
+
+      <p><strong>4. Metabolisme</strong><br/>
+      Meer spiermassa = sneller metabolisme. Je verbrandt meer calorieën, ook in rust.</p>
+
+      <p><strong>5. Mentale gezondheid</strong><br/>
+      Beweging vermindert depressie en angst. De sociale component van groepstraining is extra waardevol.</p>
+
+      <br/>
+
+      <h2>Veelvoorkomende angsten</h2>
+
+      <p><strong>"Ik ben te oud om te beginnen"</strong><br/>
+      Je bent nooit te oud. Onze oudste leden zijn 70+. Ze squatten, deadliften en doen pull-ups (aangepast aan hun niveau).</p>
+
+      <p><strong>"Het is gevaarlijk op mijn leeftijd"</strong><br/>
+      Niét trainen is gevaarlijker. Spierzwakte en slechte balans leiden tot vallen en blessures. Training onder begeleiding is veilig.</p>
+
+      <p><strong>"Ik heb last van mijn gewrichten"</strong><br/>
+      De juiste beweging verbetert gewrichtsgezondheid. We passen oefeningen aan op jouw situatie.</p>
+
+      <br/>
+
+      <h2>Wat maakt een sportschool 50+-vriendelijk?</h2>
+
+      <p><strong>Deskundige begeleiding</strong><br/>
+      Trainers die begrijpen dat een 55-jarige anders traint dan een 25-jarige.</p>
+
+      <p><strong>Aanpassingen mogelijk</strong><br/>
+      Oefeningen worden aangepast aan jouw mobiliteit en eventuele beperkingen.</p>
+
+      <p><strong>Respectvolle sfeer</strong><br/>
+      Geen machocultuur, maar een plek waar iedereen welkom is.</p>
+
+      <p><strong>Focus op functie</strong><br/>
+      Trainen om beter te functioneren in het dagelijks leven, niet om er uit te zien als een bodybuilder.</p>
+
+      <br/>
+
+      <h2>Onze 50+ community</h2>
+      <p>Bij CrossFit Alkmaar is de gemiddelde leeftijd 35+. We hebben veel leden tussen de 50 en 70. Ze trainen samen met jongere leden, maar ieder op eigen niveau.</p>
+
+      <p>Wat onze 50+ leden zeggen:</p>
+      <ul>
+        <li>"Ik ben sterker dan 10 jaar geleden"</li>
+        <li>"Mijn rugpijn is verdwenen"</li>
+        <li>"Ik kan weer met mijn kleinkinderen spelen"</li>
+        <li>"De sociale kant is net zo waardevol als de training"</li>
+      </ul>
+
+      <br/>
+
+      <h2>Hoe ziet training voor 50+ eruit?</h2>
+      <p>Een typische sessie bij ons:</p>
+
+      <ol>
+        <li><strong>Warming-up (10 min)</strong> – Mobiliteit en activatie</li>
+        <li><strong>Techniek (15 min)</strong> – Krachtoefening met focus op goede uitvoering</li>
+        <li><strong>Workout (15-20 min)</strong> – Combinatie van kracht en cardio, aangepast aan jouw niveau</li>
+        <li><strong>Cooling down (5 min)</strong> – Stretching en ademhaling</li>
+      </ol>
+
+      <p>Elke oefening heeft schaalbare opties. Kun je geen reguliere push-up? Dan doe je ze tegen de muur of op een verhoging.</p>
+
+      <br/>
+
+      <h2>Begin nu</h2>
+      <p>Je toekomstige zelf zal je dankbaar zijn. Elke dag dat je wacht, verlies je spiermassa die je moet terugwinnen.</p>
+
+      <p>Plan een gratis intake bij CrossFit Alkmaar. We bespreken je doelen, eventuele beperkingen, en laten zien hoe we je kunnen helpen sterker te worden – op élke leeftijd.</p>
+    `
+  },
+  "personal-training-alkmaar": {
+    title: "Personal training in Alkmaar: is het de investering waard?",
+    date: "16 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=1200&q=80",
+    content: `
+      <p class="lead">Personal training kost al snel €50-100 per sessie. Is dat de investering waard? En zijn er alternatieven die net zo effectief zijn?</p>
+
+      <br/>
+
+      <h2>Wat krijg je bij personal training?</h2>
+      <p>Een goede personal trainer biedt:</p>
+
+      <ul>
+        <li><strong>1-op-1 aandacht</strong> – Focus volledig op jou</li>
+        <li><strong>Gepersonaliseerd programma</strong> – Afgestemd op jouw doelen</li>
+        <li><strong>Technische begeleiding</strong> – Direct feedback op je uitvoering</li>
+        <li><strong>Accountability</strong> – Iemand die je verwacht</li>
+        <li><strong>Motivatie</strong> – Push wanneer je het nodig hebt</li>
+      </ul>
+
+      <br/>
+
+      <h2>De voordelen</h2>
+
+      <p><strong>Snellere resultaten</strong><br/>
+      Met expert begeleiding maak je minder fouten en train je efficiënter.</p>
+
+      <p><strong>Veiligheid</strong><br/>
+      Vooral bij complexe oefeningen of als je blessures hebt, is deskundige begeleiding waardevol.</p>
+
+      <p><strong>Motivatie</strong><br/>
+      Die afspraak in je agenda zorgt dat je komt, ook als je geen zin hebt.</p>
+
+      <br/>
+
+      <h2>De nadelen</h2>
+
+      <p><strong>Kosten</strong><br/>
+      2-3x per week personal training kost €400-1200 per maand. Voor de meeste mensen onhaalbaar.</p>
+
+      <p><strong>Afhankelijkheid</strong><br/>
+      Sommige mensen worden afhankelijk van hun trainer en weten niet meer hoe ze zelf moeten trainen.</p>
+
+      <p><strong>Geen community</strong><br/>
+      Je traint alleen. De sociale motivatie van een groep ontbreekt.</p>
+
+      <br/>
+
+      <h2>Het beste alternatief: small group training</h2>
+      <p>Small group training combineert de voordelen van personal training met de voordelen van groepstraining:</p>
+
+      <ul>
+        <li><strong>Persoonlijke aandacht</strong> in kleine groepen (4-8 personen)</li>
+        <li><strong>Professionele coaching</strong> elke sessie</li>
+        <li><strong>Community</strong> die je motiveert</li>
+        <li><strong>Betaalbaar</strong> – een fractie van de prijs van PT</li>
+        <li><strong>Geprogrammeerd</strong> – je hoeft niet zelf te bedenken wat je gaat doen</li>
+      </ul>
+
+      <br/>
+
+      <h2>Vergelijking kosten Alkmaar</h2>
+
+      <table>
+        <tr>
+          <td><strong>Personal Training</strong></td>
+          <td>€50-100 per sessie</td>
+          <td>€600-1200/maand (3x/week)</td>
+        </tr>
+        <tr>
+          <td><strong>CrossFit/Small Group</strong></td>
+          <td>€100-150 per maand</td>
+          <td>Onbeperkt trainen</td>
+        </tr>
+        <tr>
+          <td><strong>Budget sportschool</strong></td>
+          <td>€20-30 per maand</td>
+          <td>Geen begeleiding</td>
+        </tr>
+      </table>
+
+      <br/>
+
+      <h2>Wanneer is 1-op-1 PT wél nodig?</h2>
+      <p>Personal training kan de beste keuze zijn als:</p>
+
+      <ul>
+        <li>Je revalideert van een serieuze blessure</li>
+        <li>Je zeer specifieke doelen hebt (wedstrijdvoorbereiding)</li>
+        <li>Je écht niet in een groep wilt trainen</li>
+        <li>Je een flexibel budget hebt</li>
+      </ul>
+
+      <br/>
+
+      <h2>Onze aanpak bij CrossFit Alkmaar</h2>
+      <p>Wij bieden het beste van beide werelden:</p>
+
+      <p><strong>Groepslessen (max 12 personen)</strong><br/>
+      Elke les heeft een coach die rondloopt, corrigeert en motiveert. Je krijgt persoonlijke feedback in een groepssetting.</p>
+
+      <p><strong>Small Group Training - BUILD (max 6 personen)</strong><br/>
+      Voor wie meer persoonlijke aandacht wil. Vaste groep, vaste tijden, intensievere begeleiding.</p>
+
+      <p><strong>Personal Training</strong><br/>
+      Voor wie 1-op-1 wil trainen, bieden we ook personal training aan.</p>
+
+      <br/>
+
+      <h2>Probeer het zelf</h2>
+      <p>De beste manier om te ontdekken wat bij je past? Ervaar het. Plan een gratis intake en probeer een training. Geen verplichtingen, wel een eerlijk advies over wat voor jou werkt.</p>
+    `
   }
 };
 
