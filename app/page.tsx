@@ -17,7 +17,7 @@ export default function HomePage() {
         name="Jarrald - CrossFit Alkmaar Kickstart Ervaring"
         description="Jarrald deelt zijn ervaring met de 28 dagen kickstart bij CrossFit Alkmaar. Na lang sponsor te zijn geweest van sportscholen waar hij niet naartoe ging, is hij nu 20 kilo afgevallen."
         thumbnailUrl="https://img.youtube.com/vi/1qhbmRPtysU/maxresdefault.jpg"
-        uploadDate="2024-11-01"
+        uploadDate="2024-11-01T12:00:00+01:00"
         embedUrl="https://www.youtube.com/embed/1qhbmRPtysU"
         duration="PT1M30S"
       />
@@ -25,7 +25,7 @@ export default function HomePage() {
         name="Bert - 2 jaar lid CrossFit Alkmaar"
         description="Bert is al 2 jaar lid bij CrossFit Alkmaar en deelt waarom hij het zo leuk vindt om hier te trainen."
         thumbnailUrl="https://img.youtube.com/vi/a2zbZIlU27Y/maxresdefault.jpg"
-        uploadDate="2024-06-01"
+        uploadDate="2024-06-01T12:00:00+02:00"
         embedUrl="https://www.youtube.com/embed/a2zbZIlU27Y"
         duration="PT2M"
       />
