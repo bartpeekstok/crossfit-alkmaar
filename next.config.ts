@@ -43,6 +43,261 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+
+  // Redirects from old WordPress site
+  async redirects() {
+    return [
+      // Main program pages
+      {
+        source: "/programmas/28-day-kickstart",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/programmas/28-day-kickstart/",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/programmas/groepslessen",
+        destination: "/groepslessen",
+        permanent: true,
+      },
+      {
+        source: "/programmas/groepslessen/",
+        destination: "/groepslessen",
+        permanent: true,
+      },
+      {
+        source: "/programmas/personal-training",
+        destination: "/personal-training",
+        permanent: true,
+      },
+      {
+        source: "/programmas/personal-training/",
+        destination: "/personal-training",
+        permanent: true,
+      },
+      {
+        source: "/programmas/voedingsadvies",
+        destination: "/voedingsadvies",
+        permanent: true,
+      },
+      {
+        source: "/programmas/voedingsadvies/",
+        destination: "/voedingsadvies",
+        permanent: true,
+      },
+      // Small group
+      {
+        source: "/small-group",
+        destination: "/small-group-training",
+        permanent: true,
+      },
+      {
+        source: "/small-group/",
+        destination: "/small-group-training",
+        permanent: true,
+      },
+      // Old blog categories to new blog
+      {
+        source: "/dit-is-cfa/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/training/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/gym-news/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/gezond-eten/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/gezondheid/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/succesverhalen/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/blessurepreventie/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/uncategorized/:slug*",
+        destination: "/blog",
+        permanent: true,
+      },
+      // Old blog pagination
+      {
+        source: "/blog/page/:num",
+        destination: "/blog",
+        permanent: true,
+      },
+      {
+        source: "/blog/page/:num/",
+        destination: "/blog",
+        permanent: true,
+      },
+      // Intake pages
+      {
+        source: "/intake",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/intake/",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/intake-geboekt",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/intake-geboekt/",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/meer-informatie-intake",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      {
+        source: "/meer-informatie-intake/",
+        destination: "/kickstart",
+        permanent: true,
+      },
+      // Other old pages
+      {
+        source: "/drop-in",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/drop-in/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/testimonials",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/testimonials/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/onze-leden-en-reviews",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/onze-leden-en-reviews/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/olympisch-gewichtheffen",
+        destination: "/groepslessen",
+        permanent: true,
+      },
+      {
+        source: "/olympisch-gewichtheffen/",
+        destination: "/groepslessen",
+        permanent: true,
+      },
+      {
+        source: "/krachtvoer-personal-training-yoga",
+        destination: "/personal-training",
+        permanent: true,
+      },
+      {
+        source: "/krachtvoer-personal-training-yoga/",
+        destination: "/personal-training",
+        permanent: true,
+      },
+      // Legal pages
+      {
+        source: "/algemene-voorwaarden",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/algemene-voorwaarden/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/disclaimer-privacyverklaring",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/disclaimer-privacyverklaring/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/cancellation",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/cancellation/",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/opzegging",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/opzegging/",
+        destination: "/",
+        permanent: true,
+      },
+      // Date archives
+      {
+        source: "/2024/:path*",
+        destination: "/blog",
+        permanent: true,
+      },
+      // WordPress artifacts
+      {
+        source: "/wp-content/:path*",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/embed",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/embed/",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
