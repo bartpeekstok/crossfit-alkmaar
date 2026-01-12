@@ -1752,7 +1752,7 @@ const blogPosts: { [key: string]: any } = {
         <li>Is de ventilatie vaak onvoldoende</li>
       </ul>
 
-      <p>Een ruime trainingsruimte (500m² of meer) betekent dat je comfortabel kunt bewegen, ook als er anderen trainen.</p>
+      <p>Een ruime trainingsruimte (zoals 900m²) betekent dat je comfortabel kunt bewegen, ook als er anderen trainen.</p>
 
       <br/>
 
