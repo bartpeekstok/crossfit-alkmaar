@@ -1988,7 +1988,7 @@ export default function BlogPostPage() {
             <div 
               className="prose prose-lg max-w-none
                 prose-headings:text-gray-900 prose-headings:font-bold
-                prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-10 prose-h2:mb-5 prose-h2:leading-tight
+                [&_h2]:!text-2xl [&_h2]:md:!text-3xl [&_h2]:!font-bold [&_h2]:!mt-10 [&_h2]:!mb-5 [&_h2]:!leading-tight [&_h2]:!text-gray-900
                 prose-p:text-gray-600 prose-p:leading-relaxed prose-p:mb-4
                 prose-ul:text-gray-600 prose-ul:mb-4
                 prose-li:mb-2
