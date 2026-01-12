@@ -168,6 +168,14 @@ export const blogPosts: { [key: string]: BlogPost } = {
     image: "https://images.unsplash.com/photo-1571388208497-71bedc66e932?w=1200&q=80",
     excerpt: "Personal training kost al snel €50-100 per sessie. Is dat de investering waard? En zijn er alternatieven die net zo effectief zijn?",
     content: ""
+  },
+  "de-juiste-sportschool-kiezen": {
+    title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
+    date: "17 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1200&q=80",
+    excerpt: "Niet elke sportschool is hetzelfde. Voor je een abonnement afsluit, stel jezelf deze 7 cruciale vragen. Het verschil tussen succes en afhaken zit in de details.",
+    content: ""
   }
 };
 

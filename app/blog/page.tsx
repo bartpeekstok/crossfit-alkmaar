@@ -8,6 +8,15 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 21,
+      slug: "de-juiste-sportschool-kiezen",
+      title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
+      excerpt: "Niet elke sportschool is hetzelfde. Voor je een abonnement afsluit, stel jezelf deze 7 cruciale vragen. Het verschil tussen succes en afhaken zit in de details.",
+      image: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=800&q=80",
+      date: "17 januari 2025",
+      category: "Tips"
+    },
+    {
       id: 20,
       slug: "personal-training-alkmaar",
       title: "Personal training in Alkmaar: is het de investering waard?",

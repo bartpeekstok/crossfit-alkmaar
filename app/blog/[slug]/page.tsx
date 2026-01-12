@@ -1665,6 +1665,150 @@ const blogPosts: { [key: string]: any } = {
       <p>Plan een gratis intake bij CrossFit Alkmaar. We bespreken je doelen, eventuele beperkingen, en laten zien hoe we je kunnen helpen sterker te worden – op élke leeftijd.</p>
     `
   },
+  "de-juiste-sportschool-kiezen": {
+    title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
+    date: "17 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1200&q=80",
+    content: `
+      <p class="lead">Niet elke sportschool is hetzelfde. Voor je een abonnement afsluit, stel jezelf deze 7 vragen. Het verschil tussen succes en afhaken zit vaak in de details.</p>
+
+      <br/>
+
+      <h2>1. Hoeveel mensen trainen er tegelijk?</h2>
+      <p>Dit is misschien wel de belangrijkste vraag die niemand stelt.</p>
+
+      <p>Bij grote budgetketens kunnen er 50-100 mensen tegelijk trainen. Je wacht op apparaten, hebt geen ruimte, en niemand let op je. Bij sommige CrossFit boxes zitten er 20+ mensen in een les.</p>
+
+      <p><strong>Waar je op moet letten:</strong></p>
+      <ul>
+        <li>Vraag naar het maximum aantal mensen per training</li>
+        <li>12 of minder is ideaal voor persoonlijke aandacht</li>
+        <li>Bezoek de sportschool op een druk moment om het zelf te ervaren</li>
+      </ul>
+
+      <p>Hoe meer mensen, hoe minder aandacht voor jou. Simpel.</p>
+
+      <br/>
+
+      <h2>2. Wie zijn de coaches en blijven ze?</h2>
+      <p>Een goede coach maakt het verschil tussen resultaat en blessures. Maar het gaat niet alleen om kwaliteit – ook om continuïteit.</p>
+
+      <p><strong>Red flags:</strong></p>
+      <ul>
+        <li>Steeds wisselende coaches die je naam niet kennen</li>
+        <li>Coaches die alleen een weekend-cursus hebben gevolgd</li>
+        <li>Geen mogelijkheid om met dezelfde coach te werken</li>
+      </ul>
+
+      <p><strong>Groene vlaggen:</strong></p>
+      <ul>
+        <li>Vaste coaches die je progressie volgen</li>
+        <li>Coaches met meerdere jaren ervaring en relevante certificeringen</li>
+        <li>Coaches die je naam, doelen en beperkingen kennen</li>
+      </ul>
+
+      <p>Als je elke week een andere coach hebt, moet je elke week opnieuw uitleggen wie je bent en wat je doelen zijn.</p>
+
+      <br/>
+
+      <h2>3. Is er een intake of kun je direct starten?</h2>
+      <p>Een sportschool die iedereen direct laat starten zonder gesprek, is vooral geïnteresseerd in je geld – niet in je resultaat.</p>
+
+      <p><strong>Een goede intake omvat:</strong></p>
+      <ul>
+        <li>Gesprek over je doelen en verwachtingen</li>
+        <li>Inventarisatie van eventuele blessures of beperkingen</li>
+        <li>Uitleg over hoe de trainingen werken</li>
+        <li>Kennismaking met de coaches en ruimte</li>
+      </ul>
+
+      <p>Een intake kost de sportschool tijd en geld. Als ze die investering doen, zijn ze serieus over je succes.</p>
+
+      <br/>
+
+      <h2>4. Wat gebeurt er na de eerste maand?</h2>
+      <p>Veel sportscholen focussen alleen op nieuwe leden binnenhalen. Maar wat gebeurt er als je lid bent?</p>
+
+      <p><strong>Vraag naar:</strong></p>
+      <ul>
+        <li>Zijn er periodieke check-ins met een coach?</li>
+        <li>Wordt je programma aangepast aan je progressie?</li>
+        <li>Is er ondersteuning als je vastloopt of motivatie verliest?</li>
+      </ul>
+
+      <p>De beste sportscholen hebben systemen om leden te blijven volgen. Een 90-dagen check-in bijvoorbeeld, waarin je met een coach je voortgang bespreekt.</p>
+
+      <br/>
+
+      <h2>5. Hoe groot is de trainingsruimte?</h2>
+      <p>Vierkante meters per lid zegt veel over de kwaliteit van je training.</p>
+
+      <p>In een kleine ruimte met veel mensen:</p>
+      <ul>
+        <li>Wacht je op apparatuur</li>
+        <li>Heb je geen ruimte voor vrije oefeningen</li>
+        <li>Voel je je bekeken en ongemakkelijk</li>
+        <li>Is de ventilatie vaak onvoldoende</li>
+      </ul>
+
+      <p>Een ruime trainingsruimte (500m² of meer) betekent dat je comfortabel kunt bewegen, ook als er anderen trainen.</p>
+
+      <br/>
+
+      <h2>6. Kun je oefeningen aanpassen?</h2>
+      <p>Geen twee lichamen zijn hetzelfde. Een goede sportschool past oefeningen aan op jouw niveau en eventuele beperkingen.</p>
+
+      <p><strong>Let op:</strong></p>
+      <ul>
+        <li>Worden oefeningen geschaald naar jouw niveau?</li>
+        <li>Is er begrip voor blessures of fysieke beperkingen?</li>
+        <li>Mag je op je eigen tempo werken?</li>
+      </ul>
+
+      <p>Als iedereen exact dezelfde workout moet doen zonder aanpassingen, is dat een waarschuwingssignaal.</p>
+
+      <br/>
+
+      <h2>7. Wat is de sfeer?</h2>
+      <p>Dit kun je alleen ervaren door er te zijn. Maar let op:</p>
+
+      <ul>
+        <li>Begroeten mensen elkaar?</li>
+        <li>Is er een community-gevoel of traint iedereen op zichzelf?</li>
+        <li>Voel je je welkom of bekeken?</li>
+        <li>Is het competitief of ondersteunend?</li>
+      </ul>
+
+      <p>De sfeer bepaalt of je blijft komen. Je kunt de beste apparatuur hebben, maar als de sfeer niet goed is, haak je af.</p>
+
+      <br/>
+
+      <h2>Bonus: Let op de kleine lettertjes</h2>
+      <p>Voor je tekent:</p>
+
+      <ul>
+        <li>Hoe lang is de contractduur?</li>
+        <li>Kun je pauzeren bij blessure of vakantie?</li>
+        <li>Wat is de opzegtermijn?</li>
+        <li>Zijn er verborgen kosten (inschrijfgeld, jaarlijkse bijdrage)?</li>
+      </ul>
+
+      <br/>
+
+      <h2>Het verschil zit in de details</h2>
+      <p>Een goedkope sportschool is niet goedkoop als je er niet naartoe gaat. En een duurdere sportschool is geen verspilling als je er daadwerkelijk resultaat behaalt.</p>
+
+      <p>De beste sportschool is de sportschool waar je blijft komen. Waar je gezien wordt. Waar je vooruitgang boekt.</p>
+
+      <br/>
+
+      <h2>Probeer het zelf</h2>
+      <p>Bij CrossFit Alkmaar kun je vrijblijvend langskomen voor een intake. We beantwoorden al je vragen, laten de ruimte zien, en je kunt kennismaken met onze coaches.</p>
+
+      <p>Geen verkooppraatje, wel een eerlijk gesprek over of we bij je passen.</p>
+    `
+  },
   "personal-training-alkmaar": {
     title: "Personal training in Alkmaar: is het de investering waard?",
     date: "16 januari 2025",

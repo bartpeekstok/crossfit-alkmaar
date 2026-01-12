@@ -66,6 +66,7 @@ export async function POST(request: NextRequest) {
 // GET endpoint to manually trigger indexing of all blog posts
 export async function GET() {
   const blogSlugs = [
+    "de-juiste-sportschool-kiezen",
     "personal-training-alkmaar",
     "fitness-voor-50-plussers",
     "sportschool-voor-beginners",
