@@ -1675,7 +1675,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>1. Hoeveel mensen trainen er tegelijk?</h2>
+      <h2>1. Groepsgrootte: verdwijn je in de massa?</h2>
       <p>Dit is misschien wel de belangrijkste vraag die niemand stelt.</p>
 
       <p>Bij grote budgetketens kunnen er 50-100 mensen tegelijk trainen. Je wacht op apparaten, hebt geen ruimte, en niemand let op je. Bij sommige CrossFit boxes zitten er 20+ mensen in een les.</p>
@@ -1691,7 +1691,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>2. Wie zijn de coaches en blijven ze?</h2>
+      <h2>2. Coaching: vaste gezichten of steeds iemand anders?</h2>
       <p>Een goede coach maakt het verschil tussen resultaat en blessures. Maar het gaat niet alleen om kwaliteit – ook om continuïteit.</p>
 
       <p><strong>Red flags:</strong></p>
@@ -1712,7 +1712,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>3. Is er een intake of kun je direct starten?</h2>
+      <h2>3. Intake: nemen ze de tijd voor jou?</h2>
       <p>Een sportschool die iedereen direct laat starten zonder gesprek, is vooral geïnteresseerd in je geld – niet in je resultaat.</p>
 
       <p><strong>Een goede intake omvat:</strong></p>
@@ -1727,7 +1727,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>4. Wat gebeurt er na de eerste maand?</h2>
+      <h2>4. Begeleiding: word je gevolgd of vergeten?</h2>
       <p>Veel sportscholen focussen alleen op nieuwe leden binnenhalen. Maar wat gebeurt er als je lid bent?</p>
 
       <p><strong>Vraag naar:</strong></p>
@@ -1741,7 +1741,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>5. Hoe groot is de trainingsruimte?</h2>
+      <h2>5. Ruimte: genoeg plek om te bewegen?</h2>
       <p>Vierkante meters per lid zegt veel over de kwaliteit van je training.</p>
 
       <p>In een kleine ruimte met veel mensen:</p>
@@ -1756,7 +1756,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>6. Kun je oefeningen aanpassen?</h2>
+      <h2>6. Schaalbaarheid: past de training bij jouw niveau?</h2>
       <p>Geen twee lichamen zijn hetzelfde. Een goede sportschool past oefeningen aan op jouw niveau en eventuele beperkingen.</p>
 
       <p><strong>Let op:</strong></p>
@@ -1770,7 +1770,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>7. Wat is de sfeer?</h2>
+      <h2>7. Sfeer: voel je je welkom of bekeken?</h2>
       <p>Dit kun je alleen ervaren door er te zijn. Maar let op:</p>
 
       <ul>
@@ -1784,7 +1784,7 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>Bonus: Let op de kleine lettertjes</h2>
+      <h2>Bonus: de kleine lettertjes – wat staat er in je contract?</h2>
       <p>Voor je tekent:</p>
 
       <ul>
@@ -1796,14 +1796,14 @@ const blogPosts: { [key: string]: any } = {
 
       <br/>
 
-      <h2>Het verschil zit in de details</h2>
+      <h2>Conclusie: goedkoop is duurkoop</h2>
       <p>Een goedkope sportschool is niet goedkoop als je er niet naartoe gaat. En een duurdere sportschool is geen verspilling als je er daadwerkelijk resultaat behaalt.</p>
 
       <p>De beste sportschool is de sportschool waar je blijft komen. Waar je gezien wordt. Waar je vooruitgang boekt.</p>
 
       <br/>
 
-      <h2>Probeer het zelf</h2>
+      <h2>Zelf ervaren? Plan een gratis intake</h2>
       <p>Bij CrossFit Alkmaar kun je vrijblijvend langskomen voor een intake. We beantwoorden al je vragen, laten de ruimte zien, en je kunt kennismaken met onze coaches.</p>
 
       <p>Geen verkooppraatje, wel een eerlijk gesprek over of we bij je passen.</p>
