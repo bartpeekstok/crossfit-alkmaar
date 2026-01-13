@@ -5,6 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts = [
+    "groepslessen-vs-alleen-trainen",
+    "eerste-keer-crossfit",
+    "spiermassa-opbouwen",
     "de-juiste-sportschool-kiezen",
     "personal-training-alkmaar",
     "fitness-voor-50-plussers",

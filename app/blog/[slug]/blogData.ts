@@ -176,6 +176,30 @@ export const blogPosts: { [key: string]: BlogPost } = {
     image: "https://images.unsplash.com/photo-1558611848-73f7eb4001a1?w=1200&q=80",
     excerpt: "Niet elke sportschool is hetzelfde. Voor je een abonnement afsluit, stel jezelf deze 7 cruciale vragen. Het verschil tussen succes en afhaken zit in de details.",
     content: ""
+  },
+  "spiermassa-opbouwen": {
+    title: "Spiermassa opbouwen: de complete gids",
+    date: "18 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80",
+    excerpt: "Of je nu wilt afvallen, sterker worden of gewoon fitter – spiermassa is de sleutel. Leer hoe je effectief spieren opbouwt.",
+    content: ""
+  },
+  "eerste-keer-crossfit": {
+    title: "Je eerste keer CrossFit: dit kun je verwachten",
+    date: "19 januari 2025",
+    category: "CrossFit",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+    excerpt: "Je hebt je aangemeld voor je eerste CrossFit training. Wat kun je verwachten? Is het echt zo zwaar als het lijkt?",
+    content: ""
+  },
+  "groepslessen-vs-alleen-trainen": {
+    title: "Groepslessen vs. alleen trainen: wat werkt beter?",
+    date: "20 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80",
+    excerpt: "Sommige mensen zweren bij alleen trainen. Anderen kunnen niet zonder hun groepsles. Wat werkt beter? De wetenschap geeft antwoord.",
+    content: ""
   }
 };
 

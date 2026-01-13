@@ -1665,6 +1665,339 @@ const blogPosts: { [key: string]: any } = {
       <p>Plan een gratis intake bij CrossFit Alkmaar. We bespreken je doelen, eventuele beperkingen, en laten zien hoe we je kunnen helpen sterker te worden – op élke leeftijd.</p>
     `
   },
+  "spiermassa-opbouwen": {
+    title: "Spiermassa opbouwen: de complete gids",
+    date: "18 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=1200&q=80",
+    content: `
+      <p class="lead">Of je nu wilt afvallen, sterker worden of gewoon fitter – spiermassa is de sleutel. Maar hoe bouw je effectief spieren op zonder eindeloos in de sportschool te staan?</p>
+
+      <br/>
+
+      <h2>1. Waarom spiermassa belangrijk is</h2>
+      <p>Spieren zijn niet alleen voor bodybuilders. Ze zijn essentieel voor iedereen:</p>
+
+      <ul>
+        <li><strong>Hogere stofwisseling</strong> – Spieren verbranden meer calorieën, zelfs in rust</li>
+        <li><strong>Betere houding</strong> – Sterke spieren ondersteunen je gewrichten</li>
+        <li><strong>Meer energie</strong> – Dagelijkse taken worden makkelijker</li>
+        <li><strong>Langer zelfstandig</strong> – Behoud je mobiliteit op latere leeftijd</li>
+      </ul>
+
+      <br/>
+
+      <h2>2. De basis: progressieve overload</h2>
+      <p>Je spieren groeien alleen als je ze uitdaagt. Dit heet progressieve overload.</p>
+
+      <p><strong>Hoe pas je dit toe?</strong></p>
+      <ul>
+        <li>Verhoog geleidelijk het gewicht</li>
+        <li>Doe meer herhalingen met hetzelfde gewicht</li>
+        <li>Voeg extra sets toe</li>
+        <li>Verkort je rust tussen sets</li>
+      </ul>
+
+      <p>Het hoeft niet elke training, maar over tijd moet de belasting toenemen.</p>
+
+      <br/>
+
+      <h2>3. Train de juiste oefeningen</h2>
+      <p>Niet alle oefeningen zijn gelijk. Focus op compound oefeningen die meerdere spiergroepen tegelijk trainen:</p>
+
+      <ul>
+        <li><strong>Squat</strong> – Benen, billen, core</li>
+        <li><strong>Deadlift</strong> – Rug, benen, grip</li>
+        <li><strong>Bench press / Push-ups</strong> – Borst, schouders, triceps</li>
+        <li><strong>Pull-ups / Rows</strong> – Rug, biceps</li>
+        <li><strong>Overhead press</strong> – Schouders, triceps, core</li>
+      </ul>
+
+      <p>Deze oefeningen geven je de meeste resultaten per minuut training.</p>
+
+      <br/>
+
+      <h2>4. Voeding: de bouwstenen</h2>
+      <p>Je kunt niet bouwen zonder materiaal. Voor spiergroei heb je nodig:</p>
+
+      <p><strong>Eiwit</strong><br/>
+      Streef naar 1.6-2.2 gram per kilo lichaamsgewicht. Voor iemand van 75 kg is dat 120-165 gram per dag.</p>
+
+      <p><strong>Voldoende calorieën</strong><br/>
+      Je lichaam heeft energie nodig om spieren te bouwen. Eet voldoende – in een calorietekort bouw je nauwelijks spieren op.</p>
+
+      <p><strong>Goede bronnen:</strong></p>
+      <ul>
+        <li>Kip, vis, vlees</li>
+        <li>Eieren</li>
+        <li>Zuivel (kwark, yoghurt)</li>
+        <li>Peulvruchten</li>
+        <li>Tofu, tempeh</li>
+      </ul>
+
+      <br/>
+
+      <h2>5. Herstel: wanneer de groei gebeurt</h2>
+      <p>Spieren groeien niet tijdens de training, maar tijdens het herstel.</p>
+
+      <ul>
+        <li><strong>Slaap</strong> – 7-9 uur per nacht. Dit is wanneer je lichaam repareert en bouwt.</li>
+        <li><strong>Rust</strong> – Geef spiergroepen 48-72 uur rust voor je ze weer traint.</li>
+        <li><strong>Stress</strong> – Chronische stress verhoogt cortisol, wat spiergroei remt.</li>
+      </ul>
+
+      <br/>
+
+      <h2>6. Veelgemaakte fouten</h2>
+
+      <p><strong>Te veel isolatie-oefeningen</strong><br/>
+      Bicep curls zijn leuk, maar compound oefeningen bouwen meer totale spiermassa.</p>
+
+      <p><strong>Te weinig eten</strong><br/>
+      Veel mensen willen "droog" spiermassa opbouwen maar eten te weinig. Resultaat: geen groei.</p>
+
+      <p><strong>Geen progressie bijhouden</strong><br/>
+      Als je niet weet wat je vorige week deed, weet je niet of je vooruit gaat.</p>
+
+      <p><strong>Te veel variatie</strong><br/>
+      Elke week andere oefeningen betekent dat je nergens echt sterker in wordt.</p>
+
+      <br/>
+
+      <h2>7. Hoe lang duurt het?</h2>
+      <p>Eerlijke verwachtingen:</p>
+
+      <ul>
+        <li><strong>Beginners</strong> – 0.5-1 kg spiermassa per maand (eerste jaar)</li>
+        <li><strong>Gevorderden</strong> – 0.25-0.5 kg per maand</li>
+        <li><strong>Gevorderden</strong> – 0.1-0.25 kg per maand</li>
+      </ul>
+
+      <p>Dit klinkt misschien weinig, maar 5-10 kg pure spiermassa in een jaar maakt een enorm verschil.</p>
+
+      <br/>
+
+      <h2>Start met begeleiding</h2>
+      <p>Spiermassa opbouwen is simpel in theorie, maar de uitvoering maakt het verschil. Met de juiste techniek en een goed programma bereik je sneller resultaat – en zonder blessures.</p>
+
+      <p>Bij CrossFit Alkmaar krijg je professionele coaching in kleine groepen. We leren je de juiste technieken en zorgen voor een programma dat werkt.</p>
+    `
+  },
+  "eerste-keer-crossfit": {
+    title: "Je eerste keer CrossFit: dit kun je verwachten",
+    date: "19 januari 2025",
+    category: "CrossFit",
+    image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200&q=80",
+    content: `
+      <p class="lead">Je hebt je aangemeld voor je eerste CrossFit training. En nu? Wat kun je verwachten? Is het echt zo zwaar als het lijkt? Hier is precies wat je te wachten staat.</p>
+
+      <br/>
+
+      <h2>1. Voor je eerste training</h2>
+      <p>De meeste goede CrossFit boxes beginnen met een intake of fundamentals-sessie. Dit is geen keiharde workout – het is een kennismaking.</p>
+
+      <p><strong>Wat je kunt verwachten:</strong></p>
+      <ul>
+        <li>Gesprek over je doelen en eventuele beperkingen</li>
+        <li>Rondleiding door de ruimte</li>
+        <li>Uitleg over hoe de trainingen werken</li>
+        <li>Kennismaking met basisoefeningen</li>
+      </ul>
+
+      <p>Tip: Wees eerlijk over je fitnessniveau en eventuele blessures. Dit helpt de coaches om je goed te begeleiden.</p>
+
+      <br/>
+
+      <h2>2. Wat trek je aan?</h2>
+      <p>Geen speciale uitrusting nodig voor je eerste keer:</p>
+
+      <ul>
+        <li>Comfortabele sportkleding</li>
+        <li>Sportschoenen met platte zool (geen hardloopschoenen met dikke demping)</li>
+        <li>Handdoek</li>
+        <li>Fles water</li>
+      </ul>
+
+      <p>Later kun je eventueel investeren in specifieke CrossFit schoenen, maar dat is absoluut niet nodig om te beginnen.</p>
+
+      <br/>
+
+      <h2>3. De opbouw van een training</h2>
+      <p>Een typische CrossFit training duurt 60 minuten en bestaat uit:</p>
+
+      <p><strong>Warming-up (10-15 min)</strong><br/>
+      Lichte cardio en mobiliteit om je lichaam voor te bereiden.</p>
+
+      <p><strong>Skill/Strength (15-20 min)</strong><br/>
+      Techniek oefenen of kracht opbouwen. Hier leer je nieuwe bewegingen of werk je aan het verbeteren van bestaande.</p>
+
+      <p><strong>WOD (15-25 min)</strong><br/>
+      De Workout of the Day. Dit is het intensieve deel – maar altijd aangepast aan jouw niveau.</p>
+
+      <p><strong>Cooling down (5 min)</strong><br/>
+      Stretchen en ademhaling.</p>
+
+      <br/>
+
+      <h2>4. "Maar ik ben niet fit genoeg"</h2>
+      <p>Dit horen we vaak. Het antwoord: niemand is "fit genoeg" voor CrossFit als ze beginnen.</p>
+
+      <p>Elke oefening is schaalbaar. Kun je geen pull-up? Dan doe je ring rows. Kun je niet hardlopen? Dan fiets je. Te zwaar gewicht? Dan ga je lichter.</p>
+
+      <p>De coaches passen de training aan op jouw niveau – niet andersom.</p>
+
+      <br/>
+
+      <h2>5. Wat als ik de groep ophoud?</h2>
+      <p>Dit gebeurt niet. Iedereen werkt in zijn eigen tempo.</p>
+
+      <p>De groep is er om je te motiveren, niet om je af te rekenen. Je zult merken dat mensen je aanmoedigen – vooral als je het zwaar hebt.</p>
+
+      <p>Dit is het verschil met een normale sportschool: bij CrossFit is niemand bezig met hoe jij eruitziet of hoe hard jij gaat. Ze zijn bezig met hun eigen training.</p>
+
+      <br/>
+
+      <h2>6. De dagen erna</h2>
+      <p>Eerlijk? Je gaat spierpijn hebben. Vooral na je eerste training.</p>
+
+      <p>Dit is normaal. Je hebt spieren gebruikt die je waarschijnlijk lang niet (of nooit) zo hebt belast.</p>
+
+      <p><strong>Tips voor herstel:</strong></p>
+      <ul>
+        <li>Blijf licht bewegen (wandelen helpt)</li>
+        <li>Drink veel water</li>
+        <li>Eet voldoende eiwitten</li>
+        <li>Slaap goed</li>
+      </ul>
+
+      <p>Na 2-3 weken went je lichaam en wordt de spierpijn veel minder.</p>
+
+      <br/>
+
+      <h2>7. Wanneer zie je resultaat?</h2>
+      <p>Dit verschilt per persoon, maar de meeste mensen merken:</p>
+
+      <ul>
+        <li><strong>Week 1-2:</strong> Meer energie, beter slapen</li>
+        <li><strong>Week 3-4:</strong> Oefeningen worden makkelijker</li>
+        <li><strong>Maand 2-3:</strong> Zichtbare veranderingen in lichaam</li>
+        <li><strong>Maand 3+:</strong> Significante kracht- en conditiewinst</li>
+      </ul>
+
+      <br/>
+
+      <h2>Zelf ervaren?</h2>
+      <p>De beste manier om te weten of CrossFit iets voor jou is? Probeer het.</p>
+
+      <p>Bij CrossFit Alkmaar beginnen we met een gratis intake. Geen druk, geen verplichtingen – gewoon een kennismaking om te zien of het bij je past.</p>
+    `
+  },
+  "groepslessen-vs-alleen-trainen": {
+    title: "Groepslessen vs. alleen trainen: wat werkt beter?",
+    date: "20 januari 2025",
+    category: "Training",
+    image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80",
+    content: `
+      <p class="lead">Sommige mensen zweren bij alleen trainen. Anderen kunnen niet zonder hun groepsles. Wat werkt nu eigenlijk beter? De wetenschap geeft een duidelijk antwoord.</p>
+
+      <br/>
+
+      <h2>1. De feiten over volhouden</h2>
+      <p>Het grootste probleem met fitness is niet starten – het is volhouden.</p>
+
+      <p><strong>De cijfers:</strong></p>
+      <ul>
+        <li>80% van de mensen die alleen trainen, stopt binnen 6 maanden</li>
+        <li>Bij groepstraining is dit 50%</li>
+        <li>Bij groepstraining met community is dit minder dan 30%</li>
+      </ul>
+
+      <p>Alleen dit gegeven zou genoeg moeten zijn om de keuze te maken.</p>
+
+      <br/>
+
+      <h2>2. Waarom groepslessen werken</h2>
+
+      <p><strong>Accountability</strong><br/>
+      Als je alleen traint, is het makkelijk om af te zeggen. Je stelt alleen jezelf teleur. Bij een groepsles weten mensen dat je zou komen. Die sociale druk werkt.</p>
+
+      <p><strong>Structuur</strong><br/>
+      Je hoeft niet na te denken over wat je gaat doen. Er is een coach die het programma heeft gemaakt. Jij hoeft alleen maar op te komen dagen.</p>
+
+      <p><strong>Motivatie door anderen</strong><br/>
+      Zie je iemand naast je doorzetten? Dan zet jij ook door. Dit heet het "Köhler effect" – je presteert beter in een groep dan alleen.</p>
+
+      <p><strong>Sociale connectie</strong><br/>
+      Je leert mensen kennen. Je hebt het ergens over na de training. Die connectie maakt dat je terugkomt – ook op dagen dat je geen zin hebt.</p>
+
+      <br/>
+
+      <h2>3. Wanneer alleen trainen wél werkt</h2>
+      <p>Er zijn situaties waarin alleen trainen prima kan werken:</p>
+
+      <ul>
+        <li>Je hebt al jaren ervaring en discipline opgebouwd</li>
+        <li>Je hebt een specifiek doel dat individuele training vereist</li>
+        <li>Je schema maakt groepslessen onmogelijk</li>
+        <li>Je bent heel introvert en haalt energie uit alleen zijn</li>
+      </ul>
+
+      <p>Maar wees eerlijk: voor de meeste mensen is discipline alleen niet genoeg.</p>
+
+      <br/>
+
+      <h2>4. Het probleem met grote sportscholen</h2>
+      <p>Grote sportscholen zijn goedkoop. Maar ze zijn ontworpen om geld te verdienen aan mensen die niet komen.</p>
+
+      <p>Denk erover na: als iedereen met een abonnement zou komen, zou de sportschool overvol zijn. Het businessmodel is gebaseerd op niet-komen.</p>
+
+      <p>Er is geen coach die vraagt waar je bent als je een week overslaat. Niemand kent je naam. Niemand merkt het als je stopt.</p>
+
+      <br/>
+
+      <h2>5. Het beste van beide werelden</h2>
+      <p>De ideale situatie combineert:</p>
+
+      <ul>
+        <li><strong>Groepslessen</strong> voor structuur en motivatie</li>
+        <li><strong>Kleine groepen</strong> voor persoonlijke aandacht</li>
+        <li><strong>Vaste coaches</strong> die je kennen en je voortgang volgen</li>
+        <li><strong>Community</strong> die je mist als je er niet bent</li>
+      </ul>
+
+      <p>Dit is precies waarom CrossFit zo effectief is. Je krijgt de intensiteit en structuur van een groepsles, met de persoonlijke aandacht van een kleine groep.</p>
+
+      <br/>
+
+      <h2>6. Wat past bij jou?</h2>
+      <p>Stel jezelf deze vragen:</p>
+
+      <ul>
+        <li>Heb je in het verleden moeite gehad met volhouden?</li>
+        <li>Heb je structuur nodig of maak je makkelijk je eigen planning?</li>
+        <li>Vind je het fijn om anderen om je heen te hebben?</li>
+        <li>Weet je wat je moet doen in de sportschool?</li>
+      </ul>
+
+      <p>Als je bij twee of meer vragen twijfelt, is een groepsles waarschijnlijk de betere keuze.</p>
+
+      <br/>
+
+      <h2>7. De investering</h2>
+      <p>Ja, groepslessen zijn duurder dan een budget-sportschoolabonnement.</p>
+
+      <p>Maar wat kost het je als je na 3 maanden stopt? Je hebt betaald voor iets dat geen resultaat heeft opgeleverd.</p>
+
+      <p>De vraag is niet "wat kost het?" maar "wat levert het op?"</p>
+
+      <br/>
+
+      <h2>Probeer het uit</h2>
+      <p>De beste manier om te weten of groepstraining iets voor jou is? Ervaar het zelf.</p>
+
+      <p>Bij CrossFit Alkmaar trainen we in kleine groepen van maximaal 12 personen. Professionele coaching, sterke community, en een programma dat werkt.</p>
+    `
+  },
   "de-juiste-sportschool-kiezen": {
     title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
     date: "17 januari 2025",

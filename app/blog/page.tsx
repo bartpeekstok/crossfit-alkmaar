@@ -8,6 +8,33 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 24,
+      slug: "groepslessen-vs-alleen-trainen",
+      title: "Groepslessen vs. alleen trainen: wat werkt beter?",
+      excerpt: "Sommige mensen zweren bij alleen trainen. Anderen kunnen niet zonder hun groepsles. Wat werkt beter? De wetenschap geeft antwoord.",
+      image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=800&q=80",
+      date: "20 januari 2025",
+      category: "Training"
+    },
+    {
+      id: 23,
+      slug: "eerste-keer-crossfit",
+      title: "Je eerste keer CrossFit: dit kun je verwachten",
+      excerpt: "Je hebt je aangemeld voor je eerste CrossFit training. Wat kun je verwachten? Is het echt zo zwaar als het lijkt?",
+      image: "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=800&q=80",
+      date: "19 januari 2025",
+      category: "CrossFit"
+    },
+    {
+      id: 22,
+      slug: "spiermassa-opbouwen",
+      title: "Spiermassa opbouwen: de complete gids",
+      excerpt: "Of je nu wilt afvallen, sterker worden of gewoon fitter – spiermassa is de sleutel. Leer hoe je effectief spieren opbouwt.",
+      image: "https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=800&q=80",
+      date: "18 januari 2025",
+      category: "Training"
+    },
+    {
       id: 21,
       slug: "de-juiste-sportschool-kiezen",
       title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
