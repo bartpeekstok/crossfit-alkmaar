@@ -41,25 +41,21 @@ function getUpcomingKickstarts(): KickstartEvent[] {
   const today = new Date();
   today.setHours(0, 0, 0, 0);
 
-  // Bereken dagen sinds referentie
-  const diffTime = today.getTime() - REFERENCE_KICKSTART.getTime();
-  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
-
-  // Bereken hoeveel complete cycli zijn verstreken
-  const completedCycles = Math.floor(diffDays / CYCLE_DAYS);
-
-  // Eerstvolgende Kickstart
+  // Start vanaf referentiedatum en zoek de eerstvolgende kickstart
   let nextKickstart = new Date(REFERENCE_KICKSTART);
-  nextKickstart.setDate(REFERENCE_KICKSTART.getDate() + (completedCycles + 1) * CYCLE_DAYS);
 
-  // Als vandaag een startdatum is, pak de volgende
-  if (nextKickstart.getTime() === today.getTime()) {
+  // Als referentiedatum in de toekomst ligt, gebruik die
+  // Anders, zoek de eerstvolgende datum na vandaag
+  while (nextKickstart < today) {
     nextKickstart.setDate(nextKickstart.getDate() + CYCLE_DAYS);
   }
 
+  // Als vandaag een startdatum is, toon die nog (verdwijnt pas na de startdatum)
+  // Dus geen aanpassing nodig hier
+
   // Tweede Kickstart
   const secondKickstart = new Date(nextKickstart);
-  secondKickstart.setDate(nextKickstart.getDate() + CYCLE_DAYS);
+  secondKickstart.setDate(secondKickstart.getDate() + CYCLE_DAYS);
 
   const events: KickstartEvent[] = [];
 
