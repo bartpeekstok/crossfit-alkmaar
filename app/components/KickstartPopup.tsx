@@ -19,8 +19,8 @@ function getUpcomingKickstarts(): KickstartEvent[] {
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  // Vaste referentie: maandag 12 januari 2025
-  const refDate = new Date(2025, 0, 12);
+  // Vaste referentie: maandag 12 januari 2026
+  const refDate = new Date(2026, 0, 12);
 
   // Zoek eerstvolgende kickstart maandag
   let nextDate = new Date(refDate);
