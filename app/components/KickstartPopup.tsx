@@ -8,76 +8,56 @@ import { useKickstartFormPopup } from './KickstartFormPopupContext';
 // Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
 let popupShownThisPageLoad = false;
 
-// Referentiedatum: 12 januari 2025 was een Kickstart startdatum (maandag)
-// Gebruik UTC om tijdzone-problemen te voorkomen
-const REFERENCE_KICKSTART = Date.UTC(2025, 0, 12); // 12 jan 2025 in UTC milliseconds
-const CYCLE_DAYS = 14; // Elke 2 weken
-const DAY_MS = 24 * 60 * 60 * 1000;
-
 interface KickstartEvent {
   datum: string;
-  date: Date;
   plekkenVrij: number | 'vol';
 }
 
-// Bereken plekken vrij op basis van dagen tot start
-function getPlekkenVrij(daysUntilStart: number): number | 'vol' {
-  if (daysUntilStart < 2) return 'vol';      // 2 dagen voor start: VOL
-  if (daysUntilStart < 7) return 1;           // 1 week voor start: 1 plek
-  if (daysUntilStart < 14) return 2;          // 2 weken voor start: 2 plekken
-  if (daysUntilStart < 21) return 3;          // 3 weken voor start: 3 plekken
-  return 5;                                    // 4+ weken voor start: 5 plekken
-}
-
-// Formatteer datum naar Nederlandse notatie (UTC)
-function formatDateNL(date: Date): string {
-  const months = [
-    'januari', 'februari', 'maart', 'april', 'mei', 'juni',
-    'juli', 'augustus', 'september', 'oktober', 'november', 'december'
-  ];
-  return `${date.getUTCDate()} ${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
-}
-
-// Bereken de eerstvolgende 2 Kickstart datums
+// Kickstarts starten elke 2 weken op maandag
+// Referentie: 12 januari 2025 was een maandag
 function getUpcomingKickstarts(): KickstartEvent[] {
-  // Vandaag om middernacht UTC
   const now = new Date();
-  const todayUTC = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  // Start vanaf referentiedatum en zoek de eerstvolgende kickstart
-  let nextKickstartUTC = REFERENCE_KICKSTART;
+  // Vaste referentie: maandag 12 januari 2025
+  const refDate = new Date(2025, 0, 12);
 
-  // Als referentiedatum in het verleden ligt, zoek de eerstvolgende datum
-  while (nextKickstartUTC < todayUTC) {
-    nextKickstartUTC += CYCLE_DAYS * DAY_MS;
+  // Zoek eerstvolgende kickstart maandag
+  let nextDate = new Date(refDate);
+  while (nextDate <= today) {
+    nextDate.setDate(nextDate.getDate() + 14);
   }
 
-  // Tweede Kickstart
-  const secondKickstartUTC = nextKickstartUTC + CYCLE_DAYS * DAY_MS;
+  // Tweede kickstart
+  const secondDate = new Date(nextDate);
+  secondDate.setDate(secondDate.getDate() + 14);
 
-  // Converteer UTC timestamps naar lokale Date objecten voor weergave
-  const nextKickstart = new Date(nextKickstartUTC);
-  const secondKickstart = new Date(secondKickstartUTC);
+  // Bereken dagen tot elke kickstart
+  const msPerDay = 1000 * 60 * 60 * 24;
+  const daysToFirst = Math.round((nextDate.getTime() - today.getTime()) / msPerDay);
+  const daysToSecond = Math.round((secondDate.getTime() - today.getTime()) / msPerDay);
 
-  const events: KickstartEvent[] = [];
+  // Bepaal plekken vrij op basis van dagen
+  function getPlekken(days: number): number | 'vol' {
+    if (days < 2) return 'vol';
+    if (days < 7) return 1;
+    if (days < 14) return 2;
+    if (days < 21) return 3;
+    return 5;
+  }
 
-  // Eerste event - bereken dagen in UTC
-  const daysUntilFirst = Math.floor((nextKickstartUTC - todayUTC) / DAY_MS);
-  events.push({
-    datum: formatDateNL(nextKickstart),
-    date: nextKickstart,
-    plekkenVrij: getPlekkenVrij(daysUntilFirst)
-  });
+  // Format datum
+  const months = ['januari', 'februari', 'maart', 'april', 'mei', 'juni',
+                  'juli', 'augustus', 'september', 'oktober', 'november', 'december'];
 
-  // Tweede event
-  const daysUntilSecond = Math.floor((secondKickstartUTC - todayUTC) / DAY_MS);
-  events.push({
-    datum: formatDateNL(secondKickstart),
-    date: secondKickstart,
-    plekkenVrij: getPlekkenVrij(daysUntilSecond)
-  });
+  function formatDate(d: Date): string {
+    return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
+  }
 
-  return events;
+  return [
+    { datum: formatDate(nextDate), plekkenVrij: getPlekken(daysToFirst) },
+    { datum: formatDate(secondDate), plekkenVrij: getPlekken(daysToSecond) }
+  ];
 }
 
 export default function KickstartPopup() {
