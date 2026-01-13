@@ -8,11 +8,78 @@ import { useKickstartFormPopup } from './KickstartFormPopupContext';
 // Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
 let popupShownThisPageLoad = false;
 
+// Referentiedatum: 12 januari 2025 was een Kickstart startdatum
+const REFERENCE_KICKSTART = new Date(2025, 0, 12); // 12 jan 2025
+const CYCLE_DAYS = 14; // Elke 2 weken
+
 interface KickstartEvent {
   datum: string;
-  tijd: string;
-  aantal: number;
-  vrijePlekken: number;
+  date: Date;
+  plekkenVrij: number | 'vol';
+}
+
+// Bereken plekken vrij op basis van dagen tot start
+function getPlekkenVrij(daysUntilStart: number): number | 'vol' {
+  if (daysUntilStart < 2) return 'vol';      // 2 dagen voor start: VOL
+  if (daysUntilStart < 7) return 1;           // 1 week voor start: 1 plek
+  if (daysUntilStart < 14) return 2;          // 2 weken voor start: 2 plekken
+  if (daysUntilStart < 21) return 3;          // 3 weken voor start: 3 plekken
+  return 5;                                    // 4+ weken voor start: 5 plekken
+}
+
+// Formatteer datum naar Nederlandse notatie
+function formatDateNL(date: Date): string {
+  const months = [
+    'januari', 'februari', 'maart', 'april', 'mei', 'juni',
+    'juli', 'augustus', 'september', 'oktober', 'november', 'december'
+  ];
+  return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+}
+
+// Bereken de eerstvolgende 2 Kickstart datums
+function getUpcomingKickstarts(): KickstartEvent[] {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+
+  // Bereken dagen sinds referentie
+  const diffTime = today.getTime() - REFERENCE_KICKSTART.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+
+  // Bereken hoeveel complete cycli zijn verstreken
+  const completedCycles = Math.floor(diffDays / CYCLE_DAYS);
+
+  // Eerstvolgende Kickstart
+  let nextKickstart = new Date(REFERENCE_KICKSTART);
+  nextKickstart.setDate(REFERENCE_KICKSTART.getDate() + (completedCycles + 1) * CYCLE_DAYS);
+
+  // Als vandaag een startdatum is, pak de volgende
+  if (nextKickstart.getTime() === today.getTime()) {
+    nextKickstart.setDate(nextKickstart.getDate() + CYCLE_DAYS);
+  }
+
+  // Tweede Kickstart
+  const secondKickstart = new Date(nextKickstart);
+  secondKickstart.setDate(nextKickstart.getDate() + CYCLE_DAYS);
+
+  const events: KickstartEvent[] = [];
+
+  // Eerste event
+  const daysUntilFirst = Math.floor((nextKickstart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  events.push({
+    datum: formatDateNL(nextKickstart),
+    date: nextKickstart,
+    plekkenVrij: getPlekkenVrij(daysUntilFirst)
+  });
+
+  // Tweede event
+  const daysUntilSecond = Math.floor((secondKickstart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  events.push({
+    datum: formatDateNL(secondKickstart),
+    date: secondKickstart,
+    plekkenVrij: getPlekkenVrij(daysUntilSecond)
+  });
+
+  return events;
 }
 
 export default function KickstartPopup() {
@@ -20,12 +87,13 @@ export default function KickstartPopup() {
   const { openPopup: openKickstartFormPopup } = useKickstartFormPopup();
   const pathname = usePathname();
   const [events, setEvents] = useState<KickstartEvent[]>([]);
-  const [loading, setLoading] = useState(true);
   const [dataReady, setDataReady] = useState(false);
 
-  // Fetch data bij laden
+  // Bereken data bij laden
   useEffect(() => {
-    fetchKickstartData();
+    const kickstarts = getUpcomingKickstarts();
+    setEvents(kickstarts);
+    setDataReady(true);
   }, []);
 
   // Auto-open na 5 seconden
@@ -33,10 +101,10 @@ export default function KickstartPopup() {
     if (typeof window === 'undefined') return;
     if (!dataReady) return;
     if (events.length === 0) return;
-    
+
     // Niet tonen op faq en free-intro pagina's
     if (pathname === '/faq' || pathname === '/free-intro') return;
-    
+
     // Niet opnieuw tonen als al getoond is tijdens deze page load
     if (popupShownThisPageLoad) return;
 
@@ -47,102 +115,6 @@ export default function KickstartPopup() {
 
     return () => clearTimeout(timer);
   }, [openPopup, dataReady, events, pathname]);
-
-  const fetchKickstartData = async () => {
-    try {
-      const SHEET_ID = '1wGEcBMfrUPWWXNGubqpr_KmbIyxh4bMyJ33mnA4gXK4';
-      const SHEET_NAME = 'Overzicht';
-      
-      const url = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/gviz/tq?tqx=out:json&sheet=${SHEET_NAME}&range=A2:C8`;
-      
-      const response = await fetch(url);
-      const text = await response.text();
-      
-      const jsonString = text.substring(47, text.length - 2);
-      const json = JSON.parse(jsonString);
-      
-      if (!json.table || !json.table.rows) {
-        setLoading(false);
-        setDataReady(true);
-        return;
-      }
-
-      const today = new Date();
-      today.setHours(0, 0, 0, 0);
-
-      const kickstartEvents: KickstartEvent[] = [];
-
-      for (const row of json.table.rows) {
-        if (!row.c || !row.c[0] || !row.c[1] || !row.c[2]) continue;
-        
-        const datumFormatted = row.c[0].f || '';
-        const tijdFormatted = row.c[1].f || '';
-        const aantalRaw = row.c[2].v;
-        
-        const aantal = typeof aantalRaw === 'number' ? aantalRaw : parseInt(aantalRaw);
-        if (isNaN(aantal)) continue;
-        
-        if (!tijdFormatted.includes('20:00')) continue;
-        
-        let eventDate: Date;
-        const datumValue = row.c[0].v;
-        
-        if (typeof datumValue === 'string' && datumValue.startsWith('Date(')) {
-          const match = datumValue.match(/Date\((\d+),(\d+),(\d+)\)/);
-          if (match) {
-            eventDate = new Date(parseInt(match[1]), parseInt(match[2]), parseInt(match[3]));
-          } else {
-            continue;
-          }
-        } else {
-          eventDate = parseNLDate(datumFormatted);
-        }
-        
-        if (eventDate < today) continue;
-        
-        const vrijePlekken = Math.max(0, 6 - aantal);
-        
-        kickstartEvents.push({
-          datum: datumFormatted,
-          tijd: tijdFormatted,
-          aantal: aantal,
-          vrijePlekken: vrijePlekken
-        });
-      }
-
-      kickstartEvents.sort((a, b) => {
-        return parseNLDate(a.datum).getTime() - parseNLDate(b.datum).getTime();
-      });
-
-      setEvents(kickstartEvents.slice(0, 2));
-      setLoading(false);
-      setDataReady(true);
-      
-    } catch (error) {
-      console.error('Error fetching Kickstart data:', error);
-      setLoading(false);
-      setDataReady(true);
-    }
-  };
-
-  const parseNLDate = (dateStr: string): Date => {
-    const months: { [key: string]: number } = {
-      'januari': 0, 'februari': 1, 'maart': 2, 'april': 3,
-      'mei': 4, 'juni': 5, 'juli': 6, 'augustus': 7,
-      'september': 8, 'oktober': 9, 'november': 10, 'december': 11
-    };
-    
-    const parts = dateStr.toLowerCase().split(' ');
-    if (parts.length >= 3) {
-      const day = parseInt(parts[0]);
-      const month = months[parts[1]];
-      const year = parseInt(parts[2]);
-      if (!isNaN(day) && month !== undefined && !isNaN(year)) {
-        return new Date(year, month, day);
-      }
-    }
-    return new Date();
-  };
 
   const handleMeerInfoClick = () => {
     closePopup();
@@ -186,23 +158,8 @@ export default function KickstartPopup() {
 
         {/* Content */}
         <div className="p-6">
-          {/* Loading state */}
-          {loading && (
-            <div className="text-center py-8">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
-              <p className="text-gray-500 mt-2">Laden...</p>
-            </div>
-          )}
-
-          {/* Geen events */}
-          {!loading && events.length === 0 && (
-            <div className="text-center py-4 mb-4">
-              <p className="text-gray-600">Neem contact op voor de eerstvolgende startdatum.</p>
-            </div>
-          )}
-
           {/* Events lijst */}
-          {!loading && events.length > 0 && (
+          {events.length > 0 && (
             <div className="space-y-3 mb-6">
               {events.map((event, index) => (
                 <div
@@ -213,11 +170,15 @@ export default function KickstartPopup() {
                     <p className="font-medium text-gray-900">{event.datum}</p>
                   </div>
                   <div className="text-right">
-                    <p className={`font-semibold ${
-                      event.vrijePlekken <= 2 ? 'text-orange-500' : 'text-green-500'
-                    }`}>
-                      {event.vrijePlekken} {event.vrijePlekken === 1 ? 'plek' : 'plekken'} vrij
-                    </p>
+                    {event.plekkenVrij === 'vol' ? (
+                      <p className="font-semibold text-red-500">VOL</p>
+                    ) : (
+                      <p className={`font-semibold ${
+                        event.plekkenVrij <= 2 ? 'text-orange-500' : 'text-green-500'
+                      }`}>
+                        {event.plekkenVrij} {event.plekkenVrij === 1 ? 'plek' : 'plekken'} vrij
+                      </p>
+                    )}
                   </div>
                 </div>
               ))}
