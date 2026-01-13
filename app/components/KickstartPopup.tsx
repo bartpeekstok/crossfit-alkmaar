@@ -8,9 +8,11 @@ import { useKickstartFormPopup } from './KickstartFormPopupContext';
 // Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
 let popupShownThisPageLoad = false;
 
-// Referentiedatum: 26 januari 2025 is een Kickstart startdatum
-const REFERENCE_KICKSTART = new Date(2025, 0, 26); // 26 jan 2025
+// Referentiedatum: 12 januari 2025 was een Kickstart startdatum (maandag)
+// Gebruik UTC om tijdzone-problemen te voorkomen
+const REFERENCE_KICKSTART = Date.UTC(2025, 0, 12); // 12 jan 2025 in UTC milliseconds
 const CYCLE_DAYS = 14; // Elke 2 weken
+const DAY_MS = 24 * 60 * 60 * 1000;
 
 interface KickstartEvent {
   datum: string;
@@ -27,40 +29,40 @@ function getPlekkenVrij(daysUntilStart: number): number | 'vol' {
   return 5;                                    // 4+ weken voor start: 5 plekken
 }
 
-// Formatteer datum naar Nederlandse notatie
+// Formatteer datum naar Nederlandse notatie (UTC)
 function formatDateNL(date: Date): string {
   const months = [
     'januari', 'februari', 'maart', 'april', 'mei', 'juni',
     'juli', 'augustus', 'september', 'oktober', 'november', 'december'
   ];
-  return `${date.getDate()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+  return `${date.getUTCDate()} ${months[date.getUTCMonth()]} ${date.getUTCFullYear()}`;
 }
 
 // Bereken de eerstvolgende 2 Kickstart datums
 function getUpcomingKickstarts(): KickstartEvent[] {
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
+  // Vandaag om middernacht UTC
+  const now = new Date();
+  const todayUTC = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
 
   // Start vanaf referentiedatum en zoek de eerstvolgende kickstart
-  let nextKickstart = new Date(REFERENCE_KICKSTART.getTime());
-  nextKickstart.setHours(0, 0, 0, 0);
+  let nextKickstartUTC = REFERENCE_KICKSTART;
 
-  // Als referentiedatum in de toekomst ligt, gebruik die
-  // Anders, zoek de eerstvolgende datum na vandaag
-  while (nextKickstart < today) {
-    nextKickstart = new Date(nextKickstart.getTime() + CYCLE_DAYS * 24 * 60 * 60 * 1000);
+  // Als referentiedatum in het verleden ligt, zoek de eerstvolgende datum
+  while (nextKickstartUTC < todayUTC) {
+    nextKickstartUTC += CYCLE_DAYS * DAY_MS;
   }
 
-  // Als vandaag een startdatum is, toon die nog (verdwijnt pas na de startdatum)
-  // Dus geen aanpassing nodig hier
-
   // Tweede Kickstart
-  const secondKickstart = new Date(nextKickstart.getTime() + CYCLE_DAYS * 24 * 60 * 60 * 1000);
+  const secondKickstartUTC = nextKickstartUTC + CYCLE_DAYS * DAY_MS;
+
+  // Converteer UTC timestamps naar lokale Date objecten voor weergave
+  const nextKickstart = new Date(nextKickstartUTC);
+  const secondKickstart = new Date(secondKickstartUTC);
 
   const events: KickstartEvent[] = [];
 
-  // Eerste event
-  const daysUntilFirst = Math.floor((nextKickstart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  // Eerste event - bereken dagen in UTC
+  const daysUntilFirst = Math.floor((nextKickstartUTC - todayUTC) / DAY_MS);
   events.push({
     datum: formatDateNL(nextKickstart),
     date: nextKickstart,
@@ -68,7 +70,7 @@ function getUpcomingKickstarts(): KickstartEvent[] {
   });
 
   // Tweede event
-  const daysUntilSecond = Math.floor((secondKickstart.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+  const daysUntilSecond = Math.floor((secondKickstartUTC - todayUTC) / DAY_MS);
   events.push({
     datum: formatDateNL(secondKickstart),
     date: secondKickstart,
