@@ -8,8 +8,8 @@ import { useKickstartFormPopup } from './KickstartFormPopupContext';
 // Module-level variable - resets bij page refresh, blijft bestaan bij interne navigatie
 let popupShownThisPageLoad = false;
 
-// Referentiedatum: 12 januari 2025 was een Kickstart startdatum
-const REFERENCE_KICKSTART = new Date(2025, 0, 12); // 12 jan 2025
+// Referentiedatum: 26 januari 2025 is een Kickstart startdatum
+const REFERENCE_KICKSTART = new Date(2025, 0, 26); // 26 jan 2025
 const CYCLE_DAYS = 14; // Elke 2 weken
 
 interface KickstartEvent {
