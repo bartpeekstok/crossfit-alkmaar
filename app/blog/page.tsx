@@ -8,6 +8,33 @@ export default function BlogPage() {
 
   const blogPosts = [
     {
+      id: 27,
+      slug: "sporten-drukke-baan",
+      title: "Sporten met een drukke baan: zo maak je tijd",
+      excerpt: "Geen tijd om te sporten? Of is het een kwestie van prioriteiten? Zo maak je tijd voor beweging.",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80",
+      date: "23 januari 2025",
+      category: "Tips"
+    },
+    {
+      id: 26,
+      slug: "wat-is-crossfit",
+      title: "Wat is CrossFit? Alles wat je moet weten",
+      excerpt: "Je hebt er waarschijnlijk van gehoord. Maar wat is CrossFit nu eigenlijk? En is het iets voor jou?",
+      image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=800&q=80",
+      date: "22 januari 2025",
+      category: "CrossFit"
+    },
+    {
+      id: 25,
+      slug: "motivatie-sporten-behouden",
+      title: "Motivatie om te sporten: zo houd je het vol",
+      excerpt: "Beginnen met sporten is makkelijk. Volhouden is de echte uitdaging. Zo zorg je dat jij bij de 20% hoort die wel doorzet.",
+      image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=800&q=80",
+      date: "21 januari 2025",
+      category: "Mindset"
+    },
+    {
       id: 24,
       slug: "groepslessen-vs-alleen-trainen",
       title: "Groepslessen vs. alleen trainen: wat werkt beter?",

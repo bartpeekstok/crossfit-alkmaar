@@ -1998,6 +1998,362 @@ const blogPosts: { [key: string]: any } = {
       <p>Bij CrossFit Alkmaar trainen we in kleine groepen van maximaal 12 personen. Professionele coaching, sterke community, en een programma dat werkt.</p>
     `
   },
+  "motivatie-sporten-behouden": {
+    title: "Motivatie om te sporten: zo houd je het vol",
+    date: "21 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80",
+    content: `
+      <p class="lead">Beginnen met sporten is makkelijk. Volhouden is de echte uitdaging. Waarom stopt 80% binnen 6 maanden? En hoe zorg je dat jij bij de 20% hoort die wel doorzet?</p>
+
+      <br/>
+
+      <h2>1. Waarom motivatie niet genoeg is</h2>
+      <p>Motivatie is een gevoel. En gevoelens komen en gaan.</p>
+
+      <p>Op maandagochtend na een slecht weekend heb je geen motivatie. Op een donkere winteravond na een lange werkdag heb je geen motivatie. Maar juist dan heb je beweging het hardst nodig.</p>
+
+      <p>Succesvolle sporters vertrouwen niet op motivatie. Ze vertrouwen op systemen.</p>
+
+      <br/>
+
+      <h2>2. Bouw een systeem, geen doel</h2>
+      <p>"Ik wil 10 kilo afvallen" is een doel. "Ik train elke dinsdag en donderdag om 18:00" is een systeem.</p>
+
+      <p>Het verschil:</p>
+      <ul>
+        <li><strong>Doelen</strong> zijn eindig – als je ze bereikt (of niet), stop je</li>
+        <li><strong>Systemen</strong> zijn doorlopend – ze worden onderdeel van je leven</li>
+      </ul>
+
+      <p>Focus niet op het resultaat, maar op het proces. De resultaten volgen vanzelf.</p>
+
+      <br/>
+
+      <h2>3. Maak het makkelijk om te beginnen</h2>
+      <p>Elke drempel die je opwerpt, is een reden om niet te gaan.</p>
+
+      <p><strong>Verwijder drempels:</strong></p>
+      <ul>
+        <li>Leg je sportkleding klaar de avond ervoor</li>
+        <li>Kies een sportschool dicht bij huis of werk</li>
+        <li>Plan je trainingen in je agenda als vaste afspraken</li>
+        <li>Ga direct na werk – niet eerst naar huis</li>
+      </ul>
+
+      <p>Hoe minder beslissingen je hoeft te nemen, hoe groter de kans dat je gaat.</p>
+
+      <br/>
+
+      <h2>4. Accountability: de geheime kracht</h2>
+      <p>Alleen sporten is zwaar. Je stelt alleen jezelf teleur als je niet gaat.</p>
+
+      <p>Maar als iemand op je wacht? Als je naam op een rooster staat? Als mensen vragen waar je bent als je er niet bent?</p>
+
+      <p>Dit is waarom groepstraining werkt. Je bent niet alleen verantwoordelijk naar jezelf – je bent onderdeel van iets groters.</p>
+
+      <br/>
+
+      <h2>5. Vier kleine overwinningen</h2>
+      <p>Wacht niet tot je je einddoel bereikt. Vier de stappen onderweg.</p>
+
+      <ul>
+        <li>Je eerste week zonder overslaan? Gevierd.</li>
+        <li>5 kilo meer kunnen tillen? Gevierd.</li>
+        <li>Een maand consequent getraind? Gevierd.</li>
+      </ul>
+
+      <p>Deze kleine overwinningen bouwen momentum. En momentum is krachtiger dan motivatie.</p>
+
+      <br/>
+
+      <h2>6. Accepteer slechte dagen</h2>
+      <p>Niet elke training is geweldig. Soms voel je je slap, moe, of gewoon niet lekker.</p>
+
+      <p>Dat is oké. Ga toch.</p>
+
+      <p>Een slechte training is beter dan geen training. En vaak voel je je na afloop veel beter dan ervoor.</p>
+
+      <p>De regel: kom opdagen. De rest volgt.</p>
+
+      <br/>
+
+      <h2>7. Kies iets wat je leuk vindt</h2>
+      <p>Als je een hekel hebt aan hardlopen, ga dan niet hardlopen. Als je machines saai vindt, train dan niet op machines.</p>
+
+      <p>Er zijn tientallen manieren om fit te worden. Vind er één die je leuk vindt – of in ieder geval niet haat.</p>
+
+      <p>CrossFit werkt voor veel mensen omdat het gevarieerd is. Elke dag is anders. Je hoeft nooit te vervelen.</p>
+
+      <br/>
+
+      <h2>8. Omring je met de juiste mensen</h2>
+      <p>Je bent het gemiddelde van de vijf mensen met wie je de meeste tijd doorbrengt.</p>
+
+      <p>Train met mensen die:</p>
+      <ul>
+        <li>Dezelfde doelen hebben</li>
+        <li>Je motiveren in plaats van afremmen</li>
+        <li>Je missen als je er niet bent</li>
+      </ul>
+
+      <p>Een sterke community is de beste garantie voor consistentie.</p>
+
+      <br/>
+
+      <h2>Begin vandaag</h2>
+      <p>Wacht niet op motivatie. Wacht niet op het perfecte moment. Dat moment komt niet.</p>
+
+      <p>Bij CrossFit Alkmaar helpen we je een systeem bouwen dat werkt. Kleine groepen, vaste coaches die je kennen, en een community die je ondersteunt.</p>
+    `
+  },
+  "wat-is-crossfit": {
+    title: "Wat is CrossFit? Alles wat je moet weten",
+    date: "22 januari 2025",
+    category: "CrossFit",
+    image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1200&q=80",
+    content: `
+      <p class="lead">Je hebt er waarschijnlijk van gehoord. Misschien heb je video's gezien van mensen die banden flippen of aan ringen hangen. Maar wat is CrossFit nu eigenlijk? En is het iets voor jou?</p>
+
+      <br/>
+
+      <h2>1. De basis: functionele fitness</h2>
+      <p>CrossFit is een trainingsvorm gebaseerd op functionele bewegingen. Dat betekent: bewegingen die je in het dagelijks leven ook maakt.</p>
+
+      <ul>
+        <li><strong>Squatten</strong> – Opstaan uit een stoel, iets van de grond pakken</li>
+        <li><strong>Tillen</strong> – Boodschappen, kinderen, meubels</li>
+        <li><strong>Duwen en trekken</strong> – Deuren, laden, jezelf omhoog trekken</li>
+        <li><strong>Rennen en springen</strong> – De bus halen, traplopen</li>
+      </ul>
+
+      <p>In plaats van geïsoleerde spieroefeningen op machines, train je bewegingen die je hele lichaam gebruiken.</p>
+
+      <br/>
+
+      <h2>2. Gevarieerde training</h2>
+      <p>Bij CrossFit is geen dag hetzelfde. De Workout of the Day (WOD) is elke dag anders.</p>
+
+      <p>Je combineert:</p>
+      <ul>
+        <li><strong>Gewichtheffen</strong> – Deadlifts, squats, presses</li>
+        <li><strong>Gymnastiek</strong> – Pull-ups, push-ups, handstanden</li>
+        <li><strong>Cardio</strong> – Roeien, fietsen, rennen, touwtje springen</li>
+      </ul>
+
+      <p>Deze variatie zorgt ervoor dat je lichaam zich blijft aanpassen. Geen plateaus, geen verveling.</p>
+
+      <br/>
+
+      <h2>3. Hoge intensiteit</h2>
+      <p>CrossFit workouts zijn kort maar intens. Meestal 10-25 minuten.</p>
+
+      <p>Het idee: harder werken in minder tijd levert betere resultaten dan lang en langzaam trainen. De wetenschap bevestigt dit – high-intensity interval training (HIIT) is effectiever voor zowel krachtontwikkeling als conditie.</p>
+
+      <p>Maar: intensiteit is relatief. Jouw 100% is anders dan die van iemand anders. Je werkt op jouw niveau, niet dat van een ander.</p>
+
+      <br/>
+
+      <h2>4. Schaalbaarheid</h2>
+      <p>Dit is het grootste misverstand over CrossFit: je hoeft geen atleet te zijn om te beginnen.</p>
+
+      <p>Elke oefening is schaalbaar:</p>
+      <ul>
+        <li>Kun je geen pull-up? → Ring rows of assisted pull-ups</li>
+        <li>Is 60 kg te zwaar? → Begin met 20 kg</li>
+        <li>Kun je niet rennen? → Fiets of roei</li>
+        <li>Heb je een blessure? → Alternatieve oefening</li>
+      </ul>
+
+      <p>De workout past zich aan jou aan, niet andersom.</p>
+
+      <br/>
+
+      <h2>5. Community</h2>
+      <p>CrossFit is meer dan een workout. Het is een community.</p>
+
+      <p>Je traint samen in kleine groepen. Je leert mensen kennen. Je moedigt elkaar aan. Je viert elkaars successen.</p>
+
+      <p>Dit sociale aspect is waarom mensen blijven komen – ook op dagen dat ze geen zin hebben. Er wacht iemand op je.</p>
+
+      <br/>
+
+      <h2>6. Professionele coaching</h2>
+      <p>Anders dan in een reguliere sportschool, heb je bij CrossFit altijd een coach.</p>
+
+      <p>De coach:</p>
+      <ul>
+        <li>Legt de workout uit</li>
+        <li>Demonstreert de technieken</li>
+        <li>Corrigeert je bewegingen</li>
+        <li>Past de workout aan op jouw niveau</li>
+        <li>Motiveert je om door te zetten</li>
+      </ul>
+
+      <p>Je hoeft niet zelf te bedenken wat je gaat doen. Je hoeft alleen maar op te komen dagen.</p>
+
+      <br/>
+
+      <h2>7. De resultaten</h2>
+      <p>Wat kun je verwachten na een paar maanden CrossFit?</p>
+
+      <ul>
+        <li><strong>Meer kracht</strong> – Je tilt dingen die je eerst niet kon tillen</li>
+        <li><strong>Betere conditie</strong> – Traplopen zonder buiten adem te raken</li>
+        <li><strong>Meer energie</strong> – Je voelt je fitter in het dagelijks leven</li>
+        <li><strong>Betere houding</strong> – Sterke core en rug</li>
+        <li><strong>Gewichtsverlies</strong> – Als je dat wilt, gecombineerd met goede voeding</li>
+        <li><strong>Meer zelfvertrouwen</strong> – Je leert wat je lichaam kan</li>
+      </ul>
+
+      <br/>
+
+      <h2>8. Is CrossFit iets voor jou?</h2>
+      <p>CrossFit is geschikt voor je als:</p>
+
+      <ul>
+        <li>Je structuur wilt in je training</li>
+        <li>Je niet zelf wilt bedenken wat je gaat doen</li>
+        <li>Je beter presteert in een groep dan alleen</li>
+        <li>Je graag uitgedaagd wordt</li>
+        <li>Je variatie wilt in plaats van steeds hetzelfde</li>
+      </ul>
+
+      <p>CrossFit is misschien niet voor je als je liever helemaal alleen traint en alle tijd hebt om zelf te experimenteren.</p>
+
+      <br/>
+
+      <h2>Probeer het zelf</h2>
+      <p>De enige manier om te weten of CrossFit iets voor jou is? Ervaar het.</p>
+
+      <p>Bij CrossFit Alkmaar beginnen we met een gratis intake. Je maakt kennis met de coaches, ziet de ruimte, en we bespreken of het bij je past. Geen druk, geen verplichtingen.</p>
+    `
+  },
+  "sporten-drukke-baan": {
+    title: "Sporten met een drukke baan: zo maak je tijd",
+    date: "23 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    content: `
+      <p class="lead">"Ik heb geen tijd om te sporten." De meest gehoorde smoes. Maar is het waar? Of is het een kwestie van prioriteiten?</p>
+
+      <br/>
+
+      <h2>1. De waarheid over tijd</h2>
+      <p>Iedereen heeft 24 uur per dag. Drukke CEO's, ouders met drie kinderen, mensen met twee banen – ze hebben allemaal dezelfde 24 uur als jij.</p>
+
+      <p>Het verschil zit niet in hoeveel tijd je hebt. Het zit in hoe je die tijd gebruikt.</p>
+
+      <p>Een effectieve workout kost 60 minuten inclusief omkleden en douchen. Drie keer per week is 3 uur. Van de 168 uur die je per week hebt, is dat minder dan 2%.</p>
+
+      <br/>
+
+      <h2>2. Ochtend vs. avond</h2>
+      <p>Wanneer train je het beste? Het antwoord is simpel: wanneer je het daadwerkelijk doet.</p>
+
+      <p><strong>Ochtendtraining voordelen:</strong></p>
+      <ul>
+        <li>Je dag kan niet in de weg zitten</li>
+        <li>Je bent alert en gefocust voor werk</li>
+        <li>Minder druk in de sportschool</li>
+        <li>Zelfvoldaan gevoel de hele dag</li>
+      </ul>
+
+      <p><strong>Avondtraining voordelen:</strong></p>
+      <ul>
+        <li>Je lichaam is opgewarmd</li>
+        <li>Stress van de dag kwijtraken</li>
+        <li>Meer kracht dan 's ochtends vroeg</li>
+        <li>Sociale aspect na werk</li>
+      </ul>
+
+      <p>Kies wat bij jouw leven past. Consistentie is belangrijker dan het perfecte tijdstip.</p>
+
+      <br/>
+
+      <h2>3. Plan het als een vergadering</h2>
+      <p>Je mist geen belangrijke werkvergadering. Waarom wel je training?</p>
+
+      <p>Zet je trainingen in je agenda. Blokkeer de tijd. Behandel het als een afspraak die niet verzet kan worden.</p>
+
+      <p>Als iemand vraagt of je dan kunt: "Nee, ik heb al een afspraak."</p>
+
+      <p>Je hoeft niet te zeggen dat het sporten is. Het is simpelweg een afspraak.</p>
+
+      <br/>
+
+      <h2>4. Lunch workouts</h2>
+      <p>Heb je een uur lunchpauze? Dat is genoeg voor een effectieve training.</p>
+
+      <p><strong>Hoe het werkt:</strong></p>
+      <ul>
+        <li>12:00 – Naar de sportschool (5 min)</li>
+        <li>12:05 – Omkleden (5 min)</li>
+        <li>12:10 – Training (40 min)</li>
+        <li>12:50 – Douchen en omkleden (10 min)</li>
+        <li>13:00 – Terug op kantoor</li>
+      </ul>
+
+      <p>Bonus: je bent 's middags alerter en productiever dan collega's die achter hun bureau hebben geluncht.</p>
+
+      <br/>
+
+      <h2>5. Korte trainingen zijn effectief</h2>
+      <p>Je hoeft geen 2 uur in de sportschool door te brengen. Onderzoek toont aan dat 30-45 minuten high-intensity training effectiever is dan 90 minuten rustig trainen.</p>
+
+      <p>CrossFit workouts duren meestal 10-25 minuten (na de warming-up). Geen eindeloos cardio. Geen 5 sets van 12 herhalingen met 3 minuten rust. Effectief en to the point.</p>
+
+      <br/>
+
+      <h2>6. Combineer reistijd</h2>
+      <p>Woon je ver van een sportschool? Zoek er één dicht bij je werk.</p>
+
+      <p>Train voor of na werk wanneer je toch al in de buurt bent. Geen extra reistijd, geen extra excuus.</p>
+
+      <p>Of zoek een sportschool op je route naar huis. Stop onderweg – als je eenmaal thuis bent, ga je niet meer weg.</p>
+
+      <br/>
+
+      <h2>7. Betrek je gezin</h2>
+      <p>Heb je kinderen? Dit hoeft geen reden te zijn om niet te sporten.</p>
+
+      <ul>
+        <li>Sommige sportscholen hebben kinderopvang</li>
+        <li>Wissel af met je partner – de één sport, de ander past op</li>
+        <li>Train vroeg in de ochtend voor de kinderen wakker zijn</li>
+        <li>Betrek je kinderen – laat ze zien dat beweging belangrijk is</li>
+      </ul>
+
+      <br/>
+
+      <h2>8. Stop met excuses</h2>
+      <p>Laten we eerlijk zijn: "geen tijd" betekent meestal "geen prioriteit".</p>
+
+      <p>Je vindt tijd voor Netflix. Je vindt tijd voor social media. Je vindt tijd voor dingen die je belangrijk vindt.</p>
+
+      <p>De vraag is: hoe belangrijk is je gezondheid?</p>
+
+      <p>Over 10 jaar heb je spijt van de trainingen die je hebt overgeslagen, niet van de afleveringen die je hebt gemist.</p>
+
+      <br/>
+
+      <h2>9. Start klein</h2>
+      <p>Begin niet met 5x per week als je nu 0x per week traint. Dat is een recept voor falen.</p>
+
+      <p>Start met 2x per week. Bouw een gewoonte. Als dat lukt, voeg je een derde dag toe.</p>
+
+      <p>Consistentie verslaat intensiteit. Twee keer per week het hele jaar is beter dan vijf keer per week voor een maand.</p>
+
+      <br/>
+
+      <h2>Maak tijd</h2>
+      <p>Je hebt geen tijd? Nee. Je maakt tijd – of je maakt het niet.</p>
+
+      <p>Bij CrossFit Alkmaar bieden we trainingen op verschillende tijdstippen. Vroeg in de ochtend, tijdens lunch, na werk. Er is altijd een moment dat past.</p>
+
+      <p>De vraag is niet of je tijd hebt. De vraag is of je bereid bent die tijd te maken.</p>
+    `
+  },
   "de-juiste-sportschool-kiezen": {
     title: "De juiste sportschool kiezen: 7 vragen die je moet stellen",
     date: "17 januari 2025",

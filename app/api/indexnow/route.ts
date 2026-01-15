@@ -66,6 +66,9 @@ export async function POST(request: NextRequest) {
 // GET endpoint to manually trigger indexing of all blog posts
 export async function GET() {
   const blogSlugs = [
+    "sporten-drukke-baan",
+    "wat-is-crossfit",
+    "motivatie-sporten-behouden",
     "groepslessen-vs-alleen-trainen",
     "eerste-keer-crossfit",
     "spiermassa-opbouwen",

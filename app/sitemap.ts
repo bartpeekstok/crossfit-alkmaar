@@ -5,6 +5,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts = [
+    "sporten-drukke-baan",
+    "wat-is-crossfit",
+    "motivatie-sporten-behouden",
     "groepslessen-vs-alleen-trainen",
     "eerste-keer-crossfit",
     "spiermassa-opbouwen",

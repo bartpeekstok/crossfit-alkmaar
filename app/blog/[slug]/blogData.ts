@@ -200,6 +200,30 @@ export const blogPosts: { [key: string]: BlogPost } = {
     image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=1200&q=80",
     excerpt: "Sommige mensen zweren bij alleen trainen. Anderen kunnen niet zonder hun groepsles. Wat werkt beter? De wetenschap geeft antwoord.",
     content: ""
+  },
+  "motivatie-sporten-behouden": {
+    title: "Motivatie om te sporten: zo houd je het vol",
+    date: "21 januari 2025",
+    category: "Mindset",
+    image: "https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200&q=80",
+    excerpt: "Beginnen met sporten is makkelijk. Volhouden is de echte uitdaging. Zo zorg je dat jij bij de 20% hoort die wel doorzet.",
+    content: ""
+  },
+  "wat-is-crossfit": {
+    title: "Wat is CrossFit? Alles wat je moet weten",
+    date: "22 januari 2025",
+    category: "CrossFit",
+    image: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=1200&q=80",
+    excerpt: "Je hebt er waarschijnlijk van gehoord. Maar wat is CrossFit nu eigenlijk? En is het iets voor jou?",
+    content: ""
+  },
+  "sporten-drukke-baan": {
+    title: "Sporten met een drukke baan: zo maak je tijd",
+    date: "23 januari 2025",
+    category: "Tips",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1200&q=80",
+    excerpt: "Geen tijd om te sporten? Of is het een kwestie van prioriteiten? Zo maak je tijd voor beweging.",
+    content: ""
   }
 };
 
