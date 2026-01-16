@@ -5,6 +5,7 @@ import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
 
 const GA_MEASUREMENT_ID = 'G-TXV3GLCW7D';
+const GOOGLE_ADS_ID = 'AW-11137193907';
 
 function GoogleAnalyticsTracking() {
   const pathname = usePathname();
@@ -39,6 +40,7 @@ export default function GoogleAnalytics() {
           gtag('config', '${GA_MEASUREMENT_ID}', {
             send_page_view: false
           });
+          gtag('config', '${GOOGLE_ADS_ID}');
         `}
       </Script>
       <Suspense fallback={null}>
