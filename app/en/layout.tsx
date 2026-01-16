@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   description:
     "Gym in Alkmaar for strength training, fitness and weight loss. Small group training with personal guidance. For all levels, including 50+. Book your free intro!",
   keywords: ["gym Alkmaar", "fitness Alkmaar", "strength training Alkmaar", "CrossFit Alkmaar", "personal training Alkmaar"],
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "CrossFit Alkmaar | Gym & Strength Training",
     description:

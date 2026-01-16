@@ -3,11 +3,11 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Onze Leden",
   description:
-    "Bekijk video's en verhalen van onze leden. Ontdek waarom zij kozen voor CrossFit Alkmaar en wat het voor hen heeft betekend.",
+    "Verhalen van echte leden van CrossFit Alkmaar. Bekijk video's van Malou, Steven, Jeanine en meer. Ontdek waarom zij kozen voor CrossFit Alkmaar.",
   openGraph: {
     title: "Onze Leden | CrossFit Alkmaar",
     description:
-      "Bekijk video's en verhalen van onze leden. Ontdek waarom zij kozen voor CrossFit Alkmaar.",
+      "Verhalen van echte leden van CrossFit Alkmaar. Bekijk video's en ontdek waarom zij kozen voor ons.",
     url: "https://crossfitalkmaar.com/onze-leden",
   },
   alternates: {
