@@ -140,16 +140,16 @@ export default function FAQPage() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">Groepslessen</p>
                 <div className="text-gray-600 space-y-1">
-                  <p>10x per maand — €94,95</p>
-                  <p>15x per maand — €119,95</p>
-                  <p>Onbeperkt — €149,95</p>
+                  <p>10x per maand — €99,95</p>
+                  <p>15x per maand — €127,50</p>
+                  <p>Onbeperkt — €159,95</p>
                 </div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">BUILD Small group</p>
                 <div className="text-gray-600 space-y-1">
-                  <p>2x per week — €235/maand</p>
-                  <p>3x per week — €342,50/maand</p>
+                  <p>2x per week — €245/maand</p>
+                  <p>3x per week — €367,50/maand</p>
                 </div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
