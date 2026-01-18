@@ -155,6 +155,7 @@ export default function FAQPage() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">Personal training</p>
                 <p className="text-gray-600">Op abonnementsvorm — €95/uur</p>
+                <p className="text-gray-600">Losse sessie — €100/uur</p>
               </div>
             </div>
           ),
