@@ -72,12 +72,23 @@ export default function MeerInfoPage() {
       </section>
 
             {/* Sportbit Script */}
-      <Script 
+      <Script
         src="https://cfalkmaar.sportbitapp.nl/cbm/embed/rooster/cdn/"
         strategy="afterInteractive"
         onLoad={() => {
           if (typeof window !== 'undefined' && (window as any).embed_rooster) {
             (window as any).embed_rooster.init('https://cfalkmaar.sportbitapp.nl/', null);
+
+            // Herstel scroll positie naar hash na Sportbit init
+            setTimeout(() => {
+              const hash = window.location.hash;
+              if (hash) {
+                const element = document.querySelector(hash);
+                if (element) {
+                  element.scrollIntoView({ behavior: 'instant' });
+                }
+              }
+            }, 100);
           }
         }}
       />
