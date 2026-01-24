@@ -74,25 +74,25 @@ export default function KickstartPopup() {
     setDataReady(true);
   }, []);
 
-  // Auto-open na 5 seconden
-  useEffect(() => {
-    if (typeof window === 'undefined') return;
-    if (!dataReady) return;
-    if (events.length === 0) return;
+  // Auto-open na 5 seconden - TIJDELIJK UITGESCHAKELD
+  // useEffect(() => {
+  //   if (typeof window === 'undefined') return;
+  //   if (!dataReady) return;
+  //   if (events.length === 0) return;
 
-    // Niet tonen op faq en free-intro pagina's
-    if (pathname === '/faq' || pathname === '/free-intro') return;
+  //   // Niet tonen op faq en free-intro pagina's
+  //   if (pathname === '/faq' || pathname === '/free-intro') return;
 
-    // Niet opnieuw tonen als al getoond is tijdens deze page load
-    if (popupShownThisPageLoad) return;
+  //   // Niet opnieuw tonen als al getoond is tijdens deze page load
+  //   if (popupShownThisPageLoad) return;
 
-    const timer = setTimeout(() => {
-      openPopup();
-      popupShownThisPageLoad = true;
-    }, 5000);
+  //   const timer = setTimeout(() => {
+  //     openPopup();
+  //     popupShownThisPageLoad = true;
+  //   }, 5000);
 
-    return () => clearTimeout(timer);
-  }, [openPopup, dataReady, events, pathname]);
+  //   return () => clearTimeout(timer);
+  // }, [openPopup, dataReady, events, pathname]);
 
   const handleMeerInfoClick = () => {
     closePopup();
