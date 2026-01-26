@@ -46,10 +46,9 @@ export default function IntakePage() {
               src="https://kilo.gymleadmachine.com/js/form_embed.js" 
               strategy="lazyOnload"
             />
-            <iframe 
+            <iframe
               src="https://kilo.gymleadmachine.com/widget/booking/FWSWLWpfUeNwh536AGL0"
-              className="w-full min-h-[500px] border-0"
-              scrolling="no"
+              className="w-full min-h-[700px] border-0"
               title="Boek een gratis intake"
             ></iframe>
           </div>
