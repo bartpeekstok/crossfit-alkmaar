@@ -77,7 +77,7 @@ export default function FAQPage() {
               Je kunt al je vragen stellen via{" "}
               <a href="https://wa.me/31640124097" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WhatsApp</a>{" "}
               of{" "}
-              <a href="mailto:info@crossfitalkmaar.nl" className="text-blue-600 hover:underline">e-mail</a>. We proberen op weekdagen altijd binnen 24 uur te antwoorden.
+              <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">e-mail</a>. We proberen op weekdagen altijd binnen 24 uur te antwoorden.
             </>
           ),
         },
@@ -186,7 +186,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe kan ik opzeggen?",
-          answer: (<>Dit doe je door een e-mail te sturen naar <a href="mailto:info@crossfitalkmaar.nl" className="text-blue-600 hover:underline">info@crossfitalkmaar.nl</a>.</>),
+          answer: (<>Dit doe je door een e-mail te sturen naar <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">ledenservice@crossfitalkmaar.nl</a>.</>),
         },
         {
           question: "Kan ik mijn abonnement pauzeren?",
@@ -196,7 +196,7 @@ export default function FAQPage() {
           question: "Hoe kan ik up- of downgraden?",
           answer: (
             <>
-              <p className="mb-2">Door een e-mail te sturen naar <a href="mailto:info@crossfitalkmaar.nl" className="text-blue-600 hover:underline">info@crossfitalkmaar.nl</a>.</p>
+              <p className="mb-2">Door een e-mail te sturen naar <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">ledenservice@crossfitalkmaar.nl</a>.</p>
               <p className="mb-2">Upgraden kan vanaf het moment dat je de upgrade doet.</p>
               <p>Downgraden kan met een kalendermaand opzegtermijn.</p>
             </>
@@ -383,7 +383,7 @@ export default function FAQPage() {
               Chat via WhatsApp
             </a>
             <a
-              href="mailto:info@crossfitalkmaar.nl"
+              href="mailto:ledenservice@crossfitalkmaar.nl"
               className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition inline-flex items-center justify-center gap-2 border border-white/30"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
