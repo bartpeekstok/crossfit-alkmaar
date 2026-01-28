@@ -169,8 +169,15 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Wat onze leden zeggen</h2>
-          <Script src="https://static.elfsight.com/platform/platform.js" strategy="lazyOnload" />
-          <div className="elfsight-app-441b4eee-fe67-40af-9775-caf184c8ed7f" data-elfsight-app-lazy></div>
+          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: '100%', width: '100%' }}
+            title="Google Reviews"
+          ></iframe>
         </div>
       </section>
 
