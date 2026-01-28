@@ -72,7 +72,7 @@ export default function PrivacyPage() {
               <p>Onze website maakt gebruik van:</p>
               <ul className="list-disc pl-6 mb-4">
                 <li><strong>YouTube:</strong> Voor het tonen van video's. YouTube kan cookies plaatsen.</li>
-                <li><strong>GymLeadMachine:</strong> Voor het tonen van Google Reviews. GymLeadMachine kan cookies plaatsen.</li>
+                <li><strong>GoHighLevel:</strong> Voor het tonen van Google Reviews. GoHighLevel kan cookies plaatsen.</li>
               </ul>
               <p>
                 Je kunt cookies uitschakelen via je browserinstellingen. Let op: hierdoor werken sommige onderdelen van de website mogelijk niet optimaal.
