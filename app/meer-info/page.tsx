@@ -80,7 +80,7 @@ export default function MeerInfoPage() {
             (window as any).embed_rooster.init('https://cfalkmaar.sportbitapp.nl/', null);
 
             // Herstel scroll positie naar hash na Sportbit init
-            setTimeout(() => {
+            const scrollToHash = () => {
               const hash = window.location.hash;
               if (hash) {
                 const element = document.querySelector(hash);
@@ -88,7 +88,10 @@ export default function MeerInfoPage() {
                   element.scrollIntoView({ behavior: 'instant' });
                 }
               }
-            }, 100);
+            };
+            setTimeout(scrollToHash, 300);
+            setTimeout(scrollToHash, 600);
+            setTimeout(scrollToHash, 1000);
           }
         }}
       />
