@@ -35,7 +35,7 @@ import BreadcrumbSchema from "./components/BreadcrumbSchema";
 
 export const metadata: Metadata = {
   title: {
-    default: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    default: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
     template: "%s | CrossFit Alkmaar",
   },
   description:
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://crossfitalkmaar.com",
     siteName: "CrossFit Alkmaar",
-    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis intake!",
     images: [
@@ -90,7 +90,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CrossFit Alkmaar | Sportschool & Krachttraining in Alkmaar",
+    title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
     images: ["https://crossfitalkmaar.com/images/hero.jpg"],
