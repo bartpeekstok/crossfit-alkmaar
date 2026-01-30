@@ -38,7 +38,7 @@ export default function IntakePopup() {
         </div>
 
         {/* GHL Form Embed */}
-        <div style={{ height: '380px' }}>
+        <div style={{ height: '420px' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/e3fbmRKr8THIIu0p0KAT"
             style={{ width: '100%', height: '100%', border: 'none' }}
