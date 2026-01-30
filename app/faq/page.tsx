@@ -98,7 +98,7 @@ export default function FAQPage() {
           answer: (
             <>
               <p className="mb-3">Dat kan niet in een reguliere les. Je kunt wel altijd iemand meenemen naar Flex friday op vrijdag in de middag en in de avond.</p>
-              <p>Schrijf jezelf in in SportBit en laat je introducee <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/flexfriday" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">dit formulier</a> invullen.</p>
+              <p>Schrijf jezelf in in SportBit en laat je introducee <a href="https://ghl.crossfitalkmaar.com/widget/booking/txawhkLQuRyHhMe8qG8M" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">dit formulier</a> invullen.</p>
             </>
           ),
         },
