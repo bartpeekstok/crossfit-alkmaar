@@ -38,7 +38,7 @@ export default function GroepslessenPopup() {
         </div>
 
         {/* GHL Form Embed - Groepslessen */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '500px' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/Dlem1saM0HnFhodOK65i"
             style={{ width: '100%', height: '100%', border: 'none' }}

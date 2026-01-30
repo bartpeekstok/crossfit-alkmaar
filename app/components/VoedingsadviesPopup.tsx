@@ -38,7 +38,7 @@ export default function VoedingsadviesPopup() {
         </div>
 
         {/* GHL Form Embed - Voedingsadvies */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '500px' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/8uMHauIkDJV0OIDQnNk7"
             style={{ width: '100%', height: '100%', border: 'none' }}

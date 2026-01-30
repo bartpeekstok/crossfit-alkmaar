@@ -38,7 +38,7 @@ export default function SmallGroupPopup() {
         </div>
 
         {/* GHL Form Embed - Small Group Personal Training */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '500px' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/6iRfUsSgI7rqbPInTqh5"
             style={{ width: '100%', height: '100%', border: 'none' }}

@@ -38,7 +38,7 @@ export default function PersonalTrainingPopup() {
         </div>
 
         {/* GHL Form Embed - Personal Training */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '500px' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/g0ZyoJRDrJaJnWC0B6PW"
             style={{ width: '100%', height: '100%', border: 'none' }}
