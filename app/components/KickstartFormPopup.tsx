@@ -40,10 +40,10 @@ export default function KickstartFormPopup() {
         {/* GHL Form Embed - 28 day kickstart form */}
         <div style={{ height: '340px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/4eYltPO80r1rhnhNNrqp"
+            src="https://ghl.crossfitalkmaar.com/widget/form/okYuR3fqmIOu1FJjLWlm"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-4eYltPO80r1rhnhNNrqp"
-            title="28 day kickstart form"
+            id="popup-okYuR3fqmIOu1FJjLWlm"
+            title="28 Day kickstart form"
           />
         </div>
       </div>
