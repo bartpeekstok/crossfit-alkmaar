@@ -42,12 +42,12 @@ export default function IntakePage() {
 
           {/* Right side - Booking Widget */}
           <div className="bg-white rounded-lg shadow-2xl p-2 max-w-md">
-            <Script 
-              src="https://kilo.gymleadmachine.com/js/form_embed.js" 
+            <Script
+              src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
               strategy="lazyOnload"
             />
             <iframe
-              src="https://kilo.gymleadmachine.com/widget/booking/FWSWLWpfUeNwh536AGL0"
+              src="https://ghl.crossfitalkmaar.com/widget/booking/h9ZPe6IvVFloL7y9V5Rx"
               className="w-full min-h-[700px] border-0"
               title="Boek een gratis intake"
             ></iframe>
