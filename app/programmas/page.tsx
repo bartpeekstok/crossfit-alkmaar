@@ -236,7 +236,7 @@ export default function HomePage() {
               <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
             </div>
             <div className="bg-white p-6">
-              <iframe src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es" style={{ width: "100%", height: "350px", border: "none" }} title="Website Form"></iframe>
+              <iframe src="https://ghl.crossfitalkmaar.com/widget/form/e3fbmRKr8THIIu0p0KAT" style={{ width: "100%", height: "350px", border: "none" }} title="Website form"></iframe>
             </div>
           </div>
         </div>

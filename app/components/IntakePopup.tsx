@@ -40,10 +40,10 @@ export default function IntakePopup() {
         {/* GHL Form Embed */}
         <div style={{ height: '320px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/peswXaJSSZHHMPxZQ4es"
+            src="https://ghl.crossfitalkmaar.com/widget/form/e3fbmRKr8THIIu0p0KAT"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-peswXaJSSZHHMPxZQ4es"
-            title="Website Form"
+            id="popup-e3fbmRKr8THIIu0p0KAT"
+            title="Website form"
           />
         </div>
       </div>

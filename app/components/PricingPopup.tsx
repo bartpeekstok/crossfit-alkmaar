@@ -37,10 +37,10 @@ export default function PricingPopup() {
         {/* GHL Form Embed - Pricing Form */}
         <div style={{ height: '340px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/9XHSwrVecGAeE2zKGH6R"
+            src="https://ghl.crossfitalkmaar.com/widget/form/SAgj2y3QX3GFvGt0Z9cv"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-9XHSwrVecGAeE2zKGH6R"
-            title="Pricing Form"
+            id="popup-SAgj2y3QX3GFvGt0Z9cv"
+            title="Pricing form"
           />
         </div>
       </div>

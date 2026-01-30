@@ -40,10 +40,10 @@ export default function SmallGroupPopup() {
         {/* GHL Form Embed - Small Group Personal Training */}
         <div style={{ height: '340px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/CxrgkxVd9jTXX8Mmnl2W"
+            src="https://ghl.crossfitalkmaar.com/widget/form/6iRfUsSgI7rqbPInTqh5"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-CxrgkxVd9jTXX8Mmnl2W"
-            title="Small Group Personal Training Form"
+            id="popup-6iRfUsSgI7rqbPInTqh5"
+            title="Small group training form"
           />
         </div>
       </div>

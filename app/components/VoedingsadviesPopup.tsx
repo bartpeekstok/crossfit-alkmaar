@@ -40,10 +40,10 @@ export default function VoedingsadviesPopup() {
         {/* GHL Form Embed - Voedingsadvies */}
         <div style={{ height: '340px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/eVQe5bL3xE0LZhMBudx8"
+            src="https://ghl.crossfitalkmaar.com/widget/form/8uMHauIkDJV0OIDQnNk7"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-eVQe5bL3xE0LZhMBudx8"
-            title="Nutrition Form"
+            id="popup-8uMHauIkDJV0OIDQnNk7"
+            title="Voedingsadvies form"
           />
         </div>
       </div>

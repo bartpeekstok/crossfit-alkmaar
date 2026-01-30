@@ -40,9 +40,9 @@ export default function GroepslessenPopup() {
         {/* GHL Form Embed - Groepslessen */}
         <div style={{ height: '340px' }}>
           <iframe
-            src="https://kilo.gymleadmachine.com/widget/form/syd1Bo2ZmbwVwqXaxoZs"
+            src="https://ghl.crossfitalkmaar.com/widget/form/Dlem1saM0HnFhodOK65i"
             style={{ width: '100%', height: '100%', border: 'none' }}
-            id="popup-syd1Bo2ZmbwVwqXaxoZs"
+            id="popup-Dlem1saM0HnFhodOK65i"
             title="Groepslessen form"
           />
         </div>
