@@ -17,7 +17,7 @@ export default function ChatWidget() {
     <Script
       src="https://widgets.leadconnectorhq.com/loader.js"
       data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
-      data-widget-id="67a38e45a81d1c770bd75d9f"
+      data-widget-id="697d34950079c347eeddf86b"
       strategy="lazyOnload"
     />
   );
