@@ -84,7 +84,7 @@ export default function FAQPage() {
         {
           question: "Hoe boek ik een check in gesprek?",
           answer: (
-            <>Dat doe je <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>.</>
+            <>Dat doe je <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>.</>
           ),
         },
         {
@@ -244,14 +244,14 @@ export default function FAQPage() {
         },
         {
           question: "Kan ik ook vrij trainen?",
-          answer: (<>Nee, je kunt bij CrossFit Alkmaar niet vrij trainen met eigen programma's. <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek een check in gesprek</a> als je hier interesse in hebt.</>),
+          answer: (<>Nee, je kunt bij CrossFit Alkmaar niet vrij trainen met eigen programma's. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek een check in gesprek</a> als je hier interesse in hebt.</>),
         },
         {
           question: "Wat als ik een blessure heb?",
           answer: (
             <>
               <p className="mb-3">Helemaal stoppen met bewegen is meestal niet de beste manier om te herstellen. Onze coaches hebben een oneindige toolbox met aanpassingen.</p>
-              <p>Ben je onzeker? <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Plan dan een check in gesprek</a> in met één van onze coaches.</p>
+              <p>Ben je onzeker? <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Plan dan een check in gesprek</a> in met één van onze coaches.</p>
             </>
           ),
         },
@@ -287,7 +287,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe plan ik een check in?",
-          answer: (<>Dat doe je makkelijk <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Ideaal om voor of na een training te plannen.</>),
+          answer: (<>Dat doe je makkelijk <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Ideaal om voor of na een training te plannen.</>),
         },
       ],
     },
@@ -340,7 +340,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe start ik met personal training?",
-          answer: (<>Dat begint met een check in gesprek waar we bespreken wat je doelen zijn. <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek je check in via deze link</a>.</>),
+          answer: (<>Dat begint met een check in gesprek waar we bespreken wat je doelen zijn. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek je check in via deze link</a>.</>),
         },
         {
           question: "Hoe werkt het annuleren of wijzigen van afspraken?",
@@ -348,7 +348,7 @@ export default function FAQPage() {
         },
         {
           question: "Kan ik zelf kiezen met welke coach ik train?",
-          answer: (<>Jazeker, geef aan met wie je graag wilt werken tijdens <a href="https://kilo.gymleadmachine.com/widget/bookings/crossfitalkmaar/check-in" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">je check in gesprek</a>.</>),
+          answer: (<>Jazeker, geef aan met wie je graag wilt werken tijdens <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">je check in gesprek</a>.</>),
         },
       ],
     },
