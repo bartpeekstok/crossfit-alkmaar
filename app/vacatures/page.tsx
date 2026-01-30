@@ -111,7 +111,7 @@ export default function VacaturesPage() {
                   </div>
                 </div>
                 <a
-                  href="https://kilo.gymleadmachine.com/widget/survey/TIMRkxtc9zfvKxJ3i7oo"
+                  href="https://ghl.crossfitalkmaar.com/widget/survey/O0pkhZsi7YGCilm9DaWP"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-6 rounded-lg transition text-center"
