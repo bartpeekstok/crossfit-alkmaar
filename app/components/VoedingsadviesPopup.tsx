@@ -38,10 +38,11 @@ export default function VoedingsadviesPopup() {
         </div>
 
         {/* GHL Form Embed - Voedingsadvies */}
-        <div style={{ height: '500px' }}>
+        <div style={{ height: '380px', overflow: 'hidden' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/8uMHauIkDJV0OIDQnNk7"
-            style={{ width: '100%', height: '100%', border: 'none' }}
+            style={{ width: '100%', height: '450px', border: 'none', marginTop: '-30px' }}
+            scrolling="no"
             id="popup-8uMHauIkDJV0OIDQnNk7"
             title="Voedingsadvies form"
           />

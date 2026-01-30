@@ -35,10 +35,11 @@ export default function PricingPopup() {
         </div>
 
         {/* GHL Form Embed - Pricing Form */}
-        <div style={{ height: '500px' }}>
+        <div style={{ height: '380px', overflow: 'hidden' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/SAgj2y3QX3GFvGt0Z9cv"
-            style={{ width: '100%', height: '100%', border: 'none' }}
+            style={{ width: '100%', height: '450px', border: 'none', marginTop: '-30px' }}
+            scrolling="no"
             id="popup-SAgj2y3QX3GFvGt0Z9cv"
             title="Pricing form"
           />
