@@ -38,10 +38,11 @@ export default function KickstartFormPopup() {
         </div>
 
         {/* GHL Form Embed - 28 day kickstart form */}
-        <div style={{ height: '340px' }}>
+        <div style={{ height: '380px', overflow: 'hidden' }}>
           <iframe
             src="https://ghl.crossfitalkmaar.com/widget/form/okYuR3fqmIOu1FJjLWlm"
-            style={{ width: '100%', height: '100%', border: 'none' }}
+            style={{ width: '100%', height: '450px', border: 'none', marginTop: '-30px' }}
+            scrolling="no"
             id="popup-okYuR3fqmIOu1FJjLWlm"
             title="28 Day kickstart form"
           />
