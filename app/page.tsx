@@ -105,10 +105,10 @@ export default function HomePage() {
               <h3 className="text-2xl font-bold mb-3">28 day kickstart</h3>
               <p className="text-gray-600 mb-6">Hier start iedereen. In vier weken leggen we samen een solide basis.</p>
               <ul className="space-y-2 mb-6 text-gray-700">
-                <li>✓ Wordt sterker en fitter</li>
+                <li>✓ Word sterker en fitter</li>
                 <li>✓ Structuur en accountability</li>
                 <li>✓ Kleine groepen (max 6)</li>
-                <li>✓ Basis leefstijladvies</li>
+                <li>✓ Basisleefstijladvies</li>
               </ul>
               <Link href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>

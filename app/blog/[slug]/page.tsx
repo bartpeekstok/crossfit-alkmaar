@@ -733,7 +733,7 @@ const blogPosts: { [key: string]: any } = {
 
       <h2>Je eerste les: geen stress</h2>
       <p>Bij CrossFit Alkmaar start iedereen met een kennismakingsgesprek. We bespreken je doelen, eventuele beperkingen, en leggen uit hoe alles werkt. Geen verrassingen.</p>
-      <p>Daarna begin je met onze 28 Day Kickstart: 4 weken waarin je alle basis bewegingen leert in een kleine groep. Je krijgt persoonlijke aandacht en bouwt een goede techniek op voordat je naar de reguliere lessen gaat.</p>
+      <p>Daarna begin je met onze 28 Day Kickstart: 4 weken waarin je alle basisbewegingen leert in een kleine groep. Je krijgt persoonlijke aandacht en bouwt een goede techniek op voordat je naar de reguliere lessen gaat.</p>
 
       <h2>Wat zit er in een typische les?</h2>
       <p>Een CrossFit les duurt ongeveer 60 minuten en bestaat uit:</p>

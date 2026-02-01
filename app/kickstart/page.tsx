@@ -100,7 +100,7 @@ export default function KickstartPage() {
               <p className="text-gray-600">Je leert de basis van kracht- en conditietraining en we laten je ervaren dat trainen leuk is!</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Basis leefstijladvies</h3>
+              <h3 className="text-xl font-semibold mb-3">✓ Basisleefstijladvies</h3>
               <p className="text-gray-600">Naast training krijg je tips over voeding en herstel.</p>
             </div>
           </div>

@@ -155,7 +155,7 @@ export default function BlogPage() {
       id: 11,
       slug: "doelen-stellen-die-werken",
       title: "Doelen stellen die echt werken",
-      excerpt: "Waarom 'afvallen' geen goed doel is en hoe je wél doelen stelt die je motiveert en resultaat opleveren.",
+      excerpt: "Waarom 'afvallen' geen goed doel is en hoe je wél doelen stelt die je motiveren en resultaat opleveren.",
       image: "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=800&q=80",
       date: "7 januari 2025",
       category: "Mindset"

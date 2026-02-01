@@ -106,7 +106,7 @@ export default function HomePage() {
                 <li>✓ 12 trainingen in 4 weken</li>
                 <li>✓ Extra aandacht en uitleg</li>
                 <li>✓ Kleine groepen (max 6)</li>
-                <li>✓ Basis leefstijladvies</li>
+                <li>✓ Basisleefstijladvies</li>
               </ul>
               <Link href="/kickstart" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
@@ -233,7 +233,7 @@ export default function HomePage() {
             </button>
             <div className="bg-[#1e3a5f] text-white text-center py-6 px-8">
               <h2 className="text-2xl font-bold mb-2">VUL HIER JE GEGEVENS IN OM VAN START TE GAAN</h2>
-              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitness doelen</p>
+              <p className="text-gray-300">Neem de eerste stap op weg naar jouw fitnessdoelen</p>
             </div>
             <div className="bg-white p-6">
               <iframe src="https://ghl.crossfitalkmaar.com/widget/form/e3fbmRKr8THIIu0p0KAT" style={{ width: "100%", height: "350px", border: "none" }} title="Website form"></iframe>
