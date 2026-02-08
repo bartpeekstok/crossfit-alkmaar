@@ -118,12 +118,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     {
-      url: `${baseUrl}/faq`,
-      lastModified: new Date("2025-10-01"),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/meer-info`,
       lastModified: new Date("2025-10-01"),
       changeFrequency: "monthly",
