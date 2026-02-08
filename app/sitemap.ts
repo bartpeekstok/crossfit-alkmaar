@@ -99,12 +99,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/free-intro`,
-      lastModified: new Date("2025-10-01"),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/programmas`,
       lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
