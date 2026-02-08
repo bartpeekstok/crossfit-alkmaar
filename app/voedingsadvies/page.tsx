@@ -16,12 +16,15 @@ export default function VoedingsadviesPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="Voedingsadvies bij CrossFit Alkmaar - persoonlijke begeleiding voor optimale resultaten"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/voedingsadvies-header.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/voedingsadvies-header.jpg" alt="Voedingsadvies bij CrossFit Alkmaar - persoonlijke begeleiding voor optimale resultaten" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Voedingsadvies

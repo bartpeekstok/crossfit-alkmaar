@@ -24,12 +24,15 @@ export default function KickstartPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="28 day kickstart programma bij CrossFit Alkmaar - beginners trainen met coach"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/kickstart-header.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
         }}
       >
+        <img src="/images/kickstart-header.jpg" alt="28 day kickstart programma bij CrossFit Alkmaar - beginners trainen met coach" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             28 day kickstart

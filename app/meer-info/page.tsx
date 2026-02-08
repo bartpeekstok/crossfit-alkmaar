@@ -13,12 +13,15 @@ export default function MeerInfoPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="CrossFit Alkmaar - meer informatie over onze sportschool en programma's"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/meer-info-header.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/meer-info-header.jpg" alt="CrossFit Alkmaar - meer informatie over onze sportschool en programma's" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-8">
             Meer info

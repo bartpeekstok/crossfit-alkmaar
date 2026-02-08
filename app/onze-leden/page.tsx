@@ -31,12 +31,15 @@ export default function OnzeLedenPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="Leden van CrossFit Alkmaar - echte verhalen van echte mensen"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/onze-leden-header.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/onze-leden-header.jpg" alt="Leden van CrossFit Alkmaar - echte verhalen van echte mensen" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Onze Leden

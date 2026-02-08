@@ -16,12 +16,15 @@ export default function SmallGroupTrainingPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="Small group training CrossFit Alkmaar - kleine groep trainen met persoonlijke aandacht"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/small-group-training-header.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center top',
         }}
       >
+        <img src="/images/small-group-training-header.jpg" alt="Small group training CrossFit Alkmaar - kleine groep trainen met persoonlijke aandacht" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Small Group Training

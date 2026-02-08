@@ -40,6 +40,7 @@ export default function HomePage() {
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/hero.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Hier word je wél sterker en fitter

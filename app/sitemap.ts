@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const blogUrls = blogPosts.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date(),
+    lastModified: new Date("2025-01-15"),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -47,7 +47,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/en/kickstart`, priority: 0.7 },
   ].map((page) => ({
     ...page,
-    lastModified: new Date(),
+    lastModified: new Date("2025-01-15"),
     changeFrequency: "monthly" as const,
   }));
 
@@ -57,93 +57,93 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/de/kickstart`, priority: 0.7 },
   ].map((page) => ({
     ...page,
-    lastModified: new Date(),
+    lastModified: new Date("2025-01-15"),
     changeFrequency: "monthly" as const,
   }));
 
   return [
     {
       url: baseUrl,
-      lastModified: new Date(),
+      lastModified: new Date("2026-02-08"),
       changeFrequency: "weekly",
       priority: 1,
     },
     {
       url: `${baseUrl}/kickstart`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-12-01"),
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/groepslessen`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/personal-training`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/small-group-training`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/voedingsadvies`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/free-intro`,
+      lastModified: new Date("2025-10-01"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/programmas`,
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-12-01"),
       changeFrequency: "weekly",
       priority: 0.8,
     },
     ...blogUrls,
     {
-      url: `${baseUrl}/contact`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-    {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.3,
-    },
-    {
-      url: `${baseUrl}/algemene-voorwaarden`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-01-01"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/faq`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "monthly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/meer-info`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/onze-leden`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-10-01"),
       changeFrequency: "monthly",
       priority: 0.5,
     },
     {
       url: `${baseUrl}/vacatures`,
-      lastModified: new Date(),
+      lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",
       priority: 0.4,
     },
