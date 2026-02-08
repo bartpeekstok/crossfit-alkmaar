@@ -3,6 +3,7 @@
 import Script from 'next/script';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useEffect, Suspense } from 'react';
+import { trackEvent } from '../lib/analytics';
 
 const GA_MEASUREMENT_ID = 'G-TXV3GLCW7D';
 const GOOGLE_ADS_ID = 'AW-11137193907';
@@ -14,12 +15,11 @@ function GoogleAnalyticsTracking() {
   useEffect(() => {
     const url = pathname + (searchParams?.toString() ? `?${searchParams.toString()}` : '');
     
-    if (typeof window.gtag === 'function') {
-      window.gtag('event', 'page_view', {
-        page_path: url,
-        page_title: document.title,
-      });
-    }
+    // Send to GA4 + Supabase
+    trackEvent('page_view', {
+      page_path: url,
+      page_title: document.title,
+    });
   }, [pathname, searchParams]);
 
   return null;
