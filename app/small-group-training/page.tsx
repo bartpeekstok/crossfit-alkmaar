@@ -2,6 +2,8 @@
 
 import { useSmallGroupPopup } from "../components/SmallGroupPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
+import { trackCTAClick } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function SmallGroupTrainingPage() {
   const { openPopup } = useSmallGroupPopup();
@@ -33,7 +35,7 @@ export default function SmallGroupTrainingPage() {
             Train in een kleine groep van maximaal 6 personen. Persoonlijke aandacht, samen trainen.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'small-group-training'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -63,13 +65,7 @@ export default function SmallGroupTrainingPage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/HlqFX84ue3o"
-              title="Small Group Training CrossFit Alkmaar"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <TrackedYouTubeEmbed videoId="HlqFX84ue3o" title="Tim - 10 jaar lid" />
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Tim (10 jaar lid): 'Ik zit een stuk lekkerder in m'n vel, ik voel me fit en m'n hartslag in rust is ook omlaaggegaan, dus ik voel me er écht heel goed bij!'
@@ -110,7 +106,7 @@ export default function SmallGroupTrainingPage() {
             Plan een gratis intake en ontdek of Small Group Training bij jou past.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'small-group-training'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake

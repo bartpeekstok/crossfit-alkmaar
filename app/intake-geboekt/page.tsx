@@ -1,8 +1,15 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
+import { trackEvent } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function IntakeGeboektPage() {
+  useEffect(() => {
+    trackEvent("intake_booked", { page_location: "intake-geboekt" });
+  }, []);
+
   return (
     <div className="min-h-screen bg-gray-200">
       {/* Hero */}
@@ -40,13 +47,7 @@ export default function IntakeGeboektPage() {
             Zo ziet je intake eruit
           </h2>
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/-3KF7VGVzdk"
-              title="Intake bij CrossFit Alkmaar"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Intake bij CrossFit Alkmaar" />
           </div>
         </div>
       </section>

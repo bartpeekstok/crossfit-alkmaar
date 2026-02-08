@@ -2,6 +2,8 @@
 
 import { useGroepslessenPopup } from "../components/GroepslessenPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
+import { trackCTAClick } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function GroepslessenPage() {
   const { openPopup } = useGroepslessenPopup();
@@ -33,7 +35,7 @@ export default function GroepslessenPage() {
             Samen trainen, samen groeien. Gevarieerde workouts in een motiverende groep.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'groepslessen'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -63,13 +65,7 @@ export default function GroepslessenPage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/G9HkOnSsKg8"
-              title="Groepslessen CrossFit Alkmaar"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <TrackedYouTubeEmbed videoId="G9HkOnSsKg8" title="Malou - 9 jaar lid" />
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Malou (9 jaar lid): 'Ik ben door het sporten bij CFA meer gaan beseffen hoe fijn het is om lekker in je vel te zitten.'
@@ -110,7 +106,7 @@ export default function GroepslessenPage() {
             Plan een gratis intake en ervaar zelf de energie van onze groepslessen.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'groepslessen'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake

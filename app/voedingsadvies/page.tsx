@@ -2,6 +2,7 @@
 
 import { useVoedingsadviesPopup } from "../components/VoedingsadviesPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
+import { trackCTAClick } from "../lib/analytics";
 
 export default function VoedingsadviesPage() {
   const { openPopup } = useVoedingsadviesPopup();
@@ -33,7 +34,7 @@ export default function VoedingsadviesPage() {
             Training is maar de helft. Met het juiste voedingsadvies haal je het maximale uit je inspanningen.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'voedingsadvies'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -92,7 +93,7 @@ export default function VoedingsadviesPage() {
             Plan een gratis intake en ontdek hoe voedingsadvies jou kan helpen je doelen te bereiken.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'voedingsadvies'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake

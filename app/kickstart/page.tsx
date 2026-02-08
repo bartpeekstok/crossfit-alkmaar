@@ -2,6 +2,8 @@
 
 import { useKickstartPopup } from "../components/KickstartPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
+import { trackCTAClick } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function KickstartPage() {
   const { openPopup } = useKickstartPopup();
@@ -41,7 +43,7 @@ export default function KickstartPage() {
             De perfecte start naar een fitter en sterker leven. In 4 weken bouw je een sterke basis op.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('claim_plek_hero', 'kickstart'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Claim je plek voor {volgendeMaand}
@@ -71,13 +73,7 @@ export default function KickstartPage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
-            <iframe
-              className="w-full h-full"
-              src="https://www.youtube.com/embed/esc-52ZNdPY"
-              title="28-Day Kickstart"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe>
+            <TrackedYouTubeEmbed videoId="esc-52ZNdPY" title="Steven - Kickstart ervaring" />
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Steven, deelnemer kickstart november 2024: 'Houding en techniek zijn heel belangrijk, en daar zijn de trainers hier ongelooflijk goed in.'
@@ -118,7 +114,7 @@ export default function KickstartPage() {
             De Kickstart van {volgendeMaand} heeft nog plekken beschikbaar.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('meld_je_aan_footer', 'kickstart'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Meld je aan

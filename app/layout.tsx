@@ -32,6 +32,8 @@ import GoogleAnalytics from "./components/GoogleAnalytics";
 import ChatWidget from "./components/ChatWidget";
 import JsonLd from "./components/JsonLd";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
+import ScrollDepthTracker from "./components/ScrollDepthTracker";
+import FormSubmissionTracker from "./components/FormSubmissionTracker";
 
 export const metadata: Metadata = {
   title: {
@@ -149,6 +151,8 @@ export default function RootLayout({
                         <GroepslessenPopup />
                         <PricingPopup />
                         <CookieBanner />
+                        <ScrollDepthTracker />
+                        <FormSubmissionTracker />
                         <Analytics />
                       </PricingPopupProvider>
                     </GroepslessenPopupProvider>

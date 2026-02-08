@@ -2,6 +2,7 @@
 
 import { usePersonalTrainingPopup } from "../components/PersonalTrainingPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
+import { trackCTAClick } from "../lib/analytics";
 
 export default function PersonalTrainingPage() {
   const { openPopup } = usePersonalTrainingPopup();
@@ -33,7 +34,7 @@ export default function PersonalTrainingPage() {
             Eén-op-één begeleiding voor maximale resultaten. Volledig afgestemd op jouw doelen.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'personal-training'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -92,7 +93,7 @@ export default function PersonalTrainingPage() {
             Plan een gratis intake en ontdek hoe personal training jou kan helpen je doelen te bereiken.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'personal-training'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake

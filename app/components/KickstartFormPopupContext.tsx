@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { trackPopupOpen, trackPopupClose } from '../lib/analytics';
 
 interface KickstartFormPopupContextType {
   isOpen: boolean;
@@ -13,8 +14,8 @@ const KickstartFormPopupContext = createContext<KickstartFormPopupContextType | 
 export function KickstartFormPopupProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openPopup = () => setIsOpen(true);
-  const closePopup = () => setIsOpen(false);
+  const openPopup = () => { setIsOpen(true); trackPopupOpen('kickstart_form'); };
+  const closePopup = () => { setIsOpen(false); trackPopupClose('kickstart_form'); };
 
   return (
     <KickstartFormPopupContext.Provider value={{ isOpen, openPopup, closePopup }}>

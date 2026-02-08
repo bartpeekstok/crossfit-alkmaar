@@ -1,8 +1,24 @@
 "use client";
 
+import { useEffect } from "react";
 import Script from "next/script";
+import { trackFormSubmit, trackEvent } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function IntakePage() {
+  useEffect(() => {
+    // Track free-intro visit with source info
+    const referrer = document.referrer;
+    const isInternal = referrer.includes("crossfitalkmaar.com") && !referrer.includes("ghl.");
+    const source = isInternal ? "website_form" : referrer ? "external" : "direct";
+    trackEvent("free_intro_visit", { referrer_source: source, referrer_url: referrer || "direct" });
+
+    // Only count as form completion if user came from the website (popup form redirect)
+    if (isInternal) {
+      trackFormSubmit("form_completed");
+    }
+  }, []);
+
   return (
     <div
       className="min-h-screen"
@@ -33,13 +49,7 @@ export default function IntakePage() {
             
             {/* YouTube Video */}
             <div className="rounded-lg overflow-hidden shadow-2xl aspect-video max-w-xl">
-              <iframe 
-                className="w-full h-full" 
-                src="https://www.youtube.com/embed/-3KF7VGVzdk" 
-                title="Inside the Box: CrossFit Alkmaar" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-              ></iframe>
+              <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
             </div>
           </div>
 

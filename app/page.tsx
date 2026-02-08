@@ -5,6 +5,8 @@ import Script from "next/script";
 import { usePopup } from "./components/PopupContext";
 import FaqSchema from "./components/FaqSchema";
 import VideoSchema from "./components/VideoSchema";
+import { trackCTAClick, trackOutboundLink } from "./lib/analytics";
+import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
@@ -52,7 +54,7 @@ export default function HomePage() {
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
           >
             Gratis intake
@@ -65,7 +67,7 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <button onClick={openPopup} className="flex flex-col items-center text-center hover:scale-105 transition cursor-pointer">
+            <button onClick={() => { trackCTAClick('gratis_intake_stappen', 'home'); openPopup(); }} className="flex flex-col items-center text-center hover:scale-105 transition cursor-pointer">
               <div className="w-16 h-16 bg-blue-900 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4">1</div>
               <h3 className="text-xl font-semibold mb-3">Gratis intake</h3>
               <p className="text-gray-600">Kom langs voor een gratis intake. We horen graag alles over je doelen, waar je tegenaan loopt en wat je al hebt geprobeerd.</p>
@@ -88,7 +90,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/1qhbmRPtysU" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <TrackedYouTubeEmbed videoId="1qhbmRPtysU" title="Jarrald - Kickstart ervaring" />
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Jarrald (deelnemer kickstart november 2024): 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging, nu 20 kilo afgevallen.'
@@ -145,7 +147,7 @@ export default function HomePage() {
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
             <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
             <button
-              onClick={openPopup}
+              onClick={() => { trackCTAClick('gratis_intake_mid', 'home'); openPopup(); }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
             >
               Gratis intake
@@ -158,7 +160,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <div className="rounded-lg overflow-hidden shadow-lg aspect-video">
-            <iframe className="w-full h-full" src="https://www.youtube.com/embed/a2zbZIlU27Y" title="CrossFit Alkmaar" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <TrackedYouTubeEmbed videoId="a2zbZIlU27Y" title="Bert - 2 jaar lid" />
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Bert (2 jaar lid): 'Ik moet zeggen, ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind'
@@ -187,11 +189,12 @@ export default function HomePage() {
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            <a 
+            <a
               href="https://www.google.com/search?q=crossfit+alkmaar#lrd=0x47cf573834f8b5b7:0x4a55c3c9c9a67e0e,1"
-              target="_blank" 
+              target="_blank"
               rel="noopener noreferrer"
               className="text-center hover:scale-105 transition cursor-pointer"
+              onClick={() => trackOutboundLink('google_reviews')}
             >
               <div className="text-5xl font-bold text-blue-900 mb-2">260+</div>
               <p className="text-gray-600">Google Reviews ⭐</p>
@@ -247,7 +250,7 @@ export default function HomePage() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen.</p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'home'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer"
           >
             Gratis intake

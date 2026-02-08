@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { trackPopupOpen, trackPopupClose } from '../lib/analytics';
 
 interface PersonalTrainingPopupContextType {
   isOpen: boolean;
@@ -13,8 +14,8 @@ const PersonalTrainingPopupContext = createContext<PersonalTrainingPopupContextT
 export function PersonalTrainingPopupProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openPopup = () => setIsOpen(true);
-  const closePopup = () => setIsOpen(false);
+  const openPopup = () => { setIsOpen(true); trackPopupOpen('personal_training'); };
+  const closePopup = () => { setIsOpen(false); trackPopupClose('personal_training'); };
 
   return (
     <PersonalTrainingPopupContext.Provider value={{ isOpen, openPopup, closePopup }}>

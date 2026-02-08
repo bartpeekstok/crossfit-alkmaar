@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { trackPopupOpen, trackPopupClose } from '../lib/analytics';
 
 interface PricingPopupContextType {
   isOpen: boolean;
@@ -13,8 +14,8 @@ const PricingPopupContext = createContext<PricingPopupContextType | undefined>(u
 export function PricingPopupProvider({ children }: { children: ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
-  const openPopup = () => setIsOpen(true);
-  const closePopup = () => setIsOpen(false);
+  const openPopup = () => { setIsOpen(true); trackPopupOpen('pricing'); };
+  const closePopup = () => { setIsOpen(false); trackPopupClose('pricing'); };
 
   return (
     <PricingPopupContext.Provider value={{ isOpen, openPopup, closePopup }}>

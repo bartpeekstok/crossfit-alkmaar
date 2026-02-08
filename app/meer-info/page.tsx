@@ -3,6 +3,7 @@
 import { usePopup } from "../components/PopupContext";
 import { usePricingPopup } from "../components/PricingPopupContext";
 import Script from "next/script";
+import { trackCTAClick } from "../lib/analytics";
 
 export default function MeerInfoPage() {
   const { openPopup } = usePopup();
@@ -27,7 +28,7 @@ export default function MeerInfoPage() {
             Meer info
           </h1>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'meer-info'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -65,7 +66,7 @@ export default function MeerInfoPage() {
           </p>
           <div className="text-center">
             <button
-              onClick={openPricingPopup}
+              onClick={() => { trackCTAClick('tarieven_info', 'meer-info'); openPricingPopup(); }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
             >
               Vraag meer informatie aan

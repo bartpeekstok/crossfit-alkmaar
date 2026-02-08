@@ -1,6 +1,8 @@
 "use client";
 
 import { usePopup } from "../components/PopupContext";
+import { trackCTAClick } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function OnzeLedenPage() {
   const { openPopup } = usePopup();
@@ -48,7 +50,7 @@ export default function OnzeLedenPage() {
             Echte verhalen van echte mensen. Ontdek waarom onze leden graag bij CrossFit Alkmaar trainen.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_hero', 'onze-leden'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
@@ -72,13 +74,7 @@ export default function OnzeLedenPage() {
                 {shortVideos.map((video) => (
                   <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
                     <div className="aspect-[9/16]">
-                      <iframe
-                        className="w-full h-full"
-                        src={`https://www.youtube.com/embed/${video.id}`}
-                        title="YouTube short"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                      <TrackedYouTubeEmbed videoId={video.id} title={video.caption} />
                     </div>
                     <p className="text-center text-gray-900 p-4 text-sm font-medium italic">
                       {video.caption}
@@ -95,13 +91,7 @@ export default function OnzeLedenPage() {
             {normalVideos.map((video) => (
               <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
                 <div className="aspect-video">
-                  <iframe
-                    className="w-full h-full"
-                    src={`https://www.youtube.com/embed/${video.id}`}
-                    title="YouTube video"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+                  <TrackedYouTubeEmbed videoId={video.id} title={video.caption} />
                 </div>
                 <p className="text-center text-gray-900 p-4 text-lg font-medium italic">
                   {video.caption}
@@ -120,7 +110,7 @@ export default function OnzeLedenPage() {
             Plan een gratis intake en ontdek of CrossFit Alkmaar bij jou past.
           </p>
           <button
-            onClick={openPopup}
+            onClick={() => { trackCTAClick('gratis_intake_footer', 'onze-leden'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
             Gratis intake
