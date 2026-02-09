@@ -9,12 +9,14 @@ export default function IntakePage() {
   useEffect(() => {
     // Track free-intro visit with source info
     const referrer = document.referrer;
-    const isInternal = referrer.includes("crossfitalkmaar.com") && !referrer.includes("ghl.");
-    const source = isInternal ? "website_form" : referrer ? "external" : "direct";
+    const isFromGHL = referrer.includes("ghl.crossfitalkmaar.com");
+    const isFromSite = referrer.includes("crossfitalkmaar.com") && !isFromGHL;
+    const isFormRedirect = isFromGHL || isFromSite;
+    const source = isFromGHL ? "ghl_form" : isFromSite ? "website_form" : referrer ? "external" : "direct";
     trackEvent("free_intro_visit", { referrer_source: source, referrer_url: referrer || "direct" });
 
-    // Only count as form completion if user came from the website (popup form redirect)
-    if (isInternal) {
+    // Count as form completion if user came from GHL form or website popup
+    if (isFormRedirect) {
       trackFormSubmit("form_completed");
     }
   }, []);
