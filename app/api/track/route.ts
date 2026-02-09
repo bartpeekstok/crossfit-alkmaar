@@ -17,6 +17,13 @@ export async function POST(request: NextRequest) {
 
     const userAgent = request.headers.get('user-agent') || '';
 
+    // Filter bots and spam traffic
+    const ua = userAgent.toLowerCase();
+    const isBot = /bot|spider|crawler|scraper|curl|wget|python|java\/|go-http|headless|phantom|selenium/.test(ua);
+    if (isBot) {
+      return new NextResponse(null, { status: 204 });
+    }
+
     await supabase.from('website_events').insert({
       event_name,
       event_params: event_params || {},
