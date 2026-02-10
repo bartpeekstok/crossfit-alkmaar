@@ -2691,13 +2691,13 @@ export default function BlogPostPage() {
           <div className="bg-white rounded-lg shadow-sm p-8 mt-8 text-center">
             <h3 className="text-2xl font-bold mb-4">Zelf ervaren?</h3>
             <p className="text-gray-600 mb-6">
-              Plan een gratis intake en ontdek wat CrossFit Alkmaar voor jou kan betekenen.
+              Kom vrijblijvend kennismaken en ontdek wat CrossFit Alkmaar voor jou kan betekenen.
             </p>
             <button
               onClick={openPopup}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-8 rounded-lg transition"
             >
-              Gratis intake
+              Plan je kennismaking
             </button>
           </div>
 

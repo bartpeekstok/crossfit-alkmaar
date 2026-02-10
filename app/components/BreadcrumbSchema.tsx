@@ -16,7 +16,7 @@ const pathNames: { [key: string]: string } = {
   "privacy": "Privacy Policy",
   "meer-info": "Meer Informatie",
   "programmas": "Programma's",
-  "free-intro": "Gratis Intake",
+  "free-intro": "Gratis Kennismaking",
 };
 
 export default function BreadcrumbSchema() {

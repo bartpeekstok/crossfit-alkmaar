@@ -33,7 +33,7 @@ export default function Header() {
     smallGroup: "Small Group Training",
     nutrition: isEnglish ? "Nutrition coaching" : isGerman ? "Ernährungsberatung" : "Voedingsadvies",
     blog: "Blog",
-    freeIntro: isEnglish ? "Free intro" : isGerman ? "Kostenloses Probetraining" : "Gratis intake",
+    freeIntro: isEnglish ? "Free intro" : isGerman ? "Kostenloses Probetraining" : "Gratis kennismaking",
   };
 
   const closeMobileMenu = () => {

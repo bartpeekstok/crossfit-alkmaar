@@ -31,7 +31,7 @@ export default function MeerInfoPage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'meer-info'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>

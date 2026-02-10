@@ -274,7 +274,7 @@ export default function BlogPage() {
             onClick={openPopup}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -327,13 +327,13 @@ export default function BlogPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Zelf ervaren wat CrossFit voor jou kan betekenen?</h2>
           <p className="text-xl mb-8">
-            Plan een gratis intake en ontdek hoe wij je kunnen helpen je doelen te bereiken.
+            Kom vrijblijvend kennismaken en ontdek hoe wij je kunnen helpen je doelen te bereiken.
           </p>
           <button
             onClick={openPopup}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

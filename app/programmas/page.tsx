@@ -31,7 +31,7 @@ export default function HomePage() {
             onClick={() => setPopupOpen(true)}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -78,7 +78,7 @@ export default function HomePage() {
               onClick={() => setPopupOpen(true)}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
             >
-              Gratis intake
+              Kom vrijblijvend kennismaken
             </button>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function HomePage() {
               onClick={() => setPopupOpen(true)}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
             >
-              Gratis intake
+              Kom vrijblijvend kennismaken
             </button>
           </div>
         </div>
@@ -211,12 +211,12 @@ export default function HomePage() {
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Klaar om te starten?</h2>
-          <p className="text-xl mb-8">Plan een gratis kennismaking. Geen verplichtingen.</p>
+          <p className="text-xl mb-8">Kom vrijblijvend langs. Geen verplichtingen.</p>
           <button
             onClick={() => setPopupOpen(true)}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg cursor-pointer"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

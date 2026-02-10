@@ -38,7 +38,7 @@ export default function GroepslessenPage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'groepslessen'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -103,13 +103,13 @@ export default function GroepslessenPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">
-            Plan een gratis intake en ervaar zelf de energie van onze groepslessen.
+            Kom vrijblijvend kennismaken en ervaar zelf de energie van onze groepslessen.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_footer', 'groepslessen'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

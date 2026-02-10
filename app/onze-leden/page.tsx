@@ -53,7 +53,7 @@ export default function OnzeLedenPage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'onze-leden'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -107,13 +107,13 @@ export default function OnzeLedenPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Word ook onderdeel van onze community</h2>
           <p className="text-xl mb-8">
-            Plan een gratis intake en ontdek of CrossFit Alkmaar bij jou past.
+            Kom vrijblijvend kennismaken en ontdek of CrossFit Alkmaar bij jou past.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_footer', 'onze-leden'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

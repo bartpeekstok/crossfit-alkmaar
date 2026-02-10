@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     template: "%s | CrossFit Alkmaar",
   },
   description:
-    "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+. Plan je gratis intake!",
+    "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+. Plan je gratis kennismaking!",
   keywords: [
     "sportschool Alkmaar",
     "fitness Alkmaar",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     siteName: "CrossFit Alkmaar",
     title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
     description:
-      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis intake!",
+      "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis kennismaking!",
     images: [
       {
         url: "https://crossfitalkmaar.com/images/hero.jpg",

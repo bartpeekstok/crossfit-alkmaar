@@ -38,7 +38,7 @@ export default function SmallGroupTrainingPage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'small-group-training'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -103,13 +103,13 @@ export default function SmallGroupTrainingPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">
-            Plan een gratis intake en ontdek of Small Group Training bij jou past.
+            Kom vrijblijvend kennismaken en ontdek of Small Group Training bij jou past.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_footer', 'small-group-training'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

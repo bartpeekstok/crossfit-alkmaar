@@ -90,7 +90,7 @@ export default function FAQPage() {
         {
           question: "Een bekende van me heeft interesse, wat moet hij/zij doen?",
           answer: (
-            <>Hij/zij kan zelf een gratis intake boeken, dat kan heel makkelijk <a href="https://crossfitalkmaar.com/free-intro/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Als er geen geschikt moment in de planner staat, kan hij/zij gegevens op onze website achterlaten.</>
+            <>Hij/zij kan zelf een gratis kennismaking plannen, dat kan heel makkelijk <a href="https://crossfitalkmaar.com/free-intro/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Als er geen geschikt moment in de planner staat, kan hij/zij gegevens op onze website achterlaten.</>
           ),
         },
         {

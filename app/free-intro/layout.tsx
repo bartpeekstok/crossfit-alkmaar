@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gratis Intake",
+  title: "Gratis Kennismaking",
   description:
-    "Boek een gratis intake bij CrossFit Alkmaar. Maak kennis met onze coaches, bekijk de faciliteiten en ontdek welk programma bij jou past.",
+    "Plan je gratis kennismaking bij CrossFit Alkmaar. Maak kennis met onze coaches, bekijk de faciliteiten en ontdek welk programma bij jou past.",
   robots: {
     index: false,
     follow: false,
   },
   openGraph: {
-    title: "Gratis Intake | CrossFit Alkmaar",
+    title: "Gratis Kennismaking | CrossFit Alkmaar",
     description:
-      "Boek een gratis intake. Maak kennis met onze coaches en ontdek welk programma bij jou past.",
+      "Plan je gratis kennismaking. Maak kennis met onze coaches en ontdek welk programma bij jou past.",
     url: "https://crossfitalkmaar.com/free-intro",
   },
   alternates: {

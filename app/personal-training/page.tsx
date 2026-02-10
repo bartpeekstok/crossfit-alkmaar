@@ -37,7 +37,7 @@ export default function PersonalTrainingPage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'personal-training'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
@@ -90,13 +90,13 @@ export default function PersonalTrainingPage() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
           <p className="text-xl mb-8">
-            Plan een gratis intake en ontdek hoe personal training jou kan helpen je doelen te bereiken.
+            Kom vrijblijvend kennismaken en ontdek hoe personal training jou kan helpen je doelen te bereiken.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_footer', 'personal-training'); openPopup(); }}
             className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
           >
-            Gratis intake
+            Plan je kennismaking
           </button>
         </div>
       </section>

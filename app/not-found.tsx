@@ -23,7 +23,7 @@ export default function NotFound() {
             href="/free-intro"
             className="bg-white hover:bg-gray-50 text-blue-900 font-semibold py-3 px-8 rounded-lg border border-blue-900 transition"
           >
-            Plan een intake
+            Plan een kennismaking
           </Link>
         </div>
       </div>

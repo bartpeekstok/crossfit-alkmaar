@@ -25,7 +25,7 @@ export default function IntakePage() {
     <div
       className="min-h-screen"
       role="img"
-      aria-label="Gratis intake bij CrossFit Alkmaar - boek een gesprek met een coach"
+      aria-label="Gratis kennismaking bij CrossFit Alkmaar - boek een gesprek met een coach"
       style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero.jpg')`,
         backgroundSize: 'cover',
@@ -33,7 +33,7 @@ export default function IntakePage() {
         backgroundAttachment: 'fixed',
       }}
     >
-      <img src="/images/hero.jpg" alt="Gratis intake bij CrossFit Alkmaar - boek een gesprek met een coach" className="sr-only" width={1200} height={600} />
+      <img src="/images/hero.jpg" alt="Gratis kennismaking bij CrossFit Alkmaar - boek een gesprek met een coach" className="sr-only" width={1200} height={600} />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           
@@ -43,7 +43,7 @@ export default function IntakePage() {
               Praat met één van onze coaches
             </p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 uppercase">
-              Boek een gratis intake
+              Plan je gratis kennismaking
             </h1>
             <p className="text-lg text-gray-300 mb-8 max-w-xl">
               Bespreek je doelen met één van onze coaches. We horen graag alles over je ervaring, uitdagingen en je sterke punten. Samen maken we een plan dat bij jou past.
@@ -64,7 +64,7 @@ export default function IntakePage() {
             <iframe
               src="https://ghl.crossfitalkmaar.com/widget/booking/h9ZPe6IvVFloL7y9V5Rx"
               className="w-full min-h-[700px] border-0"
-              title="Boek een gratis intake"
+              title="Plan je gratis kennismaking"
             ></iframe>
           </div>
 
