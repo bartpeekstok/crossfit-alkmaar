@@ -4,8 +4,31 @@ function getSessionId(): string {
   if (!sessionId) {
     sessionId = crypto.randomUUID();
     sessionStorage.setItem('analytics_session_id', sessionId);
+    // Capture UTM params on session start
+    const params = new URLSearchParams(window.location.search);
+    const utmSource = params.get('utm_source');
+    const utmMedium = params.get('utm_medium');
+    const utmCampaign = params.get('utm_campaign');
+    if (utmSource || utmMedium || utmCampaign) {
+      sessionStorage.setItem('utm_source', utmSource || '');
+      sessionStorage.setItem('utm_medium', utmMedium || '');
+      sessionStorage.setItem('utm_campaign', utmCampaign || '');
+    }
   }
   return sessionId;
+}
+
+function getUtmParams(): Record<string, string> {
+  if (typeof window === 'undefined') return {};
+  const source = sessionStorage.getItem('utm_source');
+  const medium = sessionStorage.getItem('utm_medium');
+  const campaign = sessionStorage.getItem('utm_campaign');
+  if (!source && !medium && !campaign) return {};
+  return {
+    ...(source ? { utm_source: source } : {}),
+    ...(medium ? { utm_medium: medium } : {}),
+    ...(campaign ? { utm_campaign: campaign } : {}),
+  };
 }
 
 function sendToSupabase(eventName: string, params?: Record<string, string | number | boolean>) {
@@ -13,7 +36,7 @@ function sendToSupabase(eventName: string, params?: Record<string, string | numb
 
   const payload = JSON.stringify({
     event_name: eventName,
-    event_params: params || {},
+    event_params: { ...(params || {}), ...getUtmParams() },
     page_path: window.location.pathname,
     session_id: getSessionId(),
     referrer: document.referrer || '',
