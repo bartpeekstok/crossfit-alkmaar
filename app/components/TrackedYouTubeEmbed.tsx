@@ -123,10 +123,11 @@ export default function TrackedYouTubeEmbed({ videoId, title, aspectRatio = "vid
         aria-label={`Speel video: ${title}`}
       >
         <img
-          src={`https://img.youtube.com/vi/${videoId}/hqdefault.jpg`}
+          src={`https://img.youtube.com/vi/${videoId}/maxresdefault.jpg`}
           alt={title}
           className="w-full h-full object-cover"
           loading="lazy"
+          onError={(e) => { e.currentTarget.src = `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`; }}
         />
         <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition">
           <svg className="w-16 h-16 text-white opacity-90 group-hover:opacity-100 transition drop-shadow-lg" viewBox="0 0 68 48">
