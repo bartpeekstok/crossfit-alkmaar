@@ -12,6 +12,9 @@ import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 export default function HomePage() {
   const { openPopup } = usePopup();
   const heroCta = getVariant("hero_cta");
+  const heroHeadline = getVariant("hero_headline");
+  const heroSubtitle = getVariant("hero_subtitle");
+  const ctaMid = getVariant("cta_mid");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -47,10 +50,10 @@ export default function HomePage() {
         <img src="/images/hero.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Hier word je wél sterker en fitter
+            {heroHeadline}
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Kleine groepen, professionele coaches en schaalbaar op elk niveau.
+            {heroSubtitle}
           </p>
           <p className="text-lg mb-8 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
@@ -147,7 +150,7 @@ export default function HomePage() {
       <section className="py-12 px-6 bg-gray-200">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-            <h3 className="text-2xl font-bold mb-4">Klaar om te beginnen?</h3>
+            <h3 className="text-2xl font-bold mb-4">{ctaMid}</h3>
             <button
               onClick={() => { trackCTAClick('gratis_intake_mid', 'home'); openPopup(); }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"

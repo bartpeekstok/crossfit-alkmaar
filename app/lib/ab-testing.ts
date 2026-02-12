@@ -11,6 +11,27 @@ export const AB_TESTS = {
       "Zet de eerste stap naar een fitter leven",
     ],
   },
+  hero_headline: {
+    id: "hero_headline",
+    variants: [
+      "Hier word je wél sterker en fitter",
+      "Begin met een fitter en sterker leven",
+    ],
+  },
+  hero_subtitle: {
+    id: "hero_subtitle",
+    variants: [
+      "Kleine groepen, professionele coaches en schaalbaar op elk niveau.",
+      "Geen ervaring nodig. Onze coaches begeleiden je bij elke stap.",
+    ],
+  },
+  cta_mid: {
+    id: "cta_mid",
+    variants: [
+      "Klaar om te beginnen?",
+      "Benieuwd of het iets voor jou is?",
+    ],
+  },
 } as const;
 
 type TestId = keyof typeof AB_TESTS;
