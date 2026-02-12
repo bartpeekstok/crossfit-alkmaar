@@ -5,9 +5,10 @@ import { getVariant } from "../lib/ab-testing";
 
 export default function IntakePopup() {
   const { isOpen, closePopup } = usePopup();
-  const headerText = getVariant("popup_intake_header");
 
   if (!isOpen) return null;
+
+  const headerText = getVariant("popup_intake_header");
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center">
