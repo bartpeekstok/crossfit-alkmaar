@@ -280,11 +280,37 @@ const nextConfig: NextConfig = {
         destination: "/blog",
         permanent: true,
       },
+      // Missing old program pages
+      {
+        source: "/programmas/small-group-training",
+        destination: "/small-group-training",
+        permanent: true,
+      },
+      {
+        source: "/programmas/small-group-training/",
+        destination: "/small-group-training",
+        permanent: true,
+      },
+      {
+        source: "/programmas/strong-moms",
+        destination: "/programmas",
+        permanent: true,
+      },
+      {
+        source: "/programmas/strong-moms/",
+        destination: "/programmas",
+        permanent: true,
+      },
       // WordPress artifacts
       {
         source: "/wp-content/:path*",
         destination: "/",
         permanent: true,
+      },
+      {
+        source: "/wp-admin/:path*",
+        destination: "/",
+        permanent: false,
       },
       {
         source: "/embed",
