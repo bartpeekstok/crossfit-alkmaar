@@ -116,7 +116,7 @@ export default function TrackedYouTubeEmbed({ videoId, title, aspectRatio = "vid
 
   // Default: thumbnail with play button
   return (
-    <div ref={containerRef}>
+    <div ref={containerRef} className="w-full h-full">
       <button
         onClick={handlePlay}
         className="relative w-full h-full group cursor-pointer bg-black"
