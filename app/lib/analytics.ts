@@ -90,9 +90,10 @@ export function trackFormSubmit(formName: string) {
 }
 
 // Video tracking
-export function trackVideoPlay(videoTitle: string) {
+export function trackVideoPlay(videoTitle: string, trigger: 'click' | 'autoplay' = 'click') {
   trackEvent('video_play', {
     video_title: videoTitle,
+    trigger,
   });
 }
 
