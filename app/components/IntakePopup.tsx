@@ -1,9 +1,11 @@
 "use client";
 
 import { usePopup } from "./PopupContext";
+import { getVariant } from "../lib/ab-testing";
 
 export default function IntakePopup() {
   const { isOpen, closePopup } = usePopup();
+  const headerText = getVariant("popup_intake_header");
 
   if (!isOpen) return null;
 
@@ -30,7 +32,7 @@ export default function IntakePopup() {
         {/* Blue header */}
         <div style={{ backgroundColor: '#1e3a8a', padding: '20px 24px', textAlign: 'center' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', textTransform: 'uppercase', margin: 0 }}>
-            Laat hier je gegevens achter
+            {headerText}
           </h2>
           <p style={{ color: '#ffffff', marginTop: '4px', marginBottom: 0 }}>
             We nemen snel contact met je op

@@ -1,9 +1,11 @@
 "use client";
 
 import { usePricingPopup } from "./PricingPopupContext";
+import { getVariant } from "../lib/ab-testing";
 
 export default function PricingPopup() {
   const { isOpen, closePopup } = usePricingPopup();
+  const headerText = getVariant("popup_pricing_header");
 
   if (!isOpen) return null;
 
@@ -30,7 +32,7 @@ export default function PricingPopup() {
         {/* Blue header */}
         <div style={{ backgroundColor: '#1e3a8a', padding: '20px 24px', textAlign: 'center' }}>
           <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', textTransform: 'uppercase', margin: 0 }}>
-            Meer informatie over onze programma's en tarieven
+            {headerText}
           </h2>
         </div>
 

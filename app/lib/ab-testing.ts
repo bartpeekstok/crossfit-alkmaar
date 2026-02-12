@@ -32,6 +32,20 @@ export const AB_TESTS = {
       "Benieuwd of het iets voor jou is?",
     ],
   },
+  popup_pricing_header: {
+    id: "popup_pricing_header",
+    variants: [
+      "Meer informatie over onze programma's en tarieven",
+      "Ontdek welk programma bij jou past",
+    ],
+  },
+  popup_intake_header: {
+    id: "popup_intake_header",
+    variants: [
+      "Laat hier je gegevens achter",
+      "Plan je gratis en vrijblijvende kennismaking",
+    ],
+  },
 } as const;
 
 type TestId = keyof typeof AB_TESTS;
