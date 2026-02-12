@@ -6,10 +6,12 @@ import { usePopup } from "./components/PopupContext";
 import FaqSchema from "./components/FaqSchema";
 import VideoSchema from "./components/VideoSchema";
 import { trackCTAClick, trackOutboundLink } from "./lib/analytics";
+import { getVariant } from "./lib/ab-testing";
 import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
+  const heroCta = getVariant("hero_cta");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -57,7 +59,7 @@ export default function HomePage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
           >
-            Plan je gratis kennismaking
+            {heroCta}
           </button>
         </div>
       </section>
