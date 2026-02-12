@@ -74,7 +74,7 @@ export default function OnzeLedenPage() {
                 {shortVideos.map((video) => (
                   <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
                     <div className="aspect-[9/16]">
-                      <TrackedYouTubeEmbed videoId={video.id} title={video.caption} />
+                      <TrackedYouTubeEmbed videoId={video.id} title={video.caption} autoplay={false} />
                     </div>
                     <p className="text-center text-gray-900 p-4 text-sm font-medium italic">
                       {video.caption}
@@ -91,7 +91,7 @@ export default function OnzeLedenPage() {
             {normalVideos.map((video) => (
               <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
                 <div className="aspect-video">
-                  <TrackedYouTubeEmbed videoId={video.id} title={video.caption} />
+                  <TrackedYouTubeEmbed videoId={video.id} title={video.caption} autoplay={false} />
                 </div>
                 <p className="text-center text-gray-900 p-4 text-lg font-medium italic">
                   {video.caption}

@@ -7,9 +7,10 @@ interface TrackedYouTubeEmbedProps {
   videoId: string;
   title: string;
   aspectRatio?: "video" | "short";
+  autoplay?: boolean;
 }
 
-export default function TrackedYouTubeEmbed({ videoId, title, aspectRatio = "video" }: TrackedYouTubeEmbedProps) {
+export default function TrackedYouTubeEmbed({ videoId, title, aspectRatio = "video", autoplay = true }: TrackedYouTubeEmbedProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [autoplayTriggered, setAutoplayTriggered] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -27,7 +28,7 @@ export default function TrackedYouTubeEmbed({ videoId, title, aspectRatio = "vid
 
   // Intersection Observer for autoplay on scroll
   useEffect(() => {
-    if (isPlaying) return;
+    if (isPlaying || !autoplay) return;
 
     const el = containerRef.current;
     if (!el) return;
