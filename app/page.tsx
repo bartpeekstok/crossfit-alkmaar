@@ -12,8 +12,6 @@ import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 export default function HomePage() {
   const { openPopup } = usePopup();
   const heroCta = getVariant("hero_cta");
-  const heroHeadline = getVariant("hero_headline");
-  const heroSubtitle = getVariant("hero_subtitle");
   const ctaMid = getVariant("cta_mid");
 
   return (
@@ -50,10 +48,10 @@ export default function HomePage() {
         <img src="/images/hero.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {heroHeadline}
+            Hier word je wél sterker en fitter
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            {heroSubtitle}
+            Kleine groepen, professionele coaches en schaalbaar op elk niveau.
           </p>
           <p className="text-lg mb-8 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
