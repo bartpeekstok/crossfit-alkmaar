@@ -11,13 +11,6 @@ export const AB_TESTS = {
       "Moe van sportscholen waar je niet naartoe gaat?",
     ],
   },
-  hero_subtitle: {
-    id: "hero_subtitle",
-    variants: [
-      "Kleine groepen, professionele coaches en schaalbaar op elk niveau.",
-      "Geen ervaring nodig. Onze coaches begeleiden je bij elke stap.",
-    ],
-  },
   cta_mid_v2: {
     id: "cta_mid_v2",
     variants: [
