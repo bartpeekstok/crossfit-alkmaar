@@ -14,7 +14,7 @@ export const AB_TESTS = {
   hero_headline: {
     id: "hero_headline",
     variants: [
-      "Hier word je wél sterker en fitter",
+      "Ontdek waarom 300+ Alkmaarders hier trainen",
       "Moe van sportscholen waar je niet naartoe gaat?",
     ],
   },
