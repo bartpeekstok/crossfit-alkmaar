@@ -39,6 +39,256 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Wat zou het toch mega mooi zijn als dit het beeld wordt dat we voor ons zien als we het woord 'sportschool' horen: een plek waar mensen graag vaak komen en waar ze wél hun resultaten halen.</p>
     `,
   },
+  "wijze-lessen": {
+    title: "Wijze lessen",
+    date: "2026-02-16",
+    category: "Community",
+    image: "/images/blog/Blog wijze lessen.jpg",
+    excerpt: "Over speeches, stoere foto's, trots zijn op jezelf en hoe CrossFit Alkmaar meer brengt dan alleen een fit lijf.",
+    content: `
+      <p>Afgelopen januari gaf ik een speech aan honderdzeventig(!) man op de viering van ons tienjarig jubileum van CrossFit Alkmaar. Die ging natuurlijk vooral over hoe Joost en ik die toko vanaf niks hebben opgebouwd. Vandaag gaf ik weer de presentatie die ik elke twee maanden geef bij Wij zijn BROER! aan de jongeren die daar in behandeling zitten.</p>
+
+      <p>Die presentatie gaat over mijn jeugd waarin ik wel een tijdje 'van het padje' ben geweest, hoe ik daarna bijzondere dingen heb gedaan bij het Korps Mariniers en haar special forces en daarna ook over het starten en opbouwen van CrossFit Alkmaar.</p>
+
+      <p>Met het verhaal dat ik bij Wij zijn BROER! vertel, probeer ik de jongeren te inspireren om zelf in actie te komen als ze iets willen veranderen, dat ze niet naar anderen moeten luisteren die zeggen dat iets onmogelijk is en dat het heerlijk is als je iets vindt waar je gewoon smerig goed in bent!</p>
+
+      <p>Ik laat dan natuurlijk allemaal stoere foto's en films van bij de mariniers en CrossFit Alkmaar zien. En ook altijd een paar speldjes en onderscheidingen waar ik mega trots op ben. Als ik dan vraag of er iemand anders iets heeft waar hij/zij trots op is, gaan er altijd maar weinig handen de lucht in. Best heftig eigenlijk, ik hoop ze dan altijd te inspireren met mijn verhaal en vertel ze ook dat je gewoon mag zeggen dat je trots bent op iets waar je hard voor hebt gewerkt. Zoals voor mij mijn tijd bij de special forces en alle bijzondere dingen die ik daar gedaan heb en het opbouwen van CrossFit Alkmaar.</p>
+
+      <p>De 'lessen' die ik de jeugd bij Wij zijn BROER! meegeef zijn hoop ik waardevol. Net zoals het werk dat we bij CrossFit Alkmaar doen. Bij CrossFit Alkmaar helpen we onze leden dus al tien jaar naar een sterkere en fittere versie van zichzelf. Ik ben altijd vooral bezig geweest met het fysieke aspect hiervan, maar weet sinds een aantal jaar ook hoeveel we op het mentale vlak voor mensen kunnen betekenen.</p>
+
+      <p>Zo help ik nu iemand die ik drie keer per week ontmoet bij CrossFit Alkmaar. We doen vooral sporten, maar dit brengt hem veel meer dan alleen een fit lijf. Hij zat al een tijd thuis voor zich uit te staren, zonder doel. Met onze afspraken geef ik hem al een ritme en een reden om z'n nest uit te komen. Daarnaast weet ik zeker dat ik hem op zoveel andere manieren kan helpen, gebruik makend van mijn ervaringen in mijn werk en mijn leven. En daar ben ik dan weer trots op!</p>
+
+      <p>Ben jij ook op zoek naar positieve verandering in je leven? Begin eens met drie keer per week te trainen, moet je eens opletten wat dat je nog meer brengt naast een fit lijf! Natuurlijk vind ik het mooi (en verstandig) als je dat bij ons komt doen, geef een gil als we je erbij kunnen helpen.</p>
+    `,
+  },
+  "doe-je-het-zelf-of-schakel-je-een-professional-in": {
+    title: "Doe je het zelf of schakel je een professional in?",
+    date: "2026-02-16",
+    category: "Training",
+    image: "/images/blog/Blog professional.jpg",
+    excerpt: "Waarom huur je wél een schilder in voor je huis, maar geen coach voor je fitnessdoelen?",
+    content: \`
+      <p>Stel je voor: je wilt je huis een frisse nieuwe look geven. De muren zijn grauw en je wilt een levendige kleur die je woning tot leven brengt. Je besluit de schilderkwast op te pakken en zelf aan de slag te gaan. Maar halverwege merk je dat het resultaat niet aan je verwachtingen voldoet: strepen, druipers en oneffenheden zijn overal zichtbaar. Wat doe je dan? Je belt een professionele schilder.</p>
+
+      <p>Nog eentje: je badkamer moet worden gestukt. Het is een specialistische klus die precisie en vakmanschap vereist. Maar jij denkt: 'Hoe moeilijk kan het nou zijn?' Na enkele uren worstelen met pleister en troffel, realiseer je je dat het eindresultaat niet is wat je voor ogen had. Weer bel je een professional.</p>
+
+      <p>Waarom kiezen we er zo vaak voor om professionals in te schakelen voor dit soort klussen, maar niet wanneer het aankomt op onze fitnessdoelen? Bij CrossFit Alkmaar zien we vaak mensen die zelf aan hun fitnessreis zijn begonnen, maar uiteindelijk vastlopen of teleurgesteld raken in hun resultaten. Hier zijn enkele redenen waarom het inhuren van een ervaren coach de sleutel kan zijn tot het bereiken van je fitnessdoelen:</p>
+
+      <h2>Expertise en ervaring</h2>
+
+      <p>Net zoals een schilder weet welke verf en technieken hij moet gebruiken voor een perfect resultaat, hebben professionele coaches een diepgaande kennis van trainingstechnieken, lichaamssamenstelling en blessurepreventie. Bij CrossFit Alkmaar beschikken onze coaches over jarenlange ervaring en expertise om je te begeleiden bij elke stap van je fitnessreis. Ze weten welke oefeningen het beste zijn voor jouw specifieke doelen en hoe je ze veilig en effectief kunt uitvoeren.</p>
+
+      <h2>Persoonlijke aanpak</h2>
+
+      <p>Een schilder kijkt naar jouw specifieke ruimte en wensen voordat hij begint met werken. Evenzo nemen onze coaches de tijd om je persoonlijke fitnessdoelen te begrijpen, evenals eventuele beperkingen die je hebt. Ze creëren een op maat gemaakt plan dat is afgestemd op jouw behoeften. Dit persoonlijke programma zorgt ervoor dat je sneller en efficiënter resultaten behaalt.</p>
+
+      <h2>Motivatie en verantwoordelijkheid</h2>
+
+      <p>Een van de grootste uitdagingen bij zelf sporten is het behouden van motivatie. Het is gemakkelijk om een workout over te slaan of minder hard te werken als er niemand is die je verantwoordelijk houdt. Onze coaches fungeren als je persoonlijke cheerleader en zorgen ervoor dat je gemotiveerd blijft en je doelen bereikt. Ze bieden de steun en aanmoediging die je nodig hebt om door te zetten, zelfs op de moeilijkste dagen.</p>
+
+      <h2>Consistentie en routine</h2>
+
+      <p>Het creëren van een consistente routine is essentieel voor het behalen van je fitnessdoelen. Zonder een coach is het makkelijk om van je schema af te wijken. Onze coaches helpen je een haalbare routine op te bouwen en deze vol te houden. Ze passen je programma aan naarmate je vordert, zodat je altijd op de juiste weg blijft.</p>
+
+      <h2>Blessurepreventie en rehabilitatie</h2>
+
+      <p>Fouten in techniek kunnen leiden tot blessures, wat je voortgang ernstig kan belemmeren. Onze professionele coaches zorgen ervoor dat je oefeningen correct uitvoert, waardoor het risico op blessures aanzienlijk wordt verminderd. Mocht je toch een blessure oplopen, dan kunnen ze je begeleiden bij het herstelproces en helpen je snel weer op de been te krijgen.</p>
+
+      <h2>Resultaten en tevredenheid</h2>
+
+      <p>Net zoals je een professionele schilder zou inhuren voor een perfect eindresultaat, zorgen onze coaches ervoor dat je de resultaten behaalt die je wilt. Ze hebben de kennis en ervaring om je te helpen je fitnessdoelen te bereiken, of het nu gaat om gewichtsverlies, spieropbouw of het verbeteren van je algehele fitheid.</p>
+
+      <p>Bij CrossFit Alkmaar geloven we in de kracht van professionele begeleiding. Onze coaches hebben een berg aan ervaring en zijn toegewijd om je te helpen slagen in je fitnessreis. Waarom zou je je doelen riskeren door het alleen te doen, wanneer je kunt profiteren van de expertise en ondersteuning van een professional?</p>
+
+      <p>Kies voor de zekerheid van succes en de gemoedsrust die komt met het inhuren van een ervaren coach. Begin vandaag nog aan je fitnessreis met CrossFit Alkmaar en zie het verschil dat professionele begeleiding kan maken. Boek nu <a href="/free-intro">HIER</a> een vrijblijvende en gratis intake en ontdek hoe wij je kunnen helpen je fitnessdoelen te bereiken!</p>
+    \`,
+  },
+  "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar": {
+    title: "Waarom mensen duizend trainingen doen bij CrossFit Alkmaar",
+    date: "2026-02-16",
+    category: "Community",
+    image: "/images/blog/Blog duizend workouts.jpg",
+    excerpt: "Van honderd naar tweeduizend workouts. Waarom blijven mensen zo lang lid bij CrossFit Alkmaar?",
+    content: \`
+      <p>Bij CrossFit Alkmaar zijn we jaren geleden begonnen met het uitreiken van badges aan leden die al vijfhonderd trainingen bij ons hebben gedaan. Ik weet nog goed dat we de badges uitreikten aan de eerste groep leden die deze mijlpaal hadden gehaald. Ik denk dat het er toen een stuk of tien waren, we waren super trots dat er mensen zo lang lid bleven bij CrossFit Alkmaar!</p>
+
+      <p>Inmiddels hebben we ook een badge voor je eerste honderd workouts. Want ook dat is natuurlijk al een prestatie om te vieren: honderd keer bij ons naar binnen gelopen om aan dat sterke en fitte lijf te werken! Daarna volgen de badges voor tweehonderdvijftig, vijfhonderd, duizend(!) en in de komende dagen reiken we voor het eerst een badge uit aan iemand die TWEEDUIZEND workouts heeft gedaan bij CrossFit Alkmaar.</p>
+
+      <p>Het lijkt misschien een beetje knullig of kinderachtig om volwassen mensen badges uit te reiken omdat ze een bepaalde prestatie hebben gedaan. Ik denk dat wij dit onbewust hebben meegenomen uit onze twaalf en een half jaar bij het Korps Mariniers en haar special forces. Voor uitzendingen of zware opleidingen kregen we daar ook medailles of badges op ons pak. En hoewel we toen vooral heel hard tegen elkaar zeiden dat het ons niks interesseerde, waren we er stiekem toch best trots op als je na een lange opleiding waar meer mensen afvielen dan overbleven eindelijk die felbegeerde speld, badge of medaille kreeg opgespeld.</p>
+
+      <p>En dat zie ik ook terug bij CrossFit Alkmaar. Wekelijks komen er leden op onze coaches af om te vragen hoeveel lessen ze inmiddels hebben meegedaan. Ik zie de badges terug op kleding, petten, tassen en social media. Omdat onze leden er toch trots op zijn dat ze al zo vaak hebben getraind bij CrossFit Alkmaar, en terecht!</p>
+
+      <p>En wij? Wij zijn er nog veel trotser op dat mensen zo lang lid zijn bij CrossFit Alkmaar. Dat mensen ons vertrouwen om ze door soms zware of lange trainingen te helpen. Dat mensen die nog nooit echt getraind hebben hun vertrouwen in onze handen leggen om ze te begeleiden op weg naar die eerste honderd workouts en alle veranderingen die dat in hun lijf en hoofd teweeg brengt.</p>
+
+      <p>Inmiddels hebben meer dan honderd van onze leden de grens van vijfhonderd trainingen gepasseerd. En reiken we in de komende dagen nog drie badges uit voor duizend trainingen bij CrossFit Alkmaar! Daarmee is de club mensen met meer dan duizend trainingen ook groter dan tien geworden.</p>
+
+      <p>De dame (onze leden weten precies wie ik bedoel) die binnenkort de grens van tweeduizend passeert, wordt natuurlijk even goed in het zonnetje gezet door ons. Er zijn ook al een handjevol mensen die niet heel veel achter haar liggen op weg naar die tweeduizend......</p>
+
+      <p>En waarom blijven mensen nu zo lang lid bij CrossFit Alkmaar? Omdat we goede coaches hebben die je veilig laten trainen op 'hoge intensiteit'. Dat betekent dus zwaar tillen en hard trainen. Daardoor ga je namelijk hard vooruit en krijg je een sterk en fit lijf dat tegen een stootje kan.</p>
+
+      <p>Maar wat naast die kundige coaches nog veel belangrijker is: Het is leuk bij CrossFit Alkmaar! Hoe effectief die nieuwe vorm van trainen die je hebt ontdekt ook is, als je het niet leuk vindt ga je het nooit jaren volhouden. En dat is toch echt de enige weg naar dat sterke en fitte lijf: jarenlang consistent drie (of meer) keer per week trainen. Check al die blije gezichten op onze socials maar eens, daar is niks nep aan.</p>
+
+      <p>Benieuwd of het nu echt allemaal zo leuk en goed is bij CrossFit Alkmaar? Boek gewoon <a href="/free-intro">hier</a> die vrijblijvende intake, dan laten we je alles zien en leren we elkaar kennen. Samen maken we een plan dat bij jou past en waarmee jij op weg bent naar die eerste honderd workouts!</p>
+    \`,
+  },
+  "moet-je-spierpijn-hebben-na-elke-workout": {
+    title: "Moet je spierpijn hebben na elke workout?",
+    date: "2026-02-16",
+    category: "Training",
+    image: "/images/blog/Blog spierpijn.jpg",
+    excerpt: "Spierpijn na het trainen: is het nodig? En wat zegt het over de kwaliteit van je workout?",
+    content: \`
+      <p>Als je voor het eerst begint met gericht te trainen, vraag je je misschien af of je na je trainingen spierpijn gaat hebben.</p>
+
+      <p>Het korte antwoord: als je nog nooit eerder hebt getraind, ga je waarschijnlijk wel wat spierpijn ervaren. Een goede coach kan je wel helpen om geleidelijk aan een programma te beginnen zodat je niet overdreven veel spierpijn hebt.</p>
+
+      <p>Het goede nieuws: naarmate je gewend raakt aan het trainen, ga je minder vaak spierpijn hebben omdat je lichaam zich aanpast aan de activiteiten die je doet.</p>
+
+      <p>Ook zeer ervaren sporters krijgen af en toe nog spierpijn. Dit gebeurt meestal wanneer ze een oefening voor het eerst doen of de intensiteit van een training aanzienlijk verhogen door meer gewicht toe te voegen, meer herhalingen te doen of de rusttijden te verkorten.</p>
+
+      <p>Hoewel het waar is dat mensen op zo'n extreem niveau kunnen trainen dat ze ziek worden of geblesseerd raken, komt dit zelden voor – vooral wanneer mensen onder toezicht van goede coaches trainen.</p>
+
+      <p>Een goede coach evalueert altijd het huidige fitnessniveau van cliënten. En schrijft daarna alleen redelijke hoeveelheden activiteit voor die leiden tot vooruitgang in de richting van doelen, niet tot extreme niveaus van spierpijn. Getrainde coaches kunnen je ook leren hoe je bewegingen correct uitvoert zodat je gewrichtspijn en blessures vermijdt, wat geen normale aspecten van training moeten zijn.</p>
+
+      <p>Maar wat veroorzaakt die spierpijn nou?</p>
+
+      <p>Spierpijn wordt veroorzaakt door microscopisch kleine scheurtjes in de spier. Geen zorgen, deze stress op de spier kan een goede zaak zijn. Passende niveaus van inspanning dagen het lichaam uit. Het lichaam reageert op die stress door zichzelf te herstellen en zich aan te passen om klaar te zijn voor vergelijkbare en zelfs grotere uitdagingen. Dus als 10 squats je op een dag spierpijn bezorgen, kan het lichaam spieren toevoegen zodat er 12 squats nodig zijn om je de volgende keer spierpijn te bezorgen (ok, misschien niet gelijk de volgende keer al).</p>
+
+      <p>Professionele coaches begrijpen precies hoe ze spieren, bindweefsel en fysiologische systemen moeten uitdagen zodat ze sterker, krachtiger en efficiënter worden. Een effectief trainingsprogramma balanceert passende stress met rust, herstel en voeding om ervoor te zorgen dat het lichaam zichzelf voortdurend verbetert.</p>
+
+      <p>Naarmate je meer ervaring opdoet, ga je herkennen dat bepaalde lage niveaus van spierpijn gewoon deel uitmaken van het proces. En je coach zal altijd met je overleggen en de trainingsintensiteit aanpassen om ervoor te zorgen dat je trainingen passend zijn.</p>
+
+      <p>Uiteindelijk zul je misschien niet zo vaak spierpijn hebben. En dan vraag je je waarschijnlijk af: 'Betekent dat dat ik niet hard genoeg werk?' Het antwoord is dat spierpijn niets zegt over de kwaliteit van de workout. Een training kan je fitter maken, zelfs als je daarna geen spierpijn hebt.</p>
+
+      <p>Hier is de kern van het verhaal: Fitness training kan je spieren pijn doen, maar goede coaches zorgen ervoor dat alles wat je doet veilig en passend is. Naarmate je fitter wordt, ga je minder vaak spierpijn hebben. Maar je kunt nog steeds milde spierpijn voelen na bepaalde trainingen.</p>
+
+      <p>Als je nieuw bent in trainen of overweegt een fitnessprogramma te starten, is het beste plan om met een ervaren coach te praten over je geschiedenis en doelen. Die coach kan het perfecte plan voor je samenstellen en ervoor zorgen dat het regelmatig wordt aangepast op basis van jouw feedback.</p>
+
+      <p>Bij CrossFit Alkmaar beginnen alle nieuwe cliënten met een gesprek voordat ze beginnen met trainen. We stellen vragen en luisteren naar je antwoorden, en dan vertellen we hoe we je kunnen helpen. We beantwoorden ook al je vragen, zodat je je op je gemak voelt. Zodra je begint met trainen, sta je er niet alleen voor. Onze coaches zullen je begeleiden, je trainingen aanpassen en ervoor zorgen dat je altijd op het juiste spoor zit.</p>
+
+      <p>Als je meer vragen hebt over spierpijn of iets anders gerelateerd aan fitness en voeding, boek dan <a href="/free-intro">hier</a> een gratis intake met één van onze coaches.</p>
+    \`,
+  },
+  "is-hardlopen-slecht-voor-je": {
+    title: "Is hardlopen slecht voor je?",
+    date: "2026-02-16",
+    category: "Training",
+    image: "/images/blog/Blog hardlopen.jpg",
+    excerpt: "Hardlopen is niet slecht voor je. Maar het is niet de oplossing voor elk fitnessprobleem.",
+    content: \`
+      <p>Mensen die fit willen worden, vragen vaak of hardlopen slecht voor je is. Als je de meest gestelde vragen over fitness op Google zoekt, is dit één van de top tien vragen.</p>
+
+      <p>Het korte antwoord: Hardlopen is niet slecht voor je.</p>
+
+      <p>Maar het is niet de oplossing voor elk fitnessprobleem, en het is niet de beste optie voor sommige mensen. Ten slotte is het mogelijk om te veel te hardlopen als je bepaalde doelen hebt.</p>
+
+      <p><strong>Hardlopen is super goed voor je!</strong></p>
+
+      <p>Hardlopen is een ideale activiteit omdat je er niet veel speciale uitrusting of zelfs toegang tot een sportschool voor nodig hebt. Je kunt gewoon je hardloopschoenen aantrekken en de weg, het strand of de paden in een park op gaan. Of je kunt een loopband in de garage of kelder gebruiken als je dat liever doet.</p>
+
+      <p>Hardlopen is een geweldige oefening voor je cardiovasculaire systeem. Je versterkt ook je spieren en botten tot op zekere hoogte. Daarnaast biedt hardlopen veel van de 'extra' voordelen van algemene beweging: verbeterde stemming, betere slaap, meer zelfvertrouwen en ga zo maar door.</p>
+
+      <p>Veel mensen houden ervan om een stuk te gaan hardlopen, en sommigen vinden het zo leuk dat ze zich aansluiten bij clubs of beginnen met trainen voor lange afstanden en zelfs marathons.</p>
+
+      <p><strong>Maar waarom denken sommige mensen dan dat hardlopen slecht is?</strong></p>
+
+      <p>Elke activiteit brengt enig risico met zich mee. Wij geloven dat de risico's van fitnessactiviteiten erg klein zijn—vooral vergeleken met de vele significante gezondheidsrisico's van inactiviteit.</p>
+
+      <p>Daarnaast kunnen sommige hardlopers die veel kilometers maken blessures die met overbelasting te maken hebben krijgen. En sommige mensen hebben gewrichten die gewoon niet blij worden wanneer iemand met een minder dan perfecte techniek hardloopt. Ten slotte kan hardlopen in grote hoeveelheden spierverlies veroorzaken als iemand krachttraining vermijdt of niet goed eet.</p>
+
+      <p>Maar dat betekent zeker niet dat hardlopen slecht is.</p>
+
+      <p><strong>Hardlopen: Een element van fitness</strong></p>
+
+      <p>Hardlopen is fantastisch voor cardiovasculaire training, maar je kunt veel van de voordelen van hardlopen krijgen zonder vijftig kilometer per week te lopen.</p>
+
+      <p>En hardlopen is niet de beste optie om kracht, vermogen, flexibiliteit en andere elementen van fitness te verbeteren.</p>
+
+      <p>Als je doelen zijn om je algehele fitness te verbeteren, gewicht te verliezen en spieren op te bouwen, raden we een programma aan dat cardiovasculaire training in balans brengt met krachttraining (en goede voeding).</p>
+
+      <p>Een goed uitgewerkt programma kan enkele trainingen bevatten waarin hardlopen de enige beweging is. Maar dat gaat niet vaak gebeuren vergeleken met de andere trainingen die andere fitnesselementen combineren om het gewenste resultaat te bereiken.</p>
+
+      <p>Een voorbeeld: iemand die gewicht wil verliezen en kracht wil opbouwen, hoeft niet vaak tien kilometer te hardlopen, als dat al nodig is. Een betere training zou deadlifts, dumbbell presses en kortere runs van honderd of tweehonderd bevatten.</p>
+
+      <p>In veel gevallen kan hardlopen vervangen worden door andere bewegingen die de cardiovasculaire fitheid verbeteren. Zwemmen, fietsen en roeien zijn geweldige opties en verminderen allemaal de belasting van de gewrichten, wat belangrijk is voor sommige mensen.</p>
+
+      <p>Dat betekent niet dat je niet zou moeten hardlopen of dat 'hardlopen slecht is'. Het is verstandig om een coach te raadplegen om te bepalen of hardlopen de juiste activiteit is om je persoonlijke doelen te bereiken. Als dat zo is, kan een coach je helpen bepalen hoe ver, hoe snel en hoe vaak je moet hardlopen. En als het niet de perfecte beweging is om je doelen te bereiken, kan de coach je wijzen op de juiste activiteiten.</p>
+
+      <p>Het beste plan? Praat met een coach, leg je doelen uit en deel je voorkeuren voor fitnessactiviteiten, en laat de coach een specifiek plan maken dat je enthousiast maakt (super belangrijk!) om te trainen en de resultaten te bereiken die je wilt.</p>
+
+      <p>Als je gewoon van hardlopen houdt en geen spier- of gewrichtspijn ervaart, doe het dan lekker wanneer je wilt. Hardlopen is een geweldige manier om actief te blijven. Het is niet slecht voor je. Onthoud gewoon dat het slechts een aspect van fitness is.</p>
+
+      <p>En als je hardlopen haat, maak je geen zorgen: Er zijn veel andere manieren om fit te worden zonder te joggen of sprinten. Wij kennen ze allemaal en helpen je graag met suggesties.</p>
+
+      <p>Als je met ons wilt praten over een fitnessplan, klik dan gewoon <a href="/free-intro">HIER</a> om een gratis intake te boeken.</p>
+    \`,
+  },
+  "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen": {
+    title: "Waarom je bij CrossFit Alkmaar geen proefles kan doen",
+    date: "2026-02-16",
+    category: "Community",
+    image: "/images/blog/Blog proefles.jpg",
+    excerpt: "We hebben alles geprobeerd: proeflessen, meedoen aan groepslessen. Waarom we nu beginnen met een goed gesprek.",
+    content: \`
+      <p>Door de jaren heen hebben we qua instroom alles wel geprobeerd bij CrossFit Alkmaar.</p>
+
+      <p>Gratis proeflessen hebben we heel lang gedaan. Eerst een losse proefles waar mensen apart voor konden inschrijven, we gaven deze gestandaardiseerde proefles dan aan groepen van vier tot zes personen. Daardoor konden we iedereen genoeg aandacht geven en goed uitleggen wat CrossFit was.</p>
+
+      <p>We hadden hier aardig wat A4tjes over vol getypt en de helft van de proefles bestond eigenlijk uit een lectuur over wat CrossFit nu eigenlijk was en waarom het zo goed voor je is. We hadden het over energiesystemen, intensiteit en functionele bewegingen. Daarna deden we wat burpees, sprints en thrusters, gaven we een high five en schreven mensen zich (hopelijk) in.</p>
+
+      <p>We hebben ook een periode mensen mee laten doen aan de grote groepslessen als gratis proefles. Er konden dan maximaal twee 'proeflessers' meedoen aan de groepsles waar maximaal twaalf deelnemers aan meedoen. Dat was ideaal voor mensen om de sfeer te proeven, maar soms deden mensen mee aan les met alleen maar burpees en hardlopen (want ook dat is CrossFit). Of aan een les met allemaal oefeningen waar zij nou nét even niet zo goed in waren.</p>
+
+      <p>Onze coaches doen de hele dag niks anders dan mensen helpen met het aanpassen van oefeningen aan beperkingen of niveaus, dat was het probleem niet. Maar of dit nu altijd een goede (en leuke) eerste ervaring met CrossFit was, valt te betwijfelen. Het percentage mensen dat inschreef na zo'n mooie les met alleen maar burpees of hardlopen was niet zo heel hoog. Zonde dat we hierdoor een grote groep mensen niet hebben kunnen helpen doordat we de eerste indruk misschien niet zo leuk maakten.</p>
+
+      <p>Eigenlijk waren we al die jaren vooral aan het laten zien wat CrossFit Alkmaar nu eigenlijk was. We vroegen nooit aan de nieuwe mensen waarom ze eigenlijk wilden trainen, wat hun doelen en motivaties waren. Als echte CrossFit freaks waren we vooral het gospel van CrossFit aan het verkondigen.</p>
+
+      <p>Tegenwoordig is het precies andersom: Als geïnteresseerden langskomen bij CrossFit Alkmaar gaan we in eerste instantie zelfs helemaal niet sporten. Je kunt je sportkleren dus thuis laten.</p>
+
+      <p>Na een rondleiding door onze locatie (en een bakje koffie als je dat wilt), starten we met onze gratis intake: een vraaggesprek dat draait om JOU en niet om ons. We willen graag weten wie je bent, wat je uitdagingen zijn en, vooral, wat je wilt bereiken. Want dat is de enige manier om je te kunnen helpen naar de doelen die je hebt.</p>
+
+      <p>Zo kunnen we een plan op maat maken met personal training, small groups, groepslessen en/of voedingsbegeleiding. Daarnaast leren we je beter kennen. Sporten bij CrossFit Alkmaar is immers niet anoniem, we kennen al onze leden bij naam en weten het als je ergens last van hebt en we bellen je op als je even niet bij ons bent geweest. Daarnaast heb je elke drie maanden recht op een 'goal review gesprek' met één van de coaches. Zo kunnen we samen kijken of alles bevalt en of je goed op weg bent naar je doelen.</p>
+
+      <p>En natuurlijk zijn we tijdens de intake ook nog steeds ons gospel van CrossFit aan het verkondigen. Want wij kunnen iedereen helpen naar een fittere en sterkere versie van zichzelf, dat doen we al meer dan tien jaar. Maar het draait nu tijdens de intake vooral om jou en niet om al die mooie energiesystemen en functionele bewegingen waar wij als coaches het zo graag over hebben.</p>
+
+      <p>Benieuwd of zo'n gratis intake iets voor jou is? Boek hem dan makkelijk via <a href="/free-intro">deze link</a>, dan zet ik de koffie vast voor je klaar.</p>
+    \`,
+  },
+  "blessures-en-trainen-bij-crossfit-alkmaar": {
+    title: "Blessures en trainen bij CrossFit Alkmaar",
+    date: "2026-02-16",
+    category: "Training",
+    image: "/images/blog/Blog blessure.jpg",
+    excerpt: "Een blessure aan m'n knie. Wat ik als coach bij CrossFit Alkmaar heb geleerd over luisteren naar je lichaam.",
+    content: \`
+      <p>Een blessure aan m'n knie, sh#t!</p>
+
+      <p>Na jarenlang zonder echte blessures te hebben getraind, ben ik het laatste jaar wél aan de beurt. Na een liesblessure die een jaar heeft geduurd, heb ik volgens de fysio nu een 'jumpers knee'. Het naampje vind ik niet zo belangrijk, ik voel zelf ook wel dat er iets niet goed zit. Wat ik wel belangrijk vind, is dat het heel snel over gaat! Helaas lijkt dat niet zo te zijn....</p>
+
+      <p>Allebei die blessures kan ik prima verklaren: Toen de spier in mijn lies scheurde, was ik eigenlijk niet van plan om te sporten. Ik had slecht geslapen, niet gegeten, was druk in m'n hoofd en had ook eigenlijk geen tijd. Toch ging ik nog even wel snel trainen en toch ook wel dat zware gewicht gepakt waarvan ik wist dat ik dat beter niet kon doen. Sterker nog, op weg naar CrossFit Alkmaar had ik nog besloten dat ik het niet zo zwaar zou gaan doen.</p>
+
+      <p>Achteraf waren die dag (en de periode ernaartoe) alle ingrediënten aanwezig, je kon het bijna zien aankomen.</p>
+
+      <p>En nu die knie. Daar heb ik stiekem eigenlijk al best lang last van, maar ik kon er wel redelijk mee trainen als ik warm was. Dat ik steeds langer nodig had om het op te warmen, nam ik maar op de koop toe. Ook hier weer een recept voor een blessure: gewoon doorgaan en niet naar de omstandigheden of je lijf luisteren. En dan ben ik nog een coach bij CrossFit Alkmaar ook.....</p>
+
+      <p>Als coach bij CrossFit Alkmaar ben ik helemaal niet bang om mensen een beetje te pushen om meer te tillen of harder te gaan in een training. Maar alleen als ik het idee heb dat mensen dat ook echt kunnen. Vaker vertel ik tegen onze leden dat er misschien beter wat gewicht van die stang af kan of dat ze vandaag ook prima eens een keer op zeventig procent kunnen trainen in plaats van honderd(tien) procent. Ik denk dat ik (en ons hele team van coaches) daar behoorlijk serieus en goed mee bezig zijn, het aantal blessures bij CrossFit Alkmaar ligt erg laag en ik zie nooit mensen veel te veel doen.</p>
+
+      <p>Practice what you preach, dat doe ik zelf aan de ene kant wel: ik train veel en doe dat al zo lang ik me kan herinneren. Daardoor heb ik een sterk en fit lijf, het geeft me zelfvertrouwen en ik kan nog makkelijk met m'n kinderen rennen, stoeien en spelen. Ook kan ik daardoor prima af en toe een patatje of pizza eten zonder dat de weegschaal daar gelijk op reageert.</p>
+
+      <p>Maar aan de andere kant doe ik dat practice what you preach dus helemaal niet: Ik heb mezelf deze blessures toch wel een beetje aangedaan. Al had ik wat eerder naar de omstandigheden of mijn lichaam geluisterd, had ik ze zeker kunnen voorkomen. Ik ben gewoon te lang, te zwaar en te hard doorgegaan. Dat is een beetje de aard van dit beestje. Bij de special forces van het Korps Mariniers heeft dit me altijd veel gebracht, maar nu vind ik het nog steeds lastig om dat af en toe uit te zetten. Er staat nu namelijk niks op het spel.</p>
+
+      <p>Nou ja, niks op het spel: Ik baal als een stekker dat ik niet gewoon lekker m'n ding kan doen en dat ik pijn in m'n knie heb, elke dag. Dat is toch wel wat meer dan 'niks'.</p>
+
+      <p>Eigenlijk had ik gewoon een coach nodig die naast me stond en tegen me zei dat ik misschien eens wat minder zou moeten doen. Precies wat ik en ons team bij CrossFit Alkmaar tot ons werk hebben gemaakt: mensen afremmen of pushen wanneer nodig. Ik ben er nu zelf het voorbeeld van waarom het belangrijk is dat er een coach met je meekijkt en je afremt of pusht waar nodig. Dat is namelijk dé manier om hard te kunnen trainen en vooruit te gaan. Of je nu wilt afvallen, aankomen, fitter of sterker wilt worden.</p>
+
+      <p>Dan moet je hard trainen, en dat is hartstikke goed voor je. Maar wel als je weet wat je doet of als er een goede coach naast je staat die weet waar hij het over heeft. En bij CrossFit Alkmaar weten we waar we het over hebben. Al meer dan tien jaar ervaring in het begeleiden en coachen van onze leden naar hun fitnessdoelen. En dus ook ervaring in wat er gebeurt als je niet naar je lijf of de omstandigheden luistert.</p>
+
+      <p>Ondertussen doe ik wel gewoon de trainingen mee bij CrossFit Alkmaar, ik pas gewoon (een hoop) aan waar nodig om die knie te ontzien. Langzaam gaat dat wel weer de goede kant op. Ik kan niet wachten tot ik weer lekker alles kan doen als deze blessure over is. En (als het goed is) ik neem deze 'les' gewoon ook weer mee in m'n rugzakje. Dat rugzakje gebruik ik voor m'n eigen trainingen, maar natuurlijk ook als coach bij CrossFit Alkmaar.</p>
+
+      <p>Blessures zouden niet bij je trainingen moeten horen als je met goede coaches traint. Kleine pijntjes horen er af en toe nu eenmaal bij. Die kun je trouwens beter accepteren dan alle pijntjes die je gaat ontwikkelen als je niet regelmatig (drie keer per week of meer) je lijf prikkelt. Als je maar naar die kleine pijntjes luistert voordat ze blessures worden, ik kan het dus weten....</p>
+
+      <p>Ook werken aan een fit en sterk lijf dat tegen een stootje kan onder begeleiding van coaches die weten waar ze het over hebben? <a href="/free-intro">HIER</a> boek je makkelijk een afspraak met mij of één van onze coaches, laat ons je helpen.</p>
+    \`,
+  },
 };
 
 export function getBlogPost(slug: string): BlogPost | undefined {
