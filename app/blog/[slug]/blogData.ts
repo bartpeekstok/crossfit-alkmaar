@@ -67,7 +67,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Training",
     image: "/images/blog/Blog professional.jpg",
     excerpt: "Waarom huur je wél een schilder in voor je huis, maar geen coach voor je fitnessdoelen?",
-    content: \`
+    content: `
       <p>Stel je voor: je wilt je huis een frisse nieuwe look geven. De muren zijn grauw en je wilt een levendige kleur die je woning tot leven brengt. Je besluit de schilderkwast op te pakken en zelf aan de slag te gaan. Maar halverwege merk je dat het resultaat niet aan je verwachtingen voldoet: strepen, druipers en oneffenheden zijn overal zichtbaar. Wat doe je dan? Je belt een professionele schilder.</p>
 
       <p>Nog eentje: je badkamer moet worden gestukt. Het is een specialistische klus die precisie en vakmanschap vereist. Maar jij denkt: 'Hoe moeilijk kan het nou zijn?' Na enkele uren worstelen met pleister en troffel, realiseer je je dat het eindresultaat niet is wat je voor ogen had. Weer bel je een professional.</p>
@@ -101,7 +101,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Bij CrossFit Alkmaar geloven we in de kracht van professionele begeleiding. Onze coaches hebben een berg aan ervaring en zijn toegewijd om je te helpen slagen in je fitnessreis. Waarom zou je je doelen riskeren door het alleen te doen, wanneer je kunt profiteren van de expertise en ondersteuning van een professional?</p>
 
       <p>Kies voor de zekerheid van succes en de gemoedsrust die komt met het inhuren van een ervaren coach. Begin vandaag nog aan je fitnessreis met CrossFit Alkmaar en zie het verschil dat professionele begeleiding kan maken. Boek nu <a href="/free-intro">HIER</a> een vrijblijvende en gratis intake en ontdek hoe wij je kunnen helpen je fitnessdoelen te bereiken!</p>
-    \`,
+    `,
   },
   "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar": {
     title: "Waarom mensen duizend trainingen doen bij CrossFit Alkmaar",
@@ -109,7 +109,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Community",
     image: "/images/blog/Blog duizend workouts.jpg",
     excerpt: "Van honderd naar tweeduizend workouts. Waarom blijven mensen zo lang lid bij CrossFit Alkmaar?",
-    content: \`
+    content: `
       <p>Bij CrossFit Alkmaar zijn we jaren geleden begonnen met het uitreiken van badges aan leden die al vijfhonderd trainingen bij ons hebben gedaan. Ik weet nog goed dat we de badges uitreikten aan de eerste groep leden die deze mijlpaal hadden gehaald. Ik denk dat het er toen een stuk of tien waren, we waren super trots dat er mensen zo lang lid bleven bij CrossFit Alkmaar!</p>
 
       <p>Inmiddels hebben we ook een badge voor je eerste honderd workouts. Want ook dat is natuurlijk al een prestatie om te vieren: honderd keer bij ons naar binnen gelopen om aan dat sterke en fitte lijf te werken! Daarna volgen de badges voor tweehonderdvijftig, vijfhonderd, duizend(!) en in de komende dagen reiken we voor het eerst een badge uit aan iemand die TWEEDUIZEND workouts heeft gedaan bij CrossFit Alkmaar.</p>
@@ -129,7 +129,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Maar wat naast die kundige coaches nog veel belangrijker is: Het is leuk bij CrossFit Alkmaar! Hoe effectief die nieuwe vorm van trainen die je hebt ontdekt ook is, als je het niet leuk vindt ga je het nooit jaren volhouden. En dat is toch echt de enige weg naar dat sterke en fitte lijf: jarenlang consistent drie (of meer) keer per week trainen. Check al die blije gezichten op onze socials maar eens, daar is niks nep aan.</p>
 
       <p>Benieuwd of het nu echt allemaal zo leuk en goed is bij CrossFit Alkmaar? Boek gewoon <a href="/free-intro">hier</a> die vrijblijvende intake, dan laten we je alles zien en leren we elkaar kennen. Samen maken we een plan dat bij jou past en waarmee jij op weg bent naar die eerste honderd workouts!</p>
-    \`,
+    `,
   },
   "moet-je-spierpijn-hebben-na-elke-workout": {
     title: "Moet je spierpijn hebben na elke workout?",
@@ -137,7 +137,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Training",
     image: "/images/blog/Blog spierpijn.jpg",
     excerpt: "Spierpijn na het trainen: is het nodig? En wat zegt het over de kwaliteit van je workout?",
-    content: \`
+    content: `
       <p>Als je voor het eerst begint met gericht te trainen, vraag je je misschien af of je na je trainingen spierpijn gaat hebben.</p>
 
       <p>Het korte antwoord: als je nog nooit eerder hebt getraind, ga je waarschijnlijk wel wat spierpijn ervaren. Een goede coach kan je wel helpen om geleidelijk aan een programma te beginnen zodat je niet overdreven veel spierpijn hebt.</p>
@@ -167,7 +167,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Bij CrossFit Alkmaar beginnen alle nieuwe cliënten met een gesprek voordat ze beginnen met trainen. We stellen vragen en luisteren naar je antwoorden, en dan vertellen we hoe we je kunnen helpen. We beantwoorden ook al je vragen, zodat je je op je gemak voelt. Zodra je begint met trainen, sta je er niet alleen voor. Onze coaches zullen je begeleiden, je trainingen aanpassen en ervoor zorgen dat je altijd op het juiste spoor zit.</p>
 
       <p>Als je meer vragen hebt over spierpijn of iets anders gerelateerd aan fitness en voeding, boek dan <a href="/free-intro">hier</a> een gratis intake met één van onze coaches.</p>
-    \`,
+    `,
   },
   "is-hardlopen-slecht-voor-je": {
     title: "Is hardlopen slecht voor je?",
@@ -175,7 +175,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Training",
     image: "/images/blog/Blog hardlopen.jpg",
     excerpt: "Hardlopen is niet slecht voor je. Maar het is niet de oplossing voor elk fitnessprobleem.",
-    content: \`
+    content: `
       <p>Mensen die fit willen worden, vragen vaak of hardlopen slecht voor je is. Als je de meest gestelde vragen over fitness op Google zoekt, is dit één van de top tien vragen.</p>
 
       <p>Het korte antwoord: Hardlopen is niet slecht voor je.</p>
@@ -221,7 +221,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>En als je hardlopen haat, maak je geen zorgen: Er zijn veel andere manieren om fit te worden zonder te joggen of sprinten. Wij kennen ze allemaal en helpen je graag met suggesties.</p>
 
       <p>Als je met ons wilt praten over een fitnessplan, klik dan gewoon <a href="/free-intro">HIER</a> om een gratis intake te boeken.</p>
-    \`,
+    `,
   },
   "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen": {
     title: "Waarom je bij CrossFit Alkmaar geen proefles kan doen",
@@ -229,7 +229,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Community",
     image: "/images/blog/Blog proefles.jpg",
     excerpt: "We hebben alles geprobeerd: proeflessen, meedoen aan groepslessen. Waarom we nu beginnen met een goed gesprek.",
-    content: \`
+    content: `
       <p>Door de jaren heen hebben we qua instroom alles wel geprobeerd bij CrossFit Alkmaar.</p>
 
       <p>Gratis proeflessen hebben we heel lang gedaan. Eerst een losse proefles waar mensen apart voor konden inschrijven, we gaven deze gestandaardiseerde proefles dan aan groepen van vier tot zes personen. Daardoor konden we iedereen genoeg aandacht geven en goed uitleggen wat CrossFit was.</p>
@@ -251,7 +251,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>En natuurlijk zijn we tijdens de intake ook nog steeds ons gospel van CrossFit aan het verkondigen. Want wij kunnen iedereen helpen naar een fittere en sterkere versie van zichzelf, dat doen we al meer dan tien jaar. Maar het draait nu tijdens de intake vooral om jou en niet om al die mooie energiesystemen en functionele bewegingen waar wij als coaches het zo graag over hebben.</p>
 
       <p>Benieuwd of zo'n gratis intake iets voor jou is? Boek hem dan makkelijk via <a href="/free-intro">deze link</a>, dan zet ik de koffie vast voor je klaar.</p>
-    \`,
+    `,
   },
   "blessures-en-trainen-bij-crossfit-alkmaar": {
     title: "Blessures en trainen bij CrossFit Alkmaar",
@@ -259,7 +259,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     category: "Training",
     image: "/images/blog/Blog blessure.jpg",
     excerpt: "Een blessure aan m'n knie. Wat ik als coach bij CrossFit Alkmaar heb geleerd over luisteren naar je lichaam.",
-    content: \`
+    content: `
       <p>Een blessure aan m'n knie, sh#t!</p>
 
       <p>Na jarenlang zonder echte blessures te hebben getraind, ben ik het laatste jaar wél aan de beurt. Na een liesblessure die een jaar heeft geduurd, heb ik volgens de fysio nu een 'jumpers knee'. Het naampje vind ik niet zo belangrijk, ik voel zelf ook wel dat er iets niet goed zit. Wat ik wel belangrijk vind, is dat het heel snel over gaat! Helaas lijkt dat niet zo te zijn....</p>
@@ -287,7 +287,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Blessures zouden niet bij je trainingen moeten horen als je met goede coaches traint. Kleine pijntjes horen er af en toe nu eenmaal bij. Die kun je trouwens beter accepteren dan alle pijntjes die je gaat ontwikkelen als je niet regelmatig (drie keer per week of meer) je lijf prikkelt. Als je maar naar die kleine pijntjes luistert voordat ze blessures worden, ik kan het dus weten....</p>
 
       <p>Ook werken aan een fit en sterk lijf dat tegen een stootje kan onder begeleiding van coaches die weten waar ze het over hebben? <a href="/free-intro">HIER</a> boek je makkelijk een afspraak met mij of één van onze coaches, laat ons je helpen.</p>
-    \`,
+    `,
   },
 };
 
