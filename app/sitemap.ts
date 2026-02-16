@@ -4,39 +4,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://crossfitalkmaar.com";
 
   // Blog posts - voeg hier nieuwe blogs toe
-  const blogPosts = [
-    "sporten-drukke-baan",
-    "wat-is-crossfit",
-    "motivatie-sporten-behouden",
-    "groepslessen-vs-alleen-trainen",
-    "eerste-keer-crossfit",
-    "spiermassa-opbouwen",
-    "de-juiste-sportschool-kiezen",
-    "personal-training-alkmaar",
-    "fitness-voor-50-plussers",
-    "sportschool-voor-beginners",
-    "afvallen-in-alkmaar",
-    "krachttraining-alkmaar",
-    "hoe-vaak-moet-je-trainen",
-    "de-kracht-van-samen-trainen",
-    "functioneel-trainen-vs-machines",
-    "waarom-warming-up-onmisbaar-is",
-    "doelen-stellen-die-werken",
-    "training-als-stressverlichter",
-    "de-kracht-van-goede-voeding",
-    "herstel-de-vergeten-component",
-    "mindset-de-sleutel-tot-succes",
-    "waarom-krachttraining-voor-50-plussers",
-    "5-tips-om-consistent-te-blijven",
-    "wat-eet-je-voor-en-na-training",
-    "crossfit-voor-beginners",
-    "blessures-voorkomen",
-    "meer-energie-door-beweging",
-  ];
+  const blogPosts: string[] = [];
 
   const blogUrls = blogPosts.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2025-01-15"),
+    lastModified: new Date("2026-02-16"),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
