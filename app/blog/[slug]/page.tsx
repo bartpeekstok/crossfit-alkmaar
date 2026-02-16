@@ -60,7 +60,7 @@ export default function BlogPostPage() {
       <article className="py-12 px-6">
         <div className="max-w-3xl mx-auto">
           <div
-            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-900 prose-p:mb-6"
+            className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-900 [&>p]:mb-8 [&>p]:leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
