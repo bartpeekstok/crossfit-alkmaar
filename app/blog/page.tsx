@@ -34,8 +34,11 @@ export default function BlogPage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Blog
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-200 mb-4">
             Tips, inzichten en verhalen over training, voeding en een gezonde levensstijl.
+          </p>
+          <p className="text-sm text-gray-300 mb-8">
+            Zelf geschreven, niet door AI. Echte verhalen vanuit CrossFit Alkmaar.
           </p>
           <button
             onClick={openPopup}
