@@ -13,6 +13,8 @@ export default function HomePage() {
   const { openPopup } = usePopup();
   const heroCta = getVariant("hero_cta");
   const ctaMid = getVariant("cta_mid");
+  const heroHeadline = getVariant("hero_headline");
+  const heroSocialProof = getVariant("hero_social_proof");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -48,14 +50,19 @@ export default function HomePage() {
         <img src="/images/hero.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Hier word je wél sterker en fitter
+            {heroHeadline}
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
             Kleine groepen, professionele coaches en schaalbaar op elk niveau.
           </p>
-          <p className="text-lg mb-8 text-gray-400">
+          <p className="text-lg mb-6 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
           </p>
+          {heroSocialProof === "visible" && (
+            <p className="text-sm text-gray-300 mb-6">
+              ⭐ 4.9 op Google · 260+ reviews · 300+ actieve leden · 12+ jaar ervaring
+            </p>
+          )}
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"

@@ -15,7 +15,7 @@ export const AB_TESTS = {
     id: "hero_headline",
     variants: [
       "Hier word je wél sterker en fitter",
-      "Begin met een fitter en sterker leven",
+      "Moe van sportscholen waar je niet naartoe gaat?",
     ],
   },
   hero_subtitle: {
@@ -45,6 +45,10 @@ export const AB_TESTS = {
       "Laat hier je gegevens achter",
       "Plan je gratis en vrijblijvende kennismaking",
     ],
+  },
+  hero_social_proof: {
+    id: "hero_social_proof",
+    variants: ["hidden", "visible"],
   },
 } as const;
 
