@@ -11,7 +11,6 @@ import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
-  const heroCta = getVariant("hero_cta");
   const ctaMid = getVariant("cta_mid");
   const heroHeadline = getVariant("hero_headline");
   const heroSocialProof = getVariant("hero_social_proof");
@@ -67,7 +66,7 @@ export default function HomePage() {
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
           >
-            {heroCta}
+            Plan je gratis kennismaking
           </button>
         </div>
       </section>
