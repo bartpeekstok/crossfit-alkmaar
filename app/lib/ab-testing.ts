@@ -18,8 +18,8 @@ export const AB_TESTS = {
       "Geen ervaring nodig. Onze coaches begeleiden je bij elke stap.",
     ],
   },
-  cta_mid: {
-    id: "cta_mid",
+  cta_mid_v2: {
+    id: "cta_mid_v2",
     variants: [
       "Sluit je aan bij 300+ tevreden leden",
       "Nog een paar plekken beschikbaar deze maand",

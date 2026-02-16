@@ -11,7 +11,7 @@ import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
-  const ctaMid = getVariant("cta_mid");
+  const ctaMid = getVariant("cta_mid_v2");
   const heroHeadline = getVariant("hero_headline");
   const heroSocialProof = getVariant("hero_social_proof");
 
