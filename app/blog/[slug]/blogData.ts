@@ -10,6 +10,37 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "ben-jij-fit-genoeg-voor-crossfit-alkmaar": {
+    title: "Ben jij fit genoeg voor CrossFit Alkmaar?",
+    date: "2026-02-23",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Community",
+    image: "/images/blog/Blog fit genoeg.jpg",
+    excerpt: "Denk je dat je eerst fit moet zijn om bij ons te starten? Onzin. Bij CrossFit Alkmaar is er maar één eis.",
+    content: `
+      <p>Afgelopen week kregen we een telefoontje van iemand die ons al een tijdje volgt op social media. Ze vond het er allemaal leuk uitzien, wilde een paar kilo afvallen en zich gewoon weer fit in haar vel voelen. Ze zag ook de meerwaarde van trainen met een coach. Ideaal, met al die doelen kunnen wij haar prima helpen!</p>
+
+      <p>En toen kwam die vraag waarvan ik het altijd zo jammer vind als die gesteld wordt: 'hebben jullie een schema voor me zodat ik me een paar weken kan voorbereiden voordat ik bij jullie kom sporten?'.</p>
+
+      <p>Deze dame denkt dus dat er een bepaald ingangsniveau is om aan CrossFit te doen bij ons. Super jammer dat die denkbeeldige drempel voor veel mensen bestaat. Maar ik begrijp het ergens ook wel: als je CrossFit even intypt op Google of YouTube, zie je de meest gespierde dames en heren trainen met immens zware gewichten en de meest ingewikkelde oefeningen. Vaak met snoeiharde heavy metal op de achtergrond, een behoorlijke 'hardcore' uitstraling dus. Ik schreef al eens een andere blog over 'hardcore sportscholen', die lees je <a href="/blog/een-hardcore-sportschool">HIER</a>.</p>
+
+      <p>En ja, ook dat is CrossFit. Maar wat nog veel meer CrossFit is (in mijn bescheiden mening dan), is iemand die nog nooit heeft gesport en onder begeleiding van goede coaches leert hoe je een gewicht van de vloer moet optillen. Of hoe je dat gewicht op een veilige en efficiënte manier boven je hoofd duwt. Hoe hard je moet beginnen aan een vierhonderd meter sprint, of wanneer het slimmer is om eerst maar eens met tweehonderd meter te beginnen.</p>
+
+      <p>'Functionele bewegingen' dat is wat we hier vooral doen. Een hippe term in de fitnessindustrie die niks meer betekent dan dat we bewegingen doen die je ook in je dagelijkse leven maakt of die je daarbij helpen. Een gewicht van de vloer optillen, hoe vaak doe je dat wel niet op een dag? Of het nu je boodschappen, kinderen of de afstandsbediening van de tv zijn..... En die bewegingen kan iedereen dus doen. Sterker nog, ik denk dat iedereen die bewegingen zou MOETEN doen.</p>
+
+      <p>Als ik op verjaardagen (weer) moet uitleggen wat dat CrossFit nu eigenlijk is, dan vertel ik altijd het volgende: 'We trainen kracht en conditie. De ene dag de één wat meer en de andere dag weer andersom. Dat doen we op ieders eigen niveau, daardoor kan echt iedereen meedoen. Hierdoor word je sterker, sneller en fitter, echt allround fit.'.</p>
+
+      <p>Een behoorlijk beknopte omschrijving van wat CrossFit echt is, maar wel duidelijk. En ik heb hier al heel wat verjaardagen op kunnen oefenen, dit dekt de lading wel behoorlijk. Beter dan dat ik het ga hebben over alle energiesystemen, gewichtheffen, gymnastiek en periodisering....</p>
+
+      <p>En toch krijg ik dan nog vaak te horen dat het niet echt wat voor diegene is. Onzin, denk ik dan altijd, dit is juist precies goed voor iedereen! Door de jaren heen hebben we hier al zoveel mensen zien veranderen. Mensen die lekkerder in hun vel zitten maar ook mensen die mentaal een stuk sterker worden, super gaaf om te zien wat regelmatig trainen met mensen kan doen.</p>
+
+      <p>We hebben wel eens getwijfeld of we de naam 'CrossFit' nog wilden blijven voeren. Voor sommige mensen werpt dit toch een drempel op. Door die mooie YouTube filmpjes of misschien hebben ze een ervaring met een proefles gehad bij coaches die niet echt goed weten waar ze mee bezig zijn. Er zijn verhalen genoeg van mensen die tijdens een proefles 'CrossFit' gelijk even honderd pull ups moeten doen, of tweehonderd squats. Het resultaat? Een week spierpijn, en een heel verkeerd beeld van CrossFit. Zo zonde.</p>
+
+      <p>Bij CrossFit Alkmaar hebben we één eis voor mensen die starten: kun je hier zelf naartoe komen? Perfect, dan kunnen onze coaches je begeleiden naar een fittere en sterkere versie dan je ooit voor mogelijk hebt gehouden. En ja, daar hoort wat spierpijn bij in het begin. Maar wel op normale niveaus.</p>
+
+      <p>Twijfel jij of je wel fit genoeg bent om te starten met trainen? Boek <a href="/free-intro">HIER</a> een gesprek met mij of één van onze coaches, dan vertellen we je dat je meer dan fit genoeg bent ;)</p>
+    `,
+  },
   "een-hardcore-sportschool": {
     title: "Een 'hardcore' sportschool?",
     date: "2026-02-16",
