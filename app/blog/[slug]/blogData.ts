@@ -2,6 +2,7 @@
 export interface BlogPost {
   title: string;
   date: string;
+  author: string;
   category: string;
   image: string;
   excerpt: string;
@@ -12,6 +13,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
   "een-hardcore-sportschool": {
     title: "Een 'hardcore' sportschool?",
     date: "2026-02-16",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Community",
     image: "/images/blog/Blog hardcore sportschool.jpg",
     excerpt: "De burgemeester noemde CrossFit Alkmaar 'een sportschool voor de hardcore sporters.' Maar klopt dat beeld eigenlijk wel?",
@@ -41,7 +43,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "wijze-lessen": {
     title: "Wijze lessen",
-    date: "2026-02-16",
+    date: "2026-02-09",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Community",
     image: "/images/blog/Blog wijze lessen.jpg",
     excerpt: "Over speeches, stoere foto's, trots zijn op jezelf en hoe CrossFit Alkmaar meer brengt dan alleen een fit lijf.",
@@ -63,7 +66,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "doe-je-het-zelf-of-schakel-je-een-professional-in": {
     title: "Doe je het zelf of schakel je een professional in?",
-    date: "2026-02-16",
+    date: "2026-02-02",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/images/blog/Blog professional.jpg",
     excerpt: "Waarom huur je wél een schilder in voor je huis, maar geen coach voor je fitnessdoelen?",
@@ -105,7 +109,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar": {
     title: "Waarom mensen duizend trainingen doen bij CrossFit Alkmaar",
-    date: "2026-02-16",
+    date: "2026-01-26",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Community",
     image: "/images/blog/Blog duizend workouts.jpg",
     excerpt: "Van honderd naar tweeduizend workouts. Waarom blijven mensen zo lang lid bij CrossFit Alkmaar?",
@@ -133,7 +138,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "moet-je-spierpijn-hebben-na-elke-workout": {
     title: "Moet je spierpijn hebben na elke workout?",
-    date: "2026-02-16",
+    date: "2026-01-19",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/images/blog/Blog spierpijn.jpg",
     excerpt: "Spierpijn na het trainen: is het nodig? En wat zegt het over de kwaliteit van je workout?",
@@ -171,7 +177,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "is-hardlopen-slecht-voor-je": {
     title: "Is hardlopen slecht voor je?",
-    date: "2026-02-16",
+    date: "2026-01-12",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/images/blog/Blog hardlopen.jpg",
     excerpt: "Hardlopen is niet slecht voor je. Maar het is niet de oplossing voor elk fitnessprobleem.",
@@ -225,7 +232,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen": {
     title: "Waarom je bij CrossFit Alkmaar geen proefles kan doen",
-    date: "2026-02-16",
+    date: "2026-01-05",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Community",
     image: "/images/blog/Blog proefles.jpg",
     excerpt: "We hebben alles geprobeerd: proeflessen, meedoen aan groepslessen. Waarom we nu beginnen met een goed gesprek.",
@@ -255,7 +263,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "blessures-en-trainen-bij-crossfit-alkmaar": {
     title: "Blessures en trainen bij CrossFit Alkmaar",
-    date: "2026-02-16",
+    date: "2025-12-29",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/images/blog/Blog blessure.jpg",
     excerpt: "Een blessure aan m'n knie. Wat ik als coach bij CrossFit Alkmaar heb geleerd over luisteren naar je lichaam.",

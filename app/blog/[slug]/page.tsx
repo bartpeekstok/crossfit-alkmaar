@@ -52,7 +52,7 @@ export default function BlogPostPage() {
             {post.category}
           </span>
           <h1 className="text-3xl md:text-4xl font-bold mb-2">{post.title}</h1>
-          <p className="text-gray-300">{post.date}</p>
+          <p className="text-gray-300">{post.author} · {post.date}</p>
         </div>
       </section>
 
