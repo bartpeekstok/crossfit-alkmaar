@@ -87,6 +87,10 @@ export default function Footer() {
               <p className="text-blue-400 text-sm">EMAIL</p>
               <a href="mailto:info@crossfitalkmaar.nl" className="hover:text-white transition">info@crossfitalkmaar.nl</a>
             </div>
+            <div>
+              <p className="text-blue-400 text-sm">LEDENSERVICE</p>
+              <a href="mailto:ledenservice@crossfitalkmaar.nl" className="hover:text-white transition">ledenservice@crossfitalkmaar.nl</a>
+            </div>
           </div>
         </div>
 
