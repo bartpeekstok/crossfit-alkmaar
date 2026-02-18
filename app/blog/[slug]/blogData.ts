@@ -10,6 +10,25 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "bart-bij-scherpschutters-podcast": {
+    title: "Bart bij Scherpschutters podcast",
+    date: "2026-03-02",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Persoonlijk",
+    image: "/images/blog/Blog scherpschutters.jpg",
+    excerpt: "Benieuwd naar één van de gezichten achter CrossFit Alkmaar? Bart vertelt zijn verhaal bij de podcast Scherpschutters.",
+    content: `
+      <p>Bart en Joost, de eigenaren van CrossFit Alkmaar zijn zelf niet zo vaak te zien op onze social media. Logisch, CrossFit Alkmaar draait natuurlijk vooral om onze leden en de mooie dingen die zij bij ons bereiken.</p>
+
+      <p>Hun achtergrond bij het Korps mariniers, waarvan een groot aantal jaren bij haar special forces, heeft de manier waarop zij CrossFit Alkmaar hebben neergezet voor een groot deel beïnvloed: professioneel, hard werken maar ook hard ontspannen en altijd alles netjes op z'n plek.</p>
+
+      <p>Bart werd een tijd geleden uitgenodigd bij de podcast Scherpschutters om zijn verhaal te vertellen. Benieuwd naar één van de gezichten achter CrossFit Alkmaar? Check it out!</p>
+
+      <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:1rem">
+        <iframe src="https://www.youtube.com/embed/06F4yorf3co?start=4449" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" title="Bart bij Scherpschutters podcast" allowfullscreen></iframe>
+      </div>
+    `,
+  },
   "ben-jij-fit-genoeg-voor-crossfit-alkmaar": {
     title: "Ben jij fit genoeg voor CrossFit Alkmaar?",
     date: "2026-02-23",
