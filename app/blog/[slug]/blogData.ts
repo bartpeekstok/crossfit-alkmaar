@@ -25,7 +25,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Bart werd een tijd geleden uitgenodigd bij de podcast Scherpschutters om zijn verhaal te vertellen. Benieuwd naar één van de gezichten achter CrossFit Alkmaar? Check it out!</p>
 
       <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin-top:1rem">
-        <iframe src="https://www.youtube.com/embed/06F4yorf3co?start=4449" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" title="Bart bij Scherpschutters podcast" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/06F4yorf3co" style="position:absolute;top:0;left:0;width:100%;height:100%;border:none" title="Bart bij Scherpschutters podcast" allowfullscreen></iframe>
       </div>
     `,
   },
