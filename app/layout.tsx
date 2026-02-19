@@ -33,6 +33,7 @@ import ChatWidget from "./components/ChatWidget";
 import JsonLd from "./components/JsonLd";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
+import StickyMobileCTA from "./components/StickyMobileCTA";
 import FormSubmissionTracker from "./components/FormSubmissionTracker";
 
 export const metadata: Metadata = {
@@ -150,6 +151,7 @@ export default function RootLayout({
                         <VoedingsadviesPopup />
                         <GroepslessenPopup />
                         <PricingPopup />
+                        <StickyMobileCTA />
                         <CookieBanner />
                         <ScrollDepthTracker />
                         <FormSubmissionTracker />

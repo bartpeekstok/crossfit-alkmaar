@@ -36,6 +36,10 @@ export const AB_TESTS = {
     id: "hero_social_proof",
     variants: ["hidden", "visible"],
   },
+  tarieven_link: {
+    id: "tarieven_link",
+    variants: ["/meer-info#tarieven", "/tarieven"],
+  },
 } as const;
 
 type TestId = keyof typeof AB_TESTS;
