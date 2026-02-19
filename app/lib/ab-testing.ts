@@ -15,7 +15,7 @@ export const AB_TESTS = {
     id: "cta_mid_v2",
     variants: [
       "Sluit je aan bij 300+ tevreden leden",
-      "Nog een paar plekken beschikbaar deze maand",
+      `Nog een paar plekken beschikbaar in ${new Date().toLocaleString("nl-NL", { month: "long" })}`,
     ],
   },
   popup_pricing_header: {
@@ -31,10 +31,6 @@ export const AB_TESTS = {
       "Laat hier je gegevens achter",
       "Plan je gratis en vrijblijvende kennismaking",
     ],
-  },
-  hero_social_proof: {
-    id: "hero_social_proof",
-    variants: ["hidden", "visible"],
   },
   tarieven_link: {
     id: "tarieven_link",

@@ -13,7 +13,6 @@ export default function HomePage() {
   const { openPopup } = usePopup();
   const ctaMid = getVariant("cta_mid_v2");
   const heroHeadline = getVariant("hero_headline");
-  const heroSocialProof = getVariant("hero_social_proof");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -57,11 +56,6 @@ export default function HomePage() {
           <p className="text-lg mb-6 text-gray-400">
             Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
           </p>
-          {heroSocialProof === "visible" && (
-            <p className="text-sm text-gray-300 mb-6">
-              ⭐ 4.9 op Google · 260+ reviews · 300+ actieve leden · 12+ jaar ervaring
-            </p>
-          )}
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
