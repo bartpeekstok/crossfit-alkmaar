@@ -10,6 +10,51 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is": {
+    title: "Waarom CrossFit Alkmaar niet zomaar een sportschool is",
+    date: "2026-03-09",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Community",
+    image: "/images/blog/Blog waarom CFA anders is.jpg",
+    excerpt: "Een collega gebruikt onze naam in zijn advertenties. In plaats van boos worden, leggen we liever uit wat ons al meer dan twaalf jaar anders maakt.",
+    content: `
+      <p>Dit weekend kwam ik erachter dat een collega in Alkmaar onze bedrijfsnaam gebruikt in zijn advertenties. In plaats van zijn eigen naam staat er heel groot 'CrossFit Alkmaar, dé plek voor CrossFit in Alkmaar' met daaronder natuurlijk een link naar zijn sportschool. Die tekst is niks aan gelogen, wij zijn inderdaad al meer dan twaalf jaar dé plek in Alkmaar als je wilt trainen onder begeleiding van gemotiveerde en professionele coaches.</p>
+
+      <p>Tot een paar jaar geleden kon ik me hier heel druk over maken, tegenwoordig zie ik het maar vooral als een compliment. We hebben hier een plek gebouwd waar mensen jarenlang lid zijn, meer dan duizend lessen meedoen en waar we al duizenden mensen het plezier in trainen hebben laten ontdekken. Logisch dat collega's graag meeliften op die naam natuurlijk.</p>
+
+      <p>Er zijn in Nederland inmiddels zo rond de 200 CrossFit boxen en alle eigenaren krijgen de vrijheid om hun aanbod en werkwijze in te vullen zoals zij dat willen. Een mooi concept: zo heeft elke CrossFit sportschool haar eigen specialiteiten en focus. Zo kan de ene gym meer focussen op wat meer gewichten tillen, de ander vooral op fanatieke wedstrijdatleten en weer een ander juist op beginnende sporters.</p>
+
+      <p>Wij roepen bij CrossFit Alkmaar al meer dan twaalf jaar dat we voor 'kwaliteit boven kwantiteit' gaan, we hebben een professioneel aanbod voor zowel de beginnende sporter als de meer ervaren atleet. Door de jaren heen hebben we ons aanbod en onze werkwijze natuurlijk steeds verder aangepast, altijd met deze visie voor ogen. Ondertussen hebben we hier een mooi concept staan, waar we volledig achter staan:</p>
+
+      <h2>Geen massale groepen</h2>
+
+      <p>Met onze negenhonderd vierkante meter zijn we één van de grotere CrossFit locaties in Noord-Holland. We hebben grote ruimtes, maar geen grote groepen. In onze groepslessen is plek voor maximaal twaalf deelnemers per grote zaal. Zo hebben onze coaches genoeg aandacht voor elk lid, heeft iedereen genoeg ruimte om veilig te bewegen en voel je je niet verloren in een groep van twintig deelnemers. Onze small groups zijn ook echt small groups: in een vaste groep van zes deelnemers heb je een ervaring die neigt naar personal training.</p>
+
+      <h2>We kennen je naam</h2>
+
+      <p>Sporten bij CrossFit Alkmaar is niet anoniem. Iedereen start met een gratis kennismakingsgesprek waarin we bespreken wie je bent, waar je tegenaan loopt en wat je al hebt geprobeerd. Hierdoor kennen al onze coaches je naam, we weten het als je een blessure hebt of als er even iets wat minder goed gaat. Zo heeft je coach vaak al een aanpassing voor je klaar nog voordat je erom gevraagd hebt.</p>
+
+      <h2>We willen dat je komt!</h2>
+
+      <p>We moedigen onze leden aan om drie keer per week te sporten. Dat moet niet, maar in onze ogen is dat wat er nodig is om goed te werken aan een sterker en fitter lijf. Zien we dat je al even niet geweest bent? Dan nemen we contact met je op om te vragen hoe het met je is en hoe we je weer aan de slag kunnen krijgen. Dat kunnen we heel makkelijk doen met automatische mailtjes, maar dat is niet hoe we werken. Je coach neemt persoonlijk contact met je op.</p>
+
+      <h2>We spreken je graag</h2>
+
+      <p>Elk lid van CrossFit Alkmaar heeft elke drie maanden recht op een '90 day check in' met één van onze coaches. Hier houden we vinger aan de pols, vieren we samen je successen en kijken we vooruit naar wat er nog beter kan.</p>
+
+      <h2>Professionele coaches</h2>
+
+      <p>Al onze coaches hebben onze eigen CFA coach course doorlopen en daarna stage gelopen voordat ze alleen voor onze leden komen te staan. We hebben vooral fulltime coaches, die de hele week bezig zijn om onze leden fitter te maken. Een coach bij CrossFit Alkmaar geeft nooit meer dan drie lessen achter elkaar. Zo garanderen wij dat er altijd een frisse, gemotiveerde coach voor de les staat. Wekelijkse coach meetings, maandelijkse coach evaluaties en gezamenlijke en individuele cursussen zorgen dat ons team altijd kwaliteit levert.</p>
+
+      <h2>Passie voor wat we doen</h2>
+
+      <p>Geen branche is zo trendgevoelig als de sportbranche: er is altijd wel weer een nieuwe hype of magic pill waar iedereen achteraan rent. Wij geloven heilig in wat we bij CrossFit Alkmaar doen: een stevige mix van kracht- en conditietraining. Dit werkt, voor iedereen. Natuurlijk introduceren we soms nieuw materiaal of nieuwe bewegingen, maar onze basis blijft hetzelfde: onder begeleiding van professionele coaches werken aan kracht en conditie. Al onze coaches en eigenaren trainen zelf ook nog steeds op deze manier en je ziet ze dan ook vaak deelnemen aan de lessen.</p>
+
+      <p>Eigenlijk doen we al twaalf jaar hetzelfde hier: onze leden staan voorop. Dat is altijd al zo geweest, en zo gaat het altijd blijven. Dat voelt goed voor ons én onze leden, en zo gaan we de komende twaalf jaar ook nog verder. Ik zou het ook niet anders kunnen.</p>
+
+      <p>Benieuwd hoe dat dan in de praktijk voelt? Boek gewoon even dat gratis kennismakingsgesprek via <a href="/free-intro">deze link</a>, dan zet ik de koffie hier voor je klaar. Tot snel!</p>
+    `,
+  },
   "bart-bij-scherpschutters-podcast": {
     title: "Bart bij Scherpschutters podcast",
     date: "2026-03-02",
