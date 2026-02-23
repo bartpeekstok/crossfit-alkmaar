@@ -16,7 +16,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Community",
     image: "/images/blog/Blog waarom CFA anders is.jpg",
-    excerpt: "Een collega gebruikt onze naam in zijn advertenties. In plaats van boos worden, leggen we liever uit wat ons al meer dan twaalf jaar anders maakt.",
+    excerpt: "Waarom CrossFit Alkmaar zo'n gevestigde naam is dat zelfs collega's hem gebruiken.",
     content: `
       <p>Dit weekend kwam ik erachter dat een collega in Alkmaar onze bedrijfsnaam gebruikt in zijn advertenties. In plaats van zijn eigen naam staat er heel groot 'CrossFit Alkmaar, dé plek voor CrossFit in Alkmaar' met daaronder natuurlijk een link naar zijn sportschool. Die tekst is niks aan gelogen, wij zijn inderdaad al meer dan twaalf jaar dé plek in Alkmaar als je wilt trainen onder begeleiding van gemotiveerde en professionele coaches.</p>
 
