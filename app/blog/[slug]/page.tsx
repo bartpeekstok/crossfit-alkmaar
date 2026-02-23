@@ -3,6 +3,7 @@
 import { usePopup } from "../../components/PopupContext";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { useCallback } from "react";
 import ArticleSchema from "../../components/ArticleSchema";
 import { getBlogPost } from "./blogData";
 
@@ -10,6 +11,15 @@ export default function BlogPostPage() {
   const { openPopup } = usePopup();
   const params = useParams();
   const slug = params.slug as string;
+
+  const handleContentClick = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    const target = e.target as HTMLElement;
+    const link = target.closest("a");
+    if (link && link.getAttribute("href") === "/free-intro") {
+      e.preventDefault();
+      openPopup();
+    }
+  }, [openPopup]);
 
   const post = getBlogPost(slug);
 
@@ -62,6 +72,7 @@ export default function BlogPostPage() {
           <div
             className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-900 [&>p]:mb-8 [&>p]:leading-relaxed [&>h2]:mt-12 [&>h2]:mb-4 [&>h2]:text-2xl [&>h2]:font-bold"
             dangerouslySetInnerHTML={{ __html: post.content }}
+            onClick={handleContentClick}
           />
 
           {/* Back link */}
