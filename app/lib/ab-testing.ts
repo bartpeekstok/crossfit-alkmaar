@@ -4,20 +4,6 @@ import { trackEvent } from "./analytics";
 
 // Define active A/B tests here
 export const AB_TESTS = {
-  hero_headline: {
-    id: "hero_headline",
-    variants: [
-      "Ontdek waarom 300+ Alkmaarders hier trainen",
-      "Moe van sportscholen waar je niet naartoe gaat?",
-    ],
-  },
-  cta_mid_v2: {
-    id: "cta_mid_v2",
-    variants: [
-      "Sluit je aan bij 300+ tevreden leden",
-      `Nog een paar plekken beschikbaar in ${new Date().toLocaleString("nl-NL", { month: "long" })}`,
-    ],
-  },
   popup_pricing_header: {
     id: "popup_pricing_header",
     variants: [

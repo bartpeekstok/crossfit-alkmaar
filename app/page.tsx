@@ -6,13 +6,10 @@ import { usePopup } from "./components/PopupContext";
 import FaqSchema from "./components/FaqSchema";
 import VideoSchema from "./components/VideoSchema";
 import { trackCTAClick, trackOutboundLink } from "./lib/analytics";
-import { getVariant } from "./lib/ab-testing";
 import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
 
 export default function HomePage() {
   const { openPopup } = usePopup();
-  const ctaMid = getVariant("cta_mid_v2");
-  const heroHeadline = getVariant("hero_headline");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -48,7 +45,7 @@ export default function HomePage() {
         <img src="/images/hero.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            {heroHeadline}
+            Moe van sportscholen waar je niet naartoe gaat?
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
             Kleine groepen, professionele coaches en schaalbaar op elk niveau.
@@ -148,7 +145,7 @@ export default function HomePage() {
       <section className="py-12 px-6 bg-gray-200">
         <div className="max-w-2xl mx-auto">
           <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-            <h3 className="text-2xl font-bold mb-4">{ctaMid}</h3>
+            <h3 className="text-2xl font-bold mb-4">Sluit je aan bij 300+ tevreden leden</h3>
             <button
               onClick={() => { trackCTAClick('gratis_intake_mid', 'home'); openPopup(); }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-10 text-lg rounded-lg transition cursor-pointer"
