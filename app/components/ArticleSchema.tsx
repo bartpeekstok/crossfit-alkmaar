@@ -55,7 +55,7 @@ export default function ArticleSchema({
       name: "CrossFit Alkmaar",
       logo: {
         "@type": "ImageObject",
-        url: "https://crossfitalkmaar.com/images/logo.png",
+        url: "https://crossfitalkmaar.com/images/logo_dark.png",
       },
     },
     mainEntityOfPage: {
