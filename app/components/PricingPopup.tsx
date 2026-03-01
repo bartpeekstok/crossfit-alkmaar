@@ -1,14 +1,13 @@
 "use client";
 
 import { usePricingPopup } from "./PricingPopupContext";
-import { getVariant } from "../lib/ab-testing";
 
 export default function PricingPopup() {
   const { isOpen, closePopup } = usePricingPopup();
 
   if (!isOpen) return null;
 
-  const headerText = getVariant("popup_pricing_header");
+  const headerText = "Meer informatie over onze programma's en tarieven";
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center">

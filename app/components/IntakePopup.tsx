@@ -1,14 +1,13 @@
 "use client";
 
 import { usePopup } from "./PopupContext";
-import { getVariant } from "../lib/ab-testing";
 
 export default function IntakePopup() {
   const { isOpen, closePopup } = usePopup();
 
   if (!isOpen) return null;
 
-  const headerText = getVariant("popup_intake_header");
+  const headerText = "Plan je gratis en vrijblijvende kennismaking";
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center">
