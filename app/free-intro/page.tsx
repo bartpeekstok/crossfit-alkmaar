@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Script from "next/script";
-import { trackFormSubmit, trackEvent } from "../lib/analytics";
+import { trackEvent, trackFormSubmit } from "../lib/analytics";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function IntakePage() {
@@ -15,9 +15,13 @@ export default function IntakePage() {
     const source = isFromGHL ? "ghl_form" : isFromSite ? "website_form" : referrer ? "external" : "direct";
     trackEvent("free_intro_visit", { referrer_source: source, referrer_url: referrer || "direct" });
 
-    // Count as form completion if user came from GHL form or website popup
+    // Track form submission with the specific form name from the popup that was open
     if (isFormRedirect) {
-      trackFormSubmit("form_completed");
+      const pendingForm = sessionStorage.getItem('pending_form');
+      if (pendingForm) {
+        trackFormSubmit(pendingForm);
+        sessionStorage.removeItem('pending_form');
+      }
     }
   }, []);
 

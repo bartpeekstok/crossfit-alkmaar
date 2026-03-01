@@ -74,6 +74,10 @@ export function trackPopupOpen(popupName: string) {
   trackEvent('popup_open', {
     popup_name: popupName,
   });
+  // Store which form popup is open so /free-intro can identify which form was submitted
+  if (typeof window !== 'undefined') {
+    sessionStorage.setItem('pending_form', popupName);
+  }
 }
 
 export function trackPopupClose(popupName: string) {
