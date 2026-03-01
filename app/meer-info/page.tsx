@@ -2,12 +2,16 @@
 
 import { usePopup } from "../components/PopupContext";
 import { usePricingPopup } from "../components/PricingPopupContext";
+import { useRouter } from "next/navigation";
 import Script from "next/script";
 import { trackCTAClick } from "../lib/analytics";
+import { getVariant } from "../lib/ab-testing";
 
 export default function MeerInfoPage() {
   const { openPopup } = usePopup();
   const { openPopup: openPricingPopup } = usePricingPopup();
+  const router = useRouter();
+  const tarievenVariant = getVariant("tarieven_link");
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -66,10 +70,17 @@ export default function MeerInfoPage() {
           </p>
           <div className="text-center">
             <button
-              onClick={() => { trackCTAClick('tarieven_info', 'meer-info'); openPricingPopup(); }}
+              onClick={() => {
+                trackCTAClick('tarieven_info', 'meer-info');
+                if (tarievenVariant === '/tarieven') {
+                  router.push('/tarieven');
+                } else {
+                  openPricingPopup();
+                }
+              }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
             >
-              Vraag meer informatie aan
+              {tarievenVariant === '/tarieven' ? 'Bekijk onze tarieven' : 'Vraag meer informatie aan'}
             </button>
           </div>
         </div>
