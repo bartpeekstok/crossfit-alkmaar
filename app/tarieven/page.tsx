@@ -3,10 +3,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePopup } from "../components/PopupContext";
+import { usePricingPopup } from "../components/PricingPopupContext";
 import { trackCTAClick } from "../lib/analytics";
 
 export default function TarievenPage() {
   const { openPopup } = usePopup();
+  const { openPopup: openPricingPopup } = usePricingPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -46,6 +48,14 @@ export default function TarievenPage() {
 
       <div className="relative w-full h-80 md:h-96">
         <Image src="/images/groepslessen-header.jpg" alt="Groepslessen bij CrossFit Alkmaar" fill className="object-cover object-[center_35%]" />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <button
+            onClick={() => { trackCTAClick('pricing_tarieven_groepslessen_img', 'tarieven'); openPricingPopup(); }}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+          >
+            Start met groepslessen
+          </button>
+        </div>
       </div>
 
       {/* Groepslessen */}
@@ -94,6 +104,14 @@ export default function TarievenPage() {
 
       <div className="relative w-full h-80 md:h-96">
         <Image src="/images/small-group-training-header.jpg" alt="BUILD Small Group Training" fill className="object-cover object-top" />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <button
+            onClick={() => { trackCTAClick('pricing_tarieven_build_img', 'tarieven'); openPricingPopup(); }}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+          >
+            Start met BUILD training
+          </button>
+        </div>
       </div>
 
       {/* BUILD Small Group */}
@@ -137,6 +155,14 @@ export default function TarievenPage() {
 
       <div className="relative w-full h-80 md:h-96">
         <Image src="/images/kickstart-header.jpg" alt="28 Day Kickstart" fill className="object-cover object-[center_15%]" />
+        <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+          <button
+            onClick={() => { trackCTAClick('pricing_tarieven_kickstart_img', 'tarieven'); openPricingPopup(); }}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+          >
+            Start je Kickstart
+          </button>
+        </div>
       </div>
 
       {/* Kickstart */}
