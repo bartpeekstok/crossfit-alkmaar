@@ -10,6 +10,33 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "twaalf-jaar-crossfit-alkmaar": {
+    title: "Twaalf jaar CrossFit Alkmaar en nog steeds dit beeld",
+    date: "2026-03-16",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Community",
+    image: "/images/Blog Bij CrossFit Alkmaar doen we al twaalf jaar vooral CrossFit..jpg",
+    excerpt: "Al twaalf jaar zijn we bij CrossFit Alkmaar aan het opboksen tegen het beeld dat veel mensen van CrossFit hebben. Maar CrossFit is voor iedereen.",
+    content: `
+      <p>Bij CrossFit Alkmaar doen we al twaalf jaar vooral CrossFit. En zijn we al net zo lang aan het opboksen tegen het beeld dat veel mensen van CrossFit hebben.</p>
+
+      <p>We worden best wel eens benaderd door mensen die het spannend vinden om op intake te komen. Sommige mensen vragen zelfs om een trainingsschema dat ze kunnen volgen voordat ze bij ons starten….</p>
+
+      <p>Dat vind ik altijd zo jammer, bij CrossFit Alkmaar maken we je juist fit voor het leven. Je komt niet bij ons om te laten zien hoe fit je bent. Als mensen eenmaal bij ons binnen zijn, kunnen we ze altijd goed laten zien dat er hier toch vooral 'normale' mensen sporten. Mensen die drie keer per week aan hun kracht en conditie komen werken.</p>
+
+      <p>Voor veel mensen heeft CrossFit nog steeds een rauwe 'hardcore' uitstraling (Burgemeester Anja Schouten benoemde dit ook al eens toen ze bij ons langskwam, <a href="/blog/een-hardcore-sportschool">lees het hier</a>). Ze denken dat het alleen geschikt voor superfitte mensen die het liefste zonder shirt zware gewichten boven hun hoofd tillen en op hun handen lopen. En dan natuurlijk het liefst met superharde heavy metal muziek op de achtergrond.</p>
+
+      <p>In de eerste jaren van CrossFit Alkmaar hebben we zelf ook wel een beetje bijgedragen aan dit beeld. Ik vond het zelf ook stoer als mijn handen helemaal stuk waren van honderd pull ups en ja, er stond eigenlijk standaard Metallica aan als we aan het trainen waren. Nu, twaalf jaar verder, is CrossFit voor mij zoveel meer geworden dan die rauwe sport waarin het niet zwaar en hard genoeg kan gaan.</p>
+
+      <p>Want CrossFit (Alkmaar) is voor mij nu vooral dé methode om iedereen fit te krijgen. En eigenlijk ook vooral die groep mensen die nog nooit (veel) heeft gesport en het al een drempel vindt om een sportschool (laat staan een CrossFit box) binnen te stappen. Ik ben altijd blij als iemand de stap neemt om een intake te boeken en bij ons langs te komen zodat we rustig kunnen laten zien wat we hier doen en waarom dat wél werkt voor de meeste mensen.</p>
+
+      <p>Iemand helemaal stuk maken met een zware workout, daar is niks moeilijks aan. Wat wél echt een vak is, is het maken van een programma waar mensen sterker en fitter van worden. Om vervolgens dat programma ook per persoon passend te maken, is de volgende skill die een goede trainer onderscheidt van de rest.</p>
+
+      <p>En laten we daar nu net best wel goed in zijn bij CrossFit Alkmaar. Hier loop je altijd voldaan naar buiten. Of je nu die beginner bent die het spannend vond om die eerste stap te zetten of die atleet die de sport wat serieuzer neemt en op z'n handen naar buiten loopt.</p>
+
+      <p>Onze <a href="/kickstart">28 day kickstart</a> is juist geschreven voor jou als je het lastig vindt om te starten en niet zo goed weet wat je moet doen. Heb je al wat meer ervaring met trainen? Ook dan ligt er een mooi pad voor je start bij CrossFit Alkmaar voor je uitgestippeld. Iedereen start met die gratis intake, <a href="/free-intro">boek hem hier</a>.</p>
+    `,
+  },
   "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is": {
     title: "Waarom CrossFit Alkmaar niet zomaar een sportschool is",
     date: "2026-03-09",
