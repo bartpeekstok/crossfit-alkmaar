@@ -85,6 +85,35 @@ export default function VoedingsadviesPage() {
         </div>
       </section>
 
+      {/* BenFit */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-blue-900 rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
+            <a href="https://benfit.nl" target="_blank" rel="noopener noreferrer" className="shrink-0">
+              <img
+                src="/images/benfit-logo.png"
+                alt="BenFit voedingsprogramma"
+                className="h-16 md:h-20 w-auto"
+              />
+            </a>
+            <div className="text-white text-center md:text-left">
+              <h2 className="text-2xl md:text-3xl font-bold mb-3">Wij werken met BenFit</h2>
+              <p className="text-gray-200 text-lg mb-4">
+                Als onderdeel van ons voedingsadvies gebruik je de BenFit app. Je krijgt wekelijks een persoonlijk voedingsplan, afgestemd op jouw lichaam, doelen en voorkeuren — inclusief boodschappenlijst en recepten.
+              </p>
+              <a
+                href="https://benfit.nl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-3 px-6 rounded-lg transition"
+              >
+                Meer over BenFit →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
