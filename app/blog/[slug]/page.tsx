@@ -46,6 +46,7 @@ export default function BlogPostPage() {
         datePublished={post.date}
         slug={slug}
         category={post.category}
+        author={post.author}
       />
 
       {/* Hero */}

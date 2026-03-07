@@ -5,6 +5,7 @@ interface ArticleSchemaProps {
   datePublished: string;
   slug: string;
   category: string;
+  author: string;
 }
 
 export default function ArticleSchema({
@@ -14,6 +15,7 @@ export default function ArticleSchema({
   datePublished,
   slug,
   category,
+  author,
 }: ArticleSchemaProps) {
   // Convert Dutch date to ISO format
   const months: { [key: string]: string } = {
@@ -46,9 +48,14 @@ export default function ArticleSchema({
     datePublished: isoDate,
     dateModified: isoDate,
     author: {
-      "@type": "Organization",
-      name: "CrossFit Alkmaar",
-      url: "https://crossfitalkmaar.com",
+      "@type": "Person",
+      name: author.split(",")[0].trim(),
+      jobTitle: author.includes(",") ? author.split(",")[1].trim() : undefined,
+      worksFor: {
+        "@type": "Organization",
+        name: "CrossFit Alkmaar",
+        url: "https://crossfitalkmaar.com",
+      },
     },
     publisher: {
       "@type": "Organization",
