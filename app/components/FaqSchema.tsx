@@ -35,6 +35,30 @@ export default function FaqSchema() {
           text: "We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Is CrossFit geschikt voor beginners?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Absoluut. Bij CrossFit Alkmaar start iedereen met een 28 day kickstart waarin je in kleine groepen (max 6 personen) alle basisbewegingen leert. Elke oefening wordt aangepast aan jouw niveau, dus ervaring is niet nodig.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Wat is het verschil tussen CrossFit en een gewone sportschool?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bij een gewone sportschool train je alleen met machines en zonder begeleiding. Bij CrossFit Alkmaar train je altijd onder leiding van professionele coaches, in kleine groepen met gevarieerde trainingen. Je wordt sterker, fitter én je bouwt een community op.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Voor wie is CrossFit Alkmaar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "CrossFit Alkmaar is voor iedereen: van 20 tot 70+, van complete beginners tot ervaren sporters. Onze gemiddelde leeftijd is 35+. Elke training is schaalbaar naar jouw niveau, doelen en eventuele beperkingen.",
+        },
+      },
     ],
   };
 

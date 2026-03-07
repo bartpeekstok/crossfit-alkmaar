@@ -24,9 +24,9 @@ export default function ServiceSchema({
       name: provider,
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Hertog Aalbrechtweg 10",
+        streetAddress: "Phoenixstraat 33",
         addressLocality: "Alkmaar",
-        postalCode: "1823 DL",
+        postalCode: "1812 PP",
         addressCountry: "NL",
       },
     },

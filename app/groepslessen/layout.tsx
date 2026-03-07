@@ -1,10 +1,10 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Groepslessen Alkmaar - CrossFit & Fitness Classes",
+  title: "Groepslessen Alkmaar - CrossFit, Strength & Hyrox Classes",
   description:
-    "Groepslessen bij CrossFit Alkmaar. Gevarieerde workouts met kracht, conditie en mobiliteit. Professionele coaches, alle niveaus welkom. Probeer gratis!",
-  keywords: ["groepslessen Alkmaar", "fitness classes Alkmaar", "CrossFit lessen", "groepstraining Alkmaar"],
+    "Groepslessen bij CrossFit Alkmaar in groepen van max 12 personen. CrossFit, Strength en Hyrox classes met professionele coaches. Voor alle niveaus, ook beginners en 50+. Probeer gratis!",
+  keywords: ["groepslessen Alkmaar", "fitness classes Alkmaar", "CrossFit lessen", "groepstraining Alkmaar", "sportschool groepslessen", "fitness beginners Alkmaar"],
   openGraph: {
     title: "Groepslessen | Samen Sterker Worden",
     description:

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Programma's",
+  title: "Programma's - Sportschool Alkmaar met Begeleiding",
   description:
-    "Ontdek alle trainingsprogramma's van CrossFit Alkmaar. Van groepslessen tot personal training, voor elk niveau en elke doelstelling.",
+    "Alle trainingsprogramma's van CrossFit Alkmaar: groepslessen, BUILD small group, personal training en de 28 day kickstart. Voor beginners tot gevorderden, altijd met professionele coaches.",
   openGraph: {
     title: "Programma's | CrossFit Alkmaar",
     description:
