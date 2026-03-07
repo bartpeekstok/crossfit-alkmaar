@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Script from "next/script";
 import { usePopup } from "./components/PopupContext";
-import FaqSchema from "./components/FaqSchema";
 import VideoSchema from "./components/VideoSchema";
 import { trackCTAClick, trackOutboundLink } from "./lib/analytics";
 import TrackedYouTubeEmbed from "./components/TrackedYouTubeEmbed";
@@ -13,7 +12,6 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      <FaqSchema />
       {/* Video Schema for SEO */}
       <VideoSchema
         name="Jarrald - CrossFit Alkmaar Kickstart Ervaring"
