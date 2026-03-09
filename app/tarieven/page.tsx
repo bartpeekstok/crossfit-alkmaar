@@ -63,19 +63,19 @@ export default function TarievenPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Groepslessen</h2>
           <p className="text-center text-gray-600 mb-8">Inclusief 90 day check ins met een coach. Geschikt voor elk niveau.</p>
-          <div className="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8 max-w-3xl mx-auto">
-            <p className="font-bold text-xl mb-5 text-center">Alle groepslesabonnementen inclusief:</p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-gray-800 font-semibold">
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Professionele coaches</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Max 12 deelnemers per les</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>90 day check ins met een coach</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Geschikt voor elk niveau</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Groot rooster, flexibel plannen</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>SportBit app</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Gratis koffie en thee</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Kleedkamers en douches</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Gratis parkeren</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>CrossFit, Hyrox en Strength</p>
+          <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
+            <p className="font-bold text-xl md:text-2xl mb-6 text-center">Alle groepslesabonnementen inclusief:</p>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Professionele coaches</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 12 deelnemers per les</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>90 day check ins met een coach</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Geschikt voor elk niveau</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Groot rooster, flexibel plannen</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>SportBit app</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Gratis koffie en thee</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Kleedkamers en douches</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Gratis parkeren</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>CrossFit, Hyrox en Strength</p>
             </div>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
@@ -119,16 +119,16 @@ export default function TarievenPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">BUILD Small Group Training</h2>
           <p className="text-center text-gray-600 mb-8">Semi personal training in een vaste groep van maximaal 6 personen.</p>
-          <div className="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8 max-w-3xl mx-auto">
-            <p className="font-bold text-xl mb-2 text-center">BUILD inclusief:</p>
-            <p className="text-gray-700 text-base mb-5 text-center">Alles van groepslessen, plus:</p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-gray-800 font-semibold">
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Max 6 deelnemers per training</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Programma op maat</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Vaste groep, vaste coaches</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Je plek is altijd gereserveerd</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Persoonlijke aandacht in een groep</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Voordeliger dan personal training</p>
+          <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
+            <p className="font-bold text-xl md:text-2xl mb-2 text-center">BUILD inclusief:</p>
+            <p className="text-blue-200 text-base mb-6 text-center">Alles van groepslessen, plus:</p>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 6 deelnemers per training</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Programma op maat</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Vaste groep, vaste coaches</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Je plek is altijd gereserveerd</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Persoonlijke aandacht in een groep</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Voordeliger dan personal training</p>
             </div>
           </div>
           <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
@@ -174,17 +174,17 @@ export default function TarievenPage() {
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">28 Day Kickstart</h2>
           <p className="text-center text-gray-600 mb-8">Nieuw hier? Iedereen start met de Kickstart. In vier weken leggen we samen een solide basis.</p>
-          <div className="mb-8 bg-white rounded-lg shadow-sm border border-gray-200 p-8 max-w-3xl mx-auto">
-            <p className="font-bold text-xl mb-5 text-center">Kickstart inclusief:</p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-3 text-gray-800 font-semibold">
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>12 trainingen in 4 weken</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Max 6 deelnemers per groep</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Basis lifestyle advies</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Leer de juiste techniek</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Aandacht voor jouw doelen</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Een veilige start</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Geschikt voor beginners en gevorderden</p>
-              <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Eindgesprek met advies</p>
+          <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
+            <p className="font-bold text-xl md:text-2xl mb-6 text-center">Kickstart inclusief:</p>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>12 trainingen in 4 weken</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 6 deelnemers per groep</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Basis lifestyle advies</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Leer de juiste techniek</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Aandacht voor jouw doelen</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Een veilige start</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Geschikt voor beginners en gevorderden</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Eindgesprek met advies</p>
             </div>
           </div>
           <div className="max-w-sm mx-auto">
