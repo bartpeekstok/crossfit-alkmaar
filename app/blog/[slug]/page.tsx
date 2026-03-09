@@ -57,7 +57,10 @@ export default function BlogPostPage() {
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
+        role="img"
+        aria-label={`${post.title} - CrossFit Alkmaar blog`}
       >
+        <img src={post.image} alt={`${post.title} - CrossFit Alkmaar blog`} className="sr-only" />
         <div className="max-w-3xl mx-auto w-full relative z-10">
           <span className="text-xs font-semibold bg-blue-600 px-3 py-1 rounded mb-4 inline-block">
             {post.category}

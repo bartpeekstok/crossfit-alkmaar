@@ -29,12 +29,15 @@ export default function VacaturesPage() {
       {/* Hero Section */}
       <section
         className="relative text-white py-20 px-6 min-h-[400px] flex items-center"
+        role="img"
+        aria-label="Werken bij CrossFit Alkmaar - vacatures voor coaches en trainers"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/hero.jpg" alt="Werken bij CrossFit Alkmaar - vacatures voor coaches en trainers" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Werken bij CrossFit Alkmaar

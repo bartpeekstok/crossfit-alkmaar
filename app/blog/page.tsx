@@ -24,12 +24,15 @@ export default function BlogPage() {
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
+        role="img"
+        aria-label="CrossFit Alkmaar blog - tips over training, voeding en een gezonde levensstijl"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
+        <img src="/images/hero.jpg" alt="CrossFit Alkmaar blog - tips over training, voeding en een gezonde levensstijl" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Blog
