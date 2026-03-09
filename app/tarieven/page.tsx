@@ -161,7 +161,7 @@ export default function TarievenPage() {
           <div className="max-w-sm mx-auto">
             <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">4 weken</p>
-              <p className="text-4xl font-bold text-blue-900">€500</p>
+              <p className="text-4xl font-bold text-blue-900">€350</p>
               <p className="text-gray-500 text-sm mt-1">eenmalig</p>
             </div>
           </div>
