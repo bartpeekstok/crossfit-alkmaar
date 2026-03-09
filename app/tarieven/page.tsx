@@ -78,25 +78,25 @@ export default function TarievenPage() {
               <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>CrossFit, Hyrox en Strength</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border border-gray-200">
-              <p className="text-gray-800 text-base font-medium mb-1">2x per week</p>
-              <p className="text-2xl font-bold text-blue-900">€99,95</p>
-              <p className="text-gray-800 text-xs">per maand</p>
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">2x per week</p>
+              <p className="text-4xl font-bold text-blue-900">€99,95</p>
+              <p className="text-gray-500 text-sm mt-1">per maand</p>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border-2 border-blue-900 relative">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-xs px-3 py-1 rounded-full">Populair</span>
-              <p className="text-gray-800 text-base font-medium mb-1">3x per week</p>
-              <p className="text-2xl font-bold text-blue-900">€127,50</p>
-              <p className="text-gray-800 text-xs">per maand</p>
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border-2 border-blue-900 relative">
+              <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-xs font-semibold px-4 py-1.5 rounded-full">Populair</span>
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">3x per week</p>
+              <p className="text-4xl font-bold text-blue-900">€127,50</p>
+              <p className="text-gray-500 text-sm mt-1">per maand</p>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border border-gray-200">
-              <p className="text-gray-800 text-base font-medium mb-1">Onbeperkt</p>
-              <p className="text-2xl font-bold text-blue-900">€159,95</p>
-              <p className="text-gray-800 text-xs">per maand</p>
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">Onbeperkt</p>
+              <p className="text-4xl font-bold text-blue-900">€159,95</p>
+              <p className="text-gray-500 text-sm mt-1">per maand</p>
             </div>
           </div>
-          <div className="text-center mt-6">
+          <div className="text-center mt-8">
             <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">Meer over groepslessen &rarr;</Link>
           </div>
         </div>
@@ -131,23 +131,27 @@ export default function TarievenPage() {
               <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Voordeliger dan personal training</p>
             </div>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border border-gray-200">
-              <p className="text-gray-800 text-base font-medium mb-1">2x per week</p>
-              <p className="text-2xl font-bold text-blue-900">€245</p>
-              <p className="text-gray-800 text-xs">per maand</p>
-              <p className="text-gray-800 text-base font-medium mt-2"><span className="text-blue-900">&#8226;</span> 2 BUILD trainingen</p>
-              <p className="text-gray-800 text-base font-medium"><span className="text-blue-900">&#8226;</span> 1 groepsles</p>
+          <div className="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">2x per week</p>
+              <p className="text-4xl font-bold text-blue-900">€245</p>
+              <p className="text-gray-500 text-sm mt-1">per maand</p>
+              <div className="mt-4 space-y-1 text-gray-700">
+                <p className="text-sm"><span className="text-blue-900 font-bold">&#8226;</span> 2 BUILD trainingen</p>
+                <p className="text-sm"><span className="text-blue-900 font-bold">&#8226;</span> 1 groepsles</p>
+              </div>
             </div>
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border border-gray-200">
-              <p className="text-gray-800 text-base font-medium mb-1">3x per week</p>
-              <p className="text-2xl font-bold text-blue-900">€367,50</p>
-              <p className="text-gray-800 text-xs">per maand</p>
-              <p className="text-gray-800 text-base font-medium mt-2"><span className="text-blue-900">&#8226;</span> 3 BUILD trainingen</p>
-              <p className="text-gray-800 text-base font-medium"><span className="text-blue-900">&#8226;</span> 2 groepslessen</p>
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">3x per week</p>
+              <p className="text-4xl font-bold text-blue-900">€367,50</p>
+              <p className="text-gray-500 text-sm mt-1">per maand</p>
+              <div className="mt-4 space-y-1 text-gray-700">
+                <p className="text-sm"><span className="text-blue-900 font-bold">&#8226;</span> 3 BUILD trainingen</p>
+                <p className="text-sm"><span className="text-blue-900 font-bold">&#8226;</span> 2 groepslessen</p>
+              </div>
             </div>
           </div>
-          <div className="text-center mt-6">
+          <div className="text-center mt-8">
             <Link href="/small-group-training" className="text-blue-900 font-semibold hover:underline">Meer over BUILD &rarr;</Link>
           </div>
         </div>
@@ -183,14 +187,14 @@ export default function TarievenPage() {
               <p className="flex items-start gap-2"><span className="w-2 h-2 bg-blue-900 rounded-full shrink-0 mt-[7px]"></span>Eindgesprek met advies</p>
             </div>
           </div>
-          <div className="max-w-xs mx-auto">
-            <div className="bg-white rounded-lg shadow-sm p-4 text-center border border-gray-200">
-              <p className="text-gray-800 text-base font-medium mb-1">4 weken</p>
-              <p className="text-2xl font-bold text-blue-900">€500</p>
-              <p className="text-gray-800 text-xs">eenmalig</p>
+          <div className="max-w-sm mx-auto">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">4 weken</p>
+              <p className="text-4xl font-bold text-blue-900">€500</p>
+              <p className="text-gray-500 text-sm mt-1">eenmalig</p>
             </div>
           </div>
-          <div className="text-center mt-6">
+          <div className="text-center mt-8">
             <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Meer over de Kickstart &rarr;</Link>
           </div>
         </div>
