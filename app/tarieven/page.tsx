@@ -1,7 +1,5 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { usePopup } from "../components/PopupContext";
 import { usePricingPopup } from "../components/PricingPopupContext";
 import { trackCTAClick } from "../lib/analytics";
@@ -85,23 +83,12 @@ export default function TarievenPage() {
             </div>
           </div>
           <div className="text-center mt-8">
-            <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">Meer over groepslessen &rarr;</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-6 bg-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/groepslessen-header.jpg" alt="Groepslessen bij CrossFit Alkmaar" fill className="object-cover object-[center_35%]" />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <button
-                onClick={() => { trackCTAClick('pricing_tarieven_groepslessen_img', 'tarieven'); openPricingPopup(); }}
-                className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
-              >
-                Start met groepslessen
-              </button>
-            </div>
+            <button
+              onClick={() => { trackCTAClick('pricing_tarieven_groepslessen', 'tarieven'); openPricingPopup(); }}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+            >
+              Start met groepslessen
+            </button>
           </div>
         </div>
       </section>
@@ -144,23 +131,12 @@ export default function TarievenPage() {
             </div>
           </div>
           <div className="text-center mt-8">
-            <Link href="/small-group-training" className="text-blue-900 font-semibold hover:underline">Meer over BUILD &rarr;</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-6 bg-gray-200">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/small-group-training-header.jpg" alt="BUILD Small Group Training" fill className="object-cover object-top" />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <button
-                onClick={() => { trackCTAClick('pricing_tarieven_build_img', 'tarieven'); openPricingPopup(); }}
-                className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
-              >
-                Start met BUILD training
-              </button>
-            </div>
+            <button
+              onClick={() => { trackCTAClick('pricing_tarieven_build', 'tarieven'); openPricingPopup(); }}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+            >
+              Start met BUILD training
+            </button>
           </div>
         </div>
       </section>
@@ -175,7 +151,6 @@ export default function TarievenPage() {
             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
               <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>12 trainingen in 4 weken</p>
               <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 6 deelnemers per groep</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Basis lifestyle advies</p>
               <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Leer de juiste techniek</p>
               <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Aandacht voor jouw doelen</p>
               <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Een veilige start</p>
@@ -191,23 +166,12 @@ export default function TarievenPage() {
             </div>
           </div>
           <div className="text-center mt-8">
-            <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Meer over de Kickstart &rarr;</Link>
-          </div>
-        </div>
-      </section>
-
-      <section className="py-8 px-6 bg-gray-100">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/kickstart-header.jpg" alt="28 Day Kickstart" fill className="object-cover object-[center_15%]" />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <button
-                onClick={() => { trackCTAClick('pricing_tarieven_kickstart_img', 'tarieven'); openPricingPopup(); }}
-                className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
-              >
-                Start je Kickstart
-              </button>
-            </div>
+            <button
+              onClick={() => { trackCTAClick('pricing_tarieven_kickstart', 'tarieven'); openPricingPopup(); }}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+            >
+              Start je Kickstart
+            </button>
           </div>
         </div>
       </section>
