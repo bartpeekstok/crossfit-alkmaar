@@ -69,12 +69,14 @@ export default function TarievenPage() {
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">2x per week</p>
               <p className="text-4xl font-bold text-blue-900">€99,95</p>
               <p className="text-gray-500 text-sm mt-1">per maand</p>
+              <p className="text-gray-400 text-xs mt-2">10x per maand</p>
             </div>
             <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border-2 border-blue-900 relative">
               <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-blue-900 text-white text-xs font-semibold px-4 py-1.5 rounded-full">Populair</span>
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">3x per week</p>
               <p className="text-4xl font-bold text-blue-900">€127,50</p>
               <p className="text-gray-500 text-sm mt-1">per maand</p>
+              <p className="text-gray-400 text-xs mt-2">15x per maand</p>
             </div>
             <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">Onbeperkt</p>
