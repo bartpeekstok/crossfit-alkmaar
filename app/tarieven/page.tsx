@@ -46,22 +46,6 @@ export default function TarievenPage() {
         </div>
       </section>
 
-      <section className="py-8 px-6 bg-gray-200">
-        <div className="max-w-5xl mx-auto">
-          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/groepslessen-header.jpg" alt="Groepslessen bij CrossFit Alkmaar" fill className="object-cover object-[center_35%]" />
-            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
-              <button
-                onClick={() => { trackCTAClick('pricing_tarieven_groepslessen_img', 'tarieven'); openPricingPopup(); }}
-                className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
-              >
-                Start met groepslessen
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Groepslessen */}
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
@@ -109,13 +93,13 @@ export default function TarievenPage() {
       <section className="py-8 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/small-group-training-header.jpg" alt="BUILD Small Group Training" fill className="object-cover object-top" />
+            <Image src="/images/groepslessen-header.jpg" alt="Groepslessen bij CrossFit Alkmaar" fill className="object-cover object-[center_35%]" />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <button
-                onClick={() => { trackCTAClick('pricing_tarieven_build_img', 'tarieven'); openPricingPopup(); }}
+                onClick={() => { trackCTAClick('pricing_tarieven_groepslessen_img', 'tarieven'); openPricingPopup(); }}
                 className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
               >
-                Start met BUILD training
+                Start met groepslessen
               </button>
             </div>
           </div>
@@ -168,13 +152,13 @@ export default function TarievenPage() {
       <section className="py-8 px-6 bg-gray-200">
         <div className="max-w-5xl mx-auto">
           <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
-            <Image src="/images/kickstart-header.jpg" alt="28 Day Kickstart" fill className="object-cover object-[center_15%]" />
+            <Image src="/images/small-group-training-header.jpg" alt="BUILD Small Group Training" fill className="object-cover object-top" />
             <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
               <button
-                onClick={() => { trackCTAClick('pricing_tarieven_kickstart_img', 'tarieven'); openPricingPopup(); }}
+                onClick={() => { trackCTAClick('pricing_tarieven_build_img', 'tarieven'); openPricingPopup(); }}
                 className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
               >
-                Start je Kickstart
+                Start met BUILD training
               </button>
             </div>
           </div>
@@ -208,6 +192,22 @@ export default function TarievenPage() {
           </div>
           <div className="text-center mt-8">
             <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Meer over de Kickstart &rarr;</Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 px-6 bg-gray-100">
+        <div className="max-w-5xl mx-auto">
+          <div className="relative h-72 md:h-96 rounded-2xl overflow-hidden shadow-lg">
+            <Image src="/images/kickstart-header.jpg" alt="28 Day Kickstart" fill className="object-cover object-[center_15%]" />
+            <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
+              <button
+                onClick={() => { trackCTAClick('pricing_tarieven_kickstart_img', 'tarieven'); openPricingPopup(); }}
+                className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+              >
+                Start je Kickstart
+              </button>
+            </div>
           </div>
         </div>
       </section>
