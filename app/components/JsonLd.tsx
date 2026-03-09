@@ -164,6 +164,46 @@ export default function JsonLd() {
           text: "CrossFit Alkmaar is voor iedereen: van 20 tot 70+, van complete beginners tot ervaren sporters. Onze gemiddelde leeftijd is 35+. Elke training is schaalbaar naar jouw niveau, doelen en eventuele beperkingen.",
         },
       },
+      {
+        "@type": "Question",
+        name: "Wat kost CrossFit Alkmaar?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Groepslessen starten vanaf €99,95 per maand (2x per week). Het populairste abonnement is 3x per week voor €127,50 per maand. Onbeperkt trainen kost €159,95 per maand. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching en 90 day check ins.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Hoe lang duurt een CrossFit les?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Een groepsles bij CrossFit Alkmaar duurt 60 minuten. Dit omvat een warming-up, techniekuitleg, de workout en een cooling-down. Elke les wordt begeleid door een professionele coach.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Hoeveel keer per week moet je CrossFit doen?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "De meeste leden trainen 2 tot 3 keer per week en zien daar al goede resultaten mee. Je hoeft niet elke dag te trainen. Consistentie is belangrijker dan frequentie.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Is CrossFit veilig voor ouderen?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Ja, CrossFit is zeer geschikt voor ouderen. Bij CrossFit Alkmaar trainen leden van 20 tot 70+. Elke oefening wordt aangepast aan jouw niveau en eventuele beperkingen. Onze coaches hebben ervaring met het begeleiden van oudere sporters.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Wat is het verschil tussen CrossFit en HYROX?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "CrossFit is een brede trainingsmethode gericht op algehele fitness met gevarieerde workouts. HYROX is een specifieke wedstrijdformat met hardlopen en functionele oefeningen. Bij CrossFit Alkmaar bieden we zowel CrossFit als HYROX-gerichte trainingen aan in onze groepslessen.",
+        },
+      },
     ],
   };
 
