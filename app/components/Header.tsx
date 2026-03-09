@@ -6,7 +6,6 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { usePopup } from "./PopupContext";
 import LanguageSwitcher from "./LanguageSwitcher";
-import { getVariant } from "../lib/ab-testing";
 
 export default function Header() {
   const [programmasOpen, setProgrammasOpen] = useState(false);
@@ -14,8 +13,6 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openPopup } = usePopup();
   const pathname = usePathname();
-  const tarievenLink = getVariant("tarieven_link");
-
   // Determine current language
   const isEnglish = pathname.startsWith("/en");
   const isGerman = pathname.startsWith("/de");
@@ -77,7 +74,7 @@ export default function Header() {
                 <Link href="/meer-info#rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   {t.schedule}
                 </Link>
-                <Link href={tarievenLink} className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                <Link href="/tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   {t.pricing}
                 </Link>
                 <Link href="/onze-leden" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
@@ -167,7 +164,7 @@ export default function Header() {
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
                 <Link href="/meer-info#rooster" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.schedule}</Link>
-                <Link href={tarievenLink} onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.pricing}</Link>
+                <Link href="/tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.pricing}</Link>
                 <Link href="/onze-leden" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.ourMembers}</Link>
                 <Link href="/vacatures" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.jobs}</Link>
               </div>
