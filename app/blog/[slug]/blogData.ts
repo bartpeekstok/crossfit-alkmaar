@@ -10,6 +10,35 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "had-je-een-steentje-in-je-schoen": {
+    title: "Had je een steentje in je schoen?",
+    date: "2026-03-23",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Training",
+    image: "/images/blog/Blog hardlopen.jpg",
+    excerpt: "Over hardlopen, zone 2 training en waarom het soms slimmer is om af te remmen. Ook als coach blijft dat een uitdaging.",
+    content: `
+      <p>Hoewel ik natuurlijk verslingerd ben aan CrossFit en alles wat daarbij hoort, doe ik soms ook nog wat andere sporten ernaast. Zo heb ik een tijd geleden judo weer opgepakt. Helaas lukt dat me minder vaak dan ik zou willen doordat 'mijn' groep maar één keer per week traint en dat net op een tijdstip is dat ik vaak niet kan. Als ik dan één of twee keer mis, heb ik zomaar alweer een paar weken niet getraind daar.</p>
+
+      <p>Dat is natuurlijk anders met hardlopen: ik trek m'n hardloopschoenen aan en begin bij de voordeur. Ideaal en lekker efficiënt natuurlijk. Door de jaren heen heb ik altijd een haat/liefde verhouding met hardlopen gehad. Bij de mariniers werd er altijd veel hardgelopen, dus dat hield ik toen ook zelf goed bij. Na m'n diensttijd deed ik toch altijd vooral veel CrossFit en gewichtheffen maar af en toe voelde ik ineens weer het vuurtje en begon ik ook weer met hardlopen.</p>
+
+      <p>Gisteren liep ik een langzame tien kilometer in zone 2, dat is op een lage intensiteit waarbij je nog makkelijk kunt praten. Ik gebruik hier een hartslagmeter voor om te zorgen dat ik niet boven die zone uitkom. Ik kan dat horloge instellen zodat hij trilt als mijn hartslag boven de 125 komt. Ideaal, want ik heb nogal de neiging om vooral erg hard te gaan….</p>
+
+      <p>Doordat m'n horloge is gekoppeld aan Strava worden al m'n loopjes daar ook gelijk gepost zodat al mijn bekenden en vrienden ze ook kunnen zien. Toen mijn langzame loop van gisteren erop werd gepost, stroomde mijn inbox gelijk vol met berichten van vrienden die zeiden: 'had je een steentje in je schoen?' of 'heb je het alleen op je rechterbeen gedaan?' en 'heb je achteruit gelopen?'. Allemaal natuurlijk met een knipoog en ik doe zelf ook graag mee aan dit soort opmerkingen zodra ik de kans krijg.</p>
+
+      <img src="/images/blog/strava-reactie.jpg" alt="Strava reactie op langzame loop: Wat is er gebeurd? Zat je achter een vrachtwagen?" style="max-width:400px;margin:2rem auto;display:block;border-radius:0.5rem" />
+
+      <p>Altijd maar hard, harder en hardst. Dat zal er altijd wel in blijven zitten bij mij en veel andere mensen. Toch leer je door de jaren heen ook steeds beter dat je af en toe best naar je lijf kan (moet) luisteren. Als je al veel getraind hebt, moe bent of gewoon even wat minder lekker in je vel zit bijvoorbeeld. Vroeger ramde ik altijd maar door, ongeacht hoe ik me voelde. En dat kan ook best lang goed gaan eigenlijk.</p>
+
+      <p>Maar zodra je de veertig passeert, ontkom je er niet aan dat dat op een gegeven moment toch niet meer lukt. Ik heb het zelf geleerd door meerdere blessures die ik achteraf prima kan verklaren. Waar we bij CrossFit Alkmaar de hele dag bezig zijn om onze leden te pushen maar ook zeker af te remmen als dat nodig is, blijft dat bij mezelf toch altijd een grote uitdaging. Niet het pushen, maar het afremmen. Ik word er steeds beter in, maar het blijft een uitdaging.</p>
+
+      <p>Ik hoor mezelf vaak tegen leden zeggen dat ze vandaag beter even niet maximaal kunnen gaan of wat minder gewicht kunnen pakken. Dat is waar we hier goed in zijn, we houden onze leden heel terwijl we ze wel op hoge intensiteit laten trainen. Misschien zijn we er juist wel zo goed in doordat we zelf al vaak in de valkuil zijn gestapt van altijd maar harder en meer, ook als het even niet zo slim was.</p>
+
+      <p>Ik kan het allemaal prima uitleggen aan onze leden hoor, terwijl ik zelf ook nog die valkuil in stap af en toe. Dat gaat er waarschijnlijk nooit helemaal uit en ik denk dat het ons ook goede coaches maakt. Laat ons lekker alle fouten maken zodat we jou kunnen vertellen waarom je het niet moet doen!</p>
+
+      <p>Morgen maar weer even een snelle loop posten op Strava, dat zal die gasten leren!</p>
+    `,
+  },
   "twaalf-jaar-crossfit-alkmaar": {
     title: "Twaalf jaar CrossFit Alkmaar en nog steeds dit beeld",
     date: "2026-03-16",
