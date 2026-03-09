@@ -147,7 +147,7 @@ export default function TarievenPage() {
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">28 Day Kickstart</h2>
-          <p className="text-center text-gray-600 mb-8">Nieuw hier? Iedereen start met de Kickstart. In vier weken leggen we samen een solide basis.</p>
+          <p className="text-center text-gray-600 mb-8">Iedereen start met semi personal training in de Kickstart.</p>
           <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
             <p className="font-bold text-xl md:text-2xl mb-6 text-center">Kickstart inclusief:</p>
             <div className="grid grid-cols-2 gap-x-8 gap-y-4">
