@@ -127,22 +127,6 @@ export default function SmallGroupTrainingAlkmaarPage() {
         </div>
       </section>
 
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Wat onze leden zeggen</h2>
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
       {/* Het beste van twee werelden */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -158,6 +142,22 @@ export default function SmallGroupTrainingAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Elke training wordt geprogrammeerd door onze coaches en is afgestemd op functionele fitness: bewegen zoals je lichaam bedoeld is. Kracht, conditie, mobiliteit en coördinatie — alles komt aan bod.
           </p>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Wat onze leden zeggen</h2>
+          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: '100%', width: '100%' }}
+            title="Google Reviews"
+          ></iframe>
         </div>
       </section>
 

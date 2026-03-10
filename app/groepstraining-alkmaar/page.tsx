@@ -127,22 +127,6 @@ export default function GroepstrainingAlkmaarPage() {
         </div>
       </section>
 
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-8">Wat onze leden zeggen</h2>
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
       {/* Waarom groepstraining werkt */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -158,6 +142,22 @@ export default function GroepstrainingAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Het resultaat: je wordt sterker, fitter en je hebt er plezier in. Niet voor een paar weken, maar voor de lange termijn.
           </p>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Wat onze leden zeggen</h2>
+          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: '100%', width: '100%' }}
+            title="Google Reviews"
+          ></iframe>
         </div>
       </section>
 

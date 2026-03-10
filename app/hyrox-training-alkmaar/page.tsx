@@ -127,6 +127,21 @@ export default function HyroxTrainingPage() {
         </div>
       </section>
 
+      {/* Wat is HYROX */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">
+            Wat is HYROX?
+          </h2>
+          <p className="text-lg text-gray-700 mb-4">
+            HYROX is een indoor fitnesswedstrijd die draait om functionele fitness en uithoudingsvermogen. Het format: 8 rondes van 1 kilometer hardlopen, afgewisseld met 8 functionele oefeningen zoals sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, wall balls en ski erg.
+          </p>
+          <p className="text-lg text-gray-700">
+            Het is de snelst groeiende fitnesswedstrijd ter wereld en trekt zowel beginners als ervaren atleten. Je hoeft niet super fit te zijn om mee te doen - je moet gewoon bereid zijn om te trainen.
+          </p>
+        </div>
+      </section>
+
       {/* Google Reviews */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
@@ -140,21 +155,6 @@ export default function HyroxTrainingPage() {
             style={{ minWidth: '100%', width: '100%' }}
             title="Google Reviews"
           ></iframe>
-        </div>
-      </section>
-
-      {/* Wat is HYROX */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Wat is HYROX?
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            HYROX is een indoor fitnesswedstrijd die draait om functionele fitness en uithoudingsvermogen. Het format: 8 rondes van 1 kilometer hardlopen, afgewisseld met 8 functionele oefeningen zoals sled push, sled pull, burpee broad jumps, rowing, farmers carry, sandbag lunges, wall balls en ski erg.
-          </p>
-          <p className="text-lg text-gray-700">
-            Het is de snelst groeiende fitnesswedstrijd ter wereld en trekt zowel beginners als ervaren atleten. Je hoeft niet super fit te zijn om mee te doen - je moet gewoon bereid zijn om te trainen.
-          </p>
         </div>
       </section>
 
