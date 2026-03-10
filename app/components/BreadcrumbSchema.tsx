@@ -16,6 +16,7 @@ const pathNames: { [key: string]: string } = {
   "privacy": "Privacy Policy",
   "meer-info": "Meer Informatie",
   "programmas": "Programma's",
+  "tarieven": "Tarieven",
   "free-intro": "Gratis Kennismaking",
   "sportschool-alkmaar": "Sportschool Alkmaar",
   "fitness-alkmaar": "Fitness Alkmaar",

@@ -4,6 +4,12 @@ export const metadata: Metadata = {
   title: "Meer Informatie",
   description:
     "Alles wat je wilt weten over CrossFit Alkmaar. Informatie over onze faciliteiten, trainingstijden, prijzen en meer.",
+  keywords: [
+    "crossfit alkmaar informatie",
+    "sportschool alkmaar info",
+    "crossfit alkmaar faciliteiten",
+    "trainingstijden crossfit alkmaar",
+  ],
   openGraph: {
     title: "Meer Informatie | CrossFit Alkmaar",
     description:

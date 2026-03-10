@@ -4,6 +4,19 @@ import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CrossFit Alkmaar",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "260",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+
 export default function OnzeLedenPage() {
   const { openPopup } = usePopup();
 
@@ -30,6 +43,10 @@ export default function OnzeLedenPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
