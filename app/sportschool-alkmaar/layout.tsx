@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/hero.jpg",
+        url: "https://crossfitalkmaar.com/images/CFA-november-lowres-73.jpg",
         width: 1200,
         height: 630,
-        alt: "Sportschool Alkmaar - CrossFit Alkmaar",
+        alt: "Sportschool Alkmaar - CrossFit Alkmaar groepstraining met coach",
       },
     ],
   },

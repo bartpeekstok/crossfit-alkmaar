@@ -102,7 +102,7 @@ export default function FunctionalFitnessAlkmaarPage() {
         aria-label="Functional Fitness Alkmaar - CrossFit Alkmaar functionele training met coach"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-november-lowres-94.jpg"
           alt="Functional Fitness Alkmaar - CrossFit Alkmaar functionele training met coach"
           fill
           className="object-cover"

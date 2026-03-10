@@ -102,7 +102,7 @@ export default function SmallGroupTrainingAlkmaarPage() {
         aria-label="Small group training Alkmaar - trainen in kleine groepen bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-sept-lowres-46.jpg"
           alt="Small group training Alkmaar - trainen in kleine groepen bij CrossFit Alkmaar"
           fill
           className="object-cover"

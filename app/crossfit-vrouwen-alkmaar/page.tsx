@@ -102,7 +102,7 @@ export default function CrossFitVrouwenAlkmaarPage() {
         aria-label="CrossFit voor vrouwen in Alkmaar - word sterker bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-november-lowres-12.jpg"
           alt="CrossFit voor vrouwen in Alkmaar - word sterker bij CrossFit Alkmaar"
           fill
           className="object-cover"

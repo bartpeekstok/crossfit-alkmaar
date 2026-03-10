@@ -102,7 +102,7 @@ export default function GroepstrainingAlkmaarPage() {
         aria-label="Groepstraining Alkmaar - samen trainen bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-november-lowres-96.jpg"
           alt="Groepstraining Alkmaar - samen trainen bij CrossFit Alkmaar"
           fill
           className="object-cover"

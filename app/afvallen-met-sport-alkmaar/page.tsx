@@ -102,7 +102,7 @@ export default function AfvallenMetSportAlkmaarPage() {
         aria-label="Afvallen met sport in Alkmaar - duurzaam resultaat bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-december-lowres-21.jpg"
           alt="Afvallen met sport in Alkmaar - duurzaam resultaat bij CrossFit Alkmaar"
           fill
           className="object-cover"

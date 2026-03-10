@@ -102,7 +102,7 @@ export default function StrengthTrainingAlkmaarPage() {
         aria-label="Strength Training Alkmaar - word sterker bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-oktober-lowres-70 (1).jpg"
           alt="Strength Training Alkmaar - word sterker bij CrossFit Alkmaar"
           fill
           className="object-cover"

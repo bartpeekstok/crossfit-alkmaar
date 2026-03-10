@@ -102,7 +102,7 @@ export default function SportschoolBegeleidingAlkmaarPage() {
         aria-label="Sportschool met begeleiding Alkmaar - CrossFit Alkmaar coaching tijdens groepstraining"
       >
         <Image
-          src="/images/hero.jpg"
+          src="/images/CFA-januari-lowres-34.jpg"
           alt="Sportschool met begeleiding Alkmaar - CrossFit Alkmaar coaching tijdens groepstraining"
           fill
           className="object-cover"
