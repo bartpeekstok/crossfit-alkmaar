@@ -22,12 +22,12 @@ export default function Sportschool50PlusPage() {
         role="img"
         aria-label="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/50+-header.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src="/images/hero.jpg" alt="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding" className="sr-only" />
+        <img src="/images/50+-header.jpg" alt="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Sportschool 50+ Alkmaar
