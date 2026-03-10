@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-december-lowres-20 (1).jpg",
+        url: "https://crossfitalkmaar.com/images/sporten-overgang-header.jpg",
         width: 1200,
         height: 630,
         alt: "Sporten in de Overgang Alkmaar - CrossFit Alkmaar",

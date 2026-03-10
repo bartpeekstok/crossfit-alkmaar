@@ -102,7 +102,7 @@ export default function OlympicLiftingAlkmaarPage() {
         aria-label="Olympic lifting Alkmaar - snatch en clean and jerk bij CrossFit Alkmaar"
       >
         <Image
-          src="/images/CFA-feb-lowres-03 (2).jpg"
+          src="/images/olympic-lifting-header.jpg"
           alt="Olympic lifting Alkmaar - snatch en clean and jerk bij CrossFit Alkmaar"
           fill
           className="object-cover"

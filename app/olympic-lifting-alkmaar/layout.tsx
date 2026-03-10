@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-feb-lowres-03 (2).jpg",
+        url: "https://crossfitalkmaar.com/images/olympic-lifting-header.jpg",
         width: 1200,
         height: 630,
         alt: "Olympic Lifting Alkmaar - CrossFit Alkmaar",

@@ -102,7 +102,7 @@ export default function SportenOvergangAlkmaarPage() {
         aria-label="Sporten in de overgang in Alkmaar - krachttraining met begeleiding"
       >
         <Image
-          src="/images/CFA-december-lowres-20 (1).jpg"
+          src="/images/sporten-overgang-header.jpg"
           alt="Sporten in de overgang in Alkmaar - krachttraining met begeleiding"
           fill
           className="object-cover"
