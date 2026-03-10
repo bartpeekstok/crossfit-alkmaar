@@ -15,6 +15,49 @@ export default function HyroxGymAlkmaarPage() {
         description="De beste gym voor HYROX training in Alkmaar. Alle apparatuur, professionele coaching en een community van HYROX-atleten."
         url="https://crossfitalkmaar.com/hyrox-gym-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Hebben jullie alle HYROX-apparatuur?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. We hebben sleds, ski-ergs, roeiers, sandbags, wall balls en voldoende ruimte om alle wedstrijdonderdelen te trainen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik ook buiten de lessen om HYROX trainen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze focus ligt op begeleide groepslessen zodat je techniek en intensiteit optimaal zijn. Neem contact op voor de mogelijkheden.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat maakt CrossFit Alkmaar de beste HYROX gym?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Alle apparatuur, ervaren coaches, specifieke HYROX-programmering en een community van gelijkgestemde atleten — alles onder één dak.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Bieden jullie ook HYROX Doubles training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Je kunt samen met een trainingspartner trainen voor HYROX Doubles. Onze coaches helpen jullie met een strategie.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -120,6 +163,31 @@ export default function HyroxGymAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Nieuw bij CrossFit? Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw in je eigen tempo naar je eerste HYROX toe.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hebben jullie alle HYROX-apparatuur?</h3>
+              <p className="text-gray-600">Ja. We hebben sleds, ski-ergs, roeiers, sandbags, wall balls en voldoende ruimte om alle wedstrijdonderdelen te trainen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik ook buiten de lessen om HYROX trainen?</h3>
+              <p className="text-gray-600">Onze focus ligt op begeleide groepslessen zodat je techniek en intensiteit optimaal zijn. Neem contact op voor de mogelijkheden.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat maakt CrossFit Alkmaar de beste HYROX gym?</h3>
+              <p className="text-gray-600">Alle apparatuur, ervaren coaches, specifieke HYROX-programmering en een community van gelijkgestemde atleten — alles onder een dak.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Bieden jullie ook HYROX Doubles training?</h3>
+              <p className="text-gray-600">Ja. Je kunt samen met een trainingspartner trainen voor HYROX Doubles. Onze coaches helpen jullie met een strategie.</p>
+            </div>
+          </div>
         </div>
       </section>
 

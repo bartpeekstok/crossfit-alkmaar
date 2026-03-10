@@ -15,6 +15,49 @@ export default function HyroxTrainingPage() {
         description="HYROX voorbereiding in Alkmaar met professionele coaching. Functionele fitness, running en strength training in kleine groepen."
         url="https://crossfitalkmaar.com/hyrox-training-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is HYROX?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "HYROX is een indoor fitnesswedstrijd met 8 rondes van 1 km hardlopen, afgewisseld met functionele oefeningen zoals roeien, sled push, burpees en meer.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Moet ik al fit zijn voor HYROX training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Nee. Onze HYROX-lessen zijn schaalbaar. Of je nu voor je eerste race traint of een PR wilt neerzetten — de training past zich aan.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe bereid ik me voor op een HYROX wedstrijd?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Door regelmatig onze HYROX- en CrossFit-lessen te volgen. We trainen alle onderdelen: hardlopen, roeien, sled work en functionele kracht.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik ook HYROX trainen zonder mee te doen aan een wedstrijd?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function HyroxTrainingPage() {
           <p className="text-lg text-gray-700">
             Wil je nog gerichter trainen? Bekijk onze <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> of <Link href="/small-group-training" className="text-blue-900 font-semibold hover:underline">BUILD small group training</Link> voor extra focus op je HYROX doelen.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is HYROX?</h3>
+              <p className="text-gray-600">HYROX is een indoor fitnesswedstrijd met 8 rondes van 1 km hardlopen, afgewisseld met functionele oefeningen zoals roeien, sled push, burpees en meer.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Moet ik al fit zijn voor HYROX training?</h3>
+              <p className="text-gray-600">Nee. Onze HYROX-lessen zijn schaalbaar. Of je nu voor je eerste race traint of een PR wilt neerzetten — de training past zich aan.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe bereid ik me voor op een HYROX wedstrijd?</h3>
+              <p className="text-gray-600">Door regelmatig onze HYROX- en CrossFit-lessen te volgen. We trainen alle onderdelen: hardlopen, roeien, sled work en functionele kracht.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik ook HYROX trainen zonder mee te doen aan een wedstrijd?</h3>
+              <p className="text-gray-600">Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren.</p>
+            </div>
+          </div>
         </div>
       </section>
 

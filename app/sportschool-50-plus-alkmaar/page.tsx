@@ -15,6 +15,49 @@ export default function Sportschool50PlusPage() {
         description="Veilig sporten voor 50-plussers met professionele begeleiding. Kleine groepen, aangepaste oefeningen, voor elk niveau."
         url="https://crossfitalkmaar.com/sportschool-50-plus-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Is CrossFit veilig voor 50-plussers?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Elke oefening wordt aangepast aan jouw niveau en eventuele beperkingen. Onze coaches hebben ervaring met het begeleiden van oudere sporters.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Ik heb last van mijn knieën/rug, kan ik toch trainen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "In veel gevallen wel. Onze coaches passen oefeningen aan of kiezen alternatieven. Bewegen is vaak juist goed bij gewrichtsklachten.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Zijn er speciale lessen voor ouderen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze reguliere lessen zijn geschikt voor alle leeftijden. Elke oefening is schaalbaar. Je traint samen met anderen, ieder op eigen niveau.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat is de gemiddelde leeftijd bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze leden zijn 20 tot 70+ jaar. De gemiddelde leeftijd is 35+. Je bent dus zeker niet de enige 50-plusser.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -120,6 +163,31 @@ export default function Sportschool50PlusPage() {
           <p className="text-lg text-gray-700">
             Bekijk de verhalen van <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">onze leden</Link> en ontdek hoe mensen van alle leeftijden hier sterker en fitter zijn geworden.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit veilig voor 50-plussers?</h3>
+              <p className="text-gray-600">Ja. Elke oefening wordt aangepast aan jouw niveau en eventuele beperkingen. Onze coaches hebben ervaring met het begeleiden van oudere sporters.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Ik heb last van mijn knieën/rug, kan ik toch trainen?</h3>
+              <p className="text-gray-600">In veel gevallen wel. Onze coaches passen oefeningen aan of kiezen alternatieven. Bewegen is vaak juist goed bij gewrichtsklachten.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Zijn er speciale lessen voor ouderen?</h3>
+              <p className="text-gray-600">Onze reguliere lessen zijn geschikt voor alle leeftijden. Elke oefening is schaalbaar. Je traint samen met anderen, ieder op eigen niveau.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is de gemiddelde leeftijd bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Onze leden zijn 20 tot 70+ jaar. De gemiddelde leeftijd is 35+. Je bent dus zeker niet de enige 50-plusser.</p>
+            </div>
+          </div>
         </div>
       </section>
 

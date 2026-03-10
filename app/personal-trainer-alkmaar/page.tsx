@@ -15,6 +15,49 @@ export default function PersonalTrainerAlkmaarPage() {
         description="Personal training met gecertificeerde coaches in Alkmaar. Individueel of in kleine groepen, afgestemd op jouw doelen."
         url="https://crossfitalkmaar.com/personal-trainer-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat doet een personal trainer bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze personal trainers maken een programma op maat, begeleiden je 1-op-1 en helpen je bij specifieke doelen zoals afvallen, krachtopbouw of revalidatie.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe vaak train ik met een personal trainer?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Dat bepaal je zelf. De meeste leden kiezen voor 1-2 sessies per week, vaak gecombineerd met groepslessen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost personal training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Neem contact op voor onze tarieven. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is personal training geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Zeer geschikt. Je krijgt alle aandacht en leert de basis op jouw tempo, zonder de druk van een groep.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function PersonalTrainerAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Onze personal trainers werken met leden van 20 tot 70+ jaar. Het maakt niet uit waar je staat, het gaat erom waar je naartoe wilt.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat doet een personal trainer bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Onze personal trainers maken een programma op maat, begeleiden je 1-op-1 en helpen je bij specifieke doelen zoals afvallen, krachtopbouw of revalidatie.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak train ik met een personal trainer?</h3>
+              <p className="text-gray-600">Dat bepaal je zelf. De meeste leden kiezen voor 1-2 sessies per week, vaak gecombineerd met groepslessen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat kost personal training?</h3>
+              <p className="text-gray-600">Neem contact op voor onze tarieven. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is personal training geschikt voor beginners?</h3>
+              <p className="text-gray-600">Zeer geschikt. Je krijgt alle aandacht en leert de basis op jouw tempo, zonder de druk van een groep.</p>
+            </div>
+          </div>
         </div>
       </section>
 

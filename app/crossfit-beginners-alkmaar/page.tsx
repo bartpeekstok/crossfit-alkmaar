@@ -15,6 +15,49 @@ export default function CrossFitBeginnersAlkmaarPage() {
         description="CrossFit voor beginners in Alkmaar. Start veilig met persoonlijke begeleiding via ons Kickstart-traject."
         url="https://crossfitalkmaar.com/crossfit-beginners-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Moet ik al een bepaald fitnessniveau hebben?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Nee. Alles wordt aangepast aan jouw niveau. Onze leden variëren van 20 tot 70+ jaar, van nooit gesport tot ex-topsporters.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is CrossFit niet gevaarlijk?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Niet met goede coaching. Bij CrossFit Alkmaar train je in groepen van max 12 met een gecertificeerde coach die op je techniek let. Je leert eerst de basis in de Kickstart voordat je in een groepsles stapt.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoeveel kost CrossFit voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bekijk onze tarieven op crossfitalkmaar.com/tarieven voor alle opties. De kennismaking is altijd gratis en vrijblijvend.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe vaak moet ik trainen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We raden 3 keer per week aan, maar 2 keer is ook prima om te beginnen. Je bouwt op in je eigen tempo.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -100,25 +143,23 @@ export default function CrossFitBeginnersAlkmaarPage() {
       {/* Veelgestelde vragen */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Veelgestelde vragen van beginners
-          </h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
           <div className="space-y-6">
-            <div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Moet ik al een bepaald fitnessniveau hebben?</h3>
-              <p className="text-gray-700">Nee. Alles wordt aangepast aan jouw niveau. Onze leden variëren van 20 tot 70+ jaar, van nooit gesport tot ex-topsporters.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Moet ik al een bepaald fitnessniveau hebben?</h3>
+              <p className="text-gray-600">Nee. Alles wordt aangepast aan jouw niveau. Onze leden variëren van 20 tot 70+ jaar, van nooit gesport tot ex-topsporters.</p>
             </div>
-            <div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Is CrossFit niet gevaarlijk?</h3>
-              <p className="text-gray-700">Niet met goede coaching. Bij CrossFit Alkmaar train je in groepen van max 12 met een gecertificeerde coach die op je techniek let. Je leert eerst de basis in de Kickstart voordat je in een groepsles stapt.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit niet gevaarlijk?</h3>
+              <p className="text-gray-600">Niet met goede coaching. Bij CrossFit Alkmaar train je in groepen van max 12 met een gecertificeerde coach die op je techniek let. Je leert eerst de basis in de Kickstart voordat je in een groepsles stapt.</p>
             </div>
-            <div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Hoeveel kost het?</h3>
-              <p className="text-gray-700">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. De kennismaking is altijd gratis en vrijblijvend.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoeveel kost CrossFit voor beginners?</h3>
+              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. De kennismaking is altijd gratis en vrijblijvend.</p>
             </div>
-            <div>
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Hoe vaak moet ik trainen?</h3>
-              <p className="text-gray-700">We raden 3 keer per week aan, maar 2 keer is ook prima om te beginnen. Je bouwt op in je eigen tempo.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet ik trainen?</h3>
+              <p className="text-gray-600">We raden 3 keer per week aan, maar 2 keer is ook prima om te beginnen. Je bouwt op in je eigen tempo.</p>
             </div>
           </div>
         </div>

@@ -15,6 +15,49 @@ export default function KrachttrainingAlkmaarPage() {
         description="Krachttraining met professionele coaching in Alkmaar. Squats, deadlifts en Olympic lifting in kleine groepen."
         url="https://crossfitalkmaar.com/krachttraining-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Is krachttraining geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. We bouwen stap voor stap op.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat is het verschil met een gewone sportschool?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe vaak per week krachttraining?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik ook Olympic lifting leren?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function KrachttrainingAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Onze leden variëren van complete beginners tot mensen die al jaren trainen. Iedereen volgt dezelfde les, maar op een niveau dat bij hen past.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is krachttraining geschikt voor beginners?</h3>
+              <p className="text-gray-600">Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. We bouwen stap voor stap op.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil met een gewone sportschool?</h3>
+              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak per week krachttraining?</h3>
+              <p className="text-gray-600">2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik ook Olympic lifting leren?</h3>
+              <p className="text-gray-600">Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering.</p>
+            </div>
+          </div>
         </div>
       </section>
 

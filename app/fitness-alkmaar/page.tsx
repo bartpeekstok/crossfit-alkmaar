@@ -15,6 +15,49 @@ export default function FitnessAlkmaarPage() {
         description="Fitness met persoonlijke begeleiding in kleine groepen. CrossFit, strength training en meer bij CrossFit Alkmaar."
         url="https://crossfitalkmaar.com/fitness-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is het verschil tussen fitness en CrossFit?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij fitness train je meestal solo aan machines. Bij CrossFit Alkmaar train je in kleine groepen met begeleiding, gevarieerde workouts en een community die je motiveert.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik ook vrij trainen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze focus ligt op begeleide groepslessen. Zo haal je het maximale uit je training en voorkom je blessures.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe snel zie ik resultaat?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is het geschikt als ik nog nooit heb gesport?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Via onze Kickstart leer je de basis in 4 weken. Alles wordt aangepast aan jouw startniveau.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function FitnessAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Daarna start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> - een persoonlijk traject van semi personal training sessies waarin je alle basis-bewegingen leert. Zo ben je klaar voor de groepslessen en weet je precies wat je doet.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen fitness en CrossFit?</h3>
+              <p className="text-gray-600">Bij fitness train je meestal solo aan machines. Bij CrossFit Alkmaar train je in kleine groepen met begeleiding, gevarieerde workouts en een community die je motiveert.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik ook vrij trainen?</h3>
+              <p className="text-gray-600">Onze focus ligt op begeleide groepslessen. Zo haal je het maximale uit je training en voorkom je blessures.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe snel zie ik resultaat?</h3>
+              <p className="text-gray-600">De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is het geschikt als ik nog nooit heb gesport?</h3>
+              <p className="text-gray-600">Ja. Via onze Kickstart leer je de basis in 4 weken. Alles wordt aangepast aan jouw startniveau.</p>
+            </div>
+          </div>
         </div>
       </section>
 

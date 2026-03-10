@@ -15,6 +15,49 @@ export default function PersonalTrainingAlkmaarPage() {
         description="Personal training in Alkmaar met gecertificeerde coaches. 1-op-1 of in kleine groepen, volledig afgestemd op jouw doelen."
         url="https://crossfitalkmaar.com/personal-training-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is het verschil tussen personal training en groepslessen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij groepslessen train je in kleine groepen van max 12.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Voor wie is personal training geschikt?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Voor iedereen die extra aandacht wil: van beginners die de basis willen leren tot ervaren sporters met specifieke doelen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik personal training combineren met groepslessen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 groepslessen per week.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe lang duurt een personal training sessie?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Een sessie duurt 60 minuten. Je coach bereidt de training voor op basis van je doelen en voortgang.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function PersonalTrainingAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen personal training en groepslessen?</h3>
+              <p className="text-gray-600">Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij groepslessen train je in kleine groepen van max 12.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Voor wie is personal training geschikt?</h3>
+              <p className="text-gray-600">Voor iedereen die extra aandacht wil: van beginners die de basis willen leren tot ervaren sporters met specifieke doelen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik personal training combineren met groepslessen?</h3>
+              <p className="text-gray-600">Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 groepslessen per week.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe lang duurt een personal training sessie?</h3>
+              <p className="text-gray-600">Een sessie duurt 60 minuten. Je coach bereidt de training voor op basis van je doelen en voortgang.</p>
+            </div>
+          </div>
         </div>
       </section>
 

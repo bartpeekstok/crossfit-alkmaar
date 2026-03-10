@@ -15,6 +15,49 @@ export default function SportschoolAlkmaarPage() {
         description="Persoonlijke coaching in kleine groepen van max 12 personen. Voor alle niveaus, ook beginners en 50+."
         url="https://crossfitalkmaar.com/sportschool-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat maakt CrossFit Alkmaar anders dan een gewone sportschool?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij ons train je nooit alleen. Elke les wordt begeleid door een coach, in kleine groepen van max 12. Geen losse machines, maar gevarieerde training die werkt.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is CrossFit Alkmaar geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Iedereen start met een 28 Day Kickstart waarin je de basis leert in kleine groepen van max 6 personen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost een lidmaatschap?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze tarievenpagina. De kennismaking is altijd gratis.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Waar zit CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Aan de Phoenixstraat 33 in Alkmaar, met ruime parkeergelegenheid.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function SportschoolAlkmaarPage() {
           <p className="text-lg text-gray-700 mb-4">
             Iedereen start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> - een persoonlijk traject waarin je de basis leert in semi personal training. Zo sta je nooit onvoorbereid in een groepsles.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat maakt CrossFit Alkmaar anders dan een gewone sportschool?</h3>
+              <p className="text-gray-600">Bij ons train je nooit alleen. Elke les wordt begeleid door een coach, in kleine groepen van max 12. Geen losse machines, maar gevarieerde training die werkt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit Alkmaar geschikt voor beginners?</h3>
+              <p className="text-gray-600">Ja. Iedereen start met een 28 Day Kickstart waarin je de basis leert in kleine groepen van max 6 personen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat kost een lidmaatschap?</h3>
+              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze tarievenpagina. De kennismaking is altijd gratis.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waar zit CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Aan de Phoenixstraat 33 in Alkmaar, met ruime parkeergelegenheid.</p>
+            </div>
+          </div>
         </div>
       </section>
 

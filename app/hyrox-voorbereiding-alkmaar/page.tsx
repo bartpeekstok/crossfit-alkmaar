@@ -15,6 +15,49 @@ export default function HyroxVoorbereidingAlkmaarPage() {
         description="Bereid je voor op HYROX met professionele coaching bij CrossFit Alkmaar. Running, sled push, wall balls en meer."
         url="https://crossfitalkmaar.com/hyrox-voorbereiding-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Hoeveel weken voorbereiding heb ik nodig voor HYROX?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Welke onderdelen train ik voor HYROX?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. We hebben specifieke HYROX-lessen en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Train ik alleen of in een groep?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "In kleine groepen van max 12 personen, onder begeleiding van een coach. Samen trainen is leuker én effectiever.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function HyroxVoorbereidingAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Nog nooit aan CrossFit gedaan? Geen probleem. Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw de basis op die je nodig hebt voor zowel CrossFit als HYROX.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoeveel weken voorbereiding heb ik nodig voor HYROX?</h3>
+              <p className="text-gray-600">Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke onderdelen train ik voor HYROX?</h3>
+              <p className="text-gray-600">Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?</h3>
+              <p className="text-gray-600">Ja. We hebben specifieke HYROX-lessen en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Train ik alleen of in een groep?</h3>
+              <p className="text-gray-600">In kleine groepen van max 12 personen, onder begeleiding van een coach. Samen trainen is leuker en effectiever.</p>
+            </div>
+          </div>
         </div>
       </section>
 

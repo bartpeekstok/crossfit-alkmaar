@@ -15,6 +15,49 @@ export default function BootcampAlkmaarPage() {
         description="Op zoek naar een bootcamp in Alkmaar? CrossFit Alkmaar biedt intensieve groepstraining met coaching, binnen en het hele jaar door."
         url="https://crossfitalkmaar.com/bootcamp-alkmaar"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is het verschil tussen bootcamp en CrossFit?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Een bootcamp is meestal buiten en gericht op cardio. Bij CrossFit Alkmaar train je binnen, het hele jaar door, met professionele coaching en een mix van kracht, conditie en functionele bewegingen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is bootcamp geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. We passen elke oefening aan op jouw niveau. Via onze Kickstart leer je eerst de basis voordat je in een groepsles stapt.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe intensief is een training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Train ik buiten of binnen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Binnen, in onze volledig uitgeruste box aan de Phoenixstraat. Geen modder of regen — gewoon een goede training, elke dag.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -117,6 +160,31 @@ export default function BootcampAlkmaarPage() {
           <p className="text-lg text-gray-700">
             Nieuw? Je start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> — een persoonlijk introductietraject zodat je voorbereid in je eerste groepsles staat. Geen voorkennis of ervaring nodig.
           </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen bootcamp en CrossFit?</h3>
+              <p className="text-gray-600">Een bootcamp is meestal buiten en gericht op cardio. Bij CrossFit Alkmaar train je binnen, het hele jaar door, met professionele coaching en een mix van kracht, conditie en functionele bewegingen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is bootcamp geschikt voor beginners?</h3>
+              <p className="text-gray-600">Ja. We passen elke oefening aan op jouw niveau. Via onze Kickstart leer je eerst de basis voordat je in een groepsles stapt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe intensief is een training?</h3>
+              <p className="text-gray-600">Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Train ik buiten of binnen?</h3>
+              <p className="text-gray-600">Binnen, in onze volledig uitgeruste box aan de Phoenixstraat. Geen modder of regen — gewoon een goede training, elke dag.</p>
+            </div>
+          </div>
         </div>
       </section>
 
