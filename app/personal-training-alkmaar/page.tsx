@@ -209,6 +209,27 @@ export default function PersonalTrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wanneer kies je personal training?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wanneer is personal training beter dan groepslessen?</h3>
+              <p className="text-gray-600">Als je specifieke doelen hebt (revalidatie, wedstrijdvoorbereiding, sneller resultaat) of liever 1-op-1 traint. Bij CrossFit Alkmaar combineren veel leden <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> met groepslessen voor het beste van beide werelden.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe ziet een personal training sessie eruit?</h3>
+              <p className="text-gray-600">Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down — volledig afgestemd op jou.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen personal training en small group training?</h3>
+              <p className="text-gray-600">Bij personal training train je 1-op-1. Bij <Link href="/small-group-training" className="text-blue-900 font-semibold hover:underline">small group training</Link> train je in een groep van max 6 met bijna dezelfde persoonlijke aandacht, maar voor een lagere prijs en met de extra motivatie van een groep.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

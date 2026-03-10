@@ -212,6 +212,27 @@ export default function GroepslessenAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe werken groepslessen?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het voordeel van groepslessen boven solo trainen?</h3>
+              <p className="text-gray-600">In een groep word je gedragen door de energie om je heen. Je wordt aangemoedigd, gemotiveerd en uitgedaagd. Bij CrossFit Alkmaar zijn groepen max 12 personen, zodat je de motivatie van een groep hebt mét de persoonlijke aandacht van een coach.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke groepslessen biedt CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">CrossFit (complete workout), Strength (focus op kracht), HYROX (wedstrijdvoorbereiding) en BUILD (spiermassa opbouwen in groepen van max 6). Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet je groepslessen volgen voor resultaat?</h3>
+              <p className="text-gray-600">Twee tot drie keer per week is voldoende. Veel leden combineren CrossFit met Strength of HYROX voor variatie. Consistentie is belangrijker dan intensiteit.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

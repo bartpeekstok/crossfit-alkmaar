@@ -209,6 +209,27 @@ export default function SportschoolAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe kies je de juiste sportschool?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe kies je de juiste sportschool in Alkmaar?</h3>
+              <p className="text-gray-600">Let op drie dingen: krijg je persoonlijke begeleiding, zijn de groepen klein genoeg voor aandacht, en is er een duidelijk programma? Bij CrossFit Alkmaar train je altijd onder coaching in groepen van max 12, met een programma dat voor je geschreven wordt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen een sportschool en CrossFit?</h3>
+              <p className="text-gray-600">Bij een gewone sportschool bepaal je zelf wat je doet op losse apparaten. Bij CrossFit krijg je elke les een andere workout — krachttraining, conditie en functionele bewegingen — altijd begeleid door een coach die je techniek bewaakt en oefeningen aanpast aan jouw niveau.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is begeleiding bij sporten belangrijk?</h3>
+              <p className="text-gray-600">Zonder begeleiding maak je sneller fouten in techniek, train je niet efficiënt, en haak je eerder af. Met een coach naast je leer je sneller, train je veiliger, en blijf je gemotiveerd door de structuur en de groep om je heen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

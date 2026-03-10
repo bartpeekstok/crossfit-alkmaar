@@ -212,6 +212,27 @@ export default function AfvallenMetSportAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe val je af door te sporten?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke sport is het beste om af te vallen?</h3>
+              <p className="text-gray-600">Een combinatie van kracht- en conditietraining. Krachttraining bouwt spiermassa die je stofwisseling verhoogt, conditietraining verbrandt calorieën. Bij CrossFit Alkmaar combineer je beide in elke les.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoeveel moet je sporten om af te vallen?</h3>
+              <p className="text-gray-600">Twee tot drie keer per week trainen, gecombineerd met gezonde voeding, is genoeg voor duurzaam resultaat. Bij CrossFit Alkmaar bieden we ook <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link> aan om je resultaten te versnellen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is alleen cardio niet genoeg om af te vallen?</h3>
+              <p className="text-gray-600">Alleen cardio verbrand calorieën, maar je verliest ook spiermassa waardoor je stofwisseling daalt. Met krachttraining behoud je spieren en verbrand je ook in rust meer. Bij CrossFit Alkmaar train je altijd een mix van kracht en conditie.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial - Jarrald */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

@@ -212,6 +212,27 @@ export default function CrossFitVrouwenAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">CrossFit voor vrouwen</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Word je gespierd van CrossFit als vrouw?</h3>
+              <p className="text-gray-600">Nee, vrouwen hebben van nature veel minder testosteron dan mannen, waardoor je niet zomaar een bodybuilder wordt. Wat je wél krijgt: een strak, sterk en gezond lichaam. Onze vrouwelijke leden worden sterker, niet groter.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit geschikt voor vrouwen die willen afvallen?</h3>
+              <p className="text-gray-600">Ja. De combinatie van krachttraining en conditie bij CrossFit is ideaal om vet te verliezen en spiermassa te behouden. Je stofwisseling gaat omhoog en je verbrandt ook na de training door.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Voel ik me als vrouw op mijn gemak bij CrossFit?</h3>
+              <p className="text-gray-600">Absoluut. Bij CrossFit Alkmaar is de sfeer ondersteunend, niet competitief. Je traint in een groep waar iedereen op zijn eigen niveau werkt. Veel van onze leden zijn vrouwen die hier zijn begonnen zonder sportervaring.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">

@@ -209,6 +209,27 @@ export default function PersonalTrainerAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Waarom een personal trainer?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat doet een personal trainer anders dan een groepscoach?</h3>
+              <p className="text-gray-600">Een personal trainer richt zich 100% op jou: jouw doelen, jouw lichaam, jouw tempo. Bij CrossFit Alkmaar combineer je het beste van twee werelden — <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> voor individuele aandacht en groepslessen voor motivatie en community.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe kies je een goede personal trainer in Alkmaar?</h3>
+              <p className="text-gray-600">Let op ervaring, certificeringen en persoonlijke klik. Bij CrossFit Alkmaar zijn alle trainers gecertificeerd en hebben jarenlange ervaring met uiteenlopende doelen: van afvallen tot revalidatie tot topprestaties.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat kost personal training en is het de investering waard?</h3>
+              <p className="text-gray-600">Personal training is duurder dan groepslessen, maar levert sneller resultaat omdat het programma volledig op jou is afgestemd. Bij CrossFit Alkmaar bieden we ook <Link href="/small-group-training" className="text-blue-900 font-semibold hover:underline">small group training</Link> in groepen van max 6 als betaalbaar alternatief.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

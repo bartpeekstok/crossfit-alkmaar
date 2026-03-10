@@ -215,6 +215,27 @@ export default function StrengthTrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat is strength training?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is strength training en hoe verschilt het van fitness?</h3>
+              <p className="text-gray-600">Strength training focust op compound liften: squat, deadlift, bench press en overhead press. In plaats van machines gebruik je barbells en vrije gewichten, waardoor je hele lichaam samenwerkt. Bij CrossFit Alkmaar heb je specifieke Strength-lessen gericht op progressief sterker worden.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet je strength trainen per week?</h3>
+              <p className="text-gray-600">Twee tot drie keer is optimaal voor de meeste mensen. Je spieren hebben 48 uur herstel nodig na een zware sessie. Bij CrossFit Alkmaar kun je Strength combineren met CrossFit-lessen voor een uitgebalanceerd programma.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is strength training veilig zonder ervaring?</h3>
+              <p className="text-gray-600">Ja, mits je begeleiding hebt. Bij CrossFit Alkmaar start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> waar je alle liften leert in een groep van max 6. Onze coaches bewaken je techniek bij elke rep, ook in de groepslessen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

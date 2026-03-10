@@ -186,6 +186,27 @@ export default function CrossFitBeginnersAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe begin je met CrossFit?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe begin je met CrossFit als complete beginner?</h3>
+              <p className="text-gray-600">Bij CrossFit Alkmaar start iedereen met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link>: vier weken in een kleine groep van max 6 personen. Je leert alle basisbewegingen onder intensieve begeleiding, zodat je met vertrouwen kunt doorstromen naar de groepslessen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Moet je fit zijn om aan CrossFit te beginnen?</h3>
+              <p className="text-gray-600">Nee. Je hoeft niet fit te zijn om te starten — je start om fit te worden. Elke oefening wordt aangepast aan jouw niveau. Of je nu nog nooit een barbell hebt aangeraakt of al jaren sport.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit gevaarlijk voor beginners?</h3>
+              <p className="text-gray-600">Niet bij goede begeleiding. Bij CrossFit Alkmaar leer je eerst de techniek in kleine groepen voordat je in een groepsles stapt. Onze coaches bewaken je techniek en passen gewichten en oefeningen aan op jouw mogelijkheden.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

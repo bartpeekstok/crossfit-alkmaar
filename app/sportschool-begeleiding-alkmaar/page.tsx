@@ -212,6 +212,27 @@ export default function SportschoolBegeleidingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Waarom kies je voor begeleiding?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen trainen met en zonder begeleiding?</h3>
+              <p className="text-gray-600">Zonder begeleiding maak je vaker techniekfouten, train je niet optimaal en verlies je sneller motivatie. Met een coach krijg je correcties in real-time, een programma dat werkt, en iemand die je verantwoordelijk houdt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe ziet begeleiding er uit bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Je start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> (4 weken, groep van max 6) waar je alle technieken leert. Daarna train je in groepslessen van max 12 met een coach die je kent. Elke 90 dagen heb je een check-in om je voortgang te bespreken en doelen bij te stellen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is begeleid trainen niet veel duurder?</h3>
+              <p className="text-gray-600">Per sessie betaal je bij CrossFit Alkmaar minder dan bij een personal trainer, maar krijg je veel meer dan bij een gewone sportschool. Je krijgt coaching, programmering, en 90 day check-ins — allemaal inbegrepen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

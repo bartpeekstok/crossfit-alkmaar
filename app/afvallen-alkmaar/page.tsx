@@ -209,6 +209,27 @@ export default function AfvallenAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe val je duurzaam af?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom werken diëten niet op de lange termijn?</h3>
+              <p className="text-gray-600">De meeste diëten focussen alleen op minder eten, waardoor je spiermassa verliest en je stofwisseling vertraagt. Duurzaam afvallen combineer je caloriebeperking met krachttraining om spiermassa te behouden. Zo verbrand je ook in rust meer calorieën.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is de beste sport om af te vallen?</h3>
+              <p className="text-gray-600">Een combinatie van krachttraining en conditietraining. Bij CrossFit Alkmaar doe je beide in elke les. Krachttraining bouwt spiermassa die je stofwisseling verhoogt, conditietraining verbetert je uithoudingsvermogen en verbrandt calorieën.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe snel kun je afvallen met sporten?</h3>
+              <p className="text-gray-600">Met 2-3 trainingen per week en gezonde voeding is 0,5 tot 1 kilo per week realistisch en duurzaam. Bij CrossFit Alkmaar bieden we ook <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link> aan om je resultaten te versnellen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

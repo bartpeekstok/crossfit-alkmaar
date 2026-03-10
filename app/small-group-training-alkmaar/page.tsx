@@ -241,6 +241,27 @@ export default function SmallGroupTrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat is small group training?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is small group training en hoe verschilt het van personal training?</h3>
+              <p className="text-gray-600">Small group training is trainen in een groep van max 6 personen met een coach die iedereen persoonlijk begeleidt. Je krijgt bijna dezelfde aandacht als bij 1-op-1 <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link>, maar deelt de kosten en profiteert van groepsmotivatie.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Voor wie is small group training bedoeld?</h3>
+              <p className="text-gray-600">Voor iedereen die meer persoonlijke aandacht wil dan in een groepsles van 12, maar niet de prijs van personal training wil betalen. Bij CrossFit Alkmaar is onze BUILD-les een voorbeeld: max 6 personen, gericht op spiermassa opbouwen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat kost small group training vergeleken met personal training?</h3>
+              <p className="text-gray-600">Small group training is aanzienlijk goedkoper dan 1-op-1 personal training, terwijl je nog steeds persoonlijke coaching krijgt. Bij CrossFit Alkmaar is BUILD inbegrepen in je abonnement vanaf 3x per week.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

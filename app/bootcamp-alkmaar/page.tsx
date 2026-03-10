@@ -209,6 +209,27 @@ export default function BootcampAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat is het verschil met bootcamp?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen bootcamp en CrossFit?</h3>
+              <p className="text-gray-600">Bootcamps zijn vaak buiten, met veel cardio en weinig technische begeleiding. Bij CrossFit Alkmaar train je binnen met professionele apparatuur, leer je techniek en bouw je systematisch kracht op. De intensiteit is vergelijkbaar, maar de begeleiding en progressie zijn veel beter.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit zwaarder dan bootcamp?</h3>
+              <p className="text-gray-600">Niet per se. Bij CrossFit Alkmaar wordt elke oefening geschaald naar jouw niveau. Een beginner doet dezelfde workout als een ervaren atleet, maar met aangepast gewicht en bewegingen. Zo is het uitdagend maar altijd haalbaar.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom kiezen mensen voor CrossFit in plaats van bootcamp?</h3>
+              <p className="text-gray-600">Drie redenen: professionele coaching bij elke rep, progressie in kracht en techniek die je bij bootcamp mist, en een community die je vasthoudt. Bij bootcamp haak je af als de motivatie wegvalt — bij CrossFit houden je groepsgenoten je vast.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

@@ -215,6 +215,27 @@ export default function SportenOvergangAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Sporten in de overgang</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is krachttraining extra belangrijk in de overgang?</h3>
+              <p className="text-gray-600">Tijdens de overgang verlies je versneld botmassa en spiermassa door dalende oestrogeenspiegels. <Link href="/krachttraining-alkmaar" className="text-blue-900 font-semibold hover:underline">Krachttraining</Link> remt dit verlies af, verbetert je botdichtheid en helpt bij het behouden van een gezond gewicht. Het is een van de effectiefste dingen die je kunt doen voor je gezondheid in deze fase.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Helpt sporten tegen overgangsklachten?</h3>
+              <p className="text-gray-600">Ja. Regelmatig trainen vermindert opvliegers, verbetert je slaapkwaliteit, geeft meer energie en helpt bij stemmingswisselingen. Bij CrossFit Alkmaar passen we de training aan op hoe je je die dag voelt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit niet te zwaar in de overgang?</h3>
+              <p className="text-gray-600">Elke oefening bij CrossFit Alkmaar is schaalbaar. Je traint op jouw niveau en jouw tempo. Onze coaches hebben ervaring met leden in de overgang en begrijpen dat sommige dagen anders voelen. Je wordt nooit gedwongen iets te doen dat niet goed voelt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

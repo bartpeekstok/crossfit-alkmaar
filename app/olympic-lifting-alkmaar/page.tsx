@@ -212,6 +212,27 @@ export default function OlympicLiftingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat is olympic lifting?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is olympic lifting en wat leer je ermee?</h3>
+              <p className="text-gray-600">Olympic lifting omvat twee liften: de snatch en de clean &amp; jerk. Het zijn technische, explosieve bewegingen die kracht, snelheid en coördinatie trainen. Bij CrossFit Alkmaar leer je deze liften stap voor stap onder professionele begeleiding.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is olympic lifting gevaarlijk?</h3>
+              <p className="text-gray-600">Niet met goede begeleiding. Bij CrossFit Alkmaar bouw je de techniek op van licht naar zwaar, met een coach die elke rep bewaakt. We gebruiken bumper plates en platforms zodat je veilig kunt trainen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Moet je al sterk zijn om met olympic lifting te beginnen?</h3>
+              <p className="text-gray-600">Nee. Olympic lifting gaat eerst over techniek, daarna over gewicht. Bij CrossFit Alkmaar beginnen veel leden met een lege barbell of zelfs een PVC-pijp om de bewegingspatronen te leren.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

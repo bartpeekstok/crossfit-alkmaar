@@ -209,6 +209,27 @@ export default function FitnessAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe word je fit in Alkmaar?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe word je het snelst fit?</h3>
+              <p className="text-gray-600">Door gevarieerd te trainen: kracht, conditie en mobiliteit combineren. Bij CrossFit Alkmaar wissel je dagelijks af tussen deze elementen, waardoor je lichaam zich breed ontwikkelt in plaats van eenzijdig.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is beter: een fitness abonnement of CrossFit?</h3>
+              <p className="text-gray-600">Bij fitness train je solo op apparaten. Bij CrossFit train je in kleine groepen van max 12 met een coach die je programma schrijft, je techniek corrigeert en je motiveert. Je betaalt meer, maar krijgt veel meer begeleiding en resultaat.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet je trainen om resultaat te zien?</h3>
+              <p className="text-gray-600">Twee tot drie keer per week is genoeg om fitter en sterker te worden. Consistentie is belangrijker dan frequentie. Bij CrossFit Alkmaar bouwen we je trainingen zo op dat je met 2-3 sessies al serieus vooruit gaat.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

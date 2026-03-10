@@ -209,6 +209,27 @@ export default function HyroxVoorbereidingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe bereid je je voor op HYROX?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoeveel weken heb je nodig om je voor te bereiden op HYROX?</h3>
+              <p className="text-gray-600">Minimaal 8-12 weken specifieke voorbereiding is ideaal. Bij CrossFit Alkmaar kun je het hele jaar HYROX-lessen volgen, zodat je altijd wedstrijdklaar bent.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke oefeningen moet je trainen voor HYROX?</h3>
+              <p className="text-gray-600">Sled push/pull, roeien, burpee broad jumps, lunges, wall balls, farmers carry en ski erg. Bij CrossFit Alkmaar oefenen we al deze stations in onze HYROX-lessen, met de juiste apparatuur en coaching.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Moet je goed kunnen hardlopen voor HYROX?</h3>
+              <p className="text-gray-600">Hardlopen is een groot onderdeel (8 km totaal), maar je hoeft geen marathonloper te zijn. Bij CrossFit Alkmaar trainen we je conditie zo dat je de runs aankan en nog energie overhoudt voor de oefenstations.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

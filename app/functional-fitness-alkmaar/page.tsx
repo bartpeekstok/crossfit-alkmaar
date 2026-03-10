@@ -212,6 +212,27 @@ export default function FunctionalFitnessAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Wat is functional fitness?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is functional fitness en waarom is het belangrijk?</h3>
+              <p className="text-gray-600">Functional fitness traint bewegingen die je dagelijks gebruikt: tillen, duwen, trekken, hurken en dragen. In plaats van losse spiergroepen op machines, train je je hele lichaam om beter te bewegen in het echte leven.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen functional fitness en gewoon fitness?</h3>
+              <p className="text-gray-600">Bij gewoon fitness isoleer je spiergroepen op machines. Bij functional fitness train je samengestelde bewegingen met vrije gewichten en je eigen lichaamsgewicht. Het resultaat: meer kracht, betere coördinatie en minder blessures in je dagelijks leven.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Voor wie is functional fitness geschikt?</h3>
+              <p className="text-gray-600">Voor iedereen. Of je nu 25 of 65 bent, elke oefening is schaalbaar. Bij CrossFit Alkmaar trainen leden van alle leeftijden en niveaus samen, omdat de coach elke beweging aanpast aan jouw mogelijkheden.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Video testimonial */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

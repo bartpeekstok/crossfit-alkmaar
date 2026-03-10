@@ -212,6 +212,27 @@ export default function Sportschool50PlusPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe blijf je fit na je 50e?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is krachttraining belangrijk na je 50e?</h3>
+              <p className="text-gray-600">Vanaf je 50e verlies je jaarlijks spiermassa en botdichtheid. Krachttraining remt dit af en kan het zelfs omkeren. Bij CrossFit Alkmaar trainen leden van 20 tot 70+ veilig samen, omdat elke oefening wordt aangepast aan jouw niveau.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is CrossFit geschikt voor 50-plussers?</h3>
+              <p className="text-gray-600">Ja. Onze gemiddelde leeftijd is 35+ en we hebben veel leden boven de 50. Elke oefening is schaalbaar. Je hoeft geen pull-ups of handstanden te doen — je werkt op jouw niveau met een coach die je begeleidt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe begin je met sporten als je al jaren niet hebt gesport?</h3>
+              <p className="text-gray-600">Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link>: vier weken in een kleine groep van max 6 personen waar je alle basisbewegingen leert. Je coach past alles aan op jouw mogelijkheden, ook als je beperkingen hebt.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

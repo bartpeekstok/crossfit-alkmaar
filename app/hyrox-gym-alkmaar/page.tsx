@@ -212,6 +212,27 @@ export default function HyroxGymAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Waar train je voor HYROX?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat maakt een gym geschikt voor HYROX-training?</h3>
+              <p className="text-gray-600">Je hebt specifieke apparatuur nodig: ski erg, roeier, sled, wall balls en een baan om te hardlopen. CrossFit Alkmaar heeft al deze apparatuur en biedt specifieke HYROX-lessen aan onder professionele begeleiding.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Kan ik voor HYROX trainen in een gewone sportschool?</h3>
+              <p className="text-gray-600">In een gewone sportschool ontbreken meestal sled, ski erg en de ruimte voor functionele oefeningen. Bij CrossFit Alkmaar heb je alles onder één dak, inclusief coaches die wedstrijdervaring hebben.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe combineer je HYROX met andere training?</h3>
+              <p className="text-gray-600">Het beste resultaat behaal je door HYROX-lessen te combineren met krachttraining. Bij CrossFit Alkmaar kun je HYROX, CrossFit en Strength mixen in je weekschema voor een optimale voorbereiding.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

@@ -212,6 +212,27 @@ export default function GroepstrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Waarom is groepstraining effectief?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is groepstraining effectiever dan alleen trainen?</h3>
+              <p className="text-gray-600">Onderzoek toont aan dat je harder traint in een groep. De sociale druk, aanmoediging en vaste afspraken zorgen voor meer consistentie en betere resultaten dan solo trainen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe groot zijn de groepen bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Maximaal 12 personen per les, en bij BUILD zelfs max 6. Zo krijg je de energie van een groep mét de persoonlijke aandacht van een coach die je naam kent en je techniek bewaakt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Is groepstraining geschikt als je nog nooit hebt gesport?</h3>
+              <p className="text-gray-600">Ja. Bij CrossFit Alkmaar start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> in een groep van max 6 beginners. Je leert de basis samen met andere starters, zodat je niet alleen staat en op je gemak bent.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

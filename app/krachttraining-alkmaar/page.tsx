@@ -209,6 +209,27 @@ export default function KrachttrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe word je sterker?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Waarom is krachttraining goed voor iedereen?</h3>
+              <p className="text-gray-600">Krachttraining verbetert je botdichtheid, versnelt je stofwisseling, voorkomt blessures en maakt dagelijkse activiteiten makkelijker. Het is niet alleen voor bodybuilders — het is essentieel voor je gezondheid, ongeacht je leeftijd.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe begin je met krachttraining als beginner?</h3>
+              <p className="text-gray-600">Begin met de basisbewegingen: squats, deadlifts en presses. Bij CrossFit Alkmaar start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> waar je deze technieken leert in een kleine groep van max 6, onder begeleiding van een coach die elke rep bewaakt.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen krachttraining en bodybuilding?</h3>
+              <p className="text-gray-600">Bodybuilding richt zich op spiermassa en uiterlijk. Krachttraining bij CrossFit Alkmaar richt zich op functionele kracht: sterker worden in bewegingen die je dagelijks gebruikt. Je wordt sterker, niet per se groter.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">

@@ -209,6 +209,27 @@ export default function HyroxTrainingPage() {
         </div>
       </section>
 
+      {/* AEO Content */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12">Hoe train je voor HYROX?</h2>
+          <div className="space-y-6">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is HYROX en hoe bereid je je voor?</h3>
+              <p className="text-gray-600">HYROX is een fitnesswedstrijd met 8 rondes hardlopen afgewisseld met functionele oefeningen zoals roeien, sled push en burpees. Bij CrossFit Alkmaar combineren we in onze HYROX-lessen specifieke wedstrijdoefeningen met conditie- en krachttraining.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet je trainen voor HYROX?</h3>
+              <p className="text-gray-600">Twee tot drie HYROX-gerichte sessies per week, aangevuld met krachttraining, is ideaal. Bij CrossFit Alkmaar kun je HYROX-lessen combineren met CrossFit en Strength voor een compleet programma.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen HYROX en CrossFit training?</h3>
+              <p className="text-gray-600">CrossFit is breed: kracht, conditie, gymnastiek en olympisch gewichtheffen. HYROX is specifieker: hardlopen gecombineerd met functionele oefeningen. Bij ons kun je beide doen en ze versterken elkaar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
