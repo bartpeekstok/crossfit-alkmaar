@@ -17,6 +17,15 @@ const pathNames: { [key: string]: string } = {
   "meer-info": "Meer Informatie",
   "programmas": "Programma's",
   "free-intro": "Gratis Kennismaking",
+  "functional-fitness-alkmaar": "Functional Fitness Alkmaar",
+  "groepstraining-alkmaar": "Groepstraining Alkmaar",
+  "crossfit-vrouwen-alkmaar": "CrossFit voor Vrouwen Alkmaar",
+  "sportschool-begeleiding-alkmaar": "Sportschool met Begeleiding Alkmaar",
+  "afvallen-met-sport-alkmaar": "Afvallen met Sport Alkmaar",
+  "strength-training-alkmaar": "Strength Training Alkmaar",
+  "small-group-training-alkmaar": "Small Group Training Alkmaar",
+  "olympic-lifting-alkmaar": "Olympic Lifting Alkmaar",
+  "sporten-overgang-alkmaar": "Sporten in de Overgang Alkmaar",
 };
 
 export default function BreadcrumbSchema() {

@@ -200,6 +200,60 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/functional-fitness-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/groepstraining-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/crossfit-vrouwen-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sportschool-begeleiding-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/afvallen-met-sport-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/strength-training-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/small-group-training-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/olympic-lifting-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/sporten-overgang-alkmaar`,
+      lastModified: new Date("2026-03-10"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
     // English pages
     ...englishPages,
     // German pages
