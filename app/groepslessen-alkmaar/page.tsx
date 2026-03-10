@@ -22,12 +22,12 @@ export default function GroepslessenAlkmaarPage() {
         role="img"
         aria-label="Groepslessen Alkmaar - samen trainen bij CrossFit Alkmaar"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/groepslessen-header.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/groepslessen-alkmaar-header.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src="/images/groepslessen-header.jpg" alt="Groepslessen Alkmaar - samen trainen bij CrossFit Alkmaar" className="sr-only" />
+        <img src="/images/groepslessen-alkmaar-header.jpg" alt="Groepslessen Alkmaar - samen trainen bij CrossFit Alkmaar" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Groepslessen in Alkmaar

@@ -22,12 +22,12 @@ export default function KrachttrainingAlkmaarPage() {
         role="img"
         aria-label="Krachttraining Alkmaar - sterker worden bij CrossFit Alkmaar"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/krachttraining-alkmaar-header.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src="/images/hero.jpg" alt="Krachttraining Alkmaar - sterker worden bij CrossFit Alkmaar" className="sr-only" />
+        <img src="/images/krachttraining-alkmaar-header.jpg" alt="Krachttraining Alkmaar - sterker worden bij CrossFit Alkmaar" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Krachttraining Alkmaar

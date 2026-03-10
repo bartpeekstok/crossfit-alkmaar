@@ -22,12 +22,12 @@ export default function CrossFitBeginnersAlkmaarPage() {
         role="img"
         aria-label="CrossFit voor beginners in Alkmaar - veilig starten bij CrossFit Alkmaar"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/kickstart-header.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/crossfit-beginners-header.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src="/images/kickstart-header.jpg" alt="CrossFit voor beginners in Alkmaar - veilig starten bij CrossFit Alkmaar" className="sr-only" />
+        <img src="/images/crossfit-beginners-header.jpg" alt="CrossFit voor beginners in Alkmaar - veilig starten bij CrossFit Alkmaar" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             CrossFit voor Beginners in Alkmaar

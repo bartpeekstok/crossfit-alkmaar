@@ -22,12 +22,12 @@ export default function AfvallenAlkmaarPage() {
         role="img"
         aria-label="Afvallen in Alkmaar - effectief en gezond bij CrossFit Alkmaar"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/afvallen-alkmaar-header.jpg')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <img src="/images/hero.jpg" alt="Afvallen in Alkmaar - effectief en gezond bij CrossFit Alkmaar" className="sr-only" />
+        <img src="/images/afvallen-alkmaar-header.jpg" alt="Afvallen in Alkmaar - effectief en gezond bij CrossFit Alkmaar" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Afvallen in Alkmaar
