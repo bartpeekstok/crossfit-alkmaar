@@ -6,6 +6,7 @@ import ServiceSchema from "../components/ServiceSchema";
 import Image from "next/image";
 import Link from "next/link";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
+import Script from "next/script";
 
 export default function AfvallenAlkmaarPage() {
   const { openPopup } = usePopup();
@@ -127,11 +128,20 @@ export default function AfvallenAlkmaarPage() {
       </section>
 
       {/* Google Reviews */}
-      <div className="bg-white py-3 text-center">
-        <p className="text-gray-700 text-sm">
-          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
-        </p>
-      </div>
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-8">Wat onze leden zeggen</h2>
+          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: '100%', width: '100%' }}
+            title="Google Reviews"
+          ></iframe>
+        </div>
+      </section>
 
       {/* Waarom CrossFit voor afvallen */}
       <section className="py-16 px-6 bg-gray-100">
