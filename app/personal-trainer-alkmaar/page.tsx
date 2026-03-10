@@ -3,6 +3,7 @@
 import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
+import Image from "next/image";
 import Link from "next/link";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
@@ -78,19 +79,37 @@ export default function PersonalTrainerAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: "Tim — lid bij CrossFit Alkmaar",
+            description: "Ik voel me fit en m'n hartslag in rust is ook omlaaggegaan - Lid bij CrossFit Alkmaar deelt zijn ervaring",
+            thumbnailUrl: `https://img.youtube.com/vi/HlqFX84ue3o/maxresdefault.jpg`,
+            uploadDate: "2025-01-01",
+            contentUrl: `https://www.youtube.com/watch?v=HlqFX84ue3o`,
+            embedUrl: `https://www.youtube.com/embed/HlqFX84ue3o`,
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         role="img"
         aria-label="Personal trainer Alkmaar - persoonlijke begeleiding bij CrossFit Alkmaar"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/personal-training-header.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <img src="/images/personal-training-header.jpg" alt="Personal trainer Alkmaar - persoonlijke begeleiding bij CrossFit Alkmaar" className="sr-only" />
+        <Image
+          src="/images/personal-training-header.jpg"
+          alt="Personal trainer Alkmaar - persoonlijke begeleiding bij CrossFit Alkmaar"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Personal Trainer Alkmaar

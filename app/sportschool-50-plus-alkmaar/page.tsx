@@ -3,6 +3,7 @@
 import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
+import Image from "next/image";
 import Link from "next/link";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
@@ -78,19 +79,37 @@ export default function Sportschool50PlusPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: "Renze — lid bij CrossFit Alkmaar",
+            description: "Ik houd niet van fitness, dat vind ik veel te saai - Lid bij CrossFit Alkmaar deelt zijn ervaring",
+            thumbnailUrl: `https://img.youtube.com/vi/iJ6KoiK5QZk/maxresdefault.jpg`,
+            uploadDate: "2025-01-01",
+            contentUrl: `https://www.youtube.com/watch?v=iJ6KoiK5QZk`,
+            embedUrl: `https://www.youtube.com/embed/iJ6KoiK5QZk`,
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         role="img"
         aria-label="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/50+-header.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <img src="/images/50+-header.jpg" alt="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding" className="sr-only" />
+        <Image
+          src="/images/50+-header.jpg"
+          alt="Sportschool 50 plus Alkmaar - veilig sporten met begeleiding"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Sportschool 50+ Alkmaar

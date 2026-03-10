@@ -3,6 +3,7 @@
 import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
+import Image from "next/image";
 import Link from "next/link";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
@@ -78,19 +79,37 @@ export default function SportschoolAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: "Simone — lid bij CrossFit Alkmaar",
+            description: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar. - Lid bij CrossFit Alkmaar deelt haar ervaring",
+            thumbnailUrl: `https://img.youtube.com/vi/14v6cnGlI7g/maxresdefault.jpg`,
+            uploadDate: "2025-01-01",
+            contentUrl: `https://www.youtube.com/watch?v=14v6cnGlI7g`,
+            embedUrl: `https://www.youtube.com/embed/14v6cnGlI7g`,
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         role="img"
         aria-label="Sportschool Alkmaar - CrossFit Alkmaar groepstraining met coach"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
       >
-        <img src="/images/hero.jpg" alt="Sportschool Alkmaar - CrossFit Alkmaar groepstraining met coach" className="sr-only" />
+        <Image
+          src="/images/hero.jpg"
+          alt="Sportschool Alkmaar - CrossFit Alkmaar groepstraining met coach"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Sportschool Alkmaar

@@ -105,6 +105,8 @@ export const metadata: Metadata = {
     canonical: "https://crossfitalkmaar.com",
     languages: {
       "nl-NL": "https://crossfitalkmaar.com",
+      "en-GB": "https://crossfitalkmaar.com/en",
+      "de-DE": "https://crossfitalkmaar.com/de",
     },
   },
   category: "fitness",

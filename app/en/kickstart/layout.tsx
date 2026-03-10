@@ -16,6 +16,11 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com/en/kickstart",
+    languages: {
+      "nl-NL": "https://crossfitalkmaar.com/kickstart",
+      "en-GB": "https://crossfitalkmaar.com/en/kickstart",
+      "de-DE": "https://crossfitalkmaar.com/de/kickstart",
+    },
   },
 };
 
