@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "CrossFit voor Beginners Alkmaar | CrossFit Alkmaar",
   description:
     "CrossFit voor beginners in Alkmaar. Start veilig met persoonlijke begeleiding via het Kickstart-traject bij CrossFit Alkmaar.",
+  keywords: ["CrossFit beginners Alkmaar", "CrossFit starten Alkmaar", "CrossFit voor beginners", "beginnen met CrossFit Alkmaar", "CrossFit introductie Alkmaar", "CrossFit Kickstart Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/crossfit-beginners-alkmaar",
   },

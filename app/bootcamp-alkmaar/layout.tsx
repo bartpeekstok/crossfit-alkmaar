@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Bootcamp Alkmaar | CrossFit Alkmaar",
   description:
     "Op zoek naar een bootcamp in Alkmaar? CrossFit Alkmaar biedt intensieve groepstraining met coaching, binnen en het hele jaar door.",
+  keywords: ["bootcamp Alkmaar", "bootcamp training Alkmaar", "intensieve training Alkmaar", "groepstraining buiten Alkmaar", "bootcamp alternatief Alkmaar", "fitness bootcamp Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/bootcamp-alkmaar",
   },

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Personal Training Alkmaar | CrossFit Alkmaar",
   description:
     "Personal training in Alkmaar bij CrossFit Alkmaar. Individuele begeleiding afgestemd op jouw doelen en niveau.",
+  keywords: ["personal training Alkmaar", "PT sessie Alkmaar", "individuele training Alkmaar", "personal training begeleiding Alkmaar", "1 op 1 coaching Alkmaar", "personal training op maat Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/personal-training-alkmaar",
   },

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Krachttraining Alkmaar | CrossFit Alkmaar",
   description:
     "Krachttraining met professionele coaching in Alkmaar. Squats, deadlifts en Olympic lifting in kleine groepen bij CrossFit Alkmaar.",
+  keywords: ["krachttraining Alkmaar", "strength training Alkmaar", "squats deadlifts Alkmaar", "krachttraining begeleiding Alkmaar", "weightlifting Alkmaar", "kracht opbouwen Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/krachttraining-alkmaar",
   },

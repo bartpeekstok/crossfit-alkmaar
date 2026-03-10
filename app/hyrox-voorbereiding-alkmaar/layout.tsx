@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "HYROX Voorbereiding Alkmaar | CrossFit Alkmaar",
   description:
     "Bereid je voor op HYROX bij CrossFit Alkmaar. Alle apparatuur, ervaren coaches en specifieke HYROX-programmering.",
+  keywords: ["HYROX voorbereiding Alkmaar", "HYROX training Alkmaar", "HYROX wedstrijd voorbereiden", "HYROX coach Alkmaar", "HYROX programmering Alkmaar", "HYROX apparatuur Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/hyrox-voorbereiding-alkmaar",
   },

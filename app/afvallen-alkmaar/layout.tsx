@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Afvallen in Alkmaar | CrossFit Alkmaar",
   description:
     "Gezond afvallen met professionele begeleiding bij CrossFit Alkmaar. Effectieve training en voedingsadvies in kleine groepen.",
+  keywords: ["afvallen Alkmaar", "afvallen met sport Alkmaar", "gewicht verliezen Alkmaar", "vetverbranding Alkmaar", "gezond afvallen Alkmaar", "afvallen begeleiding Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/afvallen-alkmaar",
   },

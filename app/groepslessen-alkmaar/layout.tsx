@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "Groepslessen Alkmaar | CrossFit Alkmaar",
   description:
     "Groepslessen met professionele coaching in kleine groepen van max 12. CrossFit, Strength, HYROX en BUILD bij CrossFit Alkmaar.",
+  keywords: ["groepslessen Alkmaar", "groepstraining Alkmaar", "fitness groepslessen Alkmaar", "CrossFit lessen Alkmaar", "kleine groepen training Alkmaar", "groepsles begeleiding Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/groepslessen-alkmaar",
   },

@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: "HYROX Gym Alkmaar | CrossFit Alkmaar",
   description:
     "De beste HYROX gym in Alkmaar. Alle wedstrijdapparatuur, specifieke lessen en ervaren coaches bij CrossFit Alkmaar.",
+  keywords: ["HYROX gym Alkmaar", "HYROX sportschool Alkmaar", "HYROX apparatuur gym", "HYROX lessen Alkmaar", "beste HYROX gym", "HYROX trainingslocatie Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/hyrox-gym-alkmaar",
   },
