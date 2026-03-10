@@ -4,6 +4,7 @@ import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
 import Link from "next/link";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function PersonalTrainerAlkmaarPage() {
   const { openPopup } = usePopup();
@@ -185,6 +186,22 @@ export default function PersonalTrainerAlkmaarPage() {
           </p>
           <p className="text-lg text-gray-700">
             Onze personal trainers werken met leden van 20 tot 70+ jaar. Het maakt niet uit waar je staat, het gaat erom waar je naartoe wilt.
+          </p>
+        </div>
+      </section>
+
+      {/* Lid aan het woord */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Tim — lid bij CrossFit Alkmaar</h2>
+          <p className="text-gray-600 text-center mb-8">&quot;Ik voel me fit en m&apos;n hartslag in rust is ook omlaaggegaan&quot;</p>
+          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+            <div className="absolute top-0 left-0 w-full h-full">
+              <TrackedYouTubeEmbed videoId="HlqFX84ue3o" title="Tim — lid bij CrossFit Alkmaar" />
+            </div>
+          </div>
+          <p className="text-center mt-6">
+            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
           </p>
         </div>
       </section>

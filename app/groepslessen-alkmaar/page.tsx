@@ -4,6 +4,7 @@ import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
 import Link from "next/link";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function GroepslessenAlkmaarPage() {
   const { openPopup } = usePopup();
@@ -188,6 +189,22 @@ export default function GroepslessenAlkmaarPage() {
           </p>
           <p className="text-lg text-gray-700">
             Nieuw? Je start altijd met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> — een persoonlijk introductietraject zodat je voorbereid in je eerste groepsles staat.
+          </p>
+        </div>
+      </section>
+
+      {/* Lid aan het woord */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Lisette — lid bij CrossFit Alkmaar</h2>
+          <p className="text-gray-600 text-center mb-8">&quot;Ik voel me sindsdien een stuk fitter!&quot;</p>
+          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+            <div className="absolute top-0 left-0 w-full h-full">
+              <TrackedYouTubeEmbed videoId="WuOyAWYDeG0" title="Lisette — lid bij CrossFit Alkmaar" />
+            </div>
+          </div>
+          <p className="text-center mt-6">
+            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
           </p>
         </div>
       </section>

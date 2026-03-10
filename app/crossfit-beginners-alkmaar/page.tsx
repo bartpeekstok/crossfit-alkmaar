@@ -4,6 +4,7 @@ import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
 import Link from "next/link";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function CrossFitBeginnersAlkmaarPage() {
   const { openPopup } = usePopup();
@@ -166,8 +167,24 @@ export default function CrossFitBeginnersAlkmaarPage() {
         </div>
       </section>
 
-      {/* Veelgestelde vragen */}
+      {/* Lid aan het woord */}
       <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Lisette — lid bij CrossFit Alkmaar</h2>
+          <p className="text-gray-600 text-center mb-8">&quot;Ik voel me sindsdien een stuk fitter!&quot;</p>
+          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+            <div className="absolute top-0 left-0 w-full h-full">
+              <TrackedYouTubeEmbed videoId="WuOyAWYDeG0" title="Lisette — lid bij CrossFit Alkmaar" />
+            </div>
+          </div>
+          <p className="text-center mt-6">
+            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
+          </p>
+        </div>
+      </section>
+
+      {/* Veelgestelde vragen */}
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
           <div className="space-y-6">

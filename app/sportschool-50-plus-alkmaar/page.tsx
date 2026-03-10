@@ -4,6 +4,7 @@ import { usePopup } from "../components/PopupContext";
 import { trackCTAClick } from "../lib/analytics";
 import ServiceSchema from "../components/ServiceSchema";
 import Link from "next/link";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function Sportschool50PlusPage() {
   const { openPopup } = usePopup();
@@ -188,6 +189,22 @@ export default function Sportschool50PlusPage() {
           </p>
           <p className="text-lg text-gray-700">
             Bekijk de verhalen van <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">onze leden</Link> en ontdek hoe mensen van alle leeftijden hier sterker en fitter zijn geworden.
+          </p>
+        </div>
+      </section>
+
+      {/* Lid aan het woord */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Renze — lid bij CrossFit Alkmaar</h2>
+          <p className="text-gray-600 text-center mb-8">&quot;Ik houd niet van fitness, dat vind ik veel te saai&quot;</p>
+          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
+            <div className="absolute top-0 left-0 w-full h-full">
+              <TrackedYouTubeEmbed videoId="iJ6KoiK5QZk" title="Renze — lid bij CrossFit Alkmaar" />
+            </div>
+          </div>
+          <p className="text-center mt-6">
+            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
           </p>
         </div>
       </section>
