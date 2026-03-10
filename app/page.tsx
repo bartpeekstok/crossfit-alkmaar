@@ -169,7 +169,6 @@ export default function HomePage() {
       {/* Google Reviews */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Wat onze leden zeggen</h2>
           <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
           <iframe
             className="lc_reviews_widget"
