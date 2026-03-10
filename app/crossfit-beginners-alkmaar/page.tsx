@@ -58,6 +58,25 @@ export default function CrossFitBeginnersAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function CrossFitBeginnersAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Drempelvrees wegnemen */}
       <section className="py-16 px-6 bg-gray-100">
@@ -117,7 +143,7 @@ export default function CrossFitBeginnersAlkmaarPage() {
                 Stap 1: Kennismaking
               </h3>
               <p className="text-gray-700">
-                Een vrijblijvend gesprek waarin we je doelen bespreken, de box laten zien en uitleggen hoe alles werkt. Geen verplichtingen.
+                Een vrijblijvend <Link href="/meer-info" className="text-blue-900 font-semibold hover:underline">kennismakingsgesprek</Link> waarin we je doelen bespreken, de box laten zien en uitleggen hoe alles werkt. Geen verplichtingen.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -133,7 +159,7 @@ export default function CrossFitBeginnersAlkmaarPage() {
                 Stap 3: Groepslessen
               </h3>
               <p className="text-gray-700">
-                Na de Kickstart sluit je aan bij de reguliere groepslessen. Je kent de bewegingen, de coaches kennen jou, en je voelt je op je plek.
+                Na de Kickstart sluit je aan bij de reguliere <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link>. Je kent de bewegingen, de coaches kennen jou, en je voelt je op je plek.
               </p>
             </div>
           </div>
@@ -151,7 +177,7 @@ export default function CrossFitBeginnersAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is CrossFit niet gevaarlijk?</h3>
-              <p className="text-gray-600">Niet met goede coaching. Bij CrossFit Alkmaar train je in groepen van max 12 met een gecertificeerde coach die op je techniek let. Je leert eerst de basis in de Kickstart voordat je in een groepsles stapt.</p>
+              <p className="text-gray-600">Niet met goede coaching. Bij CrossFit Alkmaar train je in groepen van max 12 met een gecertificeerde coach die op je techniek let. Je leert eerst de basis in de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> voordat je in een groepsles stapt.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoeveel kost CrossFit voor beginners?</h3>

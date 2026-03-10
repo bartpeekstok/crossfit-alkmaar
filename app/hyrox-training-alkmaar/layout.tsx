@@ -10,6 +10,17 @@ export const metadata: Metadata = {
     description:
       "Bereid je voor op HYROX met professionele coaching. Functionele fitness, running en strength training in kleine groepen.",
     url: "https://crossfitalkmaar.com/hyrox-training-alkmaar",
+    siteName: "CrossFit Alkmaar",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/hyrox-alkmaar-header.jpg",
+        width: 1200,
+        height: 630,
+        alt: "HYROX Training Alkmaar - CrossFit Alkmaar",
+      },
+    ],
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com/hyrox-training-alkmaar",

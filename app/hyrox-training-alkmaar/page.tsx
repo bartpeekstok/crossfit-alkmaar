@@ -58,6 +58,25 @@ export default function HyroxTrainingPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function HyroxTrainingPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Wat is HYROX */}
       <section className="py-16 px-6 bg-gray-100">
@@ -174,7 +200,7 @@ export default function HyroxTrainingPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Moet ik al fit zijn voor HYROX training?</h3>
-              <p className="text-gray-600">Nee. Onze HYROX-lessen zijn schaalbaar. Of je nu voor je eerste race traint of een PR wilt neerzetten — de training past zich aan.</p>
+              <p className="text-gray-600">Nee. Onze HYROX-lessen zijn schaalbaar. Of je nu voor je eerste race traint of een PR wilt neerzetten — de training past zich aan. Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> als je nieuw bent.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe bereid ik me voor op een HYROX wedstrijd?</h3>
@@ -182,7 +208,7 @@ export default function HyroxTrainingPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik ook HYROX trainen zonder mee te doen aan een wedstrijd?</h3>
-              <p className="text-gray-600">Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren.</p>
+              <p className="text-gray-600">Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
             </div>
           </div>
         </div>

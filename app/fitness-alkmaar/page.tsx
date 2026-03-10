@@ -58,6 +58,25 @@ export default function FitnessAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function FitnessAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Fitness met begeleiding */}
       <section className="py-16 px-6 bg-gray-100">
@@ -158,7 +184,7 @@ export default function FitnessAlkmaarPage() {
             Iedereen begint met een gratis kennismakingsgesprek. We bespreken je doelen, laten de gym zien en leggen uit hoe het werkt. Geen verplichtingen.
           </p>
           <p className="text-lg text-gray-700">
-            Daarna start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> - een persoonlijk traject van semi personal training sessies waarin je alle basis-bewegingen leert. Zo ben je klaar voor de groepslessen en weet je precies wat je doet.
+            Daarna start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> - een persoonlijk traject van semi personal training sessies waarin je alle basis-bewegingen leert. Zo ben je klaar voor de <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> en weet je precies wat je doet.
           </p>
         </div>
       </section>
@@ -174,15 +200,15 @@ export default function FitnessAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik ook vrij trainen?</h3>
-              <p className="text-gray-600">Onze focus ligt op begeleide groepslessen. Zo haal je het maximale uit je training en voorkom je blessures.</p>
+              <p className="text-gray-600">Onze focus ligt op begeleide <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link>. Zo haal je het maximale uit je training en voorkom je blessures.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe snel zie ik resultaat?</h3>
-              <p className="text-gray-600">De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen.</p>
+              <p className="text-gray-600">De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is het geschikt als ik nog nooit heb gesport?</h3>
-              <p className="text-gray-600">Ja. Via onze Kickstart leer je de basis in 4 weken. Alles wordt aangepast aan jouw startniveau.</p>
+              <p className="text-gray-600">Ja. Via onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> leer je de basis in 4 weken. Alles wordt aangepast aan jouw startniveau.</p>
             </div>
           </div>
         </div>

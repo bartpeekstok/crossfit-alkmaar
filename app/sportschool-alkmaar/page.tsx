@@ -58,6 +58,25 @@ export default function SportschoolAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function SportschoolAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Waarom geen gewone sportschool */}
       <section className="py-16 px-6 bg-gray-100">
@@ -133,7 +159,7 @@ export default function SportschoolAlkmaarPage() {
                 ✅ Gevarieerde training
               </h3>
               <p className="text-gray-700">
-                CrossFit, strength, conditie - elke dag een andere workout. Je traint je hele lichaam en het wordt nooit saai.
+                CrossFit, strength, conditie - elke dag een andere workout. Bekijk ons <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">lesrooster</Link> voor alle lessen. Je traint je hele lichaam en het wordt nooit saai.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -155,7 +181,7 @@ export default function SportschoolAlkmaarPage() {
             Voor wie is CrossFit Alkmaar?
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            Onze leden zijn 20 tot 70+ jaar. Sommigen hebben nooit gesport, anderen komen van een andere sportschool omdat ze meer begeleiding willen. Wat ze gemeen hebben: ze willen gezonder en sterker worden, met coaching die bij ze past.
+            Onze leden zijn 20 tot 70+ jaar. Sommigen hebben nooit gesport, anderen komen van een andere sportschool omdat ze meer begeleiding willen. Of je nu kiest voor <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> of <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> — je krijgt coaching die bij je past.
           </p>
           <p className="text-lg text-gray-700 mb-4">
             Iedereen start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> - een persoonlijk traject waarin je de basis leert in semi personal training. Zo sta je nooit onvoorbereid in een groepsles.
@@ -174,11 +200,11 @@ export default function SportschoolAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is CrossFit Alkmaar geschikt voor beginners?</h3>
-              <p className="text-gray-600">Ja. Iedereen start met een 28 Day Kickstart waarin je de basis leert in kleine groepen van max 6 personen.</p>
+              <p className="text-gray-600">Ja. Iedereen start met een <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link> waarin je de basis leert in kleine groepen van max 6 personen.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat kost een lidmaatschap?</h3>
-              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze tarievenpagina. De kennismaking is altijd gratis.</p>
+              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarievenpagina</Link>. De kennismaking is altijd gratis.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Waar zit CrossFit Alkmaar?</h3>

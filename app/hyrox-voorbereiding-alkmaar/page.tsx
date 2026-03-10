@@ -58,6 +58,25 @@ export default function HyroxVoorbereidingAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -87,6 +106,13 @@ export default function HyroxVoorbereidingAlkmaarPage() {
         </div>
       </section>
 
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
+
       {/* Waarom CFA voor HYROX prep */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -97,7 +123,7 @@ export default function HyroxVoorbereidingAlkmaarPage() {
             HYROX vraagt een combinatie van hardlopen en functionele oefeningen. Precies waar CrossFit om draait. Bij CrossFit Alkmaar heb je alle apparatuur die je nodig hebt: sleds, rowers, ski-ergs, wall balls, sandbags en meer.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Onze coaches helpen je met een trainingsplan dat is afgestemd op je HYROX-doel. Of het je eerste race is of je een PR wilt neerzetten — we bouwen je conditie, kracht en race-strategie op.
+            Onze coaches helpen je met een trainingsplan dat is afgestemd op je HYROX-doel. Of het je eerste race is of je een PR wilt neerzetten — we bouwen je conditie, kracht en race-strategie op. Wil je extra focus? Bekijk onze <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> opties.
           </p>
           <p className="text-lg text-gray-700">
             En je traint niet alleen. Bij CrossFit Alkmaar bereiden meerdere leden zich voor op HYROX. Samen trainen, samen racen.
@@ -178,11 +204,11 @@ export default function HyroxVoorbereidingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?</h3>
-              <p className="text-gray-600">Ja. We hebben specifieke HYROX-lessen en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.</p>
+              <p className="text-gray-600">Ja. We hebben specifieke <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX-lessen</Link> en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Train ik alleen of in een groep?</h3>
-              <p className="text-gray-600">In kleine groepen van max 12 personen, onder begeleiding van een coach. Samen trainen is leuker en effectiever.</p>
+              <p className="text-gray-600">In kleine <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepen van max 12 personen</Link>, onder begeleiding van een coach. Samen trainen is leuker en effectiever.</p>
             </div>
           </div>
         </div>

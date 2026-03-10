@@ -4,11 +4,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://crossfitalkmaar.com";
 
   // Blog posts - voeg hier nieuwe blogs toe
-  const blogPosts: string[] = [];
+  const blogPosts: string[] = [
+    "had-je-een-steentje-in-je-schoen",
+    "twaalf-jaar-crossfit-alkmaar",
+    "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
+    "bart-bij-scherpschutters-podcast",
+    "ben-jij-fit-genoeg-voor-crossfit-alkmaar",
+    "een-hardcore-sportschool",
+    "wijze-lessen",
+    "doe-je-het-zelf-of-schakel-je-een-professional-in",
+    "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar",
+    "moet-je-spierpijn-hebben-na-elke-workout",
+    "is-hardlopen-slecht-voor-je",
+    "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen",
+    "blessures-en-trainen-bij-crossfit-alkmaar",
+  ];
 
   const blogUrls = blogPosts.map((slug) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2026-02-16"),
+    lastModified: new Date("2026-03-10"),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -78,7 +92,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date("2025-12-01"),
+      lastModified: new Date("2026-03-10"),
       changeFrequency: "weekly",
       priority: 0.8,
     },

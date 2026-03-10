@@ -58,6 +58,25 @@ export default function PersonalTrainerAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function PersonalTrainerAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Waarom personal training */}
       <section className="py-16 px-6 bg-gray-100">
@@ -174,11 +200,11 @@ export default function PersonalTrainerAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe vaak train ik met een personal trainer?</h3>
-              <p className="text-gray-600">Dat bepaal je zelf. De meeste leden kiezen voor 1-2 sessies per week, vaak gecombineerd met groepslessen.</p>
+              <p className="text-gray-600">Dat bepaal je zelf. De meeste leden kiezen voor 1-2 sessies per week, vaak gecombineerd met <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link>.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat kost personal training?</h3>
-              <p className="text-gray-600">Neem contact op voor onze tarieven. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.</p>
+              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is personal training geschikt voor beginners?</h3>

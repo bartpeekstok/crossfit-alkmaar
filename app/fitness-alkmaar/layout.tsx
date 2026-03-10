@@ -10,6 +10,17 @@ export const metadata: Metadata = {
     description:
       "Fitness met persoonlijke begeleiding. Elke training wordt begeleid door een coach die je bij naam kent.",
     url: "https://crossfitalkmaar.com/fitness-alkmaar",
+    siteName: "CrossFit Alkmaar",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/fitness-alkmaar-header.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Fitness Alkmaar - CrossFit Alkmaar",
+      },
+    ],
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com/fitness-alkmaar",

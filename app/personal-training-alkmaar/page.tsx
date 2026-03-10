@@ -58,6 +58,25 @@ export default function PersonalTrainingAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function PersonalTrainingAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Waarom PT bij CFA */}
       <section className="py-16 px-6 bg-gray-100">
@@ -155,7 +181,7 @@ export default function PersonalTrainingAlkmaarPage() {
             Voor wie is personal training?
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            Voor iedereen die meer wil dan een standaard sportschool. Of je nu net begint met sporten, terugkomt na een blessure, of al jaren traint maar een nieuw doel hebt — personal training geeft je de begeleiding die het verschil maakt.
+            Voor iedereen die meer wil dan een standaard sportschool. Of je nu net begint via de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link>, terugkomt na een blessure, of al jaren traint maar een nieuw doel hebt — personal training geeft je de begeleiding die het verschil maakt.
           </p>
           <p className="text-lg text-gray-700">
             Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek.
@@ -170,7 +196,7 @@ export default function PersonalTrainingAlkmaarPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen personal training en groepslessen?</h3>
-              <p className="text-gray-600">Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij groepslessen train je in kleine groepen van max 12.</p>
+              <p className="text-gray-600">Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> train je in kleine groepen van max 12.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Voor wie is personal training geschikt?</h3>
@@ -178,7 +204,7 @@ export default function PersonalTrainingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik personal training combineren met groepslessen?</h3>
-              <p className="text-gray-600">Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 groepslessen per week.</p>
+              <p className="text-gray-600">Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> per week.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe lang duurt een personal training sessie?</h3>

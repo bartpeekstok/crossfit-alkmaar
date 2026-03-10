@@ -58,6 +58,25 @@ export default function KrachttrainingAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -87,6 +106,13 @@ export default function KrachttrainingAlkmaarPage() {
         </div>
       </section>
 
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
+
       {/* Waarom krachttraining bij CFA */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -97,7 +123,7 @@ export default function KrachttrainingAlkmaarPage() {
             In de meeste sportscholen pak je een halter en hoop je dat je techniek klopt. Bij CrossFit Alkmaar staat er altijd een coach naast je. Of je nu voor het eerst een barbell oppakt of al jaren squats — je krijgt feedback op elke rep.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Onze krachtsessies zijn onderdeel van het dagelijkse CrossFit-programma. Elke training begint met een krachtcomponent: squats, deadlifts, presses, Olympic lifts. Daarna volgt een workout die kracht combineert met conditie.
+            Onze krachtsessies zijn onderdeel van het dagelijkse CrossFit-programma. Bekijk onze <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">programma&apos;s</Link> voor meer details. Elke training begint met een krachtcomponent: squats, deadlifts, presses, Olympic lifts. Daarna volgt een workout die kracht combineert met conditie.
           </p>
           <p className="text-lg text-gray-700">
             Het resultaat: je wordt niet alleen sterker, maar ook functioneel fitter. Kracht die je in het dagelijks leven gebruikt.
@@ -155,7 +181,7 @@ export default function KrachttrainingAlkmaarPage() {
             Voor elk niveau
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            Je hoeft geen ervaring te hebben met krachttraining. Onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> leert je de basis van alle bewegingen. Daarna train je in groepslessen waar de coach het gewicht en de bewegingen aanpast aan jouw niveau.
+            Je hoeft geen ervaring te hebben met krachttraining. Onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> leert je de basis van alle bewegingen. Daarna train je in <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> waar de coach het gewicht en de bewegingen aanpast aan jouw niveau.
           </p>
           <p className="text-lg text-gray-700">
             Onze leden variëren van complete beginners tot mensen die al jaren trainen. Iedereen volgt dezelfde les, maar op een niveau dat bij hen past.
@@ -170,11 +196,11 @@ export default function KrachttrainingAlkmaarPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is krachttraining geschikt voor beginners?</h3>
-              <p className="text-gray-600">Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. We bouwen stap voor stap op.</p>
+              <p className="text-gray-600">Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw stap voor stap op.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is het verschil met een gewone sportschool?</h3>
-              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie.</p>
+              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe vaak per week krachttraining?</h3>

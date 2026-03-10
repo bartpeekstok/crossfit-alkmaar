@@ -58,6 +58,25 @@ export default function BootcampAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function BootcampAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Bootcamp vs CrossFit */}
       <section className="py-16 px-6 bg-gray-100">
@@ -141,7 +167,7 @@ export default function BootcampAlkmaarPage() {
                 Geprogrammeerde progressie
               </h3>
               <p className="text-gray-700">
-                Niet elke week hetzelfde circuit. Onze programmering is opgebouwd voor langetermijnresultaat: je wordt elke maand sterker en fitter.
+                Niet elke week hetzelfde circuit. Onze <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">programmering</Link> is opgebouwd voor langetermijnresultaat: je wordt elke maand sterker en fitter.
               </p>
             </div>
           </div>
@@ -170,15 +196,15 @@ export default function BootcampAlkmaarPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen bootcamp en CrossFit?</h3>
-              <p className="text-gray-600">Een bootcamp is meestal buiten en gericht op cardio. Bij CrossFit Alkmaar train je binnen, het hele jaar door, met professionele coaching en een mix van kracht, conditie en functionele bewegingen.</p>
+              <p className="text-gray-600">Een bootcamp is meestal buiten en gericht op cardio. Bij CrossFit Alkmaar train je binnen, het hele jaar door, met professionele coaching en een mix van kracht, conditie en functionele bewegingen. Bekijk ons <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">lesrooster</Link> voor alle tijden.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is bootcamp geschikt voor beginners?</h3>
-              <p className="text-gray-600">Ja. We passen elke oefening aan op jouw niveau. Via onze Kickstart leer je eerst de basis voordat je in een groepsles stapt.</p>
+              <p className="text-gray-600">Ja. We passen elke oefening aan op jouw niveau. Via onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> leer je eerst de basis voordat je in een groepsles stapt.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe intensief is een training?</h3>
-              <p className="text-gray-600">Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek.</p>
+              <p className="text-gray-600">Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Train ik buiten of binnen?</h3>

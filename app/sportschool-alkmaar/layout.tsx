@@ -10,6 +10,17 @@ export const metadata: Metadata = {
     description:
       "Persoonlijke coaching in kleine groepen. Geen grote onpersoonlijke sportschool, maar een community waar iedereen je naam kent.",
     url: "https://crossfitalkmaar.com/sportschool-alkmaar",
+    siteName: "CrossFit Alkmaar",
+    locale: "nl_NL",
+    type: "website",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/hero.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Sportschool Alkmaar - CrossFit Alkmaar",
+      },
+    ],
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com/sportschool-alkmaar",

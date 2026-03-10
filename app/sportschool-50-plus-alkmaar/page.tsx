@@ -58,6 +58,25 @@ export default function Sportschool50PlusPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -87,6 +106,13 @@ export default function Sportschool50PlusPage() {
         </div>
       </section>
 
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
+
       {/* Waarom geschikt */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -97,7 +123,7 @@ export default function Sportschool50PlusPage() {
             Veel mensen denken dat CrossFit alleen voor jonge, fitte mensen is. Dat is een misverstand. Bij CrossFit Alkmaar trainen leden van 20 tot ruim 70 jaar. De trainingen worden voor iedereen aangepast aan het eigen niveau.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Juist als je ouder wordt is het belangrijk om te blijven bewegen. Spiermassa neemt af vanaf je 30e, je botten worden zwakker, en je balans verslechtert. Krachttraining is bewezen de beste manier om dit tegen te gaan.
+            Juist als je ouder wordt is het belangrijk om te blijven bewegen. Spiermassa neemt af vanaf je 30e, je botten worden zwakker, en je balans verslechtert. <Link href="/krachttraining-alkmaar" className="text-blue-900 font-semibold hover:underline">Krachttraining</Link> is bewezen de beste manier om dit tegen te gaan.
           </p>
           <p className="text-lg text-gray-700">
             Bij ons hoef je geen zwaar gewicht te tillen als je dat niet wilt. Onze coaches passen elke oefening aan: een andere variant, een lichter gewicht, of een ander tempo. Jij bepaalt je eigen grenzen, wij begeleiden je veilig.
@@ -177,11 +203,11 @@ export default function Sportschool50PlusPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Ik heb last van mijn knieën/rug, kan ik toch trainen?</h3>
-              <p className="text-gray-600">In veel gevallen wel. Onze coaches passen oefeningen aan of kiezen alternatieven. Bewegen is vaak juist goed bij gewrichtsklachten.</p>
+              <p className="text-gray-600">In veel gevallen wel. Onze coaches passen oefeningen aan of kiezen alternatieven. Bewegen is vaak juist goed bij gewrichtsklachten. Overweeg eventueel <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> voor extra begeleiding.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Zijn er speciale lessen voor ouderen?</h3>
-              <p className="text-gray-600">Onze reguliere lessen zijn geschikt voor alle leeftijden. Elke oefening is schaalbaar. Je traint samen met anderen, ieder op eigen niveau.</p>
+              <p className="text-gray-600">Onze reguliere <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">lessen</Link> zijn geschikt voor alle leeftijden. Elke oefening is schaalbaar. Je traint samen met anderen, ieder op eigen niveau.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is de gemiddelde leeftijd bij CrossFit Alkmaar?</h3>

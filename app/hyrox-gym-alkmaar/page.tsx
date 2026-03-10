@@ -58,6 +58,25 @@ export default function HyroxGymAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function HyroxGymAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Waarom CFA als HYROX gym */}
       <section className="py-16 px-6 bg-gray-100">
@@ -177,11 +203,11 @@ export default function HyroxGymAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik ook buiten de lessen om HYROX trainen?</h3>
-              <p className="text-gray-600">Onze focus ligt op begeleide groepslessen zodat je techniek en intensiteit optimaal zijn. Neem contact op voor de mogelijkheden.</p>
+              <p className="text-gray-600">Onze focus ligt op begeleide <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> zodat je techniek en intensiteit optimaal zijn. Neem contact op voor de mogelijkheden.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat maakt CrossFit Alkmaar de beste HYROX gym?</h3>
-              <p className="text-gray-600">Alle apparatuur, ervaren coaches, specifieke HYROX-programmering en een community van gelijkgestemde atleten — alles onder een dak.</p>
+              <p className="text-gray-600">Alle apparatuur, ervaren coaches, specifieke <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX-programmering</Link> en een community van gelijkgestemde atleten — alles onder een dak.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Bieden jullie ook HYROX Doubles training?</h3>

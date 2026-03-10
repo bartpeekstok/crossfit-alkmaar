@@ -58,6 +58,25 @@ export default function GroepslessenAlkmaarPage() {
           }),
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
@@ -86,6 +105,13 @@ export default function GroepslessenAlkmaarPage() {
           </button>
         </div>
       </section>
+
+      {/* Google Reviews */}
+      <div className="bg-white py-3 text-center">
+        <p className="text-gray-700 text-sm">
+          <span className="text-yellow-500">★★★★★</span> <span className="font-semibold">5.0</span> — 260+ Google reviews
+        </p>
+      </div>
 
       {/* Waarom groepslessen bij CFA */}
       <section className="py-16 px-6 bg-gray-100">
@@ -133,15 +159,15 @@ export default function GroepslessenAlkmaarPage() {
                 HYROX
               </h3>
               <p className="text-gray-700">
-                Specifieke voorbereiding op HYROX-wedstrijden. Hardlopen, roeien, sled push/pull en functionele oefeningen in wedstrijdformat.
+                Specifieke voorbereiding op <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX</Link>-wedstrijden. Hardlopen, roeien, sled push/pull en functionele oefeningen in wedstrijdformat.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Build
+                BUILD
               </h3>
               <p className="text-gray-700">
-                Gericht op spieropbouw en lichaamsvorm. Gestructureerde trainingen met focus op hypertrofie en aesthetics. <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">Meer over Build →</Link>
+                Gericht op spieropbouw en lichaamsvorm. Gestructureerde trainingen met focus op hypertrofie en aesthetics. <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">Meer over BUILD →</Link>
               </p>
             </div>
           </div>
@@ -177,7 +203,7 @@ export default function GroepslessenAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Welke lessen bieden jullie aan?</h3>
-              <p className="text-gray-600">CrossFit, Strength, HYROX en Build. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</p>
+              <p className="text-gray-600">CrossFit, Strength, <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX</Link> en <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">Build</Link>. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Moet ik van tevoren reserveren?</h3>
@@ -185,7 +211,7 @@ export default function GroepslessenAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik als beginner meedoen met groepslessen?</h3>
-              <p className="text-gray-600">Ja, na het afronden van onze 28 Day Kickstart. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.</p>
+              <p className="text-gray-600">Ja, na het afronden van onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link>. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.</p>
             </div>
           </div>
         </div>
