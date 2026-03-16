@@ -29,6 +29,7 @@ import GroepslessenPopup from "./components/GroepslessenPopup";
 import PricingPopup from "./components/PricingPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
+import MetaPixel from "./components/MetaPixel";
 import ChatWidget from "./components/ChatWidget";
 import JsonLd from "./components/JsonLd";
 import BreadcrumbSchema from "./components/BreadcrumbSchema";
@@ -133,6 +134,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.className} antialiased`}>
         <GoogleAnalytics />
+        <MetaPixel />
         <BreadcrumbSchema />
         <PopupProvider>
           <KickstartPopupProvider>
