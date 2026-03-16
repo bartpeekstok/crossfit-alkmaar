@@ -10,6 +10,43 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "hyrox-bij-crossfit-alkmaar": {
+    title: "HYROX bij CrossFit Alkmaar!",
+    date: "2026-03-16",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Nieuws",
+    image: "/images/blog/Blog hyrox.jpg",
+    excerpt: "Na jaren de HYROX-hype in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen. CrossFit Alkmaar is officieel HYROX gym!",
+    content: `
+      <p>Bij CrossFit Alkmaar waaien we niet zomaar met alle fitness hypes mee. Als we dat deden, konden we elk jaar onze sportschool weer opnieuw opbouwen en rebranden.</p>
+
+      <p>Wij geloven nog steeds dat een stevige mix van kracht- en conditietraining precies is wat iedereen nodig heeft. Natuurlijk aangepast aan het niveau, de ervaring en eventuele beperkingen van de deelnemers. We hebben hier door de jaren heen al honderden Alkmaarders mee geholpen en we hebben er een bak ervaring in.</p>
+
+      <h2>Van CrossFit 'hype' naar blijvertje</h2>
+
+      <p>Toen we twaalf jaar geleden begonnen met CrossFit Alkmaar, dachten veel mensen dat CrossFit een hype zou blijken te zijn. Inmiddels blijkt dat niet zo te zijn: er zijn 300 boxen in Nederland en mensen ontdekken nog steeds het plezier en het nut van sporten met CrossFit.</p>
+
+      <h2>HYROX: meer dan een hype</h2>
+
+      <p>Een 'hype' die we al een paar jaar volgen is die van HYROX. Mijn eerste reactie was dat HYROX vooral een aftreksel was van CrossFit, alleen dan zonder de technische bewegingen en met (veel) meer hardlopen. Dat vond ik als CrossFitter zonde, maar toch hoorde ik steeds meer leden en andere mensen om me heen zeggen dat ze een HYROX hadden gedaan of van plan waren te doen.</p>
+
+      <p>Inmiddels heb ik zelf ook een HYROX gedaan en snap ik de populariteit. Het is natuurlijk ook wel eens lekker om gewoon even te rammen zonder allemaal zeer technische bewegingen. Daarnaast had ik na de finish gelijk al ideeën over hoe ik de volgende keer sneller zou kunnen zijn!</p>
+
+      <h2>CrossFit Alkmaar wordt officiële HYROX gym</h2>
+
+      <p>HYROX is dan ook een mooie aanvulling op ons huidige aanbod. Onze Oxygen lessen zijn al erg populair. In deze lessen doen we al wat langere workouts zonder halterstangen of technische bewegingen. Daarom zijn we inmiddels een officiële HYROX gym geworden, hebben we de eerste materialen aangeschaft en uitgebreid. Nu is het alleen nog even wachten op de sprinttrack die geïnstalleerd gaat worden begin mei en dan kan ons HYROX-aanbod van start!</p>
+
+      <h2>HYROX Physical Fitness Test</h2>
+
+      <p>Als we iets doen bij CrossFit Alkmaar, dan doen we het ook goed. Daarom trappen we de opening van onze HYROX gym af met een Physical Fitness Test in samenwerking met HYROX HQ bij CrossFit Alkmaar! De HYROX Physical Fitness Test is speciaal ontworpen om jou de perfecte introductie te geven van HYROX. Het geeft een goede indicatie van jouw niveau en advies voor welke divisie jij je het beste voor de eerste keer kunt inschrijven. Inschrijven is gratis en doe je via <a href="https://crossfitalkmaar.com/free-intro" class="text-blue-600 hover:underline">deze link</a>! Natuurlijk is iedereen welkom, of je nu al lid bent van CrossFit Alkmaar of niet.</p>
+
+      <h2>HYROX Simulatie op 30 mei</h2>
+
+      <p>Drie weken later, op zaterdag 30 mei, organiseren we onze eerste HYROX Simulatie! Bereid je voor op race day of doe voor het eerst een echte HYROX. Een volledige simulatie van de race zoals je die kent: 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten. De inschrijving opent binnenkort!</p>
+
+      <p>Dus, na deze 'hype' een tijd in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen! Houd onze kanalen in de gaten voor het HYROX-rooster dat vanaf mei opengaat.</p>
+    `,
+  },
   "had-je-een-steentje-in-je-schoen": {
     title: "Had je een steentje in je schoen?",
     date: "2026-03-23",
