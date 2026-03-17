@@ -8,7 +8,7 @@ export default function JsonLd() {
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+.",
     url: "https://crossfitalkmaar.com",
-    logo: "https://crossfitalkmaar.com/images/logo_dark.png",
+    logo: "https://crossfitalkmaar.com/images/logo_dark_square.png",
     image: "https://crossfitalkmaar.com/images/hero.jpg",
     telephone: "+31650500790",
     email: "info@crossfitalkmaar.com",
