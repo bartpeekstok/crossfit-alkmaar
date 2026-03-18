@@ -42,7 +42,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               availability: "https://schema.org/InStock",
               url: "https://crossfitalkmaar.com/hyrox-simulatie-alkmaar",
             },
-            image: "https://crossfitalkmaar.com/images/hyrox-alkmaar-header.jpg",
+            image: "https://crossfitalkmaar.com/images/blog/Blog%20hyrox.jpg",
           }),
         }}
       />
@@ -97,7 +97,7 @@ export default function HyroxSimulatieAlkmaarPage() {
         aria-label="HYROX Simulatie bij CrossFit Alkmaar op 30 mei"
       >
         <Image
-          src="/images/hyrox-alkmaar-header.jpg"
+          src="/images/blog/Blog hyrox.jpg"
           alt="HYROX Simulatie bij CrossFit Alkmaar op 30 mei"
           fill
           className="object-cover"

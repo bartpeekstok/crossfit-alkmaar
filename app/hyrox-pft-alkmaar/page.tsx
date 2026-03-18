@@ -43,7 +43,7 @@ export default function HyroxPftAlkmaarPage() {
               availability: "https://schema.org/InStock",
               url: "https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42",
             },
-            image: "https://crossfitalkmaar.com/images/hyrox-alkmaar-header.jpg",
+            image: "https://crossfitalkmaar.com/images/blog/Blog%20hyrox.jpg",
           }),
         }}
       />
@@ -98,7 +98,7 @@ export default function HyroxPftAlkmaarPage() {
         aria-label="HYROX Physical Fitness Test bij CrossFit Alkmaar op 9 mei"
       >
         <Image
-          src="/images/hyrox-alkmaar-header.jpg"
+          src="/images/blog/Blog hyrox.jpg"
           alt="HYROX Physical Fitness Test bij CrossFit Alkmaar op 9 mei"
           fill
           className="object-cover"
