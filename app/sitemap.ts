@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "is-hardlopen-slecht-voor-je",
     "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen",
     "blessures-en-trainen-bij-crossfit-alkmaar",
+    "hyrox-bij-crossfit-alkmaar",
   ];
 
   const blogUrls = blogPosts.map((slug) => ({
@@ -265,6 +266,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date("2026-03-10"),
       changeFrequency: "monthly",
       priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hyrox-alkmaar`,
+      lastModified: new Date("2026-03-18"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/hyrox-pft-alkmaar`,
+      lastModified: new Date("2026-03-18"),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/hyrox-simulatie-alkmaar`,
+      lastModified: new Date("2026-03-18"),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     // English pages
     ...englishPages,
