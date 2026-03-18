@@ -59,7 +59,7 @@ export default function HyroxPftAlkmaarPage() {
                 name: "Wat is de HYROX Physical Fitness Test?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "De HYROX PFT is een officiële test van HYROX waarmee je je fitnessniveau meet. Je doet verkorte versies van de 8 HYROX-stations en krijgt advies voor welke divisie je je het beste kunt inschrijven.",
+                  text: "De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd krijg je advies voor welke divisie je je het beste kunt inschrijven.",
                 },
               },
               {
@@ -133,10 +133,10 @@ export default function HyroxPftAlkmaarPage() {
             Wat is de HYROX Physical Fitness Test?
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            De HYROX PFT is speciaal ontworpen door HYROX HQ om jou de perfecte introductie te geven. Je doet verkorte versies van de 8 HYROX-stations en krijgt direct inzicht in je niveau.
+            De HYROX PFT is een officiële fitnesstest ontworpen door HYROX HQ. Het is één doorlopende workout die je fitnessniveau meet en je laat ervaren wat HYROX inhoudt — zonder de volledige 8 km hardlopen.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Na afloop ontvang je persoonlijk advies over welke divisie het beste bij je past voor je eerste HYROX race. Of je nu een complete beginner bent of al ervaring hebt — de PFT geeft je een duidelijk startpunt.
+            De test duurt gemiddeld 20 tot 40 minuten, afhankelijk van je niveau. Op basis van je eindtijd krijg je advies over welke divisie het beste bij je past: Pro (15-25 min), Single (25-35 min) of Doubles (30-45 min).
           </p>
           <p className="text-lg text-gray-700">
             CrossFit Alkmaar organiseert deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze nieuwe status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>.
@@ -172,21 +172,35 @@ export default function HyroxPftAlkmaarPage() {
       {/* Wat kun je verwachten */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Wat kun je verwachten?</h2>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-700">
-              <strong>Verkorte HYROX-stations:</strong> Je doorloopt alle 8 stations in een aangepast format — van SkiErg en sled push tot wall balls en farmers carry.
-            </p>
-            <p className="text-lg text-gray-700">
-              <strong>Persoonlijke score:</strong> Je krijgt een score die je niveau aangeeft en vergelijkt met andere HYROX-deelnemers.
-            </p>
-            <p className="text-lg text-gray-700">
-              <strong>Divisie-advies:</strong> Op basis van je resultaten krijg je advies of je het beste kunt starten in Open, Pro of Doubles.
-            </p>
-            <p className="text-lg text-gray-700">
-              <strong>Professionele begeleiding:</strong> Onze coaches begeleiden je bij elk station zodat je alles uit de test haalt.
-            </p>
+          <h2 className="text-3xl font-bold text-gray-900 mb-6">De workout</h2>
+          <p className="text-lg text-gray-700 mb-6">De PFT is één doorlopende workout met de volgende oefeningen:</p>
+          <div className="grid md:grid-cols-2 gap-4">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">1. Run</p>
+              <p className="text-gray-700">1000 meter</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">2. Burpee Broad Jumps</p>
+              <p className="text-gray-700">50 reps</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">3. Stationary Lunges</p>
+              <p className="text-gray-700">100 reps</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">4. Rowing</p>
+              <p className="text-gray-700">1000 meter</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">5. Hand-Release Push-Ups</p>
+              <p className="text-gray-700">30 reps</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm">
+              <p className="font-bold text-gray-900">6. Wall Balls</p>
+              <p className="text-gray-700">100 reps</p>
+            </div>
           </div>
+          <p className="text-gray-600 mt-6 text-center">Geen complexe bewegingen. Iedereen kan het afmaken — de vraag is alleen hoe snel.</p>
         </div>
       </section>
 
@@ -212,7 +226,7 @@ export default function HyroxPftAlkmaarPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is de HYROX Physical Fitness Test?</h3>
-              <p className="text-gray-600">De HYROX PFT is een officiële test van HYROX waarmee je je fitnessniveau meet. Je doet verkorte versies van de 8 HYROX-stations en krijgt advies voor welke divisie je je het beste kunt inschrijven.</p>
+              <p className="text-gray-600">De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd krijg je advies voor welke divisie je je het beste kunt inschrijven.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is de HYROX PFT gratis?</h3>
