@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { trackCTAClick } from "../lib/analytics";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
 export default function HyroxSimulatieAlkmaarPage() {
+  const [showForm, setShowForm] = useState(false);
+
   return (
     <div className="min-h-screen bg-gray-200">
       <script
@@ -113,13 +116,12 @@ export default function HyroxSimulatieAlkmaarPage() {
           <p className="text-xl text-gray-200 mb-8">
             Een volledige HYROX race bij CrossFit Alkmaar. 8 rondes, 8 stations, 1 finish. Voor beginners én ervaren atleten.
           </p>
-          <a
-            href="#inschrijven"
-            onClick={() => trackCTAClick("hyrox_sim_hero", "hyrox-simulatie-alkmaar")}
+          <button
+            onClick={() => { trackCTAClick("hyrox_sim_hero", "hyrox-simulatie-alkmaar"); setShowForm(true); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
           >
             Schrijf je nu in
-          </a>
+          </button>
         </div>
       </section>
 
@@ -260,37 +262,57 @@ export default function HyroxSimulatieAlkmaarPage() {
         </div>
       </section>
 
-      {/* Inschrijven */}
-      <section id="inschrijven" className="py-16 px-6 bg-blue-900">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-4 text-center">
-            Schrijf je in voor 30 mei
+      {/* CTA */}
+      <section className="py-16 px-6 bg-blue-900">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            Doe mee op 30 mei
           </h2>
-          <p className="text-blue-100 text-lg mb-8 text-center">
-            Vul het formulier in om je plek te reserveren.
+          <p className="text-blue-100 text-lg mb-8">
+            Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.
           </p>
-          <div className="bg-white rounded-lg overflow-hidden">
-            <Script src="https://ghl.crossfitalkmaar.com/js/form_embed.js" strategy="lazyOnload" />
-            <iframe
-              src="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
-              style={{ width: '100%', height: '1055px', border: 'none', borderRadius: '3px' }}
-              id="inline-1F3ns6iRWouIPINxoHLG"
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="HYROX SIM form"
-              data-height="1055"
-              data-layout-iframe-id="inline-1F3ns6iRWouIPINxoHLG"
-              data-form-id="1F3ns6iRWouIPINxoHLG"
-              title="HYROX Simulatie inschrijfformulier"
-            ></iframe>
-          </div>
+          <button
+            onClick={() => { trackCTAClick("hyrox_sim_footer", "hyrox-simulatie-alkmaar"); setShowForm(true); }}
+            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
+          >
+            Schrijf je nu in
+          </button>
         </div>
       </section>
+
+      {/* Inschrijf popup */}
+      {showForm && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/30" onClick={() => setShowForm(false)}></div>
+          <div className="relative bg-white rounded-xl shadow-xl max-w-lg w-full mx-4 z-[101] overflow-hidden max-h-[90vh]">
+            <button
+              onClick={() => setShowForm(false)}
+              className="absolute top-3 right-3 text-white hover:text-gray-200 transition z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div style={{ backgroundColor: '#1e3a8a', padding: '20px 24px', textAlign: 'center' }}>
+              <h2 style={{ fontSize: '20px', fontWeight: 'bold', color: '#ffffff', textTransform: 'uppercase', margin: 0 }}>
+                HYROX Simulatie — 30 mei
+              </h2>
+              <p style={{ color: '#ffffff', marginTop: '4px', marginBottom: 0 }}>
+                Schrijf je in en reserveer je plek
+              </p>
+            </div>
+            <div style={{ height: '600px', overflow: 'auto' }}>
+              <Script src="https://ghl.crossfitalkmaar.com/js/form_embed.js" strategy="lazyOnload" />
+              <iframe
+                src="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
+                style={{ width: '100%', height: '1055px', border: 'none' }}
+                scrolling="yes"
+                title="HYROX Simulatie inschrijfformulier"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
