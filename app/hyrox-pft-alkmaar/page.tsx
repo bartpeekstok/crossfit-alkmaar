@@ -235,7 +235,7 @@ export default function HyroxPftAlkmaarPage() {
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële HYROX gym</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
           <p className="text-lg text-gray-200">Deze PFT organiseren we in samenwerking met HYROX HQ als aftrap van ons HYROX-programma.</p>
         </div>
       </section>
