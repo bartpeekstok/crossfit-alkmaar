@@ -119,7 +119,7 @@ export default function HyroxPftAlkmaarPage() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTAClick("hyrox_pft_hero", "hyrox-pft-alkmaar")}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer inline-block"
+            className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
           >
             Schrijf je gratis in
           </a>
@@ -136,7 +136,7 @@ export default function HyroxPftAlkmaarPage() {
             De HYROX PFT is een officiële fitnesstest ontworpen door HYROX HQ. Het is één doorlopende workout die je fitnessniveau meet en je laat ervaren wat HYROX inhoudt — zonder de volledige 8 km hardlopen.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            De test duurt gemiddeld 20 tot 40 minuten, afhankelijk van je niveau. Op basis van je eindtijd krijg je advies over welke divisie het beste bij je past: Pro (15-25 min), Single (25-35 min) of Doubles (30-45 min).
+            Na afloop krijg je een persoonlijke score en advies over welke divisie het beste bij je past voor je eerste HYROX race.
           </p>
           <p className="text-lg text-gray-700">
             CrossFit Alkmaar organiseert deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze nieuwe status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>.
@@ -150,19 +150,19 @@ export default function HyroxPftAlkmaarPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Praktische informatie</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">📅 Datum & tijd</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
               <p className="text-gray-700">Vrijdag 9 mei 2026<br />09:00 – 11:00 uur</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">📍 Locatie</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
               <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">💰 Kosten</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
               <p className="text-gray-700">Gratis — voor iedereen toegankelijk</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">👥 Voor wie</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie</h3>
               <p className="text-gray-700">Iedereen, ook niet-leden. Geen ervaring nodig.</p>
             </div>
           </div>
@@ -258,7 +258,7 @@ export default function HyroxPftAlkmaarPage() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => trackCTAClick("hyrox_pft_footer", "hyrox-pft-alkmaar")}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
+            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
           >
             Schrijf je gratis in
           </a>

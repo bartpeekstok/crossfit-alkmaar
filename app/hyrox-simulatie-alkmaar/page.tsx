@@ -116,7 +116,7 @@ export default function HyroxSimulatieAlkmaarPage() {
           <a
             href="#inschrijven"
             onClick={() => trackCTAClick("hyrox_sim_hero", "hyrox-simulatie-alkmaar")}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer inline-block"
+            className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
           >
             Inschrijving opent binnenkort
           </a>
@@ -189,19 +189,19 @@ export default function HyroxSimulatieAlkmaarPage() {
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Praktische informatie</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">📅 Datum & tijd</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
               <p className="text-gray-700">Zaterdag 30 mei 2026<br />09:00 – 15:00 uur</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">📍 Locatie</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
               <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">💰 Kosten</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
               <p className="text-gray-700">CFA-leden: € XX,-<br />Niet-leden: € XX,-</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">👥 Voor wie</h3>
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie</h3>
               <p className="text-gray-700">Iedereen welkom. Individual of Doubles.<br />Beginners én ervaren atleten.</p>
             </div>
           </div>
@@ -260,7 +260,7 @@ export default function HyroxSimulatieAlkmaarPage() {
           <a
             href="#inschrijven"
             onClick={() => trackCTAClick("hyrox_sim_footer", "hyrox-simulatie-alkmaar")}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
+            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
           >
             Inschrijving opent binnenkort
           </a>
