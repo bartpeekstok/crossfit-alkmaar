@@ -36,13 +36,25 @@ export default function HyroxSimulatieAlkmaarPage() {
               name: "CrossFit Alkmaar",
               url: "https://crossfitalkmaar.com",
             },
-            offers: {
-              "@type": "Offer",
-              priceCurrency: "EUR",
-              availability: "https://schema.org/InStock",
-              url: "https://crossfitalkmaar.com/hyrox-simulatie-alkmaar",
-            },
-            image: "https://crossfitalkmaar.com/images/blog/Blog%20hyrox.jpg",
+            offers: [
+              {
+                "@type": "Offer",
+                name: "CFA-leden",
+                price: "10",
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                url: "https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG",
+              },
+              {
+                "@type": "Offer",
+                name: "Niet-leden",
+                price: "30",
+                priceCurrency: "EUR",
+                availability: "https://schema.org/InStock",
+                url: "https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG",
+              },
+            ],
+            image: "https://crossfitalkmaar.com/images/hyrox-pft-header.jpg",
           }),
         }}
       />
@@ -97,7 +109,7 @@ export default function HyroxSimulatieAlkmaarPage() {
         aria-label="HYROX Simulatie bij CrossFit Alkmaar op 30 mei"
       >
         <Image
-          src="/images/blog/Blog hyrox.jpg"
+          src="/images/hyrox-pft-header.jpg"
           alt="HYROX Simulatie bij CrossFit Alkmaar op 30 mei"
           fill
           className="object-cover"
@@ -106,7 +118,7 @@ export default function HyroxSimulatieAlkmaarPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <p className="text-blue-300 font-semibold text-lg mb-2">Zaterdag 30 mei 2026</p>
+          <p className="text-blue-300 font-bold text-2xl mb-4">Zaterdag 30 mei 2026</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             HYROX Simulatie Alkmaar
           </h1>
@@ -208,7 +220,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
-                <p className="text-gray-700">CFA-leden: € XX,-<br />Niet-leden: € XX,-</p>
+                <p className="text-gray-700">CFA-leden: € 10,-<br />Niet-leden: € 30,-</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">

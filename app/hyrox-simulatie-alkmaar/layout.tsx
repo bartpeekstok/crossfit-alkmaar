@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/blog/Blog%20hyrox.jpg",
+        url: "https://crossfitalkmaar.com/images/hyrox-pft-header.jpg",
         width: 1200,
         height: 630,
         alt: "HYROX Simulatie Alkmaar - 30 mei bij CrossFit Alkmaar",
