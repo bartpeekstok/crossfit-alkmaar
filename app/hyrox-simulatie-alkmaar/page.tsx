@@ -118,7 +118,7 @@ export default function HyroxSimulatieAlkmaarPage() {
             onClick={() => trackCTAClick("hyrox_sim_hero", "hyrox-simulatie-alkmaar")}
             className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
           >
-            Inschrijving opent binnenkort
+            Schrijf je nu in
           </a>
         </div>
       </section>
@@ -260,22 +260,35 @@ export default function HyroxSimulatieAlkmaarPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Inschrijven */}
       <section id="inschrijven" className="py-16 px-6 bg-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Doe mee op 30 mei
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl font-bold text-white mb-4 text-center">
+            Schrijf je in voor 30 mei
           </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            De inschrijving opent binnenkort. Houd onze kanalen in de gaten!
+          <p className="text-blue-100 text-lg mb-8 text-center">
+            Vul het formulier in om je plek te reserveren.
           </p>
-          <a
-            href="#inschrijven"
-            onClick={() => trackCTAClick("hyrox_sim_footer", "hyrox-simulatie-alkmaar")}
-            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
-          >
-            Inschrijving opent binnenkort
-          </a>
+          <div className="bg-white rounded-lg overflow-hidden">
+            <Script src="https://ghl.crossfitalkmaar.com/js/form_embed.js" strategy="lazyOnload" />
+            <iframe
+              src="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
+              style={{ width: '100%', height: '1055px', border: 'none', borderRadius: '3px' }}
+              id="inline-1F3ns6iRWouIPINxoHLG"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="HYROX SIM form"
+              data-height="1055"
+              data-layout-iframe-id="inline-1F3ns6iRWouIPINxoHLG"
+              data-form-id="1F3ns6iRWouIPINxoHLG"
+              title="HYROX Simulatie inschrijfformulier"
+            ></iframe>
+          </div>
         </div>
       </section>
     </div>
