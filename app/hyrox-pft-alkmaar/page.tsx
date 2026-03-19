@@ -228,14 +228,14 @@ export default function HyroxPftAlkmaarPage() {
       <section className="relative py-24 px-6">
         <Image
           src="/images/blog/Blog hyrox.jpg"
-          alt="CrossFit Alkmaar is officiële HYROX gym"
+          alt="CrossFit Alkmaar is een officiële HYROX gym"
           fill
           className="object-cover"
           sizes="100vw"
         />
         <div className="absolute inset-0 bg-black/70" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is officiële HYROX gym</h2>
+          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële HYROX gym</h2>
           <p className="text-lg text-gray-200">Deze PFT organiseren we in samenwerking met HYROX HQ als aftrap van ons HYROX-programma.</p>
         </div>
       </section>
