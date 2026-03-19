@@ -37,20 +37,6 @@ export default function BedanktPage() {
           <p className="text-lg text-gray-300 mb-8">
             We zien je op de mat bij CrossFit Alkmaar!
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/hyrox-pft-alkmaar"
-              className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
-            >
-              HYROX PFT — 9 mei
-            </Link>
-            <Link
-              href="/hyrox-simulatie-alkmaar"
-              className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
-            >
-              HYROX Simulatie — 30 mei
-            </Link>
-          </div>
         </div>
       </section>
     </div>
