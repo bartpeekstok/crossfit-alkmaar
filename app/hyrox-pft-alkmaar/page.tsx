@@ -110,8 +110,8 @@ export default function HyroxPftAlkmaarPage() {
           <Image
             src="/images/hyrox-pft-logo.png"
             alt="HYROX PFT Global Tour logo"
-            width={120}
-            height={120}
+            width={180}
+            height={180}
             className="mx-auto mb-6"
           />
           <p className="text-blue-300 font-bold text-2xl mb-4">Vrijdag 9 mei 2026 • Gratis</p>
