@@ -168,7 +168,7 @@ export default function HyroxPftAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
-                <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
+                <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33<br />1812 PP Alkmaar</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
