@@ -107,13 +107,21 @@ export default function HyroxPftAlkmaarPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
+          <Image
+            src="/images/hyrox-pft-logo.png"
+            alt="HYROX PFT Global Tour logo"
+            width={120}
+            height={120}
+            className="mx-auto mb-6"
+          />
           <p className="text-blue-300 font-bold text-2xl mb-4">Vrijdag 9 mei 2026 • Gratis</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             HYROX Physical Fitness Test
           </h1>
-          <p className="text-xl text-gray-200 mb-8">
+          <p className="text-xl text-gray-200 mb-4">
             Ontdek je HYROX-niveau en krijg advies voor je eerste race. Gratis, bij CrossFit Alkmaar.
           </p>
+          <p className="text-gray-300 mb-8">In samenwerking met HYROX HQ</p>
           <a
             href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42"
             target="_blank"
@@ -149,21 +157,33 @@ export default function HyroxPftAlkmaarPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Praktische informatie</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
-              <p className="text-gray-700">Vrijdag 9 mei 2026<br />09:00 – 11:00 uur</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
+              <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+              <div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
+                <p className="text-gray-700">Vrijdag 9 mei 2026<br />09:00 – 11:00 uur</p>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
-              <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
+              <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+              <div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
+                <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
-              <p className="text-gray-700">Gratis — voor iedereen toegankelijk</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
+              <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+              <div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
+                <p className="text-gray-700">Gratis — voor iedereen toegankelijk</p>
+              </div>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie</h3>
-              <p className="text-gray-700">Iedereen, ook niet-leden. Geen ervaring nodig.</p>
+            <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
+              <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+              <div>
+                <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie</h3>
+                <p className="text-gray-700">Iedereen, ook niet-leden. Geen ervaring nodig.</p>
+              </div>
             </div>
           </div>
         </div>
