@@ -93,7 +93,7 @@ export default function HyroxPftAlkmaarPage() {
 
       {/* Hero */}
       <section
-        className="relative text-white py-8 md:py-16 px-6 min-h-[500px] flex items-center"
+        className="relative text-white py-4 md:py-12 px-6 min-h-[500px] flex items-center"
         role="img"
         aria-label="HYROX Physical Fitness Test bij CrossFit Alkmaar op 9 mei"
       >
