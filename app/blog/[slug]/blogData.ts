@@ -38,7 +38,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>HYROX Physical Fitness Test</h2>
 
-      <p>Als we iets doen bij CrossFit Alkmaar, dan doen we het ook goed. Daarom trappen we de opening van onze HYROX gym af met een Physical Fitness Test in samenwerking met HYROX HQ bij CrossFit Alkmaar! De HYROX Physical Fitness Test is speciaal ontworpen om jou de perfecte introductie te geven van HYROX. Het geeft een goede indicatie van jouw niveau en advies voor welke divisie jij je het beste voor de eerste keer kunt inschrijven. Inschrijven is gratis en doe je via <a href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">deze link</a>! Natuurlijk is iedereen welkom, of je nu al lid bent van CrossFit Alkmaar of niet.</p>
+      <p>Als we iets doen bij CrossFit Alkmaar, dan doen we het ook goed. Daarom trappen we de opening van onze HYROX gym af met een Physical Fitness Test in samenwerking met HYROX HQ bij CrossFit Alkmaar! De HYROX Physical Fitness Test is speciaal ontworpen om jou de perfecte introductie te geven van HYROX. Het geeft een goede indicatie van jouw niveau en advies voor welke divisie jij je het beste voor de eerste keer kunt inschrijven. Inschrijven is gratis en doe je via <a href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">deze link</a>! Lees meer op onze <a href="/hyrox-pft-alkmaar" class="text-blue-600 hover:underline">HYROX PFT pagina</a>. Natuurlijk is iedereen welkom, of je nu al lid bent van CrossFit Alkmaar of niet.</p>
 
       <h2>HYROX Simulatie op 30 mei</h2>
 

@@ -27,7 +27,7 @@ export default function HyroxPftAlkmaarPage() {
                 "@type": "PostalAddress",
                 streetAddress: "Phoenixstraat 33",
                 addressLocality: "Alkmaar",
-                postalCode: "1812 PD",
+                postalCode: "1812 PP",
                 addressCountry: "NL",
               },
             },
@@ -43,7 +43,7 @@ export default function HyroxPftAlkmaarPage() {
               availability: "https://schema.org/InStock",
               url: "https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42",
             },
-            image: "https://crossfitalkmaar.com/images/blog/Blog%20hyrox.jpg",
+            image: "https://crossfitalkmaar.com/images/hyrox-pft-header.jpg",
           }),
         }}
       />
@@ -84,6 +84,22 @@ export default function HyroxPftAlkmaarPage() {
                 acceptedAnswer: {
                   "@type": "Answer",
                   text: "Nee, de PFT is juist bedoeld als introductie tot HYROX. Het is perfect voor beginners die willen ontdekken of HYROX iets voor hen is.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Welke oefeningen doe je bij de HYROX PFT?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "De PFT bestaat uit: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Alles in één doorlopende workout.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe lang duurt de HYROX PFT?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "De test duurt gemiddeld 20 tot 40 minuten, afhankelijk van je niveau. Na afloop krijg je een persoonlijke score en divisie-advies.",
                 },
               },
             ],
@@ -275,6 +291,14 @@ export default function HyroxPftAlkmaarPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Heb ik HYROX-ervaring nodig?</h3>
               <p className="text-gray-600">Nee, de PFT is juist bedoeld als introductie tot HYROX. Het is perfect voor beginners die willen ontdekken of HYROX iets voor hen is.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke oefeningen doe je bij de HYROX PFT?</h3>
+              <p className="text-gray-600">De PFT bestaat uit: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Alles in één doorlopende workout.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe lang duurt de HYROX PFT?</h3>
+              <p className="text-gray-600">De test duurt gemiddeld 20 tot 40 minuten, afhankelijk van je niveau. Na afloop krijg je een persoonlijke score en divisie-advies.</p>
             </div>
           </div>
         </div>
