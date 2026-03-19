@@ -17,7 +17,7 @@ export default function HyroxPftAlkmaarPage() {
             name: "HYROX Physical Fitness Test Alkmaar",
             description: "Gratis HYROX Physical Fitness Test bij CrossFit Alkmaar. Ontdek je niveau en krijg advies voor je eerste HYROX race.",
             startDate: "2026-05-09T09:00:00+02:00",
-            endDate: "2026-05-09T11:00:00+02:00",
+            endDate: "2026-05-09T12:00:00+02:00",
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
             location: {
@@ -114,7 +114,7 @@ export default function HyroxPftAlkmaarPage() {
             height={180}
             className="mx-auto mb-6"
           />
-          <p className="text-blue-300 font-bold text-2xl mb-4">Vrijdag 9 mei 2026 • Gratis</p>
+          <p className="text-blue-300 font-bold text-2xl mb-4">Zaterdag 9 mei 2026 • Gratis</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             HYROX Physical Fitness Test
           </h1>
@@ -161,7 +161,7 @@ export default function HyroxPftAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
-                <p className="text-gray-700">Vrijdag 9 mei 2026<br />09:00 – 11:00 uur</p>
+                <p className="text-gray-700">Zaterdag 9 mei 2026<br />09:00 – 11:00 uur</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
