@@ -15,7 +15,7 @@ export default function HyroxPftAlkmaarPage() {
             "@context": "https://schema.org",
             "@type": "SportsEvent",
             name: "HYROX Physical Fitness Test Alkmaar",
-            description: "Gratis HYROX Physical Fitness Test bij CrossFit Alkmaar. Ontdek je niveau en krijg advies voor je eerste HYROX race.",
+            description: "Gratis HYROX Physical Fitness Test bij CrossFit Alkmaar. Ontdek waar je staat en in welke divisie je thuishoort.",
             startDate: "2026-05-09T09:00:00+02:00",
             endDate: "2026-05-09T12:00:00+02:00",
             eventStatus: "https://schema.org/EventScheduled",
@@ -59,7 +59,7 @@ export default function HyroxPftAlkmaarPage() {
                 name: "Wat is de HYROX Physical Fitness Test?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd krijg je advies voor welke divisie je je het beste kunt inschrijven.",
+                  text: "De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd ontdek je waar je staat en in welke divisie je thuishoort.",
                 },
               },
               {
@@ -83,7 +83,7 @@ export default function HyroxPftAlkmaarPage() {
                 name: "Heb ik HYROX-ervaring nodig?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Nee, de PFT is juist bedoeld als introductie tot HYROX. Het is perfect voor beginners die willen ontdekken of HYROX iets voor hen is.",
+                  text: "Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan — de test laat zien waar je staat.",
                 },
               },
               {
@@ -135,7 +135,7 @@ export default function HyroxPftAlkmaarPage() {
             HYROX Physical Fitness Test
           </h1>
           <p className="text-xl text-gray-200 mb-4">
-            Ontdek je HYROX-niveau en krijg advies voor je eerste race. Gratis, bij CrossFit Alkmaar.
+            Ontdek waar je staat en in welke divisie je thuishoort. Gratis, bij CrossFit Alkmaar.
           </p>
           <p className="text-gray-300 mb-8">In samenwerking met HYROX HQ</p>
           <a
@@ -160,7 +160,7 @@ export default function HyroxPftAlkmaarPage() {
             De HYROX PFT is een officiële fitnesstest ontworpen door HYROX HQ. Het is één doorlopende workout die je fitnessniveau meet en je laat ervaren wat HYROX inhoudt — zonder de volledige 8 km hardlopen.
           </p>
           <p className="text-lg text-gray-700 mb-4">
-            Na afloop krijg je een persoonlijke score en advies over welke divisie het beste bij je past voor je eerste HYROX race.
+            Na afloop krijg je een persoonlijke score en advies over welke divisie het beste bij je past.
           </p>
           <p className="text-lg text-gray-700">
             CrossFit Alkmaar organiseert deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze nieuwe status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>.
@@ -287,7 +287,7 @@ export default function HyroxPftAlkmaarPage() {
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is de HYROX Physical Fitness Test?</h3>
-              <p className="text-gray-600">De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd krijg je advies voor welke divisie je je het beste kunt inschrijven.</p>
+              <p className="text-gray-600">De HYROX PFT is een officiële fitnesstest van HYROX. Je doet één doorlopende workout: 1000m run, 50 burpee broad jumps, 100 stationary lunges, 1000m roeien, 30 hand-release push-ups en 100 wall balls. Op basis van je tijd ontdek je waar je staat en in welke divisie je thuishoort.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is de HYROX PFT gratis?</h3>
@@ -299,7 +299,7 @@ export default function HyroxPftAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Heb ik HYROX-ervaring nodig?</h3>
-              <p className="text-gray-600">Nee, de PFT is juist bedoeld als introductie tot HYROX. Het is perfect voor beginners die willen ontdekken of HYROX iets voor hen is.</p>
+              <p className="text-gray-600">Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan — de test laat zien waar je staat.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Welke oefeningen doe je bij de HYROX PFT?</h3>
