@@ -175,7 +175,7 @@ export default function HyroxPftAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Kosten</h3>
-                <p className="text-gray-700">Gratis — voor iedereen toegankelijk</p>
+                <p className="text-gray-700">Gratis, iedereen is welkom</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
