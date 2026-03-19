@@ -114,7 +114,7 @@ export default function HyroxPftAlkmaarPage() {
             height={180}
             className="mx-auto mb-6"
           />
-          <p className="text-blue-300 font-bold text-2xl mb-4">Zaterdag 9 mei 2026 • Gratis</p>
+          <p className="text-blue-300 font-bold text-2xl mb-4">Zaterdag 9 mei 2026</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             HYROX Physical Fitness Test
           </h1>
