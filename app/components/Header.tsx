@@ -10,6 +10,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 export default function Header() {
   const [programmasOpen, setProgrammasOpen] = useState(false);
   const [meerInfoOpen, setMeerInfoOpen] = useState(false);
+  const [eventsOpen, setEventsOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { openPopup } = usePopup();
   const pathname = usePathname();
@@ -39,6 +40,7 @@ export default function Header() {
     setMobileMenuOpen(false);
     setProgrammasOpen(false);
     setMeerInfoOpen(false);
+    setEventsOpen(false);
   };
 
   return (
@@ -120,6 +122,32 @@ export default function Header() {
             )}
           </div>
 
+          {/* Events Dropdown */}
+          {!isEnglish && !isGerman && (
+            <div
+              className="relative"
+              onMouseEnter={() => setEventsOpen(true)}
+              onMouseLeave={() => setEventsOpen(false)}
+            >
+              <button className="flex items-center hover:text-gray-300 transition">
+                Events
+                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+              {eventsOpen && (
+                <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[250px] shadow-lg">
+                  <Link href="/hyrox-pft-alkmaar" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                    HYROX PFT — 9 mei
+                  </Link>
+                  <Link href="/hyrox-simulatie-alkmaar" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                    HYROX Simulatie — 30 mei
+                  </Link>
+                </div>
+              )}
+            </div>
+          )}
+
           {/* Only show Blog for Dutch */}
           {!isEnglish && !isGerman && (
             <Link href="/blog" className="hover:text-gray-300 transition">
@@ -188,6 +216,27 @@ export default function Header() {
                 <Link href="/small-group-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.smallGroup}</Link>
                 <Link href="/voedingsadvies" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.nutrition}</Link>
               </div>
+            )}
+
+            {/* Events Mobile */}
+            {!isEnglish && !isGerman && (
+              <>
+                <button
+                  onClick={() => setEventsOpen(!eventsOpen)}
+                  className="flex items-center justify-between px-4 py-2 hover:bg-[#2a2a4e]"
+                >
+                  Events
+                  <svg className={`w-4 h-4 transition-transform ${eventsOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {eventsOpen && (
+                  <div className="pl-4 flex flex-col space-y-2">
+                    <Link href="/hyrox-pft-alkmaar" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">HYROX PFT — 9 mei</Link>
+                    <Link href="/hyrox-simulatie-alkmaar" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">HYROX Simulatie — 30 mei</Link>
+                  </div>
+                )}
+              </>
             )}
 
             {/* Only show Blog for Dutch */}
