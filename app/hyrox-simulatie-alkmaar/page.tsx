@@ -16,8 +16,8 @@ export default function HyroxSimulatieAlkmaarPage() {
             "@type": "SportsEvent",
             name: "HYROX Simulatie Alkmaar",
             description: "Volledige HYROX race simulatie bij CrossFit Alkmaar. 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
-            startDate: "2026-05-30T09:00:00+02:00",
-            endDate: "2026-05-30T15:00:00+02:00",
+            startDate: "2026-05-30T11:00:00+02:00",
+            endDate: "2026-05-30T17:00:00+02:00",
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
             location: {
@@ -27,7 +27,7 @@ export default function HyroxSimulatieAlkmaarPage() {
                 "@type": "PostalAddress",
                 streetAddress: "Phoenixstraat 33",
                 addressLocality: "Alkmaar",
-                postalCode: "1812 PD",
+                postalCode: "1812 PP",
                 addressCountry: "NL",
               },
             },
@@ -123,7 +123,7 @@ export default function HyroxSimulatieAlkmaarPage() {
             HYROX Simulatie Alkmaar
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Een volledige HYROX race bij CrossFit Alkmaar. 8 rondes, 8 stations, 1 finish. Voor beginners én ervaren atleten.
+            Een volledige HYROX race bij CrossFit Alkmaar. Open en Pro divisie. 8 rondes, 8 stations, 1 finish.
           </p>
           <a
             href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
@@ -197,6 +197,31 @@ export default function HyroxSimulatieAlkmaarPage() {
         </div>
       </section>
 
+      {/* HYROX Official Gym */}
+      <section className="relative py-24 px-6">
+        <Image
+          src="/images/blog/Blog hyrox.jpg"
+          alt="CrossFit Alkmaar is een officiële HYROX gym"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
+          <p className="text-lg text-gray-200 mb-8">Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
+          <a
+            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTAClick("hyrox_sim_mid", "hyrox-simulatie-alkmaar")}
+            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
+          >
+            Schrijf je nu in
+          </a>
+        </div>
+      </section>
+
       {/* Praktische info */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -206,7 +231,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
-                <p className="text-gray-700">Zaterdag 30 mei 2026<br />09:00 – 15:00 uur</p>
+                <p className="text-gray-700">Zaterdag 30 mei 2026<br />11:00 – 17:00 uur</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
@@ -227,7 +252,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie</h3>
-                <p className="text-gray-700">Iedereen welkom. Individual of Doubles.<br />Beginners én ervaren atleten.</p>
+                <p className="text-gray-700">Open en Pro divisie.<br />Individual of Doubles.<br />Iedereen welkom, ook niet-leden.</p>
               </div>
             </div>
           </div>
