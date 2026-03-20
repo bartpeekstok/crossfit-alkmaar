@@ -123,7 +123,7 @@ export default function HyroxSimulatieAlkmaarPage() {
             HYROX Simulatie Alkmaar
           </h1>
           <p className="text-xl text-gray-200 mb-8">
-            Een volledige HYROX race bij CrossFit Alkmaar. Open en Pro divisie. 8 rondes, 8 stations, 1 finish.
+            Een volledige HYROX race bij CrossFit Alkmaar.<br />Open en Pro divisie. 8 rondes, 8 stations, 1 finish.
           </p>
           <a
             href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
