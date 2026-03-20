@@ -197,31 +197,6 @@ export default function HyroxSimulatieAlkmaarPage() {
         </div>
       </section>
 
-      {/* HYROX Official Gym */}
-      <section className="relative py-24 px-6">
-        <Image
-          src="/images/blog/Blog hyrox.jpg"
-          alt="CrossFit Alkmaar is een officiële HYROX gym"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/70" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
-          <p className="text-lg text-gray-200 mb-8">Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
-          <a
-            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_sim_mid", "hyrox-simulatie-alkmaar")}
-            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
-          >
-            Schrijf je nu in
-          </a>
-        </div>
-      </section>
-
       {/* Praktische info */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
@@ -256,6 +231,31 @@ export default function HyroxSimulatieAlkmaarPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* HYROX Official Gym */}
+      <section className="relative py-24 px-6">
+        <Image
+          src="/images/blog/Blog hyrox.jpg"
+          alt="CrossFit Alkmaar is een officiële HYROX gym"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
+          <p className="text-lg text-gray-200 mb-8">Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
+          <a
+            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => trackCTAClick("hyrox_sim_mid", "hyrox-simulatie-alkmaar")}
+            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
+          >
+            Schrijf je nu in
+          </a>
         </div>
       </section>
 
