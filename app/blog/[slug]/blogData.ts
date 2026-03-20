@@ -42,7 +42,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>HYROX Simulatie op 30 mei</h2>
 
-      <p>Drie weken later, op zaterdag 30 mei, organiseren we onze eerste HYROX Simulatie! Bereid je voor op race day of doe voor het eerst een echte HYROX. Een volledige simulatie van de race zoals je die kent: 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten. De inschrijving opent binnenkort!</p>
+      <p>Drie weken later, op zaterdag 30 mei, organiseren we onze eerste HYROX Simulatie! Bereid je voor op race day of doe voor het eerst een echte HYROX. Een volledige simulatie van de race zoals je die kent: 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten. <a href="/hyrox-simulatie-alkmaar" class="text-blue-600 hover:underline">Bekijk alle info en schrijf je in</a>!</p>
 
       <p>Dus, na deze 'hype' een tijd in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen! Houd onze kanalen in de gaten voor het HYROX-rooster dat vanaf mei opengaat.</p>
     `,

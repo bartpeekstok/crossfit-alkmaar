@@ -97,6 +97,30 @@ export default function HyroxSimulatieAlkmaarPage() {
                   text: "Nee, de HYROX Simulatie is open voor iedereen. Ook niet-leden zijn welkom om mee te doen.",
                 },
               },
+              {
+                "@type": "Question",
+                name: "Wat kost de HYROX Simulatie?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe lang duurt een HYROX Simulatie?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Het evenement duurt van 11:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Welke divisies worden aangeboden?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "We bieden de Open en Pro divisie aan. Je kunt individueel meedoen of als Doubles team.",
+                },
+              },
             ],
           }),
         }}
@@ -186,7 +210,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Locatie</h3>
-                <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33, Alkmaar</p>
+                <p className="text-gray-700">CrossFit Alkmaar<br />Phoenixstraat 33<br />1812 PP Alkmaar</p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
@@ -267,6 +291,18 @@ export default function HyroxSimulatieAlkmaarPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Moet ik lid zijn van CrossFit Alkmaar?</h3>
               <p className="text-gray-600">Nee, de HYROX Simulatie is open voor iedereen. Ook niet-leden zijn welkom om mee te doen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Wat kost de HYROX Simulatie?</h3>
+              <p className="text-gray-600">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Hoe lang duurt een HYROX Simulatie?</h3>
+              <p className="text-gray-600">Het evenement duurt van 11:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-2">Welke divisies worden aangeboden?</h3>
+              <p className="text-gray-600">We bieden de Open en Pro divisie aan. Je kunt individueel meedoen of als Doubles team.</p>
             </div>
           </div>
         </div>
