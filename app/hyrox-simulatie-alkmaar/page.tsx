@@ -158,41 +158,14 @@ export default function HyroxSimulatieAlkmaarPage() {
       {/* De 8 stations */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">De 8 HYROX-stations</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">1. SkiErg</h3>
-              <p className="text-gray-700">1000m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">2. Sled Push</h3>
-              <p className="text-gray-700">50m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">3. Sled Pull</h3>
-              <p className="text-gray-700">50m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">4. Burpee Broad Jumps</h3>
-              <p className="text-gray-700">80m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">5. Rowing</h3>
-              <p className="text-gray-700">1000m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">6. Farmers Carry</h3>
-              <p className="text-gray-700">200m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">7. Sandbag Lunges</h3>
-              <p className="text-gray-700">100m</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-1">8. Wall Balls</h3>
-              <p className="text-gray-700">100 reps</p>
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">De 8 HYROX-stations</h2>
+          <Image
+            src="/images/hyrox-race-rundown.png"
+            alt="HYROX Race Rundown - overzicht van alle 8 stations: SkiErg, Sled Push, Sled Pull, Burpee Broad Jumps, Rowing, Farmers Carry, Sandbag Lunges en Wall Balls"
+            width={1000}
+            height={1000}
+            className="mx-auto rounded-lg shadow-lg"
+          />
           <p className="text-gray-600 mt-6 text-center">Elk station wordt voorafgegaan door 1 kilometer hardlopen — totaal 8 km.</p>
         </div>
       </section>
