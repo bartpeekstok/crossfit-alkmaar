@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 import { getBlogPost, getAllBlogSlugs } from "./blogData";
 
 type Props = {
@@ -51,10 +52,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPostLayout({
+export default async function BlogPostLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ slug: string }>;
 }) {
+  const { slug } = await params;
+  const post = getBlogPost(slug);
+  if (!post) notFound();
   return children;
 }
