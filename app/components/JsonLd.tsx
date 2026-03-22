@@ -1,3 +1,46 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
+// Pages that have their own FAQPage schema - skip global FAQ on these
+const PAGES_WITH_OWN_FAQ = [
+  "/hyrox-pft-alkmaar",
+  "/hyrox-simulatie-alkmaar",
+  "/sportschool-alkmaar",
+  "/fitness-alkmaar",
+  "/sportschool-50-plus-alkmaar",
+  "/hyrox-training-alkmaar",
+  "/personal-trainer-alkmaar",
+  "/afvallen-alkmaar",
+  "/krachttraining-alkmaar",
+  "/groepslessen-alkmaar",
+  "/bootcamp-alkmaar",
+  "/hyrox-voorbereiding-alkmaar",
+  "/hyrox-gym-alkmaar",
+  "/crossfit-beginners-alkmaar",
+  "/personal-training-alkmaar",
+  "/functional-fitness-alkmaar",
+  "/groepstraining-alkmaar",
+  "/crossfit-vrouwen-alkmaar",
+  "/sportschool-begeleiding-alkmaar",
+  "/afvallen-met-sport-alkmaar",
+  "/strength-training-alkmaar",
+  "/small-group-training-alkmaar",
+  "/olympic-lifting-alkmaar",
+  "/sporten-overgang-alkmaar",
+];
+
+function GlobalFaqSchema({ faqSchema }: { faqSchema: object }) {
+  const pathname = usePathname();
+  if (PAGES_WITH_OWN_FAQ.includes(pathname)) return null;
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+    />
+  );
+}
+
 export default function JsonLd() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
@@ -234,12 +277,7 @@ export default function JsonLd() {
           __html: JSON.stringify(websiteSchema),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqSchema),
-        }}
-      />
+      <GlobalFaqSchema faqSchema={faqSchema} />
     </>
   );
 }
