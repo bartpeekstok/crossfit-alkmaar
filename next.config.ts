@@ -301,6 +301,23 @@ const nextConfig: NextConfig = {
         destination: "/programmas",
         permanent: true,
       },
+      // Contact page (old)
+      {
+        source: "/contact",
+        destination: "/meer-info",
+        permanent: true,
+      },
+      {
+        source: "/contact/",
+        destination: "/meer-info",
+        permanent: true,
+      },
+      // English program URLs
+      {
+        source: "/programs/:slug*",
+        destination: "/programmas",
+        permanent: true,
+      },
       // WordPress artifacts
       {
         source: "/wp-content/:path*",
