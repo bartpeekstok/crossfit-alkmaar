@@ -28,7 +28,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Door de jaren heen hebben we stukje bij beetje het hele pand overgenomen. Zodra we weer wat waren gegroeid en het budget het toeliet, huurden we er weer een paar vierkante meter extra bij. Ons 'kantoor' zat boven in wat nu de dames kleedkamer is. Er was daar geen verwarming, dus in de winter zaten we daar met onze jas aan achter een steenkoud bureau te werken.</p>
 
-      <p>Nu gebruiken we het hele pand, hebben we meerdere zalen en hebben onze leden nog steeds meer dan genoeg ruimte om veilig te trainen met alle materialen die we gebruiken. We hebben helaas geen barista meer maar de koffie bij CrossFit Alkmaar is nog steeds erg goed!</p>
+      <p>Nu gebruiken we het hele pand. We hebben het inmiddels gekocht en hebben zo de zekerheid dat CrossFit Alkmaar op deze plek kan blijven bestaan. We hebben meerdere zalen waarin onze leden nog steeds meer dan genoeg ruimte hebben om veilig te trainen met alle materialen die we gebruiken. We hebben helaas geen barista meer maar de koffie bij CrossFit Alkmaar is nog steeds erg goed!</p>
 
       <h2>2. Ons materiaal</h2>
 
