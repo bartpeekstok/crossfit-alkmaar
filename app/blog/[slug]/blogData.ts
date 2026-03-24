@@ -10,6 +10,51 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "wat-we-nu-anders-doen-dan-tien-jaar-geleden": {
+    title: "Wat we nu anders doen dan tien jaar geleden bij CrossFit Alkmaar",
+    date: "2026-03-30",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Community",
+    image: "/images/blog/blog-tien-jaar-anders.jpg",
+    excerpt: "Na dik twaalf jaar CrossFit Alkmaar is het leuk om eens terug te kijken naar wat er zoal veranderd is. Van een halve zaal zonder toiletten tot een volledig pand vol professionals.",
+    content: `
+      <p>Na dik twaalf jaar CrossFit Alkmaar is het leuk om eens terug te kijken naar wat er zoal veranderd is of hetzelfde is gebleven door de jaren heen.</p>
+
+      <h2>1. Onze locatie</h2>
+
+      <p>Toen we ons huidige pand betrokken, huurden we alleen de achterste zaal. Er waren nog geen toiletten, kleedkamers, bar, zithoek of douches. Die hebben we (met een hoop hulp) allemaal zelf gebouwd.</p>
+
+      <p>De helft van het pand werd door de eigenaar gebruikt om zijn collectie oude legervoertuigen te stallen en onderhouden (dat was echt ideaal als zo'n oude dieselmotor daar even werd gestart) en een ander klein deel werd gehuurd door een barista. Zo hadden we dus altijd hele goede koffie bij CrossFit Alkmaar!</p>
+
+      <p>Door de jaren heen hebben we stukje bij beetje het hele pand overgenomen. Zodra we weer wat waren gegroeid en het budget het toeliet, huurden we er weer een paar vierkante meter extra bij. Ons 'kantoor' zat boven in wat nu de dames kleedkamer is. Er was daar geen verwarming, dus in de winter zaten we daar met onze jas aan achter een steenkoud bureau te werken.</p>
+
+      <p>Nu gebruiken we het hele pand, hebben we meerdere zalen en hebben onze leden nog steeds meer dan genoeg ruimte om veilig te trainen met alle materialen die we gebruiken. We hebben helaas geen barista meer maar de koffie bij CrossFit Alkmaar is nog steeds erg goed!</p>
+
+      <h2>2. Ons materiaal</h2>
+
+      <p>Toen we begonnen, hadden we twee roeiers, vier stangen, een paar kettlebells en wat springtouwen. We hadden ook een optrekrek met vier plekken. Zodra we dat rek hadden geplaatst kwamen we erachter dat er eigenlijk maar twee man tegelijk echt in konden hangen zonder last van elkaar te hebben.</p>
+
+      <p>Er werd een hoop materiaal gedeeld en we maakten het gewoon werkbaar. Inmiddels hebben we een veelvoud van wat we toen hadden: de roeiers hebben zich vermenigvuldigd tot twaalf stuks, we hebben meer dan dertig stangen, en gewoon van alles echt heel veel. We onderhouden al ons materiaal goed. Onze held Maarten heeft er een dagtaak aan om te zorgen dat alles altijd goed werkt en blijft werken.</p>
+
+      <p>Tijdens corona hebben we ingevoerd dat elk lid zijn of haar materialen even afneemt met een schone doek en wat alcohol. Dat was toen een logisch iets met alles wat er speelde. We zijn hier na alle lockdowns nooit meer mee gestopt.</p>
+
+      <p>Als ik nu terugkijk, was het eigenlijk best wel raar dat we dat nog niet deden. We maakten al ons materiaal twee keer per week schoon en vonden dat al heel goed. Nu besef ik me dat op een drukke dag het materiaal door soms meer dan tien (bezwete) mensen wordt gebruikt… We blijven het maar lekker schoonmaken na elke les.</p>
+
+      <h2>3. Team CFA</h2>
+
+      <p>In het begin deden we alles met z'n tweeën: lesgeven, klussen, administratie, marketing, ledencontact, schoonmaken en alles wat er bij het runnen van een gym komt kijken. Door de jaren heen breidde het team steeds meer uit.</p>
+
+      <p>Eerst kwamen er wat coaches bij die na het halen van hun CrossFit Level 1 gelijk konden starten, we waren maar wat blij dat we zelf eindelijk een avond of weekenddag thuis konden zijn! Natuurlijk vooral veel parttimers en na een paar jaar startte voor het eerst een fulltimer bij CrossFit Alkmaar.</p>
+
+      <p>Waar we vroeger vooral keken naar hoe fit en goed in CrossFit een coach zelf was, kijken we nu vooral eerst naar de persoon. Is dit een leuk iemand die ervoor kan zorgen dat onze leden zich gezien voelen en die ervoor kan zorgen dat iedereen met een goed gevoel de box weer uitloopt? Dat is iets dat moeilijker aan te leren is dan alle technische bewegingen coachen en aanleren.</p>
+
+      <p>Inmiddels hebben we meer fulltimers dan parttimers bij CrossFit Alkmaar: professionals die vanuit passie dus echt de hele week bezig zijn met het fitter maken van onze leden. Niks ten nadele van onze parttime coaches natuurlijk: iedereen heeft onze eigen CFA Coach Course doorlopen en daarna stage gelopen totdat we van beide kanten vonden dat het niveau goed genoeg was om door te gaan.</p>
+
+      <p>Ik merk dat ik nog wel even door kan gaan met deze vergelijking van toen en nu. Volgende week ga ik ermee verder. Ideaal, want ik vind het soms lastig waar ik nu weer wat over kan schrijven…</p>
+
+      <p>Wil je (weer) een keertje langskomen om te checken hoe het er nu allemaal aan toe gaat bij CrossFit Alkmaar? Boek een <a href="/free-intro" class="text-blue-600 hover:underline">gratis kennismaking</a>, we laten je graag alles zien!</p>
+    `,
+  },
   "hyrox-bij-crossfit-alkmaar": {
     title: "HYROX bij CrossFit Alkmaar!",
     date: "2026-03-16",
