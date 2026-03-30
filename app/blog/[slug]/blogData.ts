@@ -42,9 +42,11 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Zelf vind ik het ook lastig om mezelf even 'uit' te zetten. Met een gezin en een eigen zaak zijn er altijd een miljoen dingen die door m'n hoofd gaan en die ik nog moet doen. Tijdens een uurtje trainen ben ik daar even niet mee bezig. Mijn telefoon zit ook niet in m'n zak, ik ben gewoon lekker aan het sporten. Zo ben ik daarna weer scherp voor die miljoen dingen die nog op m'n bordje liggen.</p>
 
-      <p>Dat CrossFit mij en onze leden veel meer brengt dan alleen een goed lijf, daar ben ik me al heel lang van bewust. Zo heb ik hierboven de verbinding met andere leden doordat je samen afziet en het vergoten van je zelfvertrouwen nog geen eens benoemd.</p>
+      <h2>Meer dan alleen een goed lijf</h2>
 
-      <p>Wil je ook werken aan een sterker en fitter lijf en hoofd, kom gewoon (weer) langs. De koffie staat hier altijd klaar. <a href="/free-intro" class="text-blue-600 hover:underline">Boek een gratis kennismaking</a>.</p>
+      <p>Dat CrossFit mij en onze leden veel meer brengt dan alleen een goed lijf, daar ben ik me al heel lang van bewust. Zo heb ik hierboven de verbinding met andere leden doordat je samen afziet en het vergoten van je zelfvertrouwen nog geen eens benoemd. Want ook dat gebeurt er als je jezelf een keer of drie per week uitdaagt in een veilige omgeving. En laten we die omgeving nu net hebben gecreëerd bij CrossFit Alkmaar!</p>
+
+      <p>Wil je ook werken aan een sterker en fitter lijf en hoofd, kom gewoon (weer) langs. De koffie staat hier altijd klaar.</p>
     `,
   },
   "wat-we-nu-anders-doen-dan-tien-jaar-geleden": {
