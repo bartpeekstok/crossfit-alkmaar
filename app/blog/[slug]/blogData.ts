@@ -10,6 +10,43 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen": {
+    title: "Hoe je ook tussen je oren sterker wordt van trainen bij een goede sportschool",
+    date: "2026-04-06",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Training",
+    image: "/images/blog/blog-mentaal-sterker.jpg",
+    excerpt: "Bij trainen denk je al snel aan een sterker lijf. Maar wat doet het met je hoofd? Over omgaan met ongemak, je ego parkeren en even helemaal in het moment zijn.",
+    content: `
+      <p>Als je denkt aan mentaal sterker of beter worden door CrossFit of trainen in het algemeen, denk je al gauw aan doorzetten en afzien. Want ja, ook dat gebeurt in CrossFit. Je leert zeker omgaan met discomfort in de vorm van een hoge hartslag, longen die de vraag naar zuurstof van je lijf niet bij kunnen houden en verzuurde spieren.</p>
+
+      <p>En daar word je ook echt wel steeds beter in als je langer traint. Dat komt denk ik vooral doordat je steeds beter weet wat er komen gaat en hoe het gaat voelen. Dus misschien is dat wel meer specifiek wennen aan die situatie die elke keer terugkomt. Ik durf zelfs te zeggen dat die situatie op een gegeven moment een soort comfortzone wordt omdat je hem zo vaak opzoekt.</p>
+
+      <h2>Leer uitdagingen niet uit de weg te gaan</h2>
+
+      <p>Waar je denk ik écht mentaal sterker van wordt, is het omgaan met dingen waar je (nog) niet goed in bent. Omdat je ze nog nooit hebt gedaan of gewoon omdat ze je niet liggen. En dan staat er iemand naast je die het met twee keer zoveel gewicht als jij doet. Je zou die situaties lekker uit de weg kunnen gaan, maar dan ben je een dief van je eigen vooruitgang.</p>
+
+      <p>Zodra je jezelf over die drempel tilt om ook op de dagen te komen die jou minder liggen (misschien wel een paar trainingen achter elkaar), leer je jezelf aan om uitdagingen niet uit de weg te gaan. En als je met goede coaches traint, leer je ook dat je beloond wordt voor je inzet. Je ziet jezelf langzaam vooruit gaan doordat je de uitdaging bent aangegaan in plaats van ervoor weg te lopen. En dat er naast je iemand staat die het doet alsof het niks voorstelt, dat is dan dus ook prima. Zo leer je denk ik dat je aan elke uitdaging moet beginnen en met kleine stapjes altijd dichter bij je doel komt.</p>
+
+      <h2>Parkeer je ego bij de deur</h2>
+
+      <p>Wat nog een punt is waarmee je eelt tussen je oren kweekt, is dat je nooit altijd de beste kunt zijn tijdens alle trainingen. In de beginjaren van CrossFit Alkmaar waren Joost en ik altijd met afstand de fitste twee mannen van de gym. Logisch, we waren ook de enige twee die al jaren aan CrossFit deden en er de hele dag mee bezig waren.</p>
+
+      <p>Toen na een paar jaar de eerste leden af en toe sneller of sterker waren tijdens trainingen, heb ik er wel even tijd voor nodig gehad om dat een plekje te geven. Zeker met een mentaliteit van altijd maar overal de beste in willen zijn, voelde dat toch wel een beetje als 'verliezen'.</p>
+
+      <p>Inmiddels ben ik zeker niet meer de fitste bij CrossFit Alkmaar, maar ben ik er juist super trots op dat mensen zo superfit bij CrossFit Alkmaar worden. Ik kan ook gewoon nog steeds trots zijn op mijn eigen prestaties, ook al zijn er zat mensen die sneller, sterker en fitter zijn. Want er gaat altijd wel iemand 'beter' zijn dan jij bent, en dat is ook prima. Ik denk dat je hierdoor goed leert relativeren en je eigen ego opzij te zetten.</p>
+
+      <h2>Even helemaal in het moment</h2>
+
+      <p>Nog een belangrijk mentaal aspect van trainen en CrossFit in het bijzonder: je bent in het moment. Waar we allemaal de hele dag worden afgeleid door onze telefoon, agenda's en andere druktes, sta je tijdens een zware lift of stevige workout even helemaal in het moment met jezelf. Je focust op de 'taak' die voor je ligt en geeft alles wat je hebt, er is gewoon geen ruimte voor enige andere afleiding.</p>
+
+      <p>Zelf vind ik het ook lastig om mezelf even 'uit' te zetten. Met een gezin en een eigen zaak zijn er altijd een miljoen dingen die door m'n hoofd gaan en die ik nog moet doen. Tijdens een uurtje trainen ben ik daar even niet mee bezig. Mijn telefoon zit ook niet in m'n zak, ik ben gewoon lekker aan het sporten. Zo ben ik daarna weer scherp voor die miljoen dingen die nog op m'n bordje liggen.</p>
+
+      <p>Dat CrossFit mij en onze leden veel meer brengt dan alleen een goed lijf, daar ben ik me al heel lang van bewust. Zo heb ik hierboven de verbinding met andere leden doordat je samen afziet en het vergoten van je zelfvertrouwen nog geen eens benoemd.</p>
+
+      <p>Wil je ook werken aan een sterker en fitter lijf en hoofd, kom gewoon (weer) langs. De koffie staat hier altijd klaar. <a href="/free-intro" class="text-blue-600 hover:underline">Boek een gratis kennismaking</a>.</p>
+    `,
+  },
   "wat-we-nu-anders-doen-dan-tien-jaar-geleden": {
     title: "Wat we nu anders doen dan tien jaar geleden bij CrossFit Alkmaar",
     date: "2026-03-30",
