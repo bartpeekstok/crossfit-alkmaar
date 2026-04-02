@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Tieners Programma - CrossFit voor Jongeren (13-17 jaar) | CrossFit Alkmaar",
+  title: "Tieners Programma - CrossFit voor Jongeren (14-17 jaar) | CrossFit Alkmaar",
   description:
     "Speciaal tienerprogramma bij CrossFit Alkmaar voor jongeren van 14 tot en met 17 jaar. Leer veilig en effectief trainen onder professionele begeleiding. Een goede start met sporten, goed voor kracht en zelfvertrouwen.",
   keywords: ["tieners sporten Alkmaar", "CrossFit tieners", "jongeren fitness Alkmaar", "tiener training", "sport voor tieners Alkmaar", "CrossFit jeugd", "alternatief sportschool tieners"],
