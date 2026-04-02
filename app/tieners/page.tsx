@@ -254,9 +254,6 @@ export default function TienersPage() {
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Kennismaken?</h2>
-          <p className="text-xl mb-4">
-            Het tienerprogramma kost €70 per maand voor twee keer per week trainen.
-          </p>
           <p className="text-xl mb-8">
             Plan een gratis en vrijblijvende kennismaking.
           </p>
