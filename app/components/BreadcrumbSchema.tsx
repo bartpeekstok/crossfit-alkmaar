@@ -43,6 +43,7 @@ const pathNames: { [key: string]: string } = {
   "hyrox-alkmaar": "HYROX Alkmaar",
   "hyrox-pft-alkmaar": "HYROX PFT Alkmaar",
   "hyrox-simulatie-alkmaar": "HYROX Simulatie Alkmaar",
+  "tieners": "Tieners",
 };
 
 export default function BreadcrumbSchema() {

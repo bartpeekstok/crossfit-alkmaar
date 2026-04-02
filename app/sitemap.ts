@@ -88,6 +88,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/tieners`,
+      lastModified: new Date("2026-04-02"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/programmas`,
       lastModified: new Date("2025-06-01"),
       changeFrequency: "monthly",

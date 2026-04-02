@@ -32,6 +32,7 @@ export default function Header() {
     personalTraining: "Personal Training",
     smallGroup: "Small Group Training",
     nutrition: isEnglish ? "Nutrition coaching" : isGerman ? "Ernährungsberatung" : "Voedingsadvies",
+    teens: isEnglish ? "Teens" : isGerman ? "Jugendliche" : "Tieners",
     blog: "Blog",
     freeIntro: isEnglish ? "Free intro" : isGerman ? "Kostenloses Probetraining" : "Gratis kennismaking",
   };
@@ -117,6 +118,9 @@ export default function Header() {
                 </Link>
                 <Link href="/voedingsadvies" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   {t.nutrition}
+                </Link>
+                <Link href="/tieners" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                  {t.teens}
                 </Link>
               </div>
             )}
@@ -215,6 +219,7 @@ export default function Header() {
                 <Link href="/personal-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.personalTraining}</Link>
                 <Link href="/small-group-training" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.smallGroup}</Link>
                 <Link href="/voedingsadvies" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.nutrition}</Link>
+                <Link href="/tieners" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.teens}</Link>
               </div>
             )}
 
