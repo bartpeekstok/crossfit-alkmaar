@@ -54,7 +54,7 @@ export default function TienersPage() {
               Ons tienerprogramma is speciaal ontwikkeld voor jongeren van 14 tot en met 17 jaar. We geven tieners een alternatief voor de grote sportscholen waar ze zonder begeleiding aan hun lot worden overgelaten. Bij ons staat er altijd een professionele coach naast je die je leert hoe je veilig en effectief traint.
             </p>
             <p className="mb-4">
-              Zo geven we jongeren een goede start met trainen. Ze leren de juiste technieken, bouwen kracht en conditie op, en ontdekken hoe het voelt om fit en sterk te zijn. Dat geeft enorm veel zelfvertrouwen — niet alleen in de gym, maar ook daarbuiten.
+              Zo geven we jongeren een goede start met trainen. Ze leren de juiste technieken, bouwen kracht en conditie op, en ontdekken hoe het voelt om fit en sterk te zijn. Dat geeft enorm veel zelfvertrouwen, niet alleen in de gym, maar ook daarbuiten.
             </p>
             <p>
               De trainingen zijn uitdagend maar altijd afgestemd op het niveau en de ontwikkeling van elke tiener. Er wordt geen druk uitgeoefend: het draait om plezier, vooruitgang en een gezonde basis leggen voor de rest van hun leven.
@@ -68,23 +68,20 @@ export default function TienersPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center">Waarom CrossFit voor tieners?</h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-4xl mb-4">💪</div>
-              <h3 className="text-xl font-semibold mb-3">Sterker worden</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ Sterker worden</h3>
               <p className="text-gray-600">
                 Bouw kracht en conditie op met gevarieerde trainingen die nooit saai worden. Elke les is anders.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-4xl mb-4">🧠</div>
-              <h3 className="text-xl font-semibold mb-3">Meer zelfvertrouwen</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ Meer zelfvertrouwen</h3>
               <p className="text-gray-600">
                 Ontdek wat je lichaam allemaal kan. Elke kleine overwinning bouwt zelfvertrouwen op dat verder reikt dan de gym.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="text-4xl mb-4">👥</div>
-              <h3 className="text-xl font-semibold mb-3">Samen met leeftijdsgenoten</h3>
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <h3 className="text-xl font-semibold mb-3">✓ Samen met leeftijdsgenoten</h3>
               <p className="text-gray-600">
                 Train in een groep met jongeren van jouw leeftijd. Samen werken, samen lachen, samen groeien.
               </p>
@@ -120,7 +117,7 @@ export default function TienersPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Leuke sfeer</h3>
-              <p className="text-gray-600">Bij ons staat plezier centraal. Tieners komen hier graag naartoe — dat merk je aan de energie in de groep.</p>
+              <p className="text-gray-600">Bij ons staat plezier centraal. Tieners komen hier graag naartoe, dat merk je aan de energie in de groep.</p>
             </div>
           </div>
         </div>
@@ -146,7 +143,7 @@ export default function TienersPage() {
               </div>
               <div className="flex items-start">
                 <span className="font-semibold min-w-[140px]">Ervaring:</span>
-                <span className="text-gray-600">Geen ervaring nodig — we beginnen bij de basis</span>
+                <span className="text-gray-600">Geen ervaring nodig, we beginnen bij de basis</span>
               </div>
               <div className="flex items-start">
                 <span className="font-semibold min-w-[140px]">Kennismaken:</span>
@@ -166,10 +163,10 @@ export default function TienersPage() {
               We begrijpen dat je als ouder wilt weten dat je kind in goede handen is. Bij CrossFit Alkmaar staat veiligheid altijd voorop. In tegenstelling tot grote sportscholen waar jongeren zonder begeleiding rondlopen, staat er bij ons altijd een ervaren coach naast je kind. Elke oefening wordt zorgvuldig uitgelegd en opgebouwd.
             </p>
             <p className="mb-4">
-              Tieners leren bij ons niet alleen hoe ze veilig en effectief trainen, maar ontdekken ook hoe het voelt om fit en sterk te zijn. Dat heeft een enorm positief effect op hun zelfvertrouwen — niet alleen in de gym, maar ook op school en in het dagelijks leven.
+              Tieners leren bij ons niet alleen hoe ze veilig en effectief trainen, maar ontdekken ook hoe het voelt om fit en sterk te zijn. Dat heeft een enorm positief effect op hun zelfvertrouwen, niet alleen in de gym, maar ook op school en in het dagelijks leven.
             </p>
             <p>
-              Benieuwd of dit iets voor jouw zoon of dochter is? Plan een gratis kennismaking — dan kun je zelf zien hoe we werken en al je vragen stellen.
+              Benieuwd of dit iets voor jouw zoon of dochter is? Plan een gratis kennismaking, dan kun je zelf zien hoe we werken en al je vragen stellen.
             </p>
           </div>
         </div>
