@@ -18,6 +18,7 @@ import { PersonalTrainingPopupProvider } from "./components/PersonalTrainingPopu
 import { SmallGroupPopupProvider } from "./components/SmallGroupPopupContext";
 import { VoedingsadviesPopupProvider } from "./components/VoedingsadviesPopupContext";
 import { GroepslessenPopupProvider } from "./components/GroepslessenPopupContext";
+import { TienersPopupProvider } from "./components/TienersPopupContext";
 import { PricingPopupProvider } from "./components/PricingPopupContext";
 import IntakePopup from "./components/IntakePopup";
 import KickstartPopup from "./components/KickstartPopup";
@@ -26,6 +27,7 @@ import PersonalTrainingPopup from "./components/PersonalTrainingPopup";
 import SmallGroupPopup from "./components/SmallGroupPopup";
 import VoedingsadviesPopup from "./components/VoedingsadviesPopup";
 import GroepslessenPopup from "./components/GroepslessenPopup";
+import TienersPopup from "./components/TienersPopup";
 import PricingPopup from "./components/PricingPopup";
 import CookieBanner from "./components/CookieBanner";
 import GoogleAnalytics from "./components/GoogleAnalytics";
@@ -143,6 +145,7 @@ export default function RootLayout({
                 <SmallGroupPopupProvider>
                   <VoedingsadviesPopupProvider>
                     <GroepslessenPopupProvider>
+                      <TienersPopupProvider>
                       <PricingPopupProvider>
                         <Header />
                         <main className="pb-16">{children}</main>
@@ -154,6 +157,7 @@ export default function RootLayout({
                         <SmallGroupPopup />
                         <VoedingsadviesPopup />
                         <GroepslessenPopup />
+                        <TienersPopup />
                         <PricingPopup />
                         <StickyMobileCTA />
                         <CookieBanner />
@@ -161,6 +165,7 @@ export default function RootLayout({
                         <FormSubmissionTracker />
                         <Analytics />
                       </PricingPopupProvider>
+                      </TienersPopupProvider>
                     </GroepslessenPopupProvider>
                   </VoedingsadviesPopupProvider>
                 </SmallGroupPopupProvider>

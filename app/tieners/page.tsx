@@ -1,11 +1,11 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
+import { useTienersPopup } from "../components/TienersPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
 import { trackCTAClick } from "../lib/analytics";
 
 export default function TienersPage() {
-  const { openPopup } = usePopup();
+  const { openPopup } = useTienersPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
