@@ -149,7 +149,7 @@ export default function TienersPage() {
             Het tienerprogramma kost €70 per maand voor twee keer per week trainen.
           </p>
           <p className="text-xl mb-8">
-            Plan een gratis en vrijblijvende kennismaking. Je kind mag gewoon een keer meekijken of meedoen.
+            Plan een gratis en vrijblijvende kennismaking.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_footer', 'tieners'); openPopup(); }}
