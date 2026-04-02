@@ -3,6 +3,9 @@
 import { useTienersPopup } from "../components/TienersPopupContext";
 import ServiceSchema from "../components/ServiceSchema";
 import { trackCTAClick } from "../lib/analytics";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
 
 export default function TienersPage() {
   const { openPopup } = useTienersPopup();
@@ -14,18 +17,84 @@ export default function TienersPage() {
         description="CrossFit tienerprogramma voor jongeren van 14-17 jaar. Leer veilig en effectief trainen onder professionele begeleiding. Goed voor kracht en zelfvertrouwen."
         url="https://crossfitalkmaar.com/tieners"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Voor welke leeftijd is het tienerprogramma?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Het tienerprogramma is voor jongeren van 14 tot en met 17 jaar.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Heeft mijn kind sportervaring nodig?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Nee, geen ervaring nodig. We beginnen bij de basis en bouwen stap voor stap op. Elke training wordt afgestemd op het niveau van je kind.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost het tienerprogramma?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Het tienerprogramma kost €70 per maand voor twee keer per week trainen. De kennismaking is gratis.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Waarom CrossFit Alkmaar en niet een gewone sportschool?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij grote sportscholen worden jongeren zonder begeleiding aan hun lot overgelaten. Bij ons staat er altijd een professionele coach naast je kind die zorgt voor veilige en effectieve training.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
 
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         role="img"
-        aria-label="CrossFit tieners programma Alkmaar - jongeren trainen samen"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/tieners-header.webp')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
+        aria-label="CrossFit tieners programma Alkmaar - jongeren trainen samen met dumbbells"
       >
+        <Image
+          src="/images/tieners-header.webp"
+          alt="CrossFit tieners programma Alkmaar - jongeren trainen samen met dumbbells"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Tieners Programma
@@ -60,6 +129,21 @@ export default function TienersPage() {
               De trainingen zijn uitdagend maar altijd afgestemd op het niveau en de ontwikkeling van elke tiener. Er wordt geen druk uitgeoefend: het draait om plezier, vooruitgang en een gezonde basis leggen voor de rest van hun leven.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Google Reviews */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: '100%', width: '100%' }}
+            title="Google Reviews"
+          ></iframe>
         </div>
       </section>
 
@@ -135,8 +219,33 @@ export default function TienersPage() {
               Tieners leren bij ons niet alleen hoe ze veilig en effectief trainen, maar ontdekken ook hoe het voelt om fit en sterk te zijn. Dat heeft een enorm positief effect op hun zelfvertrouwen, niet alleen in de gym, maar ook op school en in het dagelijks leven.
             </p>
             <p>
-              Benieuwd of dit iets voor jouw zoon of dochter is? Plan een gratis kennismaking, dan kun je zelf zien hoe we werken en al je vragen stellen.
+              Benieuwd of dit iets voor jouw zoon of dochter is? <Link href="/tarieven" className="text-blue-900 underline hover:text-blue-950">Bekijk onze tarieven</Link> of plan direct een gratis kennismaking.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor welke leeftijd is het tienerprogramma?</h3>
+              <p className="text-gray-600">Het tienerprogramma is voor jongeren van 14 tot en met 17 jaar.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Heeft mijn kind sportervaring nodig?</h3>
+              <p className="text-gray-600">Nee, geen ervaring nodig. We beginnen bij de basis en bouwen stap voor stap op. Elke training wordt afgestemd op het niveau van je kind.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost het tienerprogramma?</h3>
+              <p className="text-gray-600">Het tienerprogramma kost €70 per maand voor twee keer per week trainen. De kennismaking is gratis.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Waarom CrossFit Alkmaar en niet een gewone sportschool?</h3>
+              <p className="text-gray-600">Bij grote sportscholen worden jongeren zonder begeleiding aan hun lot overgelaten. Bij ons staat er altijd een professionele coach naast je kind die zorgt voor veilige en effectieve training.</p>
+            </div>
           </div>
         </div>
       </section>
