@@ -123,39 +123,8 @@ export default function TienersPage() {
         </div>
       </section>
 
-      {/* Praktische info */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Praktische informatie</h2>
-          <div className="bg-white p-8 rounded-lg shadow-sm max-w-2xl mx-auto">
-            <div className="space-y-4">
-              <div className="flex items-start">
-                <span className="font-semibold min-w-[140px]">Leeftijd:</span>
-                <span className="text-gray-600">14 tot en met 17 jaar</span>
-              </div>
-              <div className="flex items-start">
-                <span className="font-semibold min-w-[140px]">Groepsgrootte:</span>
-                <span className="text-gray-600">Kleine groepen voor maximale aandacht</span>
-              </div>
-              <div className="flex items-start">
-                <span className="font-semibold min-w-[140px]">Begeleiding:</span>
-                <span className="text-gray-600">Ervaren, gecertificeerde coaches</span>
-              </div>
-              <div className="flex items-start">
-                <span className="font-semibold min-w-[140px]">Ervaring:</span>
-                <span className="text-gray-600">Geen ervaring nodig, we beginnen bij de basis</span>
-              </div>
-              <div className="flex items-start">
-                <span className="font-semibold min-w-[140px]">Kennismaken:</span>
-                <span className="text-gray-600">Gratis en vrijblijvend, plan hieronder een afspraak</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Voor ouders */}
-      <section className="py-16 px-6 bg-gray-100">
+      <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-8">Voor ouders</h2>
           <div className="prose prose-lg text-gray-600">
@@ -176,6 +145,9 @@ export default function TienersPage() {
       <section className="py-20 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">Kennismaken?</h2>
+          <p className="text-xl mb-4">
+            Het tienerprogramma kost €70 per maand voor twee keer per week trainen.
+          </p>
           <p className="text-xl mb-8">
             Plan een gratis en vrijblijvende kennismaking. Je kind mag gewoon een keer meekijken of meedoen.
           </p>
