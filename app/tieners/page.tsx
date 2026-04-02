@@ -219,7 +219,7 @@ export default function TienersPage() {
               Tieners leren bij ons niet alleen hoe ze veilig en effectief trainen, maar ontdekken ook hoe het voelt om fit en sterk te zijn. Dat heeft een enorm positief effect op hun zelfvertrouwen, niet alleen in de gym, maar ook op school en in het dagelijks leven.
             </p>
             <p>
-              Benieuwd of dit iets voor jouw zoon of dochter is? <Link href="/tarieven" className="text-blue-900 underline hover:text-blue-950">Bekijk onze tarieven</Link> of plan direct een gratis kennismaking.
+              Benieuwd of dit iets voor jouw zoon of dochter is? Plan een gratis kennismaking, dan kun je zelf zien hoe we werken en al je vragen stellen.
             </p>
           </div>
         </div>
