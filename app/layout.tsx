@@ -87,10 +87,10 @@ export const metadata: Metadata = {
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis kennismaking!",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/hero.jpg",
-        width: 1200,
-        height: 630,
-        alt: "CrossFit Alkmaar - Sportschool in Alkmaar",
+        url: "https://crossfitalkmaar.com/images/logo_dark_square.png",
+        width: 500,
+        height: 500,
+        alt: "CrossFit Alkmaar logo",
       },
     ],
   },
@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
-    images: ["https://crossfitalkmaar.com/images/hero.jpg"],
+    images: ["https://crossfitalkmaar.com/images/logo_dark_square.png"],
   },
   verification: {
     google: "l6SVjEQksVtawGRXtAB5FgBSmmw0Xl6r-DhsxPQg9aU",
