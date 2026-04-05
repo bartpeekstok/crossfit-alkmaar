@@ -10,6 +10,14 @@ export const metadata: Metadata = {
     description:
       "Train in een kleine groep van max 6 personen. Persoonlijke aandacht met de motivatie van samen trainen.",
     url: "https://crossfitalkmaar.com/small-group-training",
+    images: [
+      {
+        url: "https://crossfitalkmaar.com/images/logo_dark_square.png",
+        width: 500,
+        height: 500,
+        alt: "CrossFit Alkmaar logo",
+      },
+    ],
   },
   alternates: {
     canonical: "https://crossfitalkmaar.com/small-group-training",
