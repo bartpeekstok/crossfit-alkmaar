@@ -53,7 +53,7 @@ export default function JsonLd() {
     url: "https://crossfitalkmaar.com",
     logo: "https://crossfitalkmaar.com/images/logo_dark_square.png",
     image: "https://crossfitalkmaar.com/images/hero.jpg",
-    telephone: "+31650500790",
+    telephone: "+31722340560",
     email: "info@crossfitalkmaar.com",
     address: {
       "@type": "PostalAddress",
