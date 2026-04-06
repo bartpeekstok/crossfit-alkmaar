@@ -63,7 +63,7 @@ export default function IntakePage() {
           <div className="bg-white rounded-lg shadow-2xl p-2 max-w-md">
             <Script
               src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
-              strategy="lazyOnload"
+              strategy="afterInteractive"
             />
             <iframe
               src="https://ghl.crossfitalkmaar.com/widget/booking/h9ZPe6IvVFloL7y9V5Rx"
