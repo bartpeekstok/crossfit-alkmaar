@@ -26,9 +26,9 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>Is krachttraining wel veilig voor tieners?</h2>
 
-      <p>Veel mensen denken dat krachttraining als puber gevaarlijk is. Net zoals veel mensen denken dat deadlifts gevaarlijk zijn voor je rug. In beiden schuilt een kleine kern van waarheid: ze kunnen inderdaad gevaarlijk zijn als je niet weet wat je aan het doen bent. Met goede begeleiding en techniek is krachttraining juist erg goed voor tieners. <a href="https://pubmed.ncbi.nlm.nih.gov/23899892/" target="_blank" rel="noopener noreferrer">In dit onderzoek</a> lees je dat er een relatief laag blessurerisico is bij jongeren die krachttraining volgen onder gekwalificeerde begeleiding. De meeste blessures die wél voorkomen zijn het gevolg van ongelukken, verkeerde techniek of gebrek aan supervisie.</p>
+      <p>Veel mensen denken dat krachttraining als puber gevaarlijk is. Net zoals veel mensen denken dat deadlifts gevaarlijk zijn voor je rug. In beiden schuilt een kleine kern van waarheid: ze kunnen inderdaad gevaarlijk zijn als je niet weet wat je aan het doen bent. Met goede begeleiding en techniek is krachttraining juist erg goed voor tieners. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3483033/" target="_blank" rel="noopener noreferrer">In dit onderzoek</a> lees je dat er een relatief laag blessurerisico is bij jongeren die krachttraining volgen onder gekwalificeerde begeleiding. De meeste blessures die wél voorkomen zijn het gevolg van ongelukken, verkeerde techniek of gebrek aan supervisie.</p>
 
-      <p>Nog zo'n fabel is dat krachttraining de groei van pubers zou remmen. Dit zijn hardnekkige verhalen die hele volksstammen voor waar aannemen terwijl er <a href="https://pubmed.ncbi.nlm.nih.gov/19620931/" target="_blank" rel="noopener noreferrer">heel veel onderzoek</a> is dat juist de voordelen van krachttraining door tieners benoemt in plaats van deze fabels.</p>
+      <p>Nog zo'n fabel is dat krachttraining de groei van pubers zou remmen. Dit zijn hardnekkige verhalen die hele volksstammen voor waar aannemen terwijl er <a href="https://pubmed.ncbi.nlm.nih.gov/17119361/" target="_blank" rel="noopener noreferrer">heel veel onderzoek</a> is dat juist de voordelen van krachttraining door tieners benoemt in plaats van deze fabels.</p>
 
       <h2>Meer dan alleen sterker worden</h2>
 
