@@ -5,6 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts: string[] = [
+    "tienerprogramma-bij-crossfit-alkmaar",
     "hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen",
     "wat-we-nu-anders-doen-dan-tien-jaar-geleden",
     "had-je-een-steentje-in-je-schoen",

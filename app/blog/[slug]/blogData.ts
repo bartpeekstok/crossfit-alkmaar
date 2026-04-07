@@ -10,6 +10,49 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "tienerprogramma-bij-crossfit-alkmaar": {
+    title: "Tienerprogramma bij CrossFit Alkmaar",
+    date: "2026-04-07",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Programma's",
+    image: "/images/blog/blog-tieners.webp",
+    excerpt: "Op 1 mei starten we met ons tienerprogramma bij CrossFit Alkmaar! Een vaste groep van twaalf jongeren tussen 14 en 17 jaar, twee keer per week trainen onder professionele begeleiding.",
+    content: `
+      <p>Op 1 mei starten we met ons tienerprogramma bij CrossFit Alkmaar! We starten met een vaste groep van twaalf jongeren tussen van 14 tot en met 17 jaar oud. Er wordt twee keer per week getraind op vaste tijden met vaste coaches.</p>
+
+      <p>Met ons tienerprogramma bieden we een mooie tegenhanger voor de grote sportscholen waar tieners alleen betalen voor toegang en vervolgens zonder begeleiding kunnen trainen. Wij bieden onze tienergroep hetzelfde als we onze volwassen leden bieden: professionele coaching waardoor je heel blijft en vooruit gaat.</p>
+
+      <p>Ook al blijven deze jongeren niet voor altijd bij CrossFit Alkmaar (dat hoop ik natuurlijk wel), dan hoop ik dat we ze een goede basis in kracht- en conditietraining mee kunnen geven waar ze de rest van hun sportieve leven wat aan hebben.</p>
+
+      <h2>Is krachttraining wel veilig voor tieners?</h2>
+
+      <p>Veel mensen denken dat krachttraining als puber gevaarlijk is. Net zoals veel mensen denken dat deadlifts gevaarlijk zijn voor je rug. In beiden schuilt een kleine kern van waarheid: ze kunnen inderdaad gevaarlijk zijn als je niet weet wat je aan het doen bent. Met goede begeleiding en techniek is krachttraining juist erg goed voor tieners. <a href="https://pubmed.ncbi.nlm.nih.gov/23899892/" target="_blank" rel="noopener noreferrer">In dit onderzoek</a> lees je dat er een relatief laag blessurerisico is bij jongeren die krachttraining volgen onder gekwalificeerde begeleiding. De meeste blessures die wél voorkomen zijn het gevolg van ongelukken, verkeerde techniek of gebrek aan supervisie.</p>
+
+      <p>Nog zo'n fabel is dat krachttraining de groei van pubers zou remmen. Dit zijn hardnekkige verhalen die hele volksstammen voor waar aannemen terwijl er <a href="https://pubmed.ncbi.nlm.nih.gov/19620931/" target="_blank" rel="noopener noreferrer">heel veel onderzoek</a> is dat juist de voordelen van krachttraining door tieners benoemt in plaats van deze fabels.</p>
+
+      <h2>Meer dan alleen sterker worden</h2>
+
+      <p>Ik kan natuurlijk doorgaan met allerlei onderzoek delen in deze blog, maar die kun je zelf ook wel overal vinden als je online zoekt. Naast een veilige manier en omgeving om een sterke basis te bouwen waar een tiener de rest van zijn/haar leven wat aan heeft, bieden we met ons tienerprogramma nog zoveel meer:</p>
+
+      <h2>Een echt teamgevoel</h2>
+
+      <p>Doordat we trainen in een vaste groep, ontstaat er al gauw een echt teamgevoel. Hoewel we individueel de oefeningen afwerken, steunen we elkaar wel tijdens de trainingen. We zijn pas klaar als iedereen klaar is en moedigen de laatste mensen net zo hard aan als degenen die als eerste klaar waren. Zo bouwen we aan respect voor elk niveau en aan het inzicht dat iedereen ergens goed in is.</p>
+
+      <h2>Snel resultaat en zelfvertrouwen</h2>
+
+      <p>Als je regelmatig traint, verandert er al gauw iets in je lijf: je valt wat af en je spieren worden wat zichtbaarder. In een tienerlichaam gaat dit nog veel sneller. Het lijf reageert op alle prikkels die het krijgt, veel sneller dan bij een volwassen lijf. Hierdoor raak je gemotiveerd en leer je dat inzet loont. Daarnaast geeft het een hoop zelfvertrouwen: tevreden zijn met je eigen lijf is iets dat ik elke puber gun in de periode van hun leven waarin er een hoop onzekerheid kan zijn.</p>
+
+      <h2>Bewuster van een gezonde leefstijl</h2>
+
+      <p>Ook kan het trainen pubers wat bewuster maken van een gezonde leefstijl. Doordat je je zo goed voelt doordat je regelmatig traint, ontstaat al gauw de interesse in zaken die je vooruitgang nog meer kunnen steunen. Natuurlijk horen pubers ook af en toe (te) veel te snoepen of snacken, maar wat zou het mooi zijn als ze zich hier op jonge leeftijd al wat bewuster van worden en er bewust mee om kunnen gaan.</p>
+
+      <h2>Zin in!</h2>
+
+      <p>Ik hoop dat we bij CrossFit Alkmaar veel tieners de lol en het gevoel dat kracht- en conditietraining geeft kunnen laten ervaren. Ik begon zelf op m'n 15e met krachttraining en dat heeft me altijd veel zelfvertrouwen gebracht. Ik trainde samen met een vriend en we motiveerden elkaar om te blijven gaan. Soms trainden we te hard en te veel, maar dat ging gelukkig altijd wel goed. Met de kennis en ervaring die we door de jaren heen hebben opgebouwd bij CrossFit Alkmaar, weet ik zeker dat we hier een mega fitte en zelfverzekerde tienergroep gaan bouwen. Zin in!</p>
+
+      <p><a href="/tieners">Lees hier meer over ons tienerprogramma</a> of plan direct een gratis kennismaking.</p>
+    `,
+  },
   "hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen": {
     title: "Hoe je ook tussen je oren sterker wordt van trainen bij een goede sportschool",
     date: "2026-04-06",
