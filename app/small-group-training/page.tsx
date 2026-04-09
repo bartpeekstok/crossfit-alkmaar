@@ -15,6 +15,60 @@ export default function SmallGroupTrainingPage() {
         description="Train in een kleine groep van max 6 personen. Persoonlijke aandacht gecombineerd met de motivatie van samen trainen."
         url="https://crossfitalkmaar.com/small-group-training"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is Small Group Training bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Semi personal training in een vaste groep van maximaal 6 personen. Je krijgt persoonlijke aandacht van de coach gecombineerd met de motivatie van samen trainen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost Small Group Training?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "BUILD Small Group Training kost €245 per maand voor 2x per week of €367,50 voor 3x per week. Inclusief groepslessen en een programma op maat.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat is het verschil met groepslessen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Bij Small Group Training train je in een vaste groep van max 6 (i.p.v. 12), met een programma op maat en meer persoonlijke aandacht. Het is de tussenstap tussen groepslessen en personal training.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
@@ -93,6 +147,27 @@ export default function SmallGroupTrainingPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Voordeliger dan personal training</h3>
               <p className="text-gray-600">Profiteer van persoonlijke begeleiding tegen een lagere prijs door de kosten te delen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is Small Group Training bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Semi personal training in een vaste groep van maximaal 6 personen. Je krijgt persoonlijke aandacht van de coach gecombineerd met de motivatie van samen trainen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost Small Group Training?</h3>
+              <p className="text-gray-600">BUILD Small Group Training kost €245 per maand voor 2x per week of €367,50 voor 3x per week. Inclusief groepslessen en een programma op maat.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is het verschil met groepslessen?</h3>
+              <p className="text-gray-600">Bij Small Group Training train je in een vaste groep van max 6 (i.p.v. 12), met een programma op maat en meer persoonlijke aandacht. Het is de tussenstap tussen groepslessen en personal training.</p>
             </div>
           </div>
         </div>

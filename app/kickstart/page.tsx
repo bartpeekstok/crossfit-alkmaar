@@ -23,6 +23,68 @@ export default function KickstartPage() {
         description="4 weken introductieprogramma voor beginners. Bouw een sterke basis op met begeleide trainingen en voedingsadvies."
         url="https://crossfitalkmaar.com/kickstart"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is de 28 Day Kickstart bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Een introductieprogramma van 4 weken waarin je 12 keer traint in kleine groepen van max 6 personen. Je leert de basis van kracht- en conditietraining onder professionele begeleiding.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost de 28 Day Kickstart?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "De 28 Day Kickstart kost €350 eenmalig voor 12 trainingen in 4 weken. Inclusief een eindgesprek met advies over doorstroming.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Is de Kickstart geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja, de Kickstart is speciaal ontworpen voor mensen die (weer) willen starten met trainen. Je leert alles vanaf de basis in een kleine groep van max 6 personen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat gebeurt er na de Kickstart?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Na de Kickstart kun je doorstromen naar onze groepslessen (vanaf €99,95/maand) of BUILD Small Group Training (vanaf €245/maand). Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
@@ -101,6 +163,31 @@ export default function KickstartPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Basisleefstijladvies</h3>
               <p className="text-gray-600">Naast training krijg je tips over voeding en herstel.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is de 28 Day Kickstart bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Een introductieprogramma van 4 weken waarin je 12 keer traint in kleine groepen van max 6 personen. Je leert de basis van kracht- en conditietraining onder professionele begeleiding.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost de 28 Day Kickstart?</h3>
+              <p className="text-gray-600">De 28 Day Kickstart kost €350 eenmalig voor 12 trainingen in 4 weken. Inclusief een eindgesprek met advies over doorstroming.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Is de Kickstart geschikt voor beginners?</h3>
+              <p className="text-gray-600">Ja, de Kickstart is speciaal ontworpen voor mensen die (weer) willen starten met trainen. Je leert alles vanaf de basis in een kleine groep van max 6 personen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat gebeurt er na de Kickstart?</h3>
+              <p className="text-gray-600">Na de Kickstart kun je doorstromen naar onze groepslessen (vanaf €99,95/maand) of BUILD Small Group Training (vanaf €245/maand). Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past.</p>
             </div>
           </div>
         </div>

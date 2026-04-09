@@ -14,6 +14,60 @@ export default function PersonalTrainingPage() {
         description="Eén-op-één personal training volledig afgestemd op jouw doelen. Maximale persoonlijke aandacht van je eigen coach."
         url="https://crossfitalkmaar.com/personal-training"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat is personal training bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Eén-op-één training met een dedicated coach, volledig afgestemd op jouw doelen. Of je wilt afvallen, sterker worden of fitter worden, je coach maakt een programma op maat.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Voor wie is personal training geschikt?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Voor iedereen die maximaal resultaat wil met persoonlijke aandacht. Of je nu beginner bent of gevorderd, de training wordt volledig aangepast aan jouw niveau en doelen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost personal training bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Neem contact op voor de actuele tarieven van personal training. Plan een gratis kennismaking om je doelen te bespreken en een passend voorstel te ontvangen.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
@@ -80,6 +134,27 @@ export default function PersonalTrainingPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Extra aandacht voor techniek</h3>
               <p className="text-gray-600">Je coach corrigeert direct en zorgt dat je elke beweging veilig en effectief uitvoert.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is personal training bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Eén-op-één training met een dedicated coach, volledig afgestemd op jouw doelen. Of je wilt afvallen, sterker worden of fitter worden, je coach maakt een programma op maat.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie is personal training geschikt?</h3>
+              <p className="text-gray-600">Voor iedereen die maximaal resultaat wil met persoonlijke aandacht. Of je nu beginner bent of gevorderd, de training wordt volledig aangepast aan jouw niveau en doelen.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost personal training bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Neem contact op voor de actuele tarieven van personal training. Plan een gratis kennismaking om je doelen te bespreken en een passend voorstel te ontvangen.</p>
             </div>
           </div>
         </div>

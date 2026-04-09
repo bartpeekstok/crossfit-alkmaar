@@ -15,6 +15,68 @@ export default function GroepslessenPage() {
         description="CrossFit groepslessen met gevarieerde workouts. Kracht, conditie en mobiliteit onder begeleiding van ervaren coaches."
         url="https://crossfitalkmaar.com/groepslessen"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat zijn de groepslessen bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Gevarieerde workouts in kleine groepen van maximaal 12 personen, begeleid door een professionele coach. Elke les combineert kracht, conditie en mobiliteit.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Zijn de groepslessen geschikt voor beginners?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja. Elke oefening wordt aangepast aan jouw niveau. Beginners en gevorderden trainen samen, iedereen op eigen niveau. Nieuwe leden starten met de 28 Day Kickstart.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kosten groepslessen bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Groepslessen kosten €99,95 per maand voor 2x per week, €127,50 voor 3x per week, of €159,95 voor onbeperkt. Maandelijks opzegbaar.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Hoe groot zijn de groepen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Maximaal 12 deelnemers per les. Zo krijgt iedereen persoonlijke aandacht van de coach.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
@@ -93,6 +155,31 @@ export default function GroepslessenPage() {
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Motiverende groepssfeer</h3>
               <p className="text-gray-600">De energie van samen trainen helpt je om door te zetten en het beste uit jezelf te halen.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat zijn de groepslessen bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Gevarieerde workouts in kleine groepen van maximaal 12 personen, begeleid door een professionele coach. Elke les combineert kracht, conditie en mobiliteit.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Zijn de groepslessen geschikt voor beginners?</h3>
+              <p className="text-gray-600">Ja. Elke oefening wordt aangepast aan jouw niveau. Beginners en gevorderden trainen samen, iedereen op eigen niveau. Nieuwe leden starten met de 28 Day Kickstart.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kosten groepslessen bij CrossFit Alkmaar?</h3>
+              <p className="text-gray-600">Groepslessen kosten €99,95 per maand voor 2x per week, €127,50 voor 3x per week, of €159,95 voor onbeperkt. Maandelijks opzegbaar.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Hoe groot zijn de groepen?</h3>
+              <p className="text-gray-600">Maximaal 12 deelnemers per les. Zo krijgt iedereen persoonlijke aandacht van de coach.</p>
             </div>
           </div>
         </div>

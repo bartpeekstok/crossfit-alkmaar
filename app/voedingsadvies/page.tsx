@@ -14,6 +14,60 @@ export default function VoedingsadviesPage() {
         description="Persoonlijk voedingsadvies dat past bij jouw levensstijl. Geen strenge diëten maar praktische tips voor optimale resultaten."
         url="https://crossfitalkmaar.com/voedingsadvies"
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat houdt het voedingsadvies bij CrossFit Alkmaar in?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Persoonlijk voedingsadvies afgestemd op jouw doelen en levensstijl. Geen strenge diëten maar praktische handvatten. We werken met de BenFit app voor wekelijkse voedingsplannen inclusief recepten en boodschappenlijst.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Moet ik lid zijn om voedingsadvies te krijgen?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Voedingsadvies is beschikbaar als aanvulling op je lidmaatschap. De combinatie van training en voeding geeft het beste resultaat.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat is BenFit?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "BenFit is de app die we gebruiken voor ons voedingsadvies. Je krijgt wekelijks een persoonlijk voedingsplan, afgestemd op jouw lichaam, doelen en voorkeuren, inclusief boodschappenlijst en recepten.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            aggregateRating: {
+              "@type": "AggregateRating",
+              ratingValue: "5.0",
+              bestRating: "5",
+              worstRating: "1",
+              ratingCount: "260",
+              reviewCount: "260",
+            },
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
@@ -109,6 +163,27 @@ export default function VoedingsadviesPage() {
               >
                 Meer over BenFit →
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
+          <div className="space-y-4">
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat houdt het voedingsadvies bij CrossFit Alkmaar in?</h3>
+              <p className="text-gray-600">Persoonlijk voedingsadvies afgestemd op jouw doelen en levensstijl. Geen strenge diëten maar praktische handvatten. We werken met de BenFit app voor wekelijkse voedingsplannen inclusief recepten en boodschappenlijst.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Moet ik lid zijn om voedingsadvies te krijgen?</h3>
+              <p className="text-gray-600">Voedingsadvies is beschikbaar als aanvulling op je lidmaatschap. De combinatie van training en voeding geeft het beste resultaat.</p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-sm">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is BenFit?</h3>
+              <p className="text-gray-600">BenFit is de app die we gebruiken voor ons voedingsadvies. Je krijgt wekelijks een persoonlijk voedingsplan, afgestemd op jouw lichaam, doelen en voorkeuren, inclusief boodschappenlijst en recepten.</p>
             </div>
           </div>
         </div>
