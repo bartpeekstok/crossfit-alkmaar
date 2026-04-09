@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Tarieven - CrossFit Alkmaar",
   description:
-    "Bekijk de tarieven van CrossFit Alkmaar. Flexibele abonnementen voor groepslessen, personal training en small group training. Inclusief professionele coaching.",
+    "Tarieven CrossFit Alkmaar: groepslessen vanaf €99,95/maand, BUILD small group training vanaf €245/maand, 28 Day Kickstart €350 eenmalig. Inclusief professionele coaching in kleine groepen. Maandelijks opzegbaar.",
   keywords: [
     "tarieven crossfit alkmaar",
     "prijzen sportschool alkmaar",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tarieven | CrossFit Alkmaar",
     description:
-      "Bekijk de tarieven van CrossFit Alkmaar. Flexibele abonnementen inclusief professionele coaching.",
+      "Tarieven CrossFit Alkmaar: groepslessen vanaf €99,95/maand, BUILD vanaf €245/maand, Kickstart €350. Maandelijks opzegbaar.",
     url: "https://crossfitalkmaar.com/tarieven",
   },
   alternates: {

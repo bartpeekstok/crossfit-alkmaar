@@ -10,6 +10,114 @@ export default function TarievenPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HealthClub",
+            "@id": "https://crossfitalkmaar.com/#organization",
+            name: "CrossFit Alkmaar",
+            url: "https://crossfitalkmaar.com",
+            hasOfferCatalog: {
+              "@type": "OfferCatalog",
+              name: "Tarieven CrossFit Alkmaar",
+              itemListElement: [
+                {
+                  "@type": "Offer",
+                  name: "Groepslessen 2x per week",
+                  price: "99.95",
+                  priceCurrency: "EUR",
+                  description: "Groepslessen 2x per week (10x per maand). Inclusief professionele coaching, max 12 deelnemers per les, 90 day check ins.",
+                  eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                },
+                {
+                  "@type": "Offer",
+                  name: "Groepslessen 3x per week",
+                  price: "127.50",
+                  priceCurrency: "EUR",
+                  description: "Groepslessen 3x per week (15x per maand). Meest populaire abonnement. Inclusief professionele coaching en 90 day check ins.",
+                  eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                },
+                {
+                  "@type": "Offer",
+                  name: "Groepslessen Onbeperkt",
+                  price: "159.95",
+                  priceCurrency: "EUR",
+                  description: "Onbeperkt groepslessen per maand. Inclusief professionele coaching en 90 day check ins.",
+                  eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                },
+                {
+                  "@type": "Offer",
+                  name: "BUILD Small Group Training 2x per week",
+                  price: "245.00",
+                  priceCurrency: "EUR",
+                  description: "Semi personal training in een vaste groep van max 6 personen, 2x per week plus 1 groepsles.",
+                  eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                },
+                {
+                  "@type": "Offer",
+                  name: "BUILD Small Group Training 3x per week",
+                  price: "367.50",
+                  priceCurrency: "EUR",
+                  description: "Semi personal training in een vaste groep van max 6 personen, 3x per week plus 2 groepslessen.",
+                  eligibleDuration: { "@type": "QuantitativeValue", value: 1, unitCode: "MON" },
+                },
+                {
+                  "@type": "Offer",
+                  name: "28 Day Kickstart",
+                  price: "350.00",
+                  priceCurrency: "EUR",
+                  description: "Startprogramma: 12 trainingen in 4 weken in kleine groepen van max 6. Leer de juiste techniek en bouw een sterke basis.",
+                },
+              ],
+            },
+          }),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: [
+              {
+                "@type": "Question",
+                name: "Wat kosten groepslessen bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Groepslessen bij CrossFit Alkmaar kosten €99,95 per maand voor 2x per week, €127,50 voor 3x per week, of €159,95 voor onbeperkt. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching in kleine groepen van max 12 personen.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost de 28 Day Kickstart bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "De 28 Day Kickstart kost €350 eenmalig. Je traint 12 keer in 4 weken in kleine groepen van max 6 personen. Iedereen start met de Kickstart om de juiste techniek te leren.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Wat kost BUILD Small Group Training bij CrossFit Alkmaar?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "BUILD Small Group Training kost €245 per maand voor 2x per week of €367,50 voor 3x per week. Je traint in een vaste groep van maximaal 6 personen met een op maat gemaakt programma.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Staan de tarieven van CrossFit Alkmaar op de website?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Ja, alle tarieven staan op crossfitalkmaar.com/tarieven. Groepslessen vanaf €99,95/maand, BUILD Small Group Training vanaf €245/maand en de 28 Day Kickstart voor €350 eenmalig. Alle abonnementen zijn maandelijks opzegbaar.",
+                },
+              },
+            ],
+          }),
+        }}
+      />
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[400px] flex items-center"
