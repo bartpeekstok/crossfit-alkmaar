@@ -152,6 +152,7 @@ export default function TarievenPage() {
           <p>Bij een reguliere sportschool betaal je voor toegang tot een zaal. Bij CrossFit Alkmaar investeer je in begeleiding, resultaat en een community die je verder brengt.</p>
           <p>Al onze abonnementen zijn per maand opzegbaar. Je blijft niet bij ons omdat je aan een jaarcontract vastzit, maar omdat je bij ons resultaat en plezier beleeft. Professionele full-time coaches, geen massale groepen en een plek waar je gezien wordt.</p>
           <p>Ben je er even niet? Dan merken we dat en nemen we contact met je op. Geen geautomatiseerd mailtje, maar een oprecht bericht van je coach. Want we willen niet dat je alleen lid bent, we willen dat je komt.</p>
+          <p className="font-bold text-gray-900 text-center">Dat is waar je in investeert. Niet in een pasje, maar in je gezondheid.</p>
         </div>
       </section>
 
