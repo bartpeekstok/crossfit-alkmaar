@@ -330,7 +330,7 @@ export default function TarievenPage() {
       </section>
 
       {/* Foto: groepsles */}
-      <div className="w-full h-[350px] overflow-hidden">
+      <div className="w-full h-[525px] overflow-hidden">
         <img src="/images/CFA-november-lowres-96.jpg" alt="Groepsles bij CrossFit Alkmaar" className="w-full h-full object-cover object-[center_30%]" />
       </div>
 
