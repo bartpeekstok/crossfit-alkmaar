@@ -245,7 +245,7 @@ export default function TarievenPage() {
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">Onbeperkt</p>
               <p className="text-4xl font-bold text-blue-900">€159,95</p>
               <p className="text-gray-500 text-sm mt-1">per maand</p>
-              <p className="text-green-700 text-sm font-semibold mt-3">Minder dan €1 per dag</p>
+              <p className="text-green-700 text-sm font-semibold mt-3">Minder dan €5,50 per dag</p>
             </div>
           </div>
           <div className="text-center mt-8">
