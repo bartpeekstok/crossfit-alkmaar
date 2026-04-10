@@ -162,7 +162,7 @@ export default function TarievenPage() {
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">CrossFit Alkmaar vs. een gewone sportschool</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-400 mb-6 text-center">Gewone sportschool</h3>
+              <h3 className="text-xl font-bold text-gray-400 mb-6">Gewone sportschool</h3>
               <div className="space-y-4">
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Geen coach, je bent op jezelf aangewezen</p>
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Geen programma, zelf uitzoeken</p>
@@ -173,7 +173,7 @@ export default function TarievenPage() {
               </div>
             </div>
             <div className="bg-blue-900 rounded-xl shadow-lg p-8 text-white">
-              <h3 className="text-xl font-bold mb-6 text-center">CrossFit Alkmaar</h3>
+              <h3 className="text-xl font-bold mb-6">CrossFit Alkmaar</h3>
               <div className="space-y-4">
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Elke les begeleid door een coach</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Programma staat voor je klaar</p>
@@ -196,7 +196,7 @@ export default function TarievenPage() {
           {/* Perks gesplitst */}
           <div className="grid md:grid-cols-2 gap-6 mb-8 max-w-4xl mx-auto">
             <div className="bg-blue-900 rounded-2xl shadow-lg p-8 text-white">
-              <p className="font-bold text-lg mb-5 text-center">Coaching &amp; begeleiding</p>
+              <p className="font-bold text-lg mb-5">Coaching &amp; begeleiding</p>
               <div className="space-y-3">
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Professionele coaches</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 12 deelnemers per les</p>
@@ -205,7 +205,7 @@ export default function TarievenPage() {
               </div>
             </div>
             <div className="bg-blue-900 rounded-2xl shadow-lg p-8 text-white">
-              <p className="font-bold text-lg mb-5 text-center">Faciliteiten</p>
+              <p className="font-bold text-lg mb-5">Faciliteiten</p>
               <div className="space-y-3">
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Groot rooster, flexibel plannen</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>SportBit app</p>
