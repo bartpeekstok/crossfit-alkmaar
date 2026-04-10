@@ -134,7 +134,7 @@ export default function TarievenPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Tarieven</h1>
           <p className="text-xl text-gray-300 mb-8">
-            Geen zaalabonnement. Coaching, begeleiding en een community die je echt vooruithelpt — voor minder dan €9 per training.
+            Geen zaalabonnement. Coaching, begeleiding en een community die je echt vooruithelpt.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_tarieven_hero', 'tarieven'); openPopup(); }}
