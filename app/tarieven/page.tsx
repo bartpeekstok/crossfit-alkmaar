@@ -157,7 +157,7 @@ export default function TarievenPage() {
       </section>
 
       {/* Foto: coach begeleidt training */}
-      <div className="w-full h-[350px] overflow-hidden">
+      <div className="w-full h-[440px] overflow-hidden">
         <img src="/images/CFA-juni-03-community.jpg" alt="Community bij CrossFit Alkmaar" className="w-full h-full object-cover object-[center_25%]" />
       </div>
 
