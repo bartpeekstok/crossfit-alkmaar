@@ -177,6 +177,7 @@ export default function TarievenPage() {
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Anoniem, niemand kent je naam</p>
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Geen check-ins of voortgangsgesprekken</p>
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Motivatie moet van jezelf komen</p>
+                <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Vast jaarcontract</p>
               </div>
             </div>
             <div className="bg-blue-900 rounded-xl shadow-lg p-8 text-white">
@@ -190,6 +191,7 @@ export default function TarievenPage() {
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Iedereen kent je naam</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>90 day check ins met je coach</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Community die je motiveert</p>
+                <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Maandelijks opzegbaar, geen jaarcontract</p>
               </div>
             </div>
           </div>
@@ -211,8 +213,43 @@ export default function TarievenPage() {
         </div>
       </section>
 
-      {/* Groepslessen */}
+      {/* Kickstart */}
       <section className="py-12 px-6 bg-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-2 text-center">28 Day Kickstart</h2>
+          <p className="text-center text-gray-600 mb-8">Iedereen start met semi personal training in de Kickstart.</p>
+          <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
+            <p className="font-bold text-xl md:text-2xl mb-6 text-center">Kickstart inclusief:</p>
+            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>12 trainingen in 4 weken</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 6 deelnemers per groep</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Leer de juiste techniek</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Aandacht voor jouw doelen</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Een veilige start</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Geschikt voor beginners en gevorderden</p>
+              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Eindgesprek met advies</p>
+            </div>
+          </div>
+          <div className="max-w-sm mx-auto">
+            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
+              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">4 weken</p>
+              <p className="text-4xl font-bold text-blue-900">€350</p>
+              <p className="text-gray-500 text-sm mt-1">eenmalig</p>
+            </div>
+          </div>
+          <div className="text-center mt-8">
+            <button
+              onClick={() => { trackCTAClick('pricing_tarieven_kickstart', 'tarieven'); openPricingPopup(); }}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
+            >
+              Start je Kickstart
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* Groepslessen */}
+      <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-2 text-center">Groepslessen</h2>
           <p className="text-center text-gray-600 mb-8">Inclusief 90 day check ins met een coach. Geschikt voor elk niveau.</p>
@@ -377,42 +414,6 @@ export default function TarievenPage() {
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
             >
               Start met BUILD training
-            </button>
-          </div>
-        </div>
-      </section>
-
-      {/* Kickstart */}
-      <section className="py-12 px-6 bg-gray-200">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl font-bold mb-2 text-center">28 Day Kickstart</h2>
-          <p className="text-center text-gray-600 mb-8">Iedereen start met semi personal training in de Kickstart.</p>
-          <div className="mb-10 bg-blue-900 rounded-2xl shadow-lg p-8 md:p-10 max-w-4xl mx-auto text-white">
-            <p className="font-bold text-xl md:text-2xl mb-6 text-center">Kickstart inclusief:</p>
-            <div className="grid grid-cols-2 gap-x-8 gap-y-4">
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>12 trainingen in 4 weken</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Max 6 deelnemers per groep</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Leer de juiste techniek</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Aandacht voor jouw doelen</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Een veilige start</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Geschikt voor beginners en gevorderden</p>
-              <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Eindgesprek met advies</p>
-            </div>
-          </div>
-          <div className="max-w-sm mx-auto">
-            <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
-              <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">4 weken</p>
-              <p className="text-4xl font-bold text-blue-900">€350</p>
-              <p className="text-gray-500 text-sm mt-1">eenmalig</p>
-              <p className="text-green-700 text-sm font-semibold mt-3">€29,- per training</p>
-            </div>
-          </div>
-          <div className="text-center mt-8">
-            <button
-              onClick={() => { trackCTAClick('pricing_tarieven_kickstart', 'tarieven'); openPricingPopup(); }}
-              className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-lg"
-            >
-              Start je Kickstart
             </button>
           </div>
         </div>
