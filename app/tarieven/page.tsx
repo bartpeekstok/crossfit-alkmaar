@@ -158,7 +158,7 @@ export default function TarievenPage() {
 
       {/* Foto: coach begeleidt training */}
       <div className="w-full h-[350px] overflow-hidden">
-        <img src="/images/CFA-juni-03-community.jpg" alt="Community bij CrossFit Alkmaar" className="w-full h-full object-cover object-[center_40%]" />
+        <img src="/images/CFA-juni-03-community.jpg" alt="Community bij CrossFit Alkmaar" className="w-full h-full object-cover object-[center_55%]" />
       </div>
 
       {/* Vergelijking: CFA vs gewone sportschool */}
