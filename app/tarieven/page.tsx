@@ -127,7 +127,7 @@ export default function TarievenPage() {
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundPosition: 'center',
         }}
       >
         <img src="/images/hero.jpg" alt="CrossFit Alkmaar tarieven - persoonlijke coaching in kleine groepen" className="sr-only" />
