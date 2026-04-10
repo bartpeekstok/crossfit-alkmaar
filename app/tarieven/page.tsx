@@ -355,7 +355,7 @@ export default function TarievenPage() {
                 ))}
               </div>
               <p className="text-gray-700 italic mb-4">&quot;De coaching maakt het verschil. Bij mijn vorige sportschool deed ik maar wat, hier word ik echt begeleid en boek ik resultaat.&quot;</p>
-              <p className="text-gray-900 font-semibold text-sm">Simone</p>
+              <p className="text-gray-900 font-semibold text-sm">Erik</p>
               <p className="text-gray-400 text-xs">Lid sinds 2022</p>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
@@ -375,7 +375,7 @@ export default function TarievenPage() {
                 ))}
               </div>
               <p className="text-gray-700 italic mb-4">&quot;Na jaren sportschoolabonnementen die ik niet gebruikte, ga ik hier al 3 jaar met plezier 3x per week. De coaches en de groep houden je gemotiveerd.&quot;</p>
-              <p className="text-gray-900 font-semibold text-sm">Malou</p>
+              <p className="text-gray-900 font-semibold text-sm">Linda</p>
               <p className="text-gray-400 text-xs">Lid sinds 2017</p>
             </div>
           </div>
