@@ -125,12 +125,12 @@ export default function TarievenPage() {
         role="img"
         aria-label="CrossFit Alkmaar tarieven - persoonlijke coaching in kleine groepen"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/CFA-juni-03-community.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <img src="/images/hero.jpg" alt="CrossFit Alkmaar tarieven - persoonlijke coaching in kleine groepen" className="sr-only" />
+        <img src="/images/CFA-juni-03-community.jpg" alt="CrossFit Alkmaar tarieven - persoonlijke coaching in kleine groepen" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Tarieven</h1>
           <p className="text-xl text-gray-300 mb-8">

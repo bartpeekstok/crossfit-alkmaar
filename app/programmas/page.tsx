@@ -14,7 +14,7 @@ export default function HomePage() {
         role="img"
         aria-label="CrossFit Alkmaar programma's - groepstraining in de box"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/CFA-juni-03-community.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

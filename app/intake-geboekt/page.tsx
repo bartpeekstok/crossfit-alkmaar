@@ -16,7 +16,7 @@ export default function IntakeGeboektPage() {
       <section
         className="relative py-20 px-6 min-h-[500px] flex items-center"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/CFA-juni-03-community.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

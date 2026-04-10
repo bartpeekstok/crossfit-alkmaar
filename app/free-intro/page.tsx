@@ -31,13 +31,13 @@ export default function IntakePage() {
       role="img"
       aria-label="Gratis kennismaking bij CrossFit Alkmaar - boek een gesprek met een coach"
       style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero.jpg')`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/CFA-juni-03-community.jpg')`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed',
       }}
     >
-      <img src="/images/hero.jpg" alt="Gratis kennismaking bij CrossFit Alkmaar - boek een gesprek met een coach" className="sr-only" width={1200} height={600} />
+      <img src="/images/CFA-juni-03-community.jpg" alt="Gratis kennismaking bij CrossFit Alkmaar - boek een gesprek met een coach" className="sr-only" width={1200} height={600} />
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           

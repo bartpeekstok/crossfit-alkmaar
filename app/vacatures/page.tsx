@@ -32,12 +32,12 @@ export default function VacaturesPage() {
         role="img"
         aria-label="Werken bij CrossFit Alkmaar - vacatures voor coaches en trainers"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/CFA-juni-03-community.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <img src="/images/hero.jpg" alt="Werken bij CrossFit Alkmaar - vacatures voor coaches en trainers" className="sr-only" />
+        <img src="/images/CFA-juni-03-community.jpg" alt="Werken bij CrossFit Alkmaar - vacatures voor coaches en trainers" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Werken bij CrossFit Alkmaar

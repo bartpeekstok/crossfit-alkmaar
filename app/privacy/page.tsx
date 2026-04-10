@@ -11,12 +11,12 @@ export default function PrivacyPage() {
         role="img"
         aria-label="CrossFit Alkmaar privacy policy"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/hero.jpg')`,
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/CFA-juni-03-community.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
       >
-        <img src="/images/hero.jpg" alt="CrossFit Alkmaar privacy policy" className="sr-only" />
+        <img src="/images/CFA-juni-03-community.jpg" alt="CrossFit Alkmaar privacy policy" className="sr-only" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             Privacy Policy
