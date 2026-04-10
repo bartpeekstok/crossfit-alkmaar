@@ -156,13 +156,20 @@ export default function TarievenPage() {
         </div>
       </section>
 
+      {/* Foto: coach begeleidt training */}
+      <div className="w-full h-[350px] overflow-hidden">
+        <img src="/images/CFA-november-lowres-73.jpg" alt="Coach begeleidt training bij CrossFit Alkmaar" className="w-full h-full object-cover" />
+      </div>
+
       {/* Vergelijking: CFA vs gewone sportschool */}
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">CrossFit Alkmaar vs. een gewone sportschool</h2>
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl shadow-md p-8 border border-gray-200">
-              <h3 className="text-xl font-bold text-gray-400 mb-6">Gewone sportschool</h3>
+            <div className="bg-gray-50 rounded-xl shadow-md p-8 border border-gray-300">
+              <div className="bg-gray-200 rounded-lg px-4 py-2 mb-6 inline-block">
+                <h3 className="text-lg font-bold text-gray-500">Gewone sportschool</h3>
+              </div>
               <div className="space-y-4">
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Geen coach, je bent op jezelf aangewezen</p>
                 <p className="flex items-center gap-3 text-gray-500"><svg className="w-5 h-5 text-red-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>Geen programma, zelf uitzoeken</p>
@@ -173,7 +180,9 @@ export default function TarievenPage() {
               </div>
             </div>
             <div className="bg-blue-900 rounded-xl shadow-lg p-8 text-white">
-              <h3 className="text-xl font-bold mb-6">CrossFit Alkmaar</h3>
+              <div className="bg-blue-800 rounded-lg px-4 py-2 mb-6 inline-block">
+                <h3 className="text-lg font-bold text-white">CrossFit Alkmaar</h3>
+              </div>
               <div className="space-y-4">
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Elke les begeleid door een coach</p>
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Programma staat voor je klaar</p>
@@ -183,6 +192,21 @@ export default function TarievenPage() {
                 <p className="flex items-center gap-3"><svg className="w-5 h-5 text-green-400 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>Community die je motiveert</p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 90 Day Check-in sectie */}
+      <section className="py-12 px-6 bg-blue-900 text-white">
+        <div className="max-w-4xl mx-auto flex items-start gap-6">
+          <div className="shrink-0 hidden md:block">
+            <svg className="w-12 h-12 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          </div>
+          <div>
+            <h2 className="text-2xl font-bold mb-3">90 Day Check-in met je coach</h2>
+            <p className="text-blue-100 leading-relaxed">
+              Elke 90 dagen zit je samen met je coach om je voortgang te bespreken. Waar sta je nu, wat gaat goed en waar kun je nog verbeteren? Samen stellen jullie nieuwe doelen en passen het plan aan. Zo blijf je niet stilstaan en haal je het maximale uit je lidmaatschap.
+            </p>
           </div>
         </div>
       </section>
@@ -216,14 +240,6 @@ export default function TarievenPage() {
             </div>
           </div>
 
-          {/* 90 Day Check-in sectie */}
-          <div className="bg-white rounded-2xl shadow-md p-8 md:p-10 max-w-4xl mx-auto mb-10 border-l-4 border-blue-900">
-            <h3 className="text-xl font-bold text-gray-900 mb-3">90 Day Check-in met je coach</h3>
-            <p className="text-gray-700 leading-relaxed">
-              Elke 90 dagen zit je samen met je coach om je voortgang te bespreken. Waar sta je nu, wat gaat goed en waar kun je nog verbeteren? Samen stellen jullie nieuwe doelen en passen het plan aan. Zo blijf je niet stilstaan en haal je het maximale uit je lidmaatschap.
-            </p>
-          </div>
-
           {/* Prijskaarten */}
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="bg-white rounded-xl shadow-md hover:shadow-lg transition-shadow p-8 text-center border border-gray-200">
@@ -245,7 +261,7 @@ export default function TarievenPage() {
               <p className="text-gray-600 text-sm font-medium uppercase tracking-wide mb-3">Onbeperkt</p>
               <p className="text-4xl font-bold text-blue-900">€159,95</p>
               <p className="text-gray-500 text-sm mt-1">per maand</p>
-              <p className="text-green-700 text-sm font-semibold mt-3">Minder dan €5,50 per dag</p>
+              <p className="text-green-700 text-sm font-semibold mt-3">Train zo vaak je wilt</p>
             </div>
           </div>
           <div className="text-center mt-8">
@@ -258,6 +274,11 @@ export default function TarievenPage() {
           </div>
         </div>
       </section>
+
+      {/* Foto: groepsles */}
+      <div className="w-full h-[350px] overflow-hidden">
+        <img src="/images/CFA-november-lowres-96.jpg" alt="Groepsles bij CrossFit Alkmaar" className="w-full h-full object-cover" />
+      </div>
 
       {/* BUILD Small Group */}
       <section className="py-12 px-6 bg-gray-100">
@@ -343,6 +364,11 @@ export default function TarievenPage() {
         </div>
       </section>
 
+      {/* Foto: community */}
+      <div className="w-full h-[350px] overflow-hidden">
+        <img src="/images/CFA-november-lowres-12.jpg" alt="Community bij CrossFit Alkmaar" className="w-full h-full object-cover" />
+      </div>
+
       {/* Social proof - reviews */}
       <section className="py-12 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
@@ -355,8 +381,13 @@ export default function TarievenPage() {
                 ))}
               </div>
               <p className="text-gray-700 italic mb-4">&quot;De coaching maakt het verschil. Bij mijn vorige sportschool deed ik maar wat, hier word ik echt begeleid en boek ik resultaat.&quot;</p>
-              <p className="text-gray-900 font-semibold text-sm">Erik</p>
-              <p className="text-gray-400 text-xs">Lid sinds 2022</p>
+              <div className="flex items-center gap-3 mt-4">
+                <img src="https://i.pravatar.cc/80?img=12" alt="Erik" className="w-10 h-10 rounded-full object-cover" />
+                <div>
+                  <p className="text-gray-900 font-semibold text-sm">Erik</p>
+                  <p className="text-gray-400 text-xs">Lid sinds 2022</p>
+                </div>
+              </div>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
               <div className="flex gap-1 mb-3">
@@ -365,8 +396,13 @@ export default function TarievenPage() {
                 ))}
               </div>
               <p className="text-gray-700 italic mb-4">&quot;Ik was sceptisch over de prijs, maar het is elke cent waard. De persoonlijke aandacht en de community zijn onbetaalbaar.&quot;</p>
-              <p className="text-gray-900 font-semibold text-sm">Tim</p>
-              <p className="text-gray-400 text-xs">Lid sinds 2016</p>
+              <div className="flex items-center gap-3 mt-4">
+                <img src="https://i.pravatar.cc/80?img=3" alt="Tim" className="w-10 h-10 rounded-full object-cover" />
+                <div>
+                  <p className="text-gray-900 font-semibold text-sm">Tim</p>
+                  <p className="text-gray-400 text-xs">Lid sinds 2016</p>
+                </div>
+              </div>
             </div>
             <div className="bg-white rounded-xl shadow-md p-6 border border-gray-200">
               <div className="flex gap-1 mb-3">
@@ -375,8 +411,13 @@ export default function TarievenPage() {
                 ))}
               </div>
               <p className="text-gray-700 italic mb-4">&quot;Na jaren sportschoolabonnementen die ik niet gebruikte, ga ik hier al 3 jaar met plezier 3x per week. De coaches en de groep houden je gemotiveerd.&quot;</p>
-              <p className="text-gray-900 font-semibold text-sm">Linda</p>
-              <p className="text-gray-400 text-xs">Lid sinds 2017</p>
+              <div className="flex items-center gap-3 mt-4">
+                <img src="https://i.pravatar.cc/80?img=5" alt="Linda" className="w-10 h-10 rounded-full object-cover" />
+                <div>
+                  <p className="text-gray-900 font-semibold text-sm">Linda</p>
+                  <p className="text-gray-400 text-xs">Lid sinds 2017</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
