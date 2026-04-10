@@ -150,9 +150,8 @@ export default function TarievenPage() {
         <div className="max-w-5xl mx-auto text-gray-700 leading-relaxed space-y-4">
           <h2 className="text-3xl font-bold mb-8 text-center text-gray-900">Waarom investeren in coaching?</h2>
           <p>Bij een reguliere sportschool betaal je voor toegang tot een zaal. Bij CrossFit Alkmaar investeer je in begeleiding, resultaat en een community die je verder brengt.</p>
-          <p>Elke training wordt gegeven door een professionele coach, in kleine groepen van maximaal 6 tot 12 personen. Je hoeft zelf geen programma te bedenken &mdash; dat doen wij. Onze coaches letten op jouw techniek, passen het programma aan op jouw niveau en houden je progressie bij met 90 day check ins.</p>
-          <p>Daarnaast krijg je er iets bij wat geen sportschool kan bieden: een hechte community die je motiveert om te blijven komen. Geen ronddwalen in een drukke zaal, maar gerichte training met mensen die hetzelfde doel hebben. En als je er een tijdje niet bent geweest? Dan nemen we persoonlijk contact met je op &mdash; geen geautomatiseerd mailtje, maar een coach die even checkt hoe het gaat.</p>
-          <p className="font-semibold text-gray-900">Dat is waar je in investeert. Niet in een pasje, maar in je gezondheid.</p>
+          <p>Al onze abonnementen zijn per maand opzegbaar. Je blijft niet bij ons omdat je aan een jaarcontract vastzit, maar omdat je bij ons resultaat en plezier beleeft. Professionele full-time coaches, geen massale groepen en een plek waar je gezien wordt.</p>
+          <h3 className="text-3xl font-bold text-gray-900">Dat is waar je in investeert. Niet in een pasje, maar in je gezondheid.</h3>
         </div>
       </section>
 
