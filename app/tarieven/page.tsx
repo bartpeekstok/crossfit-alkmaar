@@ -121,7 +121,7 @@ export default function TarievenPage() {
 
       {/* Hero */}
       <section
-        className="relative text-white py-20 px-6 min-h-[400px] flex items-center"
+        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
         role="img"
         aria-label="CrossFit Alkmaar tarieven - persoonlijke coaching in kleine groepen"
         style={{
