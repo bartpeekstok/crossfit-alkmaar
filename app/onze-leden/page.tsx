@@ -21,7 +21,7 @@ export default function OnzeLedenPage() {
   const { openPopup } = usePopup();
 
   const videos = [
-    { id: "U4o8oXdmegI", type: "normal", caption: "" },
+    { id: "U4o8oXdmegI", type: "normal", caption: "Chris (10 jaar lid): 'CrossFit is misschien wel toegankelijker dan aan machines trekken in een sportschool'" },
     { id: "G9HkOnSsKg8", type: "normal", caption: "Malou (9 jaar lid): 'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
     { id: "esc-52ZNdPY", type: "normal", caption: "Steven (kickstart nov 2024): 'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'" },
     { id: "rG7rY2_BguQ", type: "normal", caption: "Jeanine (2 jaar lid): 'Toen ik hier voor het eerst kwam dacht ik: dit is het!'" },
