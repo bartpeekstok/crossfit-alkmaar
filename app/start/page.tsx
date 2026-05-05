@@ -5,6 +5,7 @@ import Link from "next/link";
 import Script from "next/script";
 import { useEffect, useState } from "react";
 import { trackCTAClick, trackEvent } from "../lib/analytics";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 const GHL_FORM_ID = "z8t7r0Jf0MGmJanbVsXB";
 const GHL_FORM_URL = `https://ghl.crossfitalkmaar.com/widget/form/${GHL_FORM_ID}`;
@@ -230,8 +231,23 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 3b. GOOGLE REVIEWS WIDGET */}
+      {/* 3b. INSIDE THE BOX VIDEO */}
       <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Een kijkje binnen
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto">
+            De gym, de mensen, de sfeer. Zo ziet trainen bij ons eruit.
+          </p>
+          <div className="rounded-lg overflow-hidden shadow-2xl aspect-video">
+            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
+          </div>
+        </div>
+      </section>
+
+      {/* 3c. GOOGLE REVIEWS WIDGET */}
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
           <Script
             src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js"
@@ -249,7 +265,7 @@ export default function StartPage() {
       </section>
 
       {/* 4. SOCIAL PROOF: TESTIMONIALS */}
-      <section className="py-16 px-6 bg-gray-100">
+      <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Anderen lukte het ook
@@ -287,7 +303,7 @@ export default function StartPage() {
             ].map((t) => (
               <div
                 key={t.name}
-                className="bg-white p-6 rounded-lg shadow-sm flex flex-col"
+                className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
