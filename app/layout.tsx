@@ -38,6 +38,7 @@ import BreadcrumbSchema from "./components/BreadcrumbSchema";
 import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import FormSubmissionTracker from "./components/FormSubmissionTracker";
+import ConditionalChrome from "./components/ConditionalChrome";
 
 export const metadata: Metadata = {
   title: {
@@ -147,20 +148,22 @@ export default function RootLayout({
                     <GroepslessenPopupProvider>
                       <TienersPopupProvider>
                       <PricingPopupProvider>
-                        <Header />
+                        <ConditionalChrome><Header /></ConditionalChrome>
                         <main className="pb-16">{children}</main>
-                        <Footer />
-                        <IntakePopup />
-                        <KickstartPopup />
-                        <KickstartFormPopup />
-                        <PersonalTrainingPopup />
-                        <SmallGroupPopup />
-                        <VoedingsadviesPopup />
-                        <GroepslessenPopup />
-                        <TienersPopup />
-                        <PricingPopup />
-                        <StickyMobileCTA />
-                        <CookieBanner />
+                        <ConditionalChrome>
+                          <Footer />
+                          <IntakePopup />
+                          <KickstartPopup />
+                          <KickstartFormPopup />
+                          <PersonalTrainingPopup />
+                          <SmallGroupPopup />
+                          <VoedingsadviesPopup />
+                          <GroepslessenPopup />
+                          <TienersPopup />
+                          <PricingPopup />
+                          <StickyMobileCTA />
+                          <CookieBanner />
+                        </ConditionalChrome>
                         <ScrollDepthTracker />
                         <FormSubmissionTracker />
                         <Analytics />
@@ -175,7 +178,7 @@ export default function RootLayout({
         </PopupProvider>
         
         {/* GoHighLevel Chat Widget */}
-        <ChatWidget />
+        <ConditionalChrome><ChatWidget /></ConditionalChrome>
         <SpeedInsights />
       </body>
     </html>
