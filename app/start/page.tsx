@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { trackCTAClick, trackEvent } from "../lib/analytics";
 
 const GHL_FORM_ID = "z8t7r0Jf0MGmJanbVsXB";
@@ -13,10 +13,12 @@ function CTAButton({
   label = "Plan je gratis intake",
   source,
   variant = "primary",
+  onClick,
 }: {
   label?: string;
   source: string;
   variant?: "primary" | "white";
+  onClick: () => void;
 }) {
   const base =
     "inline-block font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-center";
@@ -25,20 +27,51 @@ function CTAButton({
       ? "bg-white text-blue-900 hover:bg-gray-100"
       : "bg-blue-900 text-white hover:bg-blue-950";
   return (
-    <a
-      href="#aanmelden"
-      onClick={() => trackCTAClick(source, "start")}
+    <button
+      type="button"
+      onClick={() => {
+        trackCTAClick(source, "start");
+        onClick();
+      }}
       className={`${base} ${styles}`}
     >
       {label}
-    </a>
+    </button>
   );
 }
 
 export default function StartPage() {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+  const openForm = () => {
+    trackEvent("popup_open", { popup_name: "landingspagina_form" });
+    setIsFormOpen(true);
+  };
+  const closeForm = () => setIsFormOpen(false);
+
   useEffect(() => {
     trackEvent("landing_view", { page: "start" });
   }, []);
+
+  // Lock body scroll while popup is open
+  useEffect(() => {
+    if (isFormOpen) {
+      const original = document.body.style.overflow;
+      document.body.style.overflow = "hidden";
+      return () => {
+        document.body.style.overflow = original;
+      };
+    }
+  }, [isFormOpen]);
+
+  // Close on Escape
+  useEffect(() => {
+    if (!isFormOpen) return;
+    const handler = (e: KeyboardEvent) => {
+      if (e.key === "Escape") closeForm();
+    };
+    window.addEventListener("keydown", handler);
+    return () => window.removeEventListener("keydown", handler);
+  }, [isFormOpen]);
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -94,7 +127,7 @@ export default function StartPage() {
             naar resultaat leiden. Geen anonieme gym — een plek waar je
             terugkomt omdat het wérkt.
           </p>
-          <CTAButton source="hero_cta" />
+          <CTAButton source="hero_cta" onClick={openForm} />
           {/* Trust indicators */}
           <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-200">
             <span>Duizenden mensen geholpen</span>
@@ -192,13 +225,31 @@ export default function StartPage() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <CTAButton source="aanpak_cta" />
+            <CTAButton source="aanpak_cta" onClick={openForm} />
           </div>
         </div>
       </section>
 
-      {/* 4. SOCIAL PROOF — TESTIMONIALS */}
+      {/* 3b. GOOGLE REVIEWS WIDGET */}
       <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <Script
+            src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js"
+            strategy="lazyOnload"
+          />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: "100%", width: "100%" }}
+            title="Google Reviews"
+          />
+        </div>
+      </section>
+
+      {/* 4. SOCIAL PROOF — TESTIMONIALS */}
+      <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Anderen lukte het ook
@@ -233,7 +284,7 @@ export default function StartPage() {
             ].map((t) => (
               <div
                 key={t.name}
-                className="bg-gray-100 p-6 rounded-lg shadow-sm flex flex-col"
+                className="bg-white p-6 rounded-lg shadow-sm flex flex-col"
               >
                 {/* Foto-placeholder */}
                 <div className="w-20 h-20 bg-gray-300 rounded-full mb-4 flex items-center justify-center text-gray-500 text-2xl font-bold">
@@ -254,7 +305,7 @@ export default function StartPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <CTAButton source="testimonials_cta" />
+            <CTAButton source="testimonials_cta" onClick={openForm} />
           </div>
         </div>
       </section>
@@ -376,44 +427,25 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 8. FORMULIER — HOOFDCONVERSIE */}
+      {/* 8. CTA — HOOFDCONVERSIE (opent popup) */}
       <section id="aanmelden" className="py-16 px-6 bg-blue-900 scroll-mt-4">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
-            Plan je gratis intake
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Klaar om het écht te proberen?
           </h2>
-          <p className="text-blue-100 text-lg text-center mb-2">
-            We bellen je binnen 24 uur op een werkdag terug.
+          <p className="text-blue-100 text-lg mb-2">
+            Plan je gratis intake — we bellen je binnen 24 uur op een werkdag terug.
           </p>
-          <p className="text-blue-200 text-sm text-center mb-8">
+          <p className="text-blue-200 text-sm mb-8">
             Geen verplichtingen. Geen kosten. Geen sales-praatje.
           </p>
-
-          {/* GHL Landingspagina form — inline embed, auto-resize via form_embed.js */}
-          <div className="bg-white rounded-xl shadow-2xl overflow-hidden p-2">
-            <iframe
-              src={GHL_FORM_URL}
-              style={{ width: "100%", minHeight: "560px", border: "none", borderRadius: "3px" }}
-              id={`inline-${GHL_FORM_ID}`}
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Landingspagina form"
-              data-height="undefined"
-              data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
-              data-form-id={GHL_FORM_ID}
-              title="Landingspagina form"
-            />
-            <Script
-              src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
-              strategy="afterInteractive"
-            />
-          </div>
-          <p className="text-blue-100 text-xs text-center mt-4">
+          <CTAButton
+            label="Plan je gratis intake"
+            source="form_section_cta"
+            variant="white"
+            onClick={openForm}
+          />
+          <p className="text-blue-100 text-xs mt-6">
             Door het formulier te versturen ga je akkoord met onze{" "}
             <Link href="/privacy" className="underline hover:text-white">
               privacy policy
@@ -473,7 +505,7 @@ export default function StartPage() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <CTAButton source="locatie_cta" />
+            <CTAButton source="locatie_cta" onClick={openForm} />
           </div>
         </div>
       </section>
@@ -521,7 +553,7 @@ export default function StartPage() {
             </div>
           </div>
           <div className="text-center mb-4">
-            <CTAButton label="Plan je gratis intake" source="footer_cta" variant="white" />
+            <CTAButton label="Plan je gratis intake" source="footer_cta" variant="white" onClick={openForm} />
           </div>
           <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} CrossFit Alkmaar.</p>
@@ -534,6 +566,68 @@ export default function StartPage() {
           </div>
         </div>
       </footer>
+
+      {/* POPUP — GHL Landingspagina form */}
+      {isFormOpen && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="start-form-title"
+        >
+          <div
+            className="absolute inset-0 bg-black/60"
+            onClick={closeForm}
+            aria-hidden="true"
+          />
+          <div className="relative bg-white rounded-xl shadow-2xl max-w-md w-full mx-4 z-[101] overflow-hidden max-h-[90vh] flex flex-col">
+            <button
+              type="button"
+              onClick={closeForm}
+              aria-label="Sluit formulier"
+              className="absolute top-3 right-3 text-white hover:text-gray-200 transition z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+            <div style={{ backgroundColor: "#1e3a8a", padding: "20px 24px", textAlign: "center" }}>
+              <h2
+                id="start-form-title"
+                style={{ fontSize: "20px", fontWeight: "bold", color: "#ffffff", textTransform: "uppercase", margin: 0 }}
+              >
+                Plan je gratis intake
+              </h2>
+              <p style={{ color: "#ffffff", marginTop: "4px", marginBottom: 0, fontSize: "14px" }}>
+                We nemen snel contact met je op
+              </p>
+            </div>
+            <div className="flex-1 overflow-auto">
+              <iframe
+                src={GHL_FORM_URL}
+                style={{ width: "100%", minHeight: "520px", border: "none", borderRadius: "3px" }}
+                id={`inline-${GHL_FORM_ID}`}
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Landingspagina form"
+                data-height="undefined"
+                data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
+                data-form-id={GHL_FORM_ID}
+                title="Landingspagina form"
+              />
+              <Script
+                src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
+                strategy="afterInteractive"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
