@@ -75,7 +75,7 @@ export default function StartPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      {/* Mini header — alleen logo + telefoon, geen navigatie */}
+      {/* Mini header: alleen logo + telefoon, geen navigatie */}
       <header className="bg-[#1a1a2e] text-white py-3 px-6">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <Link href="/start" className="flex items-center">
@@ -124,7 +124,7 @@ export default function StartPage() {
           </h1>
           <p className="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
             Begeleiding in kleine groepen, met coaches die je naam kennen en je
-            naar resultaat leiden. Geen anonieme gym — een plek waar je
+            naar resultaat leiden. Geen anonieme gym, maar een plek waar je
             terugkomt omdat het wérkt.
           </p>
           <CTAButton source="hero_cta" onClick={openForm} />
@@ -152,7 +152,7 @@ export default function StartPage() {
           <div className="grid md:grid-cols-2 gap-4">
             {[
               "Je hebt al meerdere sportscholen geprobeerd, maar elke keer haakte je af.",
-              "Alleen sporten lukt niet — je mist de motivatie en structuur.",
+              "Alleen sporten lukt niet, je mist de motivatie en structuur.",
               "Je traint maar ziet geen resultaat omdat je niet weet wat je doet.",
               "Je gym-abonnement loopt nog door, maar je bent er al maanden niet geweest.",
             ].map((line, i) => (
@@ -167,12 +167,12 @@ export default function StartPage() {
           </div>
           <p className="text-lg text-gray-700 mt-10 text-center max-w-2xl mx-auto">
             Dat ligt niet aan jou. Het ligt aan de aanpak. Bij CrossFit Alkmaar
-            doen we het anders — en dat is precies waarom het wél lukt.
+            doen we het anders. En dat is precies waarom het wél lukt.
           </p>
         </div>
       </section>
 
-      {/* 3. DE CFA-AANPAK — 3 PIJLERS */}
+      {/* 3. DE CFA-AANPAK: 3 PIJLERS */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
@@ -189,7 +189,7 @@ export default function StartPage() {
               <h3 className="text-xl font-bold text-gray-900 mb-3">Leuk</h3>
               <p className="text-gray-700">
                 Je traint in een kleine groep mensen die jou kennen en
-                aanmoedigen. Geen verveling, geen herhaling — elke training is
+                aanmoedigen. Geen verveling, geen herhaling. Elke training is
                 anders. Je komt terug omdat je het léuk vindt, niet omdat je
                 moet.
               </p>
@@ -205,7 +205,7 @@ export default function StartPage() {
               <p className="text-gray-700">
                 Onze coaches kijken mee bij elke beweging. Elke oefening wordt
                 aangepast aan jouw niveau en lichaam. Beginnen kan op iedere
-                leeftijd, met of zonder ervaring — zonder blessures en zonder
+                leeftijd, met of zonder ervaring. Zonder blessures en zonder
                 stress.
               </p>
             </div>
@@ -248,14 +248,14 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 4. SOCIAL PROOF — TESTIMONIALS */}
+      {/* 4. SOCIAL PROOF: TESTIMONIALS */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Anderen lukte het ook
           </h2>
           <p className="text-lg text-gray-700 mb-12 text-center max-w-2xl mx-auto">
-            Echte verhalen van mensen die net als jij aarzelden — en blij zijn
+            Echte verhalen van mensen die net als jij aarzelden en blij zijn
             dat ze toch zijn begonnen.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
@@ -263,13 +263,15 @@ export default function StartPage() {
               {
                 name: "Lisette",
                 age: 42,
+                videoId: "WuOyAWYDeG0",
                 quote:
-                  "Ik dacht dat sporten niks voor mij was. Hier voelt het als een team — ik kom nu drie keer per week en mis het als ik er niet ben.",
+                  "Ik dacht dat sporten niks voor mij was. Hier voelt het als een team. Ik kom nu drie keer per week en mis het als ik er niet ben.",
                 result: "Sport nu structureel 3x per week",
               },
               {
                 name: "Jarrald",
                 age: 48,
+                videoId: "1qhbmRPtysU",
                 quote:
                   "Lang sponsor geweest van sportscholen. Hier is het anders: de coaches kennen me, weten waar ik sta en pushen me precies genoeg.",
                 result: "20 kilo afgevallen",
@@ -277,6 +279,7 @@ export default function StartPage() {
               {
                 name: "Simone",
                 age: 39,
+                videoId: "14v6cnGlI7g",
                 quote:
                   "Ik wilde sterker worden, niet dunner. Bij CFA leerde ik wat krachttraining echt is. Mijn lichaam is veranderd en mijn zelfvertrouwen ook.",
                 result: "Sterker dan ooit",
@@ -286,10 +289,15 @@ export default function StartPage() {
                 key={t.name}
                 className="bg-white p-6 rounded-lg shadow-sm flex flex-col"
               >
-                {/* Foto-placeholder */}
-                <div className="w-20 h-20 bg-gray-300 rounded-full mb-4 flex items-center justify-center text-gray-500 text-2xl font-bold">
-                  {t.name.charAt(0)}
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`https://img.youtube.com/vi/${t.videoId}/mqdefault.jpg`}
+                  alt={`${t.name}, lid bij CrossFit Alkmaar`}
+                  width={80}
+                  height={80}
+                  loading="lazy"
+                  className="w-20 h-20 rounded-full mb-4 object-cover bg-gray-300"
+                />
                 <p className="text-gray-800 italic mb-4 flex-1">
                   &ldquo;{t.quote}&rdquo;
                 </p>
@@ -354,32 +362,7 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 6. OVER DE COACHES */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            7 coaches die je naam kennen
-          </h2>
-          <p className="text-lg text-gray-700 mb-10 text-center max-w-2xl mx-auto">
-            Geen losse instructeurs, maar een team dat samen optrekt. Allemaal
-            opgeleid en ervaren — én oprecht ge&iuml;nteresseerd in jouw
-            voortgang.
-          </p>
-          {/* Coach grid - placeholders */}
-          <div className="grid grid-cols-3 md:grid-cols-7 gap-3 md:gap-4 mb-8">
-            {Array.from({ length: 7 }).map((_, i) => (
-              <div key={i} className="aspect-square bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 text-xs">
-                Coach {i + 1}
-              </div>
-            ))}
-          </div>
-          <p className="text-gray-600 text-sm text-center">
-            Je leert ze allemaal kennen tijdens je intake en eerste weken.
-          </p>
-        </div>
-      </section>
-
-      {/* 7. FAQ */}
+      {/* FAQ */}
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
@@ -427,14 +410,14 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 8. CTA — HOOFDCONVERSIE (opent popup) */}
+      {/* 8. CTA: HOOFDCONVERSIE (opent popup) */}
       <section id="aanmelden" className="py-16 px-6 bg-blue-900 scroll-mt-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Klaar om het écht te proberen?
           </h2>
           <p className="text-blue-100 text-lg mb-2">
-            Plan je gratis intake — we bellen je binnen 24 uur op een werkdag terug.
+            Plan je gratis intake. We bellen je binnen 24 uur op een werkdag terug.
           </p>
           <p className="text-blue-200 text-sm mb-8">
             Geen verplichtingen. Geen kosten. Geen sales-praatje.
@@ -462,12 +445,12 @@ export default function StartPage() {
             Waar je ons vindt
           </h2>
           <p className="text-lg text-gray-700 mb-10 text-center">
-            Phoenixstraat 33, Alkmaar (Overdie) — gratis parkeren voor de deur.
+            Phoenixstraat 33, Alkmaar (Overdie). Gratis parkeren voor de deur.
           </p>
           <div className="grid md:grid-cols-2 gap-8 items-stretch">
             <div className="rounded-lg overflow-hidden shadow-sm bg-white">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.123!2d4.7534!3d52.6324!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTLCsDM3JzU2LjYiTiA0wrA0NScxMi4yIkU!5e0!3m2!1snl!2snl!4v1700000000000"
+                src="https://www.google.com/maps?q=CrossFit+Alkmaar+Phoenixstraat+33+Alkmaar&z=16&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: "320px" }}
@@ -510,7 +493,7 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 10. FOOTER — minimal */}
+      {/* 10. FOOTER: minimal */}
       <footer className="bg-gray-900 text-white py-10 px-6">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-6">
@@ -567,7 +550,7 @@ export default function StartPage() {
         </div>
       </footer>
 
-      {/* POPUP — GHL Landingspagina form */}
+      {/* POPUP: GHL Landingspagina form */}
       {isFormOpen && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center"

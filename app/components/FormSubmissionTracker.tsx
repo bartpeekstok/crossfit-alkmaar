@@ -69,7 +69,7 @@ export default function FormSubmissionTracker() {
                 })
               );
             } catch {
-              // sessionStorage unavailable — continue without persistence
+              // sessionStorage unavailable, continue without persistence
             }
 
             window.fbq(
