@@ -235,10 +235,10 @@ export default function StartPage() {
       <section className="py-16 px-6 bg-white">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Een kijkje binnen
+            Zo ziet een intake bij ons eruit
           </h2>
           <p className="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto">
-            De gym, de mensen, de sfeer. Zo ziet trainen bij ons eruit.
+            Een rustig kennismakingsgesprek van 30 minuten. We luisteren naar jouw verhaal en doelen, jij ziet de gym en het team. Geen verkooppraatje, geen druk.
           </p>
           <div className="rounded-lg overflow-hidden shadow-2xl aspect-video">
             <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
