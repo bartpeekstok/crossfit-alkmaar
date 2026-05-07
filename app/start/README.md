@@ -1,6 +1,6 @@
 # /start, Meta ad landing page
 
-Conversie-geoptimaliseerde landingspagina voor Meta-advertenties. Eén doel: bezoeker laat gegevens achter via het GHL "Landingspagina form". Na submit redirect GHL naar `/free-intro` (waar de booking-agenda staat).
+Conversie-geoptimaliseerde landingspagina voor Meta-advertenties. Eén doel: bezoeker laat gegevens achter via het GHL "Landingspagina form". Na submit redirect GHL naar `/free-intro?from=start` (waar de booking-agenda staat).
 
 ## Bestanden
 
@@ -16,13 +16,12 @@ npm run dev
 
 Bekijk op http://localhost:3000/start
 
-## Tracking
+## Tracking, hoe het werkt
 
-Geen extra code, geen env vars, geen webhook. Alles loopt via GHL:
+Geen JavaScript-magie, geen iframe-postMessage, geen sendBeacon. URL-based conversion:
 
-1. **PageView (browser)**: `MetaPixel.tsx` in de root layout fired automatisch `PageView` zodra `/start` opent.
-2. **Lead (browser)**: GHL fired het Pixel `Lead`-event vanuit het iframe bij form-submit (Pixel ID is in form-settings ingevuld).
-3. **Lead (server)**: GHL's ingebouwde Meta CAPI integratie fired hetzelfde Lead-event server-side, met **dezelfde event_id** (auto-gegenereerd door GHL) zodat Meta de browser- en server-events dedupliceert.
+1. **PageView (browser)**: `MetaPixel.tsx` in de root layout fired automatisch `PageView` op elke page-load van de site, dus ook op /start en /free-intro.
+2. **Lead conversion**: in Meta Events Manager staat een **Custom Conversion** ingesteld die een `PageView` op URL met `?from=start` als Lead-conversie classificeert. Dat is /free-intro waar GHL naartoe redirect na form-submit. Geen iframe-Pixel firing nodig.
 
 ## GoHighLevel form-instellingen
 
@@ -30,10 +29,23 @@ Form `z8t7r0Jf0MGmJanbVsXB` ("Landingspagina form"), tab Settings:
 
 | Veld | Waarde |
 |---|---|
-| Redirect URL | `https://www.crossfitalkmaar.com/free-intro` |
-| Facebook Pixel ID | `1745951116381755` |
-| On Page View | `None` (parent fired al PageView, anders dubbel) |
-| On Form Submission | `Lead` |
+| Redirect URL | `https://www.crossfitalkmaar.com/free-intro?from=start` |
+| Facebook Pixel ID | leeg laten |
+| On Page View | None |
+| On Form Submission | None |
+
+## Meta Events Manager: Custom Conversion
+
+Eenmalig opzetten:
+
+1. Events Manager → kies Pixel `1745951116381755` → tab **Custom Conversions** → **Create**
+2. Naam: `Lead - Intake aanvraag`
+3. Source: PageView (standard event)
+4. Rule: URL **contains** `from=start`
+5. Category: **Lead**
+6. Save
+
+Vanaf dan telt elke landing op `/free-intro?from=start` als een Lead-conversie. Gebruik dit als conversion-doel in je Meta Ads campagnes.
 
 ## Content aanpassen
 
@@ -42,25 +54,17 @@ Alle teksten staan inline in `app/start/page.tsx`. Wat je waarschijnlijk wilt ve
 | Wat | Waar | Hoe |
 |---|---|---|
 | Hero-foto | `Image src="/images/CFA-juni-03-community.jpg"` | Vervang pad of leg nieuwe foto in `public/images/` |
-| Testimonials (3 cards) | array `[{ name, age, videoId, quote, result }]` in sectie "Anderen lukte het ook" | Tekst aanpassen of `videoId` wijzigen (de profielfoto wordt automatisch opgehaald als YouTube thumbnail) |
-| Telefoonnummer | `tel:+31722340560` (header + footer) | Search & replace |
+| Testimonials (3 cards) | array `[{ name, age, videoId, quote, result }]` in sectie "Anderen lukte het ook" | Tekst aanpassen of `videoId` wijzigen |
+| Telefoonnummer | `tel:+31722340560` | Search & replace |
 | FAQ-vragen | array van 6 items in FAQ-sectie | Tekst aanpassen of items toevoegen |
 | Form ID | `GHL_FORM_ID` bovenaan `page.tsx` | Wijzig hier als je een ander GHL-form gebruikt |
-| Google Maps | `iframe src` in locatie-sectie | Vervang met de exacte iframe `src` van Google Maps (via Share → Embed) als de huidige search-URL niet de juiste pin laat zien |
+| Google Maps | `iframe src` in locatie-sectie | Vervang met de exacte iframe `src` van Google Maps (Share → Embed) |
 
 ## Deploy
 
 Push naar `main`. Vercel deployt automatisch.
 
 In Meta Ads Manager:
-- Conversie-doel: **Lead** (standard event)
+- Conversie-doel: kies de Custom Conversion `Lead - Intake aanvraag`
 - Bestemmings-URL: `https://www.crossfitalkmaar.com/start`
 - Retargeting-uitsluiting: voeg `/free-intro` toe aan een exclusion audience zodat ingevulde leads geen ads meer zien
-
-## Troubleshooting
-
-- **Form laadt niet**: controleer in browser console dat `https://ghl.crossfitalkmaar.com/js/form_embed.js` geen 404 geeft.
-- **Geen Lead-event in Meta**: check in GHL form Settings dat Pixel ID ingevuld staat én "On Form Submission" op `Lead` staat. Submit via /start, kijk in Meta Events Manager → Test Events of het event binnenkomt.
-- **Dubbele PageView**: zet "On Page View" in GHL form-settings op `None`. De parent-pagina handelt PageView al af.
-- **Header/Footer zijn nog zichtbaar**: hard refresh. `ConditionalChrome` checkt pathname en moet `/start` herkennen.
-- **Google Maps wijst verkeerd op mobiel**: vervang de iframe `src` met de exacte URL die Google geeft via Share → Embed map (bevat `pb=` parameter).
