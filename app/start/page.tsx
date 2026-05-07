@@ -76,29 +76,41 @@ export default function StartPage() {
 
   return (
     <div className="min-h-screen bg-gray-200">
-      {/* Mini header: alleen logo + telefoon, geen navigatie */}
-      <header className="bg-[#1a1a2e] text-white py-3 px-6">
-        <div className="max-w-6xl mx-auto flex justify-between items-center">
+      {/* Mini header: sticky met logo + telefoon + CTA */}
+      <header className="bg-[#1a1a2e] text-white py-3 px-6 sticky top-0 z-40 shadow-lg">
+        <div className="max-w-6xl mx-auto flex justify-between items-center gap-3">
           <Link href="/start" className="flex items-center">
             <Image
               src="/images/logo.png"
               alt="CrossFit Alkmaar"
               width={64}
               height={64}
-              className="h-12 w-auto"
+              className="h-10 sm:h-12 w-auto"
               priority
             />
           </Link>
-          <a
-            href="tel:+31722340560"
-            className="text-sm md:text-base hover:text-gray-300 transition flex items-center gap-2"
-          >
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
-            </svg>
-            <span className="hidden sm:inline">072-2340560</span>
-            <span className="sm:hidden">Bel ons</span>
-          </a>
+          <div className="flex items-center gap-2 sm:gap-4">
+            <a
+              href="tel:+31722340560"
+              className="text-sm hover:text-gray-300 transition hidden md:flex items-center gap-2"
+              aria-label="Bel ons"
+            >
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+              </svg>
+              <span>072-2340560</span>
+            </a>
+            <button
+              type="button"
+              onClick={() => {
+                trackCTAClick("sticky_header_cta", "start");
+                openForm();
+              }}
+              className="bg-blue-700 hover:bg-blue-800 px-3 sm:px-4 py-2 rounded font-semibold text-xs sm:text-sm transition cursor-pointer"
+            >
+              Plan intake
+            </button>
+          </div>
         </div>
       </header>
 
@@ -129,13 +141,16 @@ export default function StartPage() {
             terugkomt omdat het wérkt.
           </p>
           <CTAButton source="hero_cta" onClick={openForm} />
+          <p className="text-sm text-gray-200 mt-3">
+            30 seconden invullen, geen verplichtingen
+          </p>
           {/* Trust indicators */}
           <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-200">
-            <span>Duizenden mensen geholpen</span>
+            <span>Sinds 2013 in Alkmaar</span>
             <span className="hidden sm:inline">•</span>
             <span>7 professionele coaches</span>
             <span className="hidden sm:inline">•</span>
-            <span>Alkmaar-Overdie</span>
+            <span>260+ 5★ Google reviews</span>
           </div>
         </div>
       </section>
@@ -242,6 +257,12 @@ export default function StartPage() {
           </p>
           <div className="rounded-lg overflow-hidden shadow-2xl aspect-video">
             <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
+          </div>
+          <div className="text-center mt-10">
+            <CTAButton source="post_video_cta" onClick={openForm} />
+            <p className="text-sm text-gray-600 mt-3">
+              30 seconden invullen, geen verplichtingen
+            </p>
           </div>
         </div>
       </section>
@@ -396,7 +417,7 @@ export default function StartPage() {
               },
               {
                 q: "Is het niet gevaarlijk?",
-                a: "Niet bij ons. Onze coaches kijken mee bij elke beweging. Elke oefening wordt aangepast aan jouw niveau, lichaam en blessures. We hebben in 12 jaar duizenden mensen veilig leren trainen.",
+                a: "Niet bij ons. Onze coaches kijken mee bij elke beweging. Elke oefening wordt aangepast aan jouw niveau, lichaam en blessures. Sinds 2013 helpen we mensen veilig sterker te worden, getoetst aan 260+ 5-sterren reviews.",
               },
               {
                 q: "Hoeveel tijd kost het per week?",
@@ -426,25 +447,45 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 8. CTA: HOOFDCONVERSIE (opent popup) */}
+      {/* 8. INLINE FORM (hoofdconversie zonder klikdrempel) */}
       <section id="aanmelden" className="py-16 px-6 bg-blue-900 scroll-mt-4">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-            Klaar om het écht te proberen?
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
+            Plan je gratis intake
           </h2>
-          <p className="text-blue-100 text-lg mb-2">
-            Plan je gratis intake. We bellen je binnen 24 uur op een werkdag terug.
+          <p className="text-blue-100 text-lg text-center mb-2">
+            We bellen je binnen 24 uur op een werkdag terug.
           </p>
-          <p className="text-blue-200 text-sm mb-8">
+          <p className="text-blue-200 text-sm text-center mb-2">
             Geen verplichtingen. Geen kosten. Geen sales-praatje.
           </p>
-          <CTAButton
-            label="Plan je gratis intake"
-            source="form_section_cta"
-            variant="white"
-            onClick={openForm}
-          />
-          <p className="text-blue-100 text-xs mt-6">
+          <p className="text-blue-200 text-sm text-center mb-8">
+            Kickstart-groepen blijven klein (max 6 personen).
+          </p>
+          <div className="bg-white rounded-xl shadow-2xl overflow-hidden p-2">
+            <iframe
+              src={GHL_FORM_URL}
+              style={{ width: "100%", minHeight: "560px", border: "none", borderRadius: "3px" }}
+              id={`inline-${GHL_FORM_ID}`}
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Landingspagina form"
+              data-height="undefined"
+              data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
+              data-form-id={GHL_FORM_ID}
+              title="Landingspagina form"
+            />
+            <Script
+              src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
+              strategy="afterInteractive"
+            />
+          </div>
+          <p className="text-blue-100 text-xs text-center mt-4">
             Door het formulier te versturen ga je akkoord met onze{" "}
             <Link href="/privacy" className="underline hover:text-white">
               privacy policy
@@ -553,6 +594,9 @@ export default function StartPage() {
           </div>
           <div className="text-center mb-4">
             <CTAButton label="Plan je gratis intake" source="footer_cta" variant="white" onClick={openForm} />
+            <p className="text-sm text-gray-400 mt-3">
+              30 seconden invullen, geen verplichtingen
+            </p>
           </div>
           <div className="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
             <p>&copy; {new Date().getFullYear()} CrossFit Alkmaar.</p>
@@ -605,7 +649,7 @@ export default function StartPage() {
               <iframe
                 src={GHL_FORM_URL}
                 style={{ width: "100%", minHeight: "520px", border: "none", borderRadius: "3px" }}
-                id={`inline-${GHL_FORM_ID}`}
+                id={`popup-${GHL_FORM_ID}`}
                 data-layout="{'id':'INLINE'}"
                 data-trigger-type="alwaysShow"
                 data-trigger-value=""
@@ -615,7 +659,7 @@ export default function StartPage() {
                 data-deactivation-value=""
                 data-form-name="Landingspagina form"
                 data-height="undefined"
-                data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
+                data-layout-iframe-id={`popup-${GHL_FORM_ID}`}
                 data-form-id={GHL_FORM_ID}
                 title="Landingspagina form"
               />
