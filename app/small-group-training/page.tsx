@@ -63,8 +63,8 @@ export default function SmallGroupTrainingPage() {
               ratingValue: "5.0",
               bestRating: "5",
               worstRating: "1",
-              ratingCount: "260",
-              reviewCount: "260",
+              ratingCount: "273",
+              reviewCount: "273",
             },
           }),
         }}

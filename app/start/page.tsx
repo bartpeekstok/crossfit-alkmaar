@@ -150,7 +150,7 @@ export default function StartPage() {
             <span className="hidden sm:inline">•</span>
             <span>7 professionele coaches</span>
             <span className="hidden sm:inline">•</span>
-            <span>260+ 5★ Google reviews</span>
+            <span>273+ 5★ Google reviews</span>
           </div>
         </div>
       </section>
@@ -417,7 +417,7 @@ export default function StartPage() {
               },
               {
                 q: "Is het niet gevaarlijk?",
-                a: "Niet bij ons. Onze coaches kijken mee bij elke beweging. Elke oefening wordt aangepast aan jouw niveau, lichaam en blessures. Sinds 2013 helpen we mensen veilig sterker te worden, getoetst aan 260+ 5-sterren reviews.",
+                a: "Niet bij ons. Onze coaches kijken mee bij elke beweging. Elke oefening wordt aangepast aan jouw niveau, lichaam en blessures. Sinds 2013 helpen we mensen veilig sterker te worden, getoetst aan 273+ 5-sterren reviews.",
               },
               {
                 q: "Hoeveel tijd kost het per week?",

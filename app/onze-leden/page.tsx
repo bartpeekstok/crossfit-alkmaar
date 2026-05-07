@@ -11,7 +11,7 @@ const aggregateRatingSchema = {
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5.0",
-    "reviewCount": "260",
+    "reviewCount": "273",
     "bestRating": "5",
     "worstRating": "1"
   }
