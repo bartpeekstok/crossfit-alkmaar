@@ -219,7 +219,7 @@ export default function SportenOvergangAlkmaarPage() {
             In de groepslessen train je in kleine groepen van maximaal 12 personen. Elke oefening wordt aangepast aan jouw niveau. Heb je behoefte aan nog meer persoonlijke aandacht? Dan is <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> een mooie optie.
           </p>
           <p className="text-lg text-gray-700">
-            Wil je ook werken aan je voeding? Bekijk dan onze mogelijkheden voor <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link>. Een goede combinatie van training en voeding kan je helpen om je nog beter te voelen. Bekijk ook onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.
+            Wil je ook werken aan je voeding? Bekijk dan onze mogelijkheden voor <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link>. Een goede combinatie van training en voeding kan je helpen om je nog beter te voelen. Bekijk ook onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.
           </p>
         </div>
       </section>

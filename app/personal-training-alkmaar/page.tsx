@@ -213,7 +213,7 @@ export default function PersonalTrainingAlkmaarPage() {
             Voor iedereen die meer wil dan een standaard sportschool. Of je nu net begint via de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link>, terugkomt na een blessure, of al jaren traint maar een nieuw doel hebt — personal training geeft je de begeleiding die het verschil maakt.
           </p>
           <p className="text-lg text-gray-700">
-            Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek.
+            Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek.
           </p>
         </div>
       </section>

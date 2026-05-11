@@ -1,11 +1,13 @@
 "use client";
 
 import { usePopup } from "../components/PopupContext";
+import { usePricingPopup } from "../components/PricingPopupContext";
 import Script from "next/script";
 import { trackCTAClick } from "../lib/analytics";
 
 export default function MeerInfoPage() {
   const { openPopup } = usePopup();
+  const { openPopup: openPricingPopup } = usePricingPopup();
 
   return (
     <div className="min-h-screen bg-gray-200">
@@ -65,12 +67,12 @@ export default function MeerInfoPage() {
           <div className="text-center">
             <button
               onClick={() => {
-                trackCTAClick('gratis_intake_tarieven', 'meer-info');
-                openPopup();
+                trackCTAClick('pricing_form_tarieven', 'meer-info');
+                openPricingPopup();
               }}
               className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
             >
-              Plan je gratis kennismaking
+              Meer informatie
             </button>
           </div>
         </div>

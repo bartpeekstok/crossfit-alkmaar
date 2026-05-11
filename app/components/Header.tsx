@@ -77,7 +77,7 @@ export default function Header() {
                 <Link href="/meer-info#rooster" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   {t.schedule}
                 </Link>
-                <Link href="/tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
+                <Link href="/meer-info#tarieven" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
                   {t.pricing}
                 </Link>
                 <Link href="/onze-leden" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
@@ -196,7 +196,7 @@ export default function Header() {
             {meerInfoOpen && (
               <div className="pl-4 flex flex-col space-y-2">
                 <Link href="/meer-info#rooster" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.schedule}</Link>
-                <Link href="/tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.pricing}</Link>
+                <Link href="/meer-info#tarieven" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.pricing}</Link>
                 <Link href="/onze-leden" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.ourMembers}</Link>
                 <Link href="/vacatures" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">{t.jobs}</Link>
               </div>

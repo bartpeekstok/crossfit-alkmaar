@@ -219,7 +219,7 @@ export default function StrengthTrainingAlkmaarPage() {
             Nieuw bij strength training? Start met onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> om de basisbewegingen te leren. Daarna sluit je aan bij de reguliere <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> waar je het rooster en de lestijden vindt.
           </p>
           <p className="text-lg text-gray-700">
-            Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te zien welk abonnement bij je past.
+            Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te zien welk abonnement bij je past.
           </p>
         </div>
       </section>

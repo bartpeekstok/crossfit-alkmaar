@@ -6,7 +6,7 @@ import { trackEvent } from "./analytics";
 export const AB_TESTS = {
   tarieven_link: {
     id: "tarieven_link",
-    variants: ["/meer-info#tarieven", "/tarieven"],
+    variants: ["/meer-info#tarieven", "/meer-info#tarieven"],
   },
 } as const;
 

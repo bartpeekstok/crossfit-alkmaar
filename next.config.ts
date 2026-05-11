@@ -47,6 +47,17 @@ const nextConfig: NextConfig = {
   // Redirects from old WordPress site
   async redirects() {
     return [
+      // Tarieven page removed, route naar de tarieven-sectie op meer-info
+      {
+        source: "/tarieven",
+        destination: "/meer-info#tarieven",
+        permanent: true,
+      },
+      {
+        source: "/tarieven/",
+        destination: "/meer-info#tarieven",
+        permanent: true,
+      },
       // Main program pages
       {
         source: "/programmas/28-day-kickstart",

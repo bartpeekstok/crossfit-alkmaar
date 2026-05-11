@@ -270,7 +270,7 @@ export default function BootcampAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe intensief is een training?</h3>
-              <p className="text-gray-600">Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties.</p>
+              <p className="text-gray-600">Elke les duurt 60 minuten en is uitdagend maar schaalbaar. Je bepaalt zelf je intensiteit, de coach zorgt voor de juiste techniek. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Train ik buiten of binnen?</h3>

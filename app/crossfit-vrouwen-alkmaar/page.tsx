@@ -273,7 +273,7 @@ export default function CrossFitVrouwenAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik afvallen met CrossFit?</h3>
-              <p className="text-gray-600">Ja. CrossFit combineert kracht- en conditietraining, waardoor je veel calorieën verbrandt en spiermassa opbouwt. In combinatie met gezonde voeding is het zeer effectief voor gewichtsverlies. Bekijk ook onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
+              <p className="text-gray-600">Ja. CrossFit combineert kracht- en conditietraining, waardoor je veel calorieën verbrandt en spiermassa opbouwt. In combinatie met gezonde voeding is het zeer effectief voor gewichtsverlies. Bekijk ook onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Train ik samen met mannen?</h3>

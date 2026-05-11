@@ -270,7 +270,7 @@ export default function FitnessAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe snel zie ik resultaat?</h3>
-              <p className="text-gray-600">De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
+              <p className="text-gray-600">De meeste leden merken binnen 2-4 weken verschil in energie en kracht. Zichtbare veranderingen volgen vaak na 6-8 weken consistent trainen. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is het geschikt als ik nog nooit heb gesport?</h3>

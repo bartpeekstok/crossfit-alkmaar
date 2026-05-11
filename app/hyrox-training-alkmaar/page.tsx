@@ -274,7 +274,7 @@ export default function HyroxTrainingPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Kan ik ook HYROX trainen zonder mee te doen aan een wedstrijd?</h3>
-              <p className="text-gray-600">Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
+              <p className="text-gray-600">Natuurlijk. Veel leden volgen HYROX-lessen puur voor de training. Het is een geweldige manier om conditie en kracht te combineren. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
             </div>
           </div>
         </div>

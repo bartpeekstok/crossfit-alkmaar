@@ -188,7 +188,7 @@ export default function SmallGroupTrainingAlkmaarPage() {
                 Betaalbaar alternatief voor PT
               </h3>
               <p className="text-gray-700">
-                Profiteer van professionele coaching zonder het prijskaartje van 1-op-1 personal training. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.
+                Profiteer van professionele coaching zonder het prijskaartje van 1-op-1 personal training. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
@@ -306,7 +306,7 @@ export default function SmallGroupTrainingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoeveel kost small group training?</h3>
-              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarievenpagina</Link> voor actuele prijzen. Small group training is aanzienlijk voordeliger dan personal training, terwijl je toch persoonlijke coaching krijgt.</p>
+              <p className="text-gray-600">Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarievenpagina</Link> voor actuele prijzen. Small group training is aanzienlijk voordeliger dan personal training, terwijl je toch persoonlijke coaching krijgt.</p>
             </div>
           </div>
         </div>

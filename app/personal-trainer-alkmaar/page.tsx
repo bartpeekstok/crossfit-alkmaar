@@ -270,7 +270,7 @@ export default function PersonalTrainerAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat kost personal training?</h3>
-              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.</p>
+              <p className="text-gray-600">Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. We bieden losse sessies en pakketten aan. De kennismaking is altijd gratis.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is personal training geschikt voor beginners?</h3>

@@ -270,7 +270,7 @@ export default function SportschoolAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat kost een lidmaatschap?</h3>
-              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarievenpagina</Link>. De kennismaking is altijd gratis.</p>
+              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Bekijk alle opties op onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarievenpagina</Link>. De kennismaking is altijd gratis.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Waar zit CrossFit Alkmaar?</h3>

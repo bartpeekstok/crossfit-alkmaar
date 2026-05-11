@@ -266,7 +266,7 @@ export default function KrachttrainingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat is het verschil met een gewone sportschool?</h3>
-              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
+              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe vaak per week krachttraining?</h3>

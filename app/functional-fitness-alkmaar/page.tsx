@@ -210,7 +210,7 @@ export default function FunctionalFitnessAlkmaarPage() {
             Voor wie is functional fitness?
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            Functional fitness is voor iedereen. Onze leden variëren van 20 tot 70+ jaar. Of je nu wilt afvallen, sterker wilt worden of gewoon fitter door het leven wilt gaan — functional fitness helpt je daarbij. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle mogelijkheden.
+            Functional fitness is voor iedereen. Onze leden variëren van 20 tot 70+ jaar. Of je nu wilt afvallen, sterker wilt worden of gewoon fitter door het leven wilt gaan — functional fitness helpt je daarbij. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle mogelijkheden.
           </p>
           <p className="text-lg text-gray-700 mb-4">
             Iedereen start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link> — een persoonlijk traject waarin je alle basisbewegingen leert in kleine groepen van max 6 personen. Zo bouw je een sterke basis op voordat je in de <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> stapt.

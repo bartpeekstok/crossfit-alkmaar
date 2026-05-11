@@ -216,7 +216,7 @@ export default function AfvallenMetSportAlkmaarPage() {
             Je start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link>: een persoonlijk introductietraject waarin je de basistechnieken leert, je doelen bespreekt en een plan maakt. Zo begin je met vertrouwen en bouw je op in je eigen tempo.
           </p>
           <p className="text-lg text-gray-700">
-            Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek om te ontdekken wat het beste bij je past.
+            Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> of plan direct een gratis kennismakingsgesprek om te ontdekken wat het beste bij je past.
           </p>
         </div>
       </section>

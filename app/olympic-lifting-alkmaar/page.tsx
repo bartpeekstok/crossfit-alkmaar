@@ -216,7 +216,7 @@ export default function OlympicLiftingAlkmaarPage() {
             Nieuwe leden starten met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> om de fundamentele bewegingspatronen te leren, waaronder de basis van olympic lifting. Daarna sluit je aan bij de <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> waar olympic lifting regelmatig in de programmering terugkomt.
           </p>
           <p className="text-lg text-gray-700">
-            Olympic lifting bouwt ook fantastische <Link href="/krachttraining-alkmaar" className="text-blue-900 font-semibold hover:underline">kracht</Link> op. De combinatie van explosieve liften en functionele training maakt je een completere atleet. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.
+            Olympic lifting bouwt ook fantastische <Link href="/krachttraining-alkmaar" className="text-blue-900 font-semibold hover:underline">kracht</Link> op. De combinatie van explosieve liften en functionele training maakt je een completere atleet. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.
           </p>
         </div>
       </section>

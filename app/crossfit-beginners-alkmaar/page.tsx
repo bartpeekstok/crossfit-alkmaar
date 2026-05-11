@@ -46,7 +46,7 @@ export default function CrossFitBeginnersAlkmaarPage() {
                 name: "Hoeveel kost CrossFit voor beginners?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Bekijk onze tarieven op crossfitalkmaar.com/tarieven voor alle opties. De kennismaking is altijd gratis en vrijblijvend.",
+                  text: "Onze tarieven bespreken we tijdens de gratis kennismaking. Dan kunnen we het beste pakket adviseren dat past bij jouw doelen en frequentie.",
                 },
               },
               {
@@ -247,7 +247,7 @@ export default function CrossFitBeginnersAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoeveel kost CrossFit voor beginners?</h3>
-              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. De kennismaking is altijd gratis en vrijblijvend.</p>
+              <p className="text-gray-600">Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> voor alle opties. De kennismaking is altijd gratis en vrijblijvend.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe vaak moet ik trainen?</h3>

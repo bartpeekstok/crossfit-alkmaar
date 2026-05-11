@@ -277,7 +277,7 @@ export default function SportschoolBegeleidingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe ziet de begeleiding eruit?</h3>
-              <p className="text-gray-600">Elke les staat een coach voor de groep die de training uitlegt, voordoet en je persoonlijk corrigeert. Daarnaast heb je elke 90 dagen een check-in met je coach om je voortgang te bespreken. Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
+              <p className="text-gray-600">Elke les staat een coach voor de groep die de training uitlegt, voordoet en je persoonlijk corrigeert. Daarnaast heb je elke 90 dagen een check-in met je coach om je voortgang te bespreken. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> om te starten.</p>
             </div>
           </div>
         </div>

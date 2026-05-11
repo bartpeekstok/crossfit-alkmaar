@@ -277,7 +277,7 @@ export default function GroepstrainingAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Wat kost groepstraining bij CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">Bekijk onze <Link href="/tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> op de website. We bieden verschillende abonnementen aan, van 2x per week tot onbeperkt trainen. Je eerste kennismaking is altijd gratis.</p>
+              <p className="text-gray-600">Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link> op de website. We bieden verschillende abonnementen aan, van 2x per week tot onbeperkt trainen. Je eerste kennismaking is altijd gratis.</p>
             </div>
           </div>
         </div>
