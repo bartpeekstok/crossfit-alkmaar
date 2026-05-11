@@ -43,7 +43,7 @@ export default function KickstartPage() {
                 name: "Wat kost de 28 Day Kickstart?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "De 28 Day Kickstart kost €350 eenmalig voor 12 trainingen in 4 weken. Inclusief een eindgesprek met advies over doorstroming.",
+                  text: "Het tarief van de 28 Day Kickstart bespreken we tijdens je gratis kennismaking. Het programma bestaat uit 12 trainingen in 4 weken en een eindgesprek met advies over doorstroming.",
                 },
               },
               {
@@ -59,7 +59,7 @@ export default function KickstartPage() {
                 name: "Wat gebeurt er na de Kickstart?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Na de Kickstart kun je doorstromen naar onze groepslessen (vanaf €99,95/maand) of BUILD Small Group Training (vanaf €245/maand). Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past.",
+                  text: "Na de Kickstart kun je doorstromen naar onze groepslessen of BUILD Small Group Training. Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past en bespreken we de bijbehorende tarieven.",
                 },
               },
             ],
@@ -179,7 +179,7 @@ export default function KickstartPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost de 28 Day Kickstart?</h3>
-              <p className="text-gray-600">De 28 Day Kickstart kost €350 eenmalig voor 12 trainingen in 4 weken. Inclusief een eindgesprek met advies over doorstroming.</p>
+              <p className="text-gray-600">Het tarief van de 28 Day Kickstart bespreken we tijdens je gratis kennismaking. Het programma bestaat uit 12 trainingen in 4 weken en een eindgesprek met advies over doorstroming.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Is de Kickstart geschikt voor beginners?</h3>
@@ -187,7 +187,7 @@ export default function KickstartPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Wat gebeurt er na de Kickstart?</h3>
-              <p className="text-gray-600">Na de Kickstart kun je doorstromen naar onze groepslessen (vanaf €99,95/maand) of BUILD Small Group Training (vanaf €245/maand). Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past.</p>
+              <p className="text-gray-600">Na de Kickstart kun je doorstromen naar onze groepslessen of BUILD Small Group Training. Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij je past en bespreken we de bijbehorende tarieven.</p>
             </div>
           </div>
         </div>

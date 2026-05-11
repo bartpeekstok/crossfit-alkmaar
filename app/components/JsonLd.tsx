@@ -212,7 +212,7 @@ export default function JsonLd() {
         name: "Wat kost CrossFit Alkmaar?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Groepslessen starten vanaf €99,95 per maand (2x per week). Het populairste abonnement is 3x per week voor €127,50 per maand. Onbeperkt trainen kost €159,95 per maand. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching en 90 day check ins.",
+          text: "Onze abonnementen starten vanaf €99,95 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching en 90 day check ins.",
         },
       },
       {

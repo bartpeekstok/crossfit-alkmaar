@@ -35,7 +35,7 @@ export default function SmallGroupTrainingPage() {
                 name: "Wat kost Small Group Training?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "BUILD Small Group Training kost €245 per maand voor 2x per week of €367,50 voor 3x per week. Inclusief groepslessen en een programma op maat.",
+                  text: "Onze tarieven voor BUILD Small Group Training bespreken we tijdens je gratis kennismaking. Inclusief groepslessen en een programma op maat. Maandelijks opzegbaar.",
                 },
               },
               {
@@ -163,7 +163,7 @@ export default function SmallGroupTrainingPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost Small Group Training?</h3>
-              <p className="text-gray-600">BUILD Small Group Training kost €245 per maand voor 2x per week of €367,50 voor 3x per week. Inclusief groepslessen en een programma op maat.</p>
+              <p className="text-gray-600">Onze tarieven voor BUILD Small Group Training bespreken we tijdens je gratis kennismaking. Inclusief groepslessen en een programma op maat. Maandelijks opzegbaar.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is het verschil met groepslessen?</h3>

@@ -43,7 +43,7 @@ export default function GroepslessenPage() {
                 name: "Wat kosten groepslessen bij CrossFit Alkmaar?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Groepslessen kosten €99,95 per maand voor 2x per week, €127,50 voor 3x per week, of €159,95 voor onbeperkt. Maandelijks opzegbaar.",
+                  text: "Onze abonnementen starten vanaf €99,95 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar.",
                 },
               },
               {
@@ -175,7 +175,7 @@ export default function GroepslessenPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kosten groepslessen bij CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">Groepslessen kosten €99,95 per maand voor 2x per week, €127,50 voor 3x per week, of €159,95 voor onbeperkt. Maandelijks opzegbaar.</p>
+              <p className="text-gray-600">Onze abonnementen starten vanaf €99,95 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="font-bold text-lg text-gray-900 mb-2">Hoe groot zijn de groepen?</h3>
