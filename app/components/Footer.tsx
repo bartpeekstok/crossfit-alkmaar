@@ -117,8 +117,9 @@ export default function Footer() {
       {/* Copyright & Privacy */}
       <div className="max-w-6xl mx-auto mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
         <p>© {new Date().getFullYear()} CrossFit Alkmaar. Alle rechten voorbehouden.</p>
-        <Link 
-          href="/privacy" 
+        <p className="mt-1">CrossFit Alkmaar &middot; KvK 61162825</p>
+        <Link
+          href="/privacy"
           className="text-gray-500 hover:text-white transition mt-2 inline-block"
         >
           Privacy Policy
