@@ -62,7 +62,7 @@ export default function MeerInfoPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
           <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-            Onze abonnementen starten al vanaf €99 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
+            Onze abonnementen starten al vanaf €69 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
           </p>
           <div className="text-center">
             <button

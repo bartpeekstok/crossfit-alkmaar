@@ -212,7 +212,7 @@ export default function JsonLd() {
         name: "Wat kost CrossFit Alkmaar?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Onze abonnementen starten vanaf €99,95 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching en 90 day check ins.",
+          text: "Onze abonnementen starten vanaf €69 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar en inclusief professionele coaching en 90 day check ins.",
         },
       },
       {
