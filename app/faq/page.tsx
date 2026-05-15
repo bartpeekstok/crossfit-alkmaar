@@ -140,6 +140,7 @@ export default function FAQPage() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">Groepslessen</p>
                 <div className="text-gray-600 space-y-1">
+                  <p>1x per week — €69,95</p>
                   <p>10x per maand — €99,95</p>
                   <p>15x per maand — €127,50</p>
                   <p>Onbeperkt — €159,95</p>
