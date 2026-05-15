@@ -1,11 +1,13 @@
 "use client";
 
 import { trackCTAClick } from "../lib/analytics";
+import { usePopup } from "../components/PopupContext";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 
 export default function HyroxPftAlkmaarPage() {
+  const { openPopup } = usePopup();
   return (
     <div className="min-h-screen bg-gray-200">
       <script
@@ -130,23 +132,24 @@ export default function HyroxPftAlkmaarPage() {
             height={270}
             className="mx-auto mb-6"
           />
+          <div className="inline-block bg-blue-900/80 text-white text-sm font-semibold uppercase tracking-wider py-2 px-4 rounded-full mb-4 border border-blue-300">
+            Editie 9 mei 2026 afgelopen
+          </div>
           <p className="text-blue-300 font-bold text-2xl mb-4">Zaterdag 9 mei 2026</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             HYROX Physical Fitness Test
           </h1>
           <p className="text-xl text-gray-200 mb-4">
-            Ontdek waar je staat en in welke divisie je thuishoort. Gratis, bij CrossFit Alkmaar.
+            Op 9 mei 2026 organiseerden we bij CrossFit Alkmaar de officiële HYROX Physical Fitness Test in samenwerking met HYROX HQ. Een geweldige editie.
           </p>
-          <p className="text-gray-300 mb-8">In samenwerking met HYROX HQ</p>
-          <a
-            href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_pft_hero", "hyrox-pft-alkmaar")}
+          <p className="text-gray-300 mb-8">Benieuwd naar onze HYROX-programma's of het volgende event? Plan een gratis kennismaking.</p>
+          <button
+            type="button"
+            onClick={() => { trackCTAClick("hyrox_pft_hero", "hyrox-pft-alkmaar"); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
           >
-            Schrijf je gratis in
-          </a>
+            Plan je gratis kennismaking
+          </button>
         </div>
       </section>
 
@@ -163,7 +166,7 @@ export default function HyroxPftAlkmaarPage() {
             Na afloop krijg je een persoonlijke score en advies over welke divisie het beste bij je past.
           </p>
           <p className="text-lg text-gray-700">
-            CrossFit Alkmaar organiseert deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze nieuwe status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>.
+            CrossFit Alkmaar organiseerde deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>. Dit soort events organiseren we regelmatig — voor leden én niet-leden.
           </p>
         </div>
       </section>
@@ -252,17 +255,15 @@ export default function HyroxPftAlkmaarPage() {
         <div className="absolute inset-0 bg-black/70" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
-          <p className="text-lg text-gray-200 mb-4">Deze PFT organiseren we in samenwerking met HYROX HQ als aftrap van ons HYROX-programma.</p>
-          <p className="text-gray-300 mb-8">Drie weken later organiseren we ook de <Link href="/hyrox-simulatie-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX Simulatie op 30 mei</Link>.</p>
-          <a
-            href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_pft_mid", "hyrox-pft-alkmaar")}
+          <p className="text-lg text-gray-200 mb-4">Deze PFT organiseerden we in samenwerking met HYROX HQ als aftrap van ons <Link href="/hyrox-training-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX-programma</Link>.</p>
+          <p className="text-gray-300 mb-8">Op 30 mei volgde de <Link href="/hyrox-simulatie-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX Simulatie</Link>. Wil je meedoen met de volgende editie? Plan een kennismaking.</p>
+          <button
+            type="button"
+            onClick={() => { trackCTAClick("hyrox_pft_mid", "hyrox-pft-alkmaar"); openPopup(); }}
             className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
           >
-            Schrijf je gratis in
-          </a>
+            Plan je gratis kennismaking
+          </button>
         </div>
       </section>
 
@@ -292,7 +293,7 @@ export default function HyroxPftAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Is de HYROX PFT gratis?</h3>
-              <p className="text-gray-600">Ja, deelname aan de HYROX Physical Fitness Test bij CrossFit Alkmaar op 9 mei is volledig gratis.</p>
+              <p className="text-gray-600">Ja, deelname aan de HYROX Physical Fitness Test bij CrossFit Alkmaar op 9 mei 2026 was volledig gratis. Bij toekomstige edities verwachten we hetzelfde principe.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Moet ik lid zijn van CrossFit Alkmaar om mee te doen?</h3>
@@ -318,20 +319,18 @@ export default function HyroxPftAlkmaarPage() {
       <section className="py-16 px-6 bg-blue-900">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-white mb-4">
-            Doe gratis mee op 9 mei
+            Mis de volgende editie niet
           </h2>
           <p className="text-blue-100 text-lg mb-8">
-            Schrijf je in voor de HYROX Physical Fitness Test en ontdek je niveau. Iedereen is welkom.
+            We organiseren regelmatig HYROX-events en open trainingen. Plan een gratis kennismaking om ons HYROX-programma te ervaren en als eerste te horen van het volgende event.
           </p>
-          <a
-            href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_pft_footer", "hyrox-pft-alkmaar")}
+          <button
+            type="button"
+            onClick={() => { trackCTAClick("hyrox_pft_footer", "hyrox-pft-alkmaar"); openPopup(); }}
             className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
           >
-            Schrijf je gratis in
-          </a>
+            Plan je gratis kennismaking
+          </button>
         </div>
       </section>
     </div>
