@@ -13,36 +13,37 @@ interface KickstartEvent {
   plekkenVrij: number | 'vol';
 }
 
-// Kickstarts starten elke 2 weken op maandag
-// Referentie: 12 januari 2025 was een maandag
+// Kickstarts starten elke 4 weken op maandag
+// Referentie: maandag 8 juni 2026
 function getUpcomingKickstarts(): KickstartEvent[] {
   const now = new Date();
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
 
-  // Vaste referentie: maandag 12 januari 2026
-  const refDate = new Date(2026, 0, 12);
+  // Vaste referentie: maandag 8 juni 2026
+  const refDate = new Date(2026, 5, 8);
 
   // Zoek eerstvolgende kickstart maandag
-  let nextDate = new Date(refDate);
+  const nextDate = new Date(refDate);
   while (nextDate <= today) {
-    nextDate.setDate(nextDate.getDate() + 14);
+    nextDate.setDate(nextDate.getDate() + 28);
   }
 
-  // Tweede kickstart
+  // Tweede kickstart (vier weken later)
   const secondDate = new Date(nextDate);
-  secondDate.setDate(secondDate.getDate() + 14);
+  secondDate.setDate(secondDate.getDate() + 28);
 
   // Bereken dagen tot elke kickstart
   const msPerDay = 1000 * 60 * 60 * 24;
   const daysToFirst = Math.round((nextDate.getTime() - today.getTime()) / msPerDay);
   const daysToSecond = Math.round((secondDate.getTime() - today.getTime()) / msPerDay);
 
-  // Bepaal plekken vrij op basis van dagen
+  // Bepaal plekken vrij op basis van dagen tot start
   function getPlekken(days: number): number | 'vol' {
-    if (days < 2) return 'vol';
+    if (days < 3) return 'vol';
     if (days < 7) return 1;
     if (days < 14) return 2;
     if (days < 21) return 3;
+    if (days < 28) return 4;
     return 5;
   }
 
