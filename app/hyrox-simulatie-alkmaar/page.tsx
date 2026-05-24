@@ -16,7 +16,7 @@ export default function HyroxSimulatieAlkmaarPage() {
             "@type": "SportsEvent",
             name: "HYROX Simulatie Alkmaar",
             description: "Volledige HYROX race simulatie bij CrossFit Alkmaar. 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
-            startDate: "2026-05-30T11:00:00+02:00",
+            startDate: "2026-05-30T09:00:00+02:00",
             endDate: "2026-05-30T17:00:00+02:00",
             eventStatus: "https://schema.org/EventScheduled",
             eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
@@ -110,7 +110,7 @@ export default function HyroxSimulatieAlkmaarPage() {
                 name: "Hoe lang duurt een HYROX Simulatie?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Het evenement duurt van 11:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.",
+                  text: "Het evenement duurt van 09:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.",
                 },
               },
               {
@@ -203,7 +203,7 @@ export default function HyroxSimulatieAlkmaarPage() {
               <svg className="w-6 h-6 text-blue-900 mt-1 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
               <div>
                 <h3 className="font-bold text-lg text-gray-900 mb-2">Datum & tijd</h3>
-                <p className="text-gray-700">Zaterdag 30 mei 2026<br />11:00 – 17:00 uur<br /><span className="text-gray-500 text-sm">Starttijden worden 3 dagen van tevoren bekendgemaakt</span></p>
+                <p className="text-gray-700">Zaterdag 30 mei 2026<br />09:00 – 17:00 uur<br /><span className="text-gray-500 text-sm">Starttijden worden 3 dagen van tevoren bekendgemaakt</span></p>
               </div>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
@@ -298,7 +298,7 @@ export default function HyroxSimulatieAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Hoe lang duurt een HYROX Simulatie?</h3>
-              <p className="text-gray-600">Het evenement duurt van 11:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</p>
+              <p className="text-gray-600">Het evenement duurt van 09:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Welke divisies worden aangeboden?</h3>
