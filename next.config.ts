@@ -44,6 +44,17 @@ const nextConfig: NextConfig = {
     ];
   },
 
+  // Proxy hyrox leaderboard (public Vercel deploy) onder de event-URL
+  async rewrites() {
+    return [
+      {
+        source: "/hyrox-simulatie-alkmaar/:path+",
+        destination:
+          "https://hyrox-sim-cfa.vercel.app/hyrox-simulatie-alkmaar/:path+",
+      },
+    ];
+  },
+
   // Redirects from old WordPress site
   async redirects() {
     return [

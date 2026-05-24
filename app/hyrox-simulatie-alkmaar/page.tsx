@@ -194,6 +194,26 @@ export default function HyroxSimulatieAlkmaarPage() {
         </div>
       </section>
 
+      {/* Live volgen */}
+      <section className="py-12 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="/hyrox-simulatie-alkmaar/startlijst"
+            onClick={() => trackCTAClick("hyrox_sim_startlijst", "hyrox-simulatie-alkmaar")}
+            className="bg-white border-2 border-blue-900 text-blue-900 font-bold text-lg py-4 px-10 rounded-lg hover:bg-blue-50 transition text-center"
+          >
+            Bekijk startlijst
+          </a>
+          <a
+            href="/hyrox-simulatie-alkmaar/leaderboard"
+            onClick={() => trackCTAClick("hyrox_sim_leaderboard", "hyrox-simulatie-alkmaar")}
+            className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-lg py-4 px-10 rounded-lg transition text-center"
+          >
+            Live leaderboard
+          </a>
+        </div>
+      </section>
+
       {/* Praktische info */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto">
