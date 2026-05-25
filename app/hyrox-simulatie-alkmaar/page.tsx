@@ -149,15 +149,22 @@ export default function HyroxSimulatieAlkmaarPage() {
           <p className="text-xl text-gray-200 mb-8">
             Een volledige HYROX race bij CrossFit Alkmaar.<br />Open en Pro divisie. 8 rondes, 8 stations, 1 finish.
           </p>
-          <a
-            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_sim_hero", "hyrox-simulatie-alkmaar")}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block"
-          >
-            Schrijf je nu in
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/hyrox-simulatie-alkmaar/startlijst"
+              onClick={() => trackCTAClick("hyrox_sim_hero_startlijst", "hyrox-simulatie-alkmaar")}
+              className="bg-transparent border-2 border-white text-white font-bold text-xl py-5 px-12 rounded-lg hover:bg-white/10 transition cursor-pointer inline-block text-center"
+            >
+              Bekijk startlijst
+            </a>
+            <a
+              href="/hyrox-simulatie-alkmaar/leaderboard"
+              onClick={() => trackCTAClick("hyrox_sim_hero_leaderboard", "hyrox-simulatie-alkmaar")}
+              className="bg-blue-900 hover:bg-blue-950 text-white font-bold text-xl py-5 px-12 rounded-lg transition cursor-pointer inline-block text-center"
+            >
+              Live leaderboard
+            </a>
+          </div>
         </div>
       </section>
 
@@ -264,15 +271,22 @@ export default function HyroxSimulatieAlkmaarPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
           <p className="text-lg text-gray-200 mb-8">Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
-          <a
-            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_sim_mid", "hyrox-simulatie-alkmaar")}
-            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
-          >
-            Schrijf je nu in
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/hyrox-simulatie-alkmaar/startlijst"
+              onClick={() => trackCTAClick("hyrox_sim_mid_startlijst", "hyrox-simulatie-alkmaar")}
+              className="bg-transparent border-2 border-white text-white font-bold text-xl py-5 px-12 rounded-lg hover:bg-white/10 transition cursor-pointer inline-block text-center"
+            >
+              Bekijk startlijst
+            </a>
+            <a
+              href="/hyrox-simulatie-alkmaar/leaderboard"
+              onClick={() => trackCTAClick("hyrox_sim_mid_leaderboard", "hyrox-simulatie-alkmaar")}
+              className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block text-center"
+            >
+              Live leaderboard
+            </a>
+          </div>
         </div>
       </section>
 
@@ -335,17 +349,24 @@ export default function HyroxSimulatieAlkmaarPage() {
             Doe mee op 30 mei
           </h2>
           <p className="text-blue-100 text-lg mb-8">
-            Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.
+            Volg de HYROX Simulatie bij CrossFit Alkmaar live.
           </p>
-          <a
-            href="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => trackCTAClick("hyrox_sim_footer", "hyrox-simulatie-alkmaar")}
-            className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block"
-          >
-            Schrijf je nu in
-          </a>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="/hyrox-simulatie-alkmaar/startlijst"
+              onClick={() => trackCTAClick("hyrox_sim_footer_startlijst", "hyrox-simulatie-alkmaar")}
+              className="bg-transparent border-2 border-white text-white font-bold text-xl py-5 px-12 rounded-lg hover:bg-white/10 transition cursor-pointer inline-block text-center"
+            >
+              Bekijk startlijst
+            </a>
+            <a
+              href="/hyrox-simulatie-alkmaar/leaderboard"
+              onClick={() => trackCTAClick("hyrox_sim_footer_leaderboard", "hyrox-simulatie-alkmaar")}
+              className="bg-white text-blue-900 font-bold text-xl py-5 px-12 rounded-lg hover:bg-gray-100 transition cursor-pointer inline-block text-center"
+            >
+              Live leaderboard
+            </a>
+          </div>
         </div>
       </section>
     </div>
