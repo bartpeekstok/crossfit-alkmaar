@@ -43,13 +43,10 @@ export default function HomePage() {
         <img src="/images/CFA-juni-03-community.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Sporten werkt pas als je het volhoudt. Bij CrossFit Alkmaar word je gekend, begeleid en gemist als je er niet bent.
+            Sporten werkt pas als je het volhoudt.
           </h1>
-          <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Kleine groepen, vaste coaches die jouw niveau kennen, en trainingen die opbouwen over weken en maanden.
-          </p>
-          <p className="text-lg mb-6 text-gray-400">
-            Of je nu net begint of al jaren sport, hier bouw je aan iets wat je jarenlang volhoudt, met mensen die je missen als je er niet bent.
+          <p className="text-xl md:text-2xl mb-8 text-gray-300">
+            Kleine groepen, vaste coaches, en mensen die je missen als je er niet bent.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
