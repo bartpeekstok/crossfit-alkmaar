@@ -65,7 +65,7 @@ export default function OnzeLedenPage() {
             Onze Leden
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Echte verhalen van echte mensen. Ontdek waarom onze leden graag bij CrossFit Alkmaar trainen.
+            Mensen die hier al jaren trainen. En vertellen waarom ze blijven.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'onze-leden'); openPopup(); }}

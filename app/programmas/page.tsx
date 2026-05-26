@@ -23,11 +23,8 @@ export default function HomePage() {
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Word sterker, beweeg beter, voel je fitter
           </h1>
-          <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Professionele begeleiding in kleine groepen. Schaalbaar op elk niveau.
-          </p>
-          <p className="text-lg mb-8 text-gray-400">
-            Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
+          <p className="text-xl md:text-2xl mb-8 text-gray-300">
+            Trainen dat je volhoudt: in kleine groepen, met coaches die je kennen.
           </p>
           <button
             onClick={() => setPopupOpen(true)}
@@ -99,7 +96,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-200">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
