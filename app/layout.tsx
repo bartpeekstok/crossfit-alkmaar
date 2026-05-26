@@ -42,7 +42,7 @@ import ConditionalChrome from "./components/ConditionalChrome";
 
 export const metadata: Metadata = {
   title: {
-    default: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
+    default: "CrossFit Alkmaar | Sportschool waar je het wél volhoudt",
     template: "%s | CrossFit Alkmaar",
   },
   description:
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     locale: "nl_NL",
     url: "https://crossfitalkmaar.com",
     siteName: "CrossFit Alkmaar",
-    title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
+    title: "CrossFit Alkmaar | Sportschool waar je het wél volhoudt",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis kennismaking!",
     images: [
@@ -97,7 +97,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "CrossFit Alkmaar | De leukste sportschool van Alkmaar, hier word je wél fit!",
+    title: "CrossFit Alkmaar | Sportschool waar je het wél volhoudt",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
     images: ["https://crossfitalkmaar.com/images/logo_dark_square.png"],
