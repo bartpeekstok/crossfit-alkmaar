@@ -43,13 +43,13 @@ export default function HomePage() {
         <img src="/images/CFA-juni-03-community.jpg" alt="CrossFit Alkmaar sportschool - groepstraining met professionele coaches" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Fitter, sterker en vol energie
+            Sporten werkt pas als je het volhoudt. Bij CrossFit Alkmaar word je gekend, begeleid en gemist als je er niet bent.
           </h1>
           <p className="text-xl md:text-2xl mb-4 text-gray-300">
-            Kleine groepen, professionele coaches en schaalbaar op elk niveau.
+            Kleine groepen, vaste coaches die jouw niveau kennen, en trainingen die opbouwen over weken en maanden.
           </p>
           <p className="text-lg mb-6 text-gray-400">
-            Of je nu 30, 50 of 60+ bent, lang niet hebt gesport of weer wilt beginnen: wij helpen je veilig en effectief sterker te worden.
+            Of je nu net begint of al jaren sport, hier bouw je aan iets wat je jarenlang volhoudt, met mensen die je missen als je er niet bent.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
@@ -100,7 +100,7 @@ export default function HomePage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Trainingen voor iedereen en elk niveau.</p>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28 day kickstart</h3>
@@ -184,7 +184,8 @@ export default function HomePage() {
       {/* Resultaten */}
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
+          <h2 className="text-3xl font-bold text-center mb-4">CrossFit Alkmaar in cijfers</h2>
+          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Een plek waar mensen jarenlang blijven. Dat zie je terug in de cijfers.</p>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
             <a
               href="https://www.google.com/search?q=crossfit+alkmaar#lrd=0x47cf573834f8b5b7:0x4a55c3c9c9a67e0e,1"
@@ -210,7 +211,7 @@ export default function HomePage() {
             </div>
             <div className="text-center">
               <div className="text-5xl font-bold text-blue-900 mb-2">15K</div>
-              <p className="text-gray-600">Bakjes koffie per jaar ☕</p>
+              <p className="text-gray-600">Bakjes koffie per jaar ☕<br /><span className="text-xs text-gray-500">de training stopt niet bij de timer</span></p>
             </div>
           </div>
         </div>
