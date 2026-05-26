@@ -28,7 +28,7 @@ export default function MeerInfoPage() {
             Meer info
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Onze coaches nemen contact op als je een keer wegblijft. Niemand verdwijnt hier zomaar.
+            Trainen dat je volhoudt: in kleine groepen, met coaches die je niveau zien.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'meer-info'); openPopup(); }}
@@ -64,7 +64,7 @@ export default function MeerInfoPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            Wat je betaalt, gaat naar coaches die je bij naam kennen, trainingen die op jouw niveau worden afgestemd, en een community waar je niet anoniem verdwijnt. Maandelijks opzegbaar, geen jaarcontract. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking.
+            Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Maandelijks opzegbaar.
           </p>
           <div className="text-center">
             <button
