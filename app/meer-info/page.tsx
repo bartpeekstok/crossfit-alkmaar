@@ -24,9 +24,12 @@ export default function MeerInfoPage() {
       >
         <img src="/images/meer-info-header.jpg" alt="CrossFit Alkmaar - meer informatie over onze sportschool en programma's" className="sr-only" width={1200} height={600} />
         <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Meer info
           </h1>
+          <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Trainen bij CrossFit Alkmaar past in bijna elk schema. Van vroege ochtendlessen tot avondtrainingen, er is altijd een moment dat bij jou werkt. En als je een keer wegblijft? Onze coaches nemen contact op. Niemand verdwijnt hier zomaar.
+          </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'meer-info'); openPopup(); }}
             className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
@@ -61,8 +64,8 @@ export default function MeerInfoPage() {
       <section id="tarieven" className="py-16 px-6 bg-gray-200 scroll-mt-20">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
-          <p className="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
-            Onze abonnementen starten al vanaf €69 per maand. Benieuwd naar alle mogelijkheden en wat het beste bij jou past?
+          <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
+            Wat je betaalt, gaat naar coaches die je bij naam kennen, trainingen die op jouw niveau worden afgestemd, en een community waar je niet anoniem verdwijnt. Maandelijks opzegbaar, geen jaarcontract. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking.
           </p>
           <div className="text-center">
             <button

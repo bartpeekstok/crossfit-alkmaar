@@ -46,7 +46,7 @@ export default function HomePage() {
             Sporten werkt pas als je het volhoudt.
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300">
-            Kleine groepen, vaste coaches, en mensen die je missen als je er niet bent.
+            Kleine groepen, coaches die je bij naam kennen, en mensen die je missen als je er niet bent.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'home'); openPopup(); }}
