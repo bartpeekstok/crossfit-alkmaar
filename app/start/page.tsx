@@ -164,28 +164,31 @@ export default function StartPage() {
                     We bellen je binnen 24 uur op een werkdag terug
                   </p>
                 </div>
-                <div className="p-2">
-                  <iframe
-                    src={GHL_FORM_URL}
-                    style={{ width: "100%", minHeight: "520px", border: "none", borderRadius: "3px" }}
-                    id={`inline-${GHL_FORM_ID}`}
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Landingspagina form"
-                    data-height="undefined"
-                    data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
-                    data-form-id={GHL_FORM_ID}
-                    title="Landingspagina form"
-                  />
-                  <Script
-                    src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
-                    strategy="afterInteractive"
-                  />
+                <iframe
+                  src={GHL_FORM_URL}
+                  style={{ width: "100%", minHeight: "480px", border: "none", display: "block" }}
+                  id={`inline-${GHL_FORM_ID}`}
+                  data-layout="{'id':'INLINE'}"
+                  data-trigger-type="alwaysShow"
+                  data-trigger-value=""
+                  data-activation-type="alwaysActivated"
+                  data-activation-value=""
+                  data-deactivation-type="neverDeactivate"
+                  data-deactivation-value=""
+                  data-form-name="Landingspagina form"
+                  data-height="undefined"
+                  data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
+                  data-form-id={GHL_FORM_ID}
+                  title="Landingspagina form"
+                />
+                <Script
+                  src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
+                  strategy="afterInteractive"
+                />
+                <div style={{ backgroundColor: "#1e3a8a", padding: "12px 20px", textAlign: "center" }}>
+                  <p style={{ color: "#ffffff", margin: 0, fontSize: "12px", letterSpacing: "0.3px" }}>
+                    Geen verplichtingen · Geen kosten · Geen verkoopgesprek
+                  </p>
                 </div>
               </div>
               <p className="text-center text-gray-300 text-xs mt-3">
