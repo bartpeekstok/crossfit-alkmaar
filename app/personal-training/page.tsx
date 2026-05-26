@@ -85,7 +85,7 @@ export default function PersonalTrainingPage() {
             Personal Training
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Eén-op-één begeleiding voor maximale resultaten. Volledig afgestemd op jouw doelen.
+            Eén coach. Jouw plan. Onderdeel van een community.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'personal-training'); openPopup(); }}
@@ -108,7 +108,7 @@ export default function PersonalTrainingPage() {
               Je coach stelt een programma samen dat perfect bij jou past en stuurt bij waar nodig. Zo behaal je sneller resultaat dan bij groepstrainingen.
             </p>
             <p>
-              Personal training is ideaal voor mensen die specifieke doelen hebben, extra begeleiding nodig hebben, of simpelweg het beste uit zichzelf willen halen.
+              Het verschil met een losse personal trainer: bij ons blijf je onderdeel van een community. Wil je doorstromen naar groepslessen of BUILD, dan ken je de coaches al. Geen nieuwe naam op een lijst, maar een bekend gezicht.
             </p>
           </div>
         </div>
