@@ -86,7 +86,7 @@ export default function SmallGroupTrainingPage() {
             Small Group Training
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Train in een kleine groep van maximaal 6 personen. Persoonlijke aandacht, samen trainen.
+            Semi-personal training in een vaste groep van zes. Geen drukke fitnessklas, geen losse personal trainer.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'small-group-training'); openPopup(); }}
@@ -108,8 +108,11 @@ export default function SmallGroupTrainingPage() {
             <p className="mb-4">
               Elke sessie wordt begeleid door een ervaren coach die iedereen individueel in de gaten houdt. Je krijgt feedback op je techniek en het programma wordt aangepast aan jouw niveau.
             </p>
-            <p>
+            <p className="mb-4">
               Ideaal voor mensen die meer begeleiding willen dan in een reguliere groepsles, maar ook genieten van de sociale kant van samen sporten.
+            </p>
+            <p>
+              We houden de groepen bewust klein. Jouw coach kent je na drie sessies: je techniek, je niveau, en wanneer je vastloopt. Dat lukt niet in een groep van dertig.
             </p>
           </div>
         </div>
@@ -123,6 +126,9 @@ export default function SmallGroupTrainingPage() {
           </div>
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Tim (10 jaar lid): 'Ik zit een stuk lekkerder in m'n vel, ik voel me fit en m'n hartslag in rust is ook omlaaggegaan, dus ik voel me er écht heel goed bij!'
+          </p>
+          <p className="text-center text-gray-700 mt-3 text-base">
+            Tien jaar lid. Dat zegt meer over de aanpak dan welk verkooppraatje ook.
           </p>
         </div>
       </section>
@@ -142,7 +148,7 @@ export default function SmallGroupTrainingPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Programma op maat</h3>
-              <p className="text-gray-600">Het trainingsschema wordt aangepast aan het niveau van de groep.</p>
+              <p className="text-gray-600">Je schema bouwt op over weken en maanden. Wat je in week één doet, is de basis voor wat je in maand drie kunt.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Voordeliger dan personal training</h3>
