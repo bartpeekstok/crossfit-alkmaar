@@ -102,7 +102,7 @@ export default function KickstartPage() {
             28 day kickstart
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            De perfecte start naar een fitter en sterker leven. In 4 weken bouw je een sterke basis op.
+            Hier begint iedereen. Niet als proefperiode, maar als fundament voor de jaren daarna.
           </p>
           <button
             onClick={() => { trackCTAClick('claim_plek_hero', 'kickstart'); openPopup(); }}
@@ -125,7 +125,7 @@ export default function KickstartPage() {
               Je traint in een kleine groep van maximaal 6 personen, zodat je persoonlijke aandacht krijgt. We nemen de tijd om alles goed uit te leggen en te oefenen.
             </p>
             <p>
-              Na de Kickstart kun je met vertrouwen doorstromen naar ons BUILD programma of de groepslessen. Tijdens een afsluitend adviesgesprek kijken we samen wat het beste bij jou past.
+              De Kickstart is geen losse module, het is je start. Na vier weken weten we wat jouw niveau is, wat je nodig hebt, en hoe we je verder helpen: in small group training, in onze grotere groepslessen, met personal training, of een combinatie daarvan. Dat bespreken we samen aan het eind.
             </p>
           </div>
         </div>
