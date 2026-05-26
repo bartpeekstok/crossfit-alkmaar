@@ -94,7 +94,7 @@ export default function GroepslessenPage() {
             Groepslessen
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Samen trainen, samen groeien. Gevarieerde workouts in een motiverende groep.
+            Geen anonieme drukke fitnessklas. Train met mensen die je niveau kennen en merken als je er niet bent.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'groepslessen'); openPopup(); }}
@@ -132,6 +132,9 @@ export default function GroepslessenPage() {
           <p className="text-center text-gray-900 mt-6 text-xl font-medium italic">
             Malou (9 jaar lid): 'Ik ben door het sporten bij CFA meer gaan beseffen hoe fijn het is om lekker in je vel te zitten.'
           </p>
+          <p className="text-center text-gray-700 mt-3 text-base">
+            Negen jaar. Dat is geen toeval, maar wat er gebeurt als je traint op een plek waar mensen je kennen.
+          </p>
         </div>
       </section>
 
@@ -154,7 +157,7 @@ export default function GroepslessenPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-3">✓ Motiverende groepssfeer</h3>
-              <p className="text-gray-600">De energie van samen trainen helpt je om door te zetten en het beste uit jezelf te halen.</p>
+              <p className="text-gray-600">Vaste gezichten die jouw progressie zien en je aansporen. Mensen die merken als je er niet bent.</p>
             </div>
           </div>
         </div>
