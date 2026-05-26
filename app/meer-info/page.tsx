@@ -28,7 +28,7 @@ export default function MeerInfoPage() {
             Meer info
           </h1>
           <p className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Trainen dat je volhoudt: in kleine groepen, met coaches die je niveau zien.
+            Trainen dat je volhoudt: in kleine groepen, met coaches die je kennen.
           </p>
           <button
             onClick={() => { trackCTAClick('gratis_intake_hero', 'meer-info'); openPopup(); }}
