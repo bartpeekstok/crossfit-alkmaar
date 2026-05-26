@@ -64,7 +64,7 @@ export default function MeerInfoPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold mb-4 text-center">Tarieven</h2>
           <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-            Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Maandelijks opzegbaar.
+            Al onze abonnementen zijn maandelijks opzegbaar. Wij zorgen dat je blijft. Wat bij jou past, bespreken we tijdens je gratis kennismaking.
           </p>
           <div className="text-center">
             <button
