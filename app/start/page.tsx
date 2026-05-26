@@ -166,7 +166,7 @@ export default function StartPage() {
                 </div>
                 <iframe
                   src={GHL_FORM_URL}
-                  style={{ width: "100%", minHeight: "480px", border: "none", display: "block" }}
+                  style={{ width: "100%", minHeight: "420px", border: "none", display: "block" }}
                   id={`inline-${GHL_FORM_ID}`}
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -185,8 +185,11 @@ export default function StartPage() {
                   src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
                   strategy="afterInteractive"
                 />
-                <div style={{ backgroundColor: "#1e3a8a", padding: "12px 20px", textAlign: "center" }}>
-                  <p style={{ color: "#ffffff", margin: 0, fontSize: "12px", letterSpacing: "0.3px" }}>
+                <div style={{ backgroundColor: "#1e3a8a", padding: "16px 20px", textAlign: "center" }}>
+                  <p style={{ fontSize: "16px", fontWeight: "bold", color: "#ffffff", textTransform: "uppercase", margin: 0, letterSpacing: "0.5px" }}>
+                    Vrijblijvend & gratis
+                  </p>
+                  <p style={{ color: "#ffffff", marginTop: "4px", marginBottom: 0, fontSize: "13px", opacity: 0.9 }}>
                     Geen verplichtingen · Geen kosten · Geen verkoopgesprek
                   </p>
                 </div>
