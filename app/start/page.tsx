@@ -14,12 +14,10 @@ function CTAButton({
   label = "Plan je gratis intake",
   source,
   variant = "primary",
-  onClick,
 }: {
   label?: string;
   source: string;
   variant?: "primary" | "white";
-  onClick: () => void;
 }) {
   const base =
     "inline-block font-semibold py-4 px-8 rounded-lg transition cursor-pointer text-center";
@@ -28,16 +26,13 @@ function CTAButton({
       ? "bg-white text-blue-900 hover:bg-gray-100"
       : "bg-blue-900 text-white hover:bg-blue-950";
   return (
-    <button
-      type="button"
-      onClick={() => {
-        trackCTAClick(source, "start");
-        onClick();
-      }}
+    <a
+      href="#aanmelden"
+      onClick={() => trackCTAClick(source, "start")}
       className={`${base} ${styles}`}
     >
       {label}
-    </button>
+    </a>
   );
 }
 
@@ -114,9 +109,9 @@ export default function StartPage() {
         </div>
       </header>
 
-      {/* 1. HERO */}
+      {/* 1. HERO + INLINE FORM (2-kolom op desktop) */}
       <section
-        className="relative text-white py-20 px-6 min-h-[560px] flex items-center"
+        className="relative text-white py-16 px-6"
         role="img"
         aria-label="CrossFit Alkmaar - de sportschool waar het je wel lukt"
       >
@@ -128,29 +123,75 @@ export default function StartPage() {
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-black/65" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Sportschool werkt niet voor jou?
-            <br />
-            <span className="text-blue-300">Bij ons lukt het wél.</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-100 mb-8 max-w-2xl mx-auto">
-            Begeleiding in kleine groepen, met coaches die je naam kennen en je
-            naar resultaat leiden. Geen anonieme gym, maar een plek waar je
-            terugkomt omdat het wérkt.
-          </p>
-          <CTAButton source="hero_cta" onClick={openForm} />
-          <p className="text-sm text-gray-200 mt-3">
-            30 seconden invullen, geen verplichtingen
-          </p>
-          {/* Trust indicators */}
-          <div className="mt-10 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-gray-200">
-            <span>Sinds 2013 in Alkmaar</span>
-            <span className="hidden sm:inline">•</span>
-            <span>7 professionele coaches</span>
-            <span className="hidden sm:inline">•</span>
-            <span>273+ 5★ Google reviews</span>
+        <div className="absolute inset-0 bg-black/70" />
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-start">
+            {/* Tekst-kolom */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Sportschool werkt niet voor jou?
+                <br />
+                <span className="text-blue-300">Bij ons lukt het wél.</span>
+              </h1>
+              <p className="text-lg md:text-xl text-gray-100 mb-4">
+                Begeleiding in kleine groepen, met coaches die je naam kennen en je naar resultaat leiden.
+              </p>
+              <p className="text-base text-blue-200 italic mb-6">
+                Gemiddelde leeftijd hier: 35. Geen sporters, gewone mensen.
+              </p>
+              <div className="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 text-sm text-gray-200 mb-6">
+                <span>✓ Geen ervaring nodig</span>
+                <span>✓ Elke leeftijd</span>
+                <span>✓ Geen verkoopgesprek</span>
+              </div>
+              {/* Trust indicators */}
+              <div className="flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2 text-sm text-gray-300 pt-4 border-t border-gray-700">
+                <span>Sinds 2013 in Alkmaar</span>
+                <span className="hidden sm:inline">•</span>
+                <span>7 professionele coaches</span>
+                <span className="hidden sm:inline">•</span>
+                <span>273+ 5★ Google reviews</span>
+              </div>
+            </div>
+            {/* Form-kolom */}
+            <div id="aanmelden" className="scroll-mt-20">
+              <div className="bg-white rounded-xl shadow-2xl overflow-hidden">
+                <div style={{ backgroundColor: "#1e3a8a", padding: "16px 20px", textAlign: "center" }}>
+                  <h2 style={{ fontSize: "18px", fontWeight: "bold", color: "#ffffff", textTransform: "uppercase", margin: 0, letterSpacing: "0.5px" }}>
+                    Plan je gratis intake
+                  </h2>
+                  <p style={{ color: "#ffffff", marginTop: "4px", marginBottom: 0, fontSize: "13px", opacity: 0.9 }}>
+                    We bellen je binnen 24 uur op een werkdag terug
+                  </p>
+                </div>
+                <div className="p-2">
+                  <iframe
+                    src={GHL_FORM_URL}
+                    style={{ width: "100%", minHeight: "520px", border: "none", borderRadius: "3px" }}
+                    id={`inline-${GHL_FORM_ID}`}
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Landingspagina form"
+                    data-height="undefined"
+                    data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
+                    data-form-id={GHL_FORM_ID}
+                    title="Landingspagina form"
+                  />
+                  <Script
+                    src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
+                    strategy="afterInteractive"
+                  />
+                </div>
+              </div>
+              <p className="text-center text-gray-300 text-xs mt-3">
+                30 seconden invullen · Geen verplichtingen · Geen kosten
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -188,112 +229,14 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 3. DE CFA-AANPAK: 3 PIJLERS */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
-            Onze aanpak: leuk, veilig, effectief
-          </h2>
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Leuk */}
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Leuk</h3>
-              <p className="text-gray-700">
-                Je traint in een kleine groep mensen die jou kennen en
-                aanmoedigen. Geen verveling, geen herhaling. Elke training is
-                anders. Je komt terug omdat je het léuk vindt, niet omdat je
-                moet.
-              </p>
-            </div>
-            {/* Veilig */}
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Veilig</h3>
-              <p className="text-gray-700">
-                Onze coaches kijken mee bij elke beweging. Elke oefening wordt
-                aangepast aan jouw niveau en lichaam. Beginnen kan op iedere
-                leeftijd, met of zonder ervaring. Zonder blessures en zonder
-                stress.
-              </p>
-            </div>
-            {/* Effectief */}
-            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
-              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Effectief</h3>
-              <p className="text-gray-700">
-                Twee tot drie keer per week is genoeg. Je traint kracht én
-                conditie in één sessie van een uur. Combineer dat met onze
-                voedingsbegeleiding en je ziet binnen weken verandering.
-              </p>
-            </div>
-          </div>
-          <div className="text-center mt-12">
-            <CTAButton source="aanpak_cta" onClick={openForm} />
-          </div>
-        </div>
-      </section>
-
-      {/* 3b. INSIDE THE BOX VIDEO */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Zo ziet een intake bij ons eruit
-          </h2>
-          <p className="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto">
-            Een rustig kennismakingsgesprek van 30 minuten. We luisteren naar jouw verhaal en doelen, jij ziet de gym en het team. Geen verkooppraatje, geen druk.
-          </p>
-          <div className="rounded-lg overflow-hidden shadow-2xl aspect-video">
-            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
-          </div>
-          <div className="text-center mt-10">
-            <CTAButton source="post_video_cta" onClick={openForm} />
-            <p className="text-sm text-gray-600 mt-3">
-              30 seconden invullen, geen verplichtingen
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 3c. GOOGLE REVIEWS WIDGET */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <Script
-            src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js"
-            strategy="lazyOnload"
-          />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: "100%", width: "100%" }}
-            title="Google Reviews"
-          />
-        </div>
-      </section>
-
-      {/* 4. SOCIAL PROOF: TESTIMONIALS */}
+      {/* 2b. SOCIAL PROOF: TESTIMONIALS (omhoog verplaatst, direct na herkenning) */}
       <section className="py-16 px-6 bg-white">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Anderen lukte het ook
           </h2>
           <p className="text-lg text-gray-700 mb-12 text-center max-w-2xl mx-auto">
-            Echte verhalen van mensen die net als jij aarzelden en blij zijn
-            dat ze toch zijn begonnen.
+            Echte verhalen van mensen die net als jij aarzelden en blij zijn dat ze toch zijn begonnen.
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             {[
@@ -350,8 +293,105 @@ export default function StartPage() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <CTAButton source="testimonials_cta" onClick={openForm} />
+            <CTAButton source="testimonials_cta" />
           </div>
+        </div>
+      </section>
+
+      {/* 3. DE CFA-AANPAK: 3 PIJLERS */}
+      <section className="py-16 px-6 bg-gray-200">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+            Onze aanpak: leuk, veilig, effectief
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* Leuk */}
+            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Leuk</h3>
+              <p className="text-gray-700">
+                Je traint in een kleine groep mensen die jou kennen en
+                aanmoedigen. Geen verveling, geen herhaling. Elke training is
+                anders. Je komt terug omdat je het léuk vindt, niet omdat je
+                moet.
+              </p>
+            </div>
+            {/* Veilig */}
+            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Veilig</h3>
+              <p className="text-gray-700">
+                Onze coaches kijken mee bij elke beweging. Elke oefening wordt
+                aangepast aan jouw niveau en lichaam. Beginnen kan op iedere
+                leeftijd, met of zonder ervaring. Zonder blessures en zonder
+                stress.
+              </p>
+            </div>
+            {/* Effectief */}
+            <div className="bg-white p-8 rounded-lg shadow-sm text-center">
+              <div className="w-14 h-14 bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Effectief</h3>
+              <p className="text-gray-700">
+                Twee tot drie keer per week is genoeg. Je traint kracht én
+                conditie in één sessie van een uur. Combineer dat met onze
+                voedingsbegeleiding en je ziet binnen weken verandering.
+              </p>
+            </div>
+          </div>
+          <div className="text-center mt-12">
+            <CTAButton source="aanpak_cta" />
+          </div>
+        </div>
+      </section>
+
+      {/* 3b. INSIDE THE BOX VIDEO */}
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
+            Zo ziet een intake bij ons eruit
+          </h2>
+          <p className="text-lg text-gray-700 mb-8 text-center max-w-2xl mx-auto">
+            Een rustig kennismakingsgesprek van 30 minuten. We luisteren naar jouw verhaal en doelen, jij ziet de gym en het team. Geen verkooppraatje, geen druk.
+          </p>
+          <div className="rounded-lg overflow-hidden shadow-2xl aspect-video">
+            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Inside the Box: CrossFit Alkmaar" />
+          </div>
+          <div className="text-center mt-10">
+            <CTAButton source="post_video_cta" />
+            <p className="text-sm text-gray-600 mt-3">
+              30 seconden invullen, geen verplichtingen
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 3c. GOOGLE REVIEWS WIDGET */}
+      <section className="py-16 px-6 bg-gray-100">
+        <div className="max-w-4xl mx-auto">
+          <Script
+            src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js"
+            strategy="lazyOnload"
+          />
+          <iframe
+            className="lc_reviews_widget"
+            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
+            frameBorder="0"
+            scrolling="no"
+            style={{ minWidth: "100%", width: "100%" }}
+            title="Google Reviews"
+          />
         </div>
       </section>
 
@@ -447,50 +487,21 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* 8. INLINE FORM (hoofdconversie zonder klikdrempel) */}
-      <section id="aanmelden" className="py-16 px-6 bg-blue-900 scroll-mt-4">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 text-center">
-            Plan je gratis intake
+      {/* 8. CTA-card (was inline form, vervangen omdat form nu in hero staat) */}
+      <section className="py-16 px-6 bg-blue-900">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+            Klaar om te beginnen?
           </h2>
-          <p className="text-blue-100 text-lg text-center mb-2">
-            We bellen je binnen 24 uur op een werkdag terug.
+          <p className="text-blue-100 text-lg mb-2">
+            Plan je gratis intake. Wij bellen je binnen 24 uur op een werkdag terug.
           </p>
-          <p className="text-blue-200 text-sm text-center mb-2">
-            Geen verplichtingen. Geen kosten. Geen sales-praatje.
-          </p>
-          <p className="text-blue-200 text-sm text-center mb-8">
+          <p className="text-blue-200 text-sm mb-8">
             Kickstart-groepen blijven klein (max 6 personen).
           </p>
-          <div className="bg-white rounded-xl shadow-2xl overflow-hidden p-2">
-            <iframe
-              src={GHL_FORM_URL}
-              style={{ width: "100%", minHeight: "560px", border: "none", borderRadius: "3px" }}
-              id={`inline-${GHL_FORM_ID}`}
-              data-layout="{'id':'INLINE'}"
-              data-trigger-type="alwaysShow"
-              data-trigger-value=""
-              data-activation-type="alwaysActivated"
-              data-activation-value=""
-              data-deactivation-type="neverDeactivate"
-              data-deactivation-value=""
-              data-form-name="Landingspagina form"
-              data-height="undefined"
-              data-layout-iframe-id={`inline-${GHL_FORM_ID}`}
-              data-form-id={GHL_FORM_ID}
-              title="Landingspagina form"
-            />
-            <Script
-              src="https://ghl.crossfitalkmaar.com/js/form_embed.js"
-              strategy="afterInteractive"
-            />
-          </div>
-          <p className="text-blue-100 text-xs text-center mt-4">
-            Door het formulier te versturen ga je akkoord met onze{" "}
-            <Link href="/privacy" className="underline hover:text-white">
-              privacy policy
-            </Link>
-            .
+          <CTAButton label="Plan je gratis intake" source="bottom_cta" variant="white" />
+          <p className="text-blue-100 text-xs mt-4">
+            Geen verplichtingen · Geen kosten · Geen verkoopgesprek
           </p>
         </div>
       </section>
@@ -545,7 +556,7 @@ export default function StartPage() {
             </div>
           </div>
           <div className="text-center mt-12">
-            <CTAButton source="locatie_cta" onClick={openForm} />
+            <CTAButton source="locatie_cta" />
           </div>
         </div>
       </section>
@@ -593,7 +604,7 @@ export default function StartPage() {
             </div>
           </div>
           <div className="text-center mb-4">
-            <CTAButton label="Plan je gratis intake" source="footer_cta" variant="white" onClick={openForm} />
+            <CTAButton label="Plan je gratis intake" source="footer_cta" variant="white" />
             <p className="text-sm text-gray-400 mt-3">
               30 seconden invullen, geen verplichtingen
             </p>
