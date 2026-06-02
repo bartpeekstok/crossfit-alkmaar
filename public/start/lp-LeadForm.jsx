@@ -11,7 +11,7 @@ const { useState: useLF } = React;
 // In de workflow map je dan de velden naam / email / telefoon en voeg je een
 // "Create/Update Contact" actie toe.
 // Laat leeg om te testen zonder te verzenden — je gaat dan toch door naar de bedankt-pagina.
-const GHL_WEBHOOK_URL = '';
+const GHL_WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/elOOWDMoCEHJO4WhphRj/webhook-trigger/Di0SoBWLkL51vYE0NJYK';
 const BEDANKT_URL = 'Bedankt.html';
 
 function Field({ id, label, type = 'text', value, onChange, onDark, error, placeholder, autoComplete, inputMode }) {
@@ -78,11 +78,11 @@ function LeadForm({ onDark = false, ctaLabel = 'PLAN MIJN GRATIS KENNISMAKING', 
     const url = (webhookUrl || GHL_WEBHOOK_URL || '').trim();
     try {
       if (url) {
-        // no-cors: fire-and-forget vanuit de browser. GHL ontvangt de body en
-        // parseert de JSON. We lezen het antwoord niet (dat hoeft niet voor een lead).
+        // Normale (CORS) POST — GHL ondersteunt CORS en parseert de JSON.
+        // (Eerder gebruikten we no-cors; dat stript de content-type waardoor de
+        // payload niet als JSON aankwam. Deze methode komt wél netjes binnen.)
         await fetch(url, {
           method: 'POST',
-          mode: 'no-cors',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
           keepalive: true,

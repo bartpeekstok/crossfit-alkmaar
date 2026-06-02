@@ -22,8 +22,8 @@ const LP_TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "heroProof": true,
   "badgeText": "GRATIS KENNISMAKING",
   "ctaLabel": "PLAN MIJN GRATIS KENNISMAKING",
-  "ghlWebhook": "",
-  "metaPixelId": ""
+  "ghlWebhook": "https://services.leadconnectorhq.com/hooks/elOOWDMoCEHJO4WhphRj/webhook-trigger/Di0SoBWLkL51vYE0NJYK",
+  "metaPixelId": "1745951116381755"
 }/*EDITMODE-END*/;
 
 function App() {
