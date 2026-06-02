@@ -52,6 +52,11 @@ const nextConfig: NextConfig = {
         destination:
           "https://hyrox-sim-cfa.vercel.app/hyrox-simulatie-alkmaar/:path+",
       },
+      // Statische landingspagina onder public/start/
+      {
+        source: "/start",
+        destination: "/start/index.html",
+      },
     ];
   },
 

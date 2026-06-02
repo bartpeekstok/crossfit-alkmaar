@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<base href="/start/">
+<title>Bedankt — CrossFit Alkmaar</title>
+<link rel="stylesheet" href="colors_and_type.css">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--cfa-ink); color: var(--fg-on-ink);
+    font-family: 'Barlow', sans-serif; min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  a { -webkit-tap-highlight-color: transparent; }
+  .wrap {
+    flex: 1; width: 100%; max-width: 640px; margin: 0 auto;
+    padding: clamp(40px,8vh,80px) clamp(20px,5vw,40px) 48px;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+  }
+  .logo { height: 56px; width: auto; margin-bottom: clamp(32px,6vh,56px); }
+  .check {
+    width: 84px; height: 84px; border-radius: 50%; background: var(--go);
+    display: grid; place-items: center; box-shadow: 0 10px 30px rgba(31,157,85,.4);
+    opacity: 1;
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    .check { animation: pop .5s cubic-bezier(.2,.7,.2,1) both; }
+  }
+  @keyframes pop { from { opacity: 0; transform: scale(.6); } to { opacity: 1; transform: none; } }
+  .eyebrow {
+    font-family: 'Oswald', sans-serif; font-weight: 600; font-size: 13px;
+    letter-spacing: .22em; text-transform: uppercase; color: var(--blue-300);
+    margin: 28px 0 0;
+  }
+  h1 {
+    font-family: 'Anton', sans-serif; font-weight: 400; text-transform: uppercase;
+    font-size: clamp(40px,9vw,68px); line-height: .96; letter-spacing: .01em;
+    color: #fff; margin: 14px 0 0; text-wrap: balance;
+  }
+  .lead {
+    font-family: 'Barlow', sans-serif; font-weight: 500; font-size: clamp(17px,2.2vw,20px);
+    line-height: 1.55; color: rgba(234,237,244,.88); margin: 20px 0 0; max-width: 460px;
+  }
+  .rule { display: flex; flex-direction: column; gap: 5px; width: 64px; margin: 36px 0; }
+  .rule > div:first-child { height: 6px; background: #fff; }
+  .rule > div:last-child { height: 2px; background: var(--cfa-steel); }
+  .steps {
+    list-style: none; padding: 0; margin: 0; width: 100%; max-width: 460px;
+    display: grid; gap: 16px; text-align: left;
+  }
+  .steps li { display: flex; align-items: center; gap: 14px; }
+  .steps .n {
+    width: 34px; height: 34px; flex-shrink: 0; border-radius: 4px;
+    background: rgba(42,72,200,.22); display: grid; place-items: center;
+    font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 17px; color: var(--blue-300);
+  }
+  .steps span.t { font-family: 'Barlow', sans-serif; font-size: 16.5px; line-height: 1.45; color: rgba(234,237,244,.95); }
+  .cta-call {
+    display: inline-flex; align-items: center; gap: 10px; margin-top: 40px;
+    font-family: 'Oswald', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: .09em;
+    font-size: 16px; color: #fff; background: var(--cfa-blue); border-radius: 4px;
+    padding: 16px 28px; text-decoration: none; box-shadow: var(--sh-blue);
+    transition: background .18s, transform .12s;
+  }
+  .cta-call:hover { background: var(--blue-700); transform: translateY(-1px); }
+  .meta { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: center; }
+  .meta a, .meta span {
+    font-family: 'Barlow', sans-serif; font-size: 14.5px; color: rgba(234,237,244,.7); text-decoration: none;
+    display: inline-flex; align-items: center; gap: 7px;
+  }
+  .meta a:hover { color: var(--blue-300); }
+  .foot {
+    border-top: 1px solid rgba(255,255,255,.1); padding: 18px 20px;
+    font-family: 'Barlow', sans-serif; font-size: 12.5px; color: rgba(234,237,244,.45); text-align: center;
+  }
+  .note { font-family: 'Barlow', sans-serif; font-size: 13.5px; color: rgba(234,237,244,.55); margin-top: 30px; max-width: 400px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <img class="logo" src="assets/cfa-logo-mono-white.png" alt="CrossFit Alkmaar">
+  <div class="check">
+    <svg width="46" height="46" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+  </div>
+  <div class="eyebrow">Aanvraag ontvangen</div>
+  <h1 id="title">Bedankt!</h1>
+  <p class="lead">Je aanvraag is binnen. Eén van de coaches belt je <strong style="color:#fff">binnen 1 werkdag</strong> om je gratis kennismaking in te plannen.</p>
+
+  <div class="rule"><div></div><div></div></div>
+
+  <ul class="steps">
+    <li><span class="n">1</span><span class="t">We bellen je binnen 1 werkdag — kort en vrijblijvend.</span></li>
+    <li><span class="n">2</span><span class="t">Samen plannen we een moment dat jou uitkomt.</span></li>
+    <li><span class="n">3</span><span class="t">Je hoeft niets voor te bereiden. Kom gewoon langs.</span></li>
+  </ul>
+
+  <a class="cta-call" href="tel:+31722340560">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+    Liever nu al bellen? 072-2340560
+  </a>
+
+  <div class="meta">
+    <a href="https://maps.google.com/?q=Phoenixstraat+33+1812+PP+Alkmaar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Phoenixstraat 33, Alkmaar
+    </a>
+    <a href="https://www.instagram.com/crossfitalkmaar">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+      @crossfitalkmaar
+    </a>
+  </div>
+
+  <p class="note">Geen bevestiging gehad? Check je spam-map of bel ons gerust — we helpen je graag op weg.</p>
+</div>
+
+<div class="foot">© 2026 CrossFit Alkmaar · Phoenixstraat 33, 1812 PP Alkmaar · 072-2340560</div>
+
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <rect width="100" height="100" fill="#0B0F1E"/>
+    <circle cx="50" cy="46" r="20" fill="#1F9D55"/>
+    <path d="M41 46l6 6 12-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="30" y="74" width="40" height="5" fill="#183090"/>
+  </svg>
+</template>
+
+<script>
+  // Personaliseer de titel met de voornaam uit de URL (?naam=...)
+  (function () {
+    try {
+      var naam = new URLSearchParams(location.search).get('naam');
+      if (naam) {
+        naam = decodeURIComponent(naam).trim().replace(/[<>]/g, '');
+        if (naam) {
+          naam = naam.charAt(0).toUpperCase() + naam.slice(1);
+          document.getElementById('title').textContent = 'Bedankt, ' + naam + '!';
+          document.title = 'Bedankt ' + naam + ' — CrossFit Alkmaar';
+        }
+      }
+    } catch (e) {}
+  })();
+
+  // ───────────────────────────────────────────────────────────────
+  // META (FACEBOOK) PIXEL — conversie-tracking
+  // Plak hieronder je Pixel ID (cijferreeks uit Meta Events Manager).
+  // De pixel vuurt automatisch 'PageView' + 'Lead' af zodra deze pagina laadt.
+  // In je Meta-campagne kies je 'Lead' als conversie-event.
+  // Laat leeg om niets af te vuren (bv. tijdens testen).
+  var META_PIXEL_ID = '';
+  // Pixel ID kan ook via de URL meekomen (?px=...) — zo werkt het Tweaks-veld
+  // op de landingspagina automatisch door naar deze bedankt-pagina.
+  try {
+    var _px = new URLSearchParams(location.search).get('px');
+    if (!META_PIXEL_ID && _px) META_PIXEL_ID = _px.replace(/[^0-9]/g, '');
+  } catch (e) {}
+  if (META_PIXEL_ID) {
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () { n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments); };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s);
+    }(window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', META_PIXEL_ID);
+    fbq('track', 'PageView');
+    fbq('track', 'Lead');
+  }
+  // Voor noscript-fallback (optioneel), plak in <body>:
+  // <noscript><img height="1" width="1" style="display:none"
+  //   src="https://www.facebook.com/tr?id=JOUW_PIXEL_ID&ev=Lead&noscript=1"/></noscript>
+</script>
+</body>
+</html>
