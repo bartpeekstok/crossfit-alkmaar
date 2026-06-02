@@ -75,14 +75,6 @@ function Hero({ angle, badge, ctaLabel, formInHero, showProof, webhookUrl, pixel
   ];
   return (
     <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--cfa-ink)' }}>
-      {/* photo drop zone */}
-      <img src="assets/lp-hero-photo.webp" alt="Trainen bij CrossFit Alkmaar"
-        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover' }} />
-      {/* ink scrim */}
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none',
-        background: 'linear-gradient(180deg, rgba(11,15,30,.78) 0%, rgba(11,15,30,.6) 45%, rgba(11,15,30,.82) 100%)',
-      }}></div>
 
       <div className="lp-hero-grid" style={{
         position: 'relative', zIndex: 2, maxWidth: 1160, margin: '0 auto', pointerEvents: 'none',
