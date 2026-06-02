@@ -34,8 +34,8 @@ function FinalCTA({ ctaLabel, badge, webhookUrl, pixelId }) {
             </a>
             <span style={{ fontFamily: "'Barlow', sans-serif", fontSize: 15, color: 'var(--fg3)' }}>Phoenixstraat 33, Alkmaar</span>
           </div>
-          <image-slot id="lp-cta-photo" shape="rect" placeholder="Sleep een warme box- of groepsfoto hierheen"
-            style={{ width: '100%', aspectRatio: '16 / 9', height: 'auto', borderRadius: 6, overflow: 'hidden', boxShadow: 'var(--sh-1)', marginTop: 28 }}></image-slot>
+          <img src="assets/lp-cta-photo.webp" alt="CrossFit Alkmaar"
+            style={{ width: '100%', aspectRatio: '16 / 9', height: 'auto', objectFit: 'cover', display: 'block', borderRadius: 6, boxShadow: 'var(--sh-1)', marginTop: 28 }} />
         </div>
         <div style={{
           background: 'var(--cfa-chalk)', borderRadius: 6, padding: 'clamp(24px,3vw,34px)',

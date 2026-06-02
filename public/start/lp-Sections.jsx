@@ -153,8 +153,8 @@ function Testimonials() {
                 lineHeight: 1.4, color: '#fff', textWrap: 'pretty',
               }}>“{q.q}”</blockquote>
               <figcaption style={{ display: 'flex', alignItems: 'center', gap: 13 }}>
-                <image-slot id={`lp-tm-${q.id}`} shape="circle" src={q.photo} placeholder="Foto"
-                  style={{ width: 52, height: 52, flexShrink: 0, boxShadow: '0 0 0 2px rgba(255,255,255,.18)', borderRadius: '50%' }}></image-slot>
+                <img src={q.photo} alt={q.n}
+                  style={{ width: 52, height: 52, flexShrink: 0, objectFit: 'cover', borderRadius: '50%', boxShadow: '0 0 0 2px rgba(255,255,255,.18)' }} />
                 <span>
                   <span style={{ display: 'block', fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 16, letterSpacing: '.04em', textTransform: 'uppercase', color: '#fff' }}>{q.n}</span>
                   <span style={{ display: 'block', fontFamily: "'Barlow', sans-serif", fontSize: 14, color: 'var(--blue-300)' }}>{q.m}</span>
@@ -200,8 +200,8 @@ function WhyCFA() {
             ))}
           </div>
         </div>
-        <image-slot id="lp-why-photo" shape="rect" placeholder="Sleep een foto van de community / box hierheen"
-          style={{ width: '100%', aspectRatio: '4 / 3', height: 'auto', borderRadius: 6, overflow: 'hidden', boxShadow: 'var(--sh-2)' }}></image-slot>
+        <img src="assets/lp-why-photo.webp" alt="Community bij CrossFit Alkmaar"
+          style={{ width: '100%', aspectRatio: '4 / 3', height: 'auto', objectFit: 'cover', display: 'block', borderRadius: 6, boxShadow: 'var(--sh-2)' }} />
       </div>
     </section>
   );
@@ -221,8 +221,8 @@ function PhotoBand() {
           sub="Echte mensen, echte trainingen — geen spiegelzaal vol vreemden." />
         <div className="lp-photoband" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'clamp(12px,1.6vw,18px)' }}>
           {shots.map((s) => (
-            <image-slot key={s.id} id={`lp-band-${s.id}`} shape="rect" placeholder={`Sleep een foto: ${s.cap}`}
-              style={{ width: '100%', aspectRatio: '4 / 3', height: 'auto', borderRadius: 6, overflow: 'hidden', boxShadow: 'var(--sh-1)' }}></image-slot>
+            <img key={s.id} src={`assets/lp-band-${s.id}.webp`} alt={s.cap}
+              style={{ width: '100%', aspectRatio: '4 / 3', height: 'auto', objectFit: 'cover', display: 'block', borderRadius: 6, boxShadow: 'var(--sh-1)' }} />
           ))}
         </div>
       </div>
