@@ -237,3 +237,25 @@ html.cfa-modal-open { overflow: hidden; }
 #cfa-modal .kk-row .ok { color: var(--go); }
 #cfa-modal .kk-row .laag { color: var(--hold); }
 #cfa-modal .kk-row .vol { color: var(--stop); }
+
+/* Programma-pagina shared: pp-grid + pp-item (Groepslessen, Kickstart variant, PT, SGT, Voedingsadvies, Tieners) */
+.pp-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(16px,2.2vw,24px); max-width: 880px; margin: 0 auto; }
+.pp-item { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(22px,2.6vw,30px); }
+.pp-item h3 { display: flex; gap: 11px; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 18px; letter-spacing: .01em; margin: 0 0 9px; color: var(--fg1); }
+.pp-item h3 svg { width: 22px; height: 22px; flex-shrink: 0; color: var(--go); }
+.pp-item p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.55; color: var(--fg2); margin: 0; }
+@media (max-width: 720px) { .pp-grid { grid-template-columns: 1fr; } }
+
+/* Programma-pagina shared: vpair (twee verticale videos) */
+.vpair { display: flex; justify-content: center; align-items: flex-start; gap: clamp(12px,3vw,40px); max-width: 640px; margin: 0 auto; }
+.vpair .vp { flex: 1 1 0; min-width: 0; max-width: 280px; position: relative; background: #fff; padding: clamp(7px,1.1vw,13px) clamp(7px,1.1vw,13px) clamp(10px,1.5vw,16px); border-radius: 3px; box-shadow: 0 12px 26px rgba(11,15,30,.18), 0 2px 6px rgba(0,0,0,.1); transition: transform .25s, box-shadow .25s; }
+.vpair .vp:nth-child(1) { transform: rotate(-3deg); }
+.vpair .vp:nth-child(2) { transform: rotate(2.5deg); }
+.vpair .vp:hover { transform: rotate(0) translateY(-6px) scale(1.04); box-shadow: 0 22px 44px rgba(11,15,30,.28); z-index: 5; }
+.vpair .video { position: relative; aspect-ratio: 9/16; border-radius: 1px; overflow: hidden; cursor: pointer; background: #000; }
+.vpair .video img { width: 100%; height: 100%; object-fit: cover; opacity: .92; }
+.vpair .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+.vpair .video .play span { width: 48px; height: 48px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); }
+.vpair .video .play svg { width: 19px; height: 19px; margin-left: 3px; }
+.vpair .nm { text-align: center; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: clamp(12px,1.4vw,15px); color: var(--cfa-ink); margin-top: 11px; }
+.vpair .vq { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: clamp(11px,1.3vw,13px); line-height: 1.4; color: var(--fg2); margin: 5px 2px 0; }

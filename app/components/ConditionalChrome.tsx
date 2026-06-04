@@ -12,6 +12,11 @@ export const REDESIGNED_PATHS = [
   "/free-intro",
   "/meer-info",
   "/kickstart",
+  "/groepslessen",
+  "/personal-training",
+  "/small-group-training",
+  "/voedingsadvies",
+  "/tieners",
 ];
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {

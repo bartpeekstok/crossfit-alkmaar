@@ -1,180 +1,130 @@
 "use client";
 
-import { usePersonalTrainingPopup } from "../components/PersonalTrainingPopupContext";
+import Link from "next/link";
+import Script from "next/script";
+import { useLeadModal } from "../components/redesign/LeadModalContext";
 import ServiceSchema from "../components/ServiceSchema";
-import { trackCTAClick } from "../lib/analytics";
+import YouTubeEmbed from "../components/redesign/YouTubeEmbed";
+
+const Plus = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M12 5v14M5 12h14" />
+  </svg>
+);
+
+const FAQS = [
+  { q: "Wanneer is personal training beter dan groepslessen?", a: "Als je specifieke doelen hebt (revalidatie, wedstrijdvoorbereiding, sneller resultaat) of liever 1-op-1 traint. Bij CrossFit Alkmaar combineren veel leden personal training met groepslessen voor het beste van beide werelden." },
+  { q: "Hoe ziet een personal training sessie eruit?", a: "Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down — volledig afgestemd op jou." },
+  { q: "Wat is het verschil tussen personal training en small group training?", a: "Bij personal training train je 1-op-1. Bij small group training train je in een groep van max 6 met bijna dezelfde persoonlijke aandacht, maar voor een lagere prijs en met de extra motivatie van een groep." },
+  { q: "Wat is het verschil tussen personal training en groepslessen?", a: "Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij groepslessen train je in kleine groepen van max 12." },
+  { q: "Voor wie is personal training geschikt?", a: "Voor iedereen die extra aandacht wil: van beginners die de basis willen leren tot ervaren sporters met specifieke doelen." },
+  { q: "Kan ik personal training combineren met groepslessen?", a: "Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 groepslessen per week." },
+  { q: "Hoe lang duurt een personal training sessie?", a: "Een sessie duurt 60 minuten. Je coach bereidt de training voor op basis van je doelen en voortgang." },
+];
 
 export default function PersonalTrainingPage() {
-  const { openPopup } = usePersonalTrainingPopup();
+  const { open } = useLeadModal();
+  const openModal = (source: string, section: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    open({ source, section, variant: "kennismaking" });
+  };
 
   return (
-    <div className="min-h-screen bg-gray-200">
-      <ServiceSchema
-        name="Personal Training"
-        description="Eén-op-één personal training volledig afgestemd op jouw doelen. Maximale persoonlijke aandacht van je eigen coach."
-        url="https://crossfitalkmaar.com/personal-training"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Wat is personal training bij CrossFit Alkmaar?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Eén-op-één training met een dedicated coach, volledig afgestemd op jouw doelen. Of je wilt afvallen, sterker worden of fitter worden, je coach maakt een programma op maat.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Voor wie is personal training geschikt?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Voor iedereen die maximaal resultaat wil met persoonlijke aandacht. Of je nu beginner bent of gevorderd, de training wordt volledig aangepast aan jouw niveau en doelen.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Wat kost personal training bij CrossFit Alkmaar?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Neem contact op voor de actuele tarieven van personal training. Plan een gratis kennismaking om je doelen te bespreken en een passend voorstel te ontvangen.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="Personal training bij CrossFit Alkmaar - een-op-een begeleiding met coach"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/personal-training-header.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center bottom',
-        }}
-      >
-        <img src="/images/personal-training-header.jpg" alt="Personal training bij CrossFit Alkmaar - een-op-een begeleiding met coach" className="sr-only" width={1200} height={600} />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Personal Training
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Eén coach. Jouw plan. Onderdeel van een community.
-          </p>
-          <button
-            onClick={() => { trackCTAClick('gratis_intake_hero', 'personal-training'); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Plan je gratis kennismaking
-          </button>
+    <>
+      <ServiceSchema name="Personal Training" description="1-op-1 personal training sessies. Volledig afgestemd op jouw doelen en niveau." url="https://crossfitalkmaar.com/personal-training" />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQS.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
+
+      <section className="page-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/redesign/assets/header-personal-training.jpg" alt="" style={{ objectPosition: "center 80%" }} />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <p className="eyebrow">Programma</p>
+          <h1>Personal Training Alkmaar</h1>
+          <p className="lede">Training die volledig om jou draait. Jouw doelen, jouw schema, jouw coach.</p>
+          <div className="cta-row"><a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je gratis kennismaking", "Hero")}>Plan je gratis kennismaking</a></div>
         </div>
       </section>
 
-      {/* Wat is Personal Training */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8">Wat is Personal Training?</h2>
-          <div className="prose prose-lg text-gray-600">
-            <p className="mb-4">
-              Met personal training krijg je de volledige aandacht van je coach. Elke sessie is volledig afgestemd op jouw doelen, niveau en beschikbaarheid. Of je nu wilt afvallen, sterker worden of werkt aan herstel na een blessure.
-            </p>
-            <p className="mb-4">
-              Je coach stelt een programma samen dat perfect bij jou past en stuurt bij waar nodig. Zo behaal je sneller resultaat dan bij groepstrainingen.
-            </p>
-            <p>
-              Het verschil met een losse personal trainer: bij ons blijf je onderdeel van een community. Wil je doorstromen naar groepslessen of BUILD, dan ken je de coaches al. Geen nieuwe naam op een lijst, maar een bekend gezicht.
-            </p>
+      <section className="sec sec--ivoor" style={{ paddingTop: "clamp(30px,4vw,48px)", paddingBottom: "clamp(16px,2.2vw,30px)" }}>
+        <div className="wrap prose">
+          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Personal training met een plan</h2>
+          <p>Personal training is meer dan een trainer die naast je staat. Bij CrossFit Alkmaar krijg je een volledig trainingsplan, afgestemd op jouw doelen. Of je nu wilt afvallen, sterker worden, revalideren of je voorbereiden op een wedstrijd.</p>
+          <p>Onze coaches zijn gecertificeerd en gespecialiseerd in functionele fitness. Ze kijken niet alleen naar je training, maar ook naar je bewegingskwaliteit, mobiliteit en, eventueel, je voeding.</p>
+          <p>Je traint in een volledig uitgeruste box met professionele apparatuur. Geen wachten op machines, geen drukte — gewoon jij en je coach.</p>
+        </div>
+      </section>
+
+      <section className="sec sec--white">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Wat onze leden zeggen</h2></div>
+          <div className="reviews-embed" style={{ marginTop: 24 }}>
+            <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+            <iframe className="lc_reviews_widget" src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj" style={{ minWidth: "100%", width: "100%", border: 0 }} scrolling="no" title="Google Reviews" />
           </div>
         </div>
       </section>
 
-      {/* Wat je krijgt */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Wat je krijgt</h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Volledig gepersonaliseerd programma</h3>
-              <p className="text-gray-600">Een trainingsschema dat 100% is afgestemd op jouw doelen en mogelijkheden.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Flexibele tijden</h3>
-              <p className="text-gray-600">Train wanneer het jou uitkomt. We plannen samen de sessies in.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Snellere resultaten</h3>
-              <p className="text-gray-600">Door de persoonlijke aandacht en op maat gemaakte aanpak bereik je sneller je doelen.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-3">✓ Extra aandacht voor techniek</h3>
-              <p className="text-gray-600">Je coach corrigeert direct en zorgt dat je elke beweging veilig en effectief uitvoert.</p>
-            </div>
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Trainingsopties</h2></div>
+          <div className="ppg" style={{ marginTop: 34 }}>
+            <div className="ppi"><h3>1-op-1 sessies</h3><p>Maximale aandacht en volledig gepersonaliseerd. Ideaal voor specifieke doelen, revalidatie of als je de voorkeur geeft aan privétraining.</p></div>
+            <div className="ppi"><h3>Small Group (max 4)</h3><p>De persoonlijke aanpak van PT, maar samen met een klein groepje. Betaalbaar én effectief. Bekijk onze <Link href="/small-group-training">small group training</Link>.</p></div>
+            <div className="ppi"><h3>Combi-abonnement</h3><p>Combineer personal training met groepslessen voor het beste van twee werelden. Persoonlijke aandacht én de groepsenergie.</p></div>
+            <div className="ppi"><h3>Flexibel plannen</h3><p>Plan je sessies op tijden die jou uitkomen. Wij passen ons aan jouw agenda aan, niet andersom.</p></div>
           </div>
         </div>
       </section>
 
-      {/* FAQ */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold mb-8 text-center">Veelgestelde vragen</h2>
-          <div className="space-y-4">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat is personal training bij CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">Eén-op-één training met een dedicated coach, volledig afgestemd op jouw doelen. Of je wilt afvallen, sterker worden of fitter worden, je coach maakt een programma op maat.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Voor wie is personal training geschikt?</h3>
-              <p className="text-gray-600">Voor iedereen die maximaal resultaat wil met persoonlijke aandacht. Of je nu beginner bent of gevorderd, de training wordt volledig aangepast aan jouw niveau en doelen.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">Wat kost personal training bij CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">Neem contact op voor de actuele tarieven van personal training. Plan een gratis kennismaking om je doelen te bespreken en een passend voorstel te ontvangen.</p>
-            </div>
+      <section className="sec sec--white">
+        <div className="wrap prose">
+          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Voor wie is personal training?</h2>
+          <p>Voor iedereen die meer wil dan een standaard sportschool. Of je nu net begint via de Kickstart, terugkomt na een blessure, of al jaren traint maar een nieuw doel hebt: personal training geeft je de begeleiding die het verschil maakt.</p>
+        </div>
+      </section>
+
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Wanneer kies je personal training?</h2></div>
+          <div className="faq" style={{ marginTop: 8 }}>
+            <details open><summary>Wanneer is personal training beter dan groepslessen?<span className="ic"><Plus /></span></summary><div className="body">Als je specifieke doelen hebt (revalidatie, wedstrijdvoorbereiding, sneller resultaat) of liever 1-op-1 traint. Bij CrossFit Alkmaar combineren veel leden personal training met <Link href="/groepslessen">groepslessen</Link> voor het beste van beide werelden.</div></details>
+            <details><summary>Hoe ziet een personal training sessie eruit?<span className="ic"><Plus /></span></summary><div className="body">Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down — volledig afgestemd op jou.</div></details>
+            <details><summary>Wat is het verschil tussen personal training en small group training?<span className="ic"><Plus /></span></summary><div className="body">Bij personal training train je 1-op-1. Bij <Link href="/small-group-training">small group training</Link> train je in een groep van max 6 met bijna dezelfde persoonlijke aandacht, maar voor een lagere prijs en met de extra motivatie van een groep.</div></details>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-blue-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Klaar om te starten?</h2>
-          <p className="text-xl mb-8">
-            Kom vrijblijvend kennismaken en ontdek hoe personal training jou kan helpen je doelen te bereiken.
-          </p>
-          <button
-            onClick={() => { trackCTAClick('gratis_intake_footer', 'personal-training'); openPopup(); }}
-            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Plan je kennismaking
-          </button>
+      <section className="sec sec--white">
+        <div className="wrap">
+          <div className="vpair">
+            <div className="vp"><div className="video"><YouTubeEmbed videoId="HlqFX84ue3o" alt="Tim" /></div><div className="nm">Tim</div><p className="vq">&apos;Ik voel me fit en m&apos;n hartslag in rust is ook omlaaggegaan.&apos;</p></div>
+            <div className="vp"><div className="video"><YouTubeEmbed videoId="xLOHro8eJZM" alt="Maarten" /></div><div className="nm">Maarten</div><p className="vq">&apos;CFA is voor mij een veilige haven.&apos;</p></div>
+          </div>
+          <p className="more" style={{ textAlign: "center", marginTop: 22 }}><Link href="/onze-leden">Bekijk meer verhalen van onze leden →</Link></p>
         </div>
       </section>
-    </div>
+
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Veelgestelde vragen</h2></div>
+          <div className="faq" style={{ marginTop: 8 }}>
+            <details open><summary>Wat is het verschil tussen personal training en groepslessen?<span className="ic"><Plus /></span></summary><div className="body">Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij <Link href="/groepslessen">groepslessen</Link> train je in kleine groepen van max 12.</div></details>
+            <details><summary>Voor wie is personal training geschikt?<span className="ic"><Plus /></span></summary><div className="body">Voor iedereen die extra aandacht wil: van beginners die de basis willen leren tot ervaren sporters met specifieke doelen.</div></details>
+            <details><summary>Kan ik personal training combineren met groepslessen?<span className="ic"><Plus /></span></summary><div className="body">Ja, dat raden we zelfs aan. Veel leden combineren 1 personal training sessie met 2-3 <Link href="/groepslessen">groepslessen</Link> per week.</div></details>
+            <details><summary>Hoe lang duurt een personal training sessie?<span className="ic"><Plus /></span></summary><div className="body">Een sessie duurt 60 minuten. Je coach bereidt de training voor op basis van je doelen en voortgang.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-personal-training.jpg')", backgroundPosition: "center 80%" } as React.CSSProperties}>
+        <div className="wrap">
+          <h2>Start met personal training</h2>
+          <p>Plan een gratis kennismakingsgesprek en ontdek wat personal training voor jou kan betekenen.</p>
+          <a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je gratis kennismaking", "Klaar om te starten")}>Plan je gratis kennismaking</a>
+        </div>
+      </section>
+    </>
   );
 }
