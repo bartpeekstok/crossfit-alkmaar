@@ -118,7 +118,7 @@ h1, h2, h3 { margin: 0; }
 .fcard p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.55; color: var(--fg2); margin: 0; }
 
 /* final CTA band */
-.page-cta { position: relative; overflow: hidden; text-align: center; background: linear-gradient(rgba(12,26,78,.82), rgba(11,15,30,.9)), var(--cta-photo, url('assets/photo-community.webp')) center/cover; color: #fff; }
+.page-cta { position: relative; overflow: hidden; text-align: center; background: linear-gradient(rgba(12,26,78,.82), rgba(11,15,30,.9)), var(--cta-photo, url('/redesign/assets/photo-community.webp')) center/cover; color: #fff; }
 .page-cta h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(32px,4.6vw,58px); line-height: .96; color: #fff; }
 .page-cta p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,20px); color: rgba(255,255,255,.9); margin: 14px auto 28px; max-width: 540px; }
 

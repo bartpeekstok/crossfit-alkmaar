@@ -39,6 +39,8 @@ import ScrollDepthTracker from "./components/ScrollDepthTracker";
 import StickyMobileCTA from "./components/StickyMobileCTA";
 import FormSubmissionTracker from "./components/FormSubmissionTracker";
 import ConditionalChrome from "./components/ConditionalChrome";
+import { LeadModalProvider } from "./components/redesign/LeadModalContext";
+import RedesignChrome from "./components/redesign/RedesignChrome";
 
 export const metadata: Metadata = {
   title: {
@@ -139,6 +141,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <MetaPixel />
         <BreadcrumbSchema />
+        <LeadModalProvider>
         <PopupProvider>
           <KickstartPopupProvider>
             <KickstartFormPopupProvider>
@@ -149,7 +152,9 @@ export default function RootLayout({
                       <TienersPopupProvider>
                       <PricingPopupProvider>
                         <ConditionalChrome><Header /></ConditionalChrome>
-                        <main className="pb-16">{children}</main>
+                        <RedesignChrome>
+                          <main>{children}</main>
+                        </RedesignChrome>
                         <ConditionalChrome>
                           <Footer />
                           <IntakePopup />
@@ -176,6 +181,7 @@ export default function RootLayout({
             </KickstartFormPopupProvider>
           </KickstartPopupProvider>
         </PopupProvider>
+        </LeadModalProvider>
         
         {/* GoHighLevel Chat Widget */}
         <ConditionalChrome><ChatWidget /></ConditionalChrome>
