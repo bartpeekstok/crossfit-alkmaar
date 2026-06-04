@@ -1,5 +1,6 @@
 "use client";
 
+import "./styles/page-home.css";
 import VideoSchema from "./components/VideoSchema";
 import Script from "next/script";
 import { trackOutboundLink } from "./lib/analytics";
