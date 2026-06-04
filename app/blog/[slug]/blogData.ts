@@ -163,10 +163,6 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>HYROX is dan ook een mooie aanvulling op ons huidige aanbod. Onze Oxygen lessen zijn al erg populair. In deze lessen doen we al wat langere workouts zonder halterstangen of technische bewegingen. Daarom zijn we inmiddels een officiële HYROX gym geworden, hebben we de eerste materialen aangeschaft en uitgebreid. Nu is het alleen nog even wachten op de sprinttrack die geïnstalleerd gaat worden begin mei en dan kan ons HYROX-aanbod van start!</p>
 
-      <h2>HYROX Physical Fitness Test</h2>
-
-      <p>Als we iets doen bij CrossFit Alkmaar, dan doen we het ook goed. Daarom trappen we de opening van onze HYROX gym af met een Physical Fitness Test in samenwerking met HYROX HQ bij CrossFit Alkmaar! De HYROX Physical Fitness Test is speciaal ontworpen om jou de perfecte introductie te geven van HYROX. Het geeft een goede indicatie van jouw niveau en advies voor welke divisie jij je het beste voor de eerste keer kunt inschrijven. Inschrijven is gratis en doe je via <a href="https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">deze link</a>! Lees meer op onze <a href="/hyrox-pft-alkmaar" class="text-blue-600 hover:underline">HYROX PFT pagina</a>. Natuurlijk is iedereen welkom, of je nu al lid bent van CrossFit Alkmaar of niet.</p>
-
       <h2>HYROX Simulatie op 22 augustus</h2>
 
       <p>Op zaterdag 22 augustus organiseren we onze eerste HYROX Simulatie! Bereid je voor op race day of doe voor het eerst een echte HYROX. Een volledige simulatie van de race zoals je die kent: 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten. <a href="/hyrox-simulatie-alkmaar" class="text-blue-600 hover:underline">Bekijk alle info en schrijf je in</a>!</p>

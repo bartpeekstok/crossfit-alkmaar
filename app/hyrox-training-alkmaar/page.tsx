@@ -284,7 +284,7 @@ export default function HyroxTrainingPage() {
       <section className="py-16 px-6 bg-gray-100">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Probeer HYROX bij CrossFit Alkmaar</h2>
-          <p className="text-lg text-gray-700 mb-8">Doe mee aan onze gratis <Link href="/hyrox-pft-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX Physical Fitness Test op 9 mei</Link> of schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX Simulatie op 22 augustus</Link>.</p>
+          <p className="text-lg text-gray-700 mb-8">Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober" className="text-blue-900 font-semibold hover:underline">24 oktober</Link>.</p>
         </div>
       </section>
 
