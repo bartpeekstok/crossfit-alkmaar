@@ -76,9 +76,9 @@ export default function SeoLanding({
       source,
       section,
       variant: "kennismaking",
-      // Overschrijft default 'formulier: kennismaking' met landing-naam,
-      // zodat GHL precies ziet vanaf welke landingspagina de lead komt.
-      extraFields: { formulier: name, landingspagina: name },
+      // formulier blijft 'kennismaking' zodat de GHL workflow gewoon triggert.
+      // Welke landingspagina het was lezen we af in het landingspagina-veld.
+      extraFields: { landingspagina: name },
     });
   };
 
