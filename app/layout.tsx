@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
-import { Inter } from "next/font/google";
+import { Inter, Anton, Oswald, Barlow, Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 import "./styles/colors_and_type.css";
 import "./styles/site.css";
@@ -10,6 +10,35 @@ const inter = Inter({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-inter",
+});
+
+const anton = Anton({
+  weight: "400",
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-anton",
+});
+
+const oswald = Oswald({
+  weight: ["300", "400", "500", "600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-oswald",
+});
+
+const barlow = Barlow({
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-barlow",
+});
+
+const barlowSemi = Barlow_Semi_Condensed({
+  weight: ["600", "700"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-barlow-semi",
 });
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -128,7 +157,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="nl" className={inter.variable}>
+    <html lang="nl" className={`${inter.variable} ${anton.variable} ${oswald.variable} ${barlow.variable} ${barlowSemi.variable}`}>
       <head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
