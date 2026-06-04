@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plan je gratis kennismaking — CrossFit Alkmaar</title>
+<link rel="stylesheet" href="site.css?v=14">
+<style>
+  .book { position: relative; overflow: hidden; }
+  .book .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .book .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,15,30,.86), rgba(11,15,30,.78)); }
+  .book .grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px,4vw,56px); align-items: start; padding: clamp(48px,7vw,88px) 0; }
+  .book .copy { color: #fff; }
+  .book .eyebrow { color: var(--hold); }
+  .book .eyebrow::before { background: var(--hold); }
+  .book h1 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(38px,5.4vw,72px); line-height: .96; letter-spacing: .01em; margin: 16px 0 0; color: #fff; }
+  .book .lede { font-family: var(--font-body); font-weight: 500; font-size: clamp(17px,1.9vw,20px); line-height: 1.55; color: rgba(234,237,244,.9); max-width: 520px; margin: 18px 0 26px; }
+  .book .video { position: relative; aspect-ratio: 16/9; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-3); cursor: pointer; background: #000; max-width: 540px; }
+  .book .video img { width: 100%; height: 100%; object-fit: cover; opacity: .85; }
+  .book .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .book .video .play span { width: 66px; height: 66px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); transition: transform .15s; }
+  .book .video:hover .play span { transform: scale(1.08); }
+  .book .video .play svg { width: 26px; height: 26px; margin-left: 3px; }
+  .book .widget { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: 8px; position: sticky; top: 90px; }
+  .book .widget iframe { width: 100%; min-height: 720px; border: 0; border-radius: calc(var(--r-lg) - 6px); display: block; }
+  .trust { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
+  .trust span { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 15px; color: rgba(234,237,244,.85); }
+  .trust svg { width: 18px; height: 18px; color: var(--go); }
+  @media (max-width: 900px) {
+    .book .grid { grid-template-columns: 1fr; }
+    .book .widget { position: static; }
+  }
+</style>
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <section class="book">
+    <img class="bg" src="assets/photo-community.webp" alt="">
+    <div class="scrim"></div>
+    <div class="wrap grid">
+      <div class="copy">
+        <p class="eyebrow">Praat met één van onze coaches</p>
+        <h1>Plan je gratis kennismaking</h1>
+        <p class="lede">Bespreek je doelen met één van onze coaches. We horen graag alles over je ervaring, uitdagingen en je sterke punten. Samen maken we een plan dat bij jou past.</p>
+        <div class="video" data-yt="-3KF7VGVzdk">
+          <img src="https://img.youtube.com/vi/-3KF7VGVzdk/hqdefault.jpg" alt="Inside the Box: CrossFit Alkmaar">
+          <div class="play"><span><svg viewBox="0 0 24 24" fill="#0B0F1E"><path d="M8 5v14l11-7z"/></svg></span></div>
+        </div>
+        <div class="trust">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Geen verplichtingen</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Voor alle niveaus</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Maandelijks opzegbaar</span>
+        </div>
+      </div>
+      <div class="widget">
+        <iframe src="https://ghl.crossfitalkmaar.com/widget/booking/h9ZPe6IvVFloL7y9V5Rx" title="Plan je gratis kennismaking" scrolling="no"></iframe>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="https://ghl.crossfitalkmaar.com/js/form_embed.js"></script>
+<script src="site.js"></script>
+<script>
+  document.querySelectorAll('.video[data-yt]').forEach(function (v) {
+    v.addEventListener('click', function () {
+      var id = v.getAttribute('data-yt');
+      v.innerHTML = '<iframe width="100%" height="100%" style="position:absolute;inset:0;border:0" src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="CrossFit Alkmaar" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+  });
+</script>
+</body>
+</html>
