@@ -1,6 +1,7 @@
 "use client";
 
 import Script from "next/script";
+import HyroxRegistration from "./HyroxRegistration";
 
 const Plus = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" strokeWidth="2.5" strokeLinecap="round">
@@ -14,7 +15,7 @@ type Props = {
   registerUrl: string;
 };
 
-export default function HyroxSimulatie({ dateLabel, dateLong, registerUrl }: Props) {
+export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
   return (
     <>
       <style>{`
@@ -48,7 +49,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, registerUrl }: Pro
           <h1 style={{ marginTop: 12 }}>HYROX Simulatie Alkmaar</h1>
           <p className="lede">Een volledige HYROX race bij CrossFit Alkmaar. Open en Pro divisie. 8 rondes, 8 stations, 1 finish.</p>
           <div className="cta-row">
-            <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+            <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
           </div>
         </div>
       </section>
@@ -111,7 +112,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, registerUrl }: Pro
           <h2>CrossFit Alkmaar is een officiële HYROX gym</h2>
           <p>Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
           <div className="hx-cta-row">
-            <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+            <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
           </div>
         </div>
       </section>
@@ -145,7 +146,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, registerUrl }: Pro
         <div className="wrap">
           <h2>Doe mee op {dateLabel.toLowerCase()}</h2>
           <p>Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.</p>
-          <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+          <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
         </div>
       </section>
     </>
