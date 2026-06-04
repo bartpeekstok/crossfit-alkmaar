@@ -9,6 +9,7 @@ const HIDDEN_PREFIXES = ["/start"];
 // uit components/redesign). De OUDE Header/Footer/popups worden hier verborgen.
 export const REDESIGNED_PATHS = [
   "/",
+  "/en",
   "/free-intro",
   "/meer-info",
   "/kickstart",
@@ -17,6 +18,12 @@ export const REDESIGNED_PATHS = [
   "/small-group-training",
   "/voedingsadvies",
   "/tieners",
+  "/onze-leden",
+  "/blog",
+  "/vacatures",
+  "/privacy",
+  "/hyrox-simulatie-alkmaar",
+  "/hyrox-simulatie-24-oktober",
 ];
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {

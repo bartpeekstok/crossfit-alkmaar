@@ -1,0 +1,153 @@
+"use client";
+
+import Script from "next/script";
+
+const Plus = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M12 5v14M5 12h14" />
+  </svg>
+);
+
+type Props = {
+  dateLabel: string;
+  dateLong: string;
+  registerUrl: string;
+};
+
+export default function HyroxSimulatie({ dateLabel, dateLong, registerUrl }: Props) {
+  return (
+    <>
+      <style>{`
+        .hx-date { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: clamp(16px,1.9vw,22px); color: var(--hold); }
+        .reviews-embed iframe { width: 100%; min-width: 100%; border: 0; }
+        .stations { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 760px; margin: 30px auto 0; }
+        .stations .st { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 11px 20px; box-shadow: var(--sh-1); font-family: var(--font-head); font-weight: 600; font-size: 15px; color: var(--fg1); }
+        .stations .st b { font-family: var(--font-stat); color: var(--cfa-blue); }
+        .info { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(16px,2.2vw,24px); max-width: 880px; margin: 0 auto; }
+        .info .card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(22px,2.6vw,28px); display: flex; gap: 16px; align-items: flex-start; }
+        .info .card .ic { width: 28px; height: 28px; flex-shrink: 0; color: var(--cfa-blue); margin-top: 2px; }
+        .info .card h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 17px; margin: 0 0 7px; color: var(--fg1); }
+        .info .card p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.5; color: var(--fg2); margin: 0; }
+        .info .card .small { color: var(--fg3); font-size: 13px; }
+        .hx-band { position: relative; overflow: hidden; text-align: center; color: #fff; }
+        .hx-band .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+        .hx-band .scrim { position: absolute; inset: 0; background: rgba(11,15,30,.78); }
+        .hx-band .inner { position: relative; z-index: 1; }
+        .hx-band h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(30px,4.2vw,52px); line-height: .98; color: #fff; }
+        .hx-band p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,19px); color: rgba(234,237,244,.9); margin: 14px auto 26px; max-width: 560px; }
+        .hx-cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+        @media (max-width: 720px) { .info { grid-template-columns: 1fr; } }
+      `}</style>
+
+      <section className="page-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <p className="hx-date">{dateLabel}</p>
+          <h1 style={{ marginTop: 12 }}>HYROX Simulatie Alkmaar</h1>
+          <p className="lede">Een volledige HYROX race bij CrossFit Alkmaar. Open en Pro divisie. 8 rondes, 8 stations, 1 finish.</p>
+          <div className="cta-row">
+            <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec sec--ivoor">
+        <div className="wrap prose">
+          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Een echte HYROX race, bij CrossFit Alkmaar</h2>
+          <p>Op {dateLabel.toLowerCase()} organiseren we bij CrossFit Alkmaar een volledige HYROX Simulatie. Dezelfde opzet als een officiële HYROX wedstrijd: 8 rondes van 1 kilometer hardlopen, elk gevolgd door een functioneel station.</p>
+          <p>Bereid je voor op je eerste HYROX, test je race-strategie of verbeter je tijd. De simulatie is de perfecte manier om te ervaren wat een HYROX-race inhoudt, zonder naar een officieel evenement te hoeven reizen.</p>
+          <p>Iedereen is welkom, ook niet-leden. Je kunt individueel meedoen of als Doubles team, in de Open of Pro divisie.</p>
+        </div>
+      </section>
+
+      <section className="sec sec--white">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">De 8 HYROX-stations</h2></div>
+          <div className="stations">
+            <span className="st"><b>1</b> SkiErg</span>
+            <span className="st"><b>2</b> Sled Push</span>
+            <span className="st"><b>3</b> Sled Pull</span>
+            <span className="st"><b>4</b> Burpee Broad Jumps</span>
+            <span className="st"><b>5</b> Rowing</span>
+            <span className="st"><b>6</b> Farmers Carry</span>
+            <span className="st"><b>7</b> Sandbag Lunges</span>
+            <span className="st"><b>8</b> Wall Balls</span>
+          </div>
+          <p className="center" style={{ fontFamily: "var(--font-body)", color: "var(--fg2)", marginTop: 22 }}>Elk station wordt voorafgegaan door 1 kilometer hardlopen, totaal 8 km.</p>
+        </div>
+      </section>
+
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Praktische informatie</h2></div>
+          <div className="info" style={{ marginTop: 34 }}>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+              <div><h3>Datum &amp; tijd</h3><p>{dateLong}<br />09:00 – 17:00 uur<br /><span className="small">Starttijden worden 3 dagen van tevoren bekendgemaakt</span></p></div>
+            </div>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
+              <div><h3>Locatie</h3><p>CrossFit Alkmaar<br />Phoenixstraat 33<br />1812 PP Alkmaar</p></div>
+            </div>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+              <div><h3>Kosten</h3><p>CFA-leden: € 10,-<br />Niet-leden: € 30,-</p></div>
+            </div>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+              <div><h3>Voor wie</h3><p>Open en Pro divisie.<br />Individual of Doubles.<br />Iedereen welkom, ook niet-leden.</p></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec hx-band">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <h2>CrossFit Alkmaar is een officiële HYROX gym</h2>
+          <p>Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
+          <div className="hx-cta-row">
+            <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec sec--white">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Wat onze leden zeggen</h2></div>
+          <div className="reviews-embed" style={{ marginTop: 24 }}>
+            <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
+            <iframe className="lc_reviews_widget" src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj" style={{ minWidth: "100%", width: "100%", border: 0 }} scrolling="no" title="Google Reviews" />
+          </div>
+        </div>
+      </section>
+
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center"><h2 className="sec-title">Veelgestelde vragen</h2></div>
+          <div className="faq" style={{ marginTop: 8 }}>
+            <details open><summary>Wat is een HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Een volledige nabootsing van een HYROX race: 8 rondes van 1 kilometer hardlopen, elk gevolgd door een functionele workout. Dezelfde opzet als een officiële HYROX wedstrijd.</div></details>
+            <details><summary>Moet ik al ervaring hebben met HYROX?<span className="ic"><Plus /></span></summary><div className="body">Nee, de simulatie is geschikt voor zowel beginners als ervaren HYROX-atleten. Onze coaches begeleiden je bij elk station.</div></details>
+            <details><summary>Kan ik als Doubles meedoen?<span className="ic"><Plus /></span></summary><div className="body">Ja, je kunt je inschrijven als individual of als Doubles team. Beide formats worden aangeboden.</div></details>
+            <details><summary>Moet ik lid zijn van CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Nee, de HYROX Simulatie is open voor iedereen. Ook niet-leden zijn welkom om mee te doen.</div></details>
+            <details><summary>Wat kost de HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-.</div></details>
+            <details><summary>Hoe lang duurt een HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Het evenement duurt van 09:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</div></details>
+            <details><summary>Welke divisies worden aangeboden?<span className="ic"><Plus /></span></summary><div className="body">We bieden de Open en Pro divisie aan. Je kunt individueel meedoen of als Doubles team.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-hyrox.jpg')" } as React.CSSProperties}>
+        <div className="wrap">
+          <h2>Doe mee op {dateLabel.toLowerCase()}</h2>
+          <p>Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.</p>
+          <a className="btn btn--gold btn--lg" href={registerUrl} target="_blank" rel="noopener noreferrer">Schrijf je in</a>
+        </div>
+      </section>
+    </>
+  );
+}

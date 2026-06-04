@@ -1,142 +1,97 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-import { trackCTAClick } from "../lib/analytics";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
+import { useLeadModal } from "../components/redesign/LeadModalContext";
+import YouTubeEmbed from "../components/redesign/YouTubeEmbed";
 
-const aggregateRatingSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "CrossFit Alkmaar",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5.0",
-    "reviewCount": "273",
-    "bestRating": "5",
-    "worstRating": "1"
-  }
-};
+const VIDEOS = [
+  { id: "EIWOUtYAl7g", nm: "Chris", q: "'CrossFit is veel toegankelijker dan aan machines trekken in een sportschool'" },
+  { id: "GCUpJQJJ8s0", nm: "Malou", q: "'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
+  { id: "SKchVCAIx80", nm: "Steven", q: "'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'" },
+  { id: "TTKyTPDzau0", nm: "Jeanine", q: "'Toen ik hier voor het eerst kwam dacht ik: dit is het!'" },
+  { id: "PuLFkjD_quY", nm: "Aaike", q: "'De sfeer is gewoon super goed en de trainers zijn van een goed niveau!'" },
+  { id: "0-XtIea19I0", nm: "Bert", q: "'Ik had niet verwacht dat ik het zó leuk zou vinden'" },
+  { id: "BkYbL7jvYjY", nm: "Paula", q: "'Die zware boodschappentassen? Dat gaat nu gewoon een stuk beter!'" },
+  { id: "1qhbmRPtysU", nm: "Jarrald", q: "'Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen'" },
+  { id: "xLOHro8eJZM", nm: "Maarten", q: "'CFA is voor mij een veilige haven'" },
+  { id: "7_p0gpFtEvk", nm: "Lisette", q: "'Ik voel me sindsdien een stuk fitter!'" },
+  { id: "fI6KBasjzaA", nm: "Simon", q: "'Je ziet mensen bij iedere workout fitter en sterker worden'" },
+  { id: "a4ENPMXSTX8", nm: "Simone", q: "'Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.'" },
+  { id: "RBIMMk4WVj8", nm: "Souad", q: "'Vooral denken in mogelijkheden'" },
+  { id: "HlqFX84ue3o", nm: "Tim", q: "'Ik voel me fit en m\\'n hartslag in rust is ook omlaaggegaan'" },
+  { id: "R0ARPbmxRSg", nm: "Wilco", q: "'Het heeft m\\'n wereld compleet veranderd'" },
+  { id: "9v3ijzMvgts", nm: "Harm", q: "'Ik hoef niet na te denken wat ik moet doen'" },
+  { id: "jIZpGVRIIyI", nm: "Renze", q: "'Ik houd niet van fitness, dat vind ik veel te saai'" },
+];
+
+const ROT = [-3, 2.5, -2, 3, -2.5, 2, -3.5, 1.5, -2, 3, -1.5, 2.5, -3, 2];
 
 export default function OnzeLedenPage() {
-  const { openPopup } = usePopup();
-
-  const videos = [
-    { id: "U4o8oXdmegI", type: "normal", caption: "Chris (10 jaar lid): 'CrossFit is veel toegankelijker dan aan machines trekken in een sportschool'" },
-    { id: "G9HkOnSsKg8", type: "normal", caption: "Malou (9 jaar lid): 'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
-    { id: "esc-52ZNdPY", type: "normal", caption: "Steven (kickstart nov 2024): 'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'" },
-    { id: "rG7rY2_BguQ", type: "normal", caption: "Jeanine (2 jaar lid): 'Toen ik hier voor het eerst kwam dacht ik: dit is het!'" },
-    { id: "Pj-4CcdcVwA", type: "normal", caption: "Aaike (2 jaar lid): 'De sfeer is gewoon super goed en de trainers zijn van een goed niveau!'" },
-    { id: "xpIP0VP_OEM", type: "normal", caption: "Demi (1 jaar lid): 'Iedereen gaat voor je juichen, dan krijg je een boost om door te gaan!'" },
-    { id: "a2zbZIlU27Y", type: "normal", caption: "Bert (2 jaar lid): 'Ik had niet verwacht dat ik het zó leuk zou vinden'" },
-    { id: "vzUzbwCCHEk", type: "normal", caption: "Paula (kickstart sept 2024): 'Die zware boodschappentassen? Dat gaat nu gewoon een stuk beter!'" },
-    { id: "1qhbmRPtysU", type: "short", caption: "Jarrald (kickstart nov 2024): 'Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen'" },
-    { id: "atUYhclLhEE", type: "short", caption: "Maarten (3,5 jaar lid): 'CFA is voor mij een veilige haven'" },
-    { id: "WuOyAWYDeG0", type: "normal", caption: "Lisette (1,5 jaar lid): 'Ik voel me sindsdien een stuk fitter!'" },
-    { id: "PigB4z1ZCB8", type: "normal", caption: "Simon (4,5 jaar lid, nu coach): 'Je ziet mensen bij iedere workout fitter en sterker worden'" },
-    { id: "14v6cnGlI7g", type: "normal", caption: "Simone (4 jaar lid): 'Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.'" },
-    { id: "5ThBJD4lJ0g", type: "normal", caption: "Souad (10 jaar lid): 'Vooral denken in mogelijkheden'" },
-    { id: "iJ6KoiK5QZk", type: "normal", caption: "Renze (8 maanden lid): 'Ik houd niet van fitness, dat vind ik veel te saai'" },
-    { id: "HlqFX84ue3o", type: "short", caption: "Tim (10 jaar lid): 'Ik voel me fit en m'n hartslag in rust is ook omlaaggegaan'" },
-  ];
-
-  const normalVideos = videos.filter(v => v.type === "normal");
-  const shortVideos = videos.filter(v => v.type === "short");
+  const { open } = useLeadModal();
+  const openModal = (source: string, section: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    open({ source, section, variant: "kennismaking" });
+  };
 
   return (
-    <div className="min-h-screen bg-gray-200">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(aggregateRatingSchema) }}
-      />
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="Leden van CrossFit Alkmaar - echte verhalen van echte mensen"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/onze-leden-header.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <img src="/images/onze-leden-header.jpg" alt="Leden van CrossFit Alkmaar - echte verhalen van echte mensen" className="sr-only" width={1200} height={600} />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
-            Onze Leden
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-200 mb-8">
-            Mensen die hier al jaren trainen. En vertellen waarom ze blijven.
-          </p>
-          <button
-            onClick={() => { trackCTAClick('gratis_intake_hero', 'onze-leden'); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Plan je gratis kennismaking
-          </button>
+    <>
+      <style>{`
+        .vwall { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: clamp(22px,2.8vw,40px); margin-top: 40px; }
+        .vwall .vp { width: 248px; max-width: 76vw; flex: 0 0 auto; position: relative; background: #fff; padding: 13px 13px 16px; border-radius: 3px; box-shadow: 0 12px 26px rgba(11,15,30,.18), 0 2px 6px rgba(0,0,0,.1); transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s; }
+        .vwall .vp:hover { transform: rotate(0) translateY(-6px) scale(1.05) !important; box-shadow: 0 22px 44px rgba(11,15,30,.28); z-index: 5; }
+        .vwall .video { position: relative; aspect-ratio: 9/16; border-radius: 1px; overflow: hidden; cursor: pointer; background: #000; }
+        .vwall .video img { width: 100%; height: 100%; object-fit: cover; opacity: .92; }
+        .vwall .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+        .vwall .video .play span { width: 52px; height: 52px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); }
+        .vwall .video .play svg { width: 21px; height: 21px; margin-left: 3px; }
+        .vwall .nm { text-align: center; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: var(--cfa-ink); margin-top: 13px; }
+        .vwall .vq { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: 13px; line-height: 1.4; color: var(--fg2); margin: 6px 4px 0; }
+        @media (max-width: 600px) {
+          .vwall { gap: 14px; margin-top: 28px; }
+          .vwall .vp { width: 43vw; max-width: 43vw; padding: 8px 8px 11px; transform: none !important; }
+          .vwall .nm { font-size: 13px; margin-top: 9px; letter-spacing: .04em; }
+          .vwall .vq { font-size: 11.5px; margin-top: 5px; }
+          .vwall .video .play span { width: 42px; height: 42px; }
+          .vwall .video .play svg { width: 16px; height: 16px; }
+        }
+      `}</style>
+
+      <section className="page-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/redesign/assets/header-onze-leden.jpg" alt="" style={{ objectPosition: "center 32%" }} />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <p className="eyebrow">Onze leden</p>
+          <h1>Onze Leden</h1>
+          <p className="lede">Mensen die hier al jaren trainen. En vertellen waarom ze blijven.</p>
+          <div className="cta-row"><a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je gratis kennismaking", "Hero")}>Plan je gratis kennismaking</a></div>
         </div>
       </section>
 
-      {/* Video's sectie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl font-bold mb-4 text-center">Bekijk de verhalen</h2>
-          <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-            Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen reden om te trainen. Dit zijn hun verhalen.
-          </p>
-
-          {/* Shorts - 3 kolommen grid - BOVENAAN */}
-          {shortVideos.length > 0 && (
-            <div className="mb-12">
-              <h3 className="text-2xl font-bold mb-6 text-center">Korte clips</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-                {shortVideos.map((video) => (
-                  <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                    <div className="aspect-[9/16]">
-                      <TrackedYouTubeEmbed videoId={video.id} title={video.caption} autoplay={false} />
-                    </div>
-                    <p className="text-center text-gray-900 p-4 text-sm font-medium italic">
-                      {video.caption}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-          
-          {/* Normale video's - 2 kolommen grid */}
-          <h3 className="text-2xl font-bold mb-6 text-center">Verhalen</h3>
-          <div className="grid md:grid-cols-2 gap-8">
-            {normalVideos.map((video) => (
-              <div key={video.id} className="bg-white rounded-lg overflow-hidden shadow-sm">
-                <div className="aspect-video">
-                  <TrackedYouTubeEmbed videoId={video.id} title={video.caption || "Video"} autoplay={false} />
-                </div>
-                {video.caption && (
-                  <p className="text-center text-gray-900 p-4 text-lg font-medium italic">
-                    {video.caption}
-                  </p>
-                )}
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center">
+            <h2 className="sec-title">Bekijk de verhalen</h2>
+            <p className="sec-sub">Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen reden om te trainen. Dit zijn hun verhalen.</p>
+          </div>
+          <div className="vwall">
+            {VIDEOS.map((v, i) => (
+              <div key={v.id} className="vp" style={{ transform: `rotate(${ROT[i % ROT.length]}deg)` }}>
+                <div className="video"><YouTubeEmbed videoId={v.id} alt={v.nm} /></div>
+                <div className="nm">{v.nm}</div>
+                {v.q && <p className="vq">{v.q}</p>}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-20 px-6 bg-blue-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-4">Word ook onderdeel van onze community</h2>
-          <p className="text-xl mb-8">
-            Kom vrijblijvend kennismaken en ontdek of CrossFit Alkmaar bij jou past.
-          </p>
-          <button
-            onClick={() => { trackCTAClick('gratis_intake_footer', 'onze-leden'); openPopup(); }}
-            className="inline-block bg-white hover:bg-gray-100 text-blue-900 font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Plan je kennismaking
-          </button>
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-onze-leden.jpg')", backgroundPosition: "center 32%" } as React.CSSProperties}>
+        <div className="wrap">
+          <h2>Word ook onderdeel van CrossFit Alkmaar</h2>
+          <p>Kom vrijblijvend kennismaken en ontdek of CrossFit Alkmaar bij jou past.</p>
+          <a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je kennismaking", "Word ook lid")}>Plan je kennismaking</a>
         </div>
       </section>
-    </div>
+    </>
   );
 }
