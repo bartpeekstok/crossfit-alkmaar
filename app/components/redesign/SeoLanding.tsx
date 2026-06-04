@@ -76,9 +76,8 @@ export default function SeoLanding({
       source,
       section,
       variant: "kennismaking",
-      // formulier blijft 'kennismaking' zodat de GHL workflow gewoon triggert.
-      // Welke landingspagina het was lezen we af in het landingspagina-veld.
-      extraFields: { landingspagina: name },
+      // GHL filter: formulier=landingspagina, met de naam in het landingspagina-veld.
+      extraFields: { formulier: "landingspagina", landingspagina: name },
     });
   };
 
