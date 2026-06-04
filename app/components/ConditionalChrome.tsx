@@ -7,7 +7,12 @@ const HIDDEN_PREFIXES = ["/start"];
 
 // Paden die de nieuwe redesign-2026 layout gebruiken (Header/Footer/LeadModal
 // uit components/redesign). De OUDE Header/Footer/popups worden hier verborgen.
-export const REDESIGNED_PATHS = ["/"];
+export const REDESIGNED_PATHS = [
+  "/",
+  "/free-intro",
+  "/meer-info",
+  "/kickstart",
+];
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
