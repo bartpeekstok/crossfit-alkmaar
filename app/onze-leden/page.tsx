@@ -16,11 +16,12 @@ const VIDEOS = [
   { id: "7_p0gpFtEvk", nm: "Lisette", q: "'Ik voel me sindsdien een stuk fitter!'" },
   { id: "fI6KBasjzaA", nm: "Simon", q: "'Je ziet mensen bij iedere workout fitter en sterker worden'" },
   { id: "a4ENPMXSTX8", nm: "Simone", q: "'Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.'" },
-  { id: "RBIMMk4WVj8", nm: "Souad", q: "'Vooral denken in mogelijkheden'" },
+  { id: "7IhqaCoBQn4", nm: "Souad", q: "'Vooral denken in mogelijkheden'" },
   { id: "HlqFX84ue3o", nm: "Tim", q: "'Ik voel me fit en m\\'n hartslag in rust is ook omlaaggegaan'" },
   { id: "R0ARPbmxRSg", nm: "Wilco", q: "'Het heeft m\\'n wereld compleet veranderd'" },
   { id: "9v3ijzMvgts", nm: "Harm", q: "'Ik hoef niet na te denken wat ik moet doen'" },
   { id: "jIZpGVRIIyI", nm: "Renze", q: "'Ik houd niet van fitness, dat vind ik veel te saai'" },
+  { id: "q3Fb97wdLKU", nm: "Demi", q: "'Iedereen moedigt je aan'" },
 ];
 
 const ROT = [-3, 2.5, -2, 3, -2.5, 2, -3.5, 1.5, -2, 3, -1.5, 2.5, -3, 2];
