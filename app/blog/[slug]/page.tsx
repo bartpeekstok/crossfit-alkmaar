@@ -90,18 +90,11 @@ export default function BlogPostPage() {
       </article>
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-blue-900 text-white">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4" style={{ color: "#fff" }}>Zelf ervaren?</h2>
-          <p className="text-lg mb-6">
-            Kom vrijblijvend kennismaken bij CrossFit Alkmaar.
-          </p>
-          <button
-            onClick={openPopup}
-            className="bg-white hover:bg-gray-100 text-blue-900 font-semibold py-3 px-8 rounded-lg transition text-lg"
-          >
-            Plan je kennismaking
-          </button>
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-community.jpg')" } as React.CSSProperties}>
+        <div className="wrap">
+          <h2>Zelf ervaren?</h2>
+          <p>Kom vrijblijvend kennismaken bij CrossFit Alkmaar.</p>
+          <a className="btn btn--gold btn--lg" href="#" onClick={(e) => { e.preventDefault(); openPopup(); }}>Plan je kennismaking</a>
         </div>
       </section>
     </div>
