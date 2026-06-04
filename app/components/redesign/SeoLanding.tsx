@@ -216,18 +216,23 @@ export default function SeoLanding({
         </section>
       )}
 
-      {/* MEMBER VIDEO */}
+      {/* MEMBER VIDEO (verticaal 9:16, polaroid stijl) */}
       {memberVideoId && memberName && (
         <section className="sec sec--white">
           <div className="wrap">
             <div className="center"><h2 className="sec-title">{memberName} — lid bij CrossFit Alkmaar</h2></div>
-            <div className="ppv" style={{ marginTop: 22 }}>
-              <div className="video">
-                <YouTubeEmbed videoId={memberVideoId} alt={`${memberName} - lid bij CrossFit Alkmaar`} />
+            <div className="vpair" style={{ marginTop: 32, maxWidth: 320 }}>
+              <div className="vp" style={{ transform: "rotate(-2deg)" }}>
+                <div className="video">
+                  <YouTubeEmbed videoId={memberVideoId} alt={`${memberName} - lid bij CrossFit Alkmaar`} />
+                </div>
+                <div className="nm">{memberName}</div>
+                {memberQuote && <p className="vq">&ldquo;{memberQuote}&rdquo;</p>}
               </div>
-              {memberQuote && <p className="quote">&ldquo;{memberQuote}&rdquo;</p>}
-              <p className="more"><Link href="/onze-leden">Bekijk meer verhalen van onze leden →</Link></p>
             </div>
+            <p style={{ textAlign: "center", marginTop: 28, fontFamily: "var(--font-head)", fontWeight: 600, fontSize: 15 }}>
+              <Link href="/onze-leden" style={{ color: "var(--cfa-blue)", textDecoration: "none" }}>Bekijk meer verhalen van onze leden →</Link>
+            </p>
           </div>
         </section>
       )}
