@@ -29,6 +29,7 @@ export const REDESIGNED_PATHS = [
   "/sportschool-alkmaar",
   "/fitness-alkmaar",
   "/krachttraining-alkmaar",
+  "/sportschool-50-plus-alkmaar",
 ];
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {
