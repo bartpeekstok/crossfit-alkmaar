@@ -24,6 +24,8 @@ export const REDESIGNED_PATHS = [
   "/privacy",
   "/hyrox-simulatie-alkmaar",
   "/hyrox-simulatie-24-oktober",
+  // SEO landingspagina's (template-based via SeoLanding.tsx)
+  "/afvallen-alkmaar",
 ];
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {

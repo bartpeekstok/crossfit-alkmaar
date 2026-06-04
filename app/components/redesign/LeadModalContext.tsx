@@ -9,10 +9,16 @@ type ModalState = {
   variant: Variant;
   source: string;
   section: string;
+  extraFields: Record<string, string>;
 };
 
 type LeadModalContextValue = ModalState & {
-  open: (opts: { source?: string; section?: string; variant?: Variant }) => void;
+  open: (opts: {
+    source?: string;
+    section?: string;
+    variant?: Variant;
+    extraFields?: Record<string, string>;
+  }) => void;
   close: () => void;
 };
 
@@ -24,14 +30,16 @@ export function LeadModalProvider({ children }: { children: ReactNode }) {
     variant: "kennismaking",
     source: "",
     section: "",
+    extraFields: {},
   });
 
-  const open: LeadModalContextValue["open"] = ({ source, section, variant }) => {
+  const open: LeadModalContextValue["open"] = ({ source, section, variant, extraFields }) => {
     setState({
       isOpen: true,
       variant: variant ?? "kennismaking",
       source: source ?? "",
       section: section ?? "",
+      extraFields: extraFields ?? {},
     });
   };
 

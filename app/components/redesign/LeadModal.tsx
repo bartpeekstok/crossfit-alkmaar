@@ -90,7 +90,7 @@ function validate(data: { name: string; email: string; phone: string }) {
 }
 
 export default function LeadModal() {
-  const { isOpen, variant, source, section, close } = useLeadModal();
+  const { isOpen, variant, source, section, extraFields, close } = useLeadModal();
   const cfg = VARIANTS[variant];
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -152,6 +152,7 @@ export default function LeadModal() {
       formulier: variant,
       page: typeof window !== "undefined" ? window.location.pathname.replace(/^\//, "") || "home" : "home",
       url: typeof window !== "undefined" ? window.location.href : "",
+      ...extraFields,
     };
     const body = Object.keys(payload)
       .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(payload[k]))
