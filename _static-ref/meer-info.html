@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meer info — Rooster &amp; Tarieven — CrossFit Alkmaar</title>
+<link rel="stylesheet" href="site.css?v=14">
+<style>
+  .rooster-embed { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(14px,2vw,22px); margin-top: 12px; }
+  .rooster-embed #sportbit-rooster { min-height: 80px; }
+  .tarief-note { text-align: center; margin-top: 26px; }
+</style>
+<link rel="stylesheet" href="https://cfalkmaar.sportbitapp.nl/cbm/css/embed/rooster/rooster.css" type="text/css">
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <!-- HERO -->
+  <section class="page-hero">
+    <img class="bg" src="assets/header-community.jpg" alt="" style="object-position:center 30%">
+    <div class="scrim"></div>
+    <div class="wrap inner">
+      <p class="eyebrow">Meer info</p>
+      <h1>Meer info</h1>
+      <p class="lede">Trainen dat je volhoudt: in kleine groepen, met coaches die je kennen.</p>
+      <div class="cta-row"><a class="btn btn--gold btn--lg" href="free-intro.html">Plan je gratis kennismaking</a></div>
+    </div>
+  </section>
+
+  <!-- ROOSTER -->
+  <section class="sec sec--ivoor" id="rooster" style="scroll-margin-top:90px">
+    <div class="wrap">
+      <div class="center reveal"><h2 class="sec-title">Lesrooster</h2>
+        <p class="sec-sub">Trainen bij CrossFit Alkmaar past in bijna elk schema. Van vroege ochtendlessen tot avondtrainingen, er is altijd een moment dat bij jou werkt.</p>
+      </div>
+      <div class="rooster-embed reveal"><div id="sportbit-rooster">&nbsp;</div></div>
+    </div>
+  </section>
+
+  <!-- TARIEVEN -->
+  <section class="sec sec--white" id="tarieven" style="scroll-margin-top:90px">
+    <div class="wrap">
+      <div class="center reveal"><h2 class="sec-title">Tarieven</h2>
+        <p class="sec-sub">Al onze abonnementen zijn maandelijks opzegbaar. Wij zorgen dat je blijft omdat je dat wilt, niet omdat je vast zit aan een lang contract.</p>
+      </div>
+      <div class="tarief-note reveal"><a class="btn btn--primary btn--lg" href="#" data-cta-form data-variant="tarieven" data-source="Tarieven — Meer informatie">Meer informatie</a></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="sec page-cta" style="--cta-photo:url('assets/header-community.jpg');background-position:center 30%">
+    <div class="wrap reveal">
+      <h2>Klaar om te starten?</h2>
+      <p>Kom vrijblijvend langs. Geen verplichtingen.</p>
+      <a class="btn btn--gold btn--lg" href="free-intro.html">Plan je kennismaking</a>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="site.js"></script>
+<script>
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: .12 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+<script src="https://cfalkmaar.sportbitapp.nl/cbm/embed/rooster/cdn/" async></script>
+<script>
+  window.addEventListener('load', function () {
+    setTimeout(function () {
+      if (window.embed_rooster) { try { window.embed_rooster.init('https://cfalkmaar.sportbitapp.nl/', null); } catch (e) {} }
+    }, 400);
+  });
+</script>
+</body>
+</html>

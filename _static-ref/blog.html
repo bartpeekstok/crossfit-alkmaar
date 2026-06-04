@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog — CrossFit Alkmaar</title>
+<link rel="stylesheet" href="site.css?v=15">
+<style>
+  .bgrid { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(20px,2.6vw,30px); }
+  .bpost { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-1); display: flex; flex-direction: column; transition: transform .18s, box-shadow .18s; }
+  .bpost:hover { transform: translateY(-5px); box-shadow: var(--sh-3); }
+  .bpost .ph { aspect-ratio: 16/10; overflow: hidden; position: relative; }
+  .bpost .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .bpost:hover .ph img { transform: scale(1.05); }
+  .bpost .body { padding: clamp(20px,2.4vw,26px); display: flex; flex-direction: column; flex: 1; }
+  .bpost .meta { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .bpost .cat { font-family: var(--font-head); font-weight: 700; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--cfa-blue); background: var(--blue-50); padding: 4px 10px; border-radius: 999px; }
+  .bpost .date { font-family: var(--font-body); font-size: 13px; color: var(--fg3); }
+  .bpost h2 { font-family: var(--font-head); font-weight: 700; font-size: 21px; line-height: 1.15; letter-spacing: .005em; margin: 0 0 10px; color: var(--fg1); }
+  .bpost p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--fg2); margin: 0 0 18px; }
+  .bpost .more { margin-top: auto; font-family: var(--font-head); font-weight: 600; font-size: 15px; color: var(--cfa-blue); text-decoration: none; }
+  .bpost .more:hover { text-decoration: underline; }
+  @media (max-width: 900px) { .bgrid { grid-template-columns: repeat(2,1fr); } }
+  @media (max-width: 600px) { .bgrid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <section class="page-hero">
+    <img class="bg" src="assets/photo-community.webp" alt="" style="object-position:center 38%">
+    <div class="scrim"></div>
+    <div class="wrap inner">
+      <h1>Blog</h1>
+      <p class="lede">Tips, inzichten en verhalen over training, voeding en een gezonde levensstijl.</p>
+      <p style="font-family:var(--font-body);font-size:14px;color:rgba(234,237,244,.7);margin-top:10px">Zelf geschreven, niet door AI. Echte verhalen vanuit CrossFit Alkmaar.</p>
+      <div class="cta-row"><a class="btn btn--gold btn--lg" href="free-intro.html">Plan je gratis kennismaking</a></div>
+    </div>
+  </section>
+
+  <section class="sec sec--ivoor">
+    <div class="wrap">
+      <div class="bgrid reveal" id="bgrid"></div>
+    </div>
+  </section>
+
+  <section class="sec page-cta" style="--cta-photo:url('assets/photo-community.webp');background-position:center 38%">
+    <div class="wrap reveal">
+      <h2>ZELF ERVAREN WAT CROSSFIT ALKMAAR
+VOOR JOU KAN BETEKENEN?</h2>
+      <p>Kom vrijblijvend kennismaken en ontdek hoe wij je kunnen helpen je doelen te bereiken.</p>
+      <a class="btn btn--gold btn--lg" href="free-intro.html">Plan je kennismaking</a>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="site.js"></script>
+<script>
+  var IMGS = ['assets/photo-box1.webp','assets/photo-community.webp','assets/photo-box2.webp','assets/photo-hero.webp','assets/photo-box3.webp'];
+  var POSTS = [
+    { slug:"tienerprogramma-bij-crossfit-alkmaar", img:"assets/blog/tieners.webp", cat:"Programma's", date:"2026-04-07", title:"Tienerprogramma bij CrossFit Alkmaar", excerpt:"Op 1 mei starten we met ons tienerprogramma bij CrossFit Alkmaar! Een vaste groep van twaalf jongeren tussen 14 en 17 jaar, twee keer per week trainen onder professionele begeleiding." },
+    { slug:"hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen", img:"assets/blog/mentaal-sterker.jpg", cat:"Training", date:"2026-04-06", title:"Hoe je ook tussen je oren sterker wordt van trainen bij een goede sportschool", excerpt:"Bij trainen denk je al snel aan een sterker lijf. Maar wat doet het met je hoofd? Over omgaan met ongemak, je ego parkeren en even helemaal in het moment zijn." },
+    { slug:"wat-we-nu-anders-doen-dan-tien-jaar-geleden", img:"assets/blog/tien-jaar-anders.jpg", cat:"Community", date:"2026-03-30", title:"Wat we nu anders doen dan tien jaar geleden bij CrossFit Alkmaar", excerpt:"Na dik twaalf jaar CrossFit Alkmaar is het leuk om eens terug te kijken naar wat er zoal veranderd is. Van een halve zaal zonder toiletten tot een volledig pand vol professionals." },
+    { slug:"had-je-een-steentje-in-je-schoen", img:"assets/blog/hardlopen.jpg", cat:"Training", date:"2026-03-23", title:"Had je een steentje in je schoen?", excerpt:"Over hardlopen, zone 2 training en waarom het soms slimmer is om af te remmen. Ook als coach blijft dat een uitdaging." },
+    { slug:"twaalf-jaar-crossfit-alkmaar", img:"assets/blog/twaalf-jaar.jpg", cat:"Community", date:"2026-03-16", title:"Twaalf jaar CrossFit Alkmaar en nog steeds dit beeld", excerpt:"Al twaalf jaar zijn we bij CrossFit Alkmaar aan het opboksen tegen het beeld dat veel mensen van CrossFit hebben. Maar CrossFit is voor iedereen." },
+    { slug:"hyrox-bij-crossfit-alkmaar", img:"assets/blog/hyrox.jpg", cat:"Nieuws", date:"2026-03-16", title:"HYROX bij CrossFit Alkmaar!", excerpt:"Na jaren de HYROX-hype in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen. CrossFit Alkmaar is officieel HYROX gym!" },
+    { slug:"waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is", img:"assets/blog/waarom-anders.jpg", cat:"Community", date:"2026-03-09", title:"Waarom CrossFit Alkmaar niet zomaar een sportschool is", excerpt:"Waarom CrossFit Alkmaar zo'n gevestigde naam is dat zelfs collega's hem gebruiken." },
+    { slug:"bart-bij-scherpschutters-podcast", img:"assets/blog/scherpschutters.jpg", cat:"Persoonlijk", date:"2026-03-02", title:"Bart bij Scherpschutters podcast", excerpt:"Benieuwd naar één van de gezichten achter CrossFit Alkmaar? Bart vertelt zijn verhaal bij de podcast Scherpschutters." },
+    { slug:"ben-jij-fit-genoeg-voor-crossfit-alkmaar", img:"assets/blog/fit-genoeg.jpg", cat:"Community", date:"2026-02-23", title:"Ben jij fit genoeg voor CrossFit Alkmaar?", excerpt:"Denk je dat je eerst fit moet zijn om bij ons te starten? Onzin. Bij CrossFit Alkmaar is er maar één eis." },
+    { slug:"een-hardcore-sportschool", img:"assets/blog/hardcore.jpg", cat:"Community", date:"2026-02-16", title:"Een 'hardcore' sportschool?", excerpt:"De burgemeester noemde CrossFit Alkmaar 'een sportschool voor de hardcore sporters.' Maar klopt dat beeld eigenlijk wel?" },
+    { slug:"wijze-lessen", img:"assets/blog/wijze-lessen.jpg", cat:"Community", date:"2026-02-09", title:"Wijze lessen", excerpt:"Over speeches, stoere foto's, trots zijn op jezelf en hoe CrossFit Alkmaar meer brengt dan alleen een fit lijf." },
+    { slug:"doe-je-het-zelf-of-schakel-je-een-professional-in", img:"assets/blog/professional.jpg", cat:"Training", date:"2026-02-02", title:"Doe je het zelf of schakel je een professional in?", excerpt:"Waarom huur je wél een schilder in voor je huis, maar geen coach voor je fitnessdoelen?" }
+  ];
+  var MND = ['januari','februari','maart','april','mei','juni','juli','augustus','september','oktober','november','december'];
+  function fmt(d) { var p = d.split('-'); return parseInt(p[2],10) + ' ' + MND[parseInt(p[1],10)-1] + ' ' + p[0]; }
+  document.getElementById('bgrid').innerHTML = POSTS.map(function (p, i) {
+    return '<article class="bpost">' +
+      '<a class="ph" href="https://crossfitalkmaar.com/blog/' + p.slug + '" target="_blank" rel="noopener"><img src="' + p.img + '" alt="" loading="lazy"></a>' +
+      '<div class="body"><div class="meta"><span class="cat">' + p.cat + '</span><span class="date">' + fmt(p.date) + '</span></div>' +
+      '<h2>' + p.title + '</h2><p>' + p.excerpt + '</p>' +
+      '<a class="more" href="https://crossfitalkmaar.com/blog/' + p.slug + '" target="_blank" rel="noopener">Lees meer →</a></div></article>';
+  }).join('');
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (es) { es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } }); }, { threshold: .1 });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>

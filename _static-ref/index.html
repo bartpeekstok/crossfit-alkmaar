@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CrossFit Alkmaar — Sporten werkt pas als je het volhoudt</title>
+<link rel="stylesheet" href="site.css?v=13">
+<style>
+  /* ===== HERO ===== */
+  .hero { position: relative; color: #fff; overflow: hidden; min-height: 92vh; display: flex; align-items: center; }
+  .hero .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 32%; transform: scale(1.06); animation: heroZoom 16s ease-out forwards; }
+  @keyframes heroZoom { to { transform: scale(1); } }
+  .hero .scrim { position: absolute; inset: 0; background: linear-gradient(85deg, rgba(11,15,30,.94) 0%, rgba(11,15,30,.72) 42%, rgba(11,15,30,.28) 75%, rgba(11,15,30,.5) 100%); }
+  .hero .inner { position: relative; z-index: 2; padding: 0 0 clamp(70px,11vh,130px); max-width: 880px; margin: 0 auto 0 clamp(20px,6vw,110px); }
+  .hero h1 { color: #fff; font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(34px,4.6vw,72px); line-height: 1.02; letter-spacing: .005em; margin: 16px 0 0; }
+  .hero h1 .ln { display: block; white-space: nowrap; }
+  .hero h1 .accent { position: relative; display: inline-block; }
+  .hero .eyebrow::before { display: none; }
+  .hero .eyebrow { white-space: nowrap; font-size: clamp(18px,2.4vw,30px); letter-spacing: .14em; color: var(--hold); }
+  .hero h1 .accent::after { content: none; }
+  .hero .lede { font-family: var(--font-body); font-weight: 500; font-size: clamp(17px,2vw,23px); line-height: 1.5; color: rgba(234,237,244,.94); max-width: 680px; margin: 24px 0 0; text-wrap: balance; }
+  .hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
+  .hero .cta-row .btn { font-size: clamp(16px,1.1vw,19px); padding: clamp(16px,1.4vw,20px) clamp(30px,2.6vw,44px); }
+  /* floating proof badge */
+  .hero .badge { position: absolute; z-index: 3; right: clamp(48px,9vw,150px); top: clamp(96px,16vh,150px); background: #fff; color: var(--cfa-ink); border-radius: var(--r-lg); padding: 20px 26px; box-shadow: var(--sh-3); transform: rotate(3deg); max-width: 280px; }
+  .hero .badge .stars { display: flex; gap: 3px; margin-bottom: 8px; }
+  .hero .badge .stars svg { width: 20px; height: 20px; }
+  .hero .badge .big { font-family: var(--font-stat); font-weight: 700; font-size: 38px; line-height: 1; color: var(--cfa-blue); }
+  .hero .badge .lab { font-family: var(--font-body); font-size: 14px; color: var(--fg2); margin-top: 3px; }
+  @media (max-width: 700px) { .hero .badge { right: 14px; top: 14px; padding: 12px 15px; transform: rotate(2deg); max-width: 150px; } .hero .badge .stars svg { width: 15px; height: 15px; } .hero .badge .big { font-size: 26px; } .hero .badge .lab { font-size: 12px; } }
+
+  /* ===== STATS (line) ===== */
+  .statline { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; }
+  .statline .st { flex: 1 1 0; min-width: 150px; text-align: center; padding: clamp(8px,1vw,16px) clamp(14px,2.4vw,36px); position: relative; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+  .statline .st:not(:first-child)::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 2px; height: 62%; background: var(--hold); opacity: .55; }
+  .statline .v { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(46px,5.4vw,82px); line-height: .86; letter-spacing: .01em; color: var(--cfa-blue); }
+  .statline .st:nth-child(even) .v { color: var(--hold); }
+  .statline .lbl { font-family: var(--font-head); font-weight: 600; text-transform: uppercase; letter-spacing: .05em; font-size: clamp(12px,1vw,14px); color: var(--fg2); display: inline-flex; align-items: center; gap: 5px; }
+  .statline .lbl .star { color: var(--hold); font-size: 15px; }
+  .statline a.st:hover .v { opacity: .82; }
+  @media (max-width: 760px) {
+    .statline .st { flex: 1 1 42%; min-width: 42%; padding: 18px 10px; }
+    .statline .st:not(:first-child)::before { display: none; }
+  }
+
+  /* ===== STEPS ===== */
+  .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(20px,3vw,30px); margin-top: clamp(36px,4vw,56px); }
+  .step { background: #fff; border-radius: var(--r-lg); padding: clamp(26px,3vw,36px); box-shadow: var(--sh-1); border-top: 5px solid var(--cfa-blue); position: relative; transition: transform .18s, box-shadow .18s; }
+  .step:hover { transform: translateY(-5px); box-shadow: var(--sh-3); }
+  .step:nth-child(2) { border-top-color: var(--hold); }
+  .step .n { font-family: var(--font-display); font-weight: 400; font-size: 64px; line-height: .8; color: var(--blue-100); margin-bottom: 12px; }
+  .step:nth-child(2) .n { color: var(--hold-soft); }
+  .step h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 17px; line-height: 1.2; letter-spacing: 0; margin: 0 0 10px; white-space: nowrap; }
+  .step p { font-family: var(--font-body); font-size: 17px; line-height: 1.55; color: var(--fg2); margin: 0; }
+
+  /* ===== PROGRAMS ===== */
+  .progs { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(18px,2.4vw,26px); margin-top: clamp(36px,4vw,56px); }
+  .prog { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden; display: flex; flex-direction: column; box-shadow: var(--sh-1); transition: transform .18s, box-shadow .18s; }
+  .prog:hover { transform: translateY(-6px); box-shadow: var(--sh-3); }
+  .prog .ph { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+  .prog .ph img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s; }
+  .prog:hover .ph img { transform: scale(1.06); }
+  .prog .ph .tag { position: absolute; top: 12px; left: 12px; background: var(--hold); color: var(--cfa-ink); font-family: var(--font-head); font-weight: 700; font-size: 11px; letter-spacing: .12em; text-transform: uppercase; padding: 6px 12px; border-radius: 999px; }
+  .prog .body { padding: clamp(22px,2.6vw,30px); display: flex; flex-direction: column; flex: 1; }
+  .prog h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: 30px; letter-spacing: .01em; margin: 0 0 8px; }
+  .prog .lede { font-family: var(--font-body); font-size: 17px; color: var(--fg2); margin: 0 0 18px; }
+  .prog ul { list-style: none; margin: 0 0 22px; padding: 0; display: grid; gap: 9px; }
+  .prog li { display: flex; gap: 10px; font-family: var(--font-body); font-size: 16.5px; color: var(--fg1); }
+  .prog li svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 2px; }
+  .prog .btn { margin-top: auto; }
+
+  /* ===== COMMUNITY STRIP ===== */
+  .community { position: relative; }
+  .cstrip { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 12px; }
+  .cstrip .cell { position: relative; overflow: hidden; border-radius: var(--r-md); aspect-ratio: 3/4; }
+  .cstrip .cell img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s; }
+  .cstrip .cell:hover img { transform: scale(1.07); }
+  .cstrip .cell.zoom img { transform: scale(1.22); }
+  .cstrip .cell.zoom:hover img { transform: scale(1.3); }
+  .cstrip .cell.tall { grid-row: span 2; aspect-ratio: 3/8; }
+  @media (max-width: 760px) { .cstrip { grid-template-columns: repeat(2,1fr); } .cstrip .cell.tall { grid-row: span 1; aspect-ratio: 3/4; } }
+  .comm-cta { text-align: center; margin-top: clamp(34px,4.5vw,52px); display: flex; flex-direction: column; align-items: center; gap: 20px; }
+  .comm-cta h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(26px,3.4vw,44px); line-height: .98; color: var(--cfa-ink); margin: 0; }
+
+  /* ===== TESTIMONIALS ===== */
+  .tgrid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px,3vw,32px); margin-top: 12px; }
+  .tcard .video { position: relative; aspect-ratio: 16/9; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-3); cursor: pointer; background: #000; }
+  .tcard .video img { width: 100%; height: 100%; object-fit: cover; opacity: .82; transition: opacity .2s, transform .4s; }
+  .tcard .video:hover img { opacity: .95; transform: scale(1.03); }
+  .tcard .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .tcard .video .play span { width: 72px; height: 72px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); transition: transform .15s; }
+  .tcard .video:hover .play span { transform: scale(1.08); }
+  .tcard .video .play svg { width: 28px; height: 28px; margin-left: 4px; }
+  .tcard .quote { font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: 17px; line-height: 1.5; color: #fff; margin: 18px 0 0; text-wrap: pretty; }
+
+  /* ===== REVIEWS WIDGET ===== */
+  .reviews-embed { margin-top: 28px; }
+  .reviews-embed iframe { width: 100%; min-width: 100%; border: 0; }
+
+  /* ===== SOLO VIDEO ===== */
+  .sec:has(.vsolo) { padding-top: clamp(26px,3.5vw,48px); padding-bottom: clamp(26px,3.5vw,48px); }
+  .vsolo { max-width: 860px; margin: 0 auto; }
+  .vsolo .video { position: relative; aspect-ratio: 16/9; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-3); cursor: pointer; background: #000; }
+  .vsolo .video img { width: 100%; height: 100%; object-fit: cover; opacity: .85; transition: opacity .2s, transform .4s; }
+  .vsolo .video:hover img { opacity: 1; transform: scale(1.03); }
+  .vsolo .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .vsolo .video .play span { width: 58px; height: 58px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); transition: transform .15s; }
+  .vsolo .video:hover .play span { transform: scale(1.08); }
+  .vsolo .video .play svg { width: 23px; height: 23px; margin-left: 3px; }
+  .vsolo .quote { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: clamp(17px,1.9vw,20px); line-height: 1.5; color: var(--fg1); margin: 22px 0 0; text-wrap: pretty; }
+  .sec--ink .vsolo .quote { color: #fff; }
+
+  /* ===== PORTRAIT VIDEO TRIO (playful) ===== */
+  .vtrio { display: flex; justify-content: center; align-items: flex-start; gap: clamp(14px,2.4vw,34px); margin: 18px 0 6px; padding: 26px 0; flex-wrap: nowrap; }
+  .vtrio .vp { width: 264px; max-width: 30vw; flex: 0 0 auto; position: relative; background: #fff; padding: 13px 13px 16px; border-radius: 3px; box-shadow: 0 12px 26px rgba(11,15,30,.18), 0 2px 6px rgba(0,0,0,.1); transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s; }
+  .vtrio .vp:hover { box-shadow: 0 20px 40px rgba(11,15,30,.26); }
+  .vtrio .vp:nth-child(1) { transform: rotate(-4deg) translateY(8px); z-index: 1; }
+  .vtrio .vp:nth-child(2) { transform: rotate(2deg) translateY(-10px) scale(1.04); z-index: 3; }
+  .vtrio .vp:nth-child(3) { transform: rotate(-3deg) translateY(12px); z-index: 2; }
+  .vtrio .vp:hover { transform: rotate(0) translateY(-6px) scale(1.06); z-index: 5; }
+  .vtrio .video { position: relative; aspect-ratio: 9/16; border-radius: 1px; overflow: hidden; cursor: pointer; background: #000; }
+  .vtrio .video img { width: 100%; height: 100%; object-fit: cover; opacity: .92; transition: opacity .2s, transform .4s; }
+  .vtrio .vp:hover .video img { opacity: 1; transform: scale(1.04); }
+  .vtrio .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .vtrio .video .play span { width: 52px; height: 52px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); transition: transform .15s; }
+  .vtrio .vp:hover .video .play span { transform: scale(1.1); }
+  .vtrio .video .play svg { width: 21px; height: 21px; margin-left: 3px; }
+  .vtrio .nm { text-align: center; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 15px; color: var(--cfa-ink); margin-top: 13px; }
+  .vtrio .nm span { display: block; font-family: var(--font-body); font-weight: 500; text-transform: none; letter-spacing: 0; font-size: 12.5px; color: var(--cfa-blue); margin-top: 2px; }
+  .vtrio .vq { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: 13px; line-height: 1.4; color: var(--fg2); margin: 6px 4px 0; text-wrap: pretty; }
+  @media (max-width: 720px) {
+    .vtrio { flex-wrap: wrap; gap: 22px; padding: 8px 0; }
+    .vtrio .vp, .vtrio .vp:nth-child(1), .vtrio .vp:nth-child(2), .vtrio .vp:nth-child(3) { transform: none; margin: 0; width: 250px; max-width: 78vw; }
+    .vtrio .vp:hover { transform: translateY(-4px); }
+    .vtrio .vq { font-size: 14.5px; }
+  }
+
+  /* ===== CTA CARD ===== */
+  .cta-card { max-width: 760px; margin: 0 auto; background: var(--cfa-blue); border-radius: var(--r-lg); box-shadow: var(--sh-blue); padding: clamp(32px,4vw,52px); text-align: center; color: #fff; position: relative; overflow: hidden; }
+  .cta-card::before { content: ''; position: absolute; right: -60px; top: -60px; width: 220px; height: 220px; background: var(--hold); opacity: .14; transform: rotate(45deg); }
+  .cta-card h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(26px,3.4vw,40px); margin: 0 0 22px; color: #fff; line-height: .96; position: relative; }
+
+  /* ===== FAQ ACCORDION ===== */
+  .faq { max-width: 840px; margin: 12px auto 0; display: grid; gap: 12px; }
+  .faq details { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); overflow: hidden; border-left: 4px solid var(--cfa-blue); }
+  .faq summary { list-style: none; cursor: pointer; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; font-family: var(--font-head); font-weight: 600; font-size: 19px; color: var(--fg1); }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary .ic { flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%; background: var(--blue-50); display: grid; place-items: center; transition: transform .2s, background .2s; }
+  .faq summary .ic svg { width: 14px; height: 14px; }
+  .faq details[open] { border-left-color: var(--hold); }
+  .faq details[open] summary .ic { transform: rotate(45deg); background: var(--hold); }
+  .faq .body { padding: 0 24px 22px; font-family: var(--font-body); font-size: 17.5px; line-height: 1.6; color: var(--fg2); }
+
+  /* ===== FINAL CTA ===== */
+  .final { position: relative; overflow: hidden; text-align: center; }
+  .final .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .final .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(12,26,78,.86), rgba(11,15,30,.92)); }
+  .final .inner { position: relative; z-index: 1; }
+  .final h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(40px,6vw,84px); line-height: .9; color: #fff; }
+  .final p { font-family: var(--font-body); font-size: clamp(17px,2vw,21px); color: rgba(234,237,244,.92); margin: 18px 0 32px; }
+
+  @media (max-width: 860px) {
+    .steps { grid-template-columns: 1fr; }
+    .progs { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 600px) {
+    .hero { min-height: 88vh; align-items: flex-end; }
+    .hero .bg { object-position: center 58%; transform: scale(1.22); transform-origin: center 58%; animation: none; }
+    .hero .scrim { background: linear-gradient(0deg, rgba(11,15,30,.95) 0%, rgba(11,15,30,.8) 36%, rgba(11,15,30,.28) 62%, rgba(11,15,30,.08) 100%); }
+    .hero .inner { margin-left: 0; max-width: 100%; padding: 0 22px clamp(40px,7vh,60px); }
+    .hero .eyebrow { font-size: 15px; letter-spacing: .12em; }
+    .hero h1 { font-size: 40px; line-height: 1.04; margin-top: 12px; }
+    .hero h1 .ln { white-space: normal; }
+    .hero .lede { font-size: 17px; margin-top: 14px; max-width: 100%; }
+    .hero .cta-row { margin-top: 24px; width: 100%; }
+    .hero .cta-row .btn { width: 100%; justify-content: center; font-size: 16px; padding: 16px 24px; }
+    .statline .v { font-size: 42px; }
+    .statline .st { padding: 14px 8px; }
+    .reviews-embed { margin-top: 18px; }
+  }
+</style>
+</head>
+<body>
+<header id="site-header"></header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <img class="bg" src="assets/photo-hero-team.jpg" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training">
+    <div class="scrim"></div>
+    <div class="badge">
+      <div class="stars">
+        <svg viewBox="0 0 24 24" fill="#E0A325"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.6 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#E0A325"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.6 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#E0A325"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.6 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#E0A325"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.6 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+        <svg viewBox="0 0 24 24" fill="#E0A325"><path d="M12 2l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.6 6.1 20.8l1.2-6.6L2.5 9l6.6-.9z"/></svg>
+      </div>
+      <div class="big">300+</div>
+      <div class="lab">Google Reviews</div>
+    </div>
+    <div class="wrap inner">
+      <p class="eyebrow">CrossFit Alkmaar</p>
+      <h1><span class="ln">Sporten werkt pas</span><span class="ln">als je het <span class="accent">volhoudt.</span></span></h1>
+      <p class="lede">Kleine groepen, coaches die je bij naam kennen, en mensen die je missen als je er niet bent.</p>
+      <div class="cta-row">
+        <a class="btn btn--gold btn--lg" href="free-intro.html">Plan je gratis kennismaking</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 STAPPEN -->
+  <section class="sec sec--ivoor">
+    <div class="wrap">
+      <div class="center reveal">
+        <h2 class="sec-title">Zo werkt trainen bij CrossFit Alkmaar</h2>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="n">01</div>
+          <h3>Gratis kennismaking</h3>
+          <p>Kom langs voor een gratis kennismaking. We horen graag alles over je doelen, waar je tegenaan loopt en wat je al hebt geprobeerd.</p>
+        </div>
+        <div class="step reveal" data-d="1">
+          <div class="n">02</div>
+          <h3>Persoonlijk trainingsplan</h3>
+          <p>Elke training wordt aangepast aan jouw niveau, doelen en eventuele beperkingen. Je traint altijd onder leiding van professionele coaches.</p>
+        </div>
+        <div class="step reveal" data-d="2">
+          <div class="n">03</div>
+          <h3>Resultaten zien en voelen</h3>
+          <p>Binnen weken voel je je sterker, energieker en fitter. Elke drie maanden heb je een check-in gesprek met één van de coaches. Zo houden we contact en kunnen we je plan aanpassen waar nodig.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Jarrald video moved into portrait pair below) -->
+
+
+  <!-- PROGRAMMA'S -->
+  <section class="sec sec--ivoor" id="programmas">
+    <div class="wrap">
+      <div class="center reveal">
+        <h2 class="sec-title">Kies het programma<br>dat bij je past</h2>
+        <p class="sec-sub">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
+      </div>
+      <div class="progs">
+        <div class="prog reveal">
+          <div class="ph"><img src="assets/photo-box1.webp" alt="28 Day Kickstart"></div>
+          <div class="body">
+            <h3>28 day kickstart</h3>
+            <p class="lede">Hier start iedereen. In vier weken leggen we samen een solide basis.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Word sterker en fitter</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Structuur en accountability</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Kleine groepen (max 6)</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Basis leefstijladvies</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="kickstart.html">Meer info</a>
+          </div>
+        </div>
+        <div class="prog reveal" data-d="1">
+          <div class="ph"><img src="assets/photo-box2.webp" alt="BUILD — semi personal training"></div>
+          <div class="body">
+            <h3>BUILD</h3>
+            <p class="lede">Semi personal training in een vaste groep.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>De voordelen van personal training</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>In een vaste groep van maximaal 6 personen</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Een gestructureerd schema</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Met jouw vaste coaches</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="small-group-training.html">Meer info</a>
+          </div>
+        </div>
+        <div class="prog reveal" data-d="2">
+          <div class="ph"><img src="assets/photo-box3.webp" alt="Groepslessen CrossFit Alkmaar"></div>
+          <div class="body">
+            <h3>Groepslessen</h3>
+            <p class="lede">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
+            <ul>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>De beste coaches van Alkmaar</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Flexibel in- en uitschrijven</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Ontmoet nieuwe vrienden</li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="#1F9D55" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Voor alle niveaus</li>
+            </ul>
+            <a class="btn btn--primary btn--block" href="groepslessen.html">Meer info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY STRIP -->
+  <section class="sec sec--white community">
+    <div class="wrap">
+      <div class="center reveal">
+        <h2 class="sec-title">Je traint nooit alleen</h2>
+        <p class="sec-sub">Mensen die je missen als je er niet bent. Dat is wat trainen bij CrossFit Alkmaar anders maakt.</p>
+      </div>
+      <div class="cstrip reveal" style="margin-top:36px">
+        <div class="cell"><img src="assets/photo-community.webp" alt="Leden van CrossFit Alkmaar tijdens een training"></div>
+        <div class="cell"><img src="assets/community-3.jpg" alt="Coach begeleidt een lid bij CrossFit Alkmaar" style="object-position:center 65%"></div>
+        <div class="cell zoom"><img src="assets/community-2.jpg" alt="Leden lopen met kettlebells door de box"></div>
+        <div class="cell"><img src="assets/community-1.jpg" alt="High-five tijdens een training bij CrossFit Alkmaar"></div>
+      </div>
+      <div class="comm-cta reveal">
+        <h3>Sluit je aan bij 300+ tevreden leden</h3>
+        <a class="btn btn--gold btn--lg" href="free-intro.html">Kom vrijblijvend kennismaken</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO TESTIMONIALS (portrait trio) -->
+  <section class="sec sec--ivoor" style="padding-bottom:clamp(12px,1.6vw,20px)">
+    <div class="wrap">
+      <div class="center reveal"><h2 class="sec-title">Echte verhalen van leden</h2></div>
+      <div class="vtrio reveal">
+        <div class="vp">
+          <div class="video" data-yt="EIWOUtYAl7g">
+            <img src="https://img.youtube.com/vi/EIWOUtYAl7g/hqdefault.jpg" alt="Chris — lid van CrossFit Alkmaar" data-id="EIWOUtYAl7g" onload="if(this.naturalWidth<=120&&!this.dataset.fb){this.dataset.fb=1;this.src='https://img.youtube.com/vi/'+this.dataset.id+'/mqdefault.jpg'}">
+            <div class="play"><span><svg viewBox="0 0 24 24" fill="#0B0F1E"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="nm">Chris</div>
+          <p class="vq">'CrossFit is veel toegankelijker dan aan machines trekken in een sportschool'</p>
+        </div>
+        <div class="vp">
+          <div class="video" data-yt="SKchVCAIx80">
+            <img src="https://img.youtube.com/vi/SKchVCAIx80/hqdefault.jpg" alt="Steven — lid van CrossFit Alkmaar" data-id="SKchVCAIx80" onload="if(this.naturalWidth<=120&&!this.dataset.fb){this.dataset.fb=1;this.src='https://img.youtube.com/vi/'+this.dataset.id+'/mqdefault.jpg'}">
+            <div class="play"><span><svg viewBox="0 0 24 24" fill="#0B0F1E"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="nm">Steven</div>
+          <p class="vq">'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'</p>
+        </div>
+        <div class="vp">
+          <div class="video" data-yt="GCUpJQJJ8s0">
+            <img src="https://img.youtube.com/vi/GCUpJQJJ8s0/hqdefault.jpg" alt="Malou — lid van CrossFit Alkmaar" data-id="GCUpJQJJ8s0" onload="if(this.naturalWidth<=120&&!this.dataset.fb){this.dataset.fb=1;this.src='https://img.youtube.com/vi/'+this.dataset.id+'/mqdefault.jpg'}">
+            <div class="play"><span><svg viewBox="0 0 24 24" fill="#0B0F1E"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </div>
+          <div class="nm">Malou</div>
+          <p class="vq">'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS (GoHighLevel widget) -->
+  <section class="sec sec--ivoor" style="padding-top:clamp(16px,2.4vw,28px)">
+    <div class="wrap">
+      <div class="center reveal">
+        <h2 class="sec-title">Wat onze leden zeggen</h2>
+      </div>
+      <div class="reviews-embed reveal">
+        <iframe class="lc_reviews_widget" src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj" frameborder="0" scrolling="no" style="min-width:100%;width:100%" title="Google Reviews"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="sec sec--ivoor" style="padding:clamp(44px,6vw,72px) 0">
+    <div class="wrap">
+      <div class="statline reveal">
+        <div class="st"><div class="v">7</div><div class="lbl">Professionele coaches</div></div>
+        <div class="st"><div class="v">300+</div><div class="lbl">Actieve leden</div></div>
+        <div class="st"><div class="v">12+</div><div class="lbl">Jaar ervaring</div></div>
+        <div class="st"><div class="v">35+</div><div class="lbl">Gemiddelde leeftijd</div></div>
+        <div class="st"><div class="v">15.000</div><div class="lbl">Bakjes koffie per jaar</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="sec sec--white">
+    <div class="wrap">
+      <div class="center reveal">
+        <h2 class="sec-title">Veelgestelde vragen</h2>
+      </div>
+      <div class="faq">
+        <details open class="reveal"><summary>Ik ben niet fit genoeg om te starten<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Dat is precies waarom je juist wél moet starten. Elke training schalen we naar jouw niveau.</div></details>
+        <details class="reveal"><summary>Ik heb geen tijd voor 5x per week trainen<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Hoeft ook niet. Veel leden trainen 2-3x per week en zien al goede resultaten.</div></details>
+        <details class="reveal"><summary>Ben ik niet te oud om met trainen te beginnen?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Absoluut niet. Onze gemiddelde leeftijd is 35+. We hebben leden van 20 tot 70+ die veilig trainen.</div></details>
+        <details class="reveal"><summary>Wat als ik blessures of beperkingen heb?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">We passen bewegingen aan of kiezen alternatieven. Onze coaches hebben ervaring met revalidatie.</div></details>
+        <details class="reveal"><summary>Is CrossFit geschikt voor beginners?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Absoluut. Bij CrossFit Alkmaar start iedereen met een 28 day kickstart waarin je in kleine groepen (max 6 personen) alle basisbewegingen leert. Elke oefening wordt aangepast aan jouw niveau, dus ervaring is niet nodig.</div></details>
+        <details class="reveal"><summary>Wat is het verschil tussen CrossFit en een gewone sportschool?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">Bij een gewone sportschool train je alleen met machines en zonder begeleiding. Bij CrossFit Alkmaar train je altijd onder leiding van professionele coaches, in kleine groepen met gevarieerde trainingen. Je wordt sterker, fitter én je bouwt een community op.</div></details>
+        <details class="reveal"><summary>Voor wie is CrossFit Alkmaar?<span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></summary><div class="body">CrossFit Alkmaar is voor iedereen: van 20 tot 70+, van complete beginners tot ervaren sporters. Onze gemiddelde leeftijd is 35+. Elke training is schaalbaar naar jouw niveau, doelen en eventuele beperkingen.</div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="sec final">
+    <img class="bg" src="assets/photo-community.webp" alt="" style="object-position:center 42%">
+    <div class="scrim"></div>
+    <div class="wrap inner reveal">
+      <h2>Klaar om te starten?</h2>
+      <p>Kom vrijblijvend langs. Geen verplichtingen.</p>
+      <a class="btn btn--gold btn--lg" href="free-intro.html">Plan je kennismaking</a>
+    </div>
+  </section>
+</main>
+
+<footer id="site-footer"></footer>
+
+<script src="site.js"></script>
+<script>
+  // click-to-play YouTube
+  document.querySelectorAll('.video[data-yt]').forEach(function (v) {
+    v.addEventListener('click', function () {
+      var id = v.getAttribute('data-yt');
+      v.innerHTML = '<iframe width="100%" height="100%" style="position:absolute;inset:0;border:0" src="https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&playsinline=1&rel=0&modestbranding=1" title="CrossFit Alkmaar" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>';
+    });
+  });
+  // scroll reveal
+  (function () {
+    var els = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { els.forEach(function (e) { e.classList.add('in'); }); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+    }, { threshold: .14, rootMargin: '0px 0px -8% 0px' });
+    els.forEach(function (e) { io.observe(e); });
+  })();
+</script>
+</body>
+</html>

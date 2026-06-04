@@ -1,302 +1,57 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-import { trackCTAClick } from "../lib/analytics";
-import ServiceSchema from "../components/ServiceSchema";
-import Image from "next/image";
 import Link from "next/link";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
-import Script from "next/script";
+import SeoLanding from "../components/redesign/SeoLanding";
 
 export default function AfvallenAlkmaarPage() {
-  const { openPopup } = usePopup();
-
   return (
-    <div className="min-h-screen bg-gray-200">
-      <ServiceSchema
-        name="Afvallen in Alkmaar - CrossFit Alkmaar"
-        description="Gezond afvallen met professionele begeleiding. Effectieve training en voedingsadvies bij CrossFit Alkmaar."
-        url="https://crossfitalkmaar.com/afvallen-alkmaar"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Kan ik afvallen met CrossFit?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja. Onze trainingen combineren kracht en cardio — ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons voedingsadvies.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Hoe vaak moet ik trainen om af te vallen?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Bieden jullie ook voedingsbegeleiding?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja. We bieden voedingsadvies aan als aanvulling op je training. Afvallen begint in de keuken — onze coaches helpen je met praktische tips.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Is CrossFit niet te zwaar als ik wil afvallen?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Nee. Elke oefening wordt aangepast aan jouw niveau. Je hoeft niet fit te zijn om te starten, je wordt fit doordat je start.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: "Jarrald — lid bij CrossFit Alkmaar",
-            description: "Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen - Lid bij CrossFit Alkmaar deelt zijn ervaring",
-            thumbnailUrl: `https://img.youtube.com/vi/1qhbmRPtysU/maxresdefault.jpg`,
-            uploadDate: "2025-01-01",
-            contentUrl: `https://www.youtube.com/watch?v=1qhbmRPtysU`,
-            embedUrl: `https://www.youtube.com/embed/1qhbmRPtysU`,
-          }),
-        }}
-      />
-
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="Afvallen in Alkmaar - effectief en gezond bij CrossFit Alkmaar"
-      >
-        <Image
-          src="/images/afvallen-alkmaar-header.jpg"
-          alt="Afvallen in Alkmaar - effectief en gezond bij CrossFit Alkmaar"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Afvallen in Alkmaar
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Geen crashdiëten of eindeloos cardio. Wél effectieve training en begeleiding die werkt.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_afvallen_hero", "afvallen-alkmaar"); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-
-      {/* Waarom CrossFit voor afvallen */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Waarom CrossFit werkt als je wilt afvallen
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Veel mensen proberen af te vallen door alleen te cardio-en of minder te eten. Dat werkt even, maar niet lang. Bij CrossFit Alkmaar pak je het anders aan: je bouwt spiermassa op, verhoogt je stofwisseling en verbrandt calorieën — ook na de training.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Onze <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">trainingen</Link> combineren kracht en conditie in gevarieerde workouts van een uur. Elke sessie wordt begeleid door een coach die je pusht én remt waar nodig. Zo train je effectief zonder blessures.
-          </p>
-          <p className="text-lg text-gray-700">
-            En het belangrijkste: je traint in een groep die je motiveert. Geen eenzame uren op de loopband, maar energie van mensen die hetzelfde doel hebben.
-          </p>
-        </div>
-      </section>
-
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* Aanpak */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Onze aanpak voor gezond afvallen
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Effectieve training
-              </h3>
-              <p className="text-gray-700">
-                CrossFit combineert kracht en conditie. Je verbetert je lichaamsamenstelling: minder vet, meer spiermassa. Dat is duurzamer dan alleen gewicht verliezen.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Voedingsbegeleiding
-              </h3>
-              <p className="text-gray-700">
-                Training alleen is niet genoeg. Onze <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingscoaches</Link> helpen je met een eetpatroon dat past bij jouw leven — geen strenge diëten.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Persoonlijke coaching
-              </h3>
-              <p className="text-gray-700">
-                Elke les wordt begeleid in groepen van max 12. Je coach kent je doelen en past de training aan op jouw niveau en conditie.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Motivatie van de groep
-              </h3>
-              <p className="text-gray-700">
-                De community bij CrossFit Alkmaar houdt je op de been. Je traint met mensen die je aanmoedigen en missen als je er niet bent.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Voor wie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Je hoeft niet fit te zijn om te beginnen
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Veel van onze leden zijn begonnen met het doel om af te vallen. Sommigen hadden nog nooit gesport, anderen kwamen van een andere sportschool waar ze niet de resultaten kregen die ze wilden.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Iedereen start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> — een persoonlijk traject waarin je de basis leert. Zo bouw je op in je eigen tempo en sta je nooit onvoorbereid in een groepsles.
-          </p>
-        </div>
-      </section>
-
-      {/* AEO Content */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Hoe val je duurzaam af?</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Waarom werken diëten niet op de lange termijn?</h3>
-              <p className="text-gray-600">De meeste diëten focussen alleen op minder eten, waardoor je spiermassa verliest en je stofwisseling vertraagt. Duurzaam afvallen combineer je caloriebeperking met krachttraining om spiermassa te behouden. Zo verbrand je ook in rust meer calorieën.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Wat is de beste sport om af te vallen?</h3>
-              <p className="text-gray-600">Een combinatie van krachttraining en conditietraining. Bij CrossFit Alkmaar doe je beide in elke les. Krachttraining bouwt spiermassa die je stofwisseling verhoogt, conditietraining verbetert je uithoudingsvermogen en verbrandt calorieën.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe snel kun je afvallen met sporten?</h3>
-              <p className="text-gray-600">Met 2-3 trainingen per week en gezonde voeding is 0,5 tot 1 kilo per week realistisch en duurzaam. Bij CrossFit Alkmaar bieden we ook <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link> aan om je resultaten te versnellen.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lid aan het woord */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Jarrald — lid bij CrossFit Alkmaar</h2>
-          <p className="text-gray-600 text-center mb-8">&quot;Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen&quot;</p>
-          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <TrackedYouTubeEmbed videoId="1qhbmRPtysU" title="Jarrald — lid bij CrossFit Alkmaar" />
-            </div>
-          </div>
-          <p className="text-center mt-6">
-            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Veelgestelde vragen */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Kan ik afvallen met CrossFit?</h3>
-              <p className="text-gray-600">Ja. Onze trainingen combineren kracht en cardio — ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link>.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet ik trainen om af te vallen?</h3>
-              <p className="text-gray-600">2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Bieden jullie ook voedingsbegeleiding?</h3>
-              <p className="text-gray-600">Ja. We bieden <Link href="/voedingsadvies" className="text-blue-900 font-semibold hover:underline">voedingsadvies</Link> aan als aanvulling op je training. Afvallen begint in de keuken — onze coaches helpen je met praktische tips.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Is CrossFit niet te zwaar als ik wil afvallen?</h3>
-              <p className="text-gray-600">Nee. Elke oefening wordt aangepast aan jouw niveau. Je hoeft niet fit te zijn om te starten, je wordt fit doordat je start. Begin met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw op in je eigen tempo.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Klaar om te beginnen?
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Plan een gratis kennismakingsgesprek en ontdek hoe wij je kunnen helpen met gezond afvallen.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_afvallen_footer", "afvallen-alkmaar"); openPopup(); }}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-    </div>
+    <SeoLanding
+      name="Afvallen Alkmaar"
+      slug="afvallen-alkmaar"
+      description="Gezond afvallen met professionele begeleiding. Effectieve training en voedingsadvies bij CrossFit Alkmaar."
+      heroPhoto="/images/afvallen-alkmaar-header.jpg"
+      heroTitle="Afvallen in Alkmaar"
+      heroSubtitle="Geen crashdiëten of eindeloos cardio. Wél effectieve training en begeleiding die werkt."
+      waaromTitle="Waarom CrossFit werkt als je wilt afvallen"
+      waaromContent={
+        <>
+          <p>Veel mensen proberen af te vallen door alleen te cardio-en of minder te eten. Dat werkt even, maar niet lang. Bij CrossFit Alkmaar pak je het anders aan: je bouwt spiermassa op, verhoogt je stofwisseling en verbrandt calorieën, ook na de training.</p>
+          <p>Onze <Link href="/groepslessen">trainingen</Link> combineren kracht en conditie in gevarieerde workouts van een uur. Elke sessie wordt begeleid door een coach die je pusht én remt waar nodig. Zo train je effectief zonder blessures.</p>
+          <p>En het belangrijkste: je traint in een groep die je motiveert. Geen eenzame uren op de loopband, maar energie van mensen die hetzelfde doel hebben.</p>
+        </>
+      }
+      aanpakTitle="Onze aanpak voor gezond afvallen"
+      aanpakCards={[
+        { title: "Effectieve training", body: "CrossFit combineert kracht en conditie. Je verbetert je lichaamsamenstelling: minder vet, meer spiermassa. Dat is duurzamer dan alleen gewicht verliezen." },
+        { title: "Voedingsbegeleiding", body: <>Training alleen is niet genoeg. Onze <Link href="/voedingsadvies">voedingscoaches</Link> helpen je met een eetpatroon dat past bij jouw leven, geen strenge diëten.</> },
+        { title: "Persoonlijke coaching", body: "Elke les wordt begeleid in groepen van max 12. Je coach kent je doelen en past de training aan op jouw niveau en conditie." },
+        { title: "Motivatie van de groep", body: "De community bij CrossFit Alkmaar houdt je op de been. Je traint met mensen die je aanmoedigen en missen als je er niet bent." },
+      ]}
+      voorwieTitle="Je hoeft niet fit te zijn om te beginnen"
+      voorwieContent={
+        <>
+          <p>Veel van onze leden zijn begonnen met het doel om af te vallen. Sommigen hadden nog nooit gesport, anderen kwamen van een andere sportschool waar ze niet de resultaten kregen die ze wilden.</p>
+          <p>Iedereen start met de <Link href="/kickstart">Kickstart</Link>, een persoonlijk traject waarin je de basis leert. Zo bouw je op in je eigen tempo en sta je nooit onvoorbereid in een groepsles.</p>
+        </>
+      }
+      aeoTitle="Hoe val je duurzaam af?"
+      aeoItems={[
+        { q: "Waarom werken diëten niet op de lange termijn?", a: "De meeste diëten focussen alleen op minder eten, waardoor je spiermassa verliest en je stofwisseling vertraagt. Duurzaam afvallen combineer je caloriebeperking met krachttraining om spiermassa te behouden. Zo verbrand je ook in rust meer calorieën." },
+        { q: "Wat is de beste sport om af te vallen?", a: "Een combinatie van krachttraining en conditietraining. Bij CrossFit Alkmaar doe je beide in elke les. Krachttraining bouwt spiermassa die je stofwisseling verhoogt, conditietraining verbetert je uithoudingsvermogen en verbrandt calorieën." },
+        { q: "Hoe snel kun je afvallen met sporten?", a: <>Met 2-3 trainingen per week en gezonde voeding is 0,5 tot 1 kilo per week realistisch en duurzaam. Bij CrossFit Alkmaar bieden we ook <Link href="/voedingsadvies">voedingsadvies</Link> aan om je resultaten te versnellen.</> },
+      ]}
+      members={[
+        { videoId: "1qhbmRPtysU", name: "Jarrald", quote: "Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen" },
+        { videoId: "a4ENPMXSTX8", name: "Simone", quote: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar." },
+      ]}
+      faqItems={[
+        { q: "Kan ik afvallen met CrossFit?", aText: "Ja. Onze trainingen combineren kracht en cardio, ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons voedingsadvies.", a: <>Ja. Onze trainingen combineren kracht en cardio, ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons <Link href="/voedingsadvies">voedingsadvies</Link>.</> },
+        { q: "Hoe vaak moet ik trainen om af te vallen?", aText: "2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie.", a: "2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie." },
+        { q: "Bieden jullie ook voedingsbegeleiding?", aText: "Ja. We bieden voedingsadvies aan als aanvulling op je training. Afvallen begint in de keuken, onze coaches helpen je met praktische tips.", a: <>Ja. We bieden <Link href="/voedingsadvies">voedingsadvies</Link> aan als aanvulling op je training. Afvallen begint in de keuken, onze coaches helpen je met praktische tips.</> },
+        { q: "Is CrossFit niet te zwaar als ik wil afvallen?", aText: "Nee. Elke oefening wordt aangepast aan jouw niveau. Je hoeft niet fit te zijn om te starten, je wordt fit doordat je start.", a: <>Nee. Elke oefening wordt aangepast aan jouw niveau. Je hoeft niet fit te zijn om te starten, je wordt fit doordat je start. Begin met de <Link href="/kickstart">Kickstart</Link> en bouw op in je eigen tempo.</> },
+      ]}
+      ctaTitle="Klaar om te beginnen?"
+      ctaSubtitle="Plan een gratis kennismakingsgesprek en ontdek hoe wij je kunnen helpen met gezond afvallen."
+    />
   );
 }

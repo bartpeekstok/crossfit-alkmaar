@@ -1,0 +1,204 @@
+/* ============================================================
+   CrossFit Alkmaar — Colors & Type Foundation
+   Import this file to inherit all brand tokens.
+   <link rel="stylesheet" href="colors_and_type.css">
+   ============================================================ */
+
+/* ---- Webfonts (Google Fonts CDN) -----------------------------
+   Anton  = display / hero lockups (matches crushed logo face)
+   Oswald = condensed athletic headings & labels
+   Barlow = humanist body / UI text
+   Substitution note: the logo wordmark is a custom distressed
+   condensed face; Anton is the closest free match. Swap if the
+   original foundry file is provided. */
+/* Fonts worden via next/font/google geladen in app/layout.tsx
+   en gemount op <html> via CSS variabelen --font-anton, --font-oswald,
+   --font-barlow, --font-barlow-semi */
+
+:root {
+  /* ===========================================================
+     BRAND CORE — sampled directly from the CFA logo
+     =========================================================== */
+  --cfa-ink:        #0B0F1E;  /* near-black navy — wordmark */
+  --cfa-blue:       #183090;  /* royal blue — laurels (primary) */
+  --cfa-blue-bright:#2A48C8;  /* lifted royal — hover / energy */
+  --cfa-blue-deep:  #101F5E;  /* pressed / deep field */
+  --cfa-steel:      #A8A8A8;  /* grunge gray bars */
+  --cfa-chalk:      #F4F5F7;  /* chalk off-white surface */
+  --cfa-white:      #FFFFFF;
+
+  /* ===========================================================
+     NEUTRAL STEEL SCALE (cool, derived from ink)
+     =========================================================== */
+  --steel-950: #0B0F1E;
+  --steel-900: #12182B;
+  --steel-800: #1B2238;
+  --steel-700: #2A3349;
+  --steel-600: #3D475F;
+  --steel-500: #5A647C;
+  --steel-400: #828BA0;
+  --steel-300: #A8AFC0;
+  --steel-200: #CDD2DD;
+  --steel-100: #E5E8EF;
+  --steel-50:  #F4F5F7;
+
+  /* ===========================================================
+     BLUE SCALE (royal, brand)
+     =========================================================== */
+  --blue-900: #0C1A4E;
+  --blue-800: #101F5E;
+  --blue-700: #142876;
+  --blue-600: #183090;
+  --blue-500: #2340AE;
+  --blue-400: #2A48C8;
+  --blue-300: #5A74DB;
+  --blue-200: #9AAAEC;
+  --blue-100: #D2DAF7;
+  --blue-50:  #EEF1FC;
+
+  /* ===========================================================
+     SEMANTIC (muted-athletic, for app/booking UI)
+     =========================================================== */
+  --go:        #1F9D55;  /* booked / success / "go" */
+  --go-soft:   #E4F4EA;
+  --hold:      #E0A325;  /* waitlist / warning */
+  --hold-soft: #FBF1DC;
+  --stop:      #D23A36;  /* cancel / full / error */
+  --stop-soft: #FBE6E5;
+
+  /* ===========================================================
+     SEMANTIC SURFACE / TEXT ROLES
+     =========================================================== */
+  --bg:        var(--cfa-white);
+  --bg-chalk:  var(--cfa-chalk);
+  --bg-ink:    var(--cfa-ink);
+  --surface:   var(--cfa-white);
+  --surface-2: var(--steel-50);
+  --border:    var(--steel-200);
+  --border-strong: var(--steel-300);
+
+  --fg1: var(--cfa-ink);     /* primary text */
+  --fg2: var(--steel-600);   /* secondary text */
+  --fg3: var(--steel-400);   /* muted / captions */
+  --fg-on-ink:  #EAEDF4;     /* text on ink */
+  --fg-on-blue: #FFFFFF;     /* text on blue */
+  --accent:     var(--cfa-blue);
+
+  /* ===========================================================
+     TYPE FAMILIES
+     =========================================================== */
+  --font-display: var(--font-anton), var(--font-oswald), 'Arial Narrow', sans-serif;
+  --font-head:    var(--font-oswald), var(--font-barlow-semi), sans-serif;
+  --font-body:    var(--font-barlow), system-ui, -apple-system, sans-serif;
+  --font-stat:    var(--font-barlow-semi), var(--font-oswald), sans-serif;
+
+  /* ===========================================================
+     RADII — boxy & industrial. Almost nothing is round.
+     =========================================================== */
+  --r-none: 0px;
+  --r-sm:   2px;
+  --r-md:   4px;
+  --r-lg:   6px;
+  --r-pill: 999px;
+
+  /* ===========================================================
+     SHADOWS — low, hard, cool. No soft fluffy blur.
+     =========================================================== */
+  --sh-1: 0 1px 2px rgba(11,15,30,.10);
+  --sh-2: 0 2px 6px rgba(11,15,30,.12);
+  --sh-3: 0 8px 24px rgba(11,15,30,.16);
+  --sh-blue: 0 6px 18px rgba(24,48,144,.30);
+  --ring: 0 0 0 3px rgba(42,72,200,.35);
+
+  /* ===========================================================
+     SPACING — 4px base grid
+     =========================================================== */
+  --s-1: 4px;  --s-2: 8px;  --s-3: 12px; --s-4: 16px;
+  --s-5: 20px; --s-6: 24px; --s-8: 32px; --s-10: 40px;
+  --s-12: 48px; --s-16: 64px; --s-20: 80px; --s-24: 96px;
+}
+
+/* ============================================================
+   SEMANTIC TYPE PRESETS
+   Uppercase + tight tracking is the brand's athletic voice.
+   ============================================================ */
+.cfa-display {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(48px, 7vw, 104px);
+  line-height: 0.92;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--fg1);
+}
+h1, .cfa-h1 {
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.02;
+  letter-spacing: 0.005em;
+  text-transform: uppercase;
+  color: var(--fg1);
+}
+h2, .cfa-h2 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: clamp(26px, 3vw, 38px);
+  line-height: 1.08;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: var(--fg1);
+}
+h3, .cfa-h3 {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--fg1);
+}
+.cfa-eyebrow {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--cfa-blue);
+}
+.cfa-stat {
+  font-family: var(--font-stat);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--fg1);
+}
+p, .cfa-body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--fg2);
+}
+.cfa-lead {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.55;
+  color: var(--fg2);
+}
+.cfa-small {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--fg3);
+}
+.cfa-label {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg2);
+}
