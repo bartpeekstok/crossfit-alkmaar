@@ -54,7 +54,7 @@ export default function HyroxAlkmaarPage() {
                 name: "Welke HYROX events organiseert CrossFit Alkmaar?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "We organiseren regelmatig HYROX Physical Fitness Tests (PFT) en HYROX Simulaties. De eerstvolgende PFT is op 9 mei en de eerste Simulatie op 30 mei 2026.",
+                  text: "We organiseren regelmatig HYROX Physical Fitness Tests (PFT) en HYROX Simulaties. De eerstvolgende PFT is op 9 mei en de eerste Simulatie op 22 augustus 2026.",
                 },
               },
             ],
@@ -139,7 +139,7 @@ export default function HyroxAlkmaarPage() {
               <span className="text-blue-900 font-semibold hover:underline">Meer info & inschrijven →</span>
             </Link>
             <Link href="/hyrox-simulatie-alkmaar" className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition block">
-              <p className="text-blue-900 font-semibold text-sm mb-2">Zaterdag 30 mei</p>
+              <p className="text-blue-900 font-semibold text-sm mb-2">Zaterdag 22 augustus</p>
               <h3 className="font-bold text-xl text-gray-900 mb-2">HYROX Simulatie</h3>
               <p className="text-gray-700 mb-4">Volledige HYROX race: 8x 1km run + 8 stations. Voor beginners én ervaren atleten.</p>
               <span className="text-blue-900 font-semibold hover:underline">Meer info →</span>
@@ -237,7 +237,7 @@ export default function HyroxAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Welke HYROX events organiseert CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">We organiseren regelmatig HYROX Physical Fitness Tests en Simulaties. De eerstvolgende PFT is op 9 mei en de eerste Simulatie op 30 mei 2026.</p>
+              <p className="text-gray-600">We organiseren regelmatig HYROX Physical Fitness Tests en Simulaties. De eerstvolgende PFT is op 9 mei en de eerste Simulatie op 22 augustus 2026.</p>
             </div>
           </div>
         </div>

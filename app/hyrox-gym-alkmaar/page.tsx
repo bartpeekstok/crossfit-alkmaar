@@ -295,7 +295,7 @@ export default function HyroxGymAlkmaarPage() {
             </Link>
             <Link href="/hyrox-simulatie-alkmaar" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition block">
               <h3 className="font-bold text-lg text-gray-900 mb-2">HYROX Simulatie</h3>
-              <p className="text-gray-600 mb-2">Zaterdag 30 mei 2026</p>
+              <p className="text-gray-600 mb-2">Zaterdag 22 augustus 2026</p>
               <p className="text-blue-900 font-semibold">Meer info →</p>
             </Link>
           </div>
