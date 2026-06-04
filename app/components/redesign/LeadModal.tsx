@@ -15,20 +15,20 @@ const VARIANTS: Record<
   kennismaking: {
     h: "Plan je gratis kennismaking",
     s: "Laat je gegevens achter, dan bellen we je binnen één werkdag om je kennismaking in te plannen.",
-    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op! Op de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
+    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op!\n\nOp de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
     redirect: "/free-intro",
   },
   tarieven: {
     h: "Meer informatie",
     s: "Laat je gegevens achter, we nemen snel contact met je op.",
-    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op! Op de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
+    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op!\n\nOp de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
     redirect: "/free-intro",
   },
   kickstart: {
     h: "28 Day Kickstart",
     s: "",
     dates: true,
-    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op! Op de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
+    ok: "We hebben je aanvraag binnen en nemen binnen één werkdag contact met je op!\n\nOp de volgende pagina kun je alvast zelf je gratis kennismaking inplannen.",
     redirect: "/free-intro",
   },
 };
@@ -280,7 +280,7 @@ export default function LeadModal() {
                 </svg>
               </div>
               <h3>Top, {firstName}!</h3>
-              <p className="sub" style={{ margin: 0 }}>
+              <p className="sub" style={{ margin: 0, whiteSpace: "pre-line" }}>
                 {cfg.ok}
               </p>
               <a
