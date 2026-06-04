@@ -3,7 +3,7 @@
 .book .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
 .book .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,15,30,.86), rgba(11,15,30,.78)); }
 .book .grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px,4vw,56px); align-items: start; padding: clamp(48px,7vw,88px) 0; }
-.book .copy { color: #fff; padding-inline: clamp(8px, 2vw, 24px); }
+.book .copy { color: #fff; }
 .book .eyebrow { color: var(--hold); }
 .book .eyebrow::before { background: var(--hold); }
 .book h1 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(38px,5.4vw,72px); line-height: .96; letter-spacing: .01em; margin: 16px 0 0; color: #fff; }
@@ -22,4 +22,5 @@
 @media (max-width: 900px) {
   .book .grid { grid-template-columns: 1fr; }
   .book .widget { position: static; }
+  .book .copy { padding-inline: 12px; }
 }
