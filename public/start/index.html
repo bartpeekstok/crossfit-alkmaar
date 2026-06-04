@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <base href="/start/">
-<title>Start | CrossFit Alkmaar</title>
+<title>Gratis kennismaking - CrossFit Alkmaar</title>
 <link rel="stylesheet" href="colors_and_type.css">
 <style>
   * { box-sizing: border-box; }
@@ -21,6 +21,57 @@
     .lp-final-grid { grid-template-columns: 1fr !important; }
     .lp-footer-grid { grid-template-columns: 1fr 1fr !important; }
   }
+  /* ===== 1-op-1 overgenomen uit crossfit-alkmaar/site.css ===== */
+  .btn { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .07em; font-size: 15px; border: none; border-radius: var(--r-md); padding: 16px 28px; cursor: pointer; text-decoration: none; transition: background .15s, transform .12s, color .15s, box-shadow .15s; }
+  .btn svg { width: 18px; height: 18px; }
+  .btn--gold { background: var(--hold); color: var(--cfa-ink); }
+  .btn--gold:hover { background: #f0b53a; transform: translateY(-2px); }
+  .btn--lg { font-size: 17px; padding: 18px 34px; }
+
+  .page-cta { position: relative; overflow: hidden; text-align: center; color: #fff;
+    background: linear-gradient(rgba(12,26,78,.82), rgba(11,15,30,.9)), url('assets/photo-community.webp') center/cover; }
+  .page-cta .pcwrap { max-width: 1180px; margin: 0 auto; padding: clamp(54px,8vw,104px) clamp(16px,4vw,40px); }
+  .page-cta h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(32px,4.6vw,58px); line-height: .96; color: #fff; margin: 0; }
+  .page-cta p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,20px); color: rgba(255,255,255,.9); margin: 14px auto 28px; max-width: 540px; }
+
+  .vpair { display: flex; justify-content: center; align-items: flex-start; gap: clamp(12px,3vw,40px); max-width: 640px; margin: 28px auto 0; }
+  .vpair .vp { flex: 1 1 0; min-width: 0; max-width: 280px; position: relative; background: #fff; padding: clamp(7px,1.1vw,13px) clamp(7px,1.1vw,13px) clamp(10px,1.5vw,16px); border-radius: 3px; box-shadow: 0 12px 26px rgba(11,15,30,.18), 0 2px 6px rgba(0,0,0,.1); transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s; }
+  .vpair .vp:nth-child(1) { transform: rotate(-3deg); }
+  .vpair .vp:nth-child(2) { transform: rotate(2.5deg); }
+  .vpair .vp:hover { transform: rotate(0) translateY(-6px) scale(1.04); box-shadow: 0 22px 44px rgba(11,15,30,.28); z-index: 5; }
+  .vpair .video { position: relative; aspect-ratio: 9/16; border-radius: 1px; overflow: hidden; cursor: pointer; background: #000; }
+  .vpair .video img { width: 100%; height: 100%; object-fit: cover; opacity: .92; transition: opacity .2s, transform .4s; }
+  .vpair .vp:hover .video img { opacity: 1; transform: scale(1.04); }
+  .vpair .video .play { position: absolute; inset: 0; display: grid; place-items: center; }
+  .vpair .video .play span { width: 48px; height: 48px; border-radius: 50%; background: var(--hold); display: grid; place-items: center; box-shadow: 0 6px 24px rgba(0,0,0,.4); transition: transform .15s; }
+  .vpair .vp:hover .video .play span { transform: scale(1.1); }
+  .vpair .video .play svg { width: 19px; height: 19px; margin-left: 3px; }
+  .vpair .nm { text-align: center; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: clamp(12px,1.4vw,15px); color: var(--cfa-ink); margin-top: 11px; }
+  .vpair .vq { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: clamp(11px,1.3vw,13px); line-height: 1.4; color: var(--fg2); margin: 5px 2px 0; text-wrap: pretty; }
+
+  .site-footer { background: #FFFDF8; color: var(--fg1); border-top: 1px solid var(--border); }
+  .site-footer .fwrap { max-width: 1180px; margin: 0 auto; padding: 0 clamp(16px,4vw,40px); }
+  .site-footer .ftop { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: clamp(28px,4vw,56px); padding: clamp(44px,6vw,72px) 0 36px; align-items: start; }
+  .site-footer h4 { font-family: var(--font-head); font-weight: 600; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--cfa-blue); margin: 0 0 14px; }
+  .site-footer .intro { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--fg2); max-width: 300px; margin: 14px 0 0; }
+  .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; font-family: var(--font-body); font-size: 16px; }
+  .site-footer a { color: var(--fg2); text-decoration: none; }
+  .site-footer a:hover { color: var(--cfa-blue); }
+  .site-footer .hours li { display: flex; justify-content: space-between; max-width: 200px; color: var(--fg2); font-family: var(--font-stat); }
+  .site-footer .hours li span { white-space: nowrap; }
+  .site-footer .hours b { font-weight: 700; color: var(--fg1); }
+  .site-footer .logo img { height: 64px; width: auto; }
+  .fsocial { display: flex; gap: 11px; margin-top: 16px; }
+  .fsocial a { display: inline-flex; width: 38px; height: 38px; align-items: center; justify-content: center; border: 1px solid var(--border-strong); border-radius: 4px; color: var(--cfa-ink); }
+  .fsocial a:hover { background: var(--blue-50); border-color: var(--cfa-blue); color: var(--cfa-blue); }
+  .fsocial svg { width: 19px; height: 19px; }
+  .fpowered { display: flex; align-items: center; gap: 9px; margin-top: 22px; }
+  .fpowered span { font-family: var(--font-body); font-size: 12px; color: var(--fg3); white-space: nowrap; }
+  .fpowered img { height: 22px; width: auto; }
+  .site-footer .fbottom { border-top: 1px solid var(--border); }
+  .site-footer .fbottom .fb { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; padding: 18px 0; font-family: var(--font-body); font-size: 13px; color: var(--fg3); }
+  @media (max-width: 900px) { .site-footer .ftop { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .site-footer .ftop { grid-template-columns: 1fr; } }
   @media (max-width: 620px) {
     .lp-statbar { grid-template-columns: 1fr 1fr !important; row-gap: 28px !important; }
     .lp-statbar > div:nth-child(3) { border-left: none !important; }

@@ -1,5 +1,5 @@
 /* global React */
-// CFA Landing — sticky header + hero with above-the-fold lead form
+// CFA Landing - sticky header + hero with above-the-fold lead form
 const { useState: useHero, useEffect: useHeroFx } = React;
 
 function StarRow({ size = 16, color = 'var(--hold)' }) {
@@ -54,12 +54,12 @@ function LPHeader({ onCTA }) {
           }}><Phone size={15} /> <span className="lp-hide-sm">072-2340560</span></a>
           <button onClick={onCTA} style={{
             fontFamily: "'Oswald', sans-serif", fontWeight: 700, textTransform: 'uppercase',
-            letterSpacing: '.08em', fontSize: 13, color: '#fff', background: 'var(--cfa-blue)',
+            letterSpacing: '.08em', fontSize: 13, color: 'var(--cfa-ink)', background: 'var(--hold)',
             border: 'none', borderRadius: 4, padding: '13px 18px', cursor: 'pointer',
-            boxShadow: 'var(--sh-blue)', whiteSpace: 'nowrap',
+            whiteSpace: 'nowrap',
           }}
-            onMouseEnter={(e) => e.currentTarget.style.background = 'var(--blue-700)'}
-            onMouseLeave={(e) => e.currentTarget.style.background = 'var(--cfa-blue)'}
+            onMouseEnter={(e) => e.currentTarget.style.background = '#f0b53a'}
+            onMouseLeave={(e) => e.currentTarget.style.background = 'var(--hold)'}
           >Gratis kennismaking</button>
         </div>
       </div>
@@ -71,10 +71,18 @@ function Hero({ angle, badge, ctaLabel, formInHero, showProof, webhookUrl, pixel
   const benefits = [
     'Kleine groepen, max 6 personen',
     'Coaches die je bij naam kennen',
-    'Elke training schaalbaar — ook voor beginners',
+    'Elke training schaalbaar - ook voor beginners',
   ];
   return (
     <section style={{ position: 'relative', overflow: 'hidden', background: 'var(--cfa-ink)' }}>
+      {/* photo drop zone */}
+      <img src="assets/cfa-hero.jpg" alt="De oprichters van CrossFit Alkmaar in de box"
+        style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', objectFit: 'cover', objectPosition: '50% 38%' }} />
+      {/* ink scrim */}
+      <div style={{
+        position: 'absolute', inset: 0, pointerEvents: 'none',
+        background: 'linear-gradient(180deg, rgba(11,15,30,.78) 0%, rgba(11,15,30,.6) 45%, rgba(11,15,30,.82) 100%)',
+      }}></div>
 
       <div className="lp-hero-grid" style={{
         position: 'relative', zIndex: 2, maxWidth: 1160, margin: '0 auto', pointerEvents: 'none',
@@ -103,22 +111,7 @@ function Hero({ angle, badge, ctaLabel, formInHero, showProof, webhookUrl, pixel
             lineHeight: 1.5, color: 'rgba(234,237,244,.9)', margin: '20px 0 0', maxWidth: 540, textWrap: 'pretty',
           }}>{angle.sub}</p>
 
-          {showProof && (
-            <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px 24px', marginTop: 26 }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-                <StarRow size={17} />
-                <span style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 600, fontSize: 15, color: '#fff' }}>
-                  300+ 5-sterren reviews
-                </span>
-              </div>
-              <div style={{ display: 'flex', alignItems: 'center', gap: 9 }}>
-                <Avatars />
-                <span style={{ fontFamily: "'Barlow', sans-serif", fontWeight: 600, fontSize: 15, color: '#fff' }}>
-                  300+ actieve leden
-                </span>
-              </div>
-            </div>
-          )}
+          {showProof && <GoogleReviewCard />}
 
           <ul style={{ listStyle: 'none', padding: 0, margin: '26px 0 0', display: 'grid', gap: 11 }}>
             {benefits.map((b) => (
@@ -138,11 +131,11 @@ function Hero({ angle, badge, ctaLabel, formInHero, showProof, webhookUrl, pixel
             <a href="#aanmelden" style={{
               display: 'inline-flex', alignItems: 'center', gap: 10, marginTop: 32, textDecoration: 'none', pointerEvents: 'auto',
               fontFamily: "'Oswald', sans-serif", fontWeight: 700, textTransform: 'uppercase', letterSpacing: '.09em',
-              fontSize: 17, color: '#fff', background: 'var(--cfa-blue)', borderRadius: 4,
-              padding: '18px 32px', boxShadow: 'var(--sh-blue)',
+              fontSize: 17, color: 'var(--cfa-ink)', background: 'var(--hold)', borderRadius: 4,
+              padding: '18px 32px',
             }}
-              onMouseEnter={(e) => e.currentTarget.style.background = 'var(--blue-700)'}
-              onMouseLeave={(e) => e.currentTarget.style.background = 'var(--cfa-blue)'}
+              onMouseEnter={(e) => e.currentTarget.style.background = '#f0b53a'}
+              onMouseLeave={(e) => e.currentTarget.style.background = 'var(--hold)'}
             >{ctaLabel}
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
@@ -160,13 +153,38 @@ function Hero({ angle, badge, ctaLabel, formInHero, showProof, webhookUrl, pixel
               textTransform: 'uppercase', letterSpacing: '.01em', color: 'var(--fg1)', marginBottom: 4,
             }}>Plan je gratis kennismaking</div>
             <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: 15, color: 'var(--fg2)', margin: '0 0 18px' }}>
-              Laat je gegevens achter — we bellen je binnen 1 werkdag.
+              Laat je gegevens achter - we bellen je binnen 1 werkdag.
             </p>
             <LeadForm onDark={false} ctaLabel={ctaLabel} formId="hero" webhookUrl={webhookUrl} pixelId={pixelId} />
           </div>
         )}
       </div>
     </section>
+  );
+}
+
+function GoogleReviewCard() {
+  return (
+    <div style={{ marginTop: 26 }}>
+      <div style={{
+        display: 'inline-flex', alignItems: 'center', gap: 14, background: '#fff',
+        borderRadius: 10, padding: '13px 20px 13px 18px', boxShadow: '0 12px 34px rgba(0,0,0,.30)',
+      }}>
+        <svg width="34" height="34" viewBox="0 0 48 48" aria-hidden="true">
+          <path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"/>
+          <path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"/>
+          <path fill="#FBBC05" d="M11.69 28.18C11.25 26.86 11 25.45 11 24s.25-2.86.69-4.18v-5.7H4.34C2.85 17.09 2 20.45 2 24s.85 6.91 2.34 9.88l7.35-5.7z"/>
+          <path fill="#EA4335" d="M24 10.75c3.23 0 6.13 1.11 8.41 3.29l6.31-6.31C34.91 4.18 29.93 2 24 2 15.4 2 7.96 6.93 4.34 14.12l7.35 5.7c1.73-5.2 6.58-9.07 12.31-9.07z"/>
+        </svg>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 3 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <span style={{ fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700, fontSize: 26, lineHeight: 1, color: 'var(--fg1)' }}>4,9</span>
+            <StarRow size={18} />
+          </div>
+          <span style={{ fontFamily: "'Barlow', sans-serif", fontSize: 13.5, color: 'var(--fg2)' }}>Gebaseerd op 300+ Google-reviews</span>
+        </div>
+      </div>
+    </div>
   );
 }
 
@@ -185,4 +203,4 @@ function Avatars() {
   );
 }
 
-Object.assign(window, { LPHeader, Hero, StarRow, Avatars });
+Object.assign(window, { LPHeader, Hero, StarRow, Avatars, GoogleReviewCard });

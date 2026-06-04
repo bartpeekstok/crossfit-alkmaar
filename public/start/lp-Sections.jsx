@@ -1,5 +1,5 @@
 /* global React, Eyebrow, DoubleRule, StarRow */
-// CFA Landing — content sections (proof, objections, steps, testimonials, why)
+// CFA Landing - content sections (proof, objections, steps, testimonials, why)
 
 function StatBar() {
   const stats = [
@@ -9,23 +9,23 @@ function StatBar() {
     { n: '35+', l: 'Gem. leeftijd' },
   ];
   return (
-    <section style={{ background: 'var(--cfa-ink)', borderTop: '1px solid rgba(255,255,255,.08)' }}>
+    <section style={{ background: 'var(--cfa-white)', borderBottom: '1px solid var(--border)' }}>
       <div style={{
-        maxWidth: 1160, margin: '0 auto', padding: 'clamp(28px,4vw,40px) clamp(16px,4vw,40px)',
+        maxWidth: 1160, margin: '0 auto', padding: 'clamp(28px,4vw,44px) clamp(16px,4vw,40px)',
         display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 'clamp(12px,2vw,28px)',
       }} className="lp-statbar">
         {stats.map((s, i) => (
           <div key={s.l} style={{
             textAlign: 'center', position: 'relative',
-            borderLeft: i ? '1px solid rgba(255,255,255,.1)' : 'none',
+            borderLeft: i ? '1px solid var(--border)' : 'none',
           }}>
             <div style={{
               fontFamily: "'Barlow Semi Condensed', sans-serif", fontWeight: 700,
-              fontSize: 'clamp(34px,5vw,52px)', lineHeight: 1, color: '#fff', fontVariantNumeric: 'tabular-nums',
+              fontSize: 'clamp(34px,5vw,52px)', lineHeight: 1, color: 'var(--cfa-blue)', fontVariantNumeric: 'tabular-nums',
             }}>{s.n}</div>
             <div style={{
               fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 'clamp(11px,1.3vw,13px)',
-              letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--blue-300)', marginTop: 7,
+              letterSpacing: '.12em', textTransform: 'uppercase', color: 'var(--fg2)', marginTop: 7,
             }}>{s.l}</div>
           </div>
         ))}
@@ -51,17 +51,17 @@ function SectionHead({ eyebrow, title, sub, light, center }) {
   );
 }
 
-// "Twijfel je nog?" — objection handling (niet fit genoeg / geen tijd)
+// "Twijfel je nog?" - objection handling (niet fit genoeg / geen tijd)
 function Objections() {
   const items = [
     {
       q: '“Ik ben niet fit genoeg om te beginnen”',
-      a: 'Dat is precies waaróm je moet starten. Iedere oefening schalen we naar jouw niveau — je hoeft niets te kunnen. Onze leden zijn 20 tot 70+, gemiddeld 35.',
+      a: 'Dat is precies waaróm je moet starten. Iedere oefening schalen we naar jouw niveau - je hoeft niets te kunnen. Onze leden zijn 20 tot 70+, gemiddeld 35.',
       icon: 'M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z',
     },
     {
       q: '“Ik heb geen tijd om 5x per week te trainen”',
-      a: 'Hoeft ook niet. De meeste leden trainen 2 à 3 keer per week en zien al resultaat. Open van 06:30 — je traint vóór of na werk, in 45 minuten klaar.',
+      a: 'Hoeft ook niet. De meeste leden trainen 2 à 3 keer per week en zien al resultaat. Open van 06:30 - je traint vóór of na werk, in 45 minuten klaar.',
       icon: 'M12 6v6l4 2M12 22a10 10 0 1 1 0-20 10 10 0 0 1 0 20z',
     },
   ];
@@ -69,7 +69,7 @@ function Objections() {
     <section style={{ background: 'var(--cfa-chalk)' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 'clamp(56px,8vh,96px) clamp(16px,4vw,40px)' }}>
         <SectionHead center eyebrow="Geen excuses nodig" title="Twijfel je nog?"
-          sub="De twee dingen die mensen tegenhouden — en waarom ze hier niet opgaan." />
+          sub="De twee dingen die mensen tegenhouden - en waarom ze hier niet opgaan." />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(16px,2vw,24px)' }}>
           {items.map((it) => (
             <div key={it.q} style={{
@@ -95,7 +95,7 @@ function Objections() {
   );
 }
 
-// How it works — 3 steps
+// How it works - 3 steps
 function Steps() {
   const steps = [
     { n: '01', t: 'Gratis kennismaking', d: 'Kom langs en vertel ons over je doelen, waar je tegenaan loopt en wat je al hebt geprobeerd. Geen verplichtingen.' },
@@ -130,34 +130,30 @@ function Steps() {
 // Testimonials
 function Testimonials() {
   const quotes = [
-    { id: 'jarrald', q: 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging. Nu 20 kilo afgevallen — omdat ik hier wél kom.', n: 'Jarrald', m: 'Kickstart-deelnemer', photo: 'https://img.youtube.com/vi/1qhbmRPtysU/mqdefault.jpg' },
+    { id: 'jarrald', q: 'Lang sponsor geweest van sportscholen waar ik niet naartoe ging. Nu 20 kilo afgevallen - omdat ik hier wél kom.', n: 'Jarrald', m: 'Kickstart-deelnemer', photo: 'https://img.youtube.com/vi/1qhbmRPtysU/mqdefault.jpg' },
     { id: 'bert', q: 'Ik had niet verwacht dat ik het zó leuk zou vinden als dat ik het nu vind. De groep maakt het.', n: 'Bert', m: '2 jaar lid', photo: 'https://img.youtube.com/vi/a2zbZIlU27Y/mqdefault.jpg' },
   ];
   return (
-    <section style={{ background: 'var(--cfa-ink)', position: 'relative', overflow: 'hidden' }}>
-      <div style={{
-        position: 'absolute', inset: 0, pointerEvents: 'none', opacity: .05,
-        backgroundImage: 'radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px)', backgroundSize: '4px 4px',
-      }}></div>
+    <section style={{ background: 'var(--cfa-chalk)' }}>
       <div style={{ position: 'relative', maxWidth: 1160, margin: '0 auto', padding: 'clamp(56px,8vh,96px) clamp(16px,4vw,40px)' }}>
-        <SectionHead light eyebrow="Uit de community" title="Mensen blijven hier" />
+        <SectionHead eyebrow="Uit de community" title="Mensen blijven hier" />
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: 'clamp(20px,3vw,32px)' }}>
           {quotes.map((q) => (
             <figure key={q.n} style={{
-              margin: 0, background: 'rgba(255,255,255,.04)', border: '1px solid rgba(255,255,255,.1)',
-              borderRadius: 6, padding: 'clamp(24px,3vw,36px)',
+              margin: 0, background: '#fff', border: '1px solid var(--border)',
+              borderRadius: 6, padding: 'clamp(24px,3vw,36px)', boxShadow: 'var(--sh-1)',
             }}>
               <StarRow size={18} />
               <blockquote style={{
                 margin: '18px 0 24px', fontFamily: "'Barlow', sans-serif", fontWeight: 500, fontSize: 'clamp(19px,2.2vw,24px)',
-                lineHeight: 1.4, color: '#fff', textWrap: 'pretty',
+                lineHeight: 1.4, color: 'var(--fg1)', textWrap: 'pretty',
               }}>“{q.q}”</blockquote>
               <figcaption style={{ display: 'flex', alignItems: 'center', gap: 13 }}>
                 <img src={q.photo} alt={q.n}
-                  style={{ width: 52, height: 52, flexShrink: 0, objectFit: 'cover', borderRadius: '50%', boxShadow: '0 0 0 2px rgba(255,255,255,.18)' }} />
+                  style={{ width: 52, height: 52, flexShrink: 0, objectFit: 'cover', borderRadius: '50%', boxShadow: '0 0 0 2px var(--blue-100)' }} />
                 <span>
-                  <span style={{ display: 'block', fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 16, letterSpacing: '.04em', textTransform: 'uppercase', color: '#fff' }}>{q.n}</span>
-                  <span style={{ display: 'block', fontFamily: "'Barlow', sans-serif", fontSize: 14, color: 'var(--blue-300)' }}>{q.m}</span>
+                  <span style={{ display: 'block', fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 16, letterSpacing: '.04em', textTransform: 'uppercase', color: 'var(--fg1)' }}>{q.n}</span>
+                  <span style={{ display: 'block', fontFamily: "'Barlow', sans-serif", fontSize: 14, color: 'var(--cfa-blue)' }}>{q.m}</span>
                 </span>
               </figcaption>
             </figure>
@@ -168,10 +164,10 @@ function Testimonials() {
   );
 }
 
-// Why CFA — split with photo
+// Why CFA - split with photo
 function WhyCFA() {
   const points = [
-    { t: 'Kleine groepen', d: 'Maximaal 6 mensen per training. De coach ziet jou — geen anonieme zaal vol machines.' },
+    { t: 'Kleine groepen', d: 'Maximaal 6 mensen per training. De coach ziet jou - geen anonieme zaal vol machines.' },
     { t: 'Coaches met ervaring', d: 'Professionele begeleiding, ook met blessures of beperkingen. We kiezen altijd een veilig alternatief.' },
     { t: 'Een community die je mist als je er niet bent', d: 'Mensen die je bij naam kennen en je weer naar binnen trekken op de dagen dat het tegenzit.' },
   ];
@@ -207,7 +203,7 @@ function WhyCFA() {
   );
 }
 
-// Community photo strip — "kom binnenkijken"
+// Community photo strip - "kom binnenkijken"
 function PhotoBand() {
   const shots = [
     { id: 'box1', cap: 'de box / trainingsvloer' },
@@ -218,7 +214,7 @@ function PhotoBand() {
     <section style={{ background: '#fff' }}>
       <div style={{ maxWidth: 1160, margin: '0 auto', padding: 'clamp(48px,7vh,88px) clamp(16px,4vw,40px)' }}>
         <SectionHead center eyebrow="Kom binnenkijken" title="Dit is waar je traint"
-          sub="Echte mensen, echte trainingen — geen spiegelzaal vol vreemden." />
+          sub="Echte mensen, echte trainingen - geen spiegelzaal vol vreemden." />
         <div className="lp-photoband" style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 'clamp(12px,1.6vw,18px)' }}>
           {shots.map((s) => (
             <img key={s.id} src={`assets/lp-band-${s.id}.webp`} alt={s.cap}

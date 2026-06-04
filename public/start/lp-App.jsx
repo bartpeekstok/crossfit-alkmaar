@@ -1,5 +1,5 @@
 /* global React, useTweaks, TweaksPanel, TweakSection, TweakRadio, TweakSelect, TweakToggle, TweakText,
-   LPHeader, Hero, StatBar, Objections, Steps, Testimonials, WhyCFA, PhotoBand, FinalCTA, Footer */
+   LPHeader, Hero, StatBar, Objections, Steps, Testimonials, WhyCFA, PhotoBand, FinalCTA, VideoBand, Footer */
 
 const LP_ANGLES = {
   volhouden: {
@@ -8,7 +8,7 @@ const LP_ANGLES = {
   },
   terugbeginnen: {
     h: 'Weer beginnen? Hier lukt het wél.',
-    sub: 'Geen anonieme zaal vol machines. Wél persoonlijke begeleiding, voor elk niveau — ook als je al jaren niet hebt gesport.',
+    sub: 'Geen anonieme zaal vol machines. Wél persoonlijke begeleiding, voor elk niveau - ook als je al jaren niet hebt gesport.',
   },
   sterker: {
     h: 'Bouw een sterker jij.',
@@ -30,7 +30,7 @@ function App() {
   const [t, setTweak] = useTweaks(LP_TWEAK_DEFAULTS);
   const angle = LP_ANGLES[t.heroAngle] || LP_ANGLES.volhouden;
   const formInHero = t.formPlacement === 'hero';
-  const badge = t.badgeText === '— geen —' ? '' : t.badgeText;
+  const badge = t.badgeText === '- geen -' ? '' : t.badgeText;
 
   const scrollToForm = () => {
     const el = document.getElementById('aanmelden') || document.getElementById('aanmelden-eind');
@@ -52,6 +52,8 @@ function App() {
       <PhotoBand />
       <WhyCFA />
       <FinalCTA ctaLabel={t.ctaLabel} badge={badge} webhookUrl={t.ghlWebhook} pixelId={t.metaPixelId} />
+      <VideoBand />
+      <ClosingCTA ctaLabel={t.ctaLabel} />
       <Footer />
 
       <TweaksPanel>
@@ -59,14 +61,14 @@ function App() {
         <TweakRadio label="Boodschap" value={t.heroAngle}
           options={[{ value: 'volhouden', label: 'Volhouden' }, { value: 'terugbeginnen', label: 'Terugbeginnen' }, { value: 'sterker', label: 'Sterker jij' }]}
           onChange={(v) => setTweak('heroAngle', v)} />
-        <TweakToggle label="Reviews + leden in hero" value={t.heroProof} onChange={(v) => setTweak('heroProof', v)} />
+        <TweakToggle label="Google-review kaartje in hero" value={t.heroProof} onChange={(v) => setTweak('heroProof', v)} />
 
         <TweakSection label="Conversie" />
         <TweakRadio label="Formulier" value={t.formPlacement}
           options={[{ value: 'hero', label: 'In de hero' }, { value: 'below', label: 'Onderaan' }]}
           onChange={(v) => setTweak('formPlacement', v)} />
         <TweakSelect label="Aanbod-badge" value={t.badgeText}
-          options={['GRATIS KENNISMAKING', '1E TRAINING GRATIS', 'GEEN INSCHRIJFKOSTEN', '— geen —']}
+          options={['GRATIS KENNISMAKING', '1E TRAINING GRATIS', 'GEEN INSCHRIJFKOSTEN', '- geen -']}
           onChange={(v) => setTweak('badgeText', v)} />
         <TweakSelect label="Knop-tekst" value={t.ctaLabel}
           options={['PLAN MIJN GRATIS KENNISMAKING', 'JA, IK WIL KENNISMAKEN', 'BOEK MIJN KENNISMAKING', 'START VANDAAG']}

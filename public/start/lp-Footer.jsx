@@ -1,5 +1,8 @@
-/* global React, LeadForm */
-// CFA Landing — final CTA (form) + footer
+/* global React, LeadForm, SectionHead */
+// CFA Landing - final CTA (form) + member-video polaroids + footer
+// Footer + .vpair video-polaroids zijn 1-op-1 overgenomen uit
+// bartpeekstok/crossfit-alkmaar (_static-ref/site.js + site.css).
+const { useState: useFoot } = React;
 
 function FinalCTA({ ctaLabel, badge, webhookUrl, pixelId }) {
   return (
@@ -23,7 +26,7 @@ function FinalCTA({ ctaLabel, badge, webhookUrl, pixelId }) {
           <p style={{
             fontFamily: "'Barlow', sans-serif", fontSize: 'clamp(17px,1.9vw,20px)', lineHeight: 1.5,
             color: 'var(--fg2)', margin: '18px 0 0', maxWidth: 460,
-          }}>Kom vrijblijvend langs. Geen verplichtingen, geen druk — gewoon kennismaken en kijken of het klikt. We bellen je binnen 1 werkdag terug.</p>
+          }}>Kom vrijblijvend langs. Geen verplichtingen, geen druk - gewoon kennismaken en kijken of het klikt. We bellen je binnen 1 werkdag terug.</p>
           <div style={{ display: 'flex', alignItems: 'center', gap: 22, marginTop: 26, flexWrap: 'wrap' }}>
             <a href="tel:+31722340560" style={{
               display: 'inline-flex', alignItems: 'center', gap: 9, textDecoration: 'none',
@@ -52,63 +55,120 @@ function FinalCTA({ ctaLabel, badge, webhookUrl, pixelId }) {
   );
 }
 
+// ---- Member-video polaroids - exact .vpair-stijl uit site.css ----------------
+function VCard({ id, n, q }) {
+  const [play, setPlay] = useFoot(false);
+  return (
+    <figure className="vp" style={{ margin: 0 }}>
+      <div className="video" onClick={() => id && setPlay(true)}>
+        {play && id ? (
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${id}?autoplay=1&playsinline=1&rel=0&modestbranding=1`}
+            title={`Video ${n}`} allow="autoplay; encrypted-media; picture-in-picture" allowFullScreen
+            style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }} />
+        ) : (
+          <React.Fragment>
+            <img src={id ? `https://img.youtube.com/vi/${id}/hqdefault.jpg` : ''} alt={n} />
+            <div className="play"><span><svg viewBox="0 0 24 24" fill="#0B0F1E"><path d="M8 5v14l11-7z"/></svg></span></div>
+          </React.Fragment>
+        )}
+      </div>
+      <div className="nm">{n}</div>
+      {q && <div className="vq">“{q}”</div>}
+    </figure>
+  );
+}
+
+function VideoBand() {
+  const vids = [
+    { id: '1qhbmRPtysU', n: 'Jarrald', q: '20 kilo afgevallen - omdat ik hier wél kom.' },
+    { id: 'SKchVCAIx80', n: 'Steven', q: 'Waarom hij niet meer weg wil bij CFA.' },
+  ];
+  return (
+    <section style={{ background: 'var(--cfa-chalk)', borderTop: '1px solid var(--border)' }}>
+      <div style={{ maxWidth: 980, margin: '0 auto', padding: 'clamp(48px,7vh,88px) clamp(16px,4vw,40px)' }}>
+        <SectionHead center eyebrow="Echte verhalen" title="Hoor het van onze leden"
+          sub="Geen acteurs - gewoon leden die vertellen wat CrossFit Alkmaar voor ze doet." />
+        <div className="vpair">
+          {vids.map((v) => <VCard key={v.n} {...v} />)}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ClosingCTA({ ctaLabel }) {
+  const toForm = () => {
+    const el = document.getElementById('aanmelden-eind') || document.getElementById('aanmelden');
+    if (!el) return;
+    const top = window.scrollY + el.getBoundingClientRect().top - 80;
+    window.scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
+  };
+  return (
+    <section className="page-cta">
+      <div className="pcwrap">
+        <h2>Klaar om te starten?</h2>
+        <p>Eén gratis kennismaking, geen verplichtingen.<br/>We bellen je binnen 1 werkdag terug.</p>
+        <button className="btn btn--gold btn--lg" onClick={toForm}>
+          {ctaLabel}
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </div>
+    </section>
+  );
+}
+
 function Footer() {
   const hours = [
     ['Ma', '06:30 – 22:00'], ['Di', '06:30 – 21:00'], ['Wo', '06:30 – 21:00'],
     ['Do', '06:30 – 21:00'], ['Vr', '06:30 – 21:00'], ['Za', '08:00 – 12:30'], ['Zo', '08:00 – 12:30'],
   ];
+  const subLab = { color: 'var(--cfa-blue)', fontSize: 12, letterSpacing: '.08em', fontWeight: 600 };
   return (
-    <footer style={{ background: 'var(--cfa-ink)', color: 'var(--fg-on-ink)' }}>
-      <div className="lp-footer-grid" style={{
-        maxWidth: 1160, margin: '0 auto', padding: 'clamp(44px,6vw,72px) clamp(16px,4vw,40px) 32px',
-        display: 'grid', gridTemplateColumns: '1.4fr 1fr 1fr', gap: 'clamp(28px,4vw,56px)',
-      }}>
+    <footer className="site-footer">
+      <div className="fwrap ftop">
         <div>
-          <img src="assets/cfa-logo-mono-white.png" alt="CrossFit Alkmaar" style={{ height: 56, width: 'auto', marginBottom: 18 }} />
-          <p style={{ fontFamily: "'Barlow', sans-serif", fontSize: 15.5, lineHeight: 1.6, color: 'rgba(234,237,244,.7)', maxWidth: 320, margin: 0 }}>
-            Sportschool in Alkmaar voor krachttraining, fitness en afvallen — met persoonlijke begeleiding, voor alle niveaus.
-          </p>
-          <div style={{ display: 'flex', gap: 12, marginTop: 20 }}>
-            {[['Instagram', 'https://www.instagram.com/crossfitalkmaar'], ['Facebook', 'https://www.facebook.com/crossfitalkmaar']].map(([l, h]) => (
-              <a key={l} href={h} style={{
-                fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 12, letterSpacing: '.08em', textTransform: 'uppercase',
-                color: '#fff', textDecoration: 'none', border: '1px solid rgba(255,255,255,.2)', borderRadius: 3, padding: '8px 14px',
-              }}>{l}</a>
-            ))}
+          <a className="logo" href="https://www.crossfitalkmaar.com">
+            <img src="assets/cfa-logo.png" alt="CrossFit Alkmaar" />
+          </a>
+          <p className="intro">Sportschool in Alkmaar voor krachttraining, fitness en afvallen, met persoonlijke begeleiding voor alle niveaus.</p>
+          <div className="fsocial">
+            <a href="https://www.instagram.com/crossfitalkmaar" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.facebook.com/crossfitalkmaar" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+          </div>
+          <div className="fpowered">
+            <span>Powered by</span>
+            <a href="https://gymops.io" target="_blank" rel="noopener noreferrer"><img src="assets/gymops-logo.png" alt="GymOps" /></a>
           </div>
         </div>
         <div>
-          <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--blue-300)', margin: '0 0 16px' }}>Contact</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 11, fontFamily: "'Barlow', sans-serif", fontSize: 15.5 }}>
-            <li><a href="tel:+31722340560" style={{ color: 'rgba(234,237,244,.85)', textDecoration: 'none' }}>072-2340560</a></li>
-            <li><a href="mailto:info@crossfitalkmaar.nl" style={{ color: 'rgba(234,237,244,.85)', textDecoration: 'none' }}>info@crossfitalkmaar.nl</a></li>
-            <li style={{ color: 'rgba(234,237,244,.7)', lineHeight: 1.5 }}>Phoenixstraat 33<br/>1812 PP Alkmaar</li>
-            <li><a href="https://maps.google.com/?q=Phoenixstraat+33+1812+PP+Alkmaar" style={{ color: 'var(--blue-300)', textDecoration: 'none', fontWeight: 600 }}>Bekijk op Google Maps →</a></li>
+          <h4>Openingstijden</h4>
+          <ul className="hours">
+            {hours.map(([d, t]) => <li key={d}><b>{d}</b><span>{t}</span></li>)}
           </ul>
         </div>
         <div>
-          <h4 style={{ fontFamily: "'Oswald', sans-serif", fontWeight: 600, fontSize: 13, letterSpacing: '.16em', textTransform: 'uppercase', color: 'var(--blue-300)', margin: '0 0 16px' }}>Openingstijden</h4>
-          <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8, fontFamily: "'Barlow Semi Condensed', sans-serif", fontSize: 15.5 }}>
-            {hours.map(([d, t]) => (
-              <li key={d} style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 190, color: 'rgba(234,237,244,.8)' }}>
-                <span style={{ fontWeight: 700 }}>{d}</span><span style={{ fontVariantNumeric: 'tabular-nums' }}>{t}</span>
-              </li>
-            ))}
+          <h4>Contact</h4>
+          <ul>
+            <li><span style={subLab}>TELEFOON</span><br/><a href="tel:+31722340560">072-2340560</a></li>
+            <li><span style={subLab}>EMAIL</span><br/><a href="mailto:info@crossfitalkmaar.nl">info@crossfitalkmaar.nl</a></li>
+            <li><span style={subLab}>LEDENSERVICE</span><br/><a href="mailto:ledenservice@crossfitalkmaar.nl">ledenservice@crossfitalkmaar.nl</a></li>
+            <li style={{ color: 'var(--fg2)', lineHeight: 1.5, marginTop: 4 }}>Phoenixstraat 33<br/>1812 PP Alkmaar<br/><a href="https://maps.google.com/?q=Phoenixstraat+33+1812+PP+Alkmaar" style={{ color: 'var(--cfa-blue)' }}>Bekijk op Google Maps →</a></li>
           </ul>
         </div>
       </div>
-      <div style={{ borderTop: '1px solid rgba(255,255,255,.1)' }}>
-        <div style={{
-          maxWidth: 1160, margin: '0 auto', padding: '20px clamp(16px,4vw,40px)',
-          display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between',
-          fontFamily: "'Barlow', sans-serif", fontSize: 13, color: 'rgba(234,237,244,.5)',
-        }}>
-          <span>© 2026 CrossFit Alkmaar · KvK 61162825</span>
-          <a href="https://www.crossfitalkmaar.com/privacy" style={{ color: 'rgba(234,237,244,.5)' }}>Privacy Policy</a>
+      <div className="fbottom">
+        <div className="fwrap fb">
+          <span>© 2026 CrossFit Alkmaar · Alle rechten voorbehouden · KvK 61162825</span>
+          <a href="https://www.crossfitalkmaar.com/privacy">Privacy Policy</a>
         </div>
       </div>
     </footer>
   );
 }
 
-Object.assign(window, { FinalCTA, Footer });
+Object.assign(window, { FinalCTA, VideoBand, ClosingCTA, Footer });
