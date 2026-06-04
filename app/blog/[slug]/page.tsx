@@ -1,6 +1,6 @@
 "use client";
 
-import { usePopup } from "../../components/PopupContext";
+import { useLeadModal } from "../../components/redesign/LeadModalContext";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useCallback } from "react";
@@ -8,7 +8,8 @@ import ArticleSchema from "../../components/ArticleSchema";
 import { getBlogPost } from "./blogData";
 
 export default function BlogPostPage() {
-  const { openPopup } = usePopup();
+  const { open } = useLeadModal();
+  const openPopup = () => open({ source: "Plan je kennismaking", section: "Blog artikel" });
   const params = useParams();
   const slug = params.slug as string;
 
@@ -17,9 +18,9 @@ export default function BlogPostPage() {
     const link = target.closest("a");
     if (link && link.getAttribute("href") === "/free-intro") {
       e.preventDefault();
-      openPopup();
+      open({ source: "Plan je kennismaking", section: "Blog artikel" });
     }
-  }, [openPopup]);
+  }, [open]);
 
   const post = getBlogPost(slug);
 
@@ -65,8 +66,8 @@ export default function BlogPostPage() {
           <span className="text-xs font-semibold bg-blue-600 px-3 py-1 rounded mb-4 inline-block">
             {post.category}
           </span>
-          <h1 className="text-3xl md:text-4xl font-bold mb-2">{post.title}</h1>
-          <p className="text-gray-300">{post.author} · {post.date}</p>
+          <h1 className="text-3xl md:text-4xl font-bold mb-2" style={{ color: "#fff" }}>{post.title}</h1>
+          <p className="text-gray-300" style={{ color: "rgba(255,255,255,.85)" }}>{post.author} · {post.date}</p>
         </div>
       </section>
 
@@ -91,7 +92,7 @@ export default function BlogPostPage() {
       {/* CTA */}
       <section className="py-16 px-6 bg-blue-900 text-white">
         <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-2xl font-bold mb-4">Zelf ervaren?</h2>
+          <h2 className="text-2xl font-bold mb-4" style={{ color: "#fff" }}>Zelf ervaren?</h2>
           <p className="text-lg mb-6">
             Kom vrijblijvend kennismaken bij CrossFit Alkmaar.
           </p>

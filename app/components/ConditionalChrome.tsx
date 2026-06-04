@@ -32,13 +32,19 @@ export const REDESIGNED_PATHS = [
   "/sportschool-50-plus-alkmaar",
 ];
 
+// Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)
+export const REDESIGNED_PREFIXES = ["/blog/"];
+
+export function isRedesignedPath(pathname: string): boolean {
+  return REDESIGNED_PATHS.includes(pathname) || REDESIGNED_PREFIXES.some((p) => pathname.startsWith(p));
+}
+
 export default function ConditionalChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
   const isLanding = HIDDEN_PREFIXES.some(
     (p) => pathname === p || pathname.startsWith(p + "/")
   );
   if (isLanding) return null;
-  const isRedesigned = REDESIGNED_PATHS.includes(pathname);
-  if (isRedesigned) return null;
+  if (isRedesignedPath(pathname)) return null;
   return <>{children}</>;
 }

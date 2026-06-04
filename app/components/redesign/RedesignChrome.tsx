@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
-import { REDESIGNED_PATHS } from "../ConditionalChrome";
+import { isRedesignedPath } from "../ConditionalChrome";
 import Header from "./Header";
 import Footer from "./Footer";
 import LeadModal from "./LeadModal";
@@ -15,8 +15,7 @@ import ScrollReveal from "./ScrollReveal";
  */
 export default function RedesignChrome({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isRedesigned = REDESIGNED_PATHS.includes(pathname);
-  if (!isRedesigned) return <>{children}</>;
+  if (!isRedesignedPath(pathname)) return <>{children}</>;
   return (
     <>
       <Header />
