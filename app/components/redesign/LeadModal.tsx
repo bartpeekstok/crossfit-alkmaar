@@ -170,7 +170,7 @@ export default function LeadModal() {
     if (cfg.redirect) {
       setTimeout(() => {
         window.location.href = cfg.redirect;
-      }, 1600);
+      }, 3600);
     }
   };
 
