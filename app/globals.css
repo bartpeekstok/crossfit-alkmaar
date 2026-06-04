@@ -1,6 +1,4 @@
 @import "tailwindcss";
-@import "./styles/colors_and_type.css";
-@import "./styles/site.css";
 
 body {
   color: #111827;

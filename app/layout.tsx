@@ -3,6 +3,8 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "./styles/colors_and_type.css";
+import "./styles/site.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -137,7 +139,7 @@ export default function RootLayout({
         <meta name="ICBM" content="52.6324, 4.7534" />
         <JsonLd />
       </head>
-      <body className={`${inter.className} antialiased`}>
+      <body className="antialiased">
         <GoogleAnalytics />
         <MetaPixel />
         <BreadcrumbSchema />
