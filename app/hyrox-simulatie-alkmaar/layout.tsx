@@ -1,17 +1,17 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HYROX Simulatie Alkmaar | Race Simulatie 30 mei",
+  title: "HYROX Simulatie Alkmaar | Race Simulatie 22 augustus",
   description:
-    "Doe mee aan de HYROX Simulatie op 30 mei bij CrossFit Alkmaar. Een volledige HYROX race: 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
+    "Doe mee aan de HYROX Simulatie op 22 augustus bij CrossFit Alkmaar. Een volledige HYROX race: 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
   keywords: ["HYROX simulatie Alkmaar", "HYROX race Alkmaar", "HYROX wedstrijd Alkmaar", "HYROX evenement Alkmaar", "HYROX oefenrace", "HYROX mock race Alkmaar"],
   alternates: {
     canonical: "https://crossfitalkmaar.com/hyrox-simulatie-alkmaar",
   },
   openGraph: {
-    title: "HYROX Simulatie Alkmaar | Race Simulatie 30 mei",
+    title: "HYROX Simulatie Alkmaar | Race Simulatie 22 augustus",
     description:
-      "Doe mee aan de HYROX Simulatie op 30 mei bij CrossFit Alkmaar. Een volledige HYROX race: 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
+      "Doe mee aan de HYROX Simulatie op 22 augustus bij CrossFit Alkmaar. Een volledige HYROX race: 8x 1km hardlopen afgewisseld met 8 functionele workouts.",
     url: "https://crossfitalkmaar.com/hyrox-simulatie-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         url: "https://crossfitalkmaar.com/images/hyrox-pft-header.jpg",
         width: 1200,
         height: 630,
-        alt: "HYROX Simulatie Alkmaar - 30 mei bij CrossFit Alkmaar",
+        alt: "HYROX Simulatie Alkmaar - 22 augustus bij CrossFit Alkmaar",
       },
     ],
   },
