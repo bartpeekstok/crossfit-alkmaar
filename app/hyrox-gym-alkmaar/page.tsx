@@ -288,14 +288,14 @@ export default function HyroxGymAlkmaarPage() {
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Aankomende HYROX events</h2>
           <div className="grid md:grid-cols-2 gap-6">
-            <Link href="/hyrox-pft-alkmaar" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition block">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">HYROX Physical Fitness Test</h3>
-              <p className="text-gray-600 mb-2">Zaterdag 9 mei 2026 • Gratis</p>
-              <p className="text-blue-900 font-semibold">Meer info →</p>
-            </Link>
             <Link href="/hyrox-simulatie-alkmaar" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition block">
               <h3 className="font-bold text-lg text-gray-900 mb-2">HYROX Simulatie</h3>
-              <p className="text-gray-600 mb-2">Zaterdag 30 mei 2026</p>
+              <p className="text-gray-600 mb-2">Zaterdag 22 augustus 2026</p>
+              <p className="text-blue-900 font-semibold">Meer info →</p>
+            </Link>
+            <Link href="/hyrox-simulatie-24-oktober" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition block">
+              <h3 className="font-bold text-lg text-gray-900 mb-2">HYROX Simulatie</h3>
+              <p className="text-gray-600 mb-2">Zaterdag 24 oktober 2026</p>
               <p className="text-blue-900 font-semibold">Meer info →</p>
             </Link>
           </div>
