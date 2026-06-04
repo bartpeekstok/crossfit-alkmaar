@@ -80,7 +80,9 @@ export default function SeoLanding({
       source,
       section,
       variant: "kennismaking",
-      extraFields: { landingspagina: name },
+      // Overschrijft default 'formulier: kennismaking' met landing-naam,
+      // zodat GHL precies ziet vanaf welke landingspagina de lead komt.
+      extraFields: { formulier: name, landingspagina: name },
     });
   };
 
