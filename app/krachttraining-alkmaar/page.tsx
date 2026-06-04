@@ -1,302 +1,57 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-import { trackCTAClick } from "../lib/analytics";
-import ServiceSchema from "../components/ServiceSchema";
-import Image from "next/image";
 import Link from "next/link";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
-import Script from "next/script";
+import SeoLanding from "../components/redesign/SeoLanding";
 
 export default function KrachttrainingAlkmaarPage() {
-  const { openPopup } = usePopup();
-
   return (
-    <div className="min-h-screen bg-gray-200">
-      <ServiceSchema
-        name="Krachttraining Alkmaar - CrossFit Alkmaar"
-        description="Krachttraining met professionele coaching in Alkmaar. Squats, deadlifts en Olympic lifting in kleine groepen."
-        url="https://crossfitalkmaar.com/krachttraining-alkmaar"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Is krachttraining geschikt voor beginners?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. We bouwen stap voor stap op.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Wat is het verschil met een gewone sportschool?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Hoe vaak per week krachttraining?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Kan ik ook Olympic lifting leren?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: "Simone — lid bij CrossFit Alkmaar",
-            description: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar. - Lid bij CrossFit Alkmaar deelt haar ervaring",
-            thumbnailUrl: `https://img.youtube.com/vi/14v6cnGlI7g/maxresdefault.jpg`,
-            uploadDate: "2025-01-01",
-            contentUrl: `https://www.youtube.com/watch?v=14v6cnGlI7g`,
-            embedUrl: `https://www.youtube.com/embed/14v6cnGlI7g`,
-          }),
-        }}
-      />
-
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="Krachttraining Alkmaar - sterker worden bij CrossFit Alkmaar"
-      >
-        <Image
-          src="/images/krachttraining-alkmaar-header.jpg"
-          alt="Krachttraining Alkmaar - sterker worden bij CrossFit Alkmaar"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Krachttraining Alkmaar
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Sterker worden met begeleiding. Squats, deadlifts en meer — altijd met een coach die op je techniek let.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_kracht_hero", "krachttraining-alkmaar"); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-
-      {/* Waarom krachttraining bij CFA */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Krachttraining met coaching, niet alleen met gewichten
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            In de meeste sportscholen pak je een halter en hoop je dat je techniek klopt. Bij CrossFit Alkmaar staat er altijd een coach naast je. Of je nu voor het eerst een barbell oppakt of al jaren squats — je krijgt feedback op elke rep.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Onze krachtsessies zijn onderdeel van het dagelijkse CrossFit-programma. Bekijk onze <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">programma&apos;s</Link> voor meer details. Elke training begint met een krachtcomponent: squats, deadlifts, presses, Olympic lifts. Daarna volgt een workout die kracht combineert met conditie.
-          </p>
-          <p className="text-lg text-gray-700">
-            Het resultaat: je wordt niet alleen sterker, maar ook functioneel fitter. Kracht die je in het dagelijks leven gebruikt.
-          </p>
-        </div>
-      </section>
-
-      {/* Wat je traint */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Wat je kunt verwachten
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Compound lifts
-              </h3>
-              <p className="text-gray-700">
-                Back squat, front squat, deadlift, bench press, overhead press. De basis van elke goede krachttraining, met coaching op techniek.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Olympic lifting
-              </h3>
-              <p className="text-gray-700">
-                Clean & jerk en snatch. Explosieve lifts die kracht, coördinatie en mobiliteit trainen. Altijd onder begeleiding van een coach.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Gymnastics & bodyweight
-              </h3>
-              <p className="text-gray-700">
-                Pull-ups, muscle-ups, handstand push-ups. Functionele kracht met je eigen lichaamsgewicht, opgebouwd in progressies.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Geprogrammeerd voor resultaat
-              </h3>
-              <p className="text-gray-700">
-                Onze programmering volgt een periodisering. Je bouwt systematisch kracht op over weken en maanden, niet willekeurig.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Voor wie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Voor elk niveau
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Je hoeft geen ervaring te hebben met krachttraining. Onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> leert je de basis van alle bewegingen. Daarna train je in <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepslessen</Link> waar de coach het gewicht en de bewegingen aanpast aan jouw niveau.
-          </p>
-          <p className="text-lg text-gray-700">
-            Onze leden variëren van complete beginners tot mensen die al jaren trainen. Iedereen volgt dezelfde les, maar op een niveau dat bij hen past.
-          </p>
-        </div>
-      </section>
-
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* AEO Content */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Hoe word je sterker?</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Waarom is krachttraining goed voor iedereen?</h3>
-              <p className="text-gray-600">Krachttraining verbetert je botdichtheid, versnelt je stofwisseling, voorkomt blessures en maakt dagelijkse activiteiten makkelijker. Het is niet alleen voor bodybuilders — het is essentieel voor je gezondheid, ongeacht je leeftijd.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe begin je met krachttraining als beginner?</h3>
-              <p className="text-gray-600">Begin met de basisbewegingen: squats, deadlifts en presses. Bij CrossFit Alkmaar start je met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> waar je deze technieken leert in een kleine groep van max 6, onder begeleiding van een coach die elke rep bewaakt.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Wat is het verschil tussen krachttraining en bodybuilding?</h3>
-              <p className="text-gray-600">Bodybuilding richt zich op spiermassa en uiterlijk. Krachttraining bij CrossFit Alkmaar richt zich op functionele kracht: sterker worden in bewegingen die je dagelijks gebruikt. Je wordt sterker, niet per se groter.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lid aan het woord */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Simone — lid bij CrossFit Alkmaar</h2>
-          <p className="text-gray-600 text-center mb-8">&quot;Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar.&quot;</p>
-          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <TrackedYouTubeEmbed videoId="14v6cnGlI7g" title="Simone — lid bij CrossFit Alkmaar" />
-            </div>
-          </div>
-          <p className="text-center mt-6">
-            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Veelgestelde vragen */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Is krachttraining geschikt voor beginners?</h3>
-              <p className="text-gray-600">Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw stap voor stap op.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Wat is het verschil met een gewone sportschool?</h3>
-              <p className="text-gray-600">Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie. Bekijk onze <Link href="/meer-info#tarieven" className="text-blue-900 font-semibold hover:underline">tarieven</Link>.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe vaak per week krachttraining?</h3>
-              <p className="text-gray-600">2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Kan ik ook Olympic lifting leren?</h3>
-              <p className="text-gray-600">Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Begin met krachttraining
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Plan een gratis kennismakingsgesprek en ontdek hoe je sterker wordt bij CrossFit Alkmaar.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_kracht_footer", "krachttraining-alkmaar"); openPopup(); }}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-    </div>
+    <SeoLanding
+      name="Krachttraining Alkmaar"
+      slug="krachttraining-alkmaar"
+      description="Krachttraining met professionele coaching in Alkmaar. Squats, deadlifts en Olympic lifting in kleine groepen."
+      heroPhoto="/images/krachttraining-alkmaar-header.jpg"
+      heroTitle="Krachttraining Alkmaar"
+      heroSubtitle="Sterker worden met begeleiding. Squats, deadlifts en meer, altijd met een coach die op je techniek let."
+      waaromTitle="Krachttraining met coaching, niet alleen met gewichten"
+      waaromContent={
+        <>
+          <p>In de meeste sportscholen pak je een halter en hoop je dat je techniek klopt. Bij CrossFit Alkmaar staat er altijd een coach naast je. Of je nu voor het eerst een barbell oppakt of al jaren squats, je krijgt feedback op elke rep.</p>
+          <p>Onze krachtsessies zijn onderdeel van het dagelijkse CrossFit-programma. Bekijk onze <Link href="/programmas">programma&apos;s</Link> voor meer details. Elke training begint met een krachtcomponent: squats, deadlifts, presses, Olympic lifts. Daarna volgt een workout die kracht combineert met conditie.</p>
+          <p>Het resultaat: je wordt niet alleen sterker, maar ook functioneel fitter. Kracht die je in het dagelijks leven gebruikt.</p>
+        </>
+      }
+      aanpakTitle="Wat je kunt verwachten"
+      aanpakCards={[
+        { title: "Compound lifts", body: "Back squat, front squat, deadlift, bench press, overhead press. De basis van elke goede krachttraining, met coaching op techniek." },
+        { title: "Olympic lifting", body: "Clean & jerk en snatch. Explosieve lifts die kracht, coördinatie en mobiliteit trainen. Altijd onder begeleiding van een coach." },
+        { title: "Gymnastics & bodyweight", body: "Pull-ups, muscle-ups, handstand push-ups. Functionele kracht met je eigen lichaamsgewicht, opgebouwd in progressies." },
+        { title: "Geprogrammeerd voor resultaat", body: "Onze programmering volgt een periodisering. Je bouwt systematisch kracht op over weken en maanden, niet willekeurig." },
+      ]}
+      voorwieTitle="Voor elk niveau"
+      voorwieContent={
+        <>
+          <p>Je hoeft geen ervaring te hebben met krachttraining. Onze <Link href="/kickstart">Kickstart</Link> leert je de basis van alle bewegingen. Daarna train je in <Link href="/groepslessen">groepslessen</Link> waar de coach het gewicht en de bewegingen aanpast aan jouw niveau.</p>
+          <p>Onze leden variëren van complete beginners tot mensen die al jaren trainen. Iedereen volgt dezelfde les, maar op een niveau dat bij hen past.</p>
+        </>
+      }
+      aeoTitle="Hoe word je sterker?"
+      aeoItems={[
+        { q: "Waarom is krachttraining goed voor iedereen?", a: "Krachttraining verbetert je botdichtheid, versnelt je stofwisseling, voorkomt blessures en maakt dagelijkse activiteiten makkelijker. Het is niet alleen voor bodybuilders, het is essentieel voor je gezondheid, ongeacht je leeftijd." },
+        { q: "Hoe begin je met krachttraining als beginner?", a: <>Begin met de basisbewegingen: squats, deadlifts en presses. Bij CrossFit Alkmaar start je met de <Link href="/kickstart">Kickstart</Link> waar je deze technieken leert in een kleine groep van max 6, onder begeleiding van een coach die elke rep bewaakt.</> },
+        { q: "Wat is het verschil tussen krachttraining en bodybuilding?", a: "Bodybuilding richt zich op spiermassa en uiterlijk. Krachttraining bij CrossFit Alkmaar richt zich op functionele kracht: sterker worden in bewegingen die je dagelijks gebruikt. Je wordt sterker, niet per se groter." },
+      ]}
+      members={[
+        { videoId: "a4ENPMXSTX8", name: "Simone", quote: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar." },
+        { videoId: "SKchVCAIx80", name: "Steven", quote: "Houding en techniek, daar zijn de trainers hier ongelooflijk goed in" },
+      ]}
+      faqItems={[
+        { q: "Is krachttraining geschikt voor beginners?", aText: "Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach.", a: <>Absoluut. In onze Strength Classes leer je de basistechnieken zoals squats, deadlifts en presses onder begeleiding van een coach. Start met de <Link href="/kickstart">Kickstart</Link> en bouw stap voor stap op.</> },
+        { q: "Wat is het verschil met een gewone sportschool?", aText: "Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie.", a: "Bij ons train je altijd met coaching. Geen solo-sessies aan machines, maar geprogrammeerde trainingen in kleine groepen met focus op techniek en progressie." },
+        { q: "Hoe vaak per week krachttraining?", aText: "2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel.", a: "2 tot 3 keer per week is ideaal voor krachtopbouw. Onze programmering zorgt voor de juiste balans tussen belasting en herstel." },
+        { q: "Kan ik ook Olympic lifting leren?", aText: "Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering.", a: "Ja. Onze coaches zijn opgeleid in Olympic weightlifting. Snatch en clean & jerk komen regelmatig terug in onze programmering." },
+      ]}
+      ctaTitle="Begin met krachttraining"
+      ctaSubtitle="Plan een gratis kennismakingsgesprek en ontdek hoe je sterker wordt bij CrossFit Alkmaar."
+    />
   );
 }

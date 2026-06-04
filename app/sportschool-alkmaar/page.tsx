@@ -40,9 +40,10 @@ export default function SportschoolAlkmaarPage() {
         { q: "Wat is het verschil tussen een sportschool en CrossFit?", a: "Bij een gewone sportschool bepaal je zelf wat je doet op losse apparaten. Bij CrossFit krijg je elke les een andere workout, krachttraining, conditie en functionele bewegingen, altijd begeleid door een coach die je techniek bewaakt en oefeningen aanpast aan jouw niveau." },
         { q: "Waarom is begeleiding bij sporten belangrijk?", a: "Zonder begeleiding maak je sneller fouten in techniek, train je niet efficiënt, en haak je eerder af. Met een coach naast je leer je sneller, train je veiliger, en blijf je gemotiveerd door de structuur en de groep om je heen." },
       ]}
-      memberVideoId="14v6cnGlI7g"
-      memberName="Simone"
-      memberQuote="Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar."
+      members={[
+        { videoId: "a4ENPMXSTX8", name: "Simone", quote: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar." },
+        { videoId: "EIWOUtYAl7g", name: "Chris", quote: "CrossFit is veel toegankelijker dan aan machines trekken in een sportschool" },
+      ]}
       faqItems={[
         { q: "Wat maakt CrossFit Alkmaar anders dan een gewone sportschool?", aText: "Bij ons train je nooit alleen. Elke les wordt begeleid door een coach, in kleine groepen van max 12. Geen losse machines, maar gevarieerde training die werkt.", a: "Bij ons train je nooit alleen. Elke les wordt begeleid door een coach, in kleine groepen van max 12. Geen losse machines, maar gevarieerde training die werkt." },
         { q: "Is CrossFit Alkmaar geschikt voor beginners?", aText: "Ja. Iedereen start met een 28 Day Kickstart waarin je de basis leert in kleine groepen van max 6 personen.", a: <>Ja. Iedereen start met een <Link href="/kickstart">28 Day Kickstart</Link> waarin je de basis leert in kleine groepen van max 6 personen.</> },

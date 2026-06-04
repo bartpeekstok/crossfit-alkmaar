@@ -36,10 +36,8 @@ export type SeoLandingProps = {
   // AEO content (3 items)
   aeoTitle?: string;
   aeoItems?: { q: string; a: ReactNode }[];
-  // Member video
-  memberVideoId?: string;
-  memberName?: string;
-  memberQuote?: string;
+  // Member videos (2 verticale polaroid videos, zelfde format als programma-pagina's)
+  members?: { videoId: string; name: string; quote: string }[];
   // FAQ
   faqItems: { q: string; a: ReactNode; aText: string }[]; // aText for JSON-LD plain text
   // CTA
@@ -64,9 +62,7 @@ export default function SeoLanding({
   voorwieContent,
   aeoTitle,
   aeoItems,
-  memberVideoId,
-  memberName,
-  memberQuote,
+  members,
   faqItems,
   ctaTitle = "Klaar om te beginnen?",
   ctaSubtitle = "Plan een gratis kennismakingsgesprek en ontdek hoe wij je kunnen helpen.",
@@ -122,23 +118,24 @@ export default function SeoLanding({
           }),
         }}
       />
-      {memberVideoId && memberName && (
+      {members && members.map((m, i) => (
         <script
+          key={i}
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "VideoObject",
-              name: `${memberName} — lid bij CrossFit Alkmaar`,
-              description: memberQuote || `${memberName} deelt zijn ervaring bij CrossFit Alkmaar.`,
-              thumbnailUrl: `https://img.youtube.com/vi/${memberVideoId}/maxresdefault.jpg`,
+              name: `${m.name} — lid bij CrossFit Alkmaar`,
+              description: m.quote,
+              thumbnailUrl: `https://img.youtube.com/vi/${m.videoId}/maxresdefault.jpg`,
               uploadDate: "2025-01-01",
-              contentUrl: `https://www.youtube.com/watch?v=${memberVideoId}`,
-              embedUrl: `https://www.youtube.com/embed/${memberVideoId}`,
+              contentUrl: `https://www.youtube.com/watch?v=${m.videoId}`,
+              embedUrl: `https://www.youtube.com/embed/${m.videoId}`,
             }),
           }}
         />
-      )}
+      ))}
 
       {/* HERO */}
       <section className="page-hero">
@@ -216,19 +213,19 @@ export default function SeoLanding({
         </section>
       )}
 
-      {/* MEMBER VIDEO (verticaal 9:16, polaroid stijl) */}
-      {memberVideoId && memberName && (
+      {/* MEMBER VIDEOS (2 verticale polaroid videos, zelfde format als programma-pagina's) */}
+      {members && members.length > 0 && (
         <section className="sec sec--white">
           <div className="wrap">
-            <div className="center"><h2 className="sec-title">{memberName} — lid bij CrossFit Alkmaar</h2></div>
-            <div className="vpair" style={{ marginTop: 32, maxWidth: 320 }}>
-              <div className="vp" style={{ transform: "rotate(-2deg)" }}>
-                <div className="video">
-                  <YouTubeEmbed videoId={memberVideoId} alt={`${memberName} - lid bij CrossFit Alkmaar`} />
+            <div className="center"><h2 className="sec-title">Echte verhalen van leden</h2></div>
+            <div className="vpair" style={{ marginTop: 32 }}>
+              {members.map((m) => (
+                <div key={m.videoId} className="vp">
+                  <div className="video"><YouTubeEmbed videoId={m.videoId} alt={`${m.name} - lid bij CrossFit Alkmaar`} /></div>
+                  <div className="nm">{m.name}</div>
+                  <p className="vq">&apos;{m.quote}&apos;</p>
                 </div>
-                <div className="nm">{memberName}</div>
-                {memberQuote && <p className="vq">&ldquo;{memberQuote}&rdquo;</p>}
-              </div>
+              ))}
             </div>
             <p style={{ textAlign: "center", marginTop: 28, fontFamily: "var(--font-head)", fontWeight: 600, fontSize: 15 }}>
               <Link href="/onze-leden" style={{ color: "var(--cfa-blue)", textDecoration: "none" }}>Bekijk meer verhalen van onze leden →</Link>

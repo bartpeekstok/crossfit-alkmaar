@@ -40,9 +40,10 @@ export default function AfvallenAlkmaarPage() {
         { q: "Wat is de beste sport om af te vallen?", a: "Een combinatie van krachttraining en conditietraining. Bij CrossFit Alkmaar doe je beide in elke les. Krachttraining bouwt spiermassa die je stofwisseling verhoogt, conditietraining verbetert je uithoudingsvermogen en verbrandt calorieën." },
         { q: "Hoe snel kun je afvallen met sporten?", a: <>Met 2-3 trainingen per week en gezonde voeding is 0,5 tot 1 kilo per week realistisch en duurzaam. Bij CrossFit Alkmaar bieden we ook <Link href="/voedingsadvies">voedingsadvies</Link> aan om je resultaten te versnellen.</> },
       ]}
-      memberVideoId="1qhbmRPtysU"
-      memberName="Jarrald"
-      memberQuote="Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen"
+      members={[
+        { videoId: "1qhbmRPtysU", name: "Jarrald", quote: "Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen" },
+        { videoId: "a4ENPMXSTX8", name: "Simone", quote: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar." },
+      ]}
       faqItems={[
         { q: "Kan ik afvallen met CrossFit?", aText: "Ja. Onze trainingen combineren kracht en cardio, ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons voedingsadvies.", a: <>Ja. Onze trainingen combineren kracht en cardio, ideaal voor vetverbranding. Veel leden zien resultaat binnen een paar weken, zeker in combinatie met ons <Link href="/voedingsadvies">voedingsadvies</Link>.</> },
         { q: "Hoe vaak moet ik trainen om af te vallen?", aText: "2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie.", a: "2 tot 3 keer per week is al genoeg om resultaat te zien. Consistentie is belangrijker dan frequentie." },
