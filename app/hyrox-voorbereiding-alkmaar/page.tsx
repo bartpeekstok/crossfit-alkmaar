@@ -1,310 +1,58 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-import { trackCTAClick } from "../lib/analytics";
-import ServiceSchema from "../components/ServiceSchema";
-import Image from "next/image";
 import Link from "next/link";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
-import Script from "next/script";
+import SeoLanding from "../components/redesign/SeoLanding";
 
 export default function HyroxVoorbereidingAlkmaarPage() {
-  const { openPopup } = usePopup();
-
   return (
-    <div className="min-h-screen bg-gray-200">
-      <ServiceSchema
-        name="HYROX Voorbereiding Alkmaar - CrossFit Alkmaar"
-        description="Bereid je voor op HYROX met professionele coaching bij CrossFit Alkmaar. Running, sled push, wall balls en meer."
-        url="https://crossfitalkmaar.com/hyrox-voorbereiding-alkmaar"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Hoeveel weken voorbereiding heb ik nodig voor HYROX?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Welke onderdelen train ik voor HYROX?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja. We hebben specifieke HYROX-lessen en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Train ik alleen of in een groep?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "In kleine groepen van max 12 personen, onder begeleiding van een coach. Samen trainen is leuker én effectiever.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: "Malou — lid bij CrossFit Alkmaar",
-            description: "Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten - Lid bij CrossFit Alkmaar deelt haar ervaring",
-            thumbnailUrl: `https://img.youtube.com/vi/G9HkOnSsKg8/maxresdefault.jpg`,
-            uploadDate: "2025-01-01",
-            contentUrl: `https://www.youtube.com/watch?v=G9HkOnSsKg8`,
-            embedUrl: `https://www.youtube.com/embed/G9HkOnSsKg8`,
-          }),
-        }}
-      />
-
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="HYROX voorbereiding Alkmaar - train voor je HYROX race bij CrossFit Alkmaar"
-      >
-        <Image
-          src="/images/hyrox-alkmaar-header.jpg"
-          alt="HYROX voorbereiding Alkmaar - train voor je HYROX race bij CrossFit Alkmaar"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            HYROX Voorbereiding Alkmaar
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Train voor je HYROX race met coaches die weten wat je nodig hebt. Alle apparatuur, alle oefeningen, onder één dak.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_hyrox_prep_hero", "hyrox-voorbereiding-alkmaar"); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-
-      {/* Waarom CFA voor HYROX prep */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            De ideale HYROX voorbereiding
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            HYROX vraagt een combinatie van hardlopen en functionele oefeningen. Precies waar CrossFit om draait. Bij CrossFit Alkmaar heb je alle apparatuur die je nodig hebt: sleds, rowers, ski-ergs, wall balls, sandbags en meer.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Onze coaches helpen je met een trainingsplan dat is afgestemd op je HYROX-doel. Of het je eerste race is of je een PR wilt neerzetten — we bouwen je conditie, kracht en race-strategie op. Wil je extra focus? Bekijk onze <Link href="/personal-training" className="text-blue-900 font-semibold hover:underline">personal training</Link> opties.
-          </p>
-          <p className="text-lg text-gray-700">
-            En je traint niet alleen. Bij CrossFit Alkmaar bereiden meerdere leden zich voor op HYROX. Samen trainen, samen racen.
-          </p>
-        </div>
-      </section>
-
-      {/* HYROX oefeningen */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Alle HYROX stations, onder één dak
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Sled Push & Pull
-              </h3>
-              <p className="text-gray-700">
-                Onze sleds staan klaar. Train de juiste techniek en bouw de kracht op die je nodig hebt op racedag.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                SkiErg & Rower
-              </h3>
-              <p className="text-gray-700">
-                Werk aan je pacing en conditie op de SkiErg en rower. Leer de juiste strategie voor elke machine.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Wall Balls & Burpees
-              </h3>
-              <p className="text-gray-700">
-                De stations die het verschil maken. Train ze regelmatig zodat ze op racedag geen verrassing zijn.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Running
-              </h3>
-              <p className="text-gray-700">
-                8 km hardlopen verdeeld over 8 rondes. We werken aan je looptempo, pacing en het combineren van lopen met stations.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Voor wie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Voor elke HYROX-deelnemer
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Of je nu je eerste HYROX doet of al meerdere races hebt gelopen — onze coaches stemmen de voorbereiding af op jouw niveau en doel. Van finishen tot podium.
-          </p>
-          <p className="text-lg text-gray-700">
-            Nog nooit aan CrossFit gedaan? Geen probleem. Start met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> en bouw de basis op die je nodig hebt voor zowel CrossFit als HYROX.
-          </p>
-        </div>
-      </section>
-
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* AEO Content */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Hoe bereid je je voor op HYROX?</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoeveel weken heb je nodig om je voor te bereiden op HYROX?</h3>
-              <p className="text-gray-600">Minimaal 8-12 weken specifieke voorbereiding is ideaal. Bij CrossFit Alkmaar kun je het hele jaar HYROX-lessen volgen, zodat je altijd wedstrijdklaar bent.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Welke oefeningen moet je trainen voor HYROX?</h3>
-              <p className="text-gray-600">Sled push/pull, roeien, burpee broad jumps, lunges, wall balls, farmers carry en ski erg. Bij CrossFit Alkmaar oefenen we al deze stations in onze HYROX-lessen, met de juiste apparatuur en coaching.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Moet je goed kunnen hardlopen voor HYROX?</h3>
-              <p className="text-gray-600">Hardlopen is een groot onderdeel (8 km totaal), maar je hoeft geen marathonloper te zijn. Bij CrossFit Alkmaar trainen we je conditie zo dat je de runs aankan en nog energie overhoudt voor de oefenstations.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lid aan het woord */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Malou — lid bij CrossFit Alkmaar</h2>
-          <p className="text-gray-600 text-center mb-8">&quot;Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten&quot;</p>
-          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <TrackedYouTubeEmbed videoId="G9HkOnSsKg8" title="Malou — lid bij CrossFit Alkmaar" />
-            </div>
-          </div>
-          <p className="text-center mt-6">
-            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Veelgestelde vragen */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoeveel weken voorbereiding heb ik nodig voor HYROX?</h3>
-              <p className="text-gray-600">Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Welke onderdelen train ik voor HYROX?</h3>
-              <p className="text-gray-600">Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?</h3>
-              <p className="text-gray-600">Ja. We hebben specifieke <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX-lessen</Link> en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Train ik alleen of in een groep?</h3>
-              <p className="text-gray-600">In kleine <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">groepen van max 12 personen</Link>, onder begeleiding van een coach. Samen trainen is leuker en effectiever.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Upcoming Events */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">Test je niveau</h2>
-          <p className="text-lg text-gray-700 mb-8">Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober" className="text-blue-900 font-semibold hover:underline">24 oktober</Link>.</p>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Start je HYROX voorbereiding
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Plan een gratis kennismakingsgesprek en bespreek je HYROX-doelen met onze coaches.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_hyrox_prep_footer", "hyrox-voorbereiding-alkmaar"); openPopup(); }}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-    </div>
+    <SeoLanding
+      name="HYROX Voorbereiding Alkmaar"
+      slug="hyrox-voorbereiding-alkmaar"
+      description="Bereid je voor op HYROX met professionele coaching bij CrossFit Alkmaar. Running, sled push, wall balls en meer."
+      heroPhoto="/images/hyrox-alkmaar-header.jpg"
+      heroTitle="HYROX Voorbereiding Alkmaar"
+      heroSubtitle="Train voor je HYROX race met coaches die weten wat je nodig hebt. Alle apparatuur, alle oefeningen, onder één dak."
+      waaromTitle="De ideale HYROX voorbereiding"
+      waaromContent={
+        <>
+          <p>HYROX vraagt een combinatie van hardlopen en functionele oefeningen. Precies waar CrossFit om draait. Bij CrossFit Alkmaar heb je alle apparatuur die je nodig hebt: sleds, rowers, ski-ergs, wall balls, sandbags en meer.</p>
+          <p>Onze coaches helpen je met een trainingsplan dat is afgestemd op je HYROX-doel. Of het je eerste race is of je een PR wilt neerzetten - we bouwen je conditie, kracht en race-strategie op. Wil je extra focus? Bekijk onze <Link href="/personal-training">personal training</Link> opties.</p>
+          <p>En je traint niet alleen. Bij CrossFit Alkmaar bereiden meerdere leden zich voor op HYROX. Samen trainen, samen racen.</p>
+        </>
+      }
+      aanpakTitle="Alle HYROX stations, onder één dak"
+      aanpakCards={[
+        { title: "Sled Push & Pull", body: "Onze sleds staan klaar. Train de juiste techniek en bouw de kracht op die je nodig hebt op racedag." },
+        { title: "SkiErg & Rower", body: "Werk aan je pacing en conditie op de SkiErg en rower. Leer de juiste strategie voor elke machine." },
+        { title: "Wall Balls & Burpees", body: "De stations die het verschil maken. Train ze regelmatig zodat ze op racedag geen verrassing zijn." },
+        { title: "Running", body: "8 km hardlopen verdeeld over 8 rondes. We werken aan je looptempo, pacing en het combineren van lopen met stations." },
+      ]}
+      voorwieTitle="Voor elke HYROX-deelnemer"
+      voorwieContent={
+        <>
+          <p>Of je nu je eerste HYROX doet of al meerdere races hebt gelopen - onze coaches stemmen de voorbereiding af op jouw niveau en doel. Van finishen tot podium.</p>
+          <p>Nog nooit aan CrossFit gedaan? Geen probleem. Start met de <Link href="/kickstart">Kickstart</Link> en bouw de basis op die je nodig hebt voor zowel CrossFit als HYROX.</p>
+          <p>Test je voorbereiding op een echte HYROX: schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober">24 oktober</Link>.</p>
+        </>
+      }
+      aeoTitle="Hoe bereid je je voor op HYROX?"
+      aeoItems={[
+        { q: "Hoeveel weken heb je nodig om je voor te bereiden op HYROX?", a: "Minimaal 8-12 weken specifieke voorbereiding is ideaal. Bij CrossFit Alkmaar kun je het hele jaar HYROX-lessen volgen, zodat je altijd wedstrijdklaar bent." },
+        { q: "Welke oefeningen moet je trainen voor HYROX?", a: "Sled push/pull, roeien, burpee broad jumps, lunges, wall balls, farmers carry en ski erg. Bij CrossFit Alkmaar oefenen we al deze stations in onze HYROX-lessen, met de juiste apparatuur en coaching." },
+        { q: "Moet je goed kunnen hardlopen voor HYROX?", a: "Hardlopen is een groot onderdeel (8 km totaal), maar je hoeft geen marathonloper te zijn. Bij CrossFit Alkmaar trainen we je conditie zo dat je de runs aankan en nog energie overhoudt voor de oefenstations." },
+      ]}
+      members={[
+        { videoId: "GCUpJQJJ8s0", name: "Malou", quote: "Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten" },
+        { videoId: "SKchVCAIx80", name: "Steven", quote: "Houding en techniek, daar zijn de trainers hier ongelooflijk goed in" },
+      ]}
+      faqItems={[
+        { q: "Hoeveel weken voorbereiding heb ik nodig voor HYROX?", aText: "Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind.", a: "Met 8-12 weken gerichte training kun je goed voorbereid aan de start staan. Train je al regelmatig bij ons? Dan ben je al een heel eind." },
+        { q: "Welke onderdelen train ik voor HYROX?", aText: "Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen.", a: "Alle 8 werkstations: ski-erg, sled push, sled pull, burpee broad jumps, roeien, farmers carry, sandbag lunges en wall balls. Plus het hardlopen." },
+        { q: "Kan ik me bij CrossFit Alkmaar voorbereiden op HYROX?", aText: "Ja. We hebben specifieke HYROX-lessen en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.", a: <>Ja. We hebben specifieke <Link href="/hyrox-training-alkmaar">HYROX-lessen</Link> en alle benodigde apparatuur: sleds, ski-erg, roeier, sandbags en wall balls.</> },
+        { q: "Train ik alleen of in een groep?", aText: "In kleine groepen van max 12 personen, onder begeleiding van een coach. Samen trainen is leuker en effectiever.", a: <>In kleine <Link href="/groepslessen">groepen van max 12 personen</Link>, onder begeleiding van een coach. Samen trainen is leuker en effectiever.</> },
+      ]}
+      ctaTitle="Start je HYROX voorbereiding"
+      ctaSubtitle="Plan een gratis kennismakingsgesprek en bespreek je HYROX-doelen met onze coaches."
+    />
   );
 }

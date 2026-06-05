@@ -1,6 +1,10 @@
 "use client";
 
-import { useState } from "react";
+const Plus = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M12 5v14M5 12h14" />
+  </svg>
+);
 
 interface FAQItem {
   question: string;
@@ -14,13 +18,6 @@ interface FAQSection {
 }
 
 export default function FAQPage() {
-  const [openItems, setOpenItems] = useState<{ [key: string]: boolean }>({});
-
-  const toggleItem = (sectionIndex: number, itemIndex: number) => {
-    const key = `${sectionIndex}-${itemIndex}`;
-    setOpenItems((prev) => ({ ...prev, [key]: !prev[key] }));
-  };
-
   const faqSections: FAQSection[] = [
     {
       title: "Community en contact",
@@ -140,23 +137,23 @@ export default function FAQPage() {
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">Groepslessen</p>
                 <div className="text-gray-600 space-y-1">
-                  <p>1x per week — €69,95</p>
-                  <p>10x per maand — €99,95</p>
-                  <p>15x per maand — €127,50</p>
-                  <p>Onbeperkt — €159,95</p>
+                  <p>1x per week - €69,95</p>
+                  <p>10x per maand - €99,95</p>
+                  <p>15x per maand - €127,50</p>
+                  <p>Onbeperkt - €159,95</p>
                 </div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">BUILD Small group</p>
                 <div className="text-gray-600 space-y-1">
-                  <p>2x per week — €245/maand</p>
-                  <p>3x per week — €367,50/maand</p>
+                  <p>2x per week - €245/maand</p>
+                  <p>3x per week - €367,50/maand</p>
                 </div>
               </div>
               <div className="bg-gray-50 p-4 rounded-lg">
                 <p className="font-semibold text-blue-900 mb-2">Personal training</p>
-                <p className="text-gray-600">Op abonnementsvorm — €95/uur</p>
-                <p className="text-gray-600">Losse sessie — €100/uur</p>
+                <p className="text-gray-600">Op abonnementsvorm - €95/uur</p>
+                <p className="text-gray-600">Losse sessie - €100/uur</p>
               </div>
             </div>
           ),
@@ -356,27 +353,21 @@ export default function FAQPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[400px] flex items-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/faq-header.jpg')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center 35%",
-        }}
-      >
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Ledenservice</h1>
-          <p className="text-xl text-blue-100 mb-8">
-            Hier vind je antwoorden op de meest gestelde vragen van onze leden.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <>
+      {/* HERO */}
+      <section className="page-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/images/faq-header.jpg" alt="" style={{ objectPosition: "center 35%" }} />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <h1>Ledenservice</h1>
+          <p className="lede">Hier vind je antwoorden op de meest gestelde vragen van onze leden.</p>
+          <div className="cta-row">
             <a
+              className="btn btn--gold btn--lg"
               href="https://wa.me/31640124097"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-6 rounded-lg transition inline-flex items-center justify-center gap-2"
             >
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
@@ -384,8 +375,8 @@ export default function FAQPage() {
               Chat via WhatsApp
             </a>
             <a
+              className="btn btn--outline btn--lg"
               href="mailto:ledenservice@crossfitalkmaar.nl"
-              className="bg-white/10 hover:bg-white/20 text-white font-semibold py-3 px-6 rounded-lg transition inline-flex items-center justify-center gap-2 border border-white/30"
             >
               <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -396,15 +387,15 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* Quick Navigation */}
-      <section className="bg-white border-b">
-        <div className="max-w-4xl mx-auto px-6 py-4">
-          <div className="flex flex-wrap gap-2 justify-center">
+      {/* QUICK NAV */}
+      <section className="sec--white" style={{ borderBottom: "1px solid var(--border)" }}>
+        <div className="wrap" style={{ paddingTop: 18, paddingBottom: 18 }}>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center" }}>
             {faqSections.map((section, index) => (
               <a
                 key={index}
                 href={`#section-${index}`}
-                className="px-4 py-2 bg-gray-100 hover:bg-blue-100 hover:text-blue-900 rounded-full text-sm font-medium transition"
+                style={{ padding: "8px 16px", background: "var(--blue-50)", color: "var(--cfa-blue)", borderRadius: 999, fontFamily: "var(--font-head)", fontWeight: 600, fontSize: 14, textDecoration: "none" }}
               >
                 {section.title}
               </a>
@@ -413,76 +404,52 @@ export default function FAQPage() {
         </div>
       </section>
 
-      {/* FAQ Sections */}
-      <section className="py-12 px-6">
-        <div className="max-w-4xl mx-auto">
-          {faqSections.map((section, sectionIndex) => (
-            <div key={sectionIndex} id={`section-${sectionIndex}`} className="mb-12 scroll-mt-8">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-12 h-12 bg-blue-900 text-white rounded-xl flex items-center justify-center">
+      {/* FAQ SECTIONS */}
+      {faqSections.map((section, sectionIndex) => (
+        <section
+          key={sectionIndex}
+          id={`section-${sectionIndex}`}
+          className={`sec ${sectionIndex % 2 === 0 ? "sec--ivoor" : "sec--white"}`}
+          style={{ scrollMarginTop: 80, paddingTop: "clamp(40px,6vw,72px)", paddingBottom: "clamp(40px,6vw,72px)" }}
+        >
+          <div className="wrap">
+            <div style={{ maxWidth: 840, margin: "0 auto" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 14, marginBottom: 22 }}>
+                <div style={{ width: 52, height: 52, borderRadius: 14, background: "var(--cfa-blue)", color: "#fff", display: "grid", placeItems: "center", flexShrink: 0 }}>
                   {section.icon}
                 </div>
-                <h2 className="text-2xl font-bold text-gray-900">{section.title}</h2>
+                <h2 className="sec-title" style={{ fontSize: "clamp(26px,3.4vw,40px)", textAlign: "left", margin: 0 }}>{section.title}</h2>
               </div>
-              <div className="space-y-3">
-                {section.items.map((item, itemIndex) => {
-                  const isOpen = openItems[`${sectionIndex}-${itemIndex}`];
-                  return (
-                    <div
-                      key={itemIndex}
-                      className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-200"
-                    >
-                      <button
-                        onClick={() => toggleItem(sectionIndex, itemIndex)}
-                        className="w-full text-left px-6 py-4 flex justify-between items-center hover:bg-gray-50 transition"
-                      >
-                        <span className="font-medium text-gray-900 pr-4">
-                          {item.question}
-                        </span>
-                        <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition ${isOpen ? 'bg-blue-900 text-white' : 'bg-gray-100 text-gray-500'}`}>
-                          <svg
-                            className={`w-4 h-4 transition-transform ${isOpen ? "rotate-180" : ""}`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
-                        </div>
-                      </button>
-                      {isOpen && (
-                        <div className="px-6 pb-5 text-gray-600 border-t border-gray-100 pt-4">
-                          {typeof item.answer === "string" ? <p>{item.answer}</p> : item.answer}
-                        </div>
-                      )}
+              <div className="faq" style={{ marginTop: 8, marginLeft: 0, marginRight: 0, maxWidth: "100%" }}>
+                {section.items.map((item, itemIndex) => (
+                  <details key={itemIndex}>
+                    <summary>
+                      {item.question}
+                      <span className="ic"><Plus /></span>
+                    </summary>
+                    <div className="body">
+                      {typeof item.answer === "string" ? <p>{item.answer}</p> : item.answer}
                     </div>
-                  );
-                })}
+                  </details>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
-      </section>
+          </div>
+        </section>
+      ))}
 
       {/* CTA */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-2xl shadow-sm text-center">
-            <h2 className="text-2xl font-bold mb-4">Staat je vraag er niet tussen?</h2>
-            <p className="text-gray-600 mb-6">
-              Neem gerust contact met ons op via WhatsApp of e-mail. We helpen je graag!
-            </p>
-            <a
-              href="https://wa.me/31640124097"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 px-8 rounded-lg transition"
-            >
-              Chat via WhatsApp
-            </a>
-          </div>
+      <section className="sec sec--blue" style={{ textAlign: "center" }}>
+        <div className="wrap">
+          <h2 className="sec-title" style={{ color: "#fff" }}>Staat je vraag er niet tussen?</h2>
+          <p className="sec-sub" style={{ margin: "14px auto 26px" }}>
+            Neem gerust contact met ons op via WhatsApp of e-mail. We helpen je graag!
+          </p>
+          <a className="btn btn--gold btn--lg" href="https://wa.me/31640124097" target="_blank" rel="noopener noreferrer">
+            Chat via WhatsApp
+          </a>
         </div>
       </section>
-    </div>
+    </>
   );
 }

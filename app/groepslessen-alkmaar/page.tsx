@@ -1,305 +1,57 @@
 "use client";
 
-import { usePopup } from "../components/PopupContext";
-import { trackCTAClick } from "../lib/analytics";
-import ServiceSchema from "../components/ServiceSchema";
-import Image from "next/image";
 import Link from "next/link";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
-import Script from "next/script";
+import SeoLanding from "../components/redesign/SeoLanding";
 
 export default function GroepslessenAlkmaarPage() {
-  const { openPopup } = usePopup();
-
   return (
-    <div className="min-h-screen bg-gray-200">
-      <ServiceSchema
-        name="Groepslessen Alkmaar - CrossFit Alkmaar"
-        description="Groepslessen met professionele coaching in kleine groepen van max 12 personen. CrossFit, strength en conditie bij CrossFit Alkmaar."
-        url="https://crossfitalkmaar.com/groepslessen-alkmaar"
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            mainEntity: [
-              {
-                "@type": "Question",
-                name: "Hoe groot zijn de groepen?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Maximaal 12 personen per les. Zo krijgt iedereen persoonlijke aandacht van de coach.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Welke lessen bieden jullie aan?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "CrossFit, Strength, HYROX en Build. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Moet ik van tevoren reserveren?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja, je reserveert via onze app. Zo weten we wie er komt en houden we de groepen klein.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Kan ik als beginner meedoen met groepslessen?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Ja, na het afronden van onze 28 Day Kickstart. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.",
-                },
-              },
-            ],
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "VideoObject",
-            name: "Lisette — lid bij CrossFit Alkmaar",
-            description: "Ik voel me sindsdien een stuk fitter! - Lid bij CrossFit Alkmaar deelt haar ervaring",
-            thumbnailUrl: `https://img.youtube.com/vi/WuOyAWYDeG0/maxresdefault.jpg`,
-            uploadDate: "2025-01-01",
-            contentUrl: `https://www.youtube.com/watch?v=WuOyAWYDeG0`,
-            embedUrl: `https://www.youtube.com/embed/WuOyAWYDeG0`,
-          }),
-        }}
-      />
-
-      {/* Hero */}
-      <section
-        className="relative text-white py-20 px-6 min-h-[500px] flex items-center"
-        role="img"
-        aria-label="Groepslessen Alkmaar - samen trainen bij CrossFit Alkmaar"
-      >
-        <Image
-          src="/images/groepslessen-alkmaar-header.jpg"
-          alt="Groepslessen Alkmaar - samen trainen bij CrossFit Alkmaar"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="max-w-4xl mx-auto text-center relative z-10">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Groepslessen in Alkmaar
-          </h1>
-          <p className="text-xl text-gray-200 mb-8">
-            Samen trainen in kleine groepen met een coach die je kent. Geen massale lessen, maar persoonlijke aandacht.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_groepslessen_hero", "groepslessen-alkmaar"); openPopup(); }}
-            className="bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-
-      {/* Waarom groepslessen bij CFA */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Groepslessen die écht werken
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Groepslessen bij een sportschool betekent vaak: 30 mensen in een zaal, een instructeur op een podium, en hopen dat je het goed doet. Bij CrossFit Alkmaar is dat compleet anders.
-          </p>
-          <p className="text-lg text-gray-700 mb-4">
-            Onze groepen zijn maximaal 12 personen. Je coach kent je naam, je doelen en je beperkingen. Elke oefening wordt aangepast aan jouw niveau. Beginners trainen naast gevorderden — iedereen doet dezelfde workout, maar op een manier die bij hen past.
-          </p>
-          <p className="text-lg text-gray-700">
-            Het resultaat: de motivatie van een groep, met de aandacht van personal training.
-          </p>
-        </div>
-      </section>
-
-      {/* Lesaanbod */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
-            Ons lesaanbod
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                CrossFit Classes
-              </h3>
-              <p className="text-gray-700">
-                Onze kern: gevarieerde workouts die kracht en conditie combineren. Elke dag anders, altijd uitdagend en altijd begeleid.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                Strength Classes
-              </h3>
-              <p className="text-gray-700">
-                Focus op krachtopbouw met barbell-werk. Squats, deadlifts, presses — gestructureerd en geprogrammeerd voor progressie.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                HYROX
-              </h3>
-              <p className="text-gray-700">
-                Specifieke voorbereiding op <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX</Link>-wedstrijden. Hardlopen, roeien, sled push/pull en functionele oefeningen in wedstrijdformat.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="font-bold text-lg text-gray-900 mb-2">
-                BUILD
-              </h3>
-              <p className="text-gray-700">
-                Gericht op spieropbouw en lichaamsvorm. Gestructureerde trainingen met focus op hypertrofie en aesthetics. <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">Meer over BUILD →</Link>
-              </p>
-            </div>
-          </div>
-          <p className="text-lg text-gray-700 mt-6">
-            Bekijk het volledige <Link href="/groepslessen" className="text-blue-900 font-semibold hover:underline">lesrooster</Link> voor alle tijden en lessen.
-          </p>
-        </div>
-      </section>
-
-      {/* Voor wie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Voor iedereen, van beginner tot gevorderd
-          </h2>
-          <p className="text-lg text-gray-700 mb-4">
-            Onze leden zijn 20 tot 70+ jaar. Sommigen hebben nooit gesport, anderen zijn doorgewinterde atleten. Wat ze delen: ze willen beter worden, samen met anderen, onder begeleiding van een coach.
-          </p>
-          <p className="text-lg text-gray-700">
-            Nieuw? Je start altijd met de <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">Kickstart</Link> — een persoonlijk introductietraject zodat je voorbereid in je eerste groepsles staat.
-          </p>
-        </div>
-      </section>
-
-      {/* Google Reviews */}
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
-          <iframe
-            className="lc_reviews_widget"
-            src="https://ghl.crossfitalkmaar.com/reputation/widgets/review_widget/elOOWDMoCEHJO4WhphRj"
-            frameBorder="0"
-            scrolling="no"
-            style={{ minWidth: '100%', width: '100%' }}
-            title="Google Reviews"
-          ></iframe>
-        </div>
-      </section>
-
-      {/* AEO Content */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Hoe werken groepslessen?</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Wat is het voordeel van groepslessen boven solo trainen?</h3>
-              <p className="text-gray-600">In een groep word je gedragen door de energie om je heen. Je wordt aangemoedigd, gemotiveerd en uitgedaagd. Bij CrossFit Alkmaar zijn groepen max 12 personen, zodat je de motivatie van een groep hebt mét de persoonlijke aandacht van een coach.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Welke groepslessen biedt CrossFit Alkmaar?</h3>
-              <p className="text-gray-600">CrossFit (complete workout), Strength (focus op kracht), HYROX (wedstrijdvoorbereiding) en BUILD (spiermassa opbouwen in groepen van max 6). Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe vaak moet je groepslessen volgen voor resultaat?</h3>
-              <p className="text-gray-600">Twee tot drie keer per week is voldoende. Veel leden combineren CrossFit met Strength of HYROX voor variatie. Consistentie is belangrijker dan intensiteit.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Lid aan het woord */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4 text-center">Lisette — lid bij CrossFit Alkmaar</h2>
-          <p className="text-gray-600 text-center mb-8">&quot;Ik voel me sindsdien een stuk fitter!&quot;</p>
-          <div className="relative w-full rounded-lg shadow-sm overflow-hidden" style={{ paddingBottom: "56.25%" }}>
-            <div className="absolute top-0 left-0 w-full h-full">
-              <TrackedYouTubeEmbed videoId="WuOyAWYDeG0" title="Lisette — lid bij CrossFit Alkmaar" />
-            </div>
-          </div>
-          <p className="text-center mt-6">
-            <Link href="/onze-leden" className="text-blue-900 font-semibold hover:underline">Bekijk meer verhalen van onze leden →</Link>
-          </p>
-        </div>
-      </section>
-
-      {/* Veelgestelde vragen */}
-      <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-center mb-12">Veelgestelde vragen</h2>
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Hoe groot zijn de groepen?</h3>
-              <p className="text-gray-600">Maximaal 12 personen per les. Zo krijgt iedereen persoonlijke aandacht van de coach.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Welke lessen bieden jullie aan?</h3>
-              <p className="text-gray-600">CrossFit, Strength, <Link href="/hyrox-training-alkmaar" className="text-blue-900 font-semibold hover:underline">HYROX</Link> en <Link href="/programmas" className="text-blue-900 font-semibold hover:underline">Build</Link>. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Moet ik van tevoren reserveren?</h3>
-              <p className="text-gray-600">Ja, je reserveert via onze app. Zo weten we wie er komt en houden we de groepen klein.</p>
-            </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold mb-2">Kan ik als beginner meedoen met groepslessen?</h3>
-              <p className="text-gray-600">Ja, na het afronden van onze <Link href="/kickstart" className="text-blue-900 font-semibold hover:underline">28 Day Kickstart</Link>. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="py-16 px-6 bg-blue-900">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-white mb-4">
-            Probeer een groepsles
-          </h2>
-          <p className="text-blue-100 text-lg mb-8">
-            Plan een gratis kennismakingsgesprek en ervaar zelf het verschil.
-          </p>
-          <button
-            onClick={() => { trackCTAClick("gratis_intake_groepslessen_footer", "groepslessen-alkmaar"); openPopup(); }}
-            className="bg-white text-blue-900 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition cursor-pointer"
-          >
-            Plan je gratis kennismaking
-          </button>
-        </div>
-      </section>
-    </div>
+    <SeoLanding
+      name="Groepslessen Alkmaar"
+      slug="groepslessen-alkmaar"
+      description="Groepslessen met professionele coaching in kleine groepen van max 12 personen. CrossFit, strength en conditie bij CrossFit Alkmaar."
+      heroPhoto="/images/groepslessen-alkmaar-header.jpg"
+      heroTitle="Groepslessen in Alkmaar"
+      heroSubtitle="Samen trainen in kleine groepen met een coach die je kent. Geen massale lessen, maar persoonlijke aandacht."
+      waaromTitle="Groepslessen die écht werken"
+      waaromContent={
+        <>
+          <p>Groepslessen bij een sportschool betekent vaak: 30 mensen in een zaal, een instructeur op een podium, en hopen dat je het goed doet. Bij CrossFit Alkmaar is dat compleet anders.</p>
+          <p>Onze groepen zijn maximaal 12 personen. Je coach kent je naam, je doelen en je beperkingen. Elke oefening wordt aangepast aan jouw niveau. Beginners trainen naast gevorderden - iedereen doet dezelfde workout, maar op een manier die bij hen past.</p>
+          <p>Het resultaat: de motivatie van een groep, met de aandacht van personal training.</p>
+        </>
+      }
+      aanpakTitle="Ons lesaanbod"
+      aanpakCards={[
+        { title: "CrossFit Classes", body: "Onze kern: gevarieerde workouts die kracht en conditie combineren. Elke dag anders, altijd uitdagend en altijd begeleid." },
+        { title: "Strength Classes", body: "Focus op krachtopbouw met barbell-werk. Squats, deadlifts, presses - gestructureerd en geprogrammeerd voor progressie." },
+        { title: "HYROX", body: <>Specifieke voorbereiding op <Link href="/hyrox-training-alkmaar">HYROX</Link>-wedstrijden. Hardlopen, roeien, sled push/pull en functionele oefeningen in wedstrijdformat.</> },
+        { title: "BUILD", body: <>Gericht op spieropbouw en lichaamsvorm. Gestructureerde trainingen met focus op hypertrofie en aesthetics. <Link href="/programmas">Meer over BUILD →</Link></> },
+      ]}
+      voorwieTitle="Voor iedereen, van beginner tot gevorderd"
+      voorwieContent={
+        <>
+          <p>Onze leden zijn 20 tot 70+ jaar. Sommigen hebben nooit gesport, anderen zijn doorgewinterde atleten. Wat ze delen: ze willen beter worden, samen met anderen, onder begeleiding van een coach.</p>
+          <p>Nieuw? Je start altijd met de <Link href="/kickstart">Kickstart</Link> - een persoonlijk introductietraject zodat je voorbereid in je eerste groepsles staat.</p>
+        </>
+      }
+      aeoTitle="Hoe werken groepslessen?"
+      aeoItems={[
+        { q: "Wat is het voordeel van groepslessen boven solo trainen?", a: "In een groep word je gedragen door de energie om je heen. Je wordt aangemoedigd, gemotiveerd en uitgedaagd. Bij CrossFit Alkmaar zijn groepen max 12 personen, zodat je de motivatie van een groep hebt mét de persoonlijke aandacht van een coach." },
+        { q: "Welke groepslessen biedt CrossFit Alkmaar?", a: "CrossFit (complete workout), Strength (focus op kracht), HYROX (wedstrijdvoorbereiding) en BUILD (spiermassa opbouwen in groepen van max 6). Elke les duurt 60 minuten en wordt begeleid door een professionele coach." },
+        { q: "Hoe vaak moet je groepslessen volgen voor resultaat?", a: "Twee tot drie keer per week is voldoende. Veel leden combineren CrossFit met Strength of HYROX voor variatie. Consistentie is belangrijker dan intensiteit." },
+      ]}
+      members={[
+        { videoId: "7_p0gpFtEvk", name: "Lisette", quote: "Ik voel me sindsdien een stuk fitter!" },
+        { videoId: "a4ENPMXSTX8", name: "Simone", quote: "Het zijn gewoon allemaal leuke mensen. Iedereen motiveert elkaar." },
+      ]}
+      faqItems={[
+        { q: "Hoe groot zijn de groepen?", aText: "Maximaal 12 personen per les. Zo krijgt iedereen persoonlijke aandacht van de coach.", a: "Maximaal 12 personen per les. Zo krijgt iedereen persoonlijke aandacht van de coach." },
+        { q: "Welke lessen bieden jullie aan?", aText: "CrossFit, Strength, HYROX en Build. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.", a: <>CrossFit, Strength, <Link href="/hyrox-training-alkmaar">HYROX</Link> en <Link href="/programmas">Build</Link>. Elke les duurt 60 minuten en wordt begeleid door een professionele coach.</> },
+        { q: "Moet ik van tevoren reserveren?", aText: "Ja, je reserveert via onze app. Zo weten we wie er komt en houden we de groepen klein.", a: "Ja, je reserveert via onze app. Zo weten we wie er komt en houden we de groepen klein." },
+        { q: "Kan ik als beginner meedoen met groepslessen?", aText: "Ja, na het afronden van onze 28 Day Kickstart. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.", a: <>Ja, na het afronden van onze <Link href="/kickstart">28 Day Kickstart</Link>. Daarin leer je alle basisbewegingen zodat je veilig kunt meedoen.</> },
+      ]}
+      ctaTitle="Probeer een groepsles"
+      ctaSubtitle="Plan een gratis kennismakingsgesprek en ervaar zelf het verschil."
+    />
   );
 }

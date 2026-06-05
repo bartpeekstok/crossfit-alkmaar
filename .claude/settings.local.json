@@ -64,7 +64,8 @@
       "Bash(git -C \"c:/Users/bartp/crossfit-dashboard\" commit -m \"$\\(cat <<''EOF''\nFix chart tooltip to show notes for each month\n\n- Added notes field to chart data\n- Created custom tooltip component that displays notes in italic below the values\n- Notes appear when hovering over data points in the financial overview chart\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git -C \"c:/Users/bartp/crossfit-dashboard\" commit -m \"$\\(cat <<''EOF''\nAdd automatic insights to ProfitabilityCard\n\n- Analyzes cost changes \\(onetime, staff pay, recurring\\)\n- Detects significant margin changes per lesson type\n- Shows max 3 insights as compact tags below the summary\n- Only shows when there are meaningful changes to report\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
       "Bash(git stash *)",
-      "Bash(cp \"C:/Users/bartp/Downloads/HyroxRegistration.tsx\" c:/Users/bartp/crossfit-alkmaar/app/components/redesign/HyroxRegistration.tsx && grep -c \"—\" c:/Users/bartp/crossfit-alkmaar/app/components/redesign/HyroxRegistration.tsx)"
+      "Bash(cp \"C:/Users/bartp/Downloads/HyroxRegistration.tsx\" c:/Users/bartp/crossfit-alkmaar/app/components/redesign/HyroxRegistration.tsx && grep -c \"—\" c:/Users/bartp/crossfit-alkmaar/app/components/redesign/HyroxRegistration.tsx)",
+      "Bash(echo \"EXIT: $?\")"
     ],
     "additionalDirectories": [
       "C:\\Users\\bartp\\Downloads"

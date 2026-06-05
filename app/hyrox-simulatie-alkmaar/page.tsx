@@ -10,7 +10,7 @@ export default function HyroxSimulatie22Aug() {
         "@type": "SportsEvent",
         name: "HYROX Simulatie Alkmaar",
         description: "Een volledige HYROX race bij CrossFit Alkmaar. 8 rondes hardlopen + 8 stations. Open en Pro divisie.",
-        startDate: "2026-08-22T09:00:00+02:00",
+        startDate: "2026-08-22T10:30:00+02:00",
         endDate: "2026-08-22T17:00:00+02:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",

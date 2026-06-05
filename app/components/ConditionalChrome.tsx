@@ -30,6 +30,25 @@ export const REDESIGNED_PATHS = [
   "/fitness-alkmaar",
   "/krachttraining-alkmaar",
   "/sportschool-50-plus-alkmaar",
+  "/hyrox-training-alkmaar",
+  "/personal-trainer-alkmaar",
+  "/groepslessen-alkmaar",
+  "/bootcamp-alkmaar",
+  "/hyrox-voorbereiding-alkmaar",
+  "/hyrox-gym-alkmaar",
+  "/crossfit-beginners-alkmaar",
+  "/personal-training-alkmaar",
+  "/functional-fitness-alkmaar",
+  "/groepstraining-alkmaar",
+  "/crossfit-vrouwen-alkmaar",
+  "/sportschool-begeleiding-alkmaar",
+  "/afvallen-met-sport-alkmaar",
+  "/strength-training-alkmaar",
+  "/small-group-training-alkmaar",
+  "/olympic-lifting-alkmaar",
+  "/sporten-overgang-alkmaar",
+  // Ledenservice (geen SEO-landing, wel nieuwe huisstijl-chrome)
+  "/faq",
 ];
 
 // Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)

@@ -8,9 +8,9 @@ export default function HyroxSimulatie24Oct() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
         "@context": "https://schema.org",
         "@type": "SportsEvent",
-        name: "HYROX Simulatie Alkmaar — 24 oktober",
+        name: "HYROX Simulatie Alkmaar - 24 oktober",
         description: "Een volledige HYROX race bij CrossFit Alkmaar. 8 rondes hardlopen + 8 stations. Open en Pro divisie.",
-        startDate: "2026-10-24T09:00:00+02:00",
+        startDate: "2026-10-24T10:30:00+02:00",
         endDate: "2026-10-24T17:00:00+02:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
