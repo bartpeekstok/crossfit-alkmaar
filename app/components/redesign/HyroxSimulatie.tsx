@@ -74,7 +74,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
       <section className="sec sec--white">
         <div className="wrap">
           <div className="hxpics">
-            {[1, 2, 3, 4].map((n) => (
+            {[3, 1, 2, 4].map((n) => (
               <div key={n} className="pp">
                 <div className="ph">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
