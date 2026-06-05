@@ -24,6 +24,14 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
         .stations { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; max-width: 760px; margin: 30px auto 0; }
         .stations .st { display: flex; align-items: center; gap: 10px; background: #fff; border: 1px solid var(--border); border-radius: 999px; padding: 11px 20px; box-shadow: var(--sh-1); font-family: var(--font-head); font-weight: 600; font-size: 15px; color: var(--fg1); }
         .stations .st b { font-family: var(--font-stat); color: var(--cfa-blue); }
+        .hxpics { display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(10px,1.8vw,20px); max-width: 880px; margin: 0 auto clamp(34px,5vw,52px); }
+        .hxpics .pp { flex: 1 1 0; min-width: 0; flex-basis: 200px; max-width: 220px; background: #fff; padding: 8px 8px 12px; border-radius: 3px; box-shadow: 0 12px 26px rgba(11,15,30,.18), 0 2px 6px rgba(0,0,0,.1); transition: transform .25s cubic-bezier(.2,.7,.3,1), box-shadow .25s; }
+        .hxpics .pp:nth-child(odd) { transform: rotate(-2.5deg); }
+        .hxpics .pp:nth-child(even) { transform: rotate(2deg); }
+        .hxpics .pp:hover { transform: rotate(0) translateY(-6px) scale(1.04); box-shadow: 0 22px 44px rgba(11,15,30,.28); z-index: 5; }
+        .hxpics .ph { aspect-ratio: 9/16; border-radius: 1px; overflow: hidden; background: #000; }
+        .hxpics .ph img { width: 100%; height: 100%; object-fit: cover; }
+        @media (max-width: 560px) { .hxpics .pp { flex-basis: 42%; } }
         .info { display: grid; grid-template-columns: repeat(2,1fr); gap: clamp(16px,2.2vw,24px); max-width: 880px; margin: 0 auto; }
         .info .card { background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(22px,2.6vw,28px); display: flex; gap: 16px; align-items: flex-start; }
         .info .card .ic { width: 28px; height: 28px; flex-shrink: 0; color: var(--cfa-blue); margin-top: 2px; }
@@ -65,6 +73,16 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
 
       <section className="sec sec--white">
         <div className="wrap">
+          <div className="hxpics">
+            {[1, 2, 3, 4].map((n) => (
+              <div key={n} className="pp">
+                <div className="ph">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={`/images/hyrox-sim-${n}.jpg`} alt="Deelnemers tijdens de HYROX Simulatie bij CrossFit Alkmaar" loading="lazy" />
+                </div>
+              </div>
+            ))}
+          </div>
           <div className="center"><h2 className="sec-title">De 8 HYROX-stations</h2></div>
           <div className="stations">
             <span className="st"><b>1</b> SkiErg</span>
