@@ -15,7 +15,7 @@
 .hero .lede { font-family: var(--font-body); font-weight: 500; font-size: clamp(17px,2.2vw,26px); line-height: 1.5; color: rgba(234,237,244,.94); max-width: 720px; margin: 24px 0 0; text-wrap: balance; }
 .hero .cta-row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 34px; }
 .hero .cta-row .btn { font-size: clamp(16px,1.1vw,19px); padding: clamp(16px,1.4vw,20px) clamp(30px,2.6vw,44px); }
-.hero .badge { position: absolute; z-index: 3; right: clamp(48px,9vw,150px); top: clamp(96px,16vh,150px); background: #fff; color: var(--cfa-ink); border-radius: var(--r-lg); padding: 26px 34px; box-shadow: var(--sh-3); transform: rotate(3deg); max-width: 340px; --badge-tx: 240px; animation: badgeIn 1.5s cubic-bezier(.2,.7,.3,1) .35s both; }
+.hero .badge { position: absolute; z-index: 3; right: clamp(48px,9vw,150px); top: clamp(96px,16vh,150px); background: #fff; color: var(--cfa-ink); border-radius: var(--r-lg); padding: 30px 39px; box-shadow: var(--sh-3); transform: rotate(3deg); max-width: 390px; --badge-tx: 300px; animation: badgeIn 1.5s cubic-bezier(.2,.7,.3,1) .35s both; }
 @keyframes badgeIn {
   0%   { opacity: 0; transform: translateX(var(--badge-tx,80px)) rotate(8deg); }
   45%  { opacity: 1; transform: translateX(0) rotate(8deg); }
@@ -25,10 +25,10 @@
   91%  { transform: translateX(0) rotate(4deg); }
   100% { opacity: 1; transform: translateX(0) rotate(3deg); }
 }
-.hero .badge .stars { display: flex; gap: 4px; margin-bottom: 9px; }
-.hero .badge .stars svg { width: 26px; height: 26px; }
-.hero .badge .big { font-family: var(--font-stat); font-weight: 700; font-size: 50px; line-height: 1; color: var(--cfa-blue); }
-.hero .badge .lab { font-family: var(--font-body); font-size: 16px; color: var(--fg2); margin-top: 4px; }
+.hero .badge .stars { display: flex; gap: 5px; margin-bottom: 10px; }
+.hero .badge .stars svg { width: 30px; height: 30px; }
+.hero .badge .big { font-family: var(--font-stat); font-weight: 700; font-size: 58px; line-height: 1; color: var(--cfa-blue); }
+.hero .badge .lab { font-family: var(--font-body); font-size: 18px; color: var(--fg2); margin-top: 5px; }
 @media (max-width: 700px) { .hero .badge { right: 22px; top: 30px; padding: 12px 15px; transform: rotate(2deg); max-width: 150px; --badge-tx: 140px; } .hero .badge .stars svg { width: 15px; height: 15px; } .hero .badge .big { font-size: 26px; } .hero .badge .lab { font-size: 12px; } }
 
 /* ===== STATS (line) ===== */
