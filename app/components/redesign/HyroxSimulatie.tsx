@@ -50,7 +50,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" />
+        <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" fetchPriority="high" />
         <div className="scrim" />
         <div className="wrap inner">
           <p className="hx-date">{dateLabel}</p>

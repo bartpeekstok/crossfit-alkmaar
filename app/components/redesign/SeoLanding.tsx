@@ -139,7 +139,7 @@ export default function SeoLanding({
       {/* HERO */}
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src={heroPhoto} alt="" style={heroPhotoPosition ? { objectPosition: heroPhotoPosition } : undefined} />
+        <img className="bg" src={heroPhoto} alt="" fetchPriority="high" style={heroPhotoPosition ? { objectPosition: heroPhotoPosition } : undefined} />
         <div className="scrim" />
         <div className="wrap inner">
           {eyebrow && <p className="eyebrow">{eyebrow}</p>}

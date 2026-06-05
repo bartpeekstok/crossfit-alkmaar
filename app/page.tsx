@@ -66,7 +66,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-hero-team.jpg" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" />
+        <img className="bg" src="/redesign/assets/photo-hero-team.jpg" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" fetchPriority="high" />
         <div className="scrim"></div>
         <div className="badge">
           <div className="stars"><Star /><Star /><Star /><Star /><Star /></div>
