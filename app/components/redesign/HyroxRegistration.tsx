@@ -44,6 +44,18 @@ const DEFAULT_PAYMENT_ENDPOINT =
 const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
 const emptyVals = { naam: "", email: "", tel: "", divisie: "", naam2: "", email2: "", tel2: "", eindtijd: "" };
 
+// Zet een NL-datum ("Zaterdag 24 oktober 2026") om naar ISO (2026-10-24) zodat
+// GoHighLevel het als echte datum herkent. Leeg als parsen niet lukt.
+const NL_MONTHS: Record<string, number> = { januari:1,februari:2,maart:3,april:4,mei:5,juni:6,juli:7,augustus:8,september:9,oktober:10,november:11,december:12 };
+function nlDateToISO(s: string): string {
+  if (!s) return "";
+  const m = s.toLowerCase().match(/(\d{1,2})\s+([a-z]+)\s+(\d{4})/);
+  if (!m) return "";
+  const mo = NL_MONTHS[m[2]];
+  if (!mo) return "";
+  return m[3] + "-" + String(mo).padStart(2, "0") + "-" + m[1].padStart(2, "0");
+}
+
 function scrollToEl(el: HTMLElement | null) {
   if (!el) return;
   const top = window.scrollY + el.getBoundingClientRect().top - 24;
@@ -107,7 +119,7 @@ export default function HyroxRegistration({
     const payload = {
       naam: vals.naam.trim(), voornaam: parts[0] || "", achternaam: parts.slice(1).join(" "),
       email: vals.email.trim(), telefoon: vals.tel.trim(),
-      divisie: vals.divisie, datum: eventDate,
+      divisie: vals.divisie, datum: eventDate, datum_iso: nlDateToISO(eventDate),
       type: isDuo ? "duo" : "solo", aantal_deelnemers: isDuo ? 2 : 1,
       naam_deelnemer_2: vals.naam2.trim(),
       voornaam_deelnemer_2: isDuo ? (parts2[0] || "") : "",
