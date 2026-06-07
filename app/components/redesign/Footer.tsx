@@ -72,8 +72,10 @@ export default function Footer() {
           </div>
           <div className="powered" style={{ marginTop: 22, display: "flex", alignItems: "center", gap: 8 }}>
             <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "var(--fg3)", letterSpacing: ".04em" }}>Powered by</span>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/redesign/assets/gymops-logo.png" alt="GymOps" style={{ height: 36, width: "auto" }} />
+            <a href="https://gymops.nl" target="_blank" rel="noopener noreferrer" aria-label="GymOps">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/redesign/assets/gymops-logo.png" alt="GymOps" style={{ height: 36, width: "auto", display: "block" }} />
+            </a>
           </div>
         </div>
         <div>

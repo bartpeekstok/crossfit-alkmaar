@@ -142,7 +142,7 @@ function Footer() {
           </div>
           <div className="fpowered">
             <span>Powered by</span>
-            <a href="https://gymops.io" target="_blank" rel="noopener noreferrer"><img src="assets/gymops-logo.png" alt="GymOps" /></a>
+            <a href="https://gymops.nl" target="_blank" rel="noopener noreferrer"><img src="assets/gymops-logo.png" alt="GymOps" /></a>
           </div>
         </div>
         <div>
