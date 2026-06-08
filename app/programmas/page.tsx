@@ -46,7 +46,7 @@ export default function HomePage() {
 
       {/* Hoe werkt het - 3 stappen */}
       <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">Zo werkt trainen bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
@@ -94,7 +94,7 @@ export default function HomePage() {
 
       {/* Programmas */}
       <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
           <div className="grid md:grid-cols-3 gap-8">
@@ -153,7 +153,7 @@ export default function HomePage() {
 
       {/* Resultaten */}
       <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12">CrossFit Alkmaar in cijfers</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <a 

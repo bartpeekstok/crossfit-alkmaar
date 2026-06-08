@@ -129,7 +129,7 @@ export default function HyroxAlkmaarPage() {
 
       {/* Upcoming Events */}
       <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Aankomende HYROX events</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <Link href="/hyrox-simulatie-alkmaar" className="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition block">
@@ -168,7 +168,7 @@ export default function HyroxAlkmaarPage() {
 
       {/* HYROX pagina's hub */}
       <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Meer over HYROX bij CrossFit Alkmaar</h2>
           <div className="grid md:grid-cols-3 gap-6">
             <Link href="/hyrox-training-alkmaar" className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition block">
@@ -189,7 +189,7 @@ export default function HyroxAlkmaarPage() {
 
       {/* Google Reviews */}
       <section className="py-16 px-6 bg-white">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <Script src="https://ghl.crossfitalkmaar.com/reputation/assets/review-widget.js" strategy="lazyOnload" />
           <iframe
             className="lc_reviews_widget"

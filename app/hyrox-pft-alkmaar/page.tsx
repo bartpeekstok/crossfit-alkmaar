@@ -173,7 +173,7 @@ export default function HyroxPftAlkmaarPage() {
 
       {/* Praktische info */}
       <section className="py-16 px-6 bg-gray-200">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Praktische informatie</h2>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-white p-6 rounded-lg shadow-sm flex gap-4 items-start">
