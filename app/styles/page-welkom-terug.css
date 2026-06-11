@@ -1,38 +1,40 @@
 /* /welkom-terug page-specifieke styles */
-.wb { position: relative; overflow: hidden; min-height: calc(100vh - 102px); }
-.wb .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
-.wb .scrim { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(11,15,30,.86), rgba(11,15,30,.78)); }
-.wb .grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1.1fr .9fr; gap: clamp(28px,4vw,56px); align-items: start; padding: clamp(48px,7vw,88px) 0; }
-.wb .copy { color: #fff; }
-.wb .eyebrow { color: var(--hold); }
-.wb h1 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(38px,5.4vw,72px); line-height: .96; letter-spacing: .01em; margin: 16px 0 0; color: #fff; }
-.wb .lede { font-family: var(--font-body); font-weight: 500; font-size: clamp(17px,1.9vw,20px); line-height: 1.55; color: rgba(234,237,244,.9); max-width: 520px; margin: 18px 0 26px; }
-.wb .trust { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 22px; }
-.wb .trust span { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 15px; color: rgba(234,237,244,.85); }
-.wb .trust svg { width: 18px; height: 18px; color: var(--go); }
+.wb-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(28px,4.5vw,64px); align-items: start; }
+.wb-copy .sec-title { text-align: left; }
+.wb-copy .body { font-family: var(--font-body); font-size: clamp(16px,1.7vw,18px); line-height: 1.6; color: var(--fg2); max-width: 560px; margin: 18px 0 0; }
 
-/* formulier-kaart */
-.wb-card { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: clamp(24px,3.2vw,38px); position: sticky; top: 90px; }
-.wb-card h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(24px,2.6vw,32px); line-height: 1; color: var(--cfa-ink); margin: 0 0 6px; }
-.wb-card .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--fg2); margin: 0 0 22px; }
-.wb-field { margin-bottom: 16px; }
-.wb-field label { display: block; font-family: var(--font-head); font-weight: 700; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cfa-ink); margin-bottom: 6px; }
-.wb-field input { width: 100%; font-family: var(--font-body); font-size: 16px; color: var(--cfa-ink); background: #fff; border: 1px solid var(--border); border-radius: var(--r-md); padding: 13px 14px; outline: none; transition: border-color .15s, box-shadow .15s; }
-.wb-field input:focus { border-color: var(--cfa-blue); box-shadow: 0 0 0 3px rgba(30,58,138,.12); }
-.wb-card .btn { margin-top: 6px; }
-.wb-card .btn:disabled { opacity: .6; cursor: default; transform: none; }
-.wb-error { font-family: var(--font-body); font-size: 14px; color: #b91c1c; margin: 10px 0 0; }
-.wb-privacy { font-family: var(--font-body); font-size: 12.5px; color: var(--fg3); margin: 14px 0 0; line-height: 1.5; }
+/* zo werkt het - stappen */
+.wb-steps { display: grid; gap: 16px; margin-top: 28px; }
+.wb-step { display: flex; align-items: flex-start; gap: 14px; }
+.wb-step .num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--cfa-blue); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 15px; display: grid; place-items: center; }
+.wb-step p { font-family: var(--font-body); font-size: 16px; line-height: 1.5; color: var(--fg1); margin: 4px 0 0; }
+.wb-step p strong { font-family: var(--font-head); font-weight: 700; }
+
+.wb-trust { display: flex; flex-wrap: wrap; gap: 20px; margin-top: 28px; }
+.wb-trust span { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-body); font-weight: 500; font-size: 15px; color: var(--fg2); }
+.wb-trust svg { width: 18px; height: 18px; color: var(--go); }
+
+/* formulier-kaart (zelfde look als LeadModal) */
+.wb-card { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: clamp(26px,4vw,38px); position: sticky; top: 110px; }
+.wb-card h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(24px,3vw,32px); line-height: .98; color: var(--cfa-ink); margin: 0 0 6px; }
+.wb-card .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--fg2); margin: 0 0 20px; }
+.wb-card form { display: grid; gap: 13px; }
+.wb-card label { display: flex; flex-direction: column; gap: 5px; font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg2); }
+.wb-card input { font-family: var(--font-body); font-size: 16px; padding: 13px 14px; border: 1.5px solid var(--border-strong); border-radius: var(--r-md); background: #fff; color: var(--fg1); }
+.wb-card input:focus { outline: none; border-color: var(--cfa-blue); box-shadow: var(--ring); }
+.wb-card input.err { border-color: var(--stop); }
+.wb-card .errmsg { font-family: var(--font-body); font-size: 12.5px; color: var(--stop); font-weight: 500; }
+.wb-card .submit { margin-top: 6px; }
+.wb-card .submit:disabled { opacity: .6; cursor: default; transform: none; }
+.wb-card .privacy { font-family: var(--font-body); font-size: 12.5px; color: var(--fg3); line-height: 1.5; margin: 0; }
 
 /* succes-staat */
-.wb-done { text-align: center; padding: clamp(18px,2.5vw,30px) 0; }
-.wb-done .ring { width: 64px; height: 64px; border-radius: 50%; background: var(--go); display: grid; place-items: center; margin: 0 auto 18px; }
-.wb-done .ring svg { width: 30px; height: 30px; color: #fff; }
-.wb-done h2 { margin-bottom: 10px; }
-.wb-done p { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--fg2); margin: 0; }
+.wb-card .ok { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 8px 0; }
+.wb-card .ok .ic { width: 56px; height: 56px; border-radius: 50%; background: var(--go); display: grid; place-items: center; }
+.wb-card .ok .ic svg { width: 30px; height: 30px; color: #fff; }
+.wb-card .ok p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--fg2); margin: 0; }
 
 @media (max-width: 900px) {
-  .wb .grid { grid-template-columns: 1fr; }
+  .wb-grid { grid-template-columns: 1fr; }
   .wb-card { position: static; }
-  .wb .copy { padding-inline: 12px; }
 }

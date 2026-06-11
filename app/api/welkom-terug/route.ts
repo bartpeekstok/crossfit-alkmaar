@@ -18,11 +18,19 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "name, email en phone zijn verplicht" }, { status: 400 });
     }
 
+    const fullName = String(name).slice(0, 200);
+    const parts = fullName.split(/\s+/);
+    const firstName = parts.shift() || "";
+    const lastName = parts.join(" ");
+
     const res = await fetch(WEBHOOK_URL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: String(name).slice(0, 200),
+        name: fullName,
+        full_name: fullName,
+        first_name: firstName,
+        last_name: lastName,
         email: String(email).slice(0, 200),
         phone: String(phone).slice(0, 50),
         source: "welkom-terug-pagina",
