@@ -74,7 +74,7 @@ export default function WelkomTerugPage() {
       {/* HERO */}
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" fetchPriority="high" />
+        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" fetchPriority="high" style={{ objectPosition: "center 25%" }} />
         <div className="scrim" />
         <div className="wrap inner">
           <h1>Welkom terug!</h1>
