@@ -49,6 +49,8 @@ export const REDESIGNED_PATHS = [
   "/sporten-overgang-alkmaar",
   // Ledenservice (geen SEO-landing, wel nieuwe huisstijl-chrome)
   "/faq",
+  // Campagnepagina ex-leden (QR op ansichtkaart, noindex)
+  "/welkom-terug",
 ];
 
 // Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)
