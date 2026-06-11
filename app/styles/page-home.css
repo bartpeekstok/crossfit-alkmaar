@@ -31,6 +31,9 @@
 .hero .badge .lab { font-family: var(--font-body); font-size: 18px; color: var(--fg2); margin-top: 5px; }
 @media (max-width: 700px) { .hero .badge { right: 22px; top: 30px; padding: 12px 15px; transform: rotate(2deg); max-width: 150px; --badge-tx: 140px; } .hero .badge .stars svg { width: 15px; height: 15px; } .hero .badge .big { font-size: 26px; } .hero .badge .lab { font-size: 12px; } }
 
+/* ===== MISSIE ===== */
+.missie .sec-sub { font-size: clamp(17px, 1.7vw, 23px); line-height: 1.6; max-width: 760px; }
+
 /* ===== STATS (line) ===== */
 .statline { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; }
 .statline .st { flex: 1 1 0; min-width: 150px; text-align: center; padding: clamp(8px,1vw,16px) clamp(14px,2.4vw,36px); position: relative; text-decoration: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }

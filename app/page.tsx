@@ -87,7 +87,7 @@ export default function HomePage() {
       </section>
 
       {/* MISSIE */}
-      <section className="sec sec--white">
+      <section className="sec sec--white missie">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Waarom CrossFit Alkmaar bestaat</h2>
