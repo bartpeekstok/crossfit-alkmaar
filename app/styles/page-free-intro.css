@@ -24,3 +24,11 @@
   .book .widget { position: static; }
   .book .copy { padding-inline: 12px; }
 }
+
+/* Eén broodtekst-maat op desktop (mobiel ongewijzigd) */
+@media (min-width: 760px) {
+  .book .lede {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+}

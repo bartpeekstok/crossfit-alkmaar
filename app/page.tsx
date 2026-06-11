@@ -91,7 +91,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Waarom CrossFit Alkmaar bestaat</h2>
-            <p className="sec-sub">De meeste mensen stoppen met sporten niet omdat ze lui zijn. Ze stoppen omdat de plek waar ze trainen hen in de steek laat. Geen begeleiding, geen verbinding, geen reden om terug te komen. Ze betalen maandelijks contributie voor een sportschool waar ze niet naartoe gaan.</p>
+            <p className="sec-sub">De meeste mensen stoppen niet met sporten omdat ze lui zijn. Ze stoppen omdat de plek waar ze trainen hen in de steek laat. Geen begeleiding, geen verbinding, geen reden om terug te komen. Ze betalen maandelijks contributie voor een sportschool waar ze niet naartoe gaan.</p>
             <p className="sec-sub">Wij geloven dat dit anders kan.</p>
             <p className="sec-sub">Sporten werkt pas als je het volhoudt. En je houdt het vol als er mensen zijn die je kennen, je zien groeien, en je missen als je er niet bent. Dat is de reden dat CrossFit Alkmaar bestaat: om een plek te zijn waar mensen jarenlang blijven. Niet omdat ze moeten, maar omdat ze willen.</p>
           </div>

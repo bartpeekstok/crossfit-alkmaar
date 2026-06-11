@@ -32,7 +32,7 @@
 @media (max-width: 700px) { .hero .badge { right: 22px; top: 30px; padding: 12px 15px; transform: rotate(2deg); max-width: 150px; --badge-tx: 140px; } .hero .badge .stars svg { width: 15px; height: 15px; } .hero .badge .big { font-size: 26px; } .hero .badge .lab { font-size: 12px; } }
 
 /* ===== MISSIE ===== */
-.missie .sec-sub { font-size: clamp(17px, 1.7vw, 23px); line-height: 1.6; max-width: 760px; }
+.missie .sec-sub { max-width: 760px; }
 
 /* ===== STATS (line) ===== */
 .statline { display: flex; flex-wrap: wrap; justify-content: center; align-items: stretch; }
@@ -182,4 +182,12 @@
   .statline .v { font-size: 42px; }
   .statline .st { padding: 14px 8px; }
   .reviews-embed { margin-top: 18px; }
+}
+
+/* Eén broodtekst-maat op desktop (mobiel ongewijzigd) */
+@media (min-width: 760px) {
+  .hero .lede, .step p, .prog .lede, .prog li, .tcard .quote, .vsolo .quote, .faq .body, .final p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
 }

@@ -259,3 +259,12 @@ html.cfa-modal-open { overflow: hidden; }
 .vpair .video .play svg { width: 19px; height: 19px; margin-left: 3px; }
 .vpair .nm { text-align: center; font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .05em; font-size: clamp(12px,1.4vw,15px); color: var(--cfa-ink); margin-top: 11px; }
 .vpair .vq { text-align: center; font-family: var(--font-body); font-style: italic; font-weight: 500; font-size: clamp(11px,1.3vw,13px); line-height: 1.4; color: var(--fg2); margin: 5px 2px 0; }
+
+/* ---- EEN BROODTEKST-MAAT OP DESKTOP (mobiel ongewijzigd) ---- */
+@media (min-width: 760px) {
+  .sec-sub, .page-hero p.lede, .prose p, .prose ul li, .fcard p,
+  .page-cta p, .ppv .quote, .ppi p, .faq .body, .pp-item p {
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+  }
+}

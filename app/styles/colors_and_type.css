@@ -92,6 +92,10 @@
   --font-body:    var(--font-barlow), system-ui, -apple-system, sans-serif;
   --font-stat:    var(--font-barlow-semi), var(--font-oswald), sans-serif;
 
+  /* Eén vaste maat voor alle broodtekst op de site */
+  --fs-body: clamp(17px, 1.7vw, 23px);
+  --lh-body: 1.6;
+
   /* ===========================================================
      RADII — boxy & industrial. Almost nothing is round.
      =========================================================== */
