@@ -86,14 +86,23 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* MISSIE */}
+      <section className="sec sec--white">
+        <div className="wrap">
+          <div className="center reveal">
+            <h2 className="sec-title">Waarom CrossFit Alkmaar bestaat</h2>
+            <p className="sec-sub">De meeste mensen stoppen met sporten niet omdat ze lui zijn. Ze stoppen omdat de plek waar ze trainen hen in de steek laat. Geen begeleiding, geen verbinding, geen reden om terug te komen. Ze betalen maandelijks contributie voor een sportschool waar ze niet naartoe gaan.</p>
+            <p className="sec-sub">Wij geloven dat dit anders kan.</p>
+            <p className="sec-sub">Sporten werkt pas als je het volhoudt. En je houdt het vol als er mensen zijn die je kennen, je zien groeien, en je missen als je er niet bent. Dat is de reden dat CrossFit Alkmaar bestaat: om een plek te zijn waar mensen jarenlang blijven. Niet omdat ze moeten, maar omdat ze willen.</p>
+          </div>
+        </div>
+      </section>
+
       {/* 3 STAPPEN */}
       <section className="sec sec--ivoor">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Zo werkt trainen bij CrossFit Alkmaar</h2>
-            <p className="sec-sub">De meeste mensen stoppen met sporten niet omdat ze lui zijn. Ze stoppen omdat de plek waar ze trainen hen in de steek laat. Geen begeleiding, geen verbinding, geen reden om terug te komen. Ze betalen maandelijks contributie voor een sportschool waar ze niet naartoe gaan.</p>
-            <p className="sec-sub">Wij geloven dat dit anders kan.</p>
-            <p className="sec-sub">Sporten werkt pas als je het volhoudt. En je houdt het vol als er mensen zijn die je kennen, je zien groeien, en je missen als je er niet bent. Dat is de reden dat CrossFit Alkmaar bestaat: om een plek te zijn waar mensen jarenlang blijven. Niet omdat ze moeten, maar omdat ze willen.</p>
           </div>
           <div className="steps">
             <div className="step reveal">
@@ -120,7 +129,7 @@ export default function HomePage() {
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Kies het programma<br />dat bij je past</h2>
-            <p className="sec-sub">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
+            <p className="sec-sub">Onze aanpak is no-nonsense waarin we doen wat werkt en weglaten wat niet werkt. Geen anoniem rondlopen, geen losse sessies zonder opbouw, geen onhaalbare beloftes. Wel vaste coaches die je bij naam kennen, trainingen die op jouw niveau worden geschaald en opbouwen over weken en maanden. Slapende leden kennen we niet, wij zorgen dat je erbij blijft.</p>
           </div>
           <div className="progs">
             <div className="prog reveal">
