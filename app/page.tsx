@@ -87,7 +87,7 @@ export default function HomePage() {
       </section>
 
       {/* MISSIE */}
-      <section className="sec sec--white missie">
+      <section className="sec sec--white">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Waarom CrossFit Alkmaar bestaat</h2>
@@ -128,7 +128,7 @@ export default function HomePage() {
       <section className="sec sec--ivoor" id="programmas">
         <div className="wrap">
           <div className="center reveal">
-            <h2 className="sec-title">Kies het programma<br />dat bij je past</h2>
+            <h2 className="sec-title">Kies het programma dat bij je past</h2>
             <p className="sec-sub">Onze aanpak is no-nonsense waarin we doen wat werkt en weglaten wat niet werkt. Geen anoniem rondlopen, geen losse sessies zonder opbouw, geen onhaalbare beloftes. Wel vaste coaches die je bij naam kennen, trainingen die op jouw niveau worden geschaald en opbouwen over weken en maanden. Slapende leden kennen we niet, wij zorgen dat je erbij blijft.</p>
           </div>
           <div className="progs">

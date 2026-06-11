@@ -26,7 +26,7 @@ a { color: inherit; }
 h1, h2, h3 { margin: 0; }
 .h-display { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; line-height: .9; letter-spacing: .01em; }
 .sec-title { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(32px, 4.6vw, 60px); line-height: .94; letter-spacing: .01em; text-wrap: balance; }
-.sec-sub { font-family: var(--font-body); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.55; color: var(--fg2); margin: 16px auto 0; max-width: 640px; text-wrap: pretty; }
+.sec-sub { font-family: var(--font-body); font-size: clamp(17px, 1.8vw, 20px); line-height: 1.55; color: var(--fg2); margin: 16px auto 0; max-width: 760px; text-wrap: pretty; }
 .sec--ink .sec-sub, .sec--blue .sec-sub { color: rgba(234,237,244,.82); }
 .center { text-align: center; }
 .gold { color: var(--hold); }
