@@ -79,7 +79,7 @@ export default function HomePage() {
             <span className="ln">Sporten werkt pas</span>
             <span className="ln">als je het <span className="accent">volhoudt.</span></span>
           </h1>
-          <p className="lede">Kleine groepen, coaches die je bij naam kennen, en mensen die je missen als je er niet bent.</p>
+          <p className="lede">Wij helpen mensen om sporten een blijvend onderdeel van hun leven te maken. Door persoonlijke coaching in een community waar je gekend wordt, je niveau telt en niemand er alleen voor staat.</p>
           <div className="cta-row">
             <a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je gratis kennismaking", "Hero")}>Plan je gratis kennismaking</a>
           </div>
