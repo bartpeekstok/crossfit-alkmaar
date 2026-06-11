@@ -6,22 +6,22 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start"],
+        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start", "/welkom-terug"],
       },
       {
         userAgent: "GPTBot",
         allow: "/",
-        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start"],
+        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start", "/welkom-terug"],
       },
       {
         userAgent: "PerplexityBot",
         allow: "/",
-        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start"],
+        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start", "/welkom-terug"],
       },
       {
         userAgent: "ClaudeBot",
         allow: "/",
-        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start"],
+        disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start", "/welkom-terug"],
       },
     ],
     sitemap: "https://crossfitalkmaar.com/sitemap.xml",
