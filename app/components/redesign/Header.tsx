@@ -103,15 +103,9 @@ export default function Header() {
               <Link href="/tieners">{t.teens}</Link>
             </div>
           </div>
-          <div className="nav-item">
-            <button className="nav-link" type="button">
-              {t.events} <Caret />
-            </button>
-            <div className="dropdown">
-              <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie — 22 aug</Link>
-              <Link href="/hyrox-simulatie-24-oktober">HYROX Simulatie — 24 okt</Link>
-            </div>
-          </div>
+          <Link href="/events" className="nav-link">
+            {t.events}
+          </Link>
           <Link href="/blog" className="nav-link">
             {t.blog}
           </Link>
@@ -184,15 +178,9 @@ export default function Header() {
               <Link href="/tieners" onClick={() => setMobileOpen(false)}>{t.teens}</Link>
             </div>
           </div>
-          <div className={`m-sec${mobileSections.events ? " open" : ""}`}>
-            <button className="m-head" type="button" onClick={() => toggleSection("events")}>
-              {t.events} <Caret />
-            </button>
-            <div className="m-sub">
-              <Link href="/hyrox-simulatie-alkmaar" onClick={() => setMobileOpen(false)}>HYROX Simulatie — 22 aug</Link>
-              <Link href="/hyrox-simulatie-24-oktober" onClick={() => setMobileOpen(false)}>HYROX Simulatie — 24 okt</Link>
-            </div>
-          </div>
+          <Link href="/events" className="m-head" onClick={() => setMobileOpen(false)}>
+            {t.events}
+          </Link>
           <Link href="/blog" className="m-head" onClick={() => setMobileOpen(false)}>
             {t.blog}
           </Link>
