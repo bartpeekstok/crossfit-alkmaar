@@ -14,6 +14,7 @@ type Event = {
   text: string;
   time?: string;
   place?: string;
+  imgPos?: string;
 };
 
 // Nieuwe events: entry toevoegen (gesorteerd op datum), kaart verschijnt automatisch.
@@ -35,7 +36,7 @@ const EVENTS: Event[] = [
     title: "The Hardest Mile",
     dateLabel: "Zondag 13 september 2026",
     isoDate: "2026-09-13",
-    tag: "Event",
+    tag: "Inschrijving opent binnenkort",
     img: "/redesign/assets/event-hardest-mile.jpg",
     imgAlt: "Atleten rennen over de atletiekbaan tijdens The Hardest Mile",
     text: "Vier keer vierhonderd meter: burpees, lunges, bearcrawl en hardlopen. Voor alle niveaus, op de atletiekbaan van AV Hylas.",
@@ -46,8 +47,9 @@ const EVENTS: Event[] = [
     title: "CFA Badge Borrel",
     dateLabel: "Vrijdag 2 oktober 2026",
     isoDate: "2026-10-02",
-    tag: "Community",
+    tag: "Inschrijving opent binnenkort",
     img: "/redesign/assets/event-badge-borrel.jpg",
+    imgPos: "center 30%",
     imgAlt: "Leden van CrossFit Alkmaar samen in de lounge",
     text: "Borrel voor onze badge-houders. Even bijkletsen zonder zweet en gehijg, met een hapje en drankje van de box.",
     time: "Vanaf 19:00",
@@ -69,8 +71,9 @@ const EVENTS: Event[] = [
     title: "Baseqamp",
     dateLabel: "Zaterdag 7 november 2026",
     isoDate: "2026-11-07",
-    tag: "Workshop",
+    tag: "Inschrijving opent binnenkort",
     img: "/redesign/assets/event-baseqamp.jpg",
+    imgPos: "center 30%",
     imgAlt: "Deelnemers tijdens een ijsbad-workshop van Baseqamp",
     text: "Workshop ijsbad en ademhaling. Leer omgaan met kou en stress, herstel sneller en train met meer focus. Begeleide sessie.",
     time: "13:00",
@@ -80,7 +83,7 @@ const EVENTS: Event[] = [
     title: "CFA Biathlon",
     dateLabel: "Zaterdag 21 november 2026",
     isoDate: "2026-11-21",
-    tag: "Event",
+    tag: "Inschrijving opent binnenkort",
     img: "/redesign/assets/event-biathlon.jpg",
     imgAlt: "Biathlon-event bij CrossFit Alkmaar met skiërg en precisieschieten",
     text: "Onze eigen biathlon: een combinatie van skiën en precisieschieten. Conditie en een vaste hand, wie heeft allebei?",
@@ -155,7 +158,7 @@ export default function EventsPage() {
                 <>
                   <div className="ph">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={e.img} alt={e.imgAlt} loading="lazy" />
+                    <img src={e.img} alt={e.imgAlt} loading="lazy" style={e.imgPos ? { objectPosition: e.imgPos } : undefined} />
                     <span className="tag">{e.tag}</span>
                   </div>
                   <div className="body">
