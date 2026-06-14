@@ -181,7 +181,7 @@ export default function WelkomTerugPage() {
                   {status === "error" && (
                     <div className="errmsg">
                       Er ging iets mis bij het versturen. Probeer het nog eens, of stuur ons een{" "}
-                      <a href="https://wa.me/31640124097" target="_blank" rel="noopener noreferrer">
+                      <a href="https://wa.me/31722340560" target="_blank" rel="noopener noreferrer">
                         appje via WhatsApp
                       </a>.
                     </div>

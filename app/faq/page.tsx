@@ -72,7 +72,7 @@ export default function FAQPage() {
           answer: (
             <>
               Je kunt al je vragen stellen via{" "}
-              <a href="https://wa.me/31640124097" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WhatsApp</a>{" "}
+              <a href="https://wa.me/31722340560" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WhatsApp</a>{" "}
               of{" "}
               <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">e-mail</a>. We proberen op weekdagen altijd binnen 24 uur te antwoorden.
             </>
@@ -365,7 +365,7 @@ export default function FAQPage() {
           <div className="cta-row">
             <a
               className="btn btn--gold btn--lg"
-              href="https://wa.me/31640124097"
+              href="https://wa.me/31722340560"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -445,7 +445,7 @@ export default function FAQPage() {
           <p className="sec-sub" style={{ margin: "14px auto 26px" }}>
             Neem gerust contact met ons op via WhatsApp of e-mail. We helpen je graag!
           </p>
-          <a className="btn btn--gold btn--lg" href="https://wa.me/31640124097" target="_blank" rel="noopener noreferrer">
+          <a className="btn btn--gold btn--lg" href="https://wa.me/31722340560" target="_blank" rel="noopener noreferrer">
             Chat via WhatsApp
           </a>
         </div>
