@@ -15,11 +15,27 @@ type Event = {
   time?: string;
   place?: string;
   imgPos?: string;
+  external?: boolean; // href is een externe URL (opent in nieuw tabblad)
+  ctaLabel?: string; // tekst van de klik-link, standaard "Bekijk event"
 };
 
 // Nieuwe events: entry toevoegen (gesorteerd op datum), kaart verschijnt automatisch.
 // href weglaten als er (nog) geen eigen eventpagina is: kaart is dan niet klikbaar.
 const EVENTS: Event[] = [
+  {
+    href: "https://cfalkmaar.sportbitapp.nl/web/nl/events/72051",
+    external: true,
+    ctaLabel: "Schrijf je in",
+    title: "Ladies Night",
+    dateLabel: "Vrijdag 3 juli 2026",
+    isoDate: "2026-07-03",
+    tag: "Inschrijving open",
+    img: "/redesign/assets/event-ladies-night.jpg",
+    imgAlt: "CFA vrouwen samen tijdens de Ladies Night bij CrossFit Alkmaar",
+    text: "Een avond exclusief voor de vrouwen van CFA. Thema: anything but gym clothes. Samen trainen, lachen en borrelen.",
+    time: "20:15",
+    place: "CrossFit Alkmaar",
+  },
   {
     href: "/hyrox-simulatie-alkmaar",
     title: "HYROX Simulatie",
@@ -181,7 +197,7 @@ export default function EventsPage() {
                     </div>
                     {e.href ? (
                       <span className="more">
-                        Bekijk event
+                        {e.ctaLabel ?? "Bekijk event"}
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
                       </span>
                     ) : (
@@ -190,6 +206,11 @@ export default function EventsPage() {
                   </div>
                 </>
               );
+              if (e.href && e.external) {
+                return (
+                  <a key={e.title + e.isoDate} href={e.href} target="_blank" rel="noopener noreferrer" className="evt">{inner}</a>
+                );
+              }
               return e.href ? (
                 <Link key={e.title + e.isoDate} href={e.href} className="evt">{inner}</Link>
               ) : (
