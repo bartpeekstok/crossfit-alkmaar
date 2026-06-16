@@ -5,7 +5,7 @@ import { EVENTS } from "../../events/eventsData";
 // CORS open zodat de slideshow-app dit cross-origin kan ophalen.
 // GET https://crossfitalkmaar.com/api/events
 
-const SITE = "https://crossfitalkmaar.com";
+const SITE = "https://www.crossfitalkmaar.com";
 
 const CORS = {
   "Access-Control-Allow-Origin": "*",
