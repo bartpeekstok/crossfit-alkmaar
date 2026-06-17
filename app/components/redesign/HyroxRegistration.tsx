@@ -130,6 +130,17 @@ export default function HyroxRegistration({
       pagina: typeof location !== "undefined" ? location.href : "",
     };
 
+    // Meta Pixel: inschrijving verstuurd (checkout gestart). Vuurt in de browser,
+    // los van de webhook (die is server-side en kan de Pixel niet vuren).
+    if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("track", "InitiateCheckout", {
+        content_name: "HYROX Simulatie",
+        content_category: "Event",
+        registration_date: eventDate,
+        num_items: isDuo ? 2 : 1,
+      });
+    }
+
     // 1) Lead opslaan in GHL - op de achtergrond (blokkeert de UI niet)
     if (leadWebhook) {
       fetch(leadWebhook, {
