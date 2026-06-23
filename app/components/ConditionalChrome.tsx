@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
-const HIDDEN_PREFIXES = ["/start"];
+const HIDDEN_PREFIXES = ["/start", "/hyrox-betaald"];
 
 // Paden die de nieuwe redesign-2026 layout gebruiken (Header/Footer/LeadModal
 // uit components/redesign). De OUDE Header/Footer/popups worden hier verborgen.
