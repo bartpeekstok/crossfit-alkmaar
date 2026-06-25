@@ -114,7 +114,8 @@ export default function KickstartWelkomPage() {
               <div className="body">
                 <strong>Ochtendgroep:</strong> maandag en woensdag om 09:00<br />
                 <strong>Avondgroep:</strong> maandag en woensdag om 20:00<br />
-                <strong>Flex Friday:</strong> vrijdag om 12:30 of 20:15 (je kiest per week)
+                <strong>Flex Friday:</strong> vrijdag om 12:30 of 20:15 (je kiest per week)<br /><br />
+                Elke training duurt een uur.
               </div>
             </details>
             <details className="reveal">
@@ -131,7 +132,7 @@ export default function KickstartWelkomPage() {
             </details>
             <details className="reveal">
               <summary>Wat gebeurt er na de Kickstart?<span className="ic"><Plus /></span></summary>
-              <div className="body">In week 4 plannen we een check-in gesprek. Daarin horen we hoe het gaat en hoe het bevallen is, en kijken we samen hoe je na je Kickstart verder kunt bij CrossFit Alkmaar. Je boekt je check-in via de kalender hierboven.</div>
+              <div className="body">De Kickstart is een startpunt, geen eenmalige ervaring. Daarom plannen we in week 4 een check-in gesprek: we horen hoe het gaat en hoe het bevallen is, en kijken samen hoe je na je Kickstart verder gaat bij CrossFit Alkmaar. Je boekt je check-in via de kalender hierboven.</div>
             </details>
           </div>
         </div>
