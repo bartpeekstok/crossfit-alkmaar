@@ -1,4 +1,7 @@
 import Link from "next/link";
+import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
+
+const VIDEO_ID = "FNnTn4KmCzs";
 
 // Simpele icoontjes voor de vervolgopties (stroke-stijl, past bij .fcard .ic).
 const IconPT = () => (
@@ -82,8 +85,35 @@ export default function KickstartVervolgPage() {
         </div>
       </section>
 
-      {/* VERVOLGOPTIES */}
+      {/* VIDEO */}
       <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center reveal">
+            <h2 className="sec-title">Bekijk dit eerst</h2>
+            <p className="sec-sub">
+              In deze video vertel ik je in het kort wat je opties zijn om verder te gaan na je Kickstart.
+              Hieronder vind je alles rustig op een rij.
+            </p>
+          </div>
+          <div
+            className="reveal"
+            style={{
+              maxWidth: 860,
+              margin: "28px auto 0",
+              aspectRatio: "16 / 9",
+              borderRadius: "var(--r-lg)",
+              overflow: "hidden",
+              boxShadow: "var(--sh-3)",
+              background: "#000",
+            }}
+          >
+            <TrackedYouTubeEmbed videoId={VIDEO_ID} title="Hoe ga je verder na je Kickstart" autoplay={false} />
+          </div>
+        </div>
+      </section>
+
+      {/* VERVOLGOPTIES */}
+      <section className="sec sec--white">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Kies je vervolg</h2>
@@ -106,7 +136,7 @@ export default function KickstartVervolgPage() {
       </section>
 
       {/* ABONNEMENTEN */}
-      <section className="sec sec--white">
+      <section className="sec sec--ivoor">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Onze abonnementen</h2>
