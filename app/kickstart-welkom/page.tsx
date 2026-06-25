@@ -19,7 +19,7 @@ export default function KickstartWelkomPage() {
           .kw-hero .inner { max-width: 1140px; }
           .kw-hero h1 { white-space: nowrap; }
           .kw-hero p.lede { max-width: 780px; }
-          @media (max-width: 480px) {
+          @media (max-width: 560px) {
             .kw-hero h1 { white-space: normal; }
           }
         `}</style>
@@ -27,10 +27,10 @@ export default function KickstartWelkomPage() {
         <img className="bg" src="/redesign/assets/header-community.jpg" alt="" style={{ objectPosition: "center 35%" }} />
         <div className="scrim" />
         <div className="wrap inner">
-          <h1>Welkom bij je Kickstart!</h1>
+          <h1>Welkom bij CrossFit Alkmaar</h1>
           <p className="lede">
-            Over een paar dagen begin je. Op deze pagina bereiden we je in een paar minuten voor, zodat je
-            vol vertrouwen aan je eerste training begint.
+            Over een paar dagen begin je aan de 28 day kickstart. Hieronder de belangrijkste informatie zodat
+            je goed voorbereid aan de start staat. Tot snel!
           </p>
         </div>
       </section>
