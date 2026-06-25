@@ -52,6 +52,8 @@ export const REDESIGNED_PATHS = [
   "/faq",
   // Campagnepagina ex-leden (QR op ansichtkaart, noindex)
   "/welkom-terug",
+  // Verborgen pagina voor Kickstart-deelnemers (alleen via link, noindex)
+  "/kickstart-welkom",
 ];
 
 // Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)
