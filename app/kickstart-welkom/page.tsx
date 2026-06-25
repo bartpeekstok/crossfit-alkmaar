@@ -41,8 +41,8 @@ export default function KickstartWelkomPage() {
           <div className="center reveal">
             <h2 className="sec-title">Bekijk dit eerst</h2>
             <p className="sec-sub">
-              [PLACEHOLDER] Korte uitleg waar de video over gaat: wat je kunt verwachten, wat je meeneemt en
-              hoe je je voorbereidt op je eerste week.
+              Welkom bij CrossFit Alkmaar! In deze video leg ik je in het kort uit wat je kunt verwachten
+              tijdens de 28 day kickstart. Tot snel!
             </p>
           </div>
           <div
