@@ -107,14 +107,14 @@ export default function KickstartWelkomPage() {
           <div className="faq">
             <details open className="reveal">
               <summary>Voor welke groep doe ik mee, en kan ik wisselen?<span className="ic"><Plus /></span></summary>
-              <div className="body">Je schrijft je in voor óf de ochtendgroep óf de avondgroep. Lukt een training door je agenda een keer niet? Dan kun je in overleg af en toe wisselen naar de andere groep. Geef het even van tevoren door, dan regelen we het samen.</div>
+              <div className="body">Je schrijft je in voor óf de ochtendgroep óf de avondgroep. Op maandag en woensdag train je in je vaste groep, met af en toe wat ruimte om in overleg te wisselen als je agenda dat vraagt. Voor Flex Friday kies je per week zelf of je om 12:30 of 20:15 traint.</div>
             </details>
             <details className="reveal">
               <summary>Hoe laat zijn de trainingen?<span className="ic"><Plus /></span></summary>
               <div className="body">
                 <strong>Ochtendgroep:</strong> maandag en woensdag om 09:00<br />
                 <strong>Avondgroep:</strong> maandag en woensdag om 20:00<br />
-                <strong>Flex Friday:</strong> vrijdag om 06:15 of 12:30
+                <strong>Flex Friday:</strong> vrijdag om 12:30 of 20:15 (je kiest per week)
               </div>
             </details>
             <details className="reveal">
