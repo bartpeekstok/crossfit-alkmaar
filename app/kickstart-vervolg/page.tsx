@@ -25,33 +25,23 @@ const IconVoeding = () => (
   </svg>
 );
 
-const Arrow = () => (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M5 12h14M13 6l6 6-6 6" />
-  </svg>
-);
-
 const OPTIES = [
   {
-    href: "/personal-training",
     icon: <IconPT />,
     title: "Personal Training",
     text: "Eén-op-één begeleiding, volledig op jouw doelen afgestemd. Maximale aandacht en het snelste resultaat.",
   },
   {
-    href: "/small-group-training",
     icon: <IconSGT />,
     title: "Small Group Training",
     text: "Trainen in een klein groepje met persoonlijke begeleiding. De vertrouwde Kickstart-sfeer, voortgezet.",
   },
   {
-    href: "/groepslessen",
     icon: <IconLes />,
     title: "Groepslessen",
     text: "Energieke trainingen in de groep onder leiding van een coach. Voor structuur, plezier en community.",
   },
   {
-    href: "/voedingsadvies",
     icon: <IconVoeding />,
     title: "Voedingsadvies",
     text: "Haal meer uit je training met een voedingsplan dat bij jou past. De andere helft van je resultaat.",
@@ -67,10 +57,6 @@ export default function KickstartVervolgPage() {
           .kv-hero .inner { max-width: 1040px; }
           .kv-hero p.lede { max-width: 780px; }
           .kv-opts { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 30px auto 0; }
-          .kv-card { text-decoration: none; }
-          .kv-card .more { margin-top: 16px; display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-head); font-weight: 700; font-size: 13.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--cfa-blue); }
-          .kv-card .more svg { width: 16px; height: 16px; transition: transform .15s; }
-          .kv-card:hover .more svg { transform: translateX(4px); }
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
         `}</style>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -118,18 +104,17 @@ export default function KickstartVervolgPage() {
           <div className="center reveal">
             <h2 className="sec-title">Kies je vervolg</h2>
             <p className="sec-sub">
-              Bij CrossFit Alkmaar kun je op verschillende manieren verder. Klik op wat je aanspreekt voor
-              meer informatie.
+              Bij CrossFit Alkmaar kun je op verschillende manieren verder. We bespreken samen wat het
+              beste bij jou past.
             </p>
           </div>
           <div className="fcards kv-opts">
             {OPTIES.map((o) => (
-              <Link key={o.href} href={o.href} className="fcard kv-card reveal">
+              <div key={o.title} className="fcard kv-card reveal">
                 <div className="ic">{o.icon}</div>
                 <h3>{o.title}</h3>
                 <p>{o.text}</p>
-                <span className="more">Meer info <Arrow /></span>
-              </Link>
+              </div>
             ))}
           </div>
         </div>
