@@ -112,7 +112,7 @@ export default function KickstartWelkomPage() {
             <details className="reveal">
               <summary>Hoe laat zijn de trainingen?<span className="ic"><Plus /></span></summary>
               <div className="body">
-                <strong>Ochtendgroep:</strong> maandag en woensdag om 09:00<br />
+                <strong>Ochtendgroep:</strong> maandag en woensdag om 10:00<br />
                 <strong>Avondgroep:</strong> maandag en woensdag om 20:00<br />
                 <strong>Flex Friday:</strong> vrijdag om 12:30 of 20:15 (je kiest per week)<br /><br />
                 Elke training duurt een uur.
