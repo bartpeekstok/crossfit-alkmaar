@@ -135,20 +135,6 @@ export default function KickstartVervolgPage() {
         </div>
       </section>
 
-      {/* ABONNEMENTEN */}
-      <section className="sec sec--ivoor">
-        <div className="wrap">
-          <div className="center reveal">
-            <h2 className="sec-title">Onze abonnementen</h2>
-            <p className="sec-sub">
-              [PLACEHOLDER] Korte uitleg over de abonnementsvormen en wat erbij zit (bijvoorbeeld aantal
-              trainingen per week, looptijd en wat inbegrepen is). We bespreken samen welke vorm het beste bij
-              jouw doelen en agenda past, zodat je zonder gedoe verder kunt na je Kickstart.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* LEDENSERVICE / FAQ */}
       <section
         className="sec page-cta"
