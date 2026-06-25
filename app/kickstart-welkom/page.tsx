@@ -7,8 +7,7 @@ const Plus = () => (
   </svg>
 );
 
-// TODO: vervang door de echte YouTube-ID zodra de video klaar is.
-const VIDEO_ID = "VIDEO_ID_PLACEHOLDER";
+const VIDEO_ID = "4mCVL7eoPDs";
 
 export default function KickstartWelkomPage() {
   return (
