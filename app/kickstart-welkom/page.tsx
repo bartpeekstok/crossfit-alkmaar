@@ -14,15 +14,23 @@ export default function KickstartWelkomPage() {
   return (
     <>
       {/* HERO */}
-      <section className="page-hero">
+      <section className="page-hero kw-hero">
+        <style>{`
+          .kw-hero .inner { max-width: 1140px; }
+          .kw-hero h1 { white-space: nowrap; }
+          .kw-hero p.lede { max-width: 780px; }
+          @media (max-width: 480px) {
+            .kw-hero h1 { white-space: normal; }
+          }
+        `}</style>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bg" src="/redesign/assets/header-community.jpg" alt="" style={{ objectPosition: "center 35%" }} />
         <div className="scrim" />
         <div className="wrap inner">
-          <h1>Welkom bij je Kickstart</h1>
+          <h1>Welkom bij je Kickstart!</h1>
           <p className="lede">
             Over een paar dagen begin je. Op deze pagina bereiden we je in een paar minuten voor, zodat je
-            vol vertrouwen aan je eerste training begint. [PLACEHOLDER intro-zin, nog aanpassen]
+            vol vertrouwen aan je eerste training begint.
           </p>
         </div>
       </section>
@@ -89,21 +97,8 @@ export default function KickstartWelkomPage() {
         </div>
       </section>
 
-      {/* TEKSTSECTIE 2 */}
-      <section className="sec sec--ivoor">
-        <div className="wrap">
-          <div className="center reveal">
-            <h2 className="sec-title">[Placeholder kop 2]</h2>
-            <p className="sec-sub">
-              [PLACEHOLDER] Nog een tekstsectie. Denk aan praktische info, tips voor je eerste training, of
-              wat je vooraf kunt doen. Vul later in met de echte tekst.
-            </p>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ */}
-      <section className="sec sec--white">
+      <section className="sec sec--ivoor">
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Veelgestelde vragen</h2>
