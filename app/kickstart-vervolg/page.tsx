@@ -141,7 +141,7 @@ export default function KickstartVervolgPage() {
         style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-community.jpg')", backgroundPosition: "center 30%" } as React.CSSProperties}
       >
         <div className="wrap">
-          <h2>Nog vragen over je lidmaatschap?</h2>
+          <h2>De meestgestelde vragen</h2>
           <p>Op onze ledenservice vind je antwoord op de meestgestelde vragen. Kom je er niet uit? App of mail ons gerust, we denken graag met je mee.</p>
           <Link className="btn btn--gold btn--lg" href="/faq">Naar de ledenservice</Link>
         </div>
