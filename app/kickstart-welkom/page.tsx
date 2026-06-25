@@ -127,7 +127,7 @@ export default function KickstartWelkomPage() {
             </details>
             <details className="reveal">
               <summary>Hoe bereik ik jullie als ik een vraag heb?<span className="ic"><Plus /></span></summary>
-              <div className="body">Je kunt ons altijd bereiken via e-mail of WhatsApp. We helpen je graag, ook met praktische vragen voor je eerste training.</div>
+              <div className="body">Wij zijn altijd goed bereikbaar via WhatsApp en e-mail, dus stel je vraag gerust. En andersom: tijdens je Kickstart nemen we zelf ook regelmatig even contact op om te checken hoe het gaat en hoe het voelt.</div>
             </details>
             <details className="reveal">
               <summary>Wat gebeurt er na de Kickstart?<span className="ic"><Plus /></span></summary>
