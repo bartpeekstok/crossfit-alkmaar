@@ -1,3 +1,4 @@
+import Script from "next/script";
 import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 const Plus = () => (
@@ -53,20 +54,38 @@ export default function KickstartWelkomPage() {
         </div>
       </section>
 
-      {/* TEKSTSECTIE 1 */}
+      {/* CHECK-IN BOEKEN */}
       <section className="sec sec--white">
         <div className="wrap">
           <div className="center reveal">
-            <h2 className="sec-title">[Placeholder kop 1]</h2>
+            <h2 className="sec-title">Boek je check-in in week 4</h2>
             <p className="sec-sub">
-              [PLACEHOLDER] Lorem ipsum tekstsectie. Hier komt straks bijvoorbeeld wat je de eerste week kunt
-              verwachten, hoe laat je er moet zijn en wat je aantrekt. Vervang deze tekst later.
-            </p>
-            <p className="sec-sub">
-              [PLACEHOLDER] Tweede alinea met meer details. We bepalen samen nog hoeveel tekstsecties je
-              precies wilt; dit is er alvast eentje als voorbeeld.
+              Via de kalender hieronder boek je makkelijk je check-in gesprek voor in week 4 van je Kickstart.
+              We spreken je graag om te horen hoe je je voelt, hoe het bevallen is en om samen te kijken hoe we
+              na de Kickstart verder kunnen gaan.
             </p>
           </div>
+          {/* GHL-boekingskalender. form_embed.js past de iframe-hoogte automatisch aan. */}
+          <div
+            className="reveal"
+            style={{
+              maxWidth: 820,
+              margin: "28px auto 0",
+              borderRadius: "var(--r-lg)",
+              overflow: "hidden",
+              boxShadow: "var(--sh-1)",
+              background: "#fff",
+            }}
+          >
+            <iframe
+              src="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b"
+              title="Boek je check-in gesprek"
+              id="FNevcGH4ZFnXQIJwGJRP_1782376258850"
+              scrolling="no"
+              style={{ width: "100%", minHeight: 700, border: "none" }}
+            />
+          </div>
+          <Script src="https://ghl.crossfitalkmaar.com/js/form_embed.js" strategy="afterInteractive" />
         </div>
       </section>
 
