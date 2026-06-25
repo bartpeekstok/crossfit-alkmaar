@@ -102,24 +102,36 @@ export default function KickstartWelkomPage() {
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Veelgestelde vragen</h2>
-            <p className="sec-sub">[PLACEHOLDER] Korte intro boven de FAQ, of weghalen.</p>
+            <p className="sec-sub">De meestgestelde vragen voor je Kickstart op een rij. Mis je iets? Stuur ons gerust even een berichtje.</p>
           </div>
           <div className="faq">
             <details open className="reveal">
-              <summary>[Placeholder vraag 1]<span className="ic"><Plus /></span></summary>
-              <div className="body">[PLACEHOLDER antwoord 1] Vervang dit met het echte antwoord.</div>
+              <summary>Voor welke groep doe ik mee, en kan ik wisselen?<span className="ic"><Plus /></span></summary>
+              <div className="body">Je schrijft je in voor óf de ochtendgroep óf de avondgroep. Lukt een training door je agenda een keer niet? Dan kun je in overleg af en toe wisselen naar de andere groep. Geef het even van tevoren door, dan regelen we het samen.</div>
             </details>
             <details className="reveal">
-              <summary>[Placeholder vraag 2]<span className="ic"><Plus /></span></summary>
-              <div className="body">[PLACEHOLDER antwoord 2] Vervang dit met het echte antwoord.</div>
+              <summary>Hoe laat zijn de trainingen?<span className="ic"><Plus /></span></summary>
+              <div className="body">
+                <strong>Ochtendgroep:</strong> maandag en woensdag om 09:00<br />
+                <strong>Avondgroep:</strong> maandag en woensdag om 20:00<br />
+                <strong>Flex Friday:</strong> vrijdag om 06:15 of 12:30
+              </div>
             </details>
             <details className="reveal">
-              <summary>[Placeholder vraag 3]<span className="ic"><Plus /></span></summary>
-              <div className="body">[PLACEHOLDER antwoord 3] Vervang dit met het echte antwoord.</div>
+              <summary>Wat als ik een keer niet kan?<span className="ic"><Plus /></span></summary>
+              <div className="body">Eén training missen is geen probleem. Mis je meer dan één les? Dan kijken we samen even naar een goede oplossing, bijvoorbeeld door een keer aan te sluiten bij een andere small group, zodat je niets mist.</div>
             </details>
             <details className="reveal">
-              <summary>[Placeholder vraag 4]<span className="ic"><Plus /></span></summary>
-              <div className="body">[PLACEHOLDER antwoord 4] Vervang dit met het echte antwoord.</div>
+              <summary>Ik heb een blessure of beperking. Kan ik toch meedoen?<span className="ic"><Plus /></span></summary>
+              <div className="body">Zeker. We kunnen prima om blessures heen werken en passen oefeningen aan op jouw lijf en niveau. Laat het je coach vooraf even weten, dan houden we er vanaf je eerste training rekening mee.</div>
+            </details>
+            <details className="reveal">
+              <summary>Hoe bereik ik jullie als ik een vraag heb?<span className="ic"><Plus /></span></summary>
+              <div className="body">Je kunt ons altijd bereiken via e-mail of WhatsApp. We helpen je graag, ook met praktische vragen voor je eerste training.</div>
+            </details>
+            <details className="reveal">
+              <summary>Wat gebeurt er na de Kickstart?<span className="ic"><Plus /></span></summary>
+              <div className="body">In week 4 plannen we een check-in gesprek. Daarin horen we hoe het gaat en hoe het bevallen is, en kijken we samen hoe je na je Kickstart verder kunt bij CrossFit Alkmaar. Je boekt je check-in via de kalender hierboven.</div>
             </details>
           </div>
         </div>
