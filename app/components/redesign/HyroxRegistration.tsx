@@ -107,7 +107,9 @@ export default function HyroxRegistration({
     if (isDuo) {
       if (!vals.naam2.trim()) next.naam2 = "Vul de naam van deelnemer 2 in.";
       if (!EMAIL_RE.test(vals.email2.trim())) next.email2 = "Vul een geldig e-mailadres in.";
+      else if (vals.email2.trim().toLowerCase() === vals.email.trim().toLowerCase()) next.email2 = "Deelnemer 2 heeft een eigen e-mailadres nodig (niet hetzelfde als deelnemer 1).";
       if (vals.tel2.replace(/\D/g, "").length < 9) next.tel2 = "Vul een geldig telefoonnummer in.";
+      else if (vals.tel2.replace(/\D/g, "") === vals.tel.replace(/\D/g, "")) next.tel2 = "Deelnemer 2 heeft een eigen telefoonnummer nodig (niet hetzelfde als deelnemer 1).";
     }
     if (!vals.eindtijd) next.eindtijd = "Kies je geschatte eindtijd.";
     setErrs(next);
@@ -132,7 +134,16 @@ export default function HyroxRegistration({
 
     // Meta Pixel: inschrijving verstuurd (checkout gestart). Vuurt in de browser,
     // los van de webhook (die is server-side en kan de Pixel niet vuren).
+    // Advanced Matching: e-mail/telefoon/naam meesturen (Pixel hasht zelf) zodat
+    // Meta deze persoon beter aan een advertentie kan koppelen, ook als de echte
+    // betaling later server-side (CAPI) binnenkomt. Pixel-ID = MetaPixel.tsx.
     if (typeof window !== "undefined" && typeof window.fbq === "function") {
+      window.fbq("init", "1745951116381755", {
+        em: vals.email.trim().toLowerCase(),
+        ph: vals.tel.replace(/\D/g, ""),
+        fn: (parts[0] || "").toLowerCase(),
+        ln: parts.slice(1).join(" ").toLowerCase(),
+      });
       window.fbq("track", "InitiateCheckout", {
         content_name: "HYROX Simulatie",
         content_category: "Event",
