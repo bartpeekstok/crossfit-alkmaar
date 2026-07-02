@@ -49,7 +49,7 @@ export const EVENTS: CfaEvent[] = [
     tag: "Inschrijving open",
     img: "/redesign/assets/event-kledingruil.jpg",
     imgAlt: "Kledingrek met kleurrijke kleding op hangers tijdens de kledingruil bij CrossFit Alkmaar",
-    text: "Die kast weer eens flink uitmesten? Doen! Neem 10 tot 50 stuks dameskleding, sportkleding of accessoires mee die jij niet meer draagt (schoon, heel en op een hanger) en ga naar huis met een paar nieuwe toppers uit andermans kast. Alles hangt gezellig op maat, wat overblijft gaat naar een goed doel, en we klinken na afloop op de nieuwe aanwinsten. Dames onder elkaar!",
+    text: "Mest je kast uit en ruil mee! Neem 10 tot 50 stuks dameskleding, sportkleding of accessoires mee en scoor nieuwe toppers uit andermans kast. Dames onder elkaar, met borrel na afloop.",
     slideText: "Kast uitmesten en ruilen maar! Neem 10 tot 50 stuks mee en scoor nieuwe toppers. Gezellige borrel na afloop.",
     time: "Vanaf 20:30",
     place: "CrossFit Alkmaar",
