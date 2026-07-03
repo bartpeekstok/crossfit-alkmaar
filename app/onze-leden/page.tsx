@@ -4,6 +4,7 @@ import { useLeadModal } from "../components/redesign/LeadModalContext";
 import YouTubeEmbed from "../components/redesign/YouTubeEmbed";
 
 const VIDEOS = [
+  { id: "4qNfSxPzhSc", nm: "Liesa", q: "'Ik dacht dat CrossFit niks voor mij was'" },
   { id: "EIWOUtYAl7g", nm: "Chris", q: "'CrossFit is veel toegankelijker dan aan machines trekken in een sportschool'" },
   { id: "GCUpJQJJ8s0", nm: "Malou", q: "'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
   { id: "SKchVCAIx80", nm: "Steven", q: "'Houding en techniek, daar zijn de trainers hier ongelooflijk goed in'" },
@@ -22,7 +23,6 @@ const VIDEOS = [
   { id: "9v3ijzMvgts", nm: "Harm", q: "'Ik hoef niet na te denken wat ik moet doen'" },
   { id: "jIZpGVRIIyI", nm: "Renze", q: "'Ik houd niet van fitness, dat vind ik veel te saai'" },
   { id: "q3Fb97wdLKU", nm: "Demi", q: "'Iedereen moedigt je aan'" },
-  { id: "4qNfSxPzhSc", nm: "Liesa", q: "'Ik dacht dat CrossFit niks voor mij was'" },
 ];
 
 const ROT = [-3, 2.5, -2, 3, -2.5, 2, -3.5, 1.5, -2, 3, -1.5, 2.5, -3, 2];
