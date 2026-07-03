@@ -47,11 +47,11 @@ export default function HomePage() {
         duration="PT1M30S"
       />
       <VideoSchema
-        name="Steven - lid van CrossFit Alkmaar"
-        description="Steven over houding en techniek bij CrossFit Alkmaar."
-        thumbnailUrl="https://img.youtube.com/vi/SKchVCAIx80/maxresdefault.jpg"
+        name="Liesa - lid van CrossFit Alkmaar"
+        description="Liesa vertelt hoe ze na de Kickstart fitter en sterker werd bij CrossFit Alkmaar."
+        thumbnailUrl="https://img.youtube.com/vi/4qNfSxPzhSc/maxresdefault.jpg"
         uploadDate="2025-01-01T12:00:00+01:00"
-        embedUrl="https://www.youtube.com/embed/SKchVCAIx80"
+        embedUrl="https://www.youtube.com/embed/4qNfSxPzhSc"
         duration="PT1M30S"
       />
       <VideoSchema
@@ -209,9 +209,9 @@ export default function HomePage() {
               <p className="vq">&apos;CrossFit is veel toegankelijker dan aan machines trekken in een sportschool&apos;</p>
             </div>
             <div className="vp">
-              <div className="video"><YouTubeEmbed videoId="SKchVCAIx80" alt="Steven - lid van CrossFit Alkmaar" /></div>
-              <div className="nm">Steven</div>
-              <p className="vq">&apos;Houding en techniek, daar zijn de trainers hier ongelooflijk goed in&apos;</p>
+              <div className="video"><YouTubeEmbed videoId="4qNfSxPzhSc" alt="Liesa - lid van CrossFit Alkmaar" /></div>
+              <div className="nm">Liesa</div>
+              <p className="vq">&apos;Ik dacht dat CrossFit niks voor mij was&apos;</p>
             </div>
             <div className="vp">
               <div className="video"><YouTubeEmbed videoId="GCUpJQJJ8s0" alt="Malou - lid van CrossFit Alkmaar" /></div>
