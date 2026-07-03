@@ -22,6 +22,7 @@ const VIDEOS = [
   { id: "9v3ijzMvgts", nm: "Harm", q: "'Ik hoef niet na te denken wat ik moet doen'" },
   { id: "jIZpGVRIIyI", nm: "Renze", q: "'Ik houd niet van fitness, dat vind ik veel te saai'" },
   { id: "q3Fb97wdLKU", nm: "Demi", q: "'Iedereen moedigt je aan'" },
+  { id: "4qNfSxPzhSc", nm: "Liesa", q: "'Ik dacht dat CrossFit niks voor mij was'" },
 ];
 
 const ROT = [-3, 2.5, -2, 3, -2.5, 2, -3.5, 1.5, -2, 3, -1.5, 2.5, -3, 2];
