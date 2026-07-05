@@ -41,7 +41,7 @@ const DEFAULT_LEAD_WEBHOOK =
 const DEFAULT_PAYMENT_ENDPOINT =
   "https://hyrox-betaling-backend.vercel.app/api/hyrox-betaling";
 
-const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+const EMAIL_RE = /^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i;
 const emptyVals = { naam: "", email: "", tel: "", divisie: "", naam2: "", email2: "", tel2: "", eindtijd: "" };
 
 // Zet een NL-datum ("Zaterdag 24 oktober 2026") om naar ISO (2026-10-24) zodat
