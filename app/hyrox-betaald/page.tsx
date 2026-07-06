@@ -27,7 +27,11 @@ export default function HyroxBetaaldPage() {
     // Centen uit de URL (eventuele extra MSP-parameter eraf strippen).
     const cents = parseInt(String(p.get("bedrag") || "").replace(/\D.*$/, ""), 10);
     const value = isFinite(cents) && cents > 0 ? cents / 100 : undefined;
-    const oid = String(p.get("oid") || "").replace(/[?&].*$/, "");
+    // MultiSafepay hangt zijn eigen param `transactionid` (= ons order-id) aan de
+    // redirect. Die gebruiken we als fallback voor `oid`, zodat de browser-Purchase
+    // hetzelfde event_id krijgt als het server-side CAPI-event (msp-notify.js) en
+    // Meta ze dedupliceert i.p.v. dubbel te tellen.
+    const oid = String(p.get("oid") || p.get("transactionid") || "").replace(/[?&].*$/, "");
 
     const data: Record<string, unknown> = {
       currency: "EUR",
