@@ -40,6 +40,18 @@ export const EVENTS: CfaEvent[] = [
     place: "CrossFit Alkmaar",
   },
   {
+    title: "PEP Voedingsadvies",
+    dateLabel: "Donderdag 16 juli 2026",
+    isoDate: "2026-07-16",
+    tag: "Gratis",
+    img: "/redesign/assets/event-voedingsadvies.jpg",
+    imgAlt: "Overzicht van gezonde verse voeding: vis, kip, groenten, fruit, noten en granen",
+    text: "Benieuwd wat voeding voor jouw resultaten kan betekenen? Op donderdagavond 16 juli zit PEP bij ons in de box voor gratis miniconsults van 15 minuten. Stel je vragen over eten rondom je training, je herstel of een doel waar je aan werkt en loop weg met concrete tips die je meteen kunt toepassen. Kort, persoonlijk en helemaal vrijblijvend.",
+    slideText: "Gratis miniconsult voeding met PEP. In 15 minuten persoonlijk advies rondom je training, herstel en doelen.",
+    time: "Donderdagavond",
+    place: "CrossFit Alkmaar",
+  },
+  {
     href: "https://cfalkmaar.sportbitapp.nl/web/nl/events/72270",
     external: true,
     ctaLabel: "Schrijf je in",
