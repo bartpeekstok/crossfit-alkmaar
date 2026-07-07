@@ -18,12 +18,23 @@ function absolute(url: string): string {
   return SITE + (url.startsWith("/") ? url : "/" + url);
 }
 
+// Per request bepalen (niet bij build) zodat de datumfilter meeloopt met vandaag.
+export const dynamic = "force-dynamic";
+
+// "Vandaag" in de Nederlandse tijdzone als YYYY-MM-DD, zodat een event pas na
+// afloop van zijn eigen dag uit de slideshow verdwijnt (lounge-tv staat in NL).
+function todayInNL(): string {
+  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Amsterdam" }).format(new Date());
+}
+
 export function OPTIONS() {
   return new NextResponse(null, { status: 204, headers: CORS });
 }
 
 export function GET() {
-  const events = EVENTS.map((e) => ({
+  const today = todayInNL();
+  // Voorbije events vallen weg: alleen events van vandaag en later blijven in de slideshow.
+  const events = EVENTS.filter((e) => e.isoDate >= today).map((e) => ({
     title: e.title,
     date: e.isoDate,
     dateLabel: e.dateLabel,
