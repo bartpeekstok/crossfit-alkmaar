@@ -140,7 +140,7 @@ export default function EventsPage() {
         </div>
       </section>
 
-      <section className="sec sec--ivoor">
+      <section className="sec sec--ivoor" style={{ paddingBottom: "clamp(24px,4vw,48px)" }}>
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Aankomende events</h2>
@@ -153,9 +153,9 @@ export default function EventsPage() {
       </section>
 
       {past.length > 0 && (
-        <section className="sec sec--white">
+        <section className="sec sec--white" style={{ paddingTop: "clamp(24px,4vw,48px)" }}>
           <div className="wrap">
-            <div className="center reveal">
+            <div className="center">
               <h2 className="sec-title">Afgelopen events</h2>
               <p className="sec-sub">Een terugblik op wat er bij CrossFit Alkmaar voorbij is gekomen. Erbij zijn de volgende keer? Houd de aankomende events in de gaten.</p>
             </div>
