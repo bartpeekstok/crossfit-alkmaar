@@ -76,7 +76,7 @@ export default function Header() {
       <div className="wrap bar">
         <Link href="/" className="logo" aria-label="CrossFit Alkmaar">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/redesign/assets/cfa-logo.png" alt="CrossFit Alkmaar" />
+          <img src="/redesign/assets/cfa-logo.webp" alt="CrossFit Alkmaar" />
         </Link>
         <nav className="nav">
           <div className="nav-item">

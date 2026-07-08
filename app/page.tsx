@@ -66,7 +66,7 @@ export default function HomePage() {
       {/* HERO */}
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-hero-team.jpg" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" fetchPriority="high" />
+        <img className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" fetchPriority="high" />
         <div className="scrim"></div>
         <div className="badge">
           <div className="stars"><Star /><Star /><Star /><Star /><Star /></div>
@@ -74,11 +74,11 @@ export default function HomePage() {
           <div className="lab">Google Reviews</div>
         </div>
         <div className="wrap inner">
-          <p className="eyebrow">CrossFit Alkmaar</p>
-          <h1>
+          <h1 className="eyebrow">CrossFit Alkmaar</h1>
+          <p className="htitle">
             <span className="ln">Sporten werkt pas</span>
             <span className="ln">als je het <span className="accent">volhoudt.</span></span>
-          </h1>
+          </p>
           <p className="lede">Wij helpen mensen om sporten een blijvend onderdeel van hun leven te maken. Door persoonlijke coaching in een community waar je gekend wordt, je niveau telt en niemand er alleen voor staat.</p>
           <div className="cta-row">
             <a className="btn btn--gold btn--lg" href="#" onClick={openModal("Plan je gratis kennismaking", "Hero")}>Plan je gratis kennismaking</a>

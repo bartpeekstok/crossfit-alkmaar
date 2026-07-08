@@ -29,7 +29,7 @@ export default function EnHome() {
 
       <section className="hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-hero-team.jpg" alt="Members of CrossFit Alkmaar high-fiving after a workout" />
+        <img className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Members of CrossFit Alkmaar high-fiving after a workout" />
         <div className="scrim" />
         <div className="badge">
           <div className="stars"><Star /><Star /><Star /><Star /><Star /></div>
@@ -37,8 +37,8 @@ export default function EnHome() {
           <div className="lab">Google Reviews</div>
         </div>
         <div className="wrap inner">
-          <p className="eyebrow">CrossFit Alkmaar</p>
-          <h1><span className="ln">Training only works</span><span className="ln">if you keep <span className="accent">at it.</span></span></h1>
+          <h1 className="eyebrow">CrossFit Alkmaar</h1>
+          <p className="htitle"><span className="ln">Training only works</span><span className="ln">if you keep <span className="accent">at it.</span></span></p>
           <p className="lede">Small groups, coaches who know your name, and people who miss you when you&apos;re not there.</p>
           <div className="cta-row">
             <a className="btn btn--gold btn--lg" href="#" onClick={openModal("Book your free intro", "Hero")}>Book your free intro</a>

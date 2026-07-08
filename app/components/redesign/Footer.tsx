@@ -42,7 +42,7 @@ export default function Footer() {
           <Link href="/" className="logo">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/redesign/assets/cfa-logo.png"
+              src="/redesign/assets/cfa-logo.webp"
               alt="CrossFit Alkmaar"
               style={{ height: 64, width: "auto" }}
             />
