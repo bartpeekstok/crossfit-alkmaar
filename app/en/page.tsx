@@ -1,6 +1,7 @@
 "use client";
 
 import "../styles/page-home.css";
+import Image from "next/image";
 import Script from "next/script";
 import { useLeadModal } from "../components/redesign/LeadModalContext";
 import YouTubeEmbed from "../components/redesign/YouTubeEmbed";
@@ -28,8 +29,7 @@ export default function EnHome() {
       <ScrollReveal />
 
       <section className="hero">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Members of CrossFit Alkmaar high-fiving after a workout" />
+        <Image className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Members of CrossFit Alkmaar high-fiving after a workout" fill priority sizes="100vw" />
         <div className="scrim" />
         <div className="badge">
           <div className="stars"><Star /><Star /><Star /><Star /><Star /></div>
@@ -179,7 +179,7 @@ export default function EnHome() {
 
       <section className="sec final">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" style={{ objectPosition: "center 42%" }} />
+        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" width={679} height={1018} loading="lazy" style={{ objectPosition: "center 42%" }} />
         <div className="scrim" />
         <div className="wrap inner">
           <h2>Ready to start?</h2>

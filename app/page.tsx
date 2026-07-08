@@ -1,6 +1,7 @@
 "use client";
 
 import "./styles/page-home.css";
+import Image from "next/image";
 import VideoSchema from "./components/VideoSchema";
 import Script from "next/script";
 import { trackOutboundLink } from "./lib/analytics";
@@ -65,8 +66,7 @@ export default function HomePage() {
 
       {/* HERO */}
       <section className="hero">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" fetchPriority="high" />
+        <Image className="bg" src="/redesign/assets/photo-hero-team.webp" alt="Leden van CrossFit Alkmaar geven elkaar een high-five na een training" fill priority sizes="100vw" />
         <div className="scrim"></div>
         <div className="badge">
           <div className="stars"><Star /><Star /><Star /><Star /><Star /></div>
@@ -133,7 +133,7 @@ export default function HomePage() {
           </div>
           <div className="progs">
             <div className="prog reveal">
-              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box1.webp" alt="28 Day Kickstart" /></div>
+              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box1.webp" alt="28 Day Kickstart" width={696} height={464} loading="lazy" /></div>
               <div className="body">
                 <h3>28 day kickstart</h3>
                 <p className="lede">Hier start iedereen. In vier weken leggen we samen een solide basis.</p>
@@ -147,7 +147,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="prog reveal" data-d="1">
-              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box2.webp" alt="BUILD - semi personal training" /></div>
+              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box2.webp" alt="BUILD - semi personal training" width={464} height={696} loading="lazy" /></div>
               <div className="body">
                 <h3>BUILD</h3>
                 <p className="lede">Semi personal training in een vaste groep.</p>
@@ -161,7 +161,7 @@ export default function HomePage() {
               </div>
             </div>
             <div className="prog reveal" data-d="2">
-              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box3.webp" alt="Groepslessen CrossFit Alkmaar" /></div>
+              <div className="ph">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-box3.webp" alt="Groepslessen CrossFit Alkmaar" width={464} height={696} loading="lazy" /></div>
               <div className="body">
                 <h3>Groepslessen</h3>
                 <p className="lede">Gevarieerd, uitdagend, en altijd schaalbaar naar jouw niveau.</p>
@@ -186,10 +186,10 @@ export default function HomePage() {
             <p className="sec-sub">Mensen die je missen als je er niet bent. Dat is wat trainen bij CrossFit Alkmaar anders maakt.</p>
           </div>
           <div className="cstrip reveal" style={{ marginTop: 36 }}>
-            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-community.webp" alt="Leden van CrossFit Alkmaar tijdens een training" /></div>
-            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-3.jpg" alt="Coach begeleidt een lid bij CrossFit Alkmaar" style={{ objectPosition: "center 65%" }} /></div>
-            <div className="cell zoom">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-2.jpg" alt="Leden lopen met kettlebells door de box" /></div>
-            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-1.jpg" alt="High-five tijdens een training bij CrossFit Alkmaar" /></div>
+            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/photo-community.webp" alt="Leden van CrossFit Alkmaar tijdens een training" width={679} height={1018} loading="lazy" /></div>
+            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-3.jpg" alt="Coach begeleidt een lid bij CrossFit Alkmaar" width={1867} height={2800} loading="lazy" style={{ objectPosition: "center 65%" }} /></div>
+            <div className="cell zoom">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-2.jpg" alt="Leden lopen met kettlebells door de box" width={1867} height={2800} loading="lazy" /></div>
+            <div className="cell">{/* eslint-disable-next-line @next/next/no-img-element */}<img src="/redesign/assets/community-1.jpg" alt="High-five tijdens een training bij CrossFit Alkmaar" width={1867} height={2800} loading="lazy" /></div>
           </div>
           <div className="comm-cta reveal">
             <h3>Sluit je aan bij 300+ tevreden leden</h3>
@@ -277,7 +277,7 @@ export default function HomePage() {
       {/* FINAL CTA */}
       <section className="sec final">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" style={{ objectPosition: "center 42%" }} />
+        <img className="bg" src="/redesign/assets/photo-community.webp" alt="" width={679} height={1018} loading="lazy" style={{ objectPosition: "center 42%" }} />
         <div className="scrim"></div>
         <div className="wrap inner reveal">
           <h2>Klaar om te starten?</h2>

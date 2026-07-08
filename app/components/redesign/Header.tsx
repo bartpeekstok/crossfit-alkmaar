@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -75,8 +76,7 @@ export default function Header() {
     <header className="site-header">
       <div className="wrap bar">
         <Link href="/" className="logo" aria-label="CrossFit Alkmaar">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/redesign/assets/cfa-logo.webp" alt="CrossFit Alkmaar" />
+          <Image src="/redesign/assets/cfa-logo.webp" alt="CrossFit Alkmaar" width={128} height={128} priority />
         </Link>
         <nav className="nav">
           <div className="nav-item">

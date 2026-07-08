@@ -95,6 +95,21 @@ const nextConfig: NextConfig = {
         { source: `/${cat}/${slug}/`, destination: `/blog/${slug}`, permanent: true },
       ])
     );
+    // Teruggezette WordPress-blogs: oude categorie-URL -> nieuwe /blog/<slug>.
+    // Oude /blog/<slug>-URLs behouden dezelfde slug (pagina bestaat weer, geen redirect nodig).
+    const RESTORED_BLOG_REDIRECTS: Array<[string, string]> = [
+      ["/dit-is-cfa/de-grootste-fout-die-mensen-maken-als-ze-weer-gaan-sporten", "grootste-fout-weer-gaan-sporten"],
+      ["/training/heeft-bankdrukken-invloed-op-buikvet", "heeft-bankdrukken-invloed-op-buikvet"],
+      ["/dit-is-cfa/drie-keer-per-week-trainen-werkt", "drie-keer-per-week-trainen-werkt"],
+      ["/dit-is-cfa/de-cfa-open-25-schrijf-je-nu-in-voor-het-leukste-event-van-het-jaar", "cfa-open-25"],
+      ["/dit-is-cfa/zo-haal-je-het-maximale-uit-drie-trainingen-per-week-zonder-extra-moeite", "maximale-uit-drie-trainingen-per-week"],
+      ["/gezondheid/hoe-de-healthy-habits-challenge-je-helpt-tijdens-de-28-day-kickstart", "healthy-habits-challenge-28-day-kickstart"],
+      ["/dit-is-cfa/zo-ziet-een-intake-er-bij-ons-uit", "zo-ziet-een-intake-eruit"],
+    ];
+    const restoredBlogRedirects = RESTORED_BLOG_REDIRECTS.flatMap(([oldPath, slug]) => [
+      { source: oldPath, destination: `/blog/${slug}`, permanent: true },
+      { source: `${oldPath}/`, destination: `/blog/${slug}`, permanent: true },
+    ]);
     return [
       // FIX 0: specifieke 1-op-1 blog-redirects VOOR de generieke catch-alls.
       ...blogSlugRedirects,
@@ -161,58 +176,10 @@ const nextConfig: NextConfig = {
         destination: "/small-group-training",
         permanent: true,
       },
-      // Old blog categories to new blog
-      {
-        source: "/dit-is-cfa/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/training/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/gym-news/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/gezond-eten/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/gezondheid/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/succesverhalen/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/blessurepreventie/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/uncategorized/:slug*",
-        destination: "/blog",
-        permanent: true,
-      },
-      // Old blog pagination
-      {
-        source: "/blog/page/:num",
-        destination: "/blog",
-        permanent: true,
-      },
-      {
-        source: "/blog/page/:num/",
-        destination: "/blog",
-        permanent: true,
-      },
+      // Teruggezette blogs: oude categorie-URL 1-op-1 naar de nieuwe post.
+      // GEEN catch-all meer naar /blog: onbekende oude categorie-URLs en
+      // paginering (/blog/page/N/, /dit-is-cfa/page/N/, etc.) geven bewust 404.
+      ...restoredBlogRedirects,
       // Intake pages
       {
         source: "/intake",
@@ -334,12 +301,6 @@ const nextConfig: NextConfig = {
       {
         source: "/opzegging/",
         destination: "/",
-        permanent: true,
-      },
-      // Date archives
-      {
-        source: "/2024/:path*",
-        destination: "/blog",
         permanent: true,
       },
       // Missing old program pages

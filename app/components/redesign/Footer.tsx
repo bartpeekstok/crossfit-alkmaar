@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -40,10 +41,11 @@ export default function Footer() {
       <div className="wrap ftop">
         <div>
           <Link href="/" className="logo">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
+            <Image
               src="/redesign/assets/cfa-logo.webp"
               alt="CrossFit Alkmaar"
+              width={128}
+              height={128}
               style={{ height: 64, width: "auto" }}
             />
           </Link>
