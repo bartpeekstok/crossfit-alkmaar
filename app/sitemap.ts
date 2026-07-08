@@ -1,32 +1,13 @@
 import { MetadataRoute } from "next";
+import { blogPosts } from "./blog/[slug]/blogData";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.crossfitalkmaar.com";
 
-  // Blog posts - voeg hier nieuwe blogs toe
-  const blogPosts: string[] = [
-    "tienerprogramma-bij-crossfit-alkmaar",
-    "hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen",
-    "wat-we-nu-anders-doen-dan-tien-jaar-geleden",
-    "had-je-een-steentje-in-je-schoen",
-    "twaalf-jaar-crossfit-alkmaar",
-    "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
-    "bart-bij-scherpschutters-podcast",
-    "ben-jij-fit-genoeg-voor-crossfit-alkmaar",
-    "een-hardcore-sportschool",
-    "wijze-lessen",
-    "doe-je-het-zelf-of-schakel-je-een-professional-in",
-    "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar",
-    "moet-je-spierpijn-hebben-na-elke-workout",
-    "is-hardlopen-slecht-voor-je",
-    "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen",
-    "blessures-en-trainen-bij-crossfit-alkmaar",
-    "hyrox-bij-crossfit-alkmaar",
-  ];
-
-  const blogUrls = blogPosts.map((slug) => ({
+  // Alle blogs uit blogData.ts (single source of truth); nieuwe blogs gaan automatisch mee
+  const blogUrls = Object.entries(blogPosts).map(([slug, post]) => ({
     url: `${baseUrl}/blog/${slug}`,
-    lastModified: new Date("2026-03-10"),
+    lastModified: new Date(post.date),
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
