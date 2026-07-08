@@ -1753,6 +1753,79 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p><a href="/free-intro">Boek een gratis intake</a>, dan zorgen we samen dat trainen niet nóg iets is dat moet, maar iets dat helpt.</p>
     `,
   },
+  "wat-eet-je-voor-en-na-training": {
+    title: "Wat eet je het beste voor en na je training?",
+    date: "2024-12-01",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Voeding",
+    image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80",
+    excerpt: "De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training. Wat eet je voor en na je training, en wanneer?",
+    content: `
+      <p>De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training. Maar wat eet je nou precies? En wanneer?</p>
+
+      <h2>Voor je training</h2>
+
+      <p>Je doel voor de training: genoeg energie hebben zonder een te volle maag. Timing en samenstelling zijn key.</p>
+
+      <p><strong>2-3 uur voor je training:</strong><br/>
+      Een volledige maaltijd met koolhydraten, eiwitten en gezonde vetten. Denk aan:</p>
+      <ul>
+        <li>Rijst met kip en groenten</li>
+        <li>Pasta met gehakt en tomatensaus</li>
+        <li>Brood met ei en avocado</li>
+      </ul>
+
+      <p><strong>30-60 minuten voor je training:</strong><br/>
+      Een lichte snack die snel energie geeft. Denk aan:</p>
+      <ul>
+        <li>Een banaan</li>
+        <li>Rijstwafel met pindakaas</li>
+        <li>Handje dadels</li>
+        <li>Yoghurt met wat muesli</li>
+      </ul>
+
+      <p><strong>Tip:</strong> Experimenteer met wat voor jou werkt. Sommige mensen trainen prima op een lege maag, anderen hebben echt iets nodig. Luister naar je lichaam.</p>
+
+      <h2>Na je training</h2>
+
+      <p>Na je training wil je twee dingen: je spieren voorzien van bouwstoffen (eiwitten) en je energievoorraden aanvullen (koolhydraten).</p>
+
+      <p><strong>Binnen 1-2 uur na je training:</strong></p>
+      <ul>
+        <li>Shakje met whey proteïne en een banaan</li>
+        <li>Griekse yoghurt met fruit en noten</li>
+        <li>Broodje met kipfilet of tonijn</li>
+        <li>Omelet met groenten en brood</li>
+      </ul>
+
+      <p><strong>Hoeveel eiwit heb je nodig?</strong><br/>
+      Richt op 20-40 gram eiwit na je training. Voor de hele dag: ongeveer 1.6-2.2 gram per kilo lichaamsgewicht als je regelmatig traint.</p>
+
+      <h2>Hydratatie niet vergeten</h2>
+
+      <p>Water is minstens zo belangrijk als voeding. Drink voor, tijdens en na je training. Een goede richtlijn:</p>
+      <ul>
+        <li>500ml in de 2 uur voor je training</li>
+        <li>Tijdens: kleine slokjes wanneer je dorst hebt</li>
+        <li>Na: 500-750ml per uur zware inspanning</li>
+      </ul>
+
+      <h2>Veelgemaakte fouten</h2>
+
+      <p><strong>1. Te weinig eten</strong><br/>
+      Bang om aan te komen eet je te weinig. Resultaat: slechte trainingen, geen spieropbouw, en uiteindelijk een tragere stofwisseling.</p>
+
+      <p><strong>2. Te veel focussen op supplements</strong><br/>
+      Supplements zijn een aanvulling, geen vervanging. Focus eerst op echte voeding.</p>
+
+      <p><strong>3. De hele dag "gezond" eten en 's avonds ontsporen</strong><br/>
+      Beter: eet regelmatig, genoeg, en sta jezelf af en toe iets lekkers toe zonder schuldgevoel.</p>
+
+      <h2>Het hoeft niet ingewikkeld</h2>
+
+      <p>De basis is simpel: eet gevarieerd, genoeg eiwitten, voldoende groenten, en timing rondom je training. Perfectie is niet nodig, consistentie wel.</p>
+    `,
+  },
 };
 
 export function getBlogPost(slug: string): BlogPost | undefined {
