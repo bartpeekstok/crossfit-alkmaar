@@ -1,6 +1,10 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  // Trailing-slash-redirect zelf afhandelen (zie proxy.ts): oude WP-URLs met
+  // slash moeten in 1 hop naar de nieuwe URL, zonder aparte slash-strip-308.
+  skipTrailingSlashRedirect: true,
+
   // Image optimization
   images: {
     remotePatterns: [
@@ -60,59 +64,12 @@ const nextConfig: NextConfig = {
     ];
   },
 
-  // Redirects from old WordPress site
+  // Redirects from old WordPress site.
+  // LET OP: alle oude BLOG-URLs (/dit-is-cfa/..., /training/..., etc.) worden in
+  // proxy.ts geredirect: die vangt beide trailing-slash-varianten in ÉÉN hop.
+  // Paginering (/blog/page/N/, /<cat>/page/N/) en onbekende oude URLs geven bewust 404.
   async redirects() {
-    // FIX 0: oude WordPress categorie-URLs 1-op-1 naar de nieuwe /blog/<slug> als
-    // die slug bestaat (permanent, 1 hop, geen soft-404). Slugs die niet bestaan
-    // vallen via de catch-alls verderop alsnog terug op /blog. Bron van de slugs:
-    // app/blog/[slug]/blogData.ts (object-keys van blogPosts).
-    const OLD_BLOG_CATS = [
-      "dit-is-cfa", "training", "gym-news", "gezond-eten",
-      "gezondheid", "succesverhalen", "blessurepreventie", "uncategorized",
-    ];
-    const BLOG_SLUGS = [
-      "bart-bij-scherpschutters-podcast",
-      "ben-jij-fit-genoeg-voor-crossfit-alkmaar",
-      "blessures-en-trainen-bij-crossfit-alkmaar",
-      "doe-je-het-zelf-of-schakel-je-een-professional-in",
-      "een-hardcore-sportschool",
-      "had-je-een-steentje-in-je-schoen",
-      "hoe-je-ook-tussen-je-oren-sterker-wordt-van-trainen",
-      "hyrox-bij-crossfit-alkmaar",
-      "is-hardlopen-slecht-voor-je",
-      "moet-je-spierpijn-hebben-na-elke-workout",
-      "tienerprogramma-bij-crossfit-alkmaar",
-      "twaalf-jaar-crossfit-alkmaar",
-      "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
-      "waarom-je-bij-crossfit-alkmaar-geen-proefles-kan-doen",
-      "waarom-mensen-duizend-trainingen-doen-bij-crossfit-alkmaar",
-      "wat-we-nu-anders-doen-dan-tien-jaar-geleden",
-      "wijze-lessen",
-    ];
-    const blogSlugRedirects = OLD_BLOG_CATS.flatMap((cat) =>
-      BLOG_SLUGS.flatMap((slug) => [
-        { source: `/${cat}/${slug}`, destination: `/blog/${slug}`, permanent: true },
-        { source: `/${cat}/${slug}/`, destination: `/blog/${slug}`, permanent: true },
-      ])
-    );
-    // Teruggezette WordPress-blogs: oude categorie-URL -> nieuwe /blog/<slug>.
-    // Oude /blog/<slug>-URLs behouden dezelfde slug (pagina bestaat weer, geen redirect nodig).
-    const RESTORED_BLOG_REDIRECTS: Array<[string, string]> = [
-      ["/dit-is-cfa/de-grootste-fout-die-mensen-maken-als-ze-weer-gaan-sporten", "grootste-fout-weer-gaan-sporten"],
-      ["/training/heeft-bankdrukken-invloed-op-buikvet", "heeft-bankdrukken-invloed-op-buikvet"],
-      ["/dit-is-cfa/drie-keer-per-week-trainen-werkt", "drie-keer-per-week-trainen-werkt"],
-      ["/dit-is-cfa/de-cfa-open-25-schrijf-je-nu-in-voor-het-leukste-event-van-het-jaar", "cfa-open-25"],
-      ["/dit-is-cfa/zo-haal-je-het-maximale-uit-drie-trainingen-per-week-zonder-extra-moeite", "maximale-uit-drie-trainingen-per-week"],
-      ["/gezondheid/hoe-de-healthy-habits-challenge-je-helpt-tijdens-de-28-day-kickstart", "healthy-habits-challenge-28-day-kickstart"],
-      ["/dit-is-cfa/zo-ziet-een-intake-er-bij-ons-uit", "zo-ziet-een-intake-eruit"],
-    ];
-    const restoredBlogRedirects = RESTORED_BLOG_REDIRECTS.flatMap(([oldPath, slug]) => [
-      { source: oldPath, destination: `/blog/${slug}`, permanent: true },
-      { source: `${oldPath}/`, destination: `/blog/${slug}`, permanent: true },
-    ]);
     return [
-      // FIX 0: specifieke 1-op-1 blog-redirects VOOR de generieke catch-alls.
-      ...blogSlugRedirects,
       // Tarieven page removed, route naar de tarieven-sectie op meer-info
       {
         source: "/tarieven",
@@ -176,10 +133,6 @@ const nextConfig: NextConfig = {
         destination: "/small-group-training",
         permanent: true,
       },
-      // Teruggezette blogs: oude categorie-URL 1-op-1 naar de nieuwe post.
-      // GEEN catch-all meer naar /blog: onbekende oude categorie-URLs en
-      // paginering (/blog/page/N/, /dit-is-cfa/page/N/, etc.) geven bewust 404.
-      ...restoredBlogRedirects,
       // Intake pages
       {
         source: "/intake",
