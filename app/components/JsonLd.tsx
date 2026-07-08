@@ -45,14 +45,14 @@ export default function JsonLd() {
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
-    "@id": "https://crossfitalkmaar.com/#organization",
+    "@id": "https://www.crossfitalkmaar.com/#organization",
     name: "CrossFit Alkmaar",
     alternateName: "CrossFit Alkmaar Sportschool",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Voor alle niveaus, ook 50+.",
-    url: "https://crossfitalkmaar.com",
-    logo: "https://crossfitalkmaar.com/images/logo_dark_square.png",
-    image: "https://crossfitalkmaar.com/images/hero.jpg",
+    url: "https://www.crossfitalkmaar.com",
+    logo: "https://www.crossfitalkmaar.com/images/logo_dark_square.png",
+    image: "https://www.crossfitalkmaar.com/images/hero.jpg",
     telephone: "+31722340560",
     email: "info@crossfitalkmaar.com",
     address: {
@@ -253,12 +253,12 @@ export default function JsonLd() {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "@id": "https://crossfitalkmaar.com/#website",
-    url: "https://crossfitalkmaar.com",
+    "@id": "https://www.crossfitalkmaar.com/#website",
+    url: "https://www.crossfitalkmaar.com",
     name: "CrossFit Alkmaar",
     description: "Sportschool in Alkmaar voor krachttraining, fitness en afvallen",
     publisher: {
-      "@id": "https://crossfitalkmaar.com/#organization",
+      "@id": "https://www.crossfitalkmaar.com/#organization",
     },
     inLanguage: "nl-NL",
   };

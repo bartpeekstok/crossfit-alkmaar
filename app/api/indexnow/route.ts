@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const INDEXNOW_KEY = "d8e3f2a1b4c5d6e7f8a9b0c1d2e3f4a5";
-const SITE_URL = "https://crossfitalkmaar.com";
+const SITE_URL = "https://www.crossfitalkmaar.com";
 
 // IndexNow endpoints (Microsoft/Bing, Yandex, Seznam)
 const INDEXNOW_ENDPOINTS = [

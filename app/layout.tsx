@@ -114,14 +114,14 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "nl_NL",
-    url: "https://crossfitalkmaar.com",
+    url: "https://www.crossfitalkmaar.com",
     siteName: "CrossFit Alkmaar",
     title: "CrossFit Alkmaar | Sportschool waar je het wél volhoudt",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding. Plan je gratis kennismaking!",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/logo_dark_square.png",
+        url: "https://www.crossfitalkmaar.com/images/logo_dark_square.png",
         width: 500,
         height: 500,
         alt: "CrossFit Alkmaar logo",
@@ -133,22 +133,22 @@ export const metadata: Metadata = {
     title: "CrossFit Alkmaar | Sportschool waar je het wél volhoudt",
     description:
       "Sportschool in Alkmaar voor krachttraining, fitness en afvallen. Small group training met persoonlijke begeleiding.",
-    images: ["https://crossfitalkmaar.com/images/logo_dark_square.png"],
+    images: ["https://www.crossfitalkmaar.com/images/logo_dark_square.png"],
   },
   verification: {
     google: "l6SVjEQksVtawGRXtAB5FgBSmmw0Xl6r-DhsxPQg9aU",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com",
+    canonical: "https://www.crossfitalkmaar.com",
     languages: {
-      "nl-NL": "https://crossfitalkmaar.com",
-      "en-GB": "https://crossfitalkmaar.com/en",
-      "de-DE": "https://crossfitalkmaar.com/de",
+      "nl-NL": "https://www.crossfitalkmaar.com",
+      "en-GB": "https://www.crossfitalkmaar.com/en",
+      "de-DE": "https://www.crossfitalkmaar.com/de",
     },
   },
   category: "fitness",
   classification: "Health & Fitness",
-  metadataBase: new URL("https://crossfitalkmaar.com"),
+  metadataBase: new URL("https://www.crossfitalkmaar.com"),
 };
 
 export default function RootLayout({

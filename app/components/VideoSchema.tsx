@@ -29,7 +29,7 @@ export default function VideoSchema({
       name: "CrossFit Alkmaar",
       logo: {
         "@type": "ImageObject",
-        url: "https://crossfitalkmaar.com/images/logo_dark.png",
+        url: "https://www.crossfitalkmaar.com/images/logo_dark.png",
       },
     },
     ...(duration && { duration }),

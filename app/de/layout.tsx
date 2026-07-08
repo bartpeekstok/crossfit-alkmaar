@@ -9,15 +9,15 @@ export const metadata: Metadata = {
     title: "CrossFit Alkmaar | Fitnessstudio & Krafttraining",
     description:
       "Fitnessstudio in Alkmaar für Krafttraining, Fitness und Abnehmen. Kleingruppentraining mit persönlicher Betreuung.",
-    url: "https://crossfitalkmaar.com/de",
+    url: "https://www.crossfitalkmaar.com/de",
     locale: "de_DE",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/de",
+    canonical: "https://www.crossfitalkmaar.com/de",
     languages: {
-      "nl-NL": "https://crossfitalkmaar.com",
-      "en-GB": "https://crossfitalkmaar.com/en",
-      "de-DE": "https://crossfitalkmaar.com/de",
+      "nl-NL": "https://www.crossfitalkmaar.com",
+      "en-GB": "https://www.crossfitalkmaar.com/en",
+      "de-DE": "https://www.crossfitalkmaar.com/de",
     },
   },
 };

@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Groepstraining Alkmaar | CrossFit Alkmaar",
     description:
       "Train samen in kleine groepen met professionele coaching. Gevarieerde workouts voor alle niveaus.",
-    url: "https://crossfitalkmaar.com/groepstraining-alkmaar",
+    url: "https://www.crossfitalkmaar.com/groepstraining-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-november-lowres-96.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-november-lowres-96.jpg",
         width: 1200,
         height: 630,
         alt: "Groepstraining Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/groepstraining-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/groepstraining-alkmaar",
   },
 };
 

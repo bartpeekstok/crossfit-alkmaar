@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Sportschool 50+ Alkmaar | CrossFit Alkmaar",
     description:
       "Veilig sporten met professionele begeleiding. Onze leden zijn 20 tot 70+ jaar. Elke oefening wordt aangepast aan jouw niveau.",
-    url: "https://crossfitalkmaar.com/sportschool-50-plus-alkmaar",
+    url: "https://www.crossfitalkmaar.com/sportschool-50-plus-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/50+-header.jpg",
+        url: "https://www.crossfitalkmaar.com/images/50+-header.jpg",
         width: 1200,
         height: 630,
         alt: "Sportschool 50+ Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/sportschool-50-plus-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/sportschool-50-plus-alkmaar",
   },
 };
 

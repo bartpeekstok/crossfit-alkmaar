@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Strength Training Alkmaar | CrossFit Alkmaar",
     description:
       "Word sterker met squats, deadlifts en presses onder professionele coaching. Voor alle niveaus.",
-    url: "https://crossfitalkmaar.com/strength-training-alkmaar",
+    url: "https://www.crossfitalkmaar.com/strength-training-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/strength-training-header.jpg",
+        url: "https://www.crossfitalkmaar.com/images/strength-training-header.jpg",
         width: 1200,
         height: 630,
         alt: "Strength Training Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/strength-training-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/strength-training-alkmaar",
   },
 };
 

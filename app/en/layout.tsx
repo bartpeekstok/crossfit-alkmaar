@@ -13,15 +13,15 @@ export const metadata: Metadata = {
     title: "CrossFit Alkmaar | Gym & Strength Training",
     description:
       "Gym in Alkmaar for strength training, fitness and weight loss. Small group training with personal guidance.",
-    url: "https://crossfitalkmaar.com/en",
+    url: "https://www.crossfitalkmaar.com/en",
     locale: "en_GB",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/en",
+    canonical: "https://www.crossfitalkmaar.com/en",
     languages: {
-      "nl-NL": "https://crossfitalkmaar.com",
-      "en-GB": "https://crossfitalkmaar.com/en",
-      "de-DE": "https://crossfitalkmaar.com/de",
+      "nl-NL": "https://www.crossfitalkmaar.com",
+      "en-GB": "https://www.crossfitalkmaar.com/en",
+      "de-DE": "https://www.crossfitalkmaar.com/de",
     },
   },
 };

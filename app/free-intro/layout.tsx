@@ -13,10 +13,10 @@ export const metadata: Metadata = {
     title: "Gratis Kennismaking | CrossFit Alkmaar",
     description:
       "Plan je gratis kennismaking. Maak kennis met onze coaches en ontdek welk programma bij jou past.",
-    url: "https://crossfitalkmaar.com/free-intro",
+    url: "https://www.crossfitalkmaar.com/free-intro",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/free-intro",
+    canonical: "https://www.crossfitalkmaar.com/free-intro",
   },
 };
 

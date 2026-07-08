@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Sporten in de Overgang Alkmaar | CrossFit Alkmaar",
     description:
       "Krachttraining helpt bij overgangsklachten. Betere botdichtheid, meer energie, minder klachten. Professionele begeleiding.",
-    url: "https://crossfitalkmaar.com/sporten-overgang-alkmaar",
+    url: "https://www.crossfitalkmaar.com/sporten-overgang-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/sporten-overgang-header.jpg",
+        url: "https://www.crossfitalkmaar.com/images/sporten-overgang-header.jpg",
         width: 1200,
         height: 630,
         alt: "Sporten in de Overgang Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/sporten-overgang-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/sporten-overgang-alkmaar",
   },
 };
 

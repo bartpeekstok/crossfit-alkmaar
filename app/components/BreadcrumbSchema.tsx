@@ -57,7 +57,7 @@ export default function BreadcrumbSchema() {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://crossfitalkmaar.com",
+      item: "https://www.crossfitalkmaar.com",
     },
   ];
 
@@ -70,7 +70,7 @@ export default function BreadcrumbSchema() {
       "@type": "ListItem",
       position: index + 2,
       name: name,
-      item: `https://crossfitalkmaar.com${currentPath}`,
+      item: `https://www.crossfitalkmaar.com${currentPath}`,
     });
   });
 

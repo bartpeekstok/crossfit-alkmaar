@@ -97,7 +97,7 @@ export default function EventsPage() {
             itemListElement: EVENTS.map((e, i) => ({
               "@type": "ListItem",
               position: i + 1,
-              ...(e.href ? { url: `https://crossfitalkmaar.com${e.href}` } : {}),
+              ...(e.href ? { url: `https://www.crossfitalkmaar.com${e.href}` } : {}),
               name: `${e.title} - ${e.dateLabel}`,
             })),
           }),

@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "Privacy Policy | CrossFit Alkmaar",
     description:
       "Lees hoe CrossFit Alkmaar omgaat met jouw persoonlijke gegevens en hoe we deze beschermen.",
-    url: "https://crossfitalkmaar.com/privacy",
+    url: "https://www.crossfitalkmaar.com/privacy",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/privacy",
+    canonical: "https://www.crossfitalkmaar.com/privacy",
   },
 };
 

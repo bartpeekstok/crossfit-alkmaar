@@ -25,13 +25,13 @@ export default function SmallGroupTrainingPage() {
 
   return (
     <>
-      <ServiceSchema name="Small Group Training" description="Training in kleine groepen met persoonlijke aandacht. BUILD is voor wie meer wil dan een reguliere groepsles." url="https://crossfitalkmaar.com/small-group-training" />
+      <ServiceSchema name="Small Group Training" description="Training in kleine groepen met persoonlijke aandacht. BUILD is voor wie meer wil dan een reguliere groepsles." url="https://www.crossfitalkmaar.com/small-group-training" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
         { "@type": "Question", name: "Wat is Small Group Training bij CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "Semi personal training in een vaste groep van maximaal 6 personen. Je krijgt persoonlijke aandacht van de coach gecombineerd met de motivatie van samen trainen." } },
         { "@type": "Question", name: "Wat kost Small Group Training?", acceptedAnswer: { "@type": "Answer", text: "Onze tarieven voor BUILD Small Group Training bespreken we tijdens je gratis kennismaking. Inclusief groepslessen en een programma op maat. Maandelijks opzegbaar." } },
         { "@type": "Question", name: "Wat is het verschil met groepslessen?", acceptedAnswer: { "@type": "Answer", text: "Bij Small Group Training train je in een vaste groep van max 6 (i.p.v. 12), met een programma op maat en meer persoonlijke aandacht. Het is de tussenstap tussen groepslessen en personal training." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

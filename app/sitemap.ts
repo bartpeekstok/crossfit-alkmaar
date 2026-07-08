@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://crossfitalkmaar.com";
+  const baseUrl = "https://www.crossfitalkmaar.com";
 
   // Blog posts - voeg hier nieuwe blogs toe
   const blogPosts: string[] = [

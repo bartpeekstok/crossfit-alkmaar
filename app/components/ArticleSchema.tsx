@@ -54,7 +54,7 @@ export default function ArticleSchema({
       worksFor: {
         "@type": "Organization",
         name: "CrossFit Alkmaar",
-        url: "https://crossfitalkmaar.com",
+        url: "https://www.crossfitalkmaar.com",
       },
     },
     publisher: {
@@ -62,15 +62,15 @@ export default function ArticleSchema({
       name: "CrossFit Alkmaar",
       logo: {
         "@type": "ImageObject",
-        url: "https://crossfitalkmaar.com/images/logo_dark.png",
+        url: "https://www.crossfitalkmaar.com/images/logo_dark.png",
       },
     },
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://crossfitalkmaar.com/blog/${slug}`,
+      "@id": `https://www.crossfitalkmaar.com/blog/${slug}`,
     },
     articleSection: category,
-    url: `https://crossfitalkmaar.com/blog/${slug}`,
+    url: `https://www.crossfitalkmaar.com/blog/${slug}`,
   };
 
   return (

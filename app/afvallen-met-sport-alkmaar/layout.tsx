@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Afvallen met Sport Alkmaar | CrossFit Alkmaar",
     description:
       "Duurzaam afvallen door krachttraining en conditie. Professionele coaching en voedingsadvies.",
-    url: "https://crossfitalkmaar.com/afvallen-met-sport-alkmaar",
+    url: "https://www.crossfitalkmaar.com/afvallen-met-sport-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-december-lowres-21.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-december-lowres-21.jpg",
         width: 1200,
         height: 630,
         alt: "Afvallen met Sport Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/afvallen-met-sport-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/afvallen-met-sport-alkmaar",
   },
 };
 

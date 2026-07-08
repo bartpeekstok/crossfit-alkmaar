@@ -68,7 +68,7 @@ export default function SeoLanding({
   ctaSubtitle = "Plan een gratis kennismakingsgesprek en ontdek hoe wij je kunnen helpen.",
 }: SeoLandingProps) {
   const { open } = useLeadModal();
-  const url = `https://crossfitalkmaar.com/${slug}`;
+  const url = `https://www.crossfitalkmaar.com/${slug}`;
 
   const openModal = (source: string, section: string) => (e: React.MouseEvent) => {
     e.preventDefault();
@@ -104,7 +104,7 @@ export default function SeoLanding({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
+            "@id": "https://www.crossfitalkmaar.com/#organization",
             name: "CrossFit Alkmaar",
             aggregateRating: {
               "@type": "AggregateRating",

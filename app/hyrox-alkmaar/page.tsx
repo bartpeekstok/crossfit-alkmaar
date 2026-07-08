@@ -16,7 +16,7 @@ export default function HyroxAlkmaarPage() {
       <ServiceSchema
         name="HYROX Alkmaar - CrossFit Alkmaar"
         description="Officiële HYROX gym in Alkmaar. Training, events en alles wat je nodig hebt voor HYROX bij CrossFit Alkmaar."
-        url="https://crossfitalkmaar.com/hyrox-alkmaar"
+        url="https://www.crossfitalkmaar.com/hyrox-alkmaar"
       />
       <script
         type="application/ld+json"
@@ -67,7 +67,7 @@ export default function HyroxAlkmaarPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
+            "@id": "https://www.crossfitalkmaar.com/#organization",
             name: "CrossFit Alkmaar",
             aggregateRating: {
               "@type": "AggregateRating",

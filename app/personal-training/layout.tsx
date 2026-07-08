@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: "Personal Training | Maximaal Resultaat",
     description:
       "Eén-op-één coaching volledig afgestemd op jouw doelen. Sneller resultaat met persoonlijke aandacht.",
-    url: "https://crossfitalkmaar.com/personal-training",
+    url: "https://www.crossfitalkmaar.com/personal-training",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/personal-training",
+    canonical: "https://www.crossfitalkmaar.com/personal-training",
   },
 };
 

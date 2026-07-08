@@ -9,14 +9,14 @@ export const metadata: Metadata = {
     title: "28 Day Kickstart | Begin Jouw Transformatie",
     description:
       "In 4 weken van beginner naar fit. Persoonlijke begeleiding, voedingsadvies en een sterke basis.",
-    url: "https://crossfitalkmaar.com/kickstart",
+    url: "https://www.crossfitalkmaar.com/kickstart",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/kickstart",
+    canonical: "https://www.crossfitalkmaar.com/kickstart",
     languages: {
-      "nl-NL": "https://crossfitalkmaar.com/kickstart",
-      "en-GB": "https://crossfitalkmaar.com/en/kickstart",
-      "de-DE": "https://crossfitalkmaar.com/de/kickstart",
+      "nl-NL": "https://www.crossfitalkmaar.com/kickstart",
+      "en-GB": "https://www.crossfitalkmaar.com/en/kickstart",
+      "de-DE": "https://www.crossfitalkmaar.com/de/kickstart",
     },
   },
 };

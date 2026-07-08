@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: "Voedingsadvies | Eet Slim, Presteer Beter",
     description:
       "Praktisch voedingsadvies dat past bij jouw levensstijl. Geen diëten, wel resultaat.",
-    url: "https://crossfitalkmaar.com/voedingsadvies",
+    url: "https://www.crossfitalkmaar.com/voedingsadvies",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/voedingsadvies",
+    canonical: "https://www.crossfitalkmaar.com/voedingsadvies",
   },
 };
 

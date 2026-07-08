@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Small Group Training Alkmaar | CrossFit Alkmaar",
     description:
       "Train in kleine groepen van max 12 met persoonlijke coaching. De voordelen van personal training met groepsenergie.",
-    url: "https://crossfitalkmaar.com/small-group-training-alkmaar",
+    url: "https://www.crossfitalkmaar.com/small-group-training-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-sept-lowres-46.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-sept-lowres-46.jpg",
         width: 1200,
         height: 630,
         alt: "Small Group Training Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/small-group-training-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/small-group-training-alkmaar",
   },
 };
 

@@ -24,14 +24,14 @@ export default function TienersPage() {
   return (
     <>
       <style>{`.ppg3 { grid-template-columns: repeat(3,1fr); } @media (max-width:720px){ .ppg3 { grid-template-columns: 1fr; } }`}</style>
-      <ServiceSchema name="Tieners Programma" description="Speciaal trainingsprogramma voor jongeren van 14 t/m 17 jaar. Veilig leren trainen met professionele begeleiding." url="https://crossfitalkmaar.com/tieners" />
+      <ServiceSchema name="Tieners Programma" description="Speciaal trainingsprogramma voor jongeren van 14 t/m 17 jaar. Veilig leren trainen met professionele begeleiding." url="https://www.crossfitalkmaar.com/tieners" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
         { "@type": "Question", name: "Voor welke leeftijd is het tienerprogramma?", acceptedAnswer: { "@type": "Answer", text: "Het tienerprogramma is voor jongeren van 14 tot en met 17 jaar." } },
         { "@type": "Question", name: "Heeft mijn kind sportervaring nodig?", acceptedAnswer: { "@type": "Answer", text: "Nee, geen ervaring nodig. We beginnen bij de basis en bouwen stap voor stap op. Elke training wordt afgestemd op het niveau van je kind." } },
         { "@type": "Question", name: "Wat kost het tienerprogramma?", acceptedAnswer: { "@type": "Answer", text: "Het tienerprogramma kost €70 per maand voor twee keer per week trainen. De kennismaking is gratis." } },
         { "@type": "Question", name: "Waarom CrossFit Alkmaar en niet een gewone sportschool?", acceptedAnswer: { "@type": "Answer", text: "Bij grote sportscholen worden jongeren zonder begeleiding aan hun lot overgelaten. Bij ons staat er altijd een professionele coach naast je kind die zorgt voor veilige en effectieve training." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     title: "Programma's | CrossFit Alkmaar",
     description:
       "Ontdek alle trainingsprogramma's van CrossFit Alkmaar. Voor elk niveau en elke doelstelling.",
-    url: "https://crossfitalkmaar.com/programmas",
+    url: "https://www.crossfitalkmaar.com/programmas",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/programmas",
+    canonical: "https://www.crossfitalkmaar.com/programmas",
   },
 };
 

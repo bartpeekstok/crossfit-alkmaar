@@ -1,11 +1,11 @@
 # Robots.txt voor CrossFit Alkmaar
-# https://crossfitalkmaar.com
+# https://www.crossfitalkmaar.com
 
 User-agent: *
 Allow: /
 
 # Sitemap locatie
-Sitemap: https://crossfitalkmaar.com/sitemap.xml
+Sitemap: https://www.crossfitalkmaar.com/sitemap.xml
 
 # Blokkeer interne API routes
 Disallow: /api/

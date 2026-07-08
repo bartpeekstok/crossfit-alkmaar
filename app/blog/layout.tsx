@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: "Blog | Fitness Tips & Inspiratie",
     description:
       "Gratis tips over training, voeding en mindset. Alles wat je nodig hebt om je doelen te bereiken.",
-    url: "https://crossfitalkmaar.com/blog",
+    url: "https://www.crossfitalkmaar.com/blog",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/blog",
+    canonical: "https://www.crossfitalkmaar.com/blog",
   },
 };
 

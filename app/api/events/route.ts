@@ -3,7 +3,7 @@ import { EVENTS } from "../../events/eventsData";
 
 // Publieke, leesbare lijst van events voor externe consumers (o.a. de lounge-slideshow).
 // CORS open zodat de slideshow-app dit cross-origin kan ophalen.
-// GET https://crossfitalkmaar.com/api/events
+// GET https://www.crossfitalkmaar.com/api/events
 
 const SITE = "https://www.crossfitalkmaar.com";
 

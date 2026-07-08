@@ -15,12 +15,12 @@ export default function HyroxSimulatie22Aug() {
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         location: { "@type": "Place", name: "CrossFit Alkmaar", address: { "@type": "PostalAddress", streetAddress: "Phoenixstraat 33", addressLocality: "Alkmaar", postalCode: "1812 PP", addressCountry: "NL" } },
-        organizer: { "@type": "Organization", name: "CrossFit Alkmaar", url: "https://crossfitalkmaar.com" },
+        organizer: { "@type": "Organization", name: "CrossFit Alkmaar", url: "https://www.crossfitalkmaar.com" },
         offers: [
           { "@type": "Offer", name: "CFA-leden", price: "10", priceCurrency: "EUR" },
           { "@type": "Offer", name: "Niet-leden", price: "30", priceCurrency: "EUR" },
         ],
-        image: "https://crossfitalkmaar.com/redesign/assets/header-hyrox.jpg",
+        image: "https://www.crossfitalkmaar.com/redesign/assets/header-hyrox.jpg",
       }) }} />
       <HyroxSimulatie
         dateLabel="Zaterdag 22 augustus 2026"

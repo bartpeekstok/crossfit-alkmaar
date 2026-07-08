@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Sportschool met Begeleiding Alkmaar | CrossFit Alkmaar",
     description:
       "Train altijd onder leiding van een professionele coach. Kleine groepen, persoonlijke aandacht.",
-    url: "https://crossfitalkmaar.com/sportschool-begeleiding-alkmaar",
+    url: "https://www.crossfitalkmaar.com/sportschool-begeleiding-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-januari-lowres-34.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-januari-lowres-34.jpg",
         width: 1200,
         height: 630,
         alt: "Sportschool met Begeleiding Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/sportschool-begeleiding-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/sportschool-begeleiding-alkmaar",
   },
 };
 

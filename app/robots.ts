@@ -24,6 +24,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/faq", "/intake-geboekt", "/bedankt", "/start", "/welkom-terug", "/hyrox-betaald"],
       },
     ],
-    sitemap: "https://crossfitalkmaar.com/sitemap.xml",
+    sitemap: "https://www.crossfitalkmaar.com/sitemap.xml",
   };
 }

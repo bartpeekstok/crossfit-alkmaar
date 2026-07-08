@@ -6,19 +6,19 @@ export const metadata: Metadata = {
     "Personal training in Alkmaar bij CrossFit Alkmaar. Individuele begeleiding afgestemd op jouw doelen en niveau.",
   keywords: ["personal training Alkmaar", "PT sessie Alkmaar", "individuele training Alkmaar", "personal training begeleiding Alkmaar", "1 op 1 coaching Alkmaar", "personal training op maat Alkmaar"],
   alternates: {
-    canonical: "https://crossfitalkmaar.com/personal-training-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/personal-training-alkmaar",
   },
   openGraph: {
     title: "Personal Training Alkmaar | CrossFit Alkmaar",
     description:
       "Personal training in Alkmaar bij CrossFit Alkmaar. Individuele begeleiding afgestemd op jouw doelen en niveau.",
-    url: "https://crossfitalkmaar.com/personal-training-alkmaar",
+    url: "https://www.crossfitalkmaar.com/personal-training-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/personal-training-header.jpg",
+        url: "https://www.crossfitalkmaar.com/images/personal-training-header.jpg",
         width: 1200,
         height: 630,
         alt: "Personal Training Alkmaar - CrossFit Alkmaar",

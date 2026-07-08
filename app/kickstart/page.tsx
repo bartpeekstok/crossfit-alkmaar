@@ -31,7 +31,7 @@ export default function KickstartPage() {
       <ServiceSchema
         name="28 Day Kickstart"
         description="4 weken introductieprogramma voor beginners. Bouw een sterke basis op met begeleide trainingen en voedingsadvies."
-        url="https://crossfitalkmaar.com/kickstart"
+        url="https://www.crossfitalkmaar.com/kickstart"
       />
       <script
         type="application/ld+json"
@@ -54,7 +54,7 @@ export default function KickstartPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "HealthClub",
-            "@id": "https://crossfitalkmaar.com/#organization",
+            "@id": "https://www.crossfitalkmaar.com/#organization",
             name: "CrossFit Alkmaar",
             aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" },
           }),

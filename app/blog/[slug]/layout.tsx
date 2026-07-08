@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${post.title} | CrossFit Alkmaar`,
       description: post.excerpt,
-      url: `https://crossfitalkmaar.com/blog/${slug}`,
+      url: `https://www.crossfitalkmaar.com/blog/${slug}`,
       type: "article",
       images: [
         {
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: [post.image],
     },
     alternates: {
-      canonical: `https://crossfitalkmaar.com/blog/${slug}`,
+      canonical: `https://www.crossfitalkmaar.com/blog/${slug}`,
     },
   };
 }

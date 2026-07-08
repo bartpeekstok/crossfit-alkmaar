@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: "Groepslessen | Samen Sterker Worden",
     description:
       "Gevarieerde workouts in een motiverende groep. Elke les anders, altijd uitdagend.",
-    url: "https://crossfitalkmaar.com/groepslessen",
+    url: "https://www.crossfitalkmaar.com/groepslessen",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/groepslessen",
+    canonical: "https://www.crossfitalkmaar.com/groepslessen",
   },
 };
 

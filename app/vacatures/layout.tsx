@@ -8,10 +8,10 @@ export const metadata: Metadata = {
     title: "Vacatures | CrossFit Alkmaar",
     description:
       "Werk bij CrossFit Alkmaar! Bekijk onze vacatures en word onderdeel van ons team.",
-    url: "https://crossfitalkmaar.com/vacatures",
+    url: "https://www.crossfitalkmaar.com/vacatures",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/vacatures",
+    canonical: "https://www.crossfitalkmaar.com/vacatures",
   },
 };
 

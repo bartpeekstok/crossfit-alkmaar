@@ -36,7 +36,7 @@ export default function HyroxPftAlkmaarPage() {
             organizer: {
               "@type": "Organization",
               name: "CrossFit Alkmaar",
-              url: "https://crossfitalkmaar.com",
+              url: "https://www.crossfitalkmaar.com",
             },
             offers: {
               "@type": "Offer",
@@ -45,7 +45,7 @@ export default function HyroxPftAlkmaarPage() {
               availability: "https://schema.org/InStock",
               url: "https://pft.hyrox.com/event/e2ef2440-04ea-4d8c-ace0-63834fed4f42",
             },
-            image: "https://crossfitalkmaar.com/images/hyrox-pft-header.jpg",
+            image: "https://www.crossfitalkmaar.com/images/hyrox-pft-header.jpg",
           }),
         }}
       />

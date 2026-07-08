@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "CrossFit voor Vrouwen Alkmaar | CrossFit Alkmaar",
     description:
       "Word sterker, fitter en zelfverzekerder. CrossFit voor vrouwen met professionele coaching in kleine groepen.",
-    url: "https://crossfitalkmaar.com/crossfit-vrouwen-alkmaar",
+    url: "https://www.crossfitalkmaar.com/crossfit-vrouwen-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-november-lowres-12.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-november-lowres-12.jpg",
         width: 1200,
         height: 630,
         alt: "CrossFit voor Vrouwen Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/crossfit-vrouwen-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/crossfit-vrouwen-alkmaar",
   },
 };
 

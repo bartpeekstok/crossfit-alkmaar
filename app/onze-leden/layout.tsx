@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     title: "Onze Leden | CrossFit Alkmaar",
     description:
       "Verhalen van echte leden van CrossFit Alkmaar. Bekijk video's en ontdek waarom zij kozen voor ons.",
-    url: "https://crossfitalkmaar.com/onze-leden",
+    url: "https://www.crossfitalkmaar.com/onze-leden",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/onze-leden",
+    canonical: "https://www.crossfitalkmaar.com/onze-leden",
   },
 };
 

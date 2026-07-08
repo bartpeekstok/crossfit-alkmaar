@@ -9,10 +9,10 @@ export const metadata: Metadata = {
     title: "Tieners | CrossFit voor Jongeren",
     description:
       "Speciaal programma voor tieners (14-17 jaar). Leer veilig en effectief trainen met professionele coaching. Goed voor kracht en zelfvertrouwen.",
-    url: "https://crossfitalkmaar.com/tieners",
+    url: "https://www.crossfitalkmaar.com/tieners",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/tieners",
+    canonical: "https://www.crossfitalkmaar.com/tieners",
   },
 };
 

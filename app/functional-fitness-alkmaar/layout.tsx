@@ -9,13 +9,13 @@ export const metadata: Metadata = {
     title: "Functional Fitness Alkmaar | CrossFit Alkmaar",
     description:
       "Train bewegingen die je dagelijks gebruikt. Functional fitness met professionele coaching in kleine groepen.",
-    url: "https://crossfitalkmaar.com/functional-fitness-alkmaar",
+    url: "https://www.crossfitalkmaar.com/functional-fitness-alkmaar",
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
     images: [
       {
-        url: "https://crossfitalkmaar.com/images/CFA-november-lowres-94.jpg",
+        url: "https://www.crossfitalkmaar.com/images/CFA-november-lowres-94.jpg",
         width: 1200,
         height: 630,
         alt: "Functional Fitness Alkmaar - CrossFit Alkmaar",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     ],
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/functional-fitness-alkmaar",
+    canonical: "https://www.crossfitalkmaar.com/functional-fitness-alkmaar",
   },
 };
 

@@ -14,10 +14,10 @@ export const metadata: Metadata = {
     title: "Meer Informatie | CrossFit Alkmaar",
     description:
       "Alles wat je wilt weten over CrossFit Alkmaar. Faciliteiten, trainingstijden, prijzen en meer.",
-    url: "https://crossfitalkmaar.com/meer-info",
+    url: "https://www.crossfitalkmaar.com/meer-info",
   },
   alternates: {
-    canonical: "https://crossfitalkmaar.com/meer-info",
+    canonical: "https://www.crossfitalkmaar.com/meer-info",
   },
 };
 
