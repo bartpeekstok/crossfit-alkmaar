@@ -62,6 +62,29 @@ function scrollToEl(el: HTMLElement | null) {
   window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
 }
 
+// Meta browser-identifiers (_fbc = Click ID, _fbp = Browser ID) meesturen naar
+// de betaal-backend, zodat het server-side CAPI Purchase-event (msp-notify.js)
+// ze in user_data kan zetten. Zonder deze cookies kan Meta de betaling veel
+// slechter aan een advertentieklik koppelen. De Pixel zet ze zelf als cookie.
+function readCookie(name: string): string {
+  if (typeof document === "undefined") return "";
+  const m = document.cookie.match(new RegExp("(?:^|; )" + name + "=([^;]*)"));
+  return m ? decodeURIComponent(m[1]) : "";
+}
+// Geen _fbc-cookie maar wél een fbclid in de URL (net vanaf een advertentie
+// geland)? Dan bouwen we fbc zelf op volgens Meta's format:
+// fb.<subdomainIndex>.<timestamp_ms>.<fbclid> — fbclid ongewijzigd laten
+// (case-sensitive) en subdomainIndex 1 als je 'm zelf genereert.
+function metaFbc(): string {
+  const c = readCookie("_fbc");
+  if (c) return c;
+  try {
+    const fbclid = new URLSearchParams(window.location.search).get("fbclid");
+    if (fbclid) return `fb.1.${Date.now()}.${fbclid}`;
+  } catch {}
+  return "";
+}
+
 // ── Zelfstandig inline inschrijf-component (plaats op elke CTA-plek) ─────────
 export default function HyroxRegistration({
   eventDate,
@@ -130,6 +153,9 @@ export default function HyroxRegistration({
       geschatte_eindtijd: vals.eindtijd, evenement: "HYROX Simulatie",
       bron: "Website - HYROX inschrijving",
       pagina: typeof location !== "undefined" ? location.href : "",
+      // Meta Click ID + Browser ID voor server-side CAPI-matching (zie boven).
+      fbc: metaFbc(),
+      fbp: readCookie("_fbp"),
     };
 
     // Meta Pixel: inschrijving verstuurd (checkout gestart). Vuurt in de browser,
