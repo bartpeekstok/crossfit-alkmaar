@@ -17,11 +17,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
+  const seoTitle = post.metaTitle ?? post.title;
+
   return {
-    title: post.title,
+    title: seoTitle,
     description: post.excerpt,
     openGraph: {
-      title: `${post.title} | CrossFit Alkmaar`,
+      title: `${seoTitle} | CrossFit Alkmaar`,
       description: post.excerpt,
       url: `https://www.crossfitalkmaar.com/blog/${slug}`,
       type: "article",

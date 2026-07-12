@@ -50,6 +50,23 @@ export default function BlogPostPage() {
         author={post.author}
       />
 
+      {post.faq && post.faq.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: post.faq.map((f) => ({
+                "@type": "Question",
+                name: f.question,
+                acceptedAnswer: { "@type": "Answer", text: f.answer },
+              })),
+            }),
+          }}
+        />
+      )}
+
       {/* Hero */}
       <section
         className="relative text-white py-20 px-6 min-h-[400px] flex items-end"

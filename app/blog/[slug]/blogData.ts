@@ -1,15 +1,113 @@
 // Blog post data - single source of truth for both listing and detail pages
 export interface BlogPost {
   title: string;
+  // Optioneel: aparte <title>-tag voor SEO als die afwijkt van de zichtbare H1
+  metaTitle?: string;
   date: string;
   author: string;
   category: string;
   image: string;
   excerpt: string;
   content: string;
+  // Optioneel: vragen voor FAQPage-schema (rich results). Vul aan als de blog een FAQ-blok heeft.
+  faq?: { question: string; answer: string }[];
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "sportschool-kiezen-alkmaar": {
+    title: "Sportschool kiezen in Alkmaar: een eerlijke vergelijking",
+    metaTitle: "Sportschool kiezen in Alkmaar? Zo maak je de juiste keuze",
+    date: "2026-07-12",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Dit is CFA",
+    image: "/redesign/assets/header-community.jpg",
+    excerpt: "Twijfel je tussen sportscholen in Alkmaar? Een eerlijke vergelijking van begeleiding, prijs en aanbod, inclusief wanneer wij níet de beste keuze zijn.",
+    faq: [
+      {
+        question: "Wat is de beste sportschool in Alkmaar?",
+        answer: "Dat hangt af van wat jij nodig hebt. Zoek je maximale variatie en faciliteiten, kies dan een grote health club. Is jouw echte uitdaging volhouden, of begin je zonder trainingservaring, dan past een sportschool met kleine groepen en vaste coaches zoals CrossFit Alkmaar het best.",
+      },
+      {
+        question: "Wat is het verschil tussen CrossFit Alkmaar en een grote sportschool?",
+        answer: "Bij een grote sportschool train je grotendeels zelfstandig of in grote groepen. Bij CrossFit Alkmaar train je altijd onder begeleiding van een vaste coach, start je in groepen van maximaal 6 personen, en heb je elke drie maanden een check-in gesprek over je voortgang.",
+      },
+      {
+        question: "Is CrossFit niet te zwaar voor beginners?",
+        answer: "Nee. Elke training wordt geschaald naar jouw niveau. Onze gemiddelde leeftijd is 35+ en we hebben leden van 20 tot 70+. Iedereen start met de 28 Day Kickstart, waarin je in vier weken de basis leert in een kleine groep.",
+      },
+      {
+        question: "Kan ik eerst kennismaken voordat ik lid word?",
+        answer: "Ja. Je start met een gratis kennismaking waarin we je doelen en eventuele beperkingen bespreken. Daarna beslis je zelf of je begint. Alle abonnementen zijn maandelijks opzegbaar.",
+      },
+    ],
+    content: `
+      <p>Je wilt fitter worden. Je hebt gezocht op "sportschool Alkmaar" en je hebt een paar opties gevonden: grote health clubs met alles onder één dak, en wij. Allemaal beloven we ongeveer hetzelfde: goede begeleiding, fijne sfeer, resultaat.</p>
+
+      <p>Dus hoe kies je?</p>
+
+      <p>Wij denken: door de juiste vraag te stellen. Niet "welke sportschool is de beste?", maar "waarom is het me tot nu toe niet gelukt?"</p>
+
+      <h2>De vraag die bijna niemand stelt</h2>
+
+      <p>De meeste mensen die een sportschool zoeken, zoeken niet hun éérste sportschool. Ze zijn al eens lid geweest. Ergens anders, of jaren geleden. En op een gegeven moment gestopt.</p>
+
+      <p>Dat is geen karakterfout. Uit onderzoek en uit onze eigen ervaring blijkt telkens hetzelfde: mensen stoppen niet omdat ze lui zijn. Ze stoppen omdat niemand het merkt als ze wegblijven. Geen begeleiding, geen verbinding, geen reden om terug te komen.</p>
+
+      <p>Als dat jouw patroon is, dan is de belangrijkste vraag bij het kiezen van een sportschool niet "waar is het aanbod het grootst?" of "waar is het het goedkoopst?", maar: <strong>"waar houd ik het vol?"</strong></p>
+
+      <h2>Waar je écht op moet vergelijken</h2>
+
+      <p>Vier dingen zeggen meer dan alle mooie foto's op een website. Stel ze bij elke sportschool die je overweegt.</p>
+
+      <h2>1. Hoeveel mensen staan er in de les, en hoeveel coaches?</h2>
+
+      <p>Dit is het eerlijkste getal dat er is. Een coach kan maar een beperkt aantal mensen tegelijk echt zien. Bij een groep van vijftien tot twintig personen kan een goede trainer de sfeer bewaken en de grootste fouten eruit halen. Maar jouw techniek opbouwen, jouw beperkingen kennen, merken dat jij er deze week niet was? Dat lukt niet.</p>
+
+      <p>Vraag bij elke sportschool die je overweegt: hoe groot zijn de groepen, en hoeveel begeleiding krijg ik als beginner? Bij ons start iedereen in de <a href="/kickstart">28 Day Kickstart</a> met maximaal 6 personen per groep. Niet omdat groter niet rendabeler zou zijn, maar omdat we anders onze belangrijkste belofte niet kunnen waarmaken.</p>
+
+      <h2>2. Wat gebeurt er als je een keer wegblijft?</h2>
+
+      <p>Bij de meeste sportscholen: niets. Je abonnement loopt door, je plek in de les gaat naar een ander, en niemand belt.</p>
+
+      <p>Vraag ernaar. "Wat doen jullie als ik twee weken niet kom opdagen?" Het antwoord vertelt je precies hoe het lidmaatschap er over een jaar uitziet. Bij ons kent je coach je bij naam, en elke drie maanden heb je een check-in gesprek. Blijf je weg, dan merken we dat, en dan hoor je van ons.</p>
+
+      <h2>3. Breedte of diepte?</h2>
+
+      <p>Hier moeten we eerlijk zijn: als je vooral variatie en faciliteiten zoekt, zijn er in Alkmaar plekken met een breder aanbod dan wij. Padel, yoga, cycling, sauna, een bar met een daghap. Als je al jaren zelfstandig traint, een goede basis hebt en gewoon een fijne plek zoekt met veel keuze, dan is zo'n health club een prima optie. Serieus.</p>
+
+      <p>Ons aanbod is bewust smaller: krachttraining, conditie en functioneel bewegen, <a href="/groepslessen">in kleine groepen met vaste coaches</a>. Diepte in plaats van breedte. Dat is geen beperking, dat is een keuze. Alles wat we doen staat in dienst van één ding: dat jij over een jaar nog steeds traint.</p>
+
+      <h2>4. Kun je het proberen, en wat kost het?</h2>
+
+      <p>Elke sportschool in Alkmaar biedt een manier om kennis te maken, en dat moet je vooral doen. Ga bij twee of drie plekken langs. Let niet alleen op de apparatuur, maar op de vraag die ze jóu stellen. Wordt er gevraagd naar je doelen, je blessures, wat je eerder hebt geprobeerd? Of krijg je een rondleiding langs de machines en een tarievenlijst?</p>
+
+      <p>Bij ons begint het met een <a href="/free-intro">gratis kennismaking</a>: een gesprek over jouw doelen en waar je tegenaan loopt, zodat we samen kunnen bepalen of we bij elkaar passen. Onze abonnementen zijn maandelijks opzegbaar en starten vanaf 70 euro per maand.</p>
+
+      <h2>Het verhaal dat dit het beste samenvat</h2>
+
+      <p>Een van onze leden vertrok een tijd geleden naar een grote health club in Alkmaar. Logische keuze: meer faciliteiten, meer lessoorten, mooie club. En na een tijdje stond hij weer bij ons voor de deur.</p>
+
+      <p>Niet omdat die club slecht is. Maar omdat hij daar merkte wat hij bij ons had gehad zonder het door te hebben: coaches die zijn techniek kenden, die zagen wanneer hij vastliep, en die het merkten als hij er niet was. Met een goede basis red je je prima in een grote zaal. Maar de begeleiding die die basis bouwt en onderhoudt, die vond hij daar niet terug.</p>
+
+      <p>Dat is de kern van deze hele vergelijking. Grote clubs werken voor mensen die al kunnen trainen. Wij zijn er voor het stuk daarvóór, en voor iedereen die weet dat volhouden zijn echte uitdaging is.</p>
+
+      <h2>Zo maak je je keuze</h2>
+
+      <p>Ga bij minimaal twee plekken kijken. Stel overal dezelfde drie vragen: hoe groot zijn de groepen, wat gebeurt er als ik wegblijf, en hoe ziet mijn eerste maand eruit? Kies daarna niet de plek met de mooiste zaal, maar de plek waar je het antwoord op die vragen het meest vertrouwde.</p>
+
+      <p>En als je denkt dat wij bij je passen: kom vrijblijvend langs voor een <a href="/free-intro">gratis kennismaking</a>. Geen verplichtingen, geen verkooppraatje. Gewoon een gesprek over waar jij naartoe wilt.</p>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <p><strong>Wat is de beste sportschool in Alkmaar?</strong> Dat hangt af van wat jij nodig hebt. Zoek je maximale variatie en faciliteiten, kies dan een grote health club. Is jouw echte uitdaging volhouden, of begin je zonder trainingservaring, dan past een sportschool met kleine groepen en vaste coaches zoals CrossFit Alkmaar het best.</p>
+
+      <p><strong>Wat is het verschil tussen CrossFit Alkmaar en een grote sportschool?</strong> Bij een grote sportschool train je grotendeels zelfstandig of in grote groepen. Bij CrossFit Alkmaar train je altijd onder begeleiding van een vaste coach, start je in groepen van maximaal 6 personen, en heb je elke drie maanden een check-in gesprek over je voortgang.</p>
+
+      <p><strong>Is CrossFit niet te zwaar voor beginners?</strong> Nee. Elke training wordt geschaald naar jouw niveau. Onze gemiddelde leeftijd is 35+ en we hebben leden van 20 tot 70+. Iedereen start met de <a href="/kickstart">28 Day Kickstart</a>, waarin je in vier weken de basis leert in een kleine groep.</p>
+
+      <p><strong>Kan ik eerst kennismaken voordat ik lid word?</strong> Ja. Je start met een <a href="/free-intro">gratis kennismaking</a> waarin we je doelen en eventuele beperkingen bespreken. Daarna beslis je zelf of je begint. Alle abonnementen zijn maandelijks opzegbaar.</p>
+    `,
+  },
   "tienerprogramma-bij-crossfit-alkmaar": {
     title: "Tienerprogramma bij CrossFit Alkmaar",
     date: "2026-04-07",
