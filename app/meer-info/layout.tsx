@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Meer Informatie",
+  title: "Lesrooster, Tarieven & Contact",
   description:
-    "Alles wat je wilt weten over CrossFit Alkmaar. Informatie over onze faciliteiten, trainingstijden, prijzen en meer.",
+    "Bekijk het lesrooster, de tarieven en de locatie van CrossFit Alkmaar. Alle praktische info op een rij, plus direct een gratis kennismaking plannen.",
   keywords: [
     "crossfit alkmaar informatie",
     "sportschool alkmaar info",

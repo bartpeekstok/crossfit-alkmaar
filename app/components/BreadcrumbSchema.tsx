@@ -40,6 +40,7 @@ const pathNames: { [key: string]: string } = {
   "small-group-training-alkmaar": "Small Group Training Alkmaar",
   "olympic-lifting-alkmaar": "Olympic Lifting Alkmaar",
   "sporten-overgang-alkmaar": "Sporten in de Overgang Alkmaar",
+  "crossfit-heerhugowaard": "CrossFit Heerhugowaard",
   "hyrox-alkmaar": "HYROX Alkmaar",
   "hyrox-pft-alkmaar": "HYROX PFT Alkmaar",
   "hyrox-simulatie-alkmaar": "HYROX Simulatie Alkmaar",

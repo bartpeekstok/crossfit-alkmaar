@@ -28,6 +28,7 @@ const PAGES_WITH_OWN_FAQ = [
   "/small-group-training-alkmaar",
   "/olympic-lifting-alkmaar",
   "/sporten-overgang-alkmaar",
+  "/crossfit-heerhugowaard",
 ];
 
 function GlobalFaqSchema({ faqSchema }: { faqSchema: object }) {

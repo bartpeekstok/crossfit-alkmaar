@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { blogPosts } from "../../blog/[slug]/blogData";
 
 const INDEXNOW_KEY = "d8e3f2a1b4c5d6e7f8a9b0c1d2e3f4a5";
 const SITE_URL = "https://www.crossfitalkmaar.com";
@@ -63,38 +64,10 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// GET endpoint to manually trigger indexing of all blog posts
+// GET endpoint to manually trigger indexing of all blog posts.
+// Blogslugs komen uit blogData.ts (single source of truth) zodat we
+// nooit verwijderde/dode URL's pingen.
 export async function GET() {
-  const blogSlugs = [
-    "sporten-drukke-baan",
-    "wat-is-crossfit",
-    "motivatie-sporten-behouden",
-    "groepslessen-vs-alleen-trainen",
-    "eerste-keer-crossfit",
-    "spiermassa-opbouwen",
-    "de-juiste-sportschool-kiezen",
-    "personal-training-alkmaar",
-    "fitness-voor-50-plussers",
-    "sportschool-voor-beginners",
-    "afvallen-in-alkmaar",
-    "krachttraining-alkmaar",
-    "hoe-vaak-moet-je-trainen",
-    "de-kracht-van-samen-trainen",
-    "functioneel-trainen-vs-machines",
-    "waarom-warming-up-onmisbaar-is",
-    "doelen-stellen-die-werken",
-    "training-als-stressverlichter",
-    "de-kracht-van-goede-voeding",
-    "herstel-de-vergeten-component",
-    "mindset-de-sleutel-tot-succes",
-    "waarom-krachttraining-voor-50-plussers",
-    "5-tips-om-consistent-te-blijven",
-    "wat-eet-je-voor-en-na-training",
-    "crossfit-voor-beginners",
-    "blessures-voorkomen",
-    "meer-energie-door-beweging",
-  ];
-
   const urls = [
     SITE_URL,
     `${SITE_URL}/blog`,
@@ -103,14 +76,18 @@ export async function GET() {
     `${SITE_URL}/personal-training`,
     `${SITE_URL}/small-group-training`,
     `${SITE_URL}/voedingsadvies`,
-    `${SITE_URL}/contact`,
+    `${SITE_URL}/meer-info`,
+    `${SITE_URL}/onze-leden`,
+    `${SITE_URL}/hyrox-gym-alkmaar`,
+    `${SITE_URL}/hyrox-simulatie-alkmaar`,
+    `${SITE_URL}/crossfit-heerhugowaard`,
     // English pages
     `${SITE_URL}/en`,
     `${SITE_URL}/en/kickstart`,
     // German pages
     `${SITE_URL}/de`,
     `${SITE_URL}/de/kickstart`,
-    ...blogSlugs.map((slug) => `${SITE_URL}/blog/${slug}`),
+    ...Object.keys(blogPosts).map((slug) => `${SITE_URL}/blog/${slug}`),
   ];
 
   // Submit to IndexNow

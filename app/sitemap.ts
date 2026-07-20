@@ -252,6 +252,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/crossfit-heerhugowaard`,
+      lastModified: new Date("2026-07-20"),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${baseUrl}/hyrox-alkmaar`,
       lastModified: new Date("2026-03-18"),
       changeFrequency: "monthly",

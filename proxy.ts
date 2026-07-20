@@ -45,6 +45,47 @@ const RESTORED: Record<string, string> = {
   "/dit-is-cfa/zo-ziet-een-intake-er-bij-ons-uit": "zo-ziet-een-intake-eruit",
 };
 
+// Verdwenen WP-content zonder 1-op-1 vervanger: oude URL -> best passende
+// bestaande pagina (op basis van Search Console-vertoningen, juli 2026).
+// Alleen inhoudelijk verwante doelen; de rest valt op de categorie-catch-all.
+const REMAP: Record<string, string> = {
+  // Oude /blog-URLs die niet zijn teruggezet
+  "/blog/fitness-voor-50-plussers": "/blog/krachttraining-50plus",
+  "/blog/waarom-krachttraining-voor-50-plussers": "/blog/krachttraining-50plus",
+  "/blog/wat-is-crossfit": "/blog/waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
+  "/blog/eerste-keer-crossfit": "/crossfit-beginners-alkmaar",
+  "/blog/crossfit-voor-beginners": "/crossfit-beginners-alkmaar",
+  "/blog/functioneel-trainen-vs-machines": "/functional-fitness-alkmaar",
+  "/blog/blessures-voorkomen": "/blog/blessures-en-trainen-bij-crossfit-alkmaar",
+  "/blog/5-tips-om-consistent-te-blijven": "/blog/doelen-stellen-die-werken",
+  // Topscoorders uit de oude categorieen
+  "/training/coaches-moet-je-spierpijn-hebben-na-elke-workout": "/blog/moet-je-spierpijn-hebben-na-elke-workout",
+  "/dit-is-cfa/waarom-crossfit-alkmaar-niet-concurreert-met-grote-gyms-of-zij-met-ons": "/blog/waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
+  "/gezond-eten/het-grote-geheim-over-gewicht-afvallen": "/blog/afvallen-in-alkmaar",
+  "/gezond-eten/hoe-krijg-ik-zo-snel-mogelijk-een-sixpack": "/blog/wat-eet-je-voor-en-na-training",
+  "/dit-is-cfa/wat-zijn-fitness-en-voedingstips-om-snel-spieren-op-te-bouwen": "/blog/wat-eet-je-voor-en-na-training",
+  "/dit-is-cfa/kan-ik-spiermassa-opbouwen-en-tegelijkertijd-droog-trainen": "/blog/wat-eet-je-voor-en-na-training",
+  "/dit-is-cfa/kun-je-een-sixpack-krijgen-van-hardlopen": "/blog/is-hardlopen-slecht-voor-je",
+  "/training/small-group-trainingen-persoonlijke-aandacht-in-een-vaste-groep": "/small-group-training",
+  "/dit-is-cfa/small-group-training-alle-voordelen-van-personal-training-zonder-het-prijskaartje": "/small-group-training",
+  "/training/waarom-trainen-op-vaste-momenten-werkt-small-group-training-bij-crossfit-alkmaar": "/small-group-training",
+  "/dit-is-cfa/28-day-kickstart-bij-crossfit-alkmaar": "/kickstart",
+  "/dit-is-cfa/een-nieuwe-start-in-2024-jouw-28-day-kickstart": "/kickstart",
+  "/dit-is-cfa/afvallen-in-alkmaar-28-day-kickstart": "/blog/afvallen-in-alkmaar",
+  "/dit-is-cfa/waarom-staan-de-tarieven-van-crossfit-alkmaar-niet-op-de-website-vermeld": "/meer-info",
+  "/dit-is-cfa/waarom-drie-keer-per-week-trainen-al-genoeg-is-om-verschil-te-merken": "/blog/drie-keer-per-week-trainen-werkt",
+  "/dit-is-cfa/personal-training-alkmaar-wanneer": "/blog/personal-training-alkmaar",
+  "/training/afvallen-als-doel-waarom-de-keuze-voor-de-juiste-sportschool-belangrijk-is": "/blog/de-juiste-sportschool-kiezen",
+  "/training/sporten-met-een-vol-hoofd": "/blog/training-als-stressverlichter",
+  "/training/starten-met-trainen": "/blog/sportschool-voor-beginners",
+  "/gezondheid/waarom-verlies-ik-mijn-conditie-zo-snel": "/blog/hoe-vaak-moet-je-trainen",
+  "/uncategorized/te-gespierd-van-crossfit-alkmaar": "/blog/ben-jij-fit-genoeg-voor-crossfit-alkmaar",
+  "/uncategorized/van-special-forces-naar-crossfit": "/onze-leden",
+  // Overige oude losse pagina's
+  "/gratis-voedingsintake": "/voedingsadvies",
+  "/strong-moms-gratis-intake": "/programmas",
+};
+
 export default function proxy(req: NextRequest) {
   const { pathname, search, origin } = req.nextUrl;
   const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
@@ -62,7 +103,26 @@ export default function proxy(req: NextRequest) {
   }
   if (newSlug) return redirectTo(`/blog/${newSlug}`);
 
-  // 2) standaard trailing-slash-normalisatie (zoals Next default)
+  // 2) expliciete remap van verdwenen content naar best passende pagina
+  if (REMAP[path]) return redirectTo(REMAP[path]);
+
+  // 3) vangnet voor alles wat overblijft in oude WP-categorieën
+  //    (categorie-index, /page/N-paginering en niet-teruggezette posts):
+  //    ledenverhalen -> /onze-leden, voeding -> /voedingsadvies, rest -> /blog
+  const catMatch = path.match(/^\/([^/]+)(\/.*)?$/);
+  if (catMatch && OLD_CATS.has(catMatch[1])) {
+    const rest = catMatch[2] ?? "";
+    if (catMatch[1] === "succesverhalen" || rest.startsWith("/verhalen-van-onze-leden")) {
+      return redirectTo("/onze-leden");
+    }
+    if (catMatch[1] === "gezond-eten") return redirectTo("/voedingsadvies");
+    return redirectTo("/blog");
+  }
+
+  // 4) oude blogpaginering /blog/page/N -> /blog
+  if (/^\/blog\/page\/\d+$/.test(path)) return redirectTo("/blog");
+
+  // 5) standaard trailing-slash-normalisatie (zoals Next default)
   if (path !== pathname) return redirectTo(path);
 
   return NextResponse.next();
