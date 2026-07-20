@@ -53,6 +53,7 @@ export const REDESIGNED_PATHS = [
   "/crossfit-heiloo",
   "/crossfit-bergen",
   "/crossfit-langedijk",
+  "/hyrox-heerhugowaard",
   // Ledenservice (geen SEO-landing, wel nieuwe huisstijl-chrome)
   "/faq",
   // Campagnepagina ex-leden (QR op ansichtkaart, noindex)

@@ -33,6 +33,7 @@ const PAGES_WITH_OWN_FAQ = [
   "/crossfit-heiloo",
   "/crossfit-bergen",
   "/crossfit-langedijk",
+  "/hyrox-heerhugowaard",
 ];
 
 function GlobalFaqSchema({ faqSchema }: { faqSchema: object }) {

@@ -32,6 +32,7 @@ export default function CrossfitHeerhugowaardPage() {
         <>
           <p>Iedereen begint met een gratis kennismakingsgesprek. We bespreken je doelen, laten de gym zien en leggen uit hoe het werkt. Geen verplichtingen.</p>
           <p>Daarna start je met de <Link href="/kickstart">Kickstart</Link>: een persoonlijk traject waarin je alle basisbewegingen leert. Zo stap je met vertrouwen de <Link href="/groepslessen">groepslessen</Link> in.</p>
+          <p>Train je voor een race? Bekijk dan ook <Link href="/hyrox-heerhugowaard">HYROX voor Heerhugowaard</Link>.</p>
         </>
       }
       aeoTitle="CrossFit in de buurt van Heerhugowaard"

@@ -44,6 +44,7 @@ const pathNames: { [key: string]: string } = {
   "crossfit-heiloo": "CrossFit Heiloo",
   "crossfit-bergen": "CrossFit Bergen NH",
   "crossfit-langedijk": "CrossFit Langedijk",
+  "hyrox-heerhugowaard": "HYROX Heerhugowaard",
   "hyrox-alkmaar": "HYROX Alkmaar",
   "hyrox-pft-alkmaar": "HYROX PFT Alkmaar",
   "hyrox-simulatie-alkmaar": "HYROX Simulatie Alkmaar",
