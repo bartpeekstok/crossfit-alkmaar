@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 
 // Pages that have their own FAQPage schema - skip global FAQ on these
 const PAGES_WITH_OWN_FAQ = [
+  "/hyrox-alkmaar",
   "/hyrox-pft-alkmaar",
   "/hyrox-simulatie-alkmaar",
   "/sportschool-alkmaar",

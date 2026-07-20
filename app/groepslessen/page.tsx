@@ -28,7 +28,7 @@ export default function GroepslessenPage() {
       <ServiceSchema name="Groepslessen" description="CrossFit groepslessen met gevarieerde workouts. Kracht, conditie en mobiliteit onder begeleiding van ervaren coaches." url="https://www.crossfitalkmaar.com/groepslessen" />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: [
         { "@type": "Question", name: "Wat zijn de groepslessen bij CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "Gevarieerde workouts in kleine groepen van maximaal 12 personen, begeleid door een professionele coach. Elke les combineert kracht, conditie en mobiliteit." } },
-        { "@type": "Question", name: "Welke soorten groepslessen zijn er?", acceptedAnswer: { "@type": "Answer", text: "We bieden drie soorten groepslessen: CrossFit (gevarieerde workouts met kracht en conditie), HYROX (hardlopen afgewisseld met functionele stations) en Strength (focus op de basisliften en krachtopbouw)." } },
+        { "@type": "Question", name: "Welke soorten groepslessen zijn er?", acceptedAnswer: { "@type": "Answer", text: "We bieden vier soorten groepslessen: CrossFit (gevarieerde workouts met kracht en conditie), HYROX (hardlopen afgewisseld met functionele stations), Strength (focus op de basisliften en krachtopbouw) en Flex Friday (een buddy-workout waar ook introducees welkom zijn)." } },
         { "@type": "Question", name: "Zijn de groepslessen geschikt voor beginners?", acceptedAnswer: { "@type": "Answer", text: "Ja. Elke oefening wordt aangepast aan jouw niveau. Beginners en gevorderden trainen samen, iedereen op eigen niveau. Nieuwe leden starten met de 28 Day Kickstart." } },
         { "@type": "Question", name: "Wat kosten groepslessen bij CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "Onze abonnementen starten vanaf €69 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar." } },
         { "@type": "Question", name: "Hoe groot zijn de groepen?", acceptedAnswer: { "@type": "Answer", text: "Maximaal 12 deelnemers per les. Zo krijgt iedereen persoonlijke aandacht van de coach." } },
@@ -58,11 +58,12 @@ export default function GroepslessenPage() {
 
       <section className="sec sec--white" style={{ paddingTop: "clamp(30px,4vw,48px)", paddingBottom: "clamp(16px,2.2vw,30px)" }}>
         <div className="wrap">
-          <div className="center"><h2 className="sec-title">Drie soorten groepslessen</h2></div>
+          <div className="center"><h2 className="sec-title">Onze groepslessen</h2></div>
           <div className="pp-grid" style={{ marginTop: 34 }}>
             <div className="pp-item"><h3><Check />CrossFit</h3><p>Onze kernles: elke dag een andere workout die kracht, conditie en mobiliteit combineert. Voor alle niveaus schaalbaar.</p></div>
             <div className="pp-item"><h3><Check />HYROX</h3><p>Hardlopen afgewisseld met functionele stations zoals sleds, ski-erg en wall balls. Dé les als je traint voor een <Link href="/hyrox-alkmaar">HYROX-race</Link> — of gewoon van hard werken houdt.</p></div>
             <div className="pp-item"><h3><Check />Strength</h3><p>Focus op sterker worden in de basisliften: squat, deadlift, press. Rustiger tempo, meer techniek, serieuze <Link href="/strength-training-alkmaar">krachtopbouw</Link>.</p></div>
+            <div className="pp-item"><h3><Check />Flex Friday</h3><p>Leuke buddy-workout om de week mee af te sluiten — en de enige les waar je een introducee mee mag nemen. Neem gerust iemand mee!</p></div>
           </div>
         </div>
       </section>
@@ -93,7 +94,7 @@ export default function GroepslessenPage() {
           <div className="center"><h2 className="sec-title">Veelgestelde vragen</h2></div>
           <div className="faq" style={{ marginTop: 8 }}>
             <details open><summary>Wat zijn de groepslessen bij CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Gevarieerde workouts in kleine groepen van maximaal 12 personen, begeleid door een professionele coach. Elke les combineert kracht, conditie en mobiliteit.</div></details>
-            <details><summary>Welke soorten groepslessen zijn er?<span className="ic"><Plus /></span></summary><div className="body">We bieden drie soorten groepslessen: CrossFit (gevarieerde workouts met kracht en conditie), HYROX (hardlopen afgewisseld met functionele stations) en Strength (focus op de basisliften en krachtopbouw).</div></details>
+            <details><summary>Welke soorten groepslessen zijn er?<span className="ic"><Plus /></span></summary><div className="body">We bieden vier soorten groepslessen: CrossFit (gevarieerde workouts met kracht en conditie), HYROX (hardlopen afgewisseld met functionele stations), Strength (focus op de basisliften en krachtopbouw) en Flex Friday (een buddy-workout waar ook introducees welkom zijn).</div></details>
             <details><summary>Zijn de groepslessen geschikt voor beginners?<span className="ic"><Plus /></span></summary><div className="body">Ja. Elke oefening wordt aangepast aan jouw niveau. Beginners en gevorderden trainen samen, iedereen op eigen niveau. Nieuwe leden starten met de 28 Day Kickstart.</div></details>
             <details><summary>Wat kosten groepslessen bij CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Onze abonnementen starten vanaf €69 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar.</div></details>
             <details><summary>Hoe groot zijn de groepen?<span className="ic"><Plus /></span></summary><div className="body">Maximaal 12 deelnemers per les. Zo krijgt iedereen persoonlijke aandacht van de coach.</div></details>
