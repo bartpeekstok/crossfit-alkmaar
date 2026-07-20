@@ -41,7 +41,7 @@ export default function HyroxAlkmaarPage() {
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/images/hyrox-alkmaar-header.jpg" alt="" style={{ objectPosition: "center 40%" }} />
+        <img className="bg" src="/images/hyrox-alkmaar-header.jpg" alt="" style={{ objectPosition: "center 22%" }} />
         <div className="scrim" />
         <div className="wrap inner">
           <p className="eyebrow">Programma</p>
@@ -119,7 +119,7 @@ export default function HyroxAlkmaarPage() {
         </div>
       </section>
 
-      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/images/hyrox-alkmaar-header.jpg')", backgroundPosition: "center 40%" } as React.CSSProperties}>
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/images/hyrox-alkmaar-header.jpg')", backgroundPosition: "center 22%" } as React.CSSProperties}>
         <div className="wrap">
           <h2>Start met HYROX bij CrossFit Alkmaar</h2>
           <p>Plan een gratis kennismakingsgesprek en ontdek hoe wij je kunnen helpen met je HYROX-doelen.</p>
