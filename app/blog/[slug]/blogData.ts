@@ -14,6 +14,64 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "sterke-core-zonder-crunches": {
+    title: "Een sterke core zonder crunches: dit werkt écht",
+    metaTitle: "Sterke core zonder crunches: de beste core-oefeningen",
+    date: "2026-07-20",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Training",
+    image: "/images/krachttraining-alkmaar-header.jpg",
+    excerpt: "Elke dag sit-ups doen voor een sterke core? Niet nodig. Dit zijn de oefeningen die je core wél sterk maken, en zo vaak moet je ze trainen.",
+    faq: [
+      {
+        question: "Wat is de beste oefening voor je buikspieren?",
+        answer: "Er is geen losse beste oefening. Zware samengestelde oefeningen zoals squats, deadlifts en overhead presses trainen je core harder dan crunches, omdat je romp daar onder last moet stabiliseren. Wil je gericht aanvullen, kies dan voor planks, farmers carries en hollow holds.",
+      },
+      {
+        question: "Heeft het zin om elke dag je core te trainen?",
+        answer: "Nee, dat is niet nodig en meestal ook niet slim. Je core is gewoon spierweefsel en heeft herstel nodig. Twee tot drie keer per week gericht werk, gecombineerd met zware basisoefeningen, geeft meer resultaat dan dagelijks tientallen sit-ups.",
+      },
+      {
+        question: "Hoe krijg ik zichtbare buikspieren?",
+        answer: "Zichtbare buikspieren zijn vooral een kwestie van vetpercentage, en dat wordt bepaald door je voeding. Je kunt niet plaatselijk vet verbranden met buikspieroefeningen. Train je core voor kracht en stabiliteit; het zichtbare resultaat volgt uit consistentie in training én voeding.",
+      },
+      {
+        question: "Zijn crunches slecht voor je?",
+        answer: "Slecht niet, maar wel beperkt. Crunches trainen alleen het buigen van je romp, terwijl de belangrijkste taak van je core juist het tegenhouden van beweging is: stabiel blijven onder last. Daarom leveren anti-bewegingsoefeningen zoals planks en carries meer op.",
+      },
+    ],
+    content: `
+      <p>Vraag tien mensen hoe je een sterke core krijgt en negen zeggen: buikspieroefeningen. Sit-ups, crunches, elke dag een schema van tien minuten. Wij zien het al twaalf jaar anders — en de leden die bij ons de zwaarste gewichten tillen, doen zelden een crunch.</p>
+
+      <h2>Wat je core eigenlijk doet</h2>
+
+      <p>Je core is niet je sixpack. Het is het hele pakket spieren rond je romp: buikspieren, rugstrekkers, schuine buikspieren, bekkenbodem en diafragma. En de belangrijkste taak van dat pakket is niet <em>bewegen</em>, maar <strong>beweging tegenhouden</strong>: je romp stijf en stabiel houden terwijl je tilt, draagt, duwt of rent.</p>
+
+      <p>Een crunch traint precies het omgekeerde: je romp oprollen zonder weerstand van betekenis. Dat is niet verkeerd, maar het is een klein stukje van het verhaal — en niet het stuk dat je in het dagelijks leven of in de gym nodig hebt.</p>
+
+      <h2>De oefeningen die je core écht sterk maken</h2>
+
+      <p><strong>1. Zware basisoefeningen.</strong> Squats, deadlifts en overhead presses dwingen je core om onder serieuze last te stabiliseren. Wie 80 kilo deadlift, traint zijn romp harder dan met welk buikspierschema dan ook. Dit is de reden dat onze programmering om deze oefeningen heen is gebouwd.</p>
+
+      <p><strong>2. Carries.</strong> Farmers carries — met zware kettlebells of dumbbells lopen — zijn misschien wel de meest onderschatte core-oefening die er is. Je hele romp werkt om je rechtop te houden, stap voor stap. Simpel, veilig en brutaal effectief.</p>
+
+      <p><strong>3. Anti-bewegingsoefeningen.</strong> Planks, side planks, hollow holds en pallof presses trainen precies waar je core voor bedoeld is: niet bewegen terwijl er krachten aan je trekken. Een goede plank van 45 seconden met volledige spanning levert meer op dan drie minuten hangen in een slordige.</p>
+
+      <p><strong>4. Ademhaling en bracing.</strong> Leren hoe je met je ademhaling spanning opbouwt in je romp — bracing — is de goedkoopste gewichthefriem die er bestaat. Het is techniek, geen extra oefening, en onze coaches leren het je bij elke zware lift.</p>
+
+      <h2>Moet je dan elke dag core trainen?</h2>
+
+      <p>Nee. Je core is gewoon spierweefsel: het wordt sterker van prikkel plus herstel, niet van dagelijkse herhaling. Als je twee tot drie keer per week traint met zware basisoefeningen en af en toe gericht aanvult met carries en planks, is dat ruim voldoende. Dagelijkse sit-up-schema's voelen productief, maar voegen vooral vermoeidheid toe — geen kracht.</p>
+
+      <h2>En zichtbare buikspieren dan?</h2>
+
+      <p>Eerlijk verhaal: die worden in de keuken gemaakt. Zichtbare buikspieren zijn een kwestie van vetpercentage, en je kunt niet plaatselijk vet verbranden met buikspieroefeningen — hoeveel crunches je ook doet. Train je core voor kracht en stabiliteit, eet consistent goed, en het zichtbare resultaat volgt vanzelf.</p>
+
+      <h2>Zo pakken wij het aan</h2>
+
+      <p>Bij CrossFit Alkmaar zit core-werk in vrijwel elke training verwerkt: in de zware liften, in de carries, in de metcons. Je hoeft er geen apart schema voor bij te houden — je hoeft alleen op te komen dagen. Benieuwd hoe dat voelt? <a href="/free-intro">Plan een gratis kennismaking</a> en ervaar het zelf.</p>
+    `,
+  },
   "sportschool-kiezen-alkmaar": {
     title: "Sportschool kiezen in Alkmaar: een eerlijke vergelijking",
     metaTitle: "Sportschool kiezen in Alkmaar? Zo maak je de juiste keuze",

@@ -29,6 +29,9 @@ const PAGES_WITH_OWN_FAQ = [
   "/olympic-lifting-alkmaar",
   "/sporten-overgang-alkmaar",
   "/crossfit-heerhugowaard",
+  "/crossfit-heiloo",
+  "/crossfit-bergen",
+  "/crossfit-langedijk",
 ];
 
 function GlobalFaqSchema({ faqSchema }: { faqSchema: object }) {

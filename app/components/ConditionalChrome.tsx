@@ -49,6 +49,9 @@ export const REDESIGNED_PATHS = [
   "/olympic-lifting-alkmaar",
   "/sporten-overgang-alkmaar",
   "/crossfit-heerhugowaard",
+  "/crossfit-heiloo",
+  "/crossfit-bergen",
+  "/crossfit-langedijk",
   // Ledenservice (geen SEO-landing, wel nieuwe huisstijl-chrome)
   "/faq",
   // Campagnepagina ex-leden (QR op ansichtkaart, noindex)

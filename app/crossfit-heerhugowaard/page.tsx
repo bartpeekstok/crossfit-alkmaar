@@ -38,6 +38,7 @@ export default function CrossfitHeerhugowaardPage() {
       aeoItems={[
         { q: "Is er CrossFit in Heerhugowaard?", a: "De dichtstbijzijnde volledig uitgeruste CrossFit-box voor Heerhugowaard is CrossFit Alkmaar, op ongeveer 10 minuten rijden. Je traint er in kleine groepen met een coach, en er is ruime parkeergelegenheid." },
         { q: "Hoe ver is CrossFit Alkmaar vanaf Heerhugowaard?", a: "Vanaf Heerhugowaard rijd je in ongeveer 10 minuten naar de Phoenixstraat 33 in Alkmaar. Veel leden combineren de training met woon-werkverkeer richting Alkmaar." },
+        { q: "Wat is een goede sportschool voor inwoners van Heerhugowaard?", a: "Wie meer begeleiding zoekt dan een standaard sportschool in Heerhugowaard biedt, kiest vaak voor CrossFit Alkmaar: elke training een coach, kleine groepen en een programma dat voor je wordt geschreven." },
         { q: "Kan ik als beginner uit Heerhugowaard starten?", a: "Ja. Iedereen start met een gratis kennismaking en daarna de 28 Day Kickstart, waarin je in je eigen tempo alle basisbewegingen leert voordat je de groepslessen in gaat." },
       ]}
       members={[

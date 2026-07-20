@@ -37,6 +37,7 @@ export default function Header() {
         programs: "Programs",
         kickstart: "28 Day Kickstart",
         groupClasses: "Group classes",
+        hyrox: "HYROX",
         personalTraining: "Personal Training",
         smallGroup: "Small Group Training",
         nutrition: "Nutrition coaching",
@@ -54,6 +55,7 @@ export default function Header() {
         programs: "Programma's",
         kickstart: "28 Day Kickstart",
         groupClasses: "Groepslessen",
+        hyrox: "HYROX",
         personalTraining: "Personal Training",
         smallGroup: "Small Group Training",
         nutrition: "Voedingsadvies",
@@ -97,6 +99,7 @@ export default function Header() {
             <div className="dropdown">
               <Link href="/kickstart">{t.kickstart}</Link>
               <Link href="/groepslessen">{t.groupClasses}</Link>
+              <Link href="/hyrox-alkmaar">{t.hyrox}</Link>
               <Link href="/personal-training">{t.personalTraining}</Link>
               <Link href="/small-group-training">{t.smallGroup}</Link>
               <Link href="/voedingsadvies">{t.nutrition}</Link>
@@ -172,6 +175,7 @@ export default function Header() {
             <div className="m-sub">
               <Link href="/kickstart" onClick={() => setMobileOpen(false)}>{t.kickstart}</Link>
               <Link href="/groepslessen" onClick={() => setMobileOpen(false)}>{t.groupClasses}</Link>
+              <Link href="/hyrox-alkmaar" onClick={() => setMobileOpen(false)}>{t.hyrox}</Link>
               <Link href="/personal-training" onClick={() => setMobileOpen(false)}>{t.personalTraining}</Link>
               <Link href="/small-group-training" onClick={() => setMobileOpen(false)}>{t.smallGroup}</Link>
               <Link href="/voedingsadvies" onClick={() => setMobileOpen(false)}>{t.nutrition}</Link>

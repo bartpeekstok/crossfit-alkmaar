@@ -25,6 +25,7 @@ const BLOG_SLUGS = new Set([
   "hyrox-bij-crossfit-alkmaar",
   "is-hardlopen-slecht-voor-je",
   "moet-je-spierpijn-hebben-na-elke-workout",
+  "sterke-core-zonder-crunches",
   "tienerprogramma-bij-crossfit-alkmaar",
   "twaalf-jaar-crossfit-alkmaar",
   "waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
@@ -60,6 +61,8 @@ const REMAP: Record<string, string> = {
   "/blog/5-tips-om-consistent-te-blijven": "/blog/doelen-stellen-die-werken",
   // Topscoorders uit de oude categorieen
   "/training/coaches-moet-je-spierpijn-hebben-na-elke-workout": "/blog/moet-je-spierpijn-hebben-na-elke-workout",
+  "/training/heeft-dagelijks-core-training-zin": "/blog/sterke-core-zonder-crunches",
+  "/training/de-beste-oefening-voor-buikspieren": "/blog/sterke-core-zonder-crunches",
   "/dit-is-cfa/waarom-crossfit-alkmaar-niet-concurreert-met-grote-gyms-of-zij-met-ons": "/blog/waarom-crossfit-alkmaar-niet-zomaar-een-sportschool-is",
   "/gezond-eten/het-grote-geheim-over-gewicht-afvallen": "/blog/afvallen-in-alkmaar",
   "/gezond-eten/hoe-krijg-ik-zo-snel-mogelijk-een-sixpack": "/blog/wat-eet-je-voor-en-na-training",

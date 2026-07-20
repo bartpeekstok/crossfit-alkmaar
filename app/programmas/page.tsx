@@ -97,7 +97,7 @@ export default function HomePage() {
         <div className="max-w-[1360px] mx-auto">
           <h2 className="text-3xl font-bold text-center mb-4">Kies het programma dat bij je past</h2>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Iedereen begint bij de 28 Day Kickstart. Daarna groei je verder op jouw tempo, in kleine vaste groepen of met persoonlijke begeleiding. Geen eindpunt, wel altijd een volgende stap.</p>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
               <h3 className="text-2xl font-bold mb-3">28-Day Kickstart</h3>
               <p className="text-gray-600 mb-6">Hier start iedereen. 4 weken begeleide training en een solide basis.</p>
@@ -130,6 +130,17 @@ export default function HomePage() {
                 <li>✓ Voor alle niveaus</li>
               </ul>
               <Link href="/programmas" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
+            </div>
+            <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+              <h3 className="text-2xl font-bold mb-3">HYROX</h3>
+              <p className="text-gray-600 mb-6">Gerichte voorbereiding op je eerste (of snelste) HYROX-race.</p>
+              <ul className="space-y-2 mb-6 text-gray-700">
+                <li>✓ Alle 8 stations onder één dak</li>
+                <li>✓ Coaches met wedstrijdervaring</li>
+                <li>✓ Train voor singles, doubles of relay</li>
+                <li>✓ Eigen simulatie-events</li>
+              </ul>
+              <Link href="/hyrox-alkmaar" className="block w-full text-center bg-blue-900 hover:bg-blue-950 text-white font-semibold py-3 rounded-lg transition">Meer info</Link>
             </div>
           </div>
         </div>
