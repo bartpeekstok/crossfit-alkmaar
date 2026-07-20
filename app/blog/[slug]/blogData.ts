@@ -7,6 +7,9 @@ export interface BlogPost {
   author: string;
   category: string;
   image: string;
+  // Optioneel: CSS background-position voor de header-crop (bv. "center 30%")
+  // als de gezichten niet in het midden van de foto staan.
+  imagePosition?: string;
   excerpt: string;
   content: string;
   // Optioneel: vragen voor FAQPage-schema (rich results). Vul aan als de blog een FAQ-blok heeft.
@@ -21,6 +24,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/images/krachttraining-alkmaar-header.jpg",
+    imagePosition: "center 28%",
     excerpt: "Elke dag sit-ups doen voor een sterke core? Niet nodig. Dit zijn de oefeningen die je core wél sterk maken, en zo vaak moet je ze trainen.",
     faq: [
       {

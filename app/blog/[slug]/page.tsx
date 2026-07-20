@@ -73,7 +73,7 @@ export default function BlogPostPage() {
         style={{
           backgroundImage: `linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('${post.image}')`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: post.imagePosition || "center",
         }}
         role="img"
         aria-label={`${post.title} - CrossFit Alkmaar blog`}
