@@ -14,7 +14,7 @@ const Plus = () => (
 
 const FAQS = [
   { q: "Wanneer is personal training beter dan groepslessen?", a: "Als je specifieke doelen hebt (revalidatie, wedstrijdvoorbereiding, sneller resultaat) of liever 1-op-1 traint. Bij CrossFit Alkmaar combineren veel leden personal training met groepslessen voor het beste van beide werelden." },
-  { q: "Hoe ziet een personal training sessie eruit?", a: "Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down — volledig afgestemd op jou." },
+  { q: "Hoe ziet een personal training sessie eruit?", a: "Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down, volledig afgestemd op jou." },
   { q: "Wat is het verschil tussen personal training en small group training?", a: "Bij personal training train je 1-op-1. Bij small group training train je in een groep van max 6 met bijna dezelfde persoonlijke aandacht, maar voor een lagere prijs en met de extra motivatie van een groep." },
   { q: "Wat is het verschil tussen personal training en groepslessen?", a: "Bij personal training krijg je 1-op-1 begeleiding met een programma volledig afgestemd op jouw doelen. Bij groepslessen train je in kleine groepen van max 12." },
   { q: "Voor wie is personal training geschikt?", a: "Voor iedereen die extra aandacht wil: van beginners die de basis willen leren tot ervaren sporters met specifieke doelen." },
@@ -52,7 +52,7 @@ export default function PersonalTrainingPage() {
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Personal training met een plan</h2>
           <p>Personal training is meer dan een trainer die naast je staat. Bij CrossFit Alkmaar krijg je een volledig trainingsplan, afgestemd op jouw doelen. Of je nu wilt afvallen, sterker worden, revalideren of je voorbereiden op een wedstrijd.</p>
           <p>Onze coaches zijn gecertificeerd en gespecialiseerd in functionele fitness. Ze kijken niet alleen naar je training, maar ook naar je bewegingskwaliteit, mobiliteit en, eventueel, je voeding.</p>
-          <p>Je traint in een volledig uitgeruste box met professionele apparatuur. Geen wachten op machines, geen drukte — gewoon jij en je coach.</p>
+          <p>Je traint in een volledig uitgeruste box met professionele apparatuur. Geen wachten op machines, geen drukte. Gewoon jij en je coach.</p>
         </div>
       </section>
 
@@ -90,7 +90,7 @@ export default function PersonalTrainingPage() {
           <div className="center"><h2 className="sec-title">Wanneer kies je personal training?</h2></div>
           <div className="faq" style={{ marginTop: 8 }}>
             <details open><summary>Wanneer is personal training beter dan groepslessen?<span className="ic"><Plus /></span></summary><div className="body">Als je specifieke doelen hebt (revalidatie, wedstrijdvoorbereiding, sneller resultaat) of liever 1-op-1 traint. Bij CrossFit Alkmaar combineren veel leden personal training met <Link href="/groepslessen">groepslessen</Link> voor het beste van beide werelden.</div></details>
-            <details><summary>Hoe ziet een personal training sessie eruit?<span className="ic"><Plus /></span></summary><div className="body">Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down — volledig afgestemd op jou.</div></details>
+            <details><summary>Hoe ziet een personal training sessie eruit?<span className="ic"><Plus /></span></summary><div className="body">Je trainer maakt een programma op maat, gebaseerd op jouw doelen en mogelijkheden. Elke sessie bevat warming-up, techniekwerk, de training en een cooling-down, volledig afgestemd op jou.</div></details>
             <details><summary>Wat is het verschil tussen personal training en small group training?<span className="ic"><Plus /></span></summary><div className="body">Bij personal training train je 1-op-1. Bij <Link href="/small-group-training">small group training</Link> train je in een groep van max 6 met bijna dezelfde persoonlijke aandacht, maar voor een lagere prijs en met de extra motivatie van een groep.</div></details>
           </div>
         </div>

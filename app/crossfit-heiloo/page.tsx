@@ -11,7 +11,7 @@ export default function CrossfitHeilooPage() {
       description="CrossFit voor Heiloo en omgeving. Train in kleine groepen met persoonlijke begeleiding bij CrossFit Alkmaar, op 10 minuten rijden."
       heroPhoto="/images/groepslessen-header.jpg"
       heroTitle="CrossFit voor Heiloo"
-      heroSubtitle="Heiloo heeft geen eigen CrossFit-box. Gelukkig zit er één op 10 minuten rijden — met coaches die je bij naam kennen."
+      heroSubtitle="Heiloo heeft geen eigen CrossFit-box. Gelukkig zit er één op 10 minuten rijden, met coaches die je bij naam kennen."
       waaromTitle="De box om de hoek van Heiloo"
       waaromContent={
         <>

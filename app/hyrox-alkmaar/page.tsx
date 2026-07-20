@@ -56,7 +56,7 @@ export default function HyroxAlkmaarPage() {
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Waarom CrossFit Alkmaar voor HYROX?</h2>
           <p>CrossFit Alkmaar is een <Link href="/hyrox-gym-alkmaar">officiële HYROX gym</Link>. We hebben alle apparatuur die je op racedag tegenkomt: sleds, SkiErg, roeiers, sandbags, wall balls en kettlebells.</p>
           <p>Maar het verschil zit in de coaching. Onze trainers kennen de HYROX-race en helpen je met pacing, strategie en techniek. Niet alleen voor de stations, maar ook voor de 8 kilometer hardlopen ertussen.</p>
-          <p>En je traint niet alleen. Meerdere leden bereiden zich voor op HYROX — als singles, doubles en relay teams. Samen trainen maakt de <Link href="/hyrox-voorbereiding-alkmaar">HYROX-voorbereiding</Link> leuker én effectiever.</p>
+          <p>En je traint niet alleen. Meerdere leden bereiden zich voor op HYROX, als singles, doubles en relay teams. Samen trainen maakt de <Link href="/hyrox-voorbereiding-alkmaar">HYROX-voorbereiding</Link> leuker én effectiever.</p>
         </div>
       </section>
 
@@ -64,8 +64,8 @@ export default function HyroxAlkmaarPage() {
         <div className="wrap">
           <div className="center"><h2 className="sec-title">Aankomende HYROX events</h2></div>
           <div className="pp-grid" style={{ marginTop: 34 }}>
-            <div className="pp-item"><h3><Check />Simulatie — za 22 augustus</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-alkmaar">Meer info en inschrijven →</Link></p></div>
-            <div className="pp-item"><h3><Check />Simulatie — za 24 oktober</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-24-oktober">Meer info en inschrijven →</Link></p></div>
+            <div className="pp-item"><h3><Check />Simulatie: za 22 augustus</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-alkmaar">Meer info en inschrijven →</Link></p></div>
+            <div className="pp-item"><h3><Check />Simulatie: za 24 oktober</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-24-oktober">Meer info en inschrijven →</Link></p></div>
             <div className="pp-item"><h3><Check />HYROX PFT</h3><p>De officiële Physical Fitness Test: meet waar je staat en volg je progressie richting racedag. <Link href="/hyrox-pft-alkmaar">Meer over de PFT →</Link></p></div>
             <div className="pp-item"><h3><Check />Alle events</h3><p>Van simulaties tot community-events: bekijk de volledige agenda. <Link href="/events">Naar de eventkalender →</Link></p></div>
           </div>

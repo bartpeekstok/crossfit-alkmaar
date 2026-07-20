@@ -85,7 +85,7 @@ export default function HyroxPftAlkmaarPage() {
                 name: "Heb ik HYROX-ervaring nodig?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan — de test laat zien waar je staat.",
+                  text: "Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan: de test laat zien waar je staat.",
                 },
               },
               {
@@ -160,13 +160,13 @@ export default function HyroxPftAlkmaarPage() {
             Wat is de HYROX Physical Fitness Test?
           </h2>
           <p className="text-lg text-gray-700 mb-4">
-            De HYROX PFT is een officiële fitnesstest ontworpen door HYROX HQ. Het is één doorlopende workout die je fitnessniveau meet en je laat ervaren wat HYROX inhoudt — zonder de volledige 8 km hardlopen.
+            De HYROX PFT is een officiële fitnesstest ontworpen door HYROX HQ. Het is één doorlopende workout die je fitnessniveau meet en je laat ervaren wat HYROX inhoudt, zonder de volledige 8 km hardlopen.
           </p>
           <p className="text-lg text-gray-700 mb-4">
             Na afloop krijg je een persoonlijke score en advies over welke divisie het beste bij je past.
           </p>
           <p className="text-lg text-gray-700">
-            CrossFit Alkmaar organiseerde deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>. Dit soort events organiseren we regelmatig — voor leden én niet-leden.
+            CrossFit Alkmaar organiseerde deze officiële PFT in samenwerking met HYROX HQ als aftrap van onze status als <Link href="/hyrox-gym-alkmaar" className="text-blue-900 font-semibold hover:underline">officiële HYROX gym</Link>. Dit soort events organiseren we regelmatig, voor leden én niet-leden.
           </p>
         </div>
       </section>
@@ -239,7 +239,7 @@ export default function HyroxPftAlkmaarPage() {
               <p className="text-gray-700">100 reps</p>
             </div>
           </div>
-          <p className="text-gray-600 mt-6 text-center">Geen complexe bewegingen. Iedereen kan het afmaken — de vraag is alleen hoe snel.</p>
+          <p className="text-gray-600 mt-6 text-center">Geen complexe bewegingen. Iedereen kan het afmaken; de vraag is alleen hoe snel.</p>
         </div>
       </section>
 
@@ -301,7 +301,7 @@ export default function HyroxPftAlkmaarPage() {
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Heb ik HYROX-ervaring nodig?</h3>
-              <p className="text-gray-600">Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan — de test laat zien waar je staat.</p>
+              <p className="text-gray-600">Nee, de PFT is geschikt voor elk niveau. Of je nu beginner bent of al meerdere HYROX races hebt gedaan: de test laat zien waar je staat.</p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-sm">
               <h3 className="text-xl font-semibold mb-2">Welke oefeningen doe je bij de HYROX PFT?</h3>

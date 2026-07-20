@@ -15,7 +15,7 @@ export default function CrossfitBergenPage() {
       waaromTitle="Sterker worden naast het buitensporten"
       waaromContent={
         <>
-          <p>Bergen, Schoorl en de Egmonden zijn een paradijs voor hardlopers en wielrenners — maar een officiële CrossFit-box vind je er niet. Wie naast het duinlopen ook sterker wil worden, rijdt in een kwartier naar CrossFit Alkmaar.</p>
+          <p>Bergen, Schoorl en de Egmonden zijn een paradijs voor hardlopers en wielrenners, maar een officiële CrossFit-box vind je er niet. Wie naast het duinlopen ook sterker wil worden, rijdt in een kwartier naar CrossFit Alkmaar.</p>
           <p>Krachttraining is de perfecte aanvulling op duursport: je wordt belastbaarder, blijft langer blessurevrij en loopt of fietst er uiteindelijk harder door. Bij ons train je dat niet solo aan een apparaat, maar in kleine groepen met een coach die je techniek bewaakt.</p>
           <p>Elke les combineert kracht, conditie en mobiliteit. Ook als je nooit iets met halters hebt gedaan: alles wordt geschaald naar jouw niveau.</p>
         </>
@@ -23,14 +23,14 @@ export default function CrossfitBergenPage() {
       aanpakTitle="Wat je bij ons vindt"
       aanpakCards={[
         { title: "Kracht voor duursporters", body: "Sterker worden zonder uren extra te trainen: twee gerichte sessies per week maken al het verschil." },
-        { title: "Coach elke les", body: "Er staat altijd een coach op de vloer die je techniek corrigeert — juist belangrijk als barbells nieuw voor je zijn." },
+        { title: "Coach elke les", body: "Er staat altijd een coach op de vloer die je techniek corrigeert. Juist belangrijk als barbells nieuw voor je zijn." },
         { title: "Kleine groepen", body: "Maximaal 12 personen per les. Persoonlijke aandacht in plaats van een anonieme sportschool." },
         { title: "HYROX-klaar", body: "Hardlopen combineren met functionele kracht? Onze box is volledig uitgerust voor HYROX-training." },
       ]}
       voorwieTitle="Zo begin je"
       voorwieContent={
         <>
-          <p>Iedereen begint met een gratis kennismakingsgesprek. We bespreken je doelen — of dat nu sterker worden, blessurepreventie of een eerste <Link href="/hyrox-alkmaar">HYROX</Link> is — en laten de gym zien.</p>
+          <p>Iedereen begint met een gratis kennismakingsgesprek. We bespreken je doelen (sterker worden, blessurepreventie of een eerste <Link href="/hyrox-alkmaar">HYROX</Link>) en laten de gym zien.</p>
           <p>Daarna start je met de <Link href="/kickstart">Kickstart</Link>: een persoonlijk traject waarin je alle basisbewegingen leert voordat je de <Link href="/groepslessen">groepslessen</Link> in gaat.</p>
         </>
       }
@@ -38,7 +38,7 @@ export default function CrossfitBergenPage() {
       aeoItems={[
         { q: "Is er een CrossFit-box in Bergen NH?", a: "Nee, in Bergen, Schoorl en de Egmonden zit geen officiële CrossFit-box. De dichtstbijzijnde is CrossFit Alkmaar, op ongeveer een kwartier rijden vanaf het centrum van Bergen." },
         { q: "Is CrossFit goed voor hardlopers en wielrenners?", a: "Ja. Gerichte krachttraining maakt duursporters belastbaarder en sneller, en verkleint de kans op blessures. Twee sessies per week naast je duurtraining is genoeg voor merkbaar resultaat." },
-        { q: "Wat is een goede sportschool voor inwoners van Bergen?", a: "Wie meer wil dan solo trainen in een standaard sportschool, kiest vaak voor CrossFit Alkmaar: elke les een coach, kleine groepen en een programma op maat — op een kwartier van Bergen." },
+        { q: "Wat is een goede sportschool voor inwoners van Bergen?", a: "Wie meer wil dan solo trainen in een standaard sportschool, kiest vaak voor CrossFit Alkmaar: elke les een coach, kleine groepen en een programma op maat, op een kwartier van Bergen." },
         { q: "Moet ik fit zijn voordat ik begin?", a: "Nee. Elke workout wordt geschaald naar jouw niveau en je start met een persoonlijk introductietraject waarin je alle basisbewegingen leert." },
       ]}
       members={[

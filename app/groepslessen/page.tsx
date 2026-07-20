@@ -61,9 +61,9 @@ export default function GroepslessenPage() {
           <div className="center"><h2 className="sec-title">Onze groepslessen</h2></div>
           <div className="pp-grid" style={{ marginTop: 34 }}>
             <div className="pp-item"><h3><Check />CrossFit</h3><p>Onze kernles: elke dag een andere workout die kracht, conditie en mobiliteit combineert. Voor alle niveaus schaalbaar.</p></div>
-            <div className="pp-item"><h3><Check />HYROX</h3><p>Hardlopen afgewisseld met functionele stations zoals sleds, ski-erg en wall balls. Dé les als je traint voor een <Link href="/hyrox-alkmaar">HYROX-race</Link> — of gewoon van hard werken houdt.</p></div>
+            <div className="pp-item"><h3><Check />HYROX</h3><p>Hardlopen afgewisseld met functionele stations zoals sleds, ski-erg en wall balls. Dé les als je traint voor een <Link href="/hyrox-alkmaar">HYROX-race</Link>, of gewoon van hard werken houdt.</p></div>
             <div className="pp-item"><h3><Check />Strength</h3><p>Focus op sterker worden in de basisliften: squat, deadlift, press. Rustiger tempo, meer techniek, serieuze <Link href="/strength-training-alkmaar">krachtopbouw</Link>.</p></div>
-            <div className="pp-item"><h3><Check />Flex Friday</h3><p>Leuke buddy-workout om de week mee af te sluiten — en de enige les waar je een introducee mee mag nemen. Neem gerust iemand mee!</p></div>
+            <div className="pp-item"><h3><Check />Flex Friday</h3><p>Leuke buddy-workout om de week mee af te sluiten. Dit is de enige les waar je een introducee mag meenemen, dus neem gerust iemand mee!</p></div>
           </div>
         </div>
       </section>

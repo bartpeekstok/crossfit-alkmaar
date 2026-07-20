@@ -12,11 +12,11 @@ export default function CrossfitLangedijkPage() {
       heroPhoto="/images/krachttraining-alkmaar-header.jpg"
       heroTitle="CrossFit voor Langedijk"
       heroSubtitle="Van Sint Pancras tot Noord-Scharwoude: binnen een kwartier sta je in een volledig uitgeruste box met een coach op de vloer."
-      waaromTitle="Geen box in Langedijk — wel één dichtbij"
+      waaromTitle="Geen box in Langedijk, wel één dichtbij"
       waaromContent={
         <>
-          <p>In Langedijk zelf — Broek op Langedijk, Zuid- en Noord-Scharwoude, Sint Pancras — vind je geen officiële CrossFit-box. Vanaf Sint Pancras ben je in tien minuten bij CrossFit Alkmaar; vanaf de Scharwoudes rijd je er een kwartier over.</p>
-          <p>Wat je daarvoor terugkrijgt: geen anonieme sportschool, maar groepen van maximaal 12 personen met elke les een coach. Het programma wordt voor je geschreven en aangepast aan jouw niveau — of je nu begint of al jaren traint.</p>
+          <p>In de kernen van Langedijk (Broek op Langedijk, Zuid- en Noord-Scharwoude, Sint Pancras) vind je geen officiële CrossFit-box. Vanaf Sint Pancras ben je in tien minuten bij CrossFit Alkmaar; vanaf de Scharwoudes rijd je er een kwartier over.</p>
+          <p>Wat je daarvoor terugkrijgt: geen anonieme sportschool, maar groepen van maximaal 12 personen met elke les een coach. Het programma wordt voor je geschreven en aangepast aan jouw niveau, of je nu begint of al jaren traint.</p>
           <p>Elke training combineert kracht, conditie en mobiliteit in één uur. Twee tot drie keer per week is genoeg voor structureel resultaat.</p>
         </>
       }
@@ -47,7 +47,7 @@ export default function CrossfitLangedijkPage() {
       ]}
       faqItems={[
         { q: "Waar zit de gym precies?", aText: "Aan de Phoenixstraat 33 in Alkmaar. Vanaf Sint Pancras 10 minuten, vanaf de Scharwoudes een kwartier. Parkeren is gratis.", a: "Aan de Phoenixstraat 33 in Alkmaar. Vanaf Sint Pancras 10 minuten, vanaf de Scharwoudes een kwartier. Parkeren is gratis." },
-        { q: "Trainen er meer mensen uit Langedijk?", aText: "Ja, een flink deel van onze leden komt uit Langedijk en Heerhugowaard — de gemeente Dijk en Waard is goed vertegenwoordigd.", a: "Ja, een flink deel van onze leden komt uit Langedijk en Heerhugowaard — de gemeente Dijk en Waard is goed vertegenwoordigd." },
+        { q: "Trainen er meer mensen uit Langedijk?", aText: "Ja, een flink deel van onze leden komt uit Langedijk en Heerhugowaard; de gemeente Dijk en Waard is goed vertegenwoordigd.", a: "Ja, een flink deel van onze leden komt uit Langedijk en Heerhugowaard; de gemeente Dijk en Waard is goed vertegenwoordigd." },
         { q: "Wat is het verschil met een gewone sportschool?", aText: "Bij een gewone sportschool sta je er alleen voor. Bij ons wordt elke training begeleid door een coach en is het programma al voor je geschreven.", a: "Bij een gewone sportschool sta je er alleen voor. Bij ons wordt elke training begeleid door een coach en is het programma al voor je geschreven." },
         { q: "Kan ik eerst komen kijken?", aText: "Ja, plan een gratis kennismaking. We laten de gym zien en bespreken je doelen, zonder verplichtingen.", a: <>Ja, plan een <Link href="/free-intro">gratis kennismaking</Link>. We laten de gym zien en bespreken je doelen, zonder verplichtingen.</> },
       ]}
