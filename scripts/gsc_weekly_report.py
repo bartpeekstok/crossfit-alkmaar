@@ -1,0 +1,174 @@
+"""Wekelijks SEO-rapport uit Google Search Console voor crossfitalkmaar.com.
+
+Draait zonder externe dependencies (alleen Python-stdlib), zodat het zowel
+lokaal als in een cloud-agent werkt. Credentials komen uit environment vars:
+
+  GSC_CLIENT_ID, GSC_CLIENT_SECRET, GSC_REFRESH_TOKEN
+
+Output: reports/gsc/<jaar>-w<weeknr>.md (aangemaakt vanaf de repo-root).
+
+GSC-data loopt ~2-3 dagen achter; het rapport vergelijkt daarom de laatste
+7 volledige dagen (t/m 3 dagen geleden) met de 7 dagen daarvoor.
+"""
+import io
+import json
+import os
+import sys
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from concurrent.futures import ThreadPoolExecutor
+from datetime import date, timedelta
+from pathlib import Path
+
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8")
+
+SITE = "sc-domain:crossfitalkmaar.com"
+BASE_URL = "https://www.crossfitalkmaar.com"
+REPO_ROOT = Path(__file__).resolve().parent.parent
+
+
+def get_access_token():
+    for var in ("GSC_CLIENT_ID", "GSC_CLIENT_SECRET", "GSC_REFRESH_TOKEN"):
+        if not os.environ.get(var):
+            sys.exit(f"FOUT: environment variable {var} ontbreekt.")
+    body = urllib.parse.urlencode({
+        "client_id": os.environ["GSC_CLIENT_ID"],
+        "client_secret": os.environ["GSC_CLIENT_SECRET"],
+        "refresh_token": os.environ["GSC_REFRESH_TOKEN"],
+        "grant_type": "refresh_token",
+    }).encode()
+    req = urllib.request.Request("https://oauth2.googleapis.com/token", data=body)
+    with urllib.request.urlopen(req, timeout=30) as r:
+        return json.load(r)["access_token"]
+
+
+TOKEN = get_access_token()
+
+
+def api(url, payload):
+    req = urllib.request.Request(url, data=json.dumps(payload).encode(), headers={
+        "Authorization": f"Bearer {TOKEN}",
+        "Content-Type": "application/json",
+    })
+    with urllib.request.urlopen(req, timeout=60) as r:
+        return json.load(r)
+
+
+def sa_query(body):
+    url = ("https://searchconsole.googleapis.com/webmasters/v3/sites/"
+           + urllib.parse.quote(SITE, safe="") + "/searchAnalytics/query")
+    return api(url, body).get("rows", [])
+
+
+def inspect(url):
+    return api("https://searchconsole.googleapis.com/v1/urlInspection/index:inspect",
+               {"inspectionUrl": url, "siteUrl": SITE})
+
+
+def totals(rows):
+    return sum(r["clicks"] for r in rows), sum(r["impressions"] for r in rows)
+
+
+def fmt_delta(cur, prev):
+    d = cur - prev
+    return f"{cur} ({'+' if d >= 0 else ''}{d} t.o.v. vorige week)"
+
+
+def main():
+    today = date.today()
+    cur_end = today - timedelta(days=3)
+    cur_start = cur_end - timedelta(days=6)
+    prev_end = cur_start - timedelta(days=1)
+    prev_start = prev_end - timedelta(days=6)
+    iso_year, iso_week, _ = today.isocalendar()
+
+    def rng(a, b):
+        return {"startDate": a.isoformat(), "endDate": b.isoformat()}
+
+    q_cur = sa_query({**rng(cur_start, cur_end), "dimensions": ["query"], "rowLimit": 250})
+    q_prev = sa_query({**rng(prev_start, prev_end), "dimensions": ["query"], "rowLimit": 250})
+    p_cur = sa_query({**rng(cur_start, cur_end), "dimensions": ["page"], "rowLimit": 250})
+    p_prev = sa_query({**rng(prev_start, prev_end), "dimensions": ["page"], "rowLimit": 250})
+
+    c_cur, i_cur = totals(q_cur)
+    c_prev, i_prev = totals(q_prev)
+
+    prev_by_q = {r["keys"][0]: r for r in q_prev}
+    prev_by_p = {r["keys"][0]: r for r in p_prev}
+
+    # Indexatie-audit over de sitemap
+    with urllib.request.urlopen(f"{BASE_URL}/sitemap.xml", timeout=30) as r:
+        xml_data = r.read()
+    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+    sitemap_urls = [e.text for e in ET.fromstring(xml_data).findall(".//sm:loc", ns)]
+
+    def inspect_one(u):
+        try:
+            res = inspect(u)["inspectionResult"]["indexStatusResult"]
+            return u, res.get("coverageState", "onbekend")
+        except Exception as e:
+            return u, f"inspectie mislukt ({str(e)[:40]})"
+
+    coverage = {}
+    # Parallel: de inspectie-API doet er seconden per URL over; 8 tegelijk
+    # blijft ruim onder Googles limiet van 600 inspecties per minuut.
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for u, state in pool.map(inspect_one, sitemap_urls):
+            coverage.setdefault(state, []).append(u.replace(BASE_URL, "") or "/")
+
+    indexed = sum(len(v) for k, v in coverage.items() if "indexed" in k.lower() and "not" not in k.lower())
+
+    # Rapport opbouwen
+    out = []
+    out.append(f"# SEO-weekrapport {iso_year}, week {iso_week}")
+    out.append(f"\n*Periode: {cur_start} t/m {cur_end}, vergeleken met {prev_start} t/m {prev_end}.*\n")
+    out.append("## Totalen\n")
+    out.append(f"- **Klikken:** {fmt_delta(c_cur, c_prev)}")
+    out.append(f"- **Vertoningen:** {fmt_delta(i_cur, i_prev)}")
+    out.append(f"- **Geindexeerd:** {indexed} van {len(sitemap_urls)} sitemap-URL's\n")
+
+    out.append("## Top 15 zoekwoorden\n")
+    out.append("| Zoekwoord | Klikken | Vorige week | Vertoningen | Positie |")
+    out.append("|---|---|---|---|---|")
+    for r in sorted(q_cur, key=lambda x: -x["clicks"])[:15]:
+        pq = prev_by_q.get(r["keys"][0], {})
+        out.append(f"| {r['keys'][0]} | {r['clicks']} | {pq.get('clicks', 0)} "
+                   f"| {r['impressions']} | {r['position']:.1f} |")
+
+    out.append("\n## Top 15 pagina's\n")
+    out.append("| Pagina | Klikken | Vorige week | Vertoningen |")
+    out.append("|---|---|---|---|")
+    for r in sorted(p_cur, key=lambda x: -x["clicks"])[:15]:
+        pp = prev_by_p.get(r["keys"][0], {})
+        path = r["keys"][0].replace(BASE_URL, "") or "/"
+        out.append(f"| {path} | {r['clicks']} | {pp.get('clicks', 0)} | {r['impressions']} |")
+
+    out.append("\n## Grootste verschuivingen (klikken t.o.v. vorige week)\n")
+    movers = []
+    for r in q_cur:
+        prev_clicks = prev_by_q.get(r["keys"][0], {}).get("clicks", 0)
+        movers.append((r["clicks"] - prev_clicks, r["keys"][0], r["clicks"], prev_clicks))
+    movers.sort()
+    for d, q, c, p in list(reversed(movers[-5:])) + movers[:5]:
+        if d != 0:
+            out.append(f"- `{q}`: {p} -> {c} ({'+' if d > 0 else ''}{d})")
+
+    out.append("\n## Indexatiestand per categorie\n")
+    for state, paths in sorted(coverage.items(), key=lambda kv: -len(kv[1])):
+        out.append(f"\n**{state}: {len(paths)}**")
+        if "indexed" not in state.lower() or "not" in state.lower():
+            for p in paths:
+                out.append(f"- {p}")
+
+    report_dir = REPO_ROOT / "reports" / "gsc"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    report_path = report_dir / f"{iso_year}-w{iso_week:02d}.md"
+    report_path.write_text("\n".join(out) + "\n", encoding="utf-8")
+    print(f"Rapport geschreven: {report_path}")
+    print(f"Klikken {c_prev} -> {c_cur}, vertoningen {i_prev} -> {i_cur}, "
+          f"geindexeerd {indexed}/{len(sitemap_urls)}")
+
+
+if __name__ == "__main__":
+    main()
