@@ -188,6 +188,46 @@ def main():
     report_path = report_dir / f"{iso_year}-w{iso_week:02d}.md"
     report_path.write_text("\n".join(out) + "\n", encoding="utf-8")
     print(f"Rapport geschreven: {report_path}")
+
+    # history.json voor het dashboard: klikken/vertoningen per ISO-week
+    # (laatste ~16 weken, elke run opnieuw opgebouwd zodat nagekomen
+    # GSC-data zichzelf corrigeert), plus indexatiestand per run.
+    daily = sa_query({"startDate": (today - timedelta(days=115)).isoformat(),
+                      "endDate": cur_end.isoformat(), "dimensions": ["date"]})
+    weeks = {}
+    for r in daily:
+        d = date.fromisoformat(r["keys"][0])
+        y, w, _ = d.isocalendar()
+        key = f"{y}-W{w:02d}"
+        entry = weeks.setdefault(key, {
+            "week": key,
+            "start": (d - timedelta(days=d.isoweekday() - 1)).isoformat(),
+            "clicks": 0, "impressions": 0,
+            "indexed": None, "totalUrls": None,
+        })
+        entry["clicks"] += r["clicks"]
+        entry["impressions"] += r["impressions"]
+
+    history_path = report_dir / "history.json"
+    if history_path.exists():
+        for old in json.loads(history_path.read_text(encoding="utf-8")).get("weeks", []):
+            if old["week"] in weeks and old.get("indexed") is not None:
+                weeks[old["week"]]["indexed"] = old["indexed"]
+                weeks[old["week"]]["totalUrls"] = old.get("totalUrls")
+
+    run_week = f"{iso_year}-W{iso_week:02d}"
+    if run_week in weeks:
+        weeks[run_week]["indexed"] = indexed
+        weeks[run_week]["totalUrls"] = len(sitemap_urls)
+
+    history = {
+        "site": SITE,
+        "updatedAt": today.isoformat(),
+        "lastReport": report_path.name,
+        "weeks": [weeks[k] for k in sorted(weeks)],
+    }
+    history_path.write_text(json.dumps(history, indent=1) + "\n", encoding="utf-8")
+    print(f"Historie bijgewerkt: {history_path} ({len(weeks)} weken)")
     print(f"Klikken {c_prev} -> {c_cur}, vertoningen {i_prev} -> {i_cur}, "
           f"geindexeerd {indexed}/{len(sitemap_urls)}")
 

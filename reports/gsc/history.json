@@ -1,0 +1,127 @@
+{
+ "site": "sc-domain:crossfitalkmaar.com",
+ "updatedAt": "2026-07-21",
+ "lastReport": "2026-w30.md",
+ "weeks": [
+  {
+   "week": "2026-W13",
+   "start": "2026-03-23",
+   "clicks": 7,
+   "impressions": 230,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W14",
+   "start": "2026-03-30",
+   "clicks": 45,
+   "impressions": 887,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W15",
+   "start": "2026-04-06",
+   "clicks": 46,
+   "impressions": 708,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W16",
+   "start": "2026-04-13",
+   "clicks": 43,
+   "impressions": 622,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W17",
+   "start": "2026-04-20",
+   "clicks": 25,
+   "impressions": 482,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W18",
+   "start": "2026-04-27",
+   "clicks": 29,
+   "impressions": 517,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W19",
+   "start": "2026-05-04",
+   "clicks": 46,
+   "impressions": 663,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W20",
+   "start": "2026-05-11",
+   "clicks": 66,
+   "impressions": 698,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W21",
+   "start": "2026-05-18",
+   "clicks": 75,
+   "impressions": 703,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W22",
+   "start": "2026-05-25",
+   "clicks": 90,
+   "impressions": 971,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W23",
+   "start": "2026-06-01",
+   "clicks": 86,
+   "impressions": 863,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W24",
+   "start": "2026-06-08",
+   "clicks": 76,
+   "impressions": 956,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W25",
+   "start": "2026-06-15",
+   "clicks": 16,
+   "impressions": 258,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W28",
+   "start": "2026-07-06",
+   "clicks": 84,
+   "impressions": 1158,
+   "indexed": null,
+   "totalUrls": null
+  },
+  {
+   "week": "2026-W29",
+   "start": "2026-07-13",
+   "clicks": 58,
+   "impressions": 1005,
+   "indexed": null,
+   "totalUrls": null
+  }
+ ]
+}
