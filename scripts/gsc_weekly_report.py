@@ -66,6 +66,29 @@ def inspect(url):
                {"inspectionUrl": url, "siteUrl": SITE})
 
 
+def fetch_sitemap_urls():
+    if not os.environ.get("GSC_SKIP_SITEMAP_HTTP"):
+        try:
+            with urllib.request.urlopen(f"{BASE_URL}/sitemap.xml", timeout=30) as r:
+                xml_data = r.read()
+            ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
+            return [e.text for e in ET.fromstring(xml_data).findall(".//sm:loc", ns)]
+        except Exception as e:
+            print(f"sitemap.xml niet bereikbaar ({str(e)[:60]}); "
+                  "lijst wordt uit de repo-bron gereconstrueerd.")
+    import re
+    paths = {"/"}  # de homepage staat als kale baseUrl in sitemap.ts
+    sitemap_ts = (REPO_ROOT / "app" / "sitemap.ts").read_text(encoding="utf-8")
+    for m in re.finditer(r"\$\{baseUrl\}(/[A-Za-z0-9\-/]*)`", sitemap_ts):
+        if "${" not in m.group(1):
+            paths.add(m.group(1))
+    # blogPosts is een object met de slugs als keys ("mijn-slug": { ... })
+    blog_ts = (REPO_ROOT / "app" / "blog" / "[slug]" / "blogData.ts").read_text(encoding="utf-8")
+    for m in re.finditer(r'(?m)^\s{0,2}"([a-z0-9\-]+)":\s*\{', blog_ts):
+        paths.add(f"/blog/{m.group(1)}")
+    return [BASE_URL + (p if p != "/" else "") for p in sorted(paths)]
+
+
 def totals(rows):
     return sum(r["clicks"] for r in rows), sum(r["impressions"] for r in rows)
 
@@ -97,11 +120,10 @@ def main():
     prev_by_q = {r["keys"][0]: r for r in q_prev}
     prev_by_p = {r["keys"][0]: r for r in p_prev}
 
-    # Indexatie-audit over de sitemap
-    with urllib.request.urlopen(f"{BASE_URL}/sitemap.xml", timeout=30) as r:
-        xml_data = r.read()
-    ns = {"sm": "http://www.sitemaps.org/schemas/sitemap/0.9"}
-    sitemap_urls = [e.text for e in ET.fromstring(xml_data).findall(".//sm:loc", ns)]
+    # Indexatie-audit over de sitemap. Live ophalen kan geblokkeerd zijn
+    # (cloud-omgevingen laten alleen goedgekeurde domeinen door); dan
+    # reconstrueren we de lijst uit de repo-bron (app/sitemap.ts + blogData).
+    sitemap_urls = fetch_sitemap_urls()
 
     def inspect_one(u):
         try:
