@@ -70,6 +70,27 @@ const nextConfig: NextConfig = {
   // Paginering (/blog/page/N/, /<cat>/page/N/) en onbekende oude URLs geven bewust 404.
   async redirects() {
     return [
+      // Oude blogs die niet zijn teruggezet, naar de best passende opvolger
+      {
+        source: "/blog/hyrox-voor-beginners",
+        destination: "/hyrox-alkmaar",
+        permanent: true,
+      },
+      {
+        source: "/blog/afvallen-zonder-dieet",
+        destination: "/blog/afvallen-in-alkmaar",
+        permanent: true,
+      },
+      {
+        source: "/blog/spiermassa-opbouwen-na-je-40e",
+        destination: "/blog/krachttraining-50plus",
+        permanent: true,
+      },
+      {
+        source: "/blog/krachttraining-voor-vrouwen",
+        destination: "/crossfit-vrouwen-alkmaar",
+        permanent: true,
+      },
       // Tarieven page removed, route naar de tarieven-sectie op meer-info
       {
         source: "/tarieven",
