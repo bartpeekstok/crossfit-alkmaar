@@ -1701,11 +1701,25 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "hoe-vaak-moet-je-trainen": {
     title: "Moet je meer trainen als je écht fit wilt worden?",
-    date: "2024-06-20",
+    date: "2026-07-22",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/redesign/assets/header-groepslessen.jpg",
     excerpt: "Hoe vaak moet je trainen voor resultaat? Fitnessniveau, doelen en herstel bepalen het antwoord. CrossFit Alkmaar legt uit.",
+    faq: [
+      {
+        question: "Hoe vaak moet ik als beginner trainen?",
+        answer: "Twee tot drie keer per week is een prima start. Je lichaam is nog niet gewend aan trainingsprikkels, dus zelfs een lage frequentie geeft al duidelijke vooruitgang. Vier of vijf keer per week is voor beginners vaak te veel en werkt eerder averechts.",
+      },
+      {
+        question: "Is elke dag trainen slecht voor je?",
+        answer: "Voor de meeste mensen wel. Je lichaam wordt sterker tijdens het herstel na de training, niet tijdens de training zelf. Train je elke dag zonder rust, dan bouw je die aanpassing af in plaats van op, en loop je meer kans op blessures.",
+      },
+      {
+        question: "Hoeveel rust heb ik nodig tussen twee trainingen?",
+        answer: "Dat verschilt per persoon en per type training. Vaak is 24 tot 48 uur voldoende, maar na een reeks zware trainingen die dezelfde spiergroepen belasten kan je lichaam meer tijd nodig hebben. Goede voeding en voldoende slaap versnellen het herstel.",
+      },
+    ],
     content: `
       <p>Je hebt doelen: je wilt afvallen, aankomen of gewoon lekkerder in je vel zitten. Je bent dit keer vastberaden om ze te bereiken.</p>
 
@@ -1735,7 +1749,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Bijvoorbeeld, een gewichtheffer die op een zeer hoog niveau wedstrijden wil doen, traint misschien vijf of meer keer per week. Sommige elite fitnesscompetitie deelnemers trainen zelfs twee keer per dag. Maar dit trainingsniveau is voor de meeste mensen niet nodig.</p>
 
-      <p>Een ander voorbeeld: Iemand wil een bepaald fitnessniveau bereiken tegen een bepaalde datum. Misschien wil die persoon een marathon lopen of meedoen aan een obstakelrun. We kunnen dan extra sessies toevoegen om ervoor te zorgen dat die persoon klaar is voor de wedstrijddag.</p>
+      <p>Een ander voorbeeld: Iemand wil een bepaald fitnessniveau bereiken tegen een bepaalde datum. Misschien wil die persoon een marathon lopen of meedoen aan een <a href="/hyrox-training-alkmaar">HYROX-wedstrijd</a>. We kunnen dan extra sessies toevoegen om ervoor te zorgen dat die persoon klaar is voor de wedstrijddag.</p>
 
       <p>Maar nogmaals, je kunt aanzienlijke vooruitgang boeken richting algemene gezondheids- en fitnessdoelen met twee tot vier trainingen per week. Je hoeft niet elke dag te trainen. Sterker nog, waarschijnlijk moet je dat helemaal niet doen. Lees verder!</p>
 
@@ -1761,9 +1775,9 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Het beste plan is om met ons af te spreken en ons te vertellen wat je wilt bereiken en hoe je in het verleden hebt getraind (maak je geen zorgen als je nog nooit getraind hebt).</p>
 
-      <p>Vanaf daar geven we je een exact plan dat je helpt snel vooruitgang te boeken richting je doelen. We vertellen je hoe vaak je moet trainen, hoeveel rust je nodig hebt, en zelfs welke voedingsmiddelen je helpen op tijd te herstellen voor de volgende training.</p>
+      <p>Vanaf daar geven we je een exact plan dat je helpt snel vooruitgang te boeken richting je doelen. We vertellen je hoe vaak je moet trainen, hoeveel rust je nodig hebt, en zelfs welke voedingsmiddelen je helpen op tijd te herstellen voor de volgende training. Wil je dat plan volledig op jou afgestemd, inclusief één-op-één begeleiding? Kijk dan ook eens naar <a href="/personal-training-alkmaar">personal training bij CrossFit Alkmaar</a>.</p>
 
-      <p>Dus onthoud deze drie dingen van deze lap tekst:</p>
+      <p>Onthoud deze drie dingen:</p>
 
       <ul>
         <li>Meer is niet altijd beter. Sommige mensen hebben meer workouts nodig en sommige hebben er minder nodig.</li>
