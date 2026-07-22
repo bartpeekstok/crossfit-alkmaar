@@ -15,7 +15,7 @@ export default function CrossfitHeerhugowaardPage() {
       waaromTitle="Waarom leden uit Heerhugowaard naar Alkmaar rijden"
       waaromContent={
         <>
-          <p>Een goede sportschool kies je niet op de kortste rijafstand, maar op wat je er krijgt. Veel van onze leden komen uit Heerhugowaard, Broek op Langedijk en omgeving. De rit naar de Phoenixstraat in Alkmaar duurt zo&apos;n tien minuten.</p>
+          <p>In Heerhugowaard zelf zit geen officiële CrossFit-box. Veel van onze leden komen dan ook uit Heerhugowaard, Broek op Langedijk en omgeving: de rit naar de Phoenixstraat in Alkmaar duurt zo&apos;n tien minuten.</p>
           <p>Wat je daarvoor terugkrijgt: elke training een coach die je techniek corrigeert, groepen van maximaal 12 personen en een programma dat voor je wordt geschreven. Je hoeft alleen maar op te komen dagen.</p>
           <p>De trainingen combineren kracht, conditie en mobiliteit. Effectiever dan solo aan machines staan, en een stuk leuker: de groep houdt je scherp.</p>
         </>
@@ -37,7 +37,7 @@ export default function CrossfitHeerhugowaardPage() {
       }
       aeoTitle="CrossFit in de buurt van Heerhugowaard"
       aeoItems={[
-        { q: "Is er CrossFit in Heerhugowaard?", a: "De dichtstbijzijnde volledig uitgeruste CrossFit-box voor Heerhugowaard is CrossFit Alkmaar, op ongeveer 10 minuten rijden. Je traint er in kleine groepen met een coach, en er is ruime parkeergelegenheid." },
+        { q: "Is er CrossFit in Heerhugowaard?", a: "Nee, in Heerhugowaard zelf zit geen officiële CrossFit-box. De dichtstbijzijnde is CrossFit Alkmaar, op ongeveer 10 minuten rijden. Je traint er in kleine groepen met een coach, en er is ruime parkeergelegenheid." },
         { q: "Hoe ver is CrossFit Alkmaar vanaf Heerhugowaard?", a: "Vanaf Heerhugowaard rijd je in ongeveer 10 minuten naar de Phoenixstraat 33 in Alkmaar. Veel leden combineren de training met woon-werkverkeer richting Alkmaar." },
         { q: "Wat is een goede sportschool voor inwoners van Heerhugowaard?", a: "Wie meer begeleiding zoekt dan een standaard sportschool in Heerhugowaard biedt, kiest vaak voor CrossFit Alkmaar: elke training een coach, kleine groepen en een programma dat voor je wordt geschreven." },
         { q: "Kan ik als beginner uit Heerhugowaard starten?", a: "Ja. Iedereen start met een gratis kennismaking en daarna de 28 Day Kickstart, waarin je in je eigen tempo alle basisbewegingen leert voordat je de groepslessen in gaat." },
