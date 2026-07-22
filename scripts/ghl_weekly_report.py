@@ -1,9 +1,14 @@
 """Wekelijks leden/leads-rapport uit GoHighLevel voor CrossFit Alkmaar.
 
-Leest de Fitness Pipeline (opportunities) en rapporteert de funnel:
-nieuwe leads -> afspraak gezet -> geshowd -> sales, per cohort van
-aanmaakweek, vergeleken met de week ervoor. Schrijft
-reports/ghl/<jaar>-w<week>.md en reports/ghl/history.json.
+Rapporteert:
+  1. de leads-funnel (binnen -> set -> show -> close) voor de afgelopen
+     4 weken, per cohort van aanmaakweek;
+  2. nieuwe leads per dag (laatste 28 dagen);
+  3. het actuele ledenaantal (contacten met type "customer"), dat als
+     wekelijks meetpunt in de historie wordt vastgelegd zodat er een
+     groeigrafiek ontstaat.
+
+Schrijft reports/ghl/<jaar>-w<week>.md en reports/ghl/history.json.
 
 Credentials via environment variables (zelfde als het dashboard):
   GHL_API_TOKEN, GHL_LOCATION_ID, GHL_PIPELINE_ID
@@ -15,7 +20,7 @@ import io
 import json
 import os
 import sys
-import urllib.parse
+import urllib.error
 import urllib.request
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -88,6 +93,32 @@ def fetch_all_opportunities():
     return list(by_id.values())
 
 
+def fetch_member_count():
+    """Telt contacten met type 'customer' (= leden) en het totaal."""
+    customers = 0
+    total = 0
+    start_after = None
+    start_after_id = None
+    for _ in range(200):
+        url = f"/contacts/?locationId={LOCATION}&limit=100"
+        if start_after and start_after_id:
+            url += f"&startAfter={start_after}&startAfterId={start_after_id}"
+        data = api(url)
+        contacts = data.get("contacts", [])
+        for c in contacts:
+            total += 1
+            if (c.get("type") or "").lower() == "customer":
+                customers += 1
+        meta = data.get("meta", {})
+        if not meta.get("nextPageUrl") and not meta.get("nextPage"):
+            break
+        prev = (start_after, start_after_id)
+        start_after, start_after_id = meta.get("startAfter"), meta.get("startAfterId")
+        if (start_after, start_after_id) == prev or not contacts:
+            break
+    return customers, total
+
+
 def created_on(opp):
     raw = opp.get("createdAt", "")
     try:
@@ -112,36 +143,63 @@ def pct(n, d):
 def main():
     today = date.today()
     cur_end = today - timedelta(days=1)
-    cur_start = cur_end - timedelta(days=6)
-    prev_end = cur_start - timedelta(days=1)
-    prev_start = prev_end - timedelta(days=6)
     iso_year, iso_week, _ = today.isocalendar()
 
     opps = fetch_all_opportunities()
     print(f"{len(opps)} opportunities in de Fitness Pipeline")
+    members, total_contacts = fetch_member_count()
+    print(f"{members} leden (type customer) van {total_contacts} contacten")
 
-    cur = funnel(opps, cur_start, cur_end)
-    prev = funnel(opps, prev_start, prev_end)
-    d30 = funnel(opps, today - timedelta(days=30), cur_end)
+    # Funnel per week, deze week + de 3 ervoor
+    week_funnels = []
+    for i in range(4):
+        w_end = cur_end - timedelta(days=7 * i)
+        w_start = w_end - timedelta(days=6)
+        f = funnel(opps, w_start, w_end)
+        y, w, _ = w_end.isocalendar()
+        week_funnels.append({"week": f"{y}-W{w:02d}", "start": w_start.isoformat(),
+                             "end": w_end.isoformat(), **f})
+
+    cur = week_funnels[0]
+    prev = week_funnels[1]
+
+    # Nieuwe leads per dag, laatste 28 dagen
+    day_counts = {}
+    for i in range(28):
+        d = cur_end - timedelta(days=27 - i)
+        day_counts[d.isoformat()] = 0
+    for o in opps:
+        d = created_on(o)
+        if d and d.isoformat() in day_counts:
+            day_counts[d.isoformat()] += 1
+    days = [{"date": k, "leads": v} for k, v in day_counts.items()]
 
     out = []
     out.append(f"# Leden/leads-weekrapport {iso_year}, week {iso_week}")
-    out.append(f"\n*Nieuwe leads per aanmaakweek: {cur_start} t/m {cur_end}, "
-               f"vergeleken met {prev_start} t/m {prev_end}. Let op: verse cohorten "
-               f"kunnen nog doorschuiven (een lead van gisteren kan volgende week "
-               f"alsnog een afspraak boeken).*\n")
-    out.append("## Funnel deze week vs vorige week\n")
-    out.append("| Stap | Deze week | Vorige week | Conversie deze week |")
-    out.append("|---|---|---|---|")
-    out.append(f"| Nieuwe leads | {cur['leads']} | {prev['leads']} | - |")
-    out.append(f"| Afspraak gezet | {cur['afspraken']} | {prev['afspraken']} | {pct(cur['afspraken'], cur['leads'])} van leads |")
-    out.append(f"| Geshowd | {cur['shows']} | {prev['shows']} | {pct(cur['shows'], cur['afspraken'])} van afspraken |")
-    out.append(f"| Sales | {cur['sales']} | {prev['sales']} | {pct(cur['sales'], cur['shows'])} van shows |")
+    out.append(f"\n*Cohorten per aanmaakweek, t/m {cur_end}. Verse cohorten kunnen nog "
+               f"doorschuiven: een lead van gisteren kan volgende week alsnog boeken.*\n")
 
-    out.append("\n## Laatste 30 dagen\n")
-    out.append(f"- {d30['leads']} leads -> {d30['afspraken']} afspraken ({pct(d30['afspraken'], d30['leads'])}) "
-               f"-> {d30['shows']} shows ({pct(d30['shows'], d30['afspraken'])}) "
-               f"-> {d30['sales']} sales ({pct(d30['sales'], d30['shows'])})")
+    out.append("## Funnel per week (binnen -> set -> show -> close)\n")
+    out.append("| Week | Binnen | Set | Show | Close | Set-rate | Show-rate | Close-rate |")
+    out.append("|---|---|---|---|---|---|---|---|")
+    for f in week_funnels:
+        wk = f["week"].split("-W")[1]
+        out.append(f"| w{wk} ({f['start'][5:]} t/m {f['end'][5:]}) | {f['leads']} | {f['afspraken']} "
+                   f"| {f['shows']} | {f['sales']} | {pct(f['afspraken'], f['leads'])} "
+                   f"| {pct(f['shows'], f['afspraken'])} | {pct(f['sales'], f['shows'])} |")
+
+    out.append("\n## Nieuwe leads per dag (laatste 14 dagen)\n")
+    for entry in days[-14:]:
+        d = date.fromisoformat(entry["date"])
+        dagnaam = ["ma", "di", "wo", "do", "vr", "za", "zo"][d.weekday()]
+        blok = "#" * entry["leads"] if entry["leads"] else "."
+        out.append(f"- {dagnaam} {d.strftime('%d-%m')}: {entry['leads']} {blok}")
+
+    out.append("\n## Leden\n")
+    out.append(f"- **Actuele leden (contacttype 'customer'): {members}** "
+               f"(van {total_contacts} contacten in GHL)")
+    out.append("- Elk weekrapport legt dit aantal vast; de groeitrend bouwt zich "
+               "vanzelf op in het dashboard.")
 
     out.append("\n## Signalen\n")
     signals = []
@@ -149,8 +207,9 @@ def main():
         signals.append(f"- Nieuwe leads flink gedaald: {prev['leads']} -> {cur['leads']}.")
     if cur["leads"] >= 5 and cur["afspraken"] == 0:
         signals.append(f"- {cur['leads']} nieuwe leads maar nog 0 afspraken: check de opvolging.")
-    if d30["afspraken"] >= 5 and d30["shows"] / max(d30["afspraken"], 1) < 0.5:
-        signals.append(f"- Show-rate laatste 30 dagen onder 50% ({pct(d30['shows'], d30['afspraken'])}): veel no-shows/annuleringen.")
+    month = funnel(opps, today - timedelta(days=30), cur_end)
+    if month["afspraken"] >= 5 and month["shows"] / max(month["afspraken"], 1) < 0.5:
+        signals.append(f"- Show-rate laatste 30 dagen onder 50% ({pct(month['shows'], month['afspraken'])}): veel no-shows/annuleringen.")
     out.extend(signals if signals else ["- Geen opvallende afwijkingen."])
 
     report_dir = REPO_ROOT / "reports" / "ghl"
@@ -159,20 +218,28 @@ def main():
     report_path.write_text("\n".join(out) + "\n", encoding="utf-8")
     print(f"Rapport geschreven: {report_path}")
 
+    # history.json: funnel-weken (upsert, incl. terugwerkend de 4 cohorten
+    # omdat verse cohorten nog doorschuiven) + ledenaantal + dagdata
     history_path = report_dir / "history.json"
     weeks = {}
     if history_path.exists():
         for w in json.loads(history_path.read_text(encoding="utf-8")).get("weeks", []):
             weeks[w["week"]] = w
-    y, w, _ = cur_end.isocalendar()
-    key = f"{y}-W{w:02d}"
-    weeks[key] = {"week": key, "start": cur_start.isoformat(), **cur}
+    for f in week_funnels:
+        existing = weeks.get(f["week"], {})
+        weeks[f["week"]] = {**existing, "week": f["week"], "start": f["start"],
+                            "leads": f["leads"], "afspraken": f["afspraken"],
+                            "shows": f["shows"], "sales": f["sales"]}
+    weeks[cur["week"]]["members"] = members
+
     history = {"updatedAt": today.isoformat(), "lastReport": report_path.name,
+               "memberCount": members, "totalContacts": total_contacts,
+               "days": days,
                "weeks": [weeks[k] for k in sorted(weeks)]}
     history_path.write_text(json.dumps(history, indent=1) + "\n", encoding="utf-8")
     print(f"Historie bijgewerkt: {history_path} ({len(weeks)} weken)")
-    print(f"Funnel: {cur['leads']} leads, {cur['afspraken']} afspraken, "
-          f"{cur['shows']} shows, {cur['sales']} sales")
+    print(f"Funnel deze week: {cur['leads']} binnen, {cur['afspraken']} set, "
+          f"{cur['shows']} show, {cur['sales']} close; {members} leden")
 
 
 if __name__ == "__main__":
