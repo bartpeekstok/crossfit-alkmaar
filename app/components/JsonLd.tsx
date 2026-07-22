@@ -71,8 +71,8 @@ export default function JsonLd() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: 52.6324,
-      longitude: 4.7534,
+      latitude: 52.619243,
+      longitude: 4.7637169,
     },
     openingHoursSpecification: [
       {
@@ -97,10 +97,18 @@ export default function JsonLd() {
     priceRange: "€€",
     currenciesAccepted: "EUR",
     paymentAccepted: "Cash, Credit Card, Debit Card",
-    areaServed: {
-      "@type": "City",
-      name: "Alkmaar",
-    },
+    areaServed: [
+      { "@type": "City", name: "Alkmaar" },
+      { "@type": "City", name: "Heerhugowaard" },
+      { "@type": "City", name: "Heiloo" },
+      { "@type": "City", name: "Bergen NH" },
+      { "@type": "City", name: "Langedijk" },
+      { "@type": "City", name: "Sint Pancras" },
+      { "@type": "City", name: "Broek op Langedijk" },
+      { "@type": "City", name: "Schoorl" },
+      { "@type": "City", name: "Egmond" },
+      { "@type": "City", name: "Dijk en Waard" },
+    ],
     sameAs: [
       "https://www.instagram.com/crossfitalkmaar",
       "https://www.facebook.com/crossfitalkmaar",
