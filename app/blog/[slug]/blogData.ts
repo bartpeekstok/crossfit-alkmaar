@@ -17,60 +17,6 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
-  "wat-is-crossfit": {
-    title: "Wat is CrossFit nou eigenlijk?",
-    metaTitle: "Wat is CrossFit? Uitleg zonder de hype",
-    date: "2026-07-22",
-    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
-    category: "Training",
-    image: "/images/crossfit-beginners-header.jpg",
-    excerpt: "Iedereen heeft er wel iets over gehoord: zwaar, voor fanatiekelingen, veel geschreeuw. Wat CrossFit werkelijk is, en waarom het beeld dat de meeste mensen hebben niet klopt.",
-    faq: [
-      {
-        question: "Is CrossFit hetzelfde als crossfitten in de sportschool?",
-        answer: "Niet helemaal. CrossFit is een specifieke trainingsmethode met eigen programmering, geschaald per persoon en gegeven door coaches die daarin zijn opgeleid. Los gewichtheffen en wat kettlebell-oefeningen combineren in een sportschool noemen mensen soms ook crossfitten, maar dat is niet wat de methode inhoudt.",
-      },
-      {
-        question: "Moet ik al fit zijn om aan CrossFit te beginnen?",
-        answer: "Nee. Elke oefening wordt geschaald op jouw niveau: lichter gewicht, minder herhalingen, een eenvoudigere variant van de beweging. Je traint op je eigen niveau, in dezelfde les als iemand die al jaren meedraait.",
-      },
-      {
-        question: "Waarom heeft CrossFit het imago dat het te zwaar is?",
-        answer: "Vooral door beelden op social media van de fitste atleten ter wereld die record-workouts doen. Dat is het topje van de pijler, niet de dagelijkse praktijk in een gewone box. Daar traint de gemiddelde deelnemer gewoon op zijn eigen tempo, met begeleiding van een coach.",
-      },
-    ],
-    content: `
-      <p>Vraag iemand die nog nooit is wezen kijken wat CrossFit is, en je krijgt meestal hetzelfde antwoord: heel zwaar, veel schreeuwen, alleen voor mensen die al fanatiek sporten. Geen van die dingen klopt, in elk geval niet zoals wij het twaalf jaar lang hebben gegeven. Tijd om het beeld recht te zetten.</p>
-
-      <h2>CrossFit in één zin</h2>
-
-      <p>CrossFit is functionele fitness: training die bestaat uit bewegingen die je lichaam al kent, zoals tillen, duwen, trekken, hurken en rennen, gecombineerd tot een gevarieerd trainingsprogramma. Geen geïsoleerde oefeningen op een apparaat, maar hele-lichaamsbewegingen die je ook buiten de gym gebruikt: een boodschappentas optillen, van de grond komen, een trap oplopen zonder buiten adem te raken.</p>
-
-      <p>De methode is bedacht om drie dingen tegelijk te trainen: kracht, conditie en beweeglijkheid. Vandaar dat een training kan bestaan uit een gewichtheffen-oefening, gevolgd door een stuk hardlopen of roeien, gevolgd door een lichaamsgewicht-oefening zoals een pull-up. Die combinatie, en niet één losse oefening, is waar het woord "cross" vandaan komt: je traint kruislings, over verschillende vaardigheden heen.</p>
-
-      <h2>Hoe ziet een training er dan uit</h2>
-
-      <p>Een training bij ons duurt ongeveer een uur en bestaat meestal uit drie onderdelen. Eerst een warming-up die je lichaam voorbereidt op de specifieke bewegingen van die dag. Daarna een krachtonderdeel, waarin je techniek en kracht opbouwt in een oefening zoals de deadlift, back squat of overhead press. Tot slot de workout van de dag (de WOD): een kort, intensief blok waarin kracht en conditie samenkomen.</p>
-
-      <p>Wat bij elke training hetzelfde blijft: een coach staat erbij, kijkt naar je techniek, en past het gewicht of de beweging aan op jouw niveau. Niemand doet exact dezelfde workout als de fitste persoon in de zaal. Iedereen doet dezelfde structuur, geschaald naar wat voor hem of haar haalbaar en veilig is.</p>
-
-      <h2>Waarom het imago niet klopt</h2>
-
-      <p>Het beeld van CrossFit als extreme sport komt vooral van beelden op social media: de CrossFit Games, waarin de fitste atleten ter wereld record-workouts doen. Indrukwekkend om te zien, maar dat is niet wat er dagelijks in een gewone box gebeurt. Bij ons traint een leraar van 55 naast een student van 22, en beiden doen een versie van dezelfde training die bij hun niveau past.</p>
-
-      <p>Onze gemiddelde leeftijd ligt boven de 35 en we hebben leden van 20 tot ver in de 70. Wat hen verbindt is niet dat ze allemaal al fit zijn, maar dat ze allemaal ergens begonnen zijn zonder ervaring.</p>
-
-      <h2>Wat maakt het anders dan fitnessen in een sportschool</h2>
-
-      <p>Het grootste verschil zit niet in de oefeningen zelf, maar in de begeleiding en de groep. Bij ons train je nooit alleen: een coach programmeert de training, legt de bewegingen uit, corrigeert je techniek en past aan waar nodig. Je traint in een kleine groep, met mensen die na een paar weken je naam kennen en het merken als je een keer wegblijft. Dat sociale stuk is precies waarom veel mensen die eerder zijn afgehaakt bij een reguliere sportschool, het bij CrossFit wél volhouden.</p>
-
-      <h2>Hoe je erachter komt of het bij je past</h2>
-
-      <p>Het enige eerlijke antwoord op "is dit iets voor mij" krijg je door het zelf te ervaren, niet door filmpjes te kijken. Iedereen die bij ons begint start op dezelfde manier: met de basisbewegingen leren in een rustig tempo, voordat je instroomt in de reguliere <a href="/groepslessen">groepslessen</a>. Zo weet je wat je doet voordat je in een volle les staat, en schaalt je coach alles naar jouw niveau. Meer over hoe die start eruitziet lees je op de pagina voor <a href="/crossfit-beginners-alkmaar">beginners bij CrossFit Alkmaar</a>.</p>
-
-      <p>Benieuwd hoe dat voor jou zou voelen? <a href="/free-intro">Plan een gratis kennismaking</a> en kom kijken wat een training écht inhoudt, zonder verplichtingen.</p>
-    `,
-  },
   "sterke-core-zonder-crunches": {
     title: "Een sterke core zonder crunches: dit werkt écht",
     metaTitle: "Sterke core zonder crunches: de beste core-oefeningen",
