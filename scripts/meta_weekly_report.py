@@ -35,6 +35,9 @@ if not ACCOUNT.startswith("act_"):
 
 LEAD_ACTIONS = {"lead", "leadgen", "offsite_conversion.fb_pixel_lead",
                 "onsite_conversion.lead_grouped"}
+# Ticketverkoop-campagnes (bv. HYROX-simulaties) sturen op aankopen, niet leads
+PURCHASE_ACTIONS = {"purchase", "offsite_conversion.fb_pixel_purchase",
+                    "onsite_conversion.purchase", "omni_purchase"}
 
 
 def api(path, params):
@@ -62,9 +65,17 @@ def insights(since, until, level):
     })
 
 
-def leads_from(row):
+def actions_from(row, action_types):
     return sum(int(float(a["value"])) for a in row.get("actions", [])
-               if a.get("action_type") in LEAD_ACTIONS)
+               if a.get("action_type") in action_types)
+
+
+def leads_from(row):
+    return actions_from(row, LEAD_ACTIONS)
+
+
+def purchases_from(row):
+    return actions_from(row, PURCHASE_ACTIONS)
 
 
 def summarize(rows):
@@ -72,7 +83,8 @@ def summarize(rows):
     clicks = sum(int(r.get("clicks", 0)) for r in rows)
     impressions = sum(int(r.get("impressions", 0)) for r in rows)
     leads = sum(leads_from(r) for r in rows)
-    return spend, clicks, impressions, leads
+    purchases = sum(purchases_from(r) for r in rows)
+    return spend, clicks, impressions, leads, purchases
 
 
 def eur(v):
@@ -90,8 +102,8 @@ def main():
     cur = insights(cur_start, cur_end, "campaign")
     prev = insights(prev_start, prev_end, "campaign")
 
-    spend, clicks, impressions, leads = summarize(cur)
-    p_spend, p_clicks, p_impressions, p_leads = summarize(prev)
+    spend, clicks, impressions, leads, purchases = summarize(cur)
+    p_spend, p_clicks, p_impressions, p_leads, p_purchases = summarize(prev)
     prev_by_name = {r.get("campaign_name", "?"): r for r in prev}
 
     out = []
@@ -100,25 +112,33 @@ def main():
     out.append("## Totalen\n")
     out.append(f"- **Besteding:** {eur(spend)} (vorige week {eur(p_spend)})")
     out.append(f"- **Leads:** {leads} (vorige week {p_leads})")
+    out.append(f"- **Aankopen (tickets e.d.):** {purchases} (vorige week {p_purchases})")
     cpl = eur(spend / leads) if leads else "-"
     p_cpl = eur(p_spend / p_leads) if p_leads else "-"
     out.append(f"- **Kosten per lead:** {cpl} (vorige week {p_cpl})")
+    cpa = eur(spend / purchases) if purchases else "-"
+    out.append(f"- **Kosten per aankoop:** {cpa}")
     out.append(f"- **Kliks:** {clicks} (vorige week {p_clicks})")
     out.append(f"- **Impressies:** {impressions:,} (vorige week {p_impressions:,})".replace(",", "."))
 
     out.append("\n## Per campagne\n")
-    out.append("| Campagne | Besteding | Leads | Kosten/lead | Kliks | CTR |")
-    out.append("|---|---|---|---|---|---|")
+    out.append("| Campagne | Besteding | Leads | Aankopen | Kosten/resultaat | Kliks | CTR |")
+    out.append("|---|---|---|---|---|---|---|")
     for r in sorted(cur, key=lambda x: -float(x.get("spend", 0))):
         r_spend = float(r.get("spend", 0))
         r_leads = leads_from(r)
-        r_cpl = eur(r_spend / r_leads) if r_leads else "-"
+        r_purch = purchases_from(r)
+        results = r_leads + r_purch
+        r_cpr = eur(r_spend / results) if results else "-"
         ctr = f"{float(r.get('ctr', 0)):.2f}%"
         out.append(f"| {r.get('campaign_name', '?')} | {eur(r_spend)} | {r_leads} "
-                   f"| {r_cpl} | {r.get('clicks', 0)} | {ctr} |")
+                   f"| {r_purch} | {r_cpr} | {r.get('clicks', 0)} | {ctr} |")
 
     out.append("\n## Signalen\n")
     signals = []
+    if spend > 25 and leads == 0 and purchases == 0:
+        signals.append(f"- {eur(spend)} besteed zonder gemeten leads of aankopen: check of de "
+                       "Meta-pixel conversies registreert, of de campagnedoelen kloppen.")
     if p_leads and leads < p_leads * 0.6:
         signals.append(f"- Leads flink gedaald: {p_leads} -> {leads}.")
     if p_spend and spend > p_spend * 1.4:
@@ -147,7 +167,7 @@ def main():
     y, w, _ = cur_end.isocalendar()
     key = f"{y}-W{w:02d}"
     weeks[key] = {"week": key, "start": cur_start.isoformat(),
-                  "spend": round(spend, 2), "leads": leads,
+                  "spend": round(spend, 2), "leads": leads, "purchases": purchases,
                   "clicks": clicks, "impressions": impressions}
     history = {"account": ACCOUNT, "updatedAt": today.isoformat(),
                "lastReport": report_path.name,
