@@ -92,6 +92,22 @@ export default function Footer() {
           </ul>
         </div>
         <div>
+          <h4>{isEN ? "Training" : "Trainen"}</h4>
+          <ul>
+            <li><Link href="/groepslessen">{isEN ? "Group classes" : "Groepslessen"}</Link></li>
+            <li><Link href="/hyrox-alkmaar">HYROX Alkmaar</Link></li>
+            <li><Link href="/personal-training">Personal training</Link></li>
+            <li><Link href="/kickstart">28 Day Kickstart</Link></li>
+          </ul>
+          <h4 style={{ marginTop: 22 }}>{isEN ? "In the region" : "In de regio"}</h4>
+          <ul>
+            <li><Link href="/crossfit-heerhugowaard">CrossFit Heerhugowaard</Link></li>
+            <li><Link href="/crossfit-heiloo">CrossFit Heiloo</Link></li>
+            <li><Link href="/crossfit-bergen">CrossFit Bergen NH</Link></li>
+            <li><Link href="/crossfit-langedijk">CrossFit Langedijk</Link></li>
+          </ul>
+        </div>
+        <div>
           <h4>Contact</h4>
           <ul>
             <li>
