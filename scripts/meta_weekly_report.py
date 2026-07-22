@@ -33,11 +33,15 @@ ACCOUNT = os.environ["META_AD_ACCOUNT_ID"]
 if not ACCOUNT.startswith("act_"):
     ACCOUNT = f"act_{ACCOUNT}"
 
-LEAD_ACTIONS = {"lead", "leadgen", "offsite_conversion.fb_pixel_lead",
-                "onsite_conversion.lead_grouped"}
+# Meta rapporteert dezelfde conversie onder meerdere labels (totaal, pixel,
+# omni); tel er dus precies EEN, in deze voorkeursvolgorde. Optellen zou
+# dubbel of driedubbel tellen (dat gaf 24 "aankopen" waar het er 8 waren).
+LEAD_ACTIONS = ("lead", "offsite_conversion.fb_pixel_lead", "leadgen",
+                "onsite_conversion.lead_grouped")
 # Ticketverkoop-campagnes (bv. HYROX-simulaties) sturen op aankopen, niet leads
-PURCHASE_ACTIONS = {"purchase", "offsite_conversion.fb_pixel_purchase",
-                    "onsite_conversion.purchase", "omni_purchase"}
+PURCHASE_ACTIONS = ("omni_purchase", "purchase",
+                    "offsite_conversion.fb_pixel_purchase",
+                    "onsite_conversion.purchase")
 
 
 def api(path, params):
@@ -66,8 +70,11 @@ def insights(since, until, level):
 
 
 def actions_from(row, action_types):
-    return sum(int(float(a["value"])) for a in row.get("actions", [])
-               if a.get("action_type") in action_types)
+    by_type = {a.get("action_type"): a for a in row.get("actions", [])}
+    for t in action_types:
+        if t in by_type:
+            return int(float(by_type[t]["value"]))
+    return 0
 
 
 def leads_from(row):
