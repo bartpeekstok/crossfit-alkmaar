@@ -1,16 +1,16 @@
 {
  "account": "act_1266881798627026",
- "updatedAt": "2026-07-22",
+ "updatedAt": "2026-07-23",
  "lastReport": "2026-w30.md",
  "weeks": [
   {
    "week": "2026-W30",
-   "start": "2026-07-15",
-   "spend": 99.73,
+   "start": "2026-07-16",
+   "spend": 93.3,
    "leads": 0,
    "purchases": 8,
-   "clicks": 301,
-   "impressions": 15429
+   "clicks": 272,
+   "impressions": 13990
   }
  ]
 }
