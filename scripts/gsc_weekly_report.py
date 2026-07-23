@@ -183,6 +183,25 @@ def main():
             for p in paths:
                 out.append(f"- {p}")
 
+    # Concreet actielijstje: nieuwe (onbekende) URL's kun je handmatig
+    # aanvragen in GSC; wachtrij-URL's hoeven alleen gevolgd te worden.
+    unknown = [p for s, ps in coverage.items() if "unknown" in s.lower() for p in ps]
+    queued = [p for s, ps in coverage.items()
+              if ("discovered" in s.lower() or "crawled" in s.lower()) and "not indexed" in s.lower()
+              for p in ps]
+    out.append("\n## Actiepunten indexatie\n")
+    if unknown:
+        out.append("**Nog onbekend bij Google — vraag handmatig indexering aan "
+                   "(GSC > URL plakken in de inspectiebalk > Indexering aanvragen):**")
+        for p in unknown:
+            out.append(f"- https://www.crossfitalkmaar.com{p if p != '/' else ''}")
+    if queued:
+        out.append("\n**In Google's wachtrij — geen actie nodig, alleen volgen:**")
+        for p in queued:
+            out.append(f"- {p}")
+    if not unknown and not queued:
+        out.append("- Geen actie nodig: alle sitemap-URL's zijn bekend bij Google.")
+
     report_dir = REPO_ROOT / "reports" / "gsc"
     report_dir.mkdir(parents=True, exist_ok=True)
     report_path = report_dir / f"{iso_year}-w{iso_week:02d}.md"
