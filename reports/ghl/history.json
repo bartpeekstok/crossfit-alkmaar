@@ -1,17 +1,9 @@
 {
- "updatedAt": "2026-07-23",
+ "updatedAt": "2026-07-25",
  "lastReport": "2026-w30.md",
- "memberCount": 330,
- "totalContacts": 3843,
+ "memberCount": 324,
+ "totalContacts": 3851,
  "days": [
-  {
-   "date": "2026-06-25",
-   "leads": 2
-  },
-  {
-   "date": "2026-06-26",
-   "leads": 0
-  },
   {
    "date": "2026-06-27",
    "leads": 0
@@ -115,41 +107,49 @@
   {
    "date": "2026-07-22",
    "leads": 4
+  },
+  {
+   "date": "2026-07-23",
+   "leads": 3
+  },
+  {
+   "date": "2026-07-24",
+   "leads": 1
   }
  ],
  "weeks": [
   {
    "week": "2026-W27",
-   "start": "2026-06-25",
+   "start": "2026-06-27",
    "leads": 5,
    "afspraken": 4,
-   "shows": 4,
-   "sales": 4
+   "shows": 3,
+   "sales": 3
   },
   {
    "week": "2026-W28",
-   "start": "2026-07-02",
-   "leads": 8,
+   "start": "2026-07-04",
+   "leads": 7,
    "afspraken": 5,
-   "shows": 4,
+   "shows": 5,
    "sales": 4
   },
   {
    "week": "2026-W29",
-   "start": "2026-07-09",
-   "leads": 3,
+   "start": "2026-07-11",
+   "leads": 4,
    "afspraken": 2,
    "shows": 2,
-   "sales": 1
+   "sales": 2
   },
   {
    "week": "2026-W30",
-   "start": "2026-07-16",
-   "leads": 6,
-   "afspraken": 4,
+   "start": "2026-07-18",
+   "leads": 8,
+   "afspraken": 6,
    "shows": 3,
-   "sales": 2,
-   "members": 330
+   "sales": 1,
+   "members": 324
   }
  ]
 }
