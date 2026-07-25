@@ -1645,25 +1645,62 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "krachttraining-50plus": {
     title: "Beïnvloedt gewichtheffen je gewrichten na je 50e?",
-    date: "2025-02-23",
+    metaTitle: "Krachttraining na je 50e: goed of slecht voor je gewrichten?",
+    date: "2026-07-25",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/redesign/assets/community-2.jpg",
-    excerpt: "Is gewichtheffen slecht voor je gewrichten na je 50e? Integendeel: krachttraining houdt ze juist sterk en gezond. CrossFit Alkmaar legt uit.",
+    excerpt: "Is gewichtheffen slecht voor je gewrichten na je 50e? Integendeel: krachttraining houdt ze juist sterk en gezond. CrossFit Alkmaar legt uit hoe dat werkt.",
+    faq: [
+      {
+        question: "Is het te laat om na mijn 50e te beginnen met krachttraining?",
+        answer: "Nee. Spieren en botten reageren op elke leeftijd op trainingsprikkels. Je bouwt vanaf een ander startpunt op dan iemand van dertig, maar de vooruitgang in kracht en stabiliteit is net zo reëel. Hoe eerder je begint, hoe eerder je profiteert van sterkere spieren rond je gewrichten.",
+      },
+      {
+        question: "Hoe vaak moet ik na mijn 50e krachttraining doen?",
+        answer: "Twee tot drie keer per week is voor de meeste mensen een goed uitgangspunt. Dat geeft genoeg prikkel om spiermassa en botdichtheid op te bouwen, met voldoende ruimte voor herstel tussen de trainingen door.",
+      },
+      {
+        question: "Helpt krachttraining tegen osteoporose?",
+        answer: "Het kan een belangrijke rol spelen. Botweefsel wordt sterker als het belast wordt, en gewichtheffen is een directe manier om die belasting te geven. Twijfel je of krachttraining past bij een medische situatie zoals osteoporose, overleg dan ook met je arts.",
+      },
+      {
+        question: "Wat als ik al pijnklachten aan mijn knieën, heupen of schouders heb?",
+        answer: "Dan is begeleiding extra belangrijk, niet een reden om te stoppen met bewegen. Onze coaches passen oefeningen, gewicht en bewegingsbereik aan op wat jouw gewrichten op dat moment aankunnen, en bouwen van daaruit rustig op.",
+      },
+    ],
     content: `
-      <p>Veel mensen denken dat gewichtheffen slecht is voor je gewrichten, vooral na je 50e. Maar het tegendeel is waar. Met de juiste techniek en begeleiding kan krachttraining juist helpen om je gewrichten sterker en gezonder te houden.</p>
+      <p>Veel mensen denken dat gewichtheffen slecht is voor je gewrichten, vooral na je 50e. Maar het tegendeel is waar. Met de juiste techniek en opbouw is krachttraining een van de beste dingen die je voor je gewrichten kunt doen.</p>
 
-      <p>Na je 50e neemt spiermassa en botdichtheid van nature af, wat kan leiden tot zwakkere gewrichten en een verhoogd risico op blessures. Gewichtheffen helpt dit proces te vertragen en zelfs om te keren. Het versterkt de spieren rondom je gewrichten, wat zorgt voor betere stabiliteit en minder kans op pijn of blessures.</p>
+      <h2>Wat er met je lichaam gebeurt na je 50e</h2>
 
-      <p>Daarnaast kan krachttraining helpen bij het verbeteren van je mobiliteit en flexibiliteit, wat essentieel is voor een actieve levensstijl op latere leeftijd. Het is belangrijk om te beginnen met lichte gewichten en geleidelijk de intensiteit op te bouwen onder begeleiding van een ervaren coach.</p>
+      <p>Vanaf ongeveer je dertigste verlies je geleidelijk spiermassa, een proces dat sarcopenie heet en na je 50e versnelt. Ook je botdichtheid neemt af. Minder spierweefsel rond je knieën, heupen en schouders betekent minder stabiliteit en minder demping voor die gewrichten, wat het risico op pijn en blessures juist vergroot. Minder bewegen of alleen voorzichtig blijven doen versnelt dit proces eerder dan dat het helpt.</p>
 
-      <p>Bij CrossFit Alkmaar hebben we ervaring met het begeleiden van sporters van alle leeftijden. Onze coaches zorgen ervoor dat je veilig en effectief traint, ongeacht je leeftijd of ervaring. Door de juiste begeleiding kun je op een verantwoorde manier werken aan een sterker en gezonder lichaam.</p>
+      <h2>Waarom krachttraining juist helpt</h2>
 
-      <p>Al onze programma's richten zich op het behouden en verbeteren van kracht, mobiliteit en algehele fitheid. We passen de trainingen aan jouw niveau aan en zorgen ervoor dat je in een veilige en ondersteunende omgeving traint.</p>
+      <p>Krachttraining remt dit proces niet alleen af, het kan het deels ook omkeren. Door regelmatig weerstand te bieden aan je spieren, geef je je lichaam het signaal om spiermassa op te bouwen of te behouden. Sterkere spieren rond je gewrichten nemen een deel van de belasting over van het gewricht zelf, wat voor minder slijtage en pijn zorgt. Daarnaast stimuleert het belasten van botten met gewicht de aanmaak van botweefsel, wat het risico op broze botten verkleint.</p>
 
-      <p>Zorg er altijd voor dat je traint onder begeleiding van een ervaren coach en luister naar je lichaam. Kwaliteit boven kwantiteit is hier de sleutel.</p>
+      <h2>Techniek en opbouw zijn de sleutel</h2>
 
-      <p><a href="/free-intro">Boek hier je vrijblijvende intake</a>.</p>
+      <p>Het risico zit niet in het optillen van gewicht, maar in de manier waarop. Te snel te zwaar gaan, met een matige uitvoering, is waar blessures ontstaan, ongeacht je leeftijd. Bij CrossFit Alkmaar bouwen we daarom altijd rustig op: eerst techniek, dan volume, dan pas gewicht. Onze coaches passen elke oefening aan op wat jouw lichaam op dat moment aankan, of dat nu een lichte kettlebell is of een volwaardige squat met de barbell.</p>
+
+      <h2>Mobiliteit en herstel</h2>
+
+      <p>Naast kracht werkt goede krachttraining ook aan je mobiliteit: hoe soepel je gewrichten door hun volledige bewegingsbereik kunnen bewegen. Dat is precies wat je nodig hebt om actief te blijven, of dat nu tillen, tuinieren of spelen met kleinkinderen is. Herstel vraagt na je vijftigste wel iets meer aandacht dan op je dertigste: voldoende slaap, genoeg eiwit en soms een dag extra rust tussen twee zware trainingen. Onze coaches houden daar rekening mee bij het opbouwen van je trainingsschema.</p>
+
+      <h2>Voor wie dit is</h2>
+
+      <p>We begeleiden leden van alle leeftijden en niveaus, van mensen die voor het eerst een halter oppakken tot leden die al jaren fanatiek trainen. Ook uit <a href="/crossfit-heerhugowaard">Heerhugowaard</a> en <a href="/crossfit-heiloo">Heiloo</a> komen leden bij ons trainen met dezelfde vraag: kan ik dit nog op mijn leeftijd? Het antwoord is bijna altijd ja, mits de begeleiding en opbouw goed geregeld zijn.</p>
+
+      <p>Onthoud deze drie dingen:</p>
+
+      <ul>
+        <li>Spiermassa en botdichtheid nemen na je 50e sneller af, en krachttraining is een directe manier om daar iets aan te doen.</li>
+        <li>Niet het gewicht, maar de opbouw en techniek bepalen of je veilig traint.</li>
+        <li>Een coach die met je meedenkt over je gewrichten en herstel, maakt het verschil tussen vooruitgang en blessures.</li>
+      </ul>
+
+      <p>Benieuwd wat krachttraining met begeleiding voor jouw lichaam kan doen? <a href="/free-intro">Plan hier een gratis kennismaking</a> of start met de <a href="/kickstart">28-day kickstart</a> en ervaar het zelf.</p>
     `,
   },
   "meer-energie-door-beweging": {
