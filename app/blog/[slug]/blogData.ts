@@ -1705,35 +1705,51 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "meer-energie-door-beweging": {
     title: "Waarom je juist moet sporten als je hoofd overloopt",
-    date: "2024-09-25",
+    date: "2026-07-29",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Gezondheid",
     image: "/redesign/assets/community-1.jpg",
-    excerpt: "Hoofd vol en geen zin om te sporten? Juist dan geeft bewegen je energie terug. Waarom sporten werkt als je hoofd overloopt.",
+    excerpt: "Hoofd vol en geen zin om te sporten? Juist dan geeft bewegen je energie terug. Waarom sporten werkt als je hoofd overloopt, en hoe je de drempel verlaagt.",
+    faq: [
+      {
+        question: "Ik ben te moe om te sporten, wat nu?",
+        answer: "Vermoeidheid door een volle dag is meestal mentale vermoeidheid, niet fysieke. Je lijf heeft vaak meer over dan je hoofd op dat moment gelooft. Ga er in die gevallen gewoon heen en beoordeel na de warming-up hoe het voelt. Negen van de tien keer merk je dat je meer kunt dan je dacht.",
+      },
+      {
+        question: "Hoe lang moet ik sporten voor meer energie?",
+        answer: "Een uur is genoeg, maar zelfs een training van dertig tot veertig minuten geeft al een merkbaar effect op je hoofd en energie. Het gaat niet om de duur, maar om het feit dat je in beweging komt en je aandacht verlegt.",
+      },
+      {
+        question: "Wat als ik na een zware werkdag geen puf heb om alleen te trainen?",
+        answer: "Dat is precies waarom wij in kleine groepen trainen met een vaste coach. Je hoeft zelf niets te verzinnen of te plannen, je komt binnen en de training staat klaar. Dat verlaagt de drempel enorm vergeleken met in je eentje in een sportschool aan de slag moeten.",
+      },
+    ],
     content: `
-      <p>We kennen het allemaal: je hoofd zit vol met werk, thuiszaken of een eindeloze to-do-lijst. En dan staat er ook nog dat sporten op..... Alles lijkt soms te veel en de bank met een zak chips lijkt een prima schuilplaats. Misschien wil je ’s ochtends gewoon langer blijven liggen. Maar deze aanpak helpt je op de lange termijn niet vooruit. Vaak voel je je juist de volgende dag nog vermoeider en minder energiek. Uiteindelijk is het een vorm van verstoppen.</p>
+      <p>Je kent het gevoel: je hoofd zit vol met werk, thuiszaken of een eindeloze to-do-lijst, en dan staat er ook nog een training op de planning. Alles lijkt soms te veel, en de bank met een zak chips voelt als een prima schuilplaats. Misschien wil je 's ochtends gewoon langer blijven liggen. Op korte termijn voelt dat als rust, maar op de lange termijn helpt het je niet vooruit. Vaak voel je je de volgende dag juist vermoeider en minder energiek. Het is uiteindelijk een vorm van verstoppen.</p>
 
       <h2>Comfortfood en vluchtgedrag</h2>
 
-      <p>Wanneer je gestrest bent, is het verleidelijk om te grijpen naar comfortfood en de tv. Even wegduiken in je eentje met een zak chips lijkt een snelle oplossing, maar geeft je geen energie. Je problemen blijven gewoon bestaan, en dat gevoel van vermoeidheid wordt alleen maar erger. Je blijft in een vicieuze cirkel draaien zonder verbetering.</p>
+      <p>Wanneer je gestrest bent, is het verleidelijk om te grijpen naar comfortfood en de bank. Even wegduiken met een zak chips lijkt een snelle oplossing, maar het geeft je geen energie. Je problemen blijven gewoon bestaan, en dat gevoel van vermoeidheid wordt alleen maar groter. Je blijft in een vicieuze cirkel draaien zonder dat er iets verbetert.</p>
 
       <h2>Waarom sporten de oplossing is</h2>
 
-      <p>In plaats van wegduiken, kun je beter voor beweging kiezen. Sporten klinkt misschien als een grote uitdaging op zo’n moment, maar het heeft enorme voordelen. Tijdens beweging maakt je lichaam endorfines aan, de zogenaamde gelukshormonen. Dit zorgt ervoor dat je je beter voelt en helpt je hoofd leeg te maken.</p>
+      <p>In plaats van wegduiken, kun je beter voor beweging kiezen. Sporten klinkt misschien als een grote uitdaging op zo'n moment, maar het levert precies op wat je op dat moment nodig hebt. Tijdens beweging maakt je lichaam endorfines aan: de zogenaamde gelukshormonen. Dat zorgt ervoor dat je je beter voelt en helpt je hoofd leeg te maken.</p>
 
       <h2>Meer energie door beweging</h2>
 
-      <p>Na een uur sporten voel je vaak meer energie. Je bloedsomloop wordt gestimuleerd, en dat zorgt ervoor dat je je energie beter benut. In plaats van energie te verliezen door stil te zitten op de bank, krijg je juist een energieboost. Dit helpt niet alleen om je stress te verminderen, maar ook om met een frisse blik naar je problemen te kijken.</p>
+      <p>Na een training voel je vaak meer energie dan ervoor, ook al leek dat van tevoren onlogisch. Je bloedsomloop komt op gang, je ademhaling verandert en je lichaam wordt actief in plaats van passief. In plaats van energie te verliezen door stil te zitten op de bank, krijg je juist een energieboost. Dat helpt niet alleen om je stress te verminderen, maar ook om met een frisse blik naar je problemen te kijken.</p>
 
       <h2>De drempel over</h2>
 
-      <p>Het kan lastig zijn om jezelf tot sporten te zetten, vooral als je gestrest of moe bent. Het voelt soms alsof je de energie niet hebt om te beginnen. Maar als je eenmaal bezig bent, ben je jezelf dankbaar. Zelfs als je maar 50% inzet of zelfs 25%, is het beter dan helemaal niet sporten. Als je niet gaat, is het de volgende keer nog makkelijker om uit te stellen, en voor je het weet, stop je helemaal met sporten. Laat je hoofd niet winnen van je wilskracht!</p>
+      <p>Het is lastig om jezelf tot sporten te zetten, vooral als je gestrest of moe bent. Het voelt soms alsof je de energie niet hebt om te beginnen. Maar als je eenmaal bezig bent, ben je jezelf dankbaar. Zelfs als je maar de helft van je normale inzet haalt, is dat beter dan helemaal niet gaan. Sla je een keer over, dan is het de volgende keer nog makkelijker om uit te stellen, en voor je het weet stop je helemaal. Laat je hoofd niet winnen van je wilskracht.</p>
+
+      <p>Dit is ook precies waarom we bij CrossFit Alkmaar met vaste trainingsmomenten en kleine groepen werken. Je hoeft zelf niets te plannen of te verzinnen: je komt binnen, de coach staat klaar en de training is al voorbereid. Dat verlaagt de drempel op precies de dagen dat je hem het hardst nodig hebt.</p>
 
       <h2>Kies voor jezelf</h2>
 
-      <p>De volgende keer dat je hoofd overloopt, en je in de verleiding komt om je te verstoppen met snacks of op bed te blijven liggen, herinner jezelf eraan dat bewegen de oplossing is. Sporten geeft je de energie terug die je nodig hebt en helpt je om je gedachten op een rij te krijgen. Kies voor beweging en word op de lange termijn fysiek én mentaal sterker.</p>
+      <p>De volgende keer dat je hoofd overloopt en je in de verleiding komt om je te verstoppen met snacks of op de bank te blijven hangen, herinner jezelf eraan dat bewegen de oplossing is, niet het probleem. Sporten geeft je de energie terug die je nodig hebt en helpt je om je gedachten op een rij te krijgen. Kies voor beweging en word op de lange termijn fysiek én mentaal sterker.</p>
 
-      <p>Dus, in plaats van de makkelijke weg te kiezen, zet die eerste stap en ga bewegen. Je zult zien dat je je daarna een stuk beter voelt! Geen idee hoe je dat zelf moet doen op een manier die je lang volhoudt? <a href="/free-intro">Boek hier gratis een vrijblijvende intake</a> met één van onze coaches, we helpen je graag!</p>
+      <p>Zet die eerste stap en ga bewegen, je zult merken dat je je daarna een stuk beter voelt. Geen idee hoe je dat op een manier aanpakt die je ook volhoudt als het druk is? Start met de <a href="/kickstart">28-Day Kickstart</a> of <a href="/free-intro">boek een gratis kennismaking</a> met een van onze coaches, we helpen je graag op weg.</p>
     `,
   },
   "hoe-vaak-moet-je-trainen": {
