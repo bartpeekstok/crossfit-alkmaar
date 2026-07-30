@@ -96,7 +96,9 @@ def ga4_organic(start, end):
     zijn (hergebruikt GSC_CLIENT_ID/SECRET). Geeft (rows, tot_sessies,
     tot_keyevents) of None als GA4 niet geconfigureerd of onbereikbaar is.
     """
-    if not (os.environ.get("GA4_REFRESH_TOKEN") and os.environ.get("GA4_PROPERTY_ID")):
+    ontbreekt = [v for v in ("GA4_REFRESH_TOKEN", "GA4_PROPERTY_ID") if not os.environ.get(v)]
+    if ontbreekt:
+        print(f"GA4-sectie overgeslagen: env var(s) niet gezet: {', '.join(ontbreekt)}")
         return None
     try:
         body = urllib.parse.urlencode({
