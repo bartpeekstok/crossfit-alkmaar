@@ -7,50 +7,74 @@ import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
 export default function IntakeGeboektPage() {
   useEffect(() => {
+    // Conversie-event: GHL redirect boekers na een geslaagde boeking
+    // naar deze pagina (GA4 key event + eigen dashboard-tracking).
     trackEvent("intake_booked", { page_location: "intake-geboekt" });
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-200">
-      {/* Hero */}
-      <section
-        className="relative py-20 px-6 min-h-[500px] flex items-center"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/CFA-juni-03-community.jpg')`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }}
-      >
-        <div className="max-w-2xl mx-auto text-center relative z-10">
-          <h1 
-            className="text-4xl md:text-5xl font-bold mb-6"
-            style={{ color: 'white' }}
-          >
-            Je intake is geboekt!
-          </h1>
-          <p className="text-xl text-white mb-8">
-            We sturen je een bevestiging via e-mail en Whatsapp, tot snel bij CrossFit Alkmaar!
+    <>
+      {/* HERO */}
+      <section className="page-hero">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img className="bg" src="/redesign/assets/header-community.jpg" alt="" style={{ objectPosition: "center 35%" }} />
+        <div className="scrim" />
+        <div className="wrap inner">
+          <h1>Je intake is geboekt!</h1>
+          <p className="lede">
+            We sturen je een bevestiging via e-mail en WhatsApp. Tot snel bij CrossFit Alkmaar!
           </p>
-          <Link
-            href="/"
-            className="inline-block bg-blue-900 hover:bg-blue-950 text-white font-semibold py-4 px-8 rounded-lg transition text-lg"
-          >
-            Terug naar home
-          </Link>
+          <div style={{ marginTop: 22 }}>
+            <Link href="/" className="btn btn--primary btn--lg">Terug naar home</Link>
+          </div>
         </div>
       </section>
 
-      {/* Video sectie */}
-      <section className="py-16 px-6 bg-gray-100">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center text-gray-900">
-            Zo ziet je intake eruit
-          </h2>
-          <div className="aspect-video rounded-lg overflow-hidden shadow-lg">
+      {/* VIDEO */}
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center reveal">
+            <h2 className="sec-title">Zo ziet je intake eruit</h2>
+            <p className="sec-sub">
+              Alvast een kijkje: in deze video zie je hoe een intake bij ons verloopt.
+            </p>
+          </div>
+          <div
+            className="reveal"
+            style={{
+              maxWidth: 860,
+              margin: "28px auto 0",
+              aspectRatio: "16 / 9",
+              borderRadius: "var(--r-lg)",
+              overflow: "hidden",
+              boxShadow: "var(--sh-3)",
+              background: "#000",
+            }}
+          >
             <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Intake bij CrossFit Alkmaar" />
           </div>
         </div>
       </section>
-    </div>
+
+      {/* PRAKTISCH */}
+      <section className="sec">
+        <div className="wrap center reveal">
+          <h2 className="sec-title">Waar we je verwachten</h2>
+          <p className="sec-sub">
+            Phoenixstraat 33, 1812 PP Alkmaar. Parkeren is gratis, voor de deur.
+          </p>
+          <div style={{ marginTop: 16 }}>
+            <a
+              className="btn btn--ghost"
+              href="https://maps.google.com/?q=Phoenixstraat+33+1812+PP+Alkmaar"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Bekijk op Google Maps →
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

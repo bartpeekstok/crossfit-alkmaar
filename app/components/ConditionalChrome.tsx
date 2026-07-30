@@ -56,6 +56,8 @@ export const REDESIGNED_PATHS = [
   "/hyrox-heerhugowaard",
   // Ledenservice (geen SEO-landing, wel nieuwe huisstijl-chrome)
   "/faq",
+  // Bedankpagina na intake-boeking (GHL-redirect, noindex)
+  "/intake-geboekt",
   // Campagnepagina ex-leden (QR op ansichtkaart, noindex)
   "/welkom-terug",
   // Verborgen pagina's voor Kickstart-deelnemers (alleen via link, noindex)
