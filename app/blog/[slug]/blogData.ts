@@ -1598,17 +1598,31 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "sportschool-voor-beginners": {
     title: "Hoe je als beginner succesvol kunt starten met trainen",
-    date: "2024-10-08",
+    date: "2026-07-30",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/redesign/assets/photo-box1.webp",
     excerpt: "Starten met trainen als beginner? Met deze zes tips van CrossFit Alkmaar begin je succesvol én hou je het vol.",
+    faq: [
+      {
+        question: "Moet ik al fit zijn om te beginnen met trainen?",
+        answer: "Nee. Je hoeft niet fit te zijn om te starten, je start om fit te worden. Bij CrossFit Alkmaar wordt elke oefening geschaald naar jouw niveau, of je nu nog nooit gesport hebt of al jaren actief bent.",
+      },
+      {
+        question: "Hoe ziet mijn eerste periode als beginner eruit?",
+        answer: "Je start met de Kickstart: persoonlijke sessies in een kleine groep waarin je alle basisbewegingen leert, in je eigen tempo. Daarna stroom je door naar de reguliere groepslessen, met een coach die je techniek al kent.",
+      },
+      {
+        question: "Hoe vaak moet ik trainen als ik net begin?",
+        answer: "Twee tot drie keer per week is een goed startpunt. Belangrijker dan de frequentie is de regelmaat: liever twee keer per week vol te houden dan één keer alles geven en daarna weken wegblijven.",
+      },
+    ],
     content: `
       <p>Alle begin is moeilijk.</p>
 
       <p>Je staat op het punt om te starten met trainen, maar de gedachten die door je hoofd gaan, zijn allesbehalve motiverend. "Ben ik wel fit genoeg? Kan ik dit wel volhouden? Wat als ik het niet kan?" Als deze twijfels je bekend voorkomen, weet dan dat je niet de enige bent. Iedereen begint ergens, en het mooie aan trainen is dat je altijd stappen vooruit kunt zetten, ongeacht je startpunt.</p>
 
-      <p>Bij CrossFit Alkmaar geloven we dat iedereen in staat is om hun doelen te bereiken, of het nu gaat om fitter worden, sterker voelen of simpelweg gezonder leven. De sleutel tot succes? Beginnen, en blijven gaan. Op onze social media zie je veel mensen met honderden trainingen bij ons, die zijn allemaal een keer begonnen. Hier zijn een paar tips om je op weg te helpen en je vertrouwen te geven vanaf dag één.</p>
+      <p>Bij CrossFit Alkmaar start elke beginner op dezelfde manier: met de <a href="/kickstart">Kickstart</a>, persoonlijke sessies in een kleine groep waarin je de basisbewegingen leert voordat je instroomt in de groepslessen. Je hoeft dus niets uit te zoeken, alleen op te komen dagen. Hier zijn zes tips om je op weg te helpen en je vertrouwen te geven vanaf dag één.</p>
 
       <h2>1. Stel realistische doelen</h2>
 
@@ -1618,7 +1632,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>2. Focus op techniek</h2>
 
-      <p>Een van de grootste fouten die beginners maken, is te snel willen gaan. Ja, snelheid en kracht zijn belangrijk, maar zonder goede techniek kun je blessures oplopen. Neem de tijd om de juiste vorm te leren. Het mooie van trainen bij CrossFit Alkmaar is dat je persoonlijke begeleiding krijgt. Zo zorgen we ervoor dat je vanaf het begin goed leert bewegen, wat essentieel is voor je lange termijn succes.</p>
+      <p>Een van de grootste fouten die beginners maken, is te snel willen gaan. Ja, snelheid en kracht zijn belangrijk, maar zonder goede techniek kun je blessures oplopen. Neem de tijd om de juiste vorm te leren. Daarom leer je bij <a href="/crossfit-beginners-alkmaar">CrossFit voor beginners</a> eerst de basisbewegingen in een kleine groep, voordat je in een reguliere groepsles van maximaal twaalf personen stapt. Zo zorgen we ervoor dat je vanaf het begin goed leert bewegen, wat essentieel is voor je lange termijn succes.</p>
 
       <h2>3. Blijf consistent</h2>
 
@@ -1626,7 +1640,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>4. Vertrouw op professionals</h2>
 
-      <p>Bij CrossFit Alkmaar staan we voor je klaar. Wij begeleiden je niet alleen bij de oefeningen, maar ook mentaal. Want trainen gaat niet alleen om fysiek sterker worden, maar ook om het ontwikkelen van een positieve mindset. Vertrouw erop dat wij het beste met je voor hebben en dat wij samen met jou willen werken aan je doelen. Durf vragen te stellen, en wees niet bang om hulp te vragen als iets moeilijk aanvoelt.</p>
+      <p>Bij CrossFit Alkmaar staat er elke les een coach op de vloer die je techniek corrigeert, je pusht als het kan en afremt als het moet. Trainen gaat niet alleen om fysiek sterker worden, maar ook om het ontwikkelen van een positieve mindset. Durf vragen te stellen, en wees niet bang om hulp te vragen als iets moeilijk aanvoelt.</p>
 
       <p>Mensen begeleiden in hun fitness reis is ons werk. We doen dit elke dag, hebben er een bak ervaring in en we zijn er goed in. Laat ons je helpen.</p>
 
@@ -1638,7 +1652,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Tot slot, wees geduldig. Resultaten komen niet van de ene op de andere dag. Het kan weken of zelfs maanden duren voordat je echt verschil ziet of voelt. Maar met consistentie en doorzettingsvermogen ga je uiteindelijk je doelen bereiken. Het belangrijkste is dat je blijft geloven in jezelf en in het proces.</p>
 
-      <p>Trainen is een reis, en elke stap die je zet, brengt je dichter bij een betere versie van jezelf. Bij CrossFit Alkmaar zijn we er om je te helpen bij elke stap van die reis. We geloven dat je meer kunt bereiken dan je denkt, en we staan klaar om je te ondersteunen bij het ontdekken van je volledige potentieel. Dus waar wacht je nog op? Zet die eerste stap, en wij zorgen ervoor dat je succesvol zult zijn.</p>
+      <p>Trainen is een reis, en elke stap die je zet, brengt je dichter bij een betere versie van jezelf. Bij CrossFit Alkmaar zijn we er om je te helpen bij elke stap van die reis. Kom je uit de regio, bijvoorbeeld <a href="/crossfit-heerhugowaard">Heerhugowaard</a> of <a href="/crossfit-heiloo">Heiloo</a>? Ook dan ben je van harte welkom, de meeste van onze leden rijden een klein stukje.</p>
 
       <p><a href="/free-intro">Boek hier die gratis intake</a>. We zien je graag binnenlopen.</p>
     `,
