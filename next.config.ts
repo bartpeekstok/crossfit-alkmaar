@@ -165,16 +165,8 @@ const nextConfig: NextConfig = {
         destination: "/kickstart",
         permanent: true,
       },
-      {
-        source: "/intake-geboekt",
-        destination: "/kickstart",
-        permanent: true,
-      },
-      {
-        source: "/intake-geboekt/",
-        destination: "/kickstart",
-        permanent: true,
-      },
+      // /intake-geboekt NIET redirecten: dat is de live bedankpagina
+      // waar GHL na een boeking naartoe stuurt (intake_booked-event).
       {
         source: "/meer-informatie-intake",
         destination: "/kickstart",
