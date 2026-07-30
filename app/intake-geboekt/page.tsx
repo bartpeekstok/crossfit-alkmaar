@@ -20,7 +20,7 @@ export default function IntakeGeboektPage() {
         <img className="bg" src="/redesign/assets/header-community.jpg" alt="" style={{ objectPosition: "center 35%" }} />
         <div className="scrim" />
         <div className="wrap inner">
-          <h1>Je intake is geboekt!</h1>
+          <h1>Je gratis kennismaking is geboekt!</h1>
           <p className="lede">
             We sturen je een bevestiging via e-mail en WhatsApp. Tot snel bij CrossFit Alkmaar!
           </p>
@@ -34,9 +34,9 @@ export default function IntakeGeboektPage() {
       <section className="sec sec--ivoor">
         <div className="wrap">
           <div className="center reveal">
-            <h2 className="sec-title">Zo ziet je intake eruit</h2>
+            <h2 className="sec-title">Zo ziet je kennismaking eruit</h2>
             <p className="sec-sub">
-              Alvast een kijkje: in deze video zie je hoe een intake bij ons verloopt.
+              Alvast een kijkje: in deze video zie je hoe een gratis kennismaking bij ons verloopt.
             </p>
           </div>
           <div
@@ -51,7 +51,7 @@ export default function IntakeGeboektPage() {
               background: "#000",
             }}
           >
-            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Intake bij CrossFit Alkmaar" />
+            <TrackedYouTubeEmbed videoId="-3KF7VGVzdk" title="Gratis kennismaking bij CrossFit Alkmaar" />
           </div>
         </div>
       </section>
