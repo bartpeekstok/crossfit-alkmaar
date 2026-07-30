@@ -89,6 +89,55 @@ def fetch_sitemap_urls():
     return [BASE_URL + (p if p != "/" else "") for p in sorted(paths)]
 
 
+def ga4_organic(start, end):
+    """Organische landingspagina's uit GA4 (sessies, key events, engagement).
+
+    Optioneel: draait alleen als GA4_REFRESH_TOKEN en GA4_PROPERTY_ID gezet
+    zijn (hergebruikt GSC_CLIENT_ID/SECRET). Geeft (rows, tot_sessies,
+    tot_keyevents) of None als GA4 niet geconfigureerd of onbereikbaar is.
+    """
+    if not (os.environ.get("GA4_REFRESH_TOKEN") and os.environ.get("GA4_PROPERTY_ID")):
+        return None
+    try:
+        body = urllib.parse.urlencode({
+            "client_id": os.environ["GSC_CLIENT_ID"],
+            "client_secret": os.environ["GSC_CLIENT_SECRET"],
+            "refresh_token": os.environ["GA4_REFRESH_TOKEN"],
+            "grant_type": "refresh_token",
+        }).encode()
+        req = urllib.request.Request("https://oauth2.googleapis.com/token", data=body)
+        with urllib.request.urlopen(req, timeout=30) as r:
+            ga_token = json.load(r)["access_token"]
+        prop = os.environ["GA4_PROPERTY_ID"]
+        payload = {
+            "dateRanges": [{"startDate": start.isoformat(), "endDate": end.isoformat()}],
+            "dimensions": [{"name": "landingPagePlusQueryString"}],
+            "metrics": [{"name": "sessions"}, {"name": "keyEvents"}, {"name": "engagementRate"}],
+            "dimensionFilter": {"filter": {
+                "fieldName": "sessionDefaultChannelGroup",
+                "stringFilter": {"value": "Organic Search"}}},
+            "orderBys": [{"metric": {"metricName": "sessions"}, "desc": True}],
+            "limit": 100,
+        }
+        req = urllib.request.Request(
+            f"https://analyticsdata.googleapis.com/v1beta/properties/{prop}:runReport",
+            data=json.dumps(payload).encode(),
+            headers={"Authorization": f"Bearer {ga_token}", "Content-Type": "application/json"})
+        with urllib.request.urlopen(req, timeout=60) as r:
+            rep = json.load(r)
+        rows = []
+        for row in rep.get("rows", []):
+            page = row["dimensionValues"][0]["value"]
+            sess = int(row["metricValues"][0]["value"])
+            kev = int(float(row["metricValues"][1]["value"]))
+            eng = float(row["metricValues"][2]["value"]) * 100
+            rows.append((page, sess, kev, eng))
+        return rows, sum(r[1] for r in rows), sum(r[2] for r in rows)
+    except Exception as e:
+        print(f"GA4-sectie overgeslagen: {str(e)[:80]}")
+        return None
+
+
 def totals(rows):
     return sum(r["clicks"] for r in rows), sum(r["impressions"] for r in rows)
 
@@ -176,6 +225,23 @@ def main():
         if d != 0:
             out.append(f"- `{q}`: {p} -> {c} ({'+' if d > 0 else ''}{d})")
 
+    ga4_cur = ga4_organic(cur_start, cur_end)
+    ga4_prev = ga4_organic(prev_start, prev_end)
+    if ga4_cur:
+        rows4, tot_sess, tot_kev = ga4_cur
+        out.append("\n## Organisch verkeer -> site-gedrag (GA4)\n")
+        if ga4_prev:
+            out.append(f"- **Organische sessies:** {fmt_delta(tot_sess, ga4_prev[1])}")
+            out.append(f"- **Conversies (key events):** {fmt_delta(tot_kev, ga4_prev[2])}\n")
+        out.append("| Landingspagina | Sessies | Conversies | Engagement |")
+        out.append("|---|---|---|---|")
+        for page, sess, kev, eng in rows4[:12]:
+            out.append(f"| {page} | {sess} | {kev} | {eng:.0f}% |")
+        if tot_kev == 0:
+            out.append("\n*Nog geen key events geteld: markeer `free_intro_visit` en "
+                       "`form_submit` als belangrijkste gebeurtenis in GA4 (Beheer > "
+                       "Gebeurtenissen), dan vult deze kolom zich.*")
+
     out.append("\n## Indexatiestand per categorie\n")
     for state, paths in sorted(coverage.items(), key=lambda kv: -len(kv[1])):
         out.append(f"\n**{state}: {len(paths)}**")
@@ -238,6 +304,12 @@ def main():
     if run_week in weeks:
         weeks[run_week]["indexed"] = indexed
         weeks[run_week]["totalUrls"] = len(sitemap_urls)
+    # GA4-totalen horen bij de rapportweek (de week van cur_end)
+    cw_year, cw_week, _ = cur_end.isocalendar()
+    cur_week_key = f"{cw_year}-W{cw_week:02d}"
+    if ga4_cur and cur_week_key in weeks:
+        weeks[cur_week_key]["organicSessions"] = ga4_cur[1]
+        weeks[cur_week_key]["organicKeyEvents"] = ga4_cur[2]
 
     history = {
         "site": SITE,
