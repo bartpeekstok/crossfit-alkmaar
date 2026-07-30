@@ -1,16 +1,8 @@
 {
  "site": "sc-domain:crossfitalkmaar.com",
- "updatedAt": "2026-07-27",
+ "updatedAt": "2026-07-30",
  "lastReport": "2026-w31.md",
  "weeks": [
-  {
-   "week": "2026-W14",
-   "start": "2026-03-30",
-   "clicks": 13,
-   "impressions": 309,
-   "indexed": null,
-   "totalUrls": null
-  },
   {
    "week": "2026-W15",
    "start": "2026-04-06",
@@ -118,9 +110,17 @@
   {
    "week": "2026-W30",
    "start": "2026-07-20",
-   "clicks": 78,
-   "impressions": 990,
+   "clicks": 111,
+   "impressions": 1406,
    "indexed": 81,
+   "totalUrls": 89
+  },
+  {
+   "week": "2026-W31",
+   "start": "2026-07-27",
+   "clicks": 18,
+   "impressions": 255,
+   "indexed": 83,
    "totalUrls": 89
   }
  ]
