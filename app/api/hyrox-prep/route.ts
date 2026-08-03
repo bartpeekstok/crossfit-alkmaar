@@ -1,13 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 
-// Wachtlijst HYROX Prep Alkmaar.
-// TODO bij livegang: dedicated GHL inbound webhook aanmaken voor de wachtlijst
-// en die hier (of als HYROX_PREP_WEBHOOK_URL env var in Vercel) invullen.
-// Fallback is nu de algemene LeadModal-webhook; segmentatie zit in de velden
-// source en hyrox_ticket.
+// Wachtlijst HYROX Prep Alkmaar. Dedicated GHL inbound webhook; segmentatie
+// zit in de velden source en hyrox_ticket.
 const WEBHOOK_URL =
   process.env.HYROX_PREP_WEBHOOK_URL ||
-  "https://services.leadconnectorhq.com/hooks/elOOWDMoCEHJO4WhphRj/webhook-trigger/0b254396-9523-44b0-a59c-5c79dadd41b1";
+  "https://services.leadconnectorhq.com/hooks/elOOWDMoCEHJO4WhphRj/webhook-trigger/316a667e-5232-4275-a026-c4fbb80cadb4";
 
 const TICKET_OPTIES = ["Ja", "Nee, nog niet", "Ik twijfel nog"];
 
