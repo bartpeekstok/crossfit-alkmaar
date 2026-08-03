@@ -17,6 +17,69 @@ export interface BlogPost {
 }
 
 export const blogPosts: { [key: string]: BlogPost } = {
+  "trainen-met-je-eigen-lichaamsgewicht": {
+    title: "Trainen met je eigen lichaamsgewicht: onderschat het niet",
+    metaTitle: "Trainen met je eigen lichaamsgewicht: waarom het werkt",
+    date: "2026-08-03",
+    author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
+    category: "Training",
+    image: "/redesign/assets/photo-hero.webp",
+    excerpt:
+      "Push-ups, pull-ups, squats zonder gewicht: te makkelijk? Juist niet. Waarom lichaamsgewichttraining de basis is van alles wat we doen, en waar je terecht kunt als je er dieper in wilt.",
+    faq: [
+      {
+        question: "Kun je spiermassa opbouwen met alleen je eigen lichaamsgewicht?",
+        answer:
+          "Ja. Spieren groeien van spanning en progressie, niet van het soort weerstand. Zolang je oefeningen zwaarder blijft maken, bijvoorbeeld van push-ups naar dips naar handstand push-ups, bouw je kracht en spiermassa op met alleen je lichaamsgewicht.",
+      },
+      {
+        question: "Wat is het verschil tussen calisthenics en CrossFit?",
+        answer:
+          "Calisthenics richt zich volledig op oefeningen met je eigen lichaamsgewicht, zoals pull-ups, dips, levers en handstands. CrossFit combineert diezelfde gymnastiek-elementen met gewichtheffen en conditiewerk. De basis overlapt sterk: wie goed is in het één, heeft een voorsprong in het ander.",
+      },
+      {
+        question: "Is lichaamsgewichttraining geschikt voor beginners?",
+        answer:
+          "Ja, mits je op het juiste niveau instapt. Vrijwel elke oefening is te schalen: een push-up begint desnoods tegen een muur of op een kist, een pull-up begint met een band of als ring row. Daarom is het juist een goede plek om te starten.",
+      },
+      {
+        question: "Heb ik apparatuur nodig om met mijn lichaamsgewicht te trainen?",
+        answer:
+          "Weinig. Met een pull-up bar en een paar vierkante meter kom je heel ver. In een gym komen daar ringen, parallettes en een muur voor handstands bij, plus een coach die je techniek en progressie bewaakt. Dat laatste maakt het grootste verschil.",
+      },
+    ],
+    content: `
+      <p>Er bestaat een hardnekkig idee dat trainen met je eigen lichaamsgewicht iets voor beginners is. Eerst push-ups, en zodra het kan door naar de "echte" gewichten. Wij zien het na twaalf jaar precies andersom: de sterkste mensen in onze gym zijn bijna zonder uitzondering ook de mensen die hun eigen lichaam het best onder controle hebben.</p>
+
+      <h2>Waarom lichaamsgewicht de basis is</h2>
+
+      <p>Een strakke push-up, een dode-hang pull-up, een vrije handstand: het zijn oefeningen die je niet kunt kopen met een zwaardere halter. Ze vragen kracht, maar ook lichaamsspanning, mobiliteit en coördinatie tegelijk. Precies de eigenschappen die je nodig hebt om later veilig zwaar te tillen.</p>
+
+      <p>Daarom zit er in vrijwel elke training bij ons gymnastiekwerk: push-ups, pull-ups, dips, lunges, handstands, toes-to-bar. Niet als opwarmer, maar als volwaardig krachtwerk. Wie zijn eigen lichaamsgewicht beheerst, heeft een fundament waar elke andere vorm van training op verder bouwt.</p>
+
+      <h2>Progressie werkt hetzelfde als met gewichten</h2>
+
+      <p>Het mooie van lichaamsgewichttraining is dat de progressie eindeloos is, twee kanten op. Lukt een push-up nog niet, dan begin je op een kist of tegen een muur. Zijn twintig push-ups te makkelijk, dan ga je naar dips, ring push-ups of handstand push-ups. Hetzelfde geldt voor pull-ups, squats en core-werk.</p>
+
+      <p>Je wordt dus nooit "te goed" voor deze manier van trainen. Je schuift alleen op naar een zwaardere variant. Dat is exact hoe wij bij CrossFit Alkmaar elke training schalen: iedereen doet dezelfde workout, op zijn eigen niveau.</p>
+
+      <h2>Calisthenics: dezelfde filosofie, volledig uitgediept</h2>
+
+      <p>Er is een hele sport die deze manier van trainen tot kunst heeft verheven: calisthenics. Denk aan muscle-ups, front levers, planches en handstand walks. Waar wij gymnastiek combineren met gewichtheffen en conditiewerk, gaan calisthenics-atleten juist de diepte in op alles wat je met je eigen lichaam kunt.</p>
+
+      <p>Daar hebben wij veel respect voor, want de vaardigheid en de geduldige opbouw die daarvoor nodig zijn, herkennen we uit onze eigen gym. En goede begeleiding maakt ook daar het verschil tussen jarenlang aanmodderen en gestaag beter worden.</p>
+
+      <h2>Woon je in Amsterdam? Kijk dan eens bij Calisthenics Amsterdam</h2>
+
+      <p>Zoek je in de regio Amsterdam een plek waar je onder begeleiding met calisthenics aan de slag kunt, dan wijzen we je graag op <a href="https://calisthenicsamsterdam.com/" target="_blank" rel="noopener noreferrer">Calisthenics Amsterdam</a>. Coach Wesley en zijn team trainen daar met dezelfde filosofie als wij: kleine groepen, persoonlijke aandacht en een opbouw die past bij waar jij nu staat, of je nu je eerste pull-up wilt halen of aan een muscle-up werkt.</p>
+
+      <p>Is Amsterdam jouw uitvalsbasis, dan is <a href="https://calisthenicsamsterdam.com/" target="_blank" rel="noopener noreferrer">calisthenicsamsterdam.com</a> een goede plek om te starten.</p>
+
+      <h2>En in Alkmaar?</h2>
+
+      <p>Bij CrossFit Alkmaar krijg je het complete pakket: gymnastiek, krachttraining en conditie, altijd onder begeleiding van een coach en geschaald naar jouw niveau. Benieuwd hoe dat er voor jou uitziet? <a href="/free-intro">Plan een gratis kennismaking</a>, dan kijken we samen waar je staat.</p>
+    `,
+  },
   "sterke-core-zonder-crunches": {
     title: "Een sterke core zonder crunches: dit werkt écht",
     metaTitle: "Sterke core zonder crunches: de beste core-oefeningen",
