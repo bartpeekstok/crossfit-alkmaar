@@ -64,6 +64,7 @@ export default function HyroxAlkmaarPage() {
         <div className="wrap">
           <div className="center"><h2 className="sec-title">Aankomende HYROX events</h2></div>
           <div className="pp-grid" style={{ marginTop: 34 }}>
+            <div className="pp-item"><h3><Check />HYROX Prep: 8 weken naar Utrecht</h3><p>Gericht voorbereidingsprogramma op HYROX Utrecht (26 t/m 30 november). Maximaal 16 plekken. <Link href="/hyrox-prep">Zet je op de wachtlijst →</Link></p></div>
             <div className="pp-item"><h3><Check />Simulatie: za 22 augustus</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-alkmaar">Meer info en inschrijven →</Link></p></div>
             <div className="pp-item"><h3><Check />Simulatie: za 24 oktober</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-24-oktober">Meer info en inschrijven →</Link></p></div>
             <div className="pp-item"><h3><Check />HYROX PFT</h3><p>De officiële Physical Fitness Test: meet waar je staat en volg je progressie richting racedag. <Link href="/hyrox-pft-alkmaar">Meer over de PFT →</Link></p></div>

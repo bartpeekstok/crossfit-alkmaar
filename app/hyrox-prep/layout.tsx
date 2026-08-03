@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 
-// Wachtlijstpagina HYROX Prep Alkmaar. Gebouwd maar nog NIET live: noindex via
-// meta en niet in de sitemap. Bewust NIET in robots.ts geblokkeerd, zodat de
-// WhatsApp/Facebook-scraper de Open Graph-tags mag lezen voor een nette
-// deel-preview. Bij livegang: noindex heroverwegen (advertentie-landingspagina
-// kan noindex blijven) en eventueel toevoegen aan sitemap.ts.
+// Wachtlijstpagina HYROX Prep Alkmaar. Sinds 3 aug 2026 publiek: geindexeerd,
+// in de sitemap en gelinkt vanaf /events en /hyrox-alkmaar. De verkooppagina
+// (/hyrox-prep-alkmaar) blijft verborgen tot de inschrijving opent op 1 sept;
+// dan wisselen de rollen (verkooppagina indexeren, deze wachtlijst eruit).
 const OG_IMAGE = "https://www.crossfitalkmaar.com/redesign/assets/header-hyrox.jpg";
 const OG_DESC =
   "8 weken voorbereiding op HYROX Utrecht bij CrossFit Alkmaar. Zestien plekken. Wachtlijst krijgt 24 uur voorsprong en 50 euro korting.";
@@ -12,7 +11,6 @@ const OG_DESC =
 export const metadata: Metadata = {
   title: "HYROX Prep Alkmaar | Wachtlijst",
   description: OG_DESC,
-  robots: { index: false, follow: false },
   alternates: { canonical: "https://www.crossfitalkmaar.com/hyrox-prep" },
   openGraph: {
     title: "HYROX Prep Alkmaar | Wachtlijst open",

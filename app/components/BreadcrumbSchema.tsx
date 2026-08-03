@@ -49,6 +49,7 @@ const pathNames: { [key: string]: string } = {
   "hyrox-pft-alkmaar": "HYROX PFT Alkmaar",
   "hyrox-simulatie-alkmaar": "HYROX Simulatie Alkmaar",
   "hyrox-simulatie-24-oktober": "HYROX Simulatie 24 oktober",
+  "hyrox-prep": "HYROX Prep Alkmaar",
   "events": "Events",
   "tieners": "Tieners",
 };
