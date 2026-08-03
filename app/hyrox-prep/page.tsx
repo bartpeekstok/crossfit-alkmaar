@@ -136,8 +136,13 @@ export default function HyroxPrepWachtlijstPage() {
                 </div>
                 <h3>Je staat op de lijst, {firstName.trim().split(/\s+/)[0] || "top"}!</h3>
                 <p>
-                  Je hoort als eerste van ons zodra de inschrijving opent. Check je inbox rond
-                  1 september, dan krijg jij 24 uur voorsprong en de wachtlijstprijs van 199 euro.
+                  Je hebt zojuist een bevestigingsmail van ons ontvangen. Zie je hem niet? Check
+                  dan even je spamfolder, daar belanden onze mails nog wel eens in.
+                </p>
+                <p>
+                  Verder hoor je als eerste van ons zodra de inschrijving opent. Check je inbox
+                  rond 1 september, dan krijg jij 24 uur voorsprong en de wachtlijstprijs van
+                  199 euro.
                 </p>
               </div>
             ) : (
