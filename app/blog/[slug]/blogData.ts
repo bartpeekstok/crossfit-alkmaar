@@ -1920,17 +1920,34 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "de-juiste-sportschool-kiezen": {
     title: "Afvallen als doel: waarom de keuze voor de juiste sportschool belangrijk is",
-    date: "2024-10-30",
+    date: "2026-08-05",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Gezondheid",
     image: "/redesign/assets/header-community.jpg",
     excerpt: "Wil je afvallen? Dan is de keuze voor de juiste sportschool cruciaal. Waarom begeleiding en coaching in Alkmaar het verschil maken.",
+    faq: [
+      {
+        question: "Kan ik afvallen door alleen te sporten, zonder op mijn voeding te letten?",
+        answer:
+          "Trainen alleen is zelden genoeg. Je verbrandt calorieën en bouwt spieren op tijdens de training, maar wat je de rest van de week eet, bepaalt het grootste deel van het resultaat. Daarom kijken we bij een intake altijd ook naar je voeding, niet alleen naar je trainingsschema.",
+      },
+      {
+        question: "Werkt afvallen bij een grote sportschool net zo goed als bij een kleine gym met coaching?",
+        answer:
+          "Dat hangt af van wat je nodig hebt. Bij een toegangs-sportschool ben je zelf verantwoordelijk voor planning, techniek en motivatie. Bij CrossFit Alkmaar train je in een kleine groep met een vaste coach die meekijkt, bijstuurt en het opmerkt als je een tijdje niet bent geweest.",
+      },
+      {
+        question: "Hoe lang duurt het voordat begeleid afvallen merkbaar resultaat oplevert?",
+        answer:
+          "Dat verschilt per persoon en hangt af van je startpunt, consistentie en voeding. Wat we wel zien: leden die de eerste weken structuur en begeleiding krijgen, houden het langer vol dan mensen die er alleen voor staan. Vol te houden is uiteindelijk de belangrijkste factor.",
+      },
+    ],
     content: `
-      <p>Voor veel mensen is afvallen de reden om zich bij een sportschool aan te sluiten. Volgens recente cijfers van het RIVM uit 2023 heeft meer dan 50% van de Nederlandse volwassenen nu overgewicht, vergeleken met een derde in de jaren '80. Hoewel het aantal sportscholen is gestegen (vandaag de dag is er gemiddeld 0,2 sportschool per 1000 inwoners!) blijft overgewicht een groeiend probleem.</p>
+      <p>Voor veel mensen is afvallen de reden om zich bij een sportschool aan te sluiten. Cijfers van het RIVM laten zien dat inmiddels de helft van de Nederlandse volwassenen overgewicht heeft, tegenover ongeveer een derde in 1990. Hoewel het aanbod aan sportscholen flink is gegroeid, blijft overgewicht een hardnekkig probleem.</p>
 
       <h2>Waarom lossen meer sportscholen het probleem niet op?</h2>
 
-      <p>Het probleem ligt vaak in het soort sportschool dat je kiest. Bij budgetketens betaal je alleen voor toegang, maar zonder begeleiding blijft het vaak alleen bij intenties. Bij CrossFit Alkmaar investeer je daarentegen in een team van ervaren coaches die jouw succes echt belangrijk vinden en je stap voor stap begeleiden.</p>
+      <p>Het probleem ligt vaak in het soort sportschool dat je kiest. Bij budgetketens betaal je alleen voor toegang, maar zonder begeleiding blijft het vaak alleen bij intenties. Bij CrossFit Alkmaar investeer je daarentegen in een team van ervaren coaches die jouw succes echt belangrijk vinden en je stap voor stap begeleiden. Kijk je liever eerst naar wat afvallen met begeleiding precies inhoudt? Lees dan ook <a href="/afvallen-alkmaar">afvallen in Alkmaar</a> of <a href="/afvallen-met-sport-alkmaar">afvallen met sport</a>.</p>
 
       <h2>Het probleem met ‘toegangs-sportscholen’ en waarom begeleiding essentieel is</h2>
 
@@ -1940,13 +1957,13 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>Bij CrossFit Alkmaar kies je voor coaching en een community</h2>
 
-      <p>Bij CrossFit Alkmaar investeren we in coaching, niet alleen in apparaten en faciliteiten. Onze eerste stap is het begrijpen van jouw doelen en een op maat gemaakt plan ontwikkelen om ze te bereiken. Wil je afvallen? Dan zijn we eerlijk: alleen trainen is niet genoeg. Daarom bieden we ook voeding coaching, zodat je direct vanaf de start de juiste gewoontes opbouwt die gewichtsverlies ondersteunen.</p>
+      <p>Bij CrossFit Alkmaar investeren we in coaching, niet alleen in apparaten en faciliteiten. Onze eerste stap is het begrijpen van jouw doelen en een op maat gemaakt plan ontwikkelen om ze te bereiken. Wil je afvallen? Dan zijn we eerlijk: alleen trainen is niet genoeg. Daarom kijken we ook naar je <a href="/voedingsadvies">voeding</a>, zodat je direct vanaf de start de juiste gewoontes opbouwt die gewichtsverlies ondersteunen.</p>
 
       <p>Trainen blijft natuurlijk belangrijk. Door te trainen, verbrand je calorieën en bouw je spieren op, wat je stofwisseling stimuleert. Wist je dat spieren zelfs in rust meer calorieën verbranden dan vet? Dus, door spieren op te bouwen, leg je een basis voor langdurig gewichtsverlies en een gezondere toekomst.</p>
 
       <h2>Community en verantwoordelijkheid als succesfactoren</h2>
 
-      <p>CrossFit Alkmaar is meer dan alleen een sportschool: wij zijn een hechte community van gelijkgestemden die samen werken aan hun doelen. Onze coaches bouwen een veilige en plezierige omgeving waarin iedereen zich welkom voelt en elkaar motiveert. Zo kijken onze leden ernaar uit om te trainen, niet alleen door de workouts, maar ook door de mensen om hen heen.</p>
+      <p>CrossFit Alkmaar is meer dan alleen een sportschool: wij zijn een hechte community van gelijkgestemden die samen werken aan hun doelen. Onze coaches bouwen een veilige en plezierige omgeving waarin iedereen zich welkom voelt en elkaar motiveert. Zo kijken onze leden ernaar uit om te trainen, niet alleen door de workouts, maar ook door de mensen om hen heen. Kom je uit de regio, bijvoorbeeld <a href="/crossfit-heerhugowaard">Heerhugowaard</a>, <a href="/crossfit-heiloo">Heiloo</a> of <a href="/crossfit-langedijk">Langedijk</a>? Ook dan ben je van harte welkom, veel van onze leden rijden een klein stukje.</p>
 
       <p>Wat ons echt uniek maakt? Wij houden actief contact met leden die we even niet zien, om ze weer op het juiste spoor te krijgen. We willen geen sportschool zijn met een passieve ledenbasis, maar een community waarin iedereen echt betrokken is bij zijn of haar gezondheid.</p>
 
@@ -1956,9 +1973,9 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>Start jouw CrossFit Alkmaar-reis vandaag</h2>
 
-      <p>Ben je klaar om écht aan de slag te gaan met jouw fitness- en gewichtsdoelen? Schrijf je in voor een <a href="/free-intro">gratis intake</a> bij CrossFit Alkmaar en ontdek hoe coaching, begeleiding en een community van gelijkgestemden jou kunnen helpen om het beste uit jezelf te halen.</p>
+      <p>Ben je klaar om aan de slag te gaan met jouw fitness- en gewichtsdoelen? Schrijf je in voor een <a href="/free-intro">gratis intake</a> bij CrossFit Alkmaar en ontdek hoe coaching, begeleiding en een community van gelijkgestemden jou kunnen helpen.</p>
 
-      <p><a href="/free-intro">Meld je hier direct aan</a> en zet de eerste stap naar een fittere en sterkere versie van jezelf!</p>
+      <p><a href="/kickstart">Bekijk ook onze 28-day kickstart</a> als je liever met een vaste groep aan een concrete start werkt.</p>
     `,
   },
   "doelen-stellen-die-werken": {
