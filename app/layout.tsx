@@ -164,8 +164,9 @@ export default function RootLayout({
         <meta name="theme-color" content="#1e3a8a" />
         <meta name="geo.region" content="NL-NH" />
         <meta name="geo.placename" content="Alkmaar" />
-        <meta name="geo.position" content="52.6324;4.7534" />
-        <meta name="ICBM" content="52.6324, 4.7534" />
+        {/* Gelijk aan de geo-coordinaten in JsonLd.tsx (Phoenixstraat 33). */}
+        <meta name="geo.position" content="52.619243;4.7637169" />
+        <meta name="ICBM" content="52.619243, 4.7637169" />
         <JsonLd />
       </head>
       <body className="antialiased">

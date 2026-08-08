@@ -13,7 +13,9 @@ GSC-data loopt ~2-3 dagen achter; het rapport vergelijkt daarom de laatste
 import io
 import json
 import os
+import re
 import sys
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -76,7 +78,6 @@ def fetch_sitemap_urls():
         except Exception as e:
             print(f"sitemap.xml niet bereikbaar ({str(e)[:60]}); "
                   "lijst wordt uit de repo-bron gereconstrueerd.")
-    import re
     paths = {"/"}  # de homepage staat als kale baseUrl in sitemap.ts
     sitemap_ts = (REPO_ROOT / "app" / "sitemap.ts").read_text(encoding="utf-8")
     for m in re.finditer(r"\$\{baseUrl\}(/[A-Za-z0-9\-/]*)`", sitemap_ts):
@@ -87,6 +88,153 @@ def fetch_sitemap_urls():
     for m in re.finditer(r'(?m)^\s{0,2}"([a-z0-9\-]+)":\s*\{', blog_ts):
         paths.add(f"/blog/{m.group(1)}")
     return [BASE_URL + (p if p != "/" else "") for p in sorted(paths)]
+
+
+class _GeenRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        return None
+
+
+_OPENER = urllib.request.build_opener(_GeenRedirect)
+
+
+def http_get(url, timeout=20):
+    """Haal een URL op zonder redirects te volgen.
+
+    Geeft (status, location, html). Bij een netwerkfout is status None en
+    staat de reden in location. De html is leeg bij alles behalve een 200.
+    """
+    req = urllib.request.Request(url, headers={"User-Agent": "CFA-SEO-check/1.0"})
+    try:
+        with _OPENER.open(req, timeout=timeout) as r:
+            return r.status, None, r.read(400_000).decode("utf-8", "replace")
+    except urllib.error.HTTPError as e:
+        return e.code, e.headers.get("Location"), ""
+    except Exception as e:
+        return None, str(e)[:60], ""
+
+
+# Alleen echte <a>-links tellen mee. Een kale href-match zou ook
+# <link rel="canonical"> pakken, en dan lijkt elke pagina naar zichzelf te
+# linken -- waardoor verweesde pagina's nooit opvallen.
+INTERNE_LINK = re.compile(
+    r'<a\b[^>]*?\bhref="(/[^"#?]*|' + re.escape(BASE_URL) + r'/?[^"#?]*)"',
+    re.IGNORECASE)
+# Next.js serveert zijn eigen assets onder /_next/; die horen niet in een
+# linkcontrole thuis en leveren per definitie ruis op na elke nieuwe build.
+NEGEER = re.compile(r"^/(_next/|api/)|\.(js|css|png|jpe?g|webp|svg|ico|xml|txt|pdf)$")
+
+
+def crawl_en_check(sitemap_urls):
+    """Loop de sitemap langs, controleer de HTTP-status en verzamel interne links.
+
+    Geeft (kapotte_sitemap_urls, kapotte_interne_links, gelinkte_urls). De
+    eerste lijst bevat sitemap-URL's die geen 200 geven -- dat is altijd fout,
+    want je verwijst Google expliciet naar die pagina. De tweede bevat links
+    die ergens op de site staan maar niet werken; dat is de bron van nieuwe
+    404's. De derde is de set URL's waar ergens op de site naartoe gelinkt
+    wordt, waarmee we verweesde pagina's kunnen opsporen.
+    """
+    statussen = {}
+    links = set()
+
+    def haal(u):
+        return (u, *http_get(u))
+
+    with ThreadPoolExecutor(max_workers=8) as pool:
+        for u, status, loc, html in pool.map(haal, sitemap_urls):
+            statussen[u] = (status, loc)
+            for m in INTERNE_LINK.finditer(html):
+                pad = m.group(1).replace(BASE_URL, "") or "/"
+                if not NEGEER.search(pad):
+                    links.add(BASE_URL + (pad if pad != "/" else ""))
+
+    if all(s is None for s, _ in statussen.values()):
+        print("Live-check overgeslagen: site niet bereikbaar vanuit deze omgeving "
+              "(egress-allowlist?). Secties 'Kapotte URL's' en 'Verweesd' blijven leeg.")
+        return None, None, None
+
+    kapot_sitemap = [(u, s, l) for u, (s, l) in statussen.items() if s != 200]
+
+    nieuw = sorted(links - set(statussen))
+    kapot_link = []
+    if nieuw:
+        with ThreadPoolExecutor(max_workers=8) as pool:
+            for u, status, loc, _ in pool.map(haal, nieuw):
+                if status is not None and status != 200:
+                    kapot_link.append((u, status, loc))
+    return kapot_sitemap, sorted(kapot_link), links
+
+
+def wees_urls(page_rows, sitemap_urls):
+    """URL's die in Google's zoekresultaten verschijnen maar niet in de sitemap staan.
+
+    Dit zijn de 'weeskinderen': oude of vergeten pagina's die nog vertoningen
+    krijgen terwijl jij ze niet meer aanbiedt. Precies de categorie die een
+    sitemap-only audit structureel mist.
+    """
+    bekend = {u.rstrip("/") for u in sitemap_urls}
+    wees = []
+    for r in page_rows:
+        u = r["keys"][0]
+        if not u.startswith(("http://", "https://")):
+            continue
+        # GSC rapporteert op een domain-property ook de http-variant van een
+        # pagina apart; die normaliseren we weg, anders staat de homepage
+        # elke week onterecht als 'niet in de sitemap' in het rapport.
+        genormaliseerd = u.replace("http://", "https://", 1).rstrip("/")
+        if genormaliseerd not in bekend and BASE_URL.split("//")[1] in u:
+            wees.append((u, r["clicks"], r["impressions"]))
+    return sorted(wees, key=lambda x: -x[2])
+
+
+MERKTERMEN = ("crossfit alkmaar", "cf alkmaar", "cfa ", "peekstok", "malou",
+              "absoluut fit", "hylas")
+
+
+def kansen(rows, minimum=25):
+    """Zoektermen waar je zichtbaar bent maar de klik niet pakt.
+
+    Positie 4-30 betekent: Google vindt je relevant genoeg om te tonen, maar je
+    staat onderaan pagina 1 of op pagina 2-3. Daar is de winst het grootst --
+    een paar plaatsen stijgen levert daar meer op dan waar dan ook. Merktermen
+    filteren we weg: daarop scoor je toch al, en ze vertellen niets nieuws.
+    """
+    uit = []
+    for r in rows:
+        q = r["keys"][0]
+        if any(b in q for b in MERKTERMEN) or r["impressions"] < minimum:
+            continue
+        if not 3.5 < r["position"] < 30:
+            continue
+        # Gemiste klikken: wat je ongeveer laat liggen als je naar de top 3
+        # zou stijgen (~15% CTR is een voorzichtige aanname voor positie 3).
+        gemist = int(r["impressions"] * 0.15) - r["clicks"]
+        uit.append({"query": q, "impressions": r["impressions"], "clicks": r["clicks"],
+                    "position": r["position"], "ctr": r["ctr"] * 100,
+                    "gemist": max(gemist, 0)})
+    return sorted(uit, key=lambda x: -x["gemist"])
+
+
+def kannibalisatie(sa, rng_kwartaal, top_queries):
+    """Zoektermen waarop meerdere eigen pagina's tegen elkaar concurreren.
+
+    Als twee pagina's op dezelfde term ranken, verdeelt Google je autoriteit
+    over beide en wint meestal geen van beide. Dit is precies het patroon dat
+    een losse landingspagina laat verliezen van de homepage.
+    """
+    uit = []
+    for q in top_queries:
+        rows = sa({**rng_kwartaal, "dimensions": ["page"], "rowLimit": 25,
+                   "dimensionFilterGroups": [{"filters": [
+                       {"dimension": "query", "operator": "equals", "expression": q}]}]})
+        # Alleen het hoofddomein; subdomeinen (boekingswidget) tellen niet mee,
+        # en pagina's met een handvol vertoningen zijn ruis.
+        eigen = [(r["keys"][0], r["impressions"], r["position"]) for r in rows
+                 if r["keys"][0].startswith(BASE_URL) and r["impressions"] >= 5]
+        if len(eigen) > 1:
+            uit.append((q, sorted(eigen, key=lambda x: -x[1])))
+    return uit
 
 
 def ga4_organic(start, end):
@@ -192,6 +340,25 @@ def main():
 
     indexed = sum(len(v) for k, v in coverage.items() if "indexed" in k.lower() and "not" not in k.lower())
 
+    # Blinde vlek van een sitemap-only audit: kapotte URL's staan per definitie
+    # niet in je eigen sitemap. Daarom apart: live-status van alles waar we
+    # naartoe linken, plus URL's die Google wel kent maar wij niet aanbieden.
+    kapot_sitemap, kapot_link, gelinkt = crawl_en_check(sitemap_urls)
+    rng_kw = rng(today - timedelta(days=93), cur_end)
+    p_kwartaal = sa_query({**rng_kw, "dimensions": ["page"], "rowLimit": 500})
+    wees = wees_urls(p_kwartaal, sitemap_urls)
+
+    # Verweesde pagina's: staan wel in de sitemap, maar nergens op de site
+    # wordt ernaartoe gelinkt. Google leidt daaruit af dat ze onbelangrijk
+    # zijn, dus ze ranken vrijwel nooit -- ongeacht hoe goed de tekst is.
+    orphans = sorted(set(sitemap_urls) - gelinkt) if gelinkt is not None else []
+
+    # Kansen en kannibalisatie over een kwartaal: een week is te weinig data
+    # om een positie betrouwbaar te beoordelen.
+    q_kwartaal = sa_query({**rng_kw, "dimensions": ["query"], "rowLimit": 1000})
+    kans = kansen(q_kwartaal)
+    kannib = kannibalisatie(sa_query, rng_kw, [k["query"] for k in kans[:12]])
+
     # Rapport opbouwen
     out = []
     out.append(f"# SEO-weekrapport {iso_year}, week {iso_week}")
@@ -250,6 +417,66 @@ def main():
         if "indexed" not in state.lower() or "not" in state.lower():
             for p in paths:
                 out.append(f"- {p}")
+
+    out.append("\n## Grootste kansen (kwartaal)\n")
+    if not kans:
+        out.append("- Geen zoektermen met duidelijke opwaartse ruimte gevonden.")
+    else:
+        out.append("*Zoektermen waarop je al zichtbaar bent maar niet geklikt wordt. "
+                   "'Gemist' = klikken per kwartaal die je laat liggen als je naar "
+                   "de top 3 zou stijgen.*\n")
+        out.append("| Zoekterm | Vertoningen | Klikken | Positie | CTR | Gemist |")
+        out.append("|---|---|---|---|---|---|")
+        for k in kans[:15]:
+            out.append(f"| {k['query']} | {k['impressions']} | {k['clicks']} "
+                       f"| {k['position']:.1f} | {k['ctr']:.1f}% | ~{k['gemist']} |")
+
+    if kannib:
+        out.append("\n### Kannibalisatie: meerdere eigen pagina's op dezelfde term\n")
+        out.append("*Je pagina's concurreren onderling; Google verdeelt de autoriteit "
+                   "en meestal wint geen van beide. Kies per term één pagina en laat "
+                   "de andere ernaar linken.*\n")
+        for q, paginas in kannib:
+            out.append(f"\n**`{q}`**")
+            for u, imp, pos in paginas:
+                out.append(f"- `{u.replace(BASE_URL, '') or '/'}` — "
+                           f"{imp} vertoningen, positie {pos:.1f}")
+
+    out.append("\n## Kapotte en verweesde URL's\n")
+    if kapot_sitemap is None:
+        out.append("*Live-check niet uitgevoerd: de site was niet bereikbaar vanuit "
+                   "de agent-omgeving (egress-allowlist).*")
+    elif not kapot_sitemap and not kapot_link:
+        out.append("- Geen kapotte URL's: alle sitemap-pagina's en alle interne "
+                   "links geven een 200.")
+    else:
+        if kapot_sitemap:
+            out.append("**In de sitemap maar niet bereikbaar — dit stuur je actief "
+                       "naar Google, dus altijd repareren:**")
+            for u, s, l in kapot_sitemap:
+                doel = f" -> {l}" if l else ""
+                out.append(f"- `{u.replace(BASE_URL, '') or '/'}`: {s or 'onbereikbaar'}{doel}")
+        if kapot_link:
+            out.append("\n**Interne links die stukgaan — hier ontstaan nieuwe 404's:**")
+            for u, s, l in kapot_link:
+                doel = f" -> {l}" if l else ""
+                out.append(f"- `{u.replace(BASE_URL, '') or '/'}`: {s}{doel}")
+
+    if orphans:
+        out.append("\n**Verweesd: staat in de sitemap maar krijgt nul interne links.** "
+                   "Zonder interne links leest Google de pagina als onbelangrijk, "
+                   "dus ranken lukt niet. Link ernaar vanuit de footer of een "
+                   "verwante pagina:\n")
+        for u in orphans:
+            out.append(f"- `{u.replace(BASE_URL, '') or '/'}`")
+
+    if wees:
+        out.append("\n**Krijgt vertoningen maar staat niet in de sitemap** "
+                   "(oude of vergeten pagina's; controleer of ze horen te bestaan):\n")
+        out.append("| URL | Klikken | Vertoningen |")
+        out.append("|---|---|---|")
+        for u, c, i in wees[:15]:
+            out.append(f"| {u.replace(BASE_URL, '') or '/'} | {c} | {i} |")
 
     # Concreet actielijstje: nieuwe (onbekende) URL's kun je handmatig
     # aanvragen in GSC; wachtrij-URL's hoeven alleen gevolgd te worden.
@@ -321,8 +548,12 @@ def main():
     }
     history_path.write_text(json.dumps(history, indent=1) + "\n", encoding="utf-8")
     print(f"Historie bijgewerkt: {history_path} ({len(weeks)} weken)")
+    n_kapot = (len(kapot_sitemap) + len(kapot_link)) if kapot_sitemap is not None else "n.v.t."
+    top_kans = f"{kans[0]['query']} (pos {kans[0]['position']:.0f})" if kans else "geen"
     print(f"Klikken {c_prev} -> {c_cur}, vertoningen {i_prev} -> {i_cur}, "
-          f"geindexeerd {indexed}/{len(sitemap_urls)}")
+          f"geindexeerd {indexed}/{len(sitemap_urls)}, "
+          f"kapotte URL's {n_kapot}, verweesd {len(orphans)}, "
+          f"kannibalisatie {len(kannib)}, grootste kans: {top_kans}")
 
 
 if __name__ == "__main__":

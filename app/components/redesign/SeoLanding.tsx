@@ -98,25 +98,10 @@ export default function SeoLanding({
           }),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://www.crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: {
-              "@type": "AggregateRating",
-              ratingValue: "5.0",
-              bestRating: "5",
-              worstRating: "1",
-              ratingCount: "273",
-              reviewCount: "273",
-            },
-          }),
-        }}
-      />
+      {/* Geen tweede HealthClub-blok hier: JsonLd.tsx zet op elke pagina al het
+          volledige schema onder dezelfde @id. Twee blokken met een afwijkend
+          ratingCount onder één @id is tegenstrijdig, waardoor Google de
+          beoordelingen kan negeren. */}
       {members && members.map((m, i) => (
         <script
           key={i}

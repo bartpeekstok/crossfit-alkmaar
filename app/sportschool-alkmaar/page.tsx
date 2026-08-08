@@ -8,16 +8,17 @@ export default function SportschoolAlkmaarPage() {
     <SeoLanding
       name="Sportschool Alkmaar"
       slug="sportschool-alkmaar"
-      description="Persoonlijke coaching in kleine groepen van max 12 personen. Voor alle niveaus, ook beginners en 50+."
+      description="Sportschool in Alkmaar met begeleiding bij elke training. Kleine groepen van max 12 personen, voor alle niveaus, ook beginners en 50+."
       heroPhoto="/images/CFA-november-lowres-73.jpg"
       heroTitle="Sportschool Alkmaar"
-      heroSubtitle="Geen grote onpersoonlijke gym, maar persoonlijke coaching in kleine groepen waar iedereen je naam kent."
-      waaromTitle="Waarom CrossFit Alkmaar anders is dan een gewone sportschool"
+      heroSubtitle="Een sportschool in Alkmaar waar een coach naast je staat, in groepen van maximaal 12 personen."
+      waaromTitle="Een sportschool in Alkmaar met begeleiding bij elke training"
       waaromContent={
         <>
-          <p>Bij de meeste sportscholen in Alkmaar krijg je een rondje langs de apparaten en wordt je vervolgens aan je lot overgelaten. Bij CrossFit Alkmaar is dat anders. Elke training wordt begeleid door een professionele coach, in groepen van maximaal 12 personen.</p>
+          <p>CrossFit Alkmaar is een sportschool aan de Phoenixstraat 33 in Alkmaar, op tien minuten van het centrum en met gratis parkeren voor de deur. We zijn open van 06:30 tot 22:00, zodat je voor of na werk kunt trainen.</p>
+          <p>Wat ons onderscheidt van de meeste sportscholen in Alkmaar: je krijgt geen rondje langs de apparaten waarna je het zelf uitzoekt. Elke training wordt begeleid door een professionele coach, in groepen van maximaal 12 personen.</p>
           <p>Je hoeft niet zelf te bedenken wat je gaat doen. Wij schrijven de trainingen, coachen je door elke sessie, en passen oefeningen aan op jouw niveau. Of je nu een complete beginner bent of al jarenlang sport.</p>
-          <p>Het resultaat? Je wordt sterker, fitter en gezonder. Zonder eindeloos te zwoegen op een loopband zonder doel.</p>
+          <p>Zoek je iets specifieks? Bekijk dan <Link href="/krachttraining-alkmaar">krachttraining in Alkmaar</Link>, <Link href="/fitness-alkmaar">fitness in Alkmaar</Link> of onze <Link href="/sportschool-50-plus-alkmaar">sportschool voor 50-plussers</Link>.</p>
         </>
       }
       aanpakTitle="Wat je kunt verwachten"

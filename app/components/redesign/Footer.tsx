@@ -99,6 +99,15 @@ export default function Footer() {
             <li><Link href="/personal-training">Personal training</Link></li>
             <li><Link href="/kickstart">28 Day Kickstart</Link></li>
           </ul>
+          <h4 style={{ marginTop: 22 }}>{isEN ? "In Alkmaar" : "Sporten in Alkmaar"}</h4>
+          <ul>
+            <li><Link href="/sportschool-alkmaar">Sportschool Alkmaar</Link></li>
+            <li><Link href="/fitness-alkmaar">Fitness Alkmaar</Link></li>
+            <li><Link href="/krachttraining-alkmaar">Krachttraining Alkmaar</Link></li>
+            <li><Link href="/sportschool-50-plus-alkmaar">Sportschool 50+ Alkmaar</Link></li>
+            <li><Link href="/sportschool-begeleiding-alkmaar">Sportschool met begeleiding</Link></li>
+            <li><Link href="/small-group-training-alkmaar">Small group training Alkmaar</Link></li>
+          </ul>
           <h4 style={{ marginTop: 22 }}>{isEN ? "In the region" : "In de regio"}</h4>
           <ul>
             <li><Link href="/crossfit-heerhugowaard">CrossFit Heerhugowaard</Link></li>
