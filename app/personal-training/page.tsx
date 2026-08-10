@@ -53,6 +53,7 @@ export default function PersonalTrainingPage() {
           <p>Personal training is meer dan een trainer die naast je staat. Bij CrossFit Alkmaar krijg je een volledig trainingsplan, afgestemd op jouw doelen. Of je nu wilt afvallen, sterker worden, revalideren of je voorbereiden op een wedstrijd.</p>
           <p>Onze coaches zijn gecertificeerd en gespecialiseerd in functionele fitness. Ze kijken niet alleen naar je training, maar ook naar je bewegingskwaliteit, mobiliteit en, eventueel, je voeding.</p>
           <p>Je traint in een volledig uitgeruste box met professionele apparatuur. Geen wachten op machines, geen drukte. Gewoon jij en je coach.</p>
+          <p>Twijfel je nog of personal training bij jou past? Lees ons artikel over <Link href="/blog/personal-training-alkmaar">wanneer personal training in Alkmaar de beste keuze is</Link>.</p>
         </div>
       </section>
 
