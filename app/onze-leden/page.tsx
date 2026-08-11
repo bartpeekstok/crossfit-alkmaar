@@ -4,6 +4,7 @@ import { useLeadModal } from "../components/redesign/LeadModalContext";
 import YouTubeEmbed from "../components/redesign/YouTubeEmbed";
 
 const VIDEOS = [
+  { id: "r6xYIET4wJA", nm: "Coach Ruben", q: "" },
   { id: "4qNfSxPzhSc", nm: "Liesa", q: "'Ik dacht dat CrossFit niks voor mij was'" },
   { id: "EIWOUtYAl7g", nm: "Chris", q: "'CrossFit is veel toegankelijker dan aan machines trekken in een sportschool'" },
   { id: "GCUpJQJJ8s0", nm: "Malou", q: "'Meer gaan beseffen hoe fijn het is om lekker in je vel te zitten'" },
