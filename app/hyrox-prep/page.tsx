@@ -101,6 +101,9 @@ export default function HyroxPrepWachtlijstPage() {
             voorbereidingsprogramma naartoe, van 4 oktober tot en met 25 november. Zestien plekken.
             Inschrijving opent 1 september.
           </p>
+          <div className="cta-row">
+            <a className="btn btn--gold btn--lg" href="#wachtlijst">Zet mij op de wachtlijst</a>
+          </div>
         </div>
       </section>
 
@@ -129,7 +132,7 @@ export default function HyroxPrepWachtlijstPage() {
             </p>
           </div>
 
-          <div className="hpw-card">
+          <div className="hpw-card" id="wachtlijst">
             {status === "done" ? (
               <div className="ok">
                 <div className="ic">

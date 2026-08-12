@@ -9,7 +9,7 @@
 .hpw-perks svg { width: 20px; height: 20px; flex-shrink: 0; margin-top: 3px; color: var(--go); }
 
 /* formulier-kaart (zelfde look als LeadModal / welkom-terug) */
-.hpw-card { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: clamp(26px,4vw,38px); position: sticky; top: 110px; }
+.hpw-card { background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: clamp(26px,4vw,38px); position: sticky; top: 110px; scroll-margin-top: 100px; }
 .hpw-card h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(24px,3vw,32px); line-height: .98; color: var(--cfa-ink); margin: 0 0 6px; }
 .hpw-card .sub { font-family: var(--font-body); font-size: 15px; line-height: 1.5; color: var(--fg2); margin: 0 0 20px; }
 .hpw-card form { display: grid; gap: 13px; }
