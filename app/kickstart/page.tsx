@@ -56,7 +56,7 @@ export default function KickstartPage() {
             "@type": "HealthClub",
             "@id": "https://www.crossfitalkmaar.com/#organization",
             name: "CrossFit Alkmaar",
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" },
+            aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "308", reviewCount: "308" },
           }),
         }}
       />

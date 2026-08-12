@@ -31,7 +31,7 @@ export default function TienersPage() {
         { "@type": "Question", name: "Wat kost het tienerprogramma?", acceptedAnswer: { "@type": "Answer", text: "Het tienerprogramma kost €70 per maand voor twee keer per week trainen. De kennismaking is gratis." } },
         { "@type": "Question", name: "Waarom CrossFit Alkmaar en niet een gewone sportschool?", acceptedAnswer: { "@type": "Answer", text: "Bij grote sportscholen worden jongeren zonder begeleiding aan hun lot overgelaten. Bij ons staat er altijd een professionele coach naast je kind die zorgt voor veilige en effectieve training." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "308", reviewCount: "308" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

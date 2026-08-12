@@ -274,7 +274,7 @@ export default function HyroxPrepPage() {
         <div className="wrap prose">
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Waarom je dit hier doet</h2>
           <p>
-            CrossFit Alkmaar bestaat meer dan twaalf jaar. We hebben ruim 260 reviews en een community
+            CrossFit Alkmaar bestaat meer dan twaalf jaar. We hebben ruim 300 reviews en een community
             waar mensen jaren blijven, niet weken.
           </p>
           <p>

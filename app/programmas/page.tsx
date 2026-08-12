@@ -173,7 +173,7 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="text-center hover:scale-105 transition cursor-pointer"
             >
-              <div className="text-5xl font-bold text-blue-900 mb-2">273+</div>
+              <div className="text-5xl font-bold text-blue-900 mb-2">300+</div>
               <p className="text-gray-600">Google Reviews ⭐</p>
             </a>
             <div className="text-center">
