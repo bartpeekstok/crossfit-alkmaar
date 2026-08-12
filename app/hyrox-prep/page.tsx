@@ -15,7 +15,8 @@ const TICKET_OPTIES = ["Ja", "Nee, nog niet", "Ik twijfel nog"];
 const PERKS = [
   "24 uur eerder inschrijven dan iedereen die de advertentie ziet",
   "50 euro korting, alleen voor de wachtlijst",
-  "Als eerste de volledige programmering en trainingstijden in je inbox",
+  "De grootste kans op een plek: er zijn er maar 16 en de wachtlijst gaat voor",
+  "Open voor iedereen: geen lidmaatschap en geen CrossFit-ervaring nodig",
   "Geen verplichting. Je zegt nu nog niets toe",
 ];
 
