@@ -29,6 +29,11 @@
 .hpw-card .ok .ic svg { width: 30px; height: 30px; color: #fff; }
 .hpw-card .ok p { font-family: var(--font-body); font-size: 15px; line-height: 1.55; color: var(--fg2); margin: 0; }
 
+/* hero-subtekst: op mobiel meer lucht en rustiger leesbeeld */
+@media (max-width: 720px) {
+  .hpw-hero p.lede { padding: 0 18px; font-size: 16.5px; line-height: 1.7; color: rgba(255,255,255,.95); }
+}
+
 @media (max-width: 900px) {
   .hpw-grid { grid-template-columns: 1fr; }
   .hpw-card { position: static; }

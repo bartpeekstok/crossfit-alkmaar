@@ -90,7 +90,7 @@ export default function HyroxPrepWachtlijstPage() {
   return (
     <>
       {/* HERO */}
-      <section className="page-hero">
+      <section className="page-hero hpw-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" fetchPriority="high" />
         <div className="scrim" />
