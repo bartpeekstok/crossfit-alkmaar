@@ -97,8 +97,10 @@ export default function HyroxPrepWachtlijstPage() {
         <div className="wrap inner">
           <h1>HYROX Prep Alkmaar. Wachtlijst open.</h1>
           <p className="lede">
-            Op 26 tot en met 30 november is HYROX Utrecht. Wij draaien daar een 8 weken durend
-            voorbereidingsprogramma naartoe, van 4 oktober tot en met 25 november. Zestien plekken.
+            Op 26 tot en met 30 november is HYROX Utrecht.<br />
+            Wij draaien daar een 8 weken durend voorbereidingsprogramma naartoe, van 4 oktober
+            tot en met 25 november.<br />
+            Zestien plekken.<br />
             Inschrijving opent 1 september.
           </p>
           <div className="cta-row">
