@@ -22,7 +22,6 @@
 .hpw-card .errmsg a { color: var(--stop); text-decoration: underline; }
 .hpw-card .submit { margin-top: 6px; }
 .hpw-card .submit:disabled { opacity: .6; cursor: default; transform: none; }
-.hpw-card .privacy { font-family: var(--font-body); font-size: 12.5px; color: var(--fg3); line-height: 1.5; margin: 0; }
 
 /* succes-staat */
 .hpw-card .ok { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 8px 0; }

@@ -238,10 +238,6 @@ export default function HyroxPrepWachtlijstPage() {
                   <button className="btn btn--primary btn--block submit" type="submit" disabled={status === "sending"}>
                     {status === "sending" ? "Versturen..." : "Zet mij op de wachtlijst"}
                   </button>
-                  <p className="privacy">
-                    We gebruiken je gegevens alleen voor dit programma. Geen nieuwsbrief, tenzij je
-                    daar zelf om vraagt.
-                  </p>
                 </form>
               </>
             )}
