@@ -109,6 +109,10 @@ export default function HyroxPrepPage() {
         .hp-prijs .bedrag span { font-size: .45em; vertical-align: super; }
         .hp-prijs .sub { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 14px; color: var(--cfa-blue); margin-top: 6px; }
         .hp-prijs p { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--fg2); margin: 16px 0 0; }
+        .hp-h2 { text-align: left; margin-bottom: 18px; }
+        @media (max-width: 720px) {
+          .hp-h2, .prose p, .hp-sessies .card, .hp-wie h3 { text-align: center; }
+        }
       `}</style>
 
       {/* HERO */}
@@ -134,7 +138,7 @@ export default function HyroxPrepPage() {
       {/* BLOK 1: HET PROBLEEM */}
       <section className="sec sec--ivoor">
         <div className="wrap prose">
-          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Je hebt je ticket. Nu het lastige deel.</h2>
+          <h2 className="sec-title hp-h2">Je hebt je ticket. Nu het lastige deel.</h2>
           <p>
             De meeste mensen die HYROX voor het eerst doen, trainen verkeerd. Ze lopen hun kilometers los,
             ze doen hun krachtwerk apart, en dan komen ze op de racevloer erachter dat die twee dingen
@@ -272,7 +276,7 @@ export default function HyroxPrepPage() {
       {/* BLOK 6: WAAROM CFA */}
       <section className="sec sec--white">
         <div className="wrap prose">
-          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Waarom je dit hier doet</h2>
+          <h2 className="sec-title hp-h2">Waarom je dit hier doet</h2>
           <p>
             CrossFit Alkmaar bestaat meer dan twaalf jaar. We hebben ruim 300 reviews en een community
             waar mensen jaren blijven, niet weken.
