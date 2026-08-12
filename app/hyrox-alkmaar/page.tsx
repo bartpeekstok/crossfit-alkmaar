@@ -37,7 +37,7 @@ export default function HyroxAlkmaarPage() {
         { "@type": "Question", name: "Kan ik bij CrossFit Alkmaar trainen voor HYROX als beginner?", acceptedAnswer: { "@type": "Answer", text: "Absoluut. Onze HYROX-trainingen zijn geschikt voor alle niveaus. Start met de Kickstart en bouw in je eigen tempo op naar je eerste HYROX race." } },
         { "@type": "Question", name: "Welke HYROX events organiseert CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "We organiseren regelmatig HYROX Physical Fitness Tests (PFT) en HYROX Simulaties. De eerstvolgende Simulaties zijn op 22 augustus en 24 oktober 2026." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "308", reviewCount: "308" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "310", reviewCount: "310" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -118,8 +118,8 @@ export default function JsonLd() {
       ratingValue: "5.0",
       bestRating: "5",
       worstRating: "1",
-      ratingCount: "308",
-      reviewCount: "308",
+      ratingCount: "310",
+      reviewCount: "310",
     },
     hasOfferCatalog: {
       "@type": "OfferCatalog",
