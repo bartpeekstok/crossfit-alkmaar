@@ -7,7 +7,7 @@ import type { Metadata } from "next";
 // Bij livegang: noindex weghalen, toevoegen aan sitemap.ts en BreadcrumbSchema.
 const OG_IMAGE = "https://www.crossfitalkmaar.com/redesign/assets/header-hyrox.jpg";
 const OG_DESC =
-  "8 weken gerichte voorbereiding op HYROX Utrecht. Twee trainingen per week, maximaal 16 deelnemers, van 3 oktober tot en met 24 november bij CrossFit Alkmaar.";
+  "8 weken gerichte voorbereiding op HYROX Utrecht. Twee trainingen per week, maximaal 16 deelnemers, van 4 oktober tot en met 25 november bij CrossFit Alkmaar.";
 
 export const metadata: Metadata = {
   title: "HYROX Prep Alkmaar | Klaar voor HYROX Utrecht in 8 weken",

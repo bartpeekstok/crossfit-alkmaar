@@ -97,7 +97,7 @@ export default function HyroxPrepWachtlijstPage() {
           <h1>HYROX Prep Alkmaar. Wachtlijst open.</h1>
           <p className="lede">
             Op 26 tot en met 30 november is HYROX Utrecht. Wij draaien daar een 8 weken durend
-            voorbereidingsprogramma naartoe, van 3 oktober tot en met 24 november. Zestien plekken.
+            voorbereidingsprogramma naartoe, van 4 oktober tot en met 25 november. Zestien plekken.
             Inschrijving opent 1 september.
           </p>
         </div>
@@ -122,7 +122,7 @@ export default function HyroxPrepWachtlijstPage() {
 
             <h3>Wat het programma inhoudt, in het kort</h3>
             <p className="body">
-              Twee trainingen per week. Dinsdagavond kracht en stationtechniek, zaterdagochtend
+              Twee trainingen per week. Woensdagavond kracht en stationtechniek, zondagochtend
               compromised running en racesimulaties. Maximaal zestien deelnemers, dus de coach ziet
               daadwerkelijk wat jij doet. Je hoeft geen lid te zijn en geen CrossFit-ervaring te hebben.
             </p>
