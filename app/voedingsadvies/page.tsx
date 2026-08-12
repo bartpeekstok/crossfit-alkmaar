@@ -29,7 +29,6 @@ export default function VoedingsadviesPage() {
         { "@type": "Question", name: "Wat houdt het voedingsadvies bij CrossFit Alkmaar in?", acceptedAnswer: { "@type": "Answer", text: "Persoonlijk voedingsadvies afgestemd op jouw doelen en levensstijl. Geen strenge diëten maar praktische handvatten die aansluiten op je trainingsschema en passen in een druk leven." } },
         { "@type": "Question", name: "Moet ik lid zijn om voedingsadvies te krijgen?", acceptedAnswer: { "@type": "Answer", text: "Voedingsadvies is beschikbaar als aanvulling op je lidmaatschap. De combinatie van training en voeding geeft het beste resultaat." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "310", reviewCount: "310" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
