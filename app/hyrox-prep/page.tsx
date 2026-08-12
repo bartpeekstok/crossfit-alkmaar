@@ -123,8 +123,8 @@ export default function HyroxPrepWachtlijstPage() {
 
             <h3>Wat het programma inhoudt, in het kort</h3>
             <p className="body">
-              Twee trainingen per week. Woensdagavond kracht en stationtechniek, zondagochtend
-              compromised running en racesimulaties. Maximaal zestien deelnemers, dus de coach ziet
+              Twee trainingen per week. Woensdag van 19:00 tot 20:00 kracht en stationtechniek,
+              zondag van 09:00 tot 10:30 compromised running en racesimulaties. Maximaal zestien deelnemers, dus de coach ziet
               daadwerkelijk wat jij doet. Je hoeft geen lid te zijn en geen CrossFit-ervaring te hebben.
             </p>
           </div>
