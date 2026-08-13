@@ -71,7 +71,7 @@ export const EVENTS: CfaEvent[] = [
     title: "HYROX Simulatie",
     dateLabel: "Zaterdag 22 augustus 2026",
     isoDate: "2026-08-22",
-    tag: "Inschrijving open",
+    tag: "Sluit 18 augustus",
     img: "/redesign/assets/header-hyrox.jpg",
     imgAlt: "Atleten tijdens een HYROX workout bij CrossFit Alkmaar",
     text: "Een volledige HYROX race in onze eigen box: 8 rondes hardlopen afgewisseld met 8 stations. Open en Pro divisie, solo of met een buddy.",

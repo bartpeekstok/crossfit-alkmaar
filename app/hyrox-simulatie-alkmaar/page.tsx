@@ -26,6 +26,7 @@ export default function HyroxSimulatie22Aug() {
         dateLabel="Zaterdag 22 augustus 2026"
         dateLong="Zaterdag 22 augustus 2026"
         registerUrl="https://ghl.crossfitalkmaar.com/widget/form/1F3ns6iRWouIPINxoHLG"
+        deadline={{ iso: "2026-08-18T23:59:59+02:00", label: "maandag 18 augustus" }}
       />
     </>
   );

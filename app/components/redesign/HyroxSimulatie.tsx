@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Script from "next/script";
 import HyroxRegistration from "./HyroxRegistration";
 
@@ -13,9 +14,35 @@ type Props = {
   dateLabel: string;
   dateLong: string;
   registerUrl: string;
+  // Sluitingsdatum van de inschrijving. Zet 'm alleen op de editie waar de
+  // deadline nadert: toont een afteltimer in de hero + urgentieregels bij de
+  // CTA's, en sluit de inschrijving automatisch zodra de teller op nul staat.
+  deadline?: { iso: string; label: string };
 };
 
-export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
+export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props) {
+  const deadlineIso = deadline?.iso;
+  const deadlineTs = deadlineIso ? new Date(deadlineIso).getTime() : 0;
+  // null tot na de mount: de server kent de kliktijd van de bezoeker niet, dus
+  // de teller rendert pas client-side (voorkomt een hydration-mismatch).
+  const [now, setNow] = useState<number | null>(null);
+  useEffect(() => {
+    if (!deadlineIso) return;
+    const tick = () => setNow(Date.now());
+    tick();
+    const id = setInterval(tick, 1000);
+    return () => clearInterval(id);
+  }, [deadlineIso]);
+
+  const closed = !!deadline && now !== null && now >= deadlineTs;
+  const rest = now !== null ? Math.max(0, deadlineTs - now) : 0;
+  const dagen = Math.floor(rest / 86400000);
+  const uren = Math.floor((rest % 86400000) / 3600000);
+  const minuten = Math.floor((rest % 3600000) / 60000);
+  const seconden = Math.floor((rest % 60000) / 1000);
+  const urgentie = dagen >= 2 ? `Nog ${dagen} dagen om in te schrijven` : dagen === 1 ? "Nog 1 dag om in te schrijven" : "Laatste dag: schrijf je vandaag in";
+  const pad = (n: number) => String(n).padStart(2, "0");
+
   return (
     <>
       <style>{`
@@ -45,6 +72,13 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
         .hx-band h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(30px,4.2vw,52px); line-height: .98; color: #fff; }
         .hx-band p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,19px); color: rgba(234,237,244,.9); margin: 14px auto 26px; max-width: 560px; }
         .hx-cta-row { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; }
+        .hx-deadline { display: flex; flex-direction: column; gap: 12px; align-items: center; margin: 20px 0 4px; }
+        .hx-deadline .lbl { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: clamp(14px,1.6vw,17px); color: var(--hold); margin: 0; }
+        .hx-count { display: flex; gap: clamp(8px,1.2vw,12px); justify-content: center; }
+        .hx-count .seg { min-width: clamp(58px,7vw,72px); padding: 10px 6px 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.2); border-radius: 10px; text-align: center; }
+        .hx-count .n { font-family: var(--font-stat); font-size: clamp(24px,3.2vw,34px); line-height: 1; color: #fff; }
+        .hx-count .u { font-family: var(--font-head); font-weight: 600; font-size: 10.5px; text-transform: uppercase; letter-spacing: .08em; color: rgba(234,237,244,.75); margin-top: 5px; }
+        .hx-urgent { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .08em; font-size: 14px; color: var(--hold); margin: 0 0 14px; }
         @media (max-width: 720px) { .info { grid-template-columns: 1fr; } }
       `}</style>
 
@@ -56,8 +90,23 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
           <p className="hx-date">{dateLabel}</p>
           <h1 style={{ marginTop: 12 }}>HYROX Simulatie Alkmaar</h1>
           <p className="lede">Een volledige HYROX race bij CrossFit Alkmaar. Open en Pro divisie. 8 rondes, 8 stations, 1 finish.</p>
+          {deadline && (
+            <div className="hx-deadline">
+              <p className="lbl">{closed ? "De inschrijving is gesloten" : `Inschrijving sluit ${deadline.label}`}</p>
+              {!closed && now !== null && (
+                <div className="hx-count" role="timer" aria-label={`Nog ${dagen} dagen, ${uren} uur, ${minuten} minuten en ${seconden} seconden om in te schrijven`}>
+                  <div className="seg"><div className="n">{dagen}</div><div className="u">{dagen === 1 ? "dag" : "dagen"}</div></div>
+                  <div className="seg"><div className="n">{pad(uren)}</div><div className="u">uur</div></div>
+                  <div className="seg"><div className="n">{pad(minuten)}</div><div className="u">min</div></div>
+                  <div className="seg"><div className="n">{pad(seconden)}</div><div className="u">sec</div></div>
+                </div>
+              )}
+            </div>
+          )}
           <div className="cta-row">
-            <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
+            {closed
+              ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+              : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
       </section>
@@ -129,8 +178,11 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
         <div className="wrap inner">
           <h2>CrossFit Alkmaar is een officiële HYROX gym</h2>
           <p>Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
+          {deadline && !closed && <p className="hx-urgent">{urgentie}</p>}
           <div className="hx-cta-row">
-            <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
+            {closed
+              ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+              : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
       </section>
@@ -163,8 +215,18 @@ export default function HyroxSimulatie({ dateLabel, dateLong }: Props) {
       <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-hyrox.jpg')" } as React.CSSProperties}>
         <div className="wrap">
           <h2>Doe mee op {dateLabel.toLowerCase()}</h2>
-          <p>Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.</p>
-          <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
+          {closed ? (
+            <>
+              <p>De inschrijving voor deze editie is gesloten. De volgende HYROX Simulatie is op zaterdag 24 oktober.</p>
+              <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+            </>
+          ) : (
+            <>
+              <p>Schrijf je in voor de HYROX Simulatie bij CrossFit Alkmaar.</p>
+              {deadline && <p className="hx-urgent">{urgentie}</p>}
+              <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />
+            </>
+          )}
         </div>
       </section>
     </>
