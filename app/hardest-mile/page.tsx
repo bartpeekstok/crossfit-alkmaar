@@ -50,6 +50,11 @@ export default function HardestMilePage() {
         .thm-band h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(30px,4.2vw,52px); line-height: .98; color: #fff; }
         .thm-band p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,19px); color: rgba(234,237,244,.9); margin: 14px auto 26px; max-width: 560px; }
         .thm-video { max-width: 880px; aspect-ratio: 16 / 9; margin: 30px auto 0; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-2); }
+        .prog { max-width: 560px; margin: clamp(24px,3vw,34px) auto 0; background: #fff; border: 1px solid var(--border); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(22px,2.6vw,28px); }
+        .prog h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 17px; margin: 0 0 14px; color: var(--fg1); text-align: center; }
+        .prog ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+        .prog li { display: flex; gap: 14px; align-items: baseline; font-family: var(--font-body); font-size: 15.5px; line-height: 1.5; color: var(--fg2); }
+        .prog li b { font-family: var(--font-stat); font-size: 15px; color: var(--cfa-blue); flex-shrink: 0; min-width: 64px; text-align: right; }
         @media (max-width: 720px) { .info { grid-template-columns: 1fr; } }
       `}</style>
 
@@ -99,7 +104,7 @@ export default function HardestMilePage() {
           <div className="info" style={{ marginTop: 34 }}>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
-              <div><h3>Datum &amp; tijd</h3><p>{DATE_LABEL}<br />Start om 12:30 uur</p></div>
+              <div><h3>Datum &amp; tijd</h3><p>{DATE_LABEL}<br />Warming-up 12:15, start 12:30 uur</p></div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
@@ -121,6 +126,14 @@ export default function HardestMilePage() {
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" /></svg>
               <div><h3>Finisher-foto</h3><p>Een gave actiefoto van jou op de baan, met je eindtijd in beeld.</p></div>
             </div>
+          </div>
+          <div className="prog">
+            <h3>Programma</h3>
+            <ul>
+              <li><b>12:15</b><span>Gezamenlijke warming-up op de baan</span></li>
+              <li><b>12:30</b><span>Start The Hardest Mile</span></li>
+              <li><b>Daarna</b><span>Samen borrelen, het leaderboard bekijken en je finisher-foto scoren</span></li>
+            </ul>
           </div>
         </div>
       </section>
@@ -155,7 +168,8 @@ export default function HardestMilePage() {
             <details><summary>Wat kost deelname?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-. Je rekent direct online af via iDEAL.</div></details>
             <details><summary>Hoe weet het systeem dat ik lid ben?<span className="ic"><Plus /></span></summary><div className="body">We herkennen je op je e-mailadres. Gebruik bij het inschrijven het e-mailadres dat bij ons bekend is, dan rekent het systeem automatisch het ledentarief.</div></details>
             <details><summary>Is dit ook iets voor beginners?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Je bepaalt zelf je tempo en de bewegingen zijn voor elk niveau te doen. De sfeer en de groep slepen je erdoorheen.</div></details>
-            <details><summary>Krijg ik mijn eindtijd te zien?<span className="ic"><Plus /></span></summary><div className="body">Ja. We klokken je officiële eindtijd en je krijgt na afloop een actiefoto met je eindtijd in beeld. Zo heb je bewijs van je prestatie en een doel voor de volgende editie.</div></details>
+            <details><summary>Krijg ik mijn eindtijd te zien?<span className="ic"><Plus /></span></summary><div className="body">Ja. We klokken je officiële eindtijd en je krijgt na afloop een actiefoto met je eindtijd in beeld. Alle tijden komen bovendien in het leaderboard, dus je hebt meteen een doel voor de volgende editie.</div></details>
+            <details><summary>Is er nog iets na afloop?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Na de laatste finisher borrelen we samen na op de baan, bekijken we het leaderboard en delen we de finisher-foto&apos;s. Reken dus niet op een snelle sprint naar huis.</div></details>
             <details><summary>Waar moet ik zijn?<span className="ic"><Plus /></span></summary><div className="body">Op de atletiekbaan van Atletiekvereniging Hylas in Alkmaar. We starten om 12:30 uur.</div></details>
           </div>
         </div>
