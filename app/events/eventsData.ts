@@ -95,8 +95,7 @@ export const EVENTS: CfaEvent[] = [
     place: "CrossFit Alkmaar",
   },
   {
-    href: "https://cfalkmaar.sportbitapp.nl/web/nl/events/72724",
-    external: true,
+    href: "/hardest-mile",
     ctaLabel: "Schrijf je in",
     title: "The Hardest Mile",
     dateLabel: "Zondag 13 september 2026",

@@ -3,7 +3,7 @@
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
-const HIDDEN_PREFIXES = ["/start", "/hyrox-betaald"];
+const HIDDEN_PREFIXES = ["/start", "/hyrox-betaald", "/hardest-mile-betaald"];
 
 // Paden die de nieuwe redesign-2026 layout gebruiken (Header/Footer/LeadModal
 // uit components/redesign). De OUDE Header/Footer/popups worden hier verborgen.
@@ -24,6 +24,7 @@ export const REDESIGNED_PATHS = [
   "/privacy",
   "/hyrox-simulatie-alkmaar",
   "/hyrox-simulatie-24-oktober",
+  "/hardest-mile",
   "/hyrox-alkmaar",
   "/events",
   // SEO landingspagina's (template-based via SeoLanding.tsx)
