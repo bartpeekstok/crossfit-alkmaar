@@ -72,6 +72,7 @@ export default function HardestMilePage() {
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>De zwaarste mijl van Alkmaar</h2>
           <p>Op zondag 13 september om 12:30 organiseert CrossFit Alkmaar The Hardest Mile op de atletiekbaan van Atletiekvereniging Hylas. Het concept is simpel, de uitvoering niet: je legt één mijl af, verdeeld over vier rondes van 400 meter. Elke ronde doe je op een andere manier vooruit.</p>
           <p>Een ronde burpees, een ronde lunges, een ronde bearcrawl en tot slot een ronde hardlopen. Geen ingewikkelde techniek, geen zware gewichten: gewoon jij, de baan en de klok.</p>
+          <p>En je gaat niet naar huis met alleen verzuurde benen. We klokken je officiële eindtijd en je krijgt een gave actiefoto met je eindtijd in beeld. Bewijs voor je Instagram, en de lat voor de volgende editie.</p>
           <p>Iedereen kan meedoen, ook als je geen lid bent van CrossFit Alkmaar. Je bepaalt zelf je tempo, dus elk niveau is welkom. Opgeven doe je hieronder, betalen gaat direct online via iDEAL.</p>
         </div>
       </section>
@@ -112,6 +113,14 @@ export default function HardestMilePage() {
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
               <div><h3>Voor wie</h3><p>Alle niveaus.<br />Iedereen welkom, ook niet-leden.<br />Je loopt in je eigen tempo.</p></div>
             </div>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5" /><path d="M9 2h6" /></svg>
+              <div><h3>Tijdregistratie</h3><p>We klokken je officiële eindtijd. Jouw tijd, zwart op wit.</p></div>
+            </div>
+            <div className="card">
+              <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" /></svg>
+              <div><h3>Finisher-foto</h3><p>Een gave actiefoto van jou op de baan, met je eindtijd in beeld.</p></div>
+            </div>
           </div>
         </div>
       </section>
@@ -146,6 +155,7 @@ export default function HardestMilePage() {
             <details><summary>Wat kost deelname?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-. Je rekent direct online af via iDEAL.</div></details>
             <details><summary>Hoe weet het systeem dat ik lid ben?<span className="ic"><Plus /></span></summary><div className="body">We herkennen je op je e-mailadres. Gebruik bij het inschrijven het e-mailadres dat bij ons bekend is, dan rekent het systeem automatisch het ledentarief.</div></details>
             <details><summary>Is dit ook iets voor beginners?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Je bepaalt zelf je tempo en de bewegingen zijn voor elk niveau te doen. De sfeer en de groep slepen je erdoorheen.</div></details>
+            <details><summary>Krijg ik mijn eindtijd te zien?<span className="ic"><Plus /></span></summary><div className="body">Ja. We klokken je officiële eindtijd en je krijgt na afloop een actiefoto met je eindtijd in beeld. Zo heb je bewijs van je prestatie en een doel voor de volgende editie.</div></details>
             <details><summary>Waar moet ik zijn?<span className="ic"><Plus /></span></summary><div className="body">Op de atletiekbaan van Atletiekvereniging Hylas in Alkmaar. We starten om 12:30 uur.</div></details>
           </div>
         </div>
