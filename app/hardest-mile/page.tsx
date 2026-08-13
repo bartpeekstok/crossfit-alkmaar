@@ -20,7 +20,7 @@ export default function HardestMilePage() {
         "@type": "SportsEvent",
         name: "The Hardest Mile",
         description: "Eén mijl, vier onderdelen: 4x 400 meter burpees, lunges, bearcrawl en hardlopen op de atletiekbaan van AV Hylas in Alkmaar. Voor alle niveaus.",
-        startDate: "2026-09-13",
+        startDate: "2026-09-13T12:30:00+02:00",
         eventStatus: "https://schema.org/EventScheduled",
         eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
         location: { "@type": "Place", name: "Atletiekvereniging Hylas", address: { "@type": "PostalAddress", addressLocality: "Alkmaar", addressCountry: "NL" } },
@@ -29,7 +29,7 @@ export default function HardestMilePage() {
           { "@type": "Offer", name: "CFA-leden", price: "10", priceCurrency: "EUR" },
           { "@type": "Offer", name: "Niet-leden", price: "30", priceCurrency: "EUR" },
         ],
-        image: "https://www.crossfitalkmaar.com/redesign/assets/event-hardest-mile.jpg",
+        image: "https://www.crossfitalkmaar.com/redesign/assets/header-hardest-mile.jpg",
       }) }} />
 
       <style>{`
@@ -49,13 +49,13 @@ export default function HardestMilePage() {
         .thm-band .inner { position: relative; z-index: 1; }
         .thm-band h2 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(30px,4.2vw,52px); line-height: .98; color: #fff; }
         .thm-band p { font-family: var(--font-body); font-size: clamp(16px,1.8vw,19px); color: rgba(234,237,244,.9); margin: 14px auto 26px; max-width: 560px; }
-        .thm-video { max-width: 880px; margin: 30px auto 0; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-2); }
+        .thm-video { max-width: 880px; aspect-ratio: 16 / 9; margin: 30px auto 0; border-radius: var(--r-lg); overflow: hidden; box-shadow: var(--sh-2); }
         @media (max-width: 720px) { .info { grid-template-columns: 1fr; } }
       `}</style>
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/event-hardest-mile.jpg" alt="" fetchPriority="high" />
+        <img className="bg" src="/redesign/assets/header-hardest-mile.jpg" alt="" fetchPriority="high" />
         <div className="scrim" />
         <div className="wrap inner">
           <p className="thm-date-lbl">{DATE_LABEL}</p>
@@ -70,7 +70,7 @@ export default function HardestMilePage() {
       <section className="sec sec--ivoor">
         <div className="wrap prose">
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>De zwaarste mijl van Alkmaar</h2>
-          <p>Op zondagochtend 13 september organiseert CrossFit Alkmaar The Hardest Mile op de atletiekbaan van Atletiekvereniging Hylas. Het concept is simpel, de uitvoering niet: je legt één mijl af, verdeeld over vier rondes van 400 meter. Elke ronde doe je op een andere manier vooruit.</p>
+          <p>Op zondag 13 september om 12:30 organiseert CrossFit Alkmaar The Hardest Mile op de atletiekbaan van Atletiekvereniging Hylas. Het concept is simpel, de uitvoering niet: je legt één mijl af, verdeeld over vier rondes van 400 meter. Elke ronde doe je op een andere manier vooruit.</p>
           <p>Een ronde burpees, een ronde lunges, een ronde bearcrawl en tot slot een ronde hardlopen. Geen ingewikkelde techniek, geen zware gewichten: gewoon jij, de baan en de klok.</p>
           <p>Iedereen kan meedoen, ook als je geen lid bent van CrossFit Alkmaar. Je bepaalt zelf je tempo, dus elk niveau is welkom. Opgeven doe je hieronder, betalen gaat direct online via iDEAL.</p>
         </div>
@@ -98,7 +98,7 @@ export default function HardestMilePage() {
           <div className="info" style={{ marginTop: 34 }}>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
-              <div><h3>Datum &amp; tijd</h3><p>{DATE_LABEL}<br />In de ochtend. De precieze starttijd krijg je na inschrijving per e-mail.</p></div>
+              <div><h3>Datum &amp; tijd</h3><p>{DATE_LABEL}<br />Start om 12:30 uur</p></div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
@@ -118,7 +118,7 @@ export default function HardestMilePage() {
 
       <section className="sec thm-band">
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="bg" src="/redesign/assets/event-hardest-mile.jpg" alt="" />
+        <img className="bg" src="/redesign/assets/header-hardest-mile.jpg" alt="" />
         <div className="scrim" />
         <div className="wrap inner">
           <h2>Durf jij de mijl aan?</h2>
@@ -146,12 +146,12 @@ export default function HardestMilePage() {
             <details><summary>Wat kost deelname?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-. Je rekent direct online af via iDEAL.</div></details>
             <details><summary>Hoe weet het systeem dat ik lid ben?<span className="ic"><Plus /></span></summary><div className="body">We herkennen je op je e-mailadres. Gebruik bij het inschrijven het e-mailadres dat bij ons bekend is, dan rekent het systeem automatisch het ledentarief.</div></details>
             <details><summary>Is dit ook iets voor beginners?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Je bepaalt zelf je tempo en de bewegingen zijn voor elk niveau te doen. De sfeer en de groep slepen je erdoorheen.</div></details>
-            <details><summary>Waar moet ik zijn?<span className="ic"><Plus /></span></summary><div className="body">Op de atletiekbaan van Atletiekvereniging Hylas in Alkmaar. De precieze starttijd krijg je na inschrijving per e-mail.</div></details>
+            <details><summary>Waar moet ik zijn?<span className="ic"><Plus /></span></summary><div className="body">Op de atletiekbaan van Atletiekvereniging Hylas in Alkmaar. We starten om 12:30 uur.</div></details>
           </div>
         </div>
       </section>
 
-      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/event-hardest-mile.jpg')" } as React.CSSProperties}>
+      <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-hardest-mile.jpg')" } as React.CSSProperties}>
         <div className="wrap">
           <h2>Doe mee op {DATE_LABEL.toLowerCase()}</h2>
           <p>Schrijf je in voor The Hardest Mile en zet jouw tijd neer.</p>

@@ -105,7 +105,7 @@ export const EVENTS: CfaEvent[] = [
     imgAlt: "Atleten rennen over de atletiekbaan tijdens The Hardest Mile",
     text: "Vier keer vierhonderd meter: burpees, lunges, bearcrawl en hardlopen. Voor alle niveaus, op de atletiekbaan van AV Hylas.",
     slideText: "4x 400m: burpees, lunges, bearcrawl en hardlopen. Alle niveaus.",
-    time: "Zondagochtend",
+    time: "12:30 start",
     place: "Atletiekvereniging Hylas",
   },
   {

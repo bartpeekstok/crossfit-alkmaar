@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.crossfitalkmaar.com/redesign/assets/event-hardest-mile.jpg",
+        url: "https://www.crossfitalkmaar.com/redesign/assets/header-hardest-mile.jpg",
         width: 1200,
         height: 630,
-        alt: "Atleten rennen over de atletiekbaan tijdens The Hardest Mile",
+        alt: "Atletiekbaan met genummerde banen, het decor van The Hardest Mile",
       },
     ],
   },
