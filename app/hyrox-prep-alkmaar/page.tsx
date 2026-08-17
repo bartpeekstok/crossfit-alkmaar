@@ -25,14 +25,14 @@ const Cross = () => (
 );
 
 const KALENDER = [
-  { week: 1, za: "3 oktober", di: "6 oktober" },
-  { week: 2, za: "10 oktober", di: "13 oktober" },
-  { week: 3, za: "17 oktober", di: "20 oktober" },
-  { week: 4, za: "24 oktober", di: "27 oktober" },
-  { week: 5, za: "31 oktober", di: "3 november" },
-  { week: 6, za: "7 november", di: "10 november" },
-  { week: 7, za: "14 november", di: "17 november" },
-  { week: 8, za: "21 november", di: "24 november" },
+  { week: 1, zo: "4 oktober", wo: "7 oktober" },
+  { week: 2, zo: "11 oktober", wo: "14 oktober" },
+  { week: 3, zo: "18 oktober", wo: "21 oktober" },
+  { week: 4, zo: "25 oktober", wo: "28 oktober" },
+  { week: 5, zo: "1 november", wo: "4 november" },
+  { week: 6, zo: "8 november", wo: "11 november" },
+  { week: 7, zo: "15 november", wo: "18 november" },
+  { week: 8, zo: "22 november", wo: "25 november" },
 ];
 
 const EXTRAS = [
@@ -109,6 +109,10 @@ export default function HyroxPrepPage() {
         .hp-prijs .bedrag span { font-size: .45em; vertical-align: super; }
         .hp-prijs .sub { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .06em; font-size: 14px; color: var(--cfa-blue); margin-top: 6px; }
         .hp-prijs p { font-family: var(--font-body); font-size: 16px; line-height: 1.55; color: var(--fg2); margin: 16px 0 0; }
+        .hp-h2 { text-align: left; margin-bottom: 18px; }
+        @media (max-width: 720px) {
+          .hp-h2, .prose p, .hp-sessies .card, .hp-wie h3 { text-align: center; }
+        }
       `}</style>
 
       {/* HERO */}
@@ -121,8 +125,8 @@ export default function HyroxPrepPage() {
           <h1 style={{ marginTop: 12 }}>Klaar voor HYROX Utrecht. In 8 weken.</h1>
           <p className="lede">
             Een gericht voorbereidingsprogramma voor iedereen die op 26 tot en met 30 november de vloer
-            van de Jaarbeurs op stapt. Twee trainingen per week, maximaal 16 deelnemers, van 3 oktober
-            tot en met 24 november.
+            van de Jaarbeurs op stapt. Twee trainingen per week, maximaal 16 deelnemers, van 4 oktober
+            tot en met 25 november.
           </p>
           <div className="cta-row">
             <a className="btn btn--gold btn--lg" href={SIGNUP_URL} target="_blank" rel="noopener noreferrer">Ik doe mee</a>
@@ -134,7 +138,7 @@ export default function HyroxPrepPage() {
       {/* BLOK 1: HET PROBLEEM */}
       <section className="sec sec--ivoor">
         <div className="wrap prose">
-          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Je hebt je ticket. Nu het lastige deel.</h2>
+          <h2 className="sec-title hp-h2">Je hebt je ticket. Nu het lastige deel.</h2>
           <p>
             De meeste mensen die HYROX voor het eerst doen, trainen verkeerd. Ze lopen hun kilometers los,
             ze doen hun krachtwerk apart, en dan komen ze op de racevloer erachter dat die twee dingen
@@ -164,7 +168,7 @@ export default function HyroxPrepPage() {
           </div>
           <div className="hp-sessies">
             <div className="card">
-              <p className="dag">Dinsdag, 19:00 tot 20:00</p>
+              <p className="dag">Woensdag, 19:00 tot 20:00</p>
               <h3>Kracht en techniek</h3>
               <p>
                 Sled push en sled pull, wall balls, burpee broad jumps, farmers carry, sandbag lunges,
@@ -173,7 +177,7 @@ export default function HyroxPrepPage() {
               </p>
             </div>
             <div className="card">
-              <p className="dag">Zaterdag, 09:00 tot 10:30</p>
+              <p className="dag">Zondag, 09:00 tot 10:30</p>
               <h3>Compromised running en simulatie</h3>
               <p>
                 Hier komt alles samen. Runblokken, stationblokken en om de twee weken een halve of hele
@@ -202,16 +206,16 @@ export default function HyroxPrepPage() {
           </div>
           <table className="hp-cal">
             <thead>
-              <tr><th>Week</th><th>Zaterdag</th><th>Dinsdag</th></tr>
+              <tr><th>Week</th><th>Zondag</th><th>Woensdag</th></tr>
             </thead>
             <tbody>
               {KALENDER.map((w) => (
-                <tr key={w.week}><td>{w.week}</td><td>{w.za}</td><td>{w.di}</td></tr>
+                <tr key={w.week}><td>{w.week}</td><td>{w.zo}</td><td>{w.wo}</td></tr>
               ))}
             </tbody>
           </table>
           <p className="center" style={{ fontFamily: "var(--font-body)", color: "var(--fg2)", marginTop: 22 }}>
-            Laatste training op dinsdag 24 november. Daarna nog twee dagen rust en dan sta je aan de start.
+            Laatste training op woensdag 25 november. Daarna nog even rust en dan sta je aan de start.
           </p>
         </div>
       </section>
@@ -272,9 +276,9 @@ export default function HyroxPrepPage() {
       {/* BLOK 6: WAAROM CFA */}
       <section className="sec sec--white">
         <div className="wrap prose">
-          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Waarom je dit hier doet</h2>
+          <h2 className="sec-title hp-h2">Waarom je dit hier doet</h2>
           <p>
-            CrossFit Alkmaar bestaat meer dan twaalf jaar. We hebben ruim 260 reviews en een community
+            CrossFit Alkmaar bestaat meer dan twaalf jaar. We hebben ruim 300 reviews en een community
             waar mensen jaren blijven, niet weken.
           </p>
           <p>
@@ -284,7 +288,7 @@ export default function HyroxPrepPage() {
           </p>
           <p>
             En je traint in een groep van maximaal zestien. Dat betekent dat de coach je pacing
-            daadwerkelijk ziet, en dat je op zaterdag niet in de rij staat voor een sled.
+            daadwerkelijk ziet, en dat je op zondag niet in de rij staat voor een sled.
           </p>
         </div>
       </section>

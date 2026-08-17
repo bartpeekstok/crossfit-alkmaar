@@ -33,7 +33,6 @@ export default function GroepslessenPage() {
         { "@type": "Question", name: "Wat kosten groepslessen bij CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "Onze abonnementen starten vanaf €69 per maand. Het exacte pakket dat bij jou past, bespreken we tijdens je gratis kennismaking. Alle abonnementen zijn maandelijks opzegbaar." } },
         { "@type": "Question", name: "Hoe groot zijn de groepen?", acceptedAnswer: { "@type": "Answer", text: "Maximaal 12 deelnemers per les. Zo krijgt iedereen persoonlijke aandacht van de coach." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

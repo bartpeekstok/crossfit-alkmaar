@@ -48,18 +48,6 @@ export default function KickstartPage() {
           }),
         }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HealthClub",
-            "@id": "https://www.crossfitalkmaar.com/#organization",
-            name: "CrossFit Alkmaar",
-            aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" },
-          }),
-        }}
-      />
 
       {/* HERO */}
       <section className="page-hero">

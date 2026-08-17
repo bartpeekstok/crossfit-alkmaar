@@ -31,7 +31,6 @@ export default function SmallGroupTrainingPage() {
         { "@type": "Question", name: "Wat kost Small Group Training?", acceptedAnswer: { "@type": "Answer", text: "Onze tarieven voor BUILD Small Group Training bespreken we tijdens je gratis kennismaking. Inclusief groepslessen en een programma op maat. Maandelijks opzegbaar." } },
         { "@type": "Question", name: "Wat is het verschil met groepslessen?", acceptedAnswer: { "@type": "Answer", text: "Bij Small Group Training train je in een vaste groep van max 6 (i.p.v. 12), met een programma op maat en meer persoonlijke aandacht. Het is de tussenstap tussen groepslessen en personal training." } },
       ] }) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "HealthClub", "@id": "https://www.crossfitalkmaar.com/#organization", name: "CrossFit Alkmaar", aggregateRating: { "@type": "AggregateRating", ratingValue: "5.0", bestRating: "5", worstRating: "1", ratingCount: "273", reviewCount: "273" } }) }} />
 
       <section className="page-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}

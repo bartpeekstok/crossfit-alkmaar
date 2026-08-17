@@ -10,6 +10,7 @@ Eén regel per wijziging, nieuwste bovenaan.
 
 | Datum | Pagina | Wijziging | Aanleiding | Verwachting |
 |---|---|---|---|---|
+| 2026-08-17 | `/meer-info` | "CrossFit Alkmaar" in de lesrooster-intro omgezet naar een link naar de homepage (`/`) | Kannibalisatie op `crossfit`: homepage 412 vertoningen/positie 9.7, `/meer-info` 8 vertoningen/positie 5.0; `crossfit` is tegelijk de grootste kans van het kwartaal (635 vertoningen, positie 8.8, ~80 gemiste klikken) | Interne linkwaarde voor "crossfit" bundelt zich op de homepage, wat de positie richting de top 3 moet duwen |
 | 2026-08-10 | `/personal-training` | Link toegevoegd naar `/blog/personal-training-alkmaar` in de intro-sectie | Kannibalisatie op "personal training alkmaar": 8 eigen pagina's concurreren; `/personal-training` heeft de meeste vertoningen (118/kwartaal) maar staat op positie 48,2, terwijl `/blog/personal-training-alkmaar` op positie 16,4 staat (75 vertoningen) | Linkwaarde consolideert richting de sterkste pagina; positieverbetering voor "personal training alkmaar" verwacht binnen 4-8 weken |
 | 2026-08-08 | `app/layout.tsx` | geo.position en ICBM gelijkgetrokken met de coördinaten in JsonLd.tsx | Meta-tags wezen 1,7 km naast het adres in de JSON-LD | Consistenter lokaal signaal voor "sportschool alkmaar" en omgeving |
 | 2026-08-08 | `app/components/redesign/SeoLanding.tsx` | Tweede HealthClub-blok met ratingCount 273 verwijderd | Conflict met het globale blok (308) onder dezelfde `@id`, op alle 27 landingspagina's | Google negeert de beoordelingen niet langer wegens tegenstrijdigheid |

@@ -1263,11 +1263,28 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "mindset-de-sleutel-tot-succes": {
     title: "6 mentale geheimen om je training vol te houden en langdurige vooruitgang te boeken",
-    date: "2024-11-20",
+    date: "2026-08-12",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/redesign/assets/community-3.jpg",
     excerpt: "Gemotiveerd blijven en langdurige vooruitgang boeken: zes mentale strategieën uit de praktijk van CrossFit Alkmaar.",
+    faq: [
+      {
+        question: "Hoe lang duurt het voordat trainen een gewoonte wordt?",
+        answer:
+          "Vaak enkele weken. De eerste periode kost het bewust plannen en discipline, daarna wordt het onderdeel van je ritme en hoef je er nauwelijks meer over na te denken. Onze 28-Day Kickstart is daarop gebouwd: vier weken vaste trainingsmomenten in een kleine groep, zodat trainen sneller een automatisme wordt.",
+      },
+      {
+        question: "Wat doe ik als ik even geen motivatie voel om te trainen?",
+        answer:
+          "Ga toch, ook als het tegenzit. Motivatie komt en gaat, discipline en een vaste routine houden je op de been in de periodes dat motivatie er niet is. Vaak voel je je na de training alweer beter, ook al had je er vooraf geen zin in.",
+      },
+      {
+        question: "Hoe blijf ik gemotiveerd als ik niet snel resultaat zie?",
+        answer:
+          "Focus op wat je wel kunt meten: je techniek, het gewicht dat je gebruikt, hoe een workout aanvoelt ten opzichte van een paar maanden geleden. Zichtbare vooruitgang komt vaak trager dan je hoopt, maar wie de kleine stappen blijft waarderen, houdt het langer vol tot het resultaat er wel is.",
+      },
+    ],
     content: `
       <p>Iedereen die al een tijdje traint kent het gevoel: het is niet altijd makkelijk om gemotiveerd te blijven en je trainingen consistent vol te houden. Soms lijkt je progressie langzaam, maar met de juiste mentale strategieën kun je jezelf blijven verbeteren en langdurige progressie boeken. Bij CrossFit Alkmaar hebben we veel geleerd over het belang van mentale kracht, zowel vanuit onze ervaring in de special forces als vanuit onze dagelijkse trainingen in de gym. Hier delen we zes mentale strategieën die je helpen om je trainingen vol te houden en je fitnessdoelen te bereiken op de lange termijn.</p>
 
@@ -1293,7 +1310,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Het opbouwen van consistentie is cruciaal voor het behalen van langdurige progressie. Hoe meer CrossFit training deel uitmaakt van je dagelijkse of wekelijkse routine, hoe makkelijker het wordt om door te zetten. Wanneer training een vast onderdeel van je leven wordt, hoef je minder na te denken over motivatie; je doet het gewoon.</p>
 
-      <p>In de special forces leerden we ook om onvoorwaardelijk te handelen: het was geen optie om niet op te treden wanneer dat nodig was. Op dezelfde manier kun je van je trainingsroutine een gewoonte maken. Het vergt geen motivatie, maar discipline. Dit zorgt ervoor dat je elke week vooruitgang boekt, zelfs als het lastig wordt.</p>
+      <p>In de special forces leerden we ook om onvoorwaardelijk te handelen: het was geen optie om niet op te treden wanneer dat nodig was. Op dezelfde manier kun je van je trainingsroutine een gewoonte maken. Het vergt geen motivatie, maar discipline. Dit zorgt ervoor dat je elke week vooruitgang boekt, zelfs als het lastig wordt. Onze <a href="/kickstart">28-Day Kickstart</a> is precies daarop gebouwd: vier weken vaste trainingsmomenten in een kleine groep, zodat trainen sneller een automatisme wordt dan wanneer je het er zelf bij moet plannen.</p>
 
       <h2>5. Wees geduldig met jezelf</h2>
 
@@ -1306,6 +1323,8 @@ export const blogPosts: { [key: string]: BlogPost } = {
       <p>Het ultieme doel is niet alleen de fysieke verandering, maar ook de persoonlijke groei die je doormaakt. Het doorzetten van je trainingen en het omgaan met de ups en downs van het proces maakt je sterker, niet alleen fysiek, maar ook mentaal.</p>
 
       <p>Bij CrossFit Alkmaar zien we dat de meeste leden niet alleen naar het einddoel streven, maar ook genieten van het proces. Het is de reis die telt, niet alleen de bestemming. Jezelf uitdagen en elke week een beetje beter worden zorgt ervoor dat je uiteindelijk je doelen bereikt, terwijl je onderweg blijft leren en groeien.</p>
+
+      <p>Deze mentale kant komt nog sterker naar voren bij een uitdaging als <a href="/hyrox-alkmaar">HYROX</a>, waar je een uur lang moet doorzetten ondanks vermoeidheid. De strategieën hierboven gebruiken onze leden dan ook dagelijks, niet alleen tijdens een wedstrijd.</p>
 
       <h2>Langdurige vooruitgang met CrossFit Alkmaar</h2>
 

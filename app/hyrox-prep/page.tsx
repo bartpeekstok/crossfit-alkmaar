@@ -15,7 +15,8 @@ const TICKET_OPTIES = ["Ja", "Nee, nog niet", "Ik twijfel nog"];
 const PERKS = [
   "24 uur eerder inschrijven dan iedereen die de advertentie ziet",
   "50 euro korting, alleen voor de wachtlijst",
-  "Als eerste de volledige programmering en trainingstijden in je inbox",
+  "De grootste kans op een plek: er zijn er maar 16 en de wachtlijst gaat voor",
+  "Open voor iedereen: geen lidmaatschap en geen CrossFit-ervaring nodig",
   "Geen verplichting. Je zegt nu nog niets toe",
 ];
 
@@ -89,17 +90,21 @@ export default function HyroxPrepWachtlijstPage() {
   return (
     <>
       {/* HERO */}
-      <section className="page-hero">
+      <section className="page-hero hpw-hero">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bg" src="/redesign/assets/header-hyrox.jpg" alt="" fetchPriority="high" />
         <div className="scrim" />
         <div className="wrap inner">
           <h1>HYROX Prep Alkmaar. Wachtlijst open.</h1>
           <p className="lede">
-            Op 26 tot en met 30 november is HYROX Utrecht. Wij draaien daar een 8 weken durend
-            voorbereidingsprogramma naartoe, van 3 oktober tot en met 24 november. Zestien plekken.
+            Op 26 tot en met 30 november is HYROX Utrecht.<br />
+            Wij bereiden je daar in 8 weken op voor, van 4 oktober t/m 25 november.<br />
+            Zestien plekken.<br />
             Inschrijving opent 1 september.
           </p>
+          <div className="cta-row">
+            <a className="btn btn--gold btn--lg" href="#wachtlijst">Zet mij op de wachtlijst</a>
+          </div>
         </div>
       </section>
 
@@ -122,13 +127,13 @@ export default function HyroxPrepWachtlijstPage() {
 
             <h3>Wat het programma inhoudt, in het kort</h3>
             <p className="body">
-              Twee trainingen per week. Dinsdagavond kracht en stationtechniek, zaterdagochtend
-              compromised running en racesimulaties. Maximaal zestien deelnemers, dus de coach ziet
+              Twee trainingen per week. Woensdag van 19:00 tot 20:00 kracht en stationtechniek,
+              zondag van 09:00 tot 10:30 compromised running en racesimulaties. Maximaal zestien deelnemers, dus de coach ziet
               daadwerkelijk wat jij doet. Je hoeft geen lid te zijn en geen CrossFit-ervaring te hebben.
             </p>
           </div>
 
-          <div className="hpw-card">
+          <div className="hpw-card" id="wachtlijst">
             {status === "done" ? (
               <div className="ok">
                 <div className="ic">
@@ -237,10 +242,6 @@ export default function HyroxPrepWachtlijstPage() {
                   <button className="btn btn--primary btn--block submit" type="submit" disabled={status === "sending"}>
                     {status === "sending" ? "Versturen..." : "Zet mij op de wachtlijst"}
                   </button>
-                  <p className="privacy">
-                    We gebruiken je gegevens alleen voor dit programma. Geen nieuwsbrief, tenzij je
-                    daar zelf om vraagt.
-                  </p>
                 </form>
               </>
             )}
