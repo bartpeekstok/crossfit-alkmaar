@@ -44,7 +44,7 @@ export default function MeerInfoPage() {
         <div className="wrap">
           <div className="center">
             <h2 className="sec-title">Lesrooster</h2>
-            <p className="sec-sub">Trainen bij CrossFit Alkmaar past in bijna elk schema. Van vroege ochtendlessen tot avondtrainingen, er is altijd een moment dat bij jou werkt.</p>
+            <p className="sec-sub">Trainen bij <a href="/">CrossFit Alkmaar</a> past in bijna elk schema. Van vroege ochtendlessen tot avondtrainingen, er is altijd een moment dat bij jou werkt.</p>
           </div>
           <div className="rooster-embed">
             <div id="sportbit-rooster">&nbsp;</div>
