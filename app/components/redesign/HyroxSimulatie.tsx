@@ -18,9 +18,12 @@ type Props = {
   // deadline nadert: toont een afteltimer in de hero + urgentieregels bij de
   // CTA's, en sluit de inschrijving automatisch zodra de teller op nul staat.
   deadline?: { iso: string; label: string };
+  // Race-modus: inschrijving is dicht en het event is (bijna) bezig. Vervangt
+  // alle inschrijf-CTA's door startlijst- + leaderboard-knoppen.
+  raceLinks?: { startlijst: string; leaderboard: string };
 };
 
-export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props) {
+export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLinks }: Props) {
   const deadlineIso = deadline?.iso;
   const deadlineTs = deadlineIso ? new Date(deadlineIso).getTime() : 0;
   // null tot na de mount: de server kent de kliktijd van de bezoeker niet, dus
@@ -42,6 +45,13 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props)
   const seconden = Math.floor((rest % 60000) / 1000);
   const urgentie = dagen >= 2 ? `Nog ${dagen} dagen om in te schrijven` : dagen === 1 ? "Nog 1 dag om in te schrijven" : "Laatste dag: schrijf je vandaag in";
   const pad = (n: number) => String(n).padStart(2, "0");
+
+  const raceButtons = raceLinks && (
+    <>
+      <a href={raceLinks.startlijst} className="btn btn--outline btn--lg">Bekijk startlijst</a>
+      <a href={raceLinks.leaderboard} className="btn btn--gold btn--lg">Live leaderboard</a>
+    </>
+  );
 
   return (
     <>
@@ -104,9 +114,11 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props)
             </div>
           )}
           <div className="cta-row">
-            {closed
-              ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
-              : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
+            {raceLinks
+              ? raceButtons
+              : closed
+                ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+                : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
       </section>
@@ -180,9 +192,11 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props)
           <p>Deze simulatie organiseren we als onderdeel van ons HYROX-programma.</p>
           {deadline && !closed && <p className="hx-urgent">{urgentie}</p>}
           <div className="hx-cta-row">
-            {closed
-              ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
-              : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
+            {raceLinks
+              ? raceButtons
+              : closed
+                ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+                : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
       </section>
@@ -215,7 +229,12 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline }: Props)
       <section className="sec page-cta" style={{ ["--cta-photo" as string]: "url('/redesign/assets/header-hyrox.jpg')" } as React.CSSProperties}>
         <div className="wrap">
           <h2>Doe mee op {dateLabel.toLowerCase()}</h2>
-          {closed ? (
+          {raceLinks ? (
+            <>
+              <p>De inschrijving is gesloten. Volg de HYROX Simulatie bij CrossFit Alkmaar live.</p>
+              <div className="hx-cta-row">{raceButtons}</div>
+            </>
+          ) : closed ? (
             <>
               <p>De inschrijving voor deze editie is gesloten. De volgende HYROX Simulatie is op zaterdag 24 oktober.</p>
               <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
