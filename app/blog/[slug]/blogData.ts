@@ -2095,11 +2095,28 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "wat-eet-je-voor-en-na-training": {
     title: "Wat eet je het beste voor en na je training?",
-    date: "2024-12-01",
+    date: "2026-08-19",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Voeding",
     image: "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1200&q=80",
     excerpt: "De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training. Wat eet je voor en na je training, en wanneer?",
+    faq: [
+      {
+        question: "Moet ik altijd iets eten voor ik ga trainen?",
+        answer:
+          "Nee, dat verschilt per persoon. Train je vroeg in de ochtend en voelt trainen op een lege maag goed, dan is dat prima. Merk je dat je kracht en energie tekortschieten tijdens de training, eet dan 30 tot 60 minuten van tevoren een lichte snack.",
+      },
+      {
+        question: "Is een eiwitshake noodzakelijk na de training?",
+        answer:
+          "Nee. Een shake is een handig en snel alternatief, maar een boterham met kipfilet of een bakje kwark met fruit doet hetzelfde werk. Het gaat om voldoende eiwit binnen een paar uur na de training, niet om de vorm waarin je het binnenkrijgt.",
+      },
+      {
+        question: "Moet ik anders eten op een dag met een lange of zware training, zoals HYROX?",
+        answer:
+          "Ja, bij een training die langer duurt of veel duurcomponenten heeft, zoals bij HYROX, heb je meer koolhydraten nodig dan bij een korte krachtsessie. Eet die dag iets ruimer voor en na de training, zodat je voldoende energie hebt om vol te houden en goed te herstellen.",
+      },
+    ],
     content: `
       <p>De juiste voeding op het juiste moment kan het verschil maken tussen een goede en een geweldige training. Maar wat eet je nou precies? En wanneer?</p>
 
@@ -2150,6 +2167,10 @@ export const blogPosts: { [key: string]: BlogPost } = {
         <li>Na: 500-750ml per uur zware inspanning</li>
       </ul>
 
+      <h2>Extra energie nodig bij een lange of zware training</h2>
+
+      <p>Bij een korte krachtsessie van drie kwartier kom je met de basis hierboven een heel eind. Maar bij een training die langer duurt of veel duurcomponenten heeft, zoals bij <a href="/hyrox-alkmaar">HYROX</a>, verbruik je aanzienlijk meer energie. Eet die dag iets ruimer, met wat extra koolhydraten voor en na de training, zodat je het tempo kunt volhouden en de dag erna niet met lege benen wakker wordt.</p>
+
       <h2>Veelgemaakte fouten</h2>
 
       <p><strong>1. Te weinig eten</strong><br/>
@@ -2163,7 +2184,9 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>Het hoeft niet ingewikkeld</h2>
 
-      <p>De basis is simpel: eet gevarieerd, genoeg eiwitten, voldoende groenten, en timing rondom je training. Perfectie is niet nodig, consistentie wel.</p>
+      <p>De basis is simpel: eet gevarieerd, genoeg eiwitten, voldoende groenten, en timing rondom je training. Perfectie is niet nodig, consistentie wel. Wil je hier persoonlijk advies over, afgestemd op jouw doelen en trainingsschema? Kijk dan bij ons <a href="/voedingsadvies">voedingsadvies</a>.</p>
+
+      <p>Nog niet aan het trainen bij CrossFit Alkmaar? Meld je aan voor een <a href="/free-intro">gratis intake</a> of start met onze <a href="/kickstart">28-day kickstart</a>.</p>
     `,
   },
 };
