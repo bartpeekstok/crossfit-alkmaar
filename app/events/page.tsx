@@ -115,7 +115,7 @@ export default function EventsPage() {
         .evt .body { display: flex; flex-direction: column; flex: 1; padding: clamp(20px,2.4vw,28px); }
         .evt .date { font-family: var(--font-head); font-weight: 700; font-size: 13px; letter-spacing: .14em; text-transform: uppercase; color: var(--cfa-blue); margin: 0 0 8px; }
         .evt h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: 28px; letter-spacing: .01em; color: var(--fg1); margin: 0 0 10px; }
-        .evt p { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--fg2); margin: 0 0 14px; }
+        .evt p { font-family: var(--font-body); font-size: 16px; line-height: 1.6; color: var(--fg2); margin: 0 0 14px; white-space: pre-line; }
         .evt .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--font-body); font-size: 14px; color: var(--fg3); margin: 0 0 18px; }
         .evt .meta span { display: inline-flex; align-items: center; gap: 6px; }
         .evt .meta svg { width: 14px; height: 14px; color: var(--cfa-blue); flex: none; }

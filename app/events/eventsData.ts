@@ -154,9 +154,10 @@ export const EVENTS: CfaEvent[] = [
     isoDate: "2026-11-07",
     tag: "Inschrijving opent binnenkort",
     img: "/redesign/assets/event-9d-breathwork.jpg",
+    imgPos: "center 25%",
     imgAlt: "Deelnemer ligt met koptelefoon en oogmasker op tijdens een 9D Breathwork Journey van Breath Reset",
-    text: "Je traint je spieren, maar train je ook je zenuwstelsel? Tijdens deze ademervaring van Breath Reset lig je met een koptelefoon op en word je meegenomen door bewuste ademhaling, soundscapes, binaural beats en coaching. Gericht op stress release, herstel en mentale helderheid. Introductieprijs 35 euro, maximaal 20 plekken.",
-    slideText: "Ademervaring met soundscapes en binaural beats. Introductieprijs 35 euro, max 20 plekken.",
+    text: "Een krachtige ademervaring gericht op:\n• stress release\n• herstel en ontspanning\n• mentale helderheid\n• regulatie van je zenuwstelsel\nIntroductieprijs 35 euro, maximaal 20 plekken.",
+    slideText: "Een krachtige ademervaring: stress release, herstel en mentale helderheid. Introductieprijs 35 euro, max 20 plekken.",
     place: "CrossFit Alkmaar",
   },
   {
