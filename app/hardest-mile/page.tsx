@@ -77,6 +77,7 @@ export default function HardestMilePage() {
           <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>De zwaarste mijl van Alkmaar</h2>
           <p>Op zondag 13 september om 12:30 organiseert CrossFit Alkmaar The Hardest Mile op de atletiekbaan van Atletiekvereniging Hylas. Het concept is simpel, de uitvoering niet: je legt één mijl af, verdeeld over vier rondes van 400 meter. Elke ronde doe je op een andere manier vooruit.</p>
           <p>Een ronde burpees, een ronde lunges, een ronde bearcrawl en tot slot een ronde hardlopen. Geen ingewikkelde techniek, geen zware gewichten: gewoon jij, de baan en de klok.</p>
+          <p>Liever niet alleen? Doe mee met een buddy. Jullie leggen samen de mijl af en verdelen het werk: je werkt om de beurt, bijvoorbeeld afwisselend door de lunges heen, tot jullie samen de volle 4x 400 meter gedaan hebben. Eén van jullie schrijft zich in en betaalt, dat is meteen het startbewijs voor jullie duo.</p>
           <p>En je gaat niet naar huis met alleen verzuurde benen. We klokken je officiële eindtijd en na je finish ga je op de foto met je eindtijd op het scherm in beeld. Bewijs voor je Instagram, en de lat voor de volgende editie.</p>
           <p>Iedereen kan meedoen, ook als je geen lid bent van CrossFit Alkmaar. Je bepaalt zelf je tempo, dus elk niveau is welkom. Opgeven doe je hieronder, betalen gaat direct online via iDEAL.</p>
         </div>
@@ -112,11 +113,11 @@ export default function HardestMilePage() {
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-              <div><h3>Kosten</h3><p>CFA-leden: € 10,-<br />Niet-leden: € 30,-<br />Je betaalt direct online via iDEAL.</p></div>
+              <div><h3>Kosten</h3><p>CFA-leden: € 10,-<br />Niet-leden: € 30,-<br />Je betaalt direct online via iDEAL. Doe je mee als buddy-duo? Dan schrijft één van jullie zich in en betaal je maar één keer.</p></div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-              <div><h3>Voor wie</h3><p>Alle niveaus.<br />Iedereen welkom, ook niet-leden.<br />Je loopt in je eigen tempo.</p></div>
+              <div><h3>Voor wie</h3><p>Alle niveaus.<br />Iedereen welkom, ook niet-leden.<br />Solo of met een buddy.<br />Je loopt in je eigen tempo.</p></div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="13" r="8" /><path d="M12 9v4l2.5 2.5" /><path d="M9 2h6" /></svg>
@@ -167,6 +168,7 @@ export default function HardestMilePage() {
             <details><summary>Moet ik lid zijn van CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Nee, iedereen kan meedoen. Ook niet-leden zijn van harte welkom.</div></details>
             <details><summary>Wat kost deelname?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-. Je rekent direct online af via iDEAL.</div></details>
             <details><summary>Hoe weet het systeem dat ik lid ben?<span className="ic"><Plus /></span></summary><div className="body">We herkennen je op je e-mailadres. Gebruik bij het inschrijven het e-mailadres dat bij ons bekend is, dan rekent het systeem automatisch het ledentarief.</div></details>
+            <details><summary>Kan ik meedoen met een buddy?<span className="ic"><Plus /></span></summary><div className="body">Ja. Je legt dan samen met je buddy één mijl af en verdeelt het werk: je werkt om de beurt, bijvoorbeeld afwisselend door de lunges heen, tot jullie samen de 4x 400 meter vol hebben. Eén van jullie schrijft zich in en betaalt, dat is het startbewijs voor jullie duo.</div></details>
             <details><summary>Is dit ook iets voor beginners?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Je bepaalt zelf je tempo en de bewegingen zijn voor elk niveau te doen. De sfeer en de groep slepen je erdoorheen.</div></details>
             <details><summary>Krijg ik mijn eindtijd te zien?<span className="ic"><Plus /></span></summary><div className="body">Ja. We klokken je officiële eindtijd en na je finish ga je op de foto met je eindtijd op het scherm in beeld. Alle tijden komen bovendien in het leaderboard, dus je hebt meteen een doel voor de volgende editie.</div></details>
             <details><summary>Is er nog iets na afloop?<span className="ic"><Plus /></span></summary><div className="body">Zeker. Na de laatste finisher borrelen we samen na op de baan, bekijken we het leaderboard en delen we de finishfoto&apos;s. Reken dus niet op een snelle sprint naar huis.</div></details>
