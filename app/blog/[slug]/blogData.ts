@@ -834,11 +834,28 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "grootste-fout-weer-gaan-sporten": {
     title: "De grootste fout die mensen maken als ze (weer) gaan sporten",
-    date: "2025-04-03",
+    date: "2026-08-26",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Dit is CFA",
     image: "/redesign/assets/header-kickstart.jpg",
     excerpt: "Te veel, te snel, te streng: dé valkuil als je (weer) gaat sporten. Zo pak je het slim aan met een plan dat je volhoudt, bij CrossFit Alkmaar.",
+    faq: [
+      {
+        question: "Wanneer is het beste moment om weer te beginnen met sporten?",
+        answer:
+          "Elk moment is een goed moment, maar na de zomer zien we het vaakst dat mensen weer starten: de vakantie zit erop, de agenda krijgt weer structuur en dat is een natuurlijk aanknopingspunt. Wacht niet op maandag of de eerste van de maand. Hoe langer je wacht, hoe groter de drempel wordt.",
+      },
+      {
+        question: "Wat als ik na een paar weken alweer wegval, zoals eerder?",
+        answer:
+          "Dat overkomt bijna iedereen die in z'n eentje een schema volgt. Daarom werken we bij CrossFit Alkmaar met vaste tijden en een coach die het opmerkt als je een paar keer niet bent geweest. Die structuur van buitenaf is precies wat ontbreekt als je op eigen kracht opnieuw begint.",
+      },
+      {
+        question: "Ik heb al eerder gesport en ben gestopt. Is de Kickstart dan nog wel wat voor mij?",
+        answer:
+          "Zeker. De 28-Day Kickstart is niet alleen voor complete beginners, maar voor iedereen die opnieuw een goede start wil maken. Tijdens de intake bespreken we wat je al geprobeerd hebt en waarom het eerder niet volhield, zodat we dit keer een plan maken dat wél past bij jouw leven.",
+      },
+    ],
     content: `
       <p>We zien het vaak gebeuren. Iemand besluit het roer om te gooien. Nieuwe sportschoenen, abonnement op zak, goede voornemens. En dan? Volle bak erin. Vijf keer per week trainen, streng dieet erbij, alles of niks.</p>
 
@@ -852,7 +869,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Wat wél werkt? Een plan dat bij je past. Drie keer per week. Op vaste tijden. Met begeleiding. In een omgeving waar je niet hoeft te bewijzen dat je erbij hoort - maar gewoon mag beginnen waar je bent.</p>
 
-      <p>Daarom hebben we bij CrossFit Alkmaar de 28-Day Kickstart. Geen overbelasting, geen gekke diëten. Gewoon vier weken met structuur, slimme trainingen en praktische leefstijlgewoontes die je echt kunt volhouden.</p>
+      <p>Daarom hebben we bij CrossFit Alkmaar de 28-Day Kickstart. Geen overbelasting, geen gekke diëten. Gewoon vier weken met structuur, slimme trainingen en praktische leefstijlgewoontes die je echt kunt volhouden. Dat geldt net zo goed als je uit <a href="/crossfit-heerhugowaard">Heerhugowaard</a>, <a href="/crossfit-heiloo">Heiloo</a>, <a href="/crossfit-bergen">Bergen</a> of <a href="/crossfit-langedijk">Langedijk</a> komt: een deel van onze leden rijdt een klein stukje voor die structuur en begeleiding.</p>
 
       <h2>Rustig bouwen werkt beter dan keihard instorten</h2>
 
@@ -864,7 +881,7 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <p>Wil je fitter worden? Begin dan niet met jezelf keihard afbeulen. Begin met een gesprek. Tijdens onze intake willen we eerst weten wie je bent, wat je al geprobeerd hebt en waar je naartoe wilt. Zo kunnen we zorgen dat je niet voor de tiende keer opnieuw begint - maar eindelijk iets vindt wat bij je past.</p>
 
-      <p><a href="/free-intro">Boek een gratis intake</a>, dan laten we je zien hoe trainen ook anders kan.</p>
+      <p><a href="/free-intro">Boek een gratis intake</a>, dan laten we je zien hoe trainen ook anders kan. Liever eerst vier weken gestructureerd op weg geholpen worden? Bekijk dan onze <a href="/kickstart">28-Day Kickstart</a>.</p>
     `,
   },
   "heeft-bankdrukken-invloed-op-buikvet": {
