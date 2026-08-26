@@ -129,6 +129,9 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
           <p>Op {dateLabel.toLowerCase()} organiseren we bij CrossFit Alkmaar een volledige HYROX Simulatie. Dezelfde opzet als een officiële HYROX wedstrijd: 8 rondes van 1 kilometer hardlopen, elk gevolgd door een functioneel station.</p>
           <p>Bereid je voor op je eerste HYROX, test je race-strategie of verbeter je tijd. De simulatie is de perfecte manier om te ervaren wat een HYROX-race inhoudt, zonder naar een officieel evenement te hoeven reizen.</p>
           <p>Iedereen is welkom, ook niet-leden. Je kunt individueel meedoen of als Doubles team, in de Open of Pro divisie.</p>
+          {!raceLinks && (
+            <p>We starten om 09:00 uur en werken met heats: op basis van je verwachte eindtijd en je divisie delen we alle deelnemers in starttijden in. In de week voor de start ontvang je jouw persoonlijke starttijd. Bij vorige edities was de laatste deelnemer rond 15:00 uur binnen.</p>
+          )}
         </div>
       </section>
 
@@ -165,7 +168,9 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
           <div className="info" style={{ marginTop: 34 }}>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
-              <div><h3>Datum &amp; tijd</h3><p>{dateLong}<br />Start om 10:30 uur</p></div>
+              <div><h3>Datum &amp; tijd</h3>{raceLinks
+                ? <p>{dateLong}<br />Start om 10:30 uur</p>
+                : <p>{dateLong}<br />Eerste heat om 09:00 uur<br />Laatste finishers rond 15:00 uur</p>}</div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>
@@ -220,7 +225,8 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
             <details><summary>Kan ik als Doubles meedoen?<span className="ic"><Plus /></span></summary><div className="body">Ja, je kunt je inschrijven als individual of als Doubles team. Beide formats worden aangeboden.</div></details>
             <details><summary>Moet ik lid zijn van CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Nee, de HYROX Simulatie is open voor iedereen. Ook niet-leden zijn welkom om mee te doen.</div></details>
             <details><summary>Wat kost de HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 35,-.</div></details>
-            <details><summary>Hoe lang duurt een HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Het evenement duurt van 09:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</div></details>
+            <details><summary>Hoe laat start ik?<span className="ic"><Plus /></span></summary><div className="body">De eerste heat start om 09:00 uur. Alle deelnemers worden op basis van hun verwachte eindtijd en divisie in heats ingedeeld. In de week voor de start ontvang je bericht met jouw persoonlijke starttijd.</div></details>
+            <details><summary>Hoe lang duurt een HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">De eerste heat start om 09:00 uur en bij vorige edities was het evenement rond 15:00 uur afgelopen. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</div></details>
             <details><summary>Welke divisies worden aangeboden?<span className="ic"><Plus /></span></summary><div className="body">We bieden de Open en Pro divisie aan. Je kunt individueel meedoen of als Doubles team.</div></details>
           </div>
         </div>

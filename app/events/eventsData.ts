@@ -143,9 +143,9 @@ export const EVENTS: CfaEvent[] = [
     tag: "Inschrijving open",
     img: "/redesign/assets/event-hyrox-simulatie.jpg",
     imgAlt: "Atleet duwt een sled tijdens een HYROX workout bij CrossFit Alkmaar",
-    text: "De tweede HYROX Simulatie van het jaar. Test je racetijd, pak je revanche of proef voor het eerst hoe een echte HYROX voelt.",
+    text: "De tweede HYROX Simulatie van het jaar. Test je racetijd, pak je revanche of proef voor het eerst hoe een echte HYROX voelt. Starttijden in heats, jouw starttijd hoor je in de week voor de start.",
     slideText: "De tweede HYROX Simulatie van het jaar. Test je racetijd.",
-    time: "10:30 start",
+    time: "09:00 eerste start",
     place: "CrossFit Alkmaar",
   },
   {
