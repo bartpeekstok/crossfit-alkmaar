@@ -173,7 +173,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-              <div><h3>Kosten</h3><p>CFA-leden: € 10,-<br />Niet-leden: € 30,-</p></div>
+              <div><h3>Kosten</h3><p>CFA-leden: € 10,-<br />Niet-leden: € 35,-</p></div>
             </div>
             <div className="card">
               <svg className="ic" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
@@ -219,7 +219,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
             <details><summary>Moet ik al ervaring hebben met HYROX?<span className="ic"><Plus /></span></summary><div className="body">Nee, de simulatie is geschikt voor zowel beginners als ervaren HYROX-atleten. Onze coaches begeleiden je bij elk station.</div></details>
             <details><summary>Kan ik als Doubles meedoen?<span className="ic"><Plus /></span></summary><div className="body">Ja, je kunt je inschrijven als individual of als Doubles team. Beide formats worden aangeboden.</div></details>
             <details><summary>Moet ik lid zijn van CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">Nee, de HYROX Simulatie is open voor iedereen. Ook niet-leden zijn welkom om mee te doen.</div></details>
-            <details><summary>Wat kost de HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 30,-.</div></details>
+            <details><summary>Wat kost de HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Voor leden van CrossFit Alkmaar kost deelname € 10,-. Voor niet-leden is de prijs € 35,-.</div></details>
             <details><summary>Hoe lang duurt een HYROX Simulatie?<span className="ic"><Plus /></span></summary><div className="body">Het evenement duurt van 09:00 tot 17:00 uur. Je persoonlijke racetijd hangt af van je niveau, gemiddeld tussen de 60 en 120 minuten.</div></details>
             <details><summary>Welke divisies worden aangeboden?<span className="ic"><Plus /></span></summary><div className="body">We bieden de Open en Pro divisie aan. Je kunt individueel meedoen of als Doubles team.</div></details>
           </div>

@@ -18,7 +18,7 @@ export default function HyroxSimulatie24Oct() {
         organizer: { "@type": "Organization", name: "CrossFit Alkmaar", url: "https://www.crossfitalkmaar.com" },
         offers: [
           { "@type": "Offer", name: "CFA-leden", price: "10", priceCurrency: "EUR" },
-          { "@type": "Offer", name: "Niet-leden", price: "30", priceCurrency: "EUR" },
+          { "@type": "Offer", name: "Niet-leden", price: "35", priceCurrency: "EUR" },
         ],
         image: "https://www.crossfitalkmaar.com/redesign/assets/header-hyrox.jpg",
       }) }} />
