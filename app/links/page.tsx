@@ -10,7 +10,6 @@ type LinkItem = {
   sub?: string;
   tag?: string;
   primary?: boolean;
-  external?: boolean;
 };
 
 // Volgorde = volgorde op de pagina. Events aanpassen zodra ze voorbij zijn.
@@ -41,54 +40,45 @@ export default function LinksPage() {
   const click = (label: string) => () => trackEvent("links_click", { label });
 
   return (
-    <div className="lk">
-      <header className="lk-head">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img className="lk-logo" src="/redesign/assets/cfa-logo.webp" alt="CrossFit Alkmaar" width={88} height={88} />
-        <h1>CrossFit Alkmaar</h1>
-        <p>Sporten met begeleiding, voor iedereen. Kies hieronder waar je heen wilt.</p>
-      </header>
+    <>
+      <section className="sec sec--ivoor lk-sec">
+        <div className="wrap">
+          <div className="center lk-head">
+            <p className="eyebrow center-eb">CrossFit Alkmaar</p>
+            <h1 className="sec-title">Waar wil je heen?</h1>
+            <p className="sec-sub">Sporten met begeleiding, voor iedereen. Kies hieronder waar je heen wilt.</p>
+          </div>
+          <nav className="lk-list" aria-label="Links">
+            {LINKS.map((l) => (
+              <a key={l.href} href={l.href} className={`lk-item${l.primary ? " lk-item--primary" : ""}`} onClick={click(l.title)}>
+                <span className="lk-text">
+                  <span className="lk-title">{l.title}</span>
+                  {l.sub && <span className="lk-sub">{l.sub}</span>}
+                </span>
+                {l.tag && <span className="lk-tag">{l.tag}</span>}
+                <svg className="lk-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <path d="M9 6l6 6-6 6" />
+                </svg>
+              </a>
+            ))}
+          </nav>
 
-      <nav className="lk-list" aria-label="Links">
-        {LINKS.map((l) => (
-          <a
-            key={l.href}
-            href={l.href}
-            className={`lk-item${l.primary ? " lk-item--primary" : ""}`}
-            onClick={click(l.title)}
-            target={l.external ? "_blank" : undefined}
-            rel={l.external ? "noopener noreferrer" : undefined}
-          >
-            <span className="lk-text">
-              <span className="lk-title">{l.title}</span>
-              {l.sub && <span className="lk-sub">{l.sub}</span>}
-            </span>
-            {l.tag && <span className="lk-tag">{l.tag}</span>}
-            <svg className="lk-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-              <path d="M9 6l6 6-6 6" />
-            </svg>
-          </a>
-        ))}
-      </nav>
-
-      <div className="lk-social">
-        {SOCIALS.map((s) => (
-          <a
-            key={s.label}
-            href={s.href}
-            aria-label={s.label}
-            onClick={click(s.label)}
-            target={s.href.startsWith("http") ? "_blank" : undefined}
-            rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
-          >
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{s.icon}</svg>
-          </a>
-        ))}
-      </div>
-
-      <footer className="lk-foot">
-        <a href="/">www.crossfitalkmaar.com</a>
-      </footer>
-    </div>
+          <div className="lk-social">
+            {SOCIALS.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
+                onClick={click(s.label)}
+                target={s.href.startsWith("http") ? "_blank" : undefined}
+                rel={s.href.startsWith("http") ? "noopener noreferrer" : undefined}
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">{s.icon}</svg>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

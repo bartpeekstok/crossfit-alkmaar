@@ -3,8 +3,7 @@
 import { usePathname } from "next/navigation";
 import { ReactNode } from "react";
 
-// /links = link-in-bio (Linktree-vervanger): geen header/footer/popups.
-const HIDDEN_PREFIXES = ["/start", "/hyrox-betaald", "/hardest-mile-betaald", "/links"];
+const HIDDEN_PREFIXES = ["/start", "/hyrox-betaald", "/hardest-mile-betaald"];
 
 // Paden die de nieuwe redesign-2026 layout gebruiken (Header/Footer/LeadModal
 // uit components/redesign). De OUDE Header/Footer/popups worden hier verborgen.
@@ -73,8 +72,16 @@ export const REDESIGNED_PATHS = [
 // Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)
 export const REDESIGNED_PREFIXES = ["/blog/"];
 
+// De laatste pagina's die nog de OUDE Header/Footer gebruiken. Al het andere
+// (incl. onbekende paden -> 404) krijgt de nieuwe chrome, zodat een nieuwe
+// pagina niet per ongeluk in de oude look valt.
+export const LEGACY_CHROME_PATHS = ["/de", "/de/kickstart", "/en/kickstart", "/bedankt", "/hyrox-pft-alkmaar", "/programmas"];
+
 export function isRedesignedPath(pathname: string): boolean {
-  return REDESIGNED_PATHS.includes(pathname) || REDESIGNED_PREFIXES.some((p) => pathname.startsWith(p));
+  if (REDESIGNED_PATHS.includes(pathname) || REDESIGNED_PREFIXES.some((p) => pathname.startsWith(p))) return true;
+  if (LEGACY_CHROME_PATHS.includes(pathname)) return false;
+  if (HIDDEN_PREFIXES.some((p) => pathname === p || pathname.startsWith(p + "/"))) return false;
+  return true;
 }
 
 export default function ConditionalChrome({ children }: { children: ReactNode }) {
