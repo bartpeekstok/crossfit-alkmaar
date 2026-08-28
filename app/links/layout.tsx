@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "CrossFit Alkmaar",
     locale: "nl_NL",
     type: "website",
-    images: [{ url: "https://www.crossfitalkmaar.com/redesign/assets/photo-community.webp", width: 1600, height: 1067 }],
+    images: [{ url: "https://www.crossfitalkmaar.com/redesign/assets/photo-community.webp" }],
   },
 };
 

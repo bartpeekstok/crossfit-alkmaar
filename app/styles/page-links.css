@@ -19,3 +19,5 @@
 .lk-social a { width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: #fff; color: var(--cfa-blue); box-shadow: var(--sh-2); transition: transform .12s, background .15s; }
 .lk-social a:hover { transform: translateY(-2px); background: var(--blue-50); }
 .lk-social svg { width: 22px; height: 22px; }
+.lk-social { flex-wrap: wrap; }
+.lk-social a.lk-social--wide { width: auto; border-radius: 999px; padding: 0 18px 0 14px; gap: 8px; display: inline-flex; align-items: center; font-family: var(--font-head); font-weight: 700; font-size: 14px; letter-spacing: .05em; text-transform: uppercase; text-decoration: none; }
