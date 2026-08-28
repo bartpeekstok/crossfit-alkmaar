@@ -18,7 +18,6 @@ const LINKS: LinkItem[] = [
   { href: "/kickstart", title: "28 Day Kickstart", sub: "Vier weken begeleid starten" },
   { href: "/hyrox-simulatie-24-oktober", title: "HYROX Simulatie 24 oktober", sub: "Test je racetijd", tag: "Inschrijving open" },
   { href: "/hardest-mile", title: "The Hardest Mile", sub: "Zondag 13 september, AV Hylas", tag: "Inschrijving open" },
-  { href: "/hyrox-prep", title: "HYROX Prep: 8 weken naar Utrecht", sub: "Start 4 oktober, max 16 plekken", tag: "Wachtlijst" },
   { href: "/onze-leden", title: "Onze leden aan het woord", sub: "Ervaringen en video's" },
   { href: "/events", title: "Alle events", sub: "Wat er de komende maanden op de planning staat" },
   { href: "/blog", title: "Blog", sub: "Tips over trainen, voeding en herstel" },
