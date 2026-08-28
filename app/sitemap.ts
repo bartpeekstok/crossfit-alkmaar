@@ -312,12 +312,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/hyrox-prep`,
-      lastModified: new Date("2026-08-03"),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${baseUrl}/events`,
       lastModified: new Date("2026-06-12"),
       changeFrequency: "weekly",

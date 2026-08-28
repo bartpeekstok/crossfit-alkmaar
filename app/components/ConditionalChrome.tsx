@@ -65,9 +65,6 @@ export const REDESIGNED_PATHS = [
   // Verborgen pagina's voor Kickstart-deelnemers (alleen via link, noindex)
   "/kickstart-welkom",
   "/kickstart-vervolg",
-  // HYROX Prep (nog niet live: noindex, niet in sitemap)
-  "/hyrox-prep",
-  "/hyrox-prep-alkmaar",
 ];
 
 // Prefix-paden die ook onder de nieuwe redesign vallen (bv. blog-detail pagina's)
