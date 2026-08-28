@@ -19,8 +19,6 @@ const LINKS: LinkItem[] = [
   { href: "/hyrox-simulatie-24-oktober", title: "HYROX Simulatie 24 oktober", sub: "Test je racetijd", tag: "Inschrijving open" },
   { href: "/hardest-mile", title: "The Hardest Mile", sub: "Zondag 13 september, AV Hylas", tag: "Inschrijving open" },
   { href: "/onze-leden", title: "Onze leden aan het woord", sub: "Ervaringen en video's" },
-  { href: "/events", title: "Alle events", sub: "Wat er de komende maanden op de planning staat" },
-  { href: "/blog", title: "Blog", sub: "Tips over trainen, voeding en herstel" },
 ];
 
 const SOCIALS = [
@@ -44,7 +42,10 @@ export default function LinksPage() {
       <section className="sec sec--ivoor lk-sec">
         <div className="wrap">
           <div className="center lk-head">
-            <p className="eyebrow center-eb">CrossFit Alkmaar</p>
+            <a href="/" className="lk-logo" aria-label="Naar de homepage van CrossFit Alkmaar">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/redesign/assets/cfa-logo.webp" alt="CrossFit Alkmaar" width={96} height={96} />
+            </a>
             <h1 className="sec-title">Waar wil je heen?</h1>          </div>
           <nav className="lk-list" aria-label="Links">
             {LINKS.map((l) => (

@@ -1,7 +1,9 @@
 /* /links (link-in-bio, vervangt Linktree) */
 .lk-sec { padding-top: clamp(40px, 6vw, 72px); }
 .lk-head { max-width: 640px; margin: 0 auto 32px; }
-.lk-head .sec-title { margin-top: 14px; }
+.lk-head .sec-title { margin-top: 18px; }
+.lk-logo { display: inline-block; }
+.lk-logo img { width: 96px; height: 96px; object-fit: contain; margin: 0 auto; }
 
 .lk-list { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; }
 .lk-item { display: flex; align-items: center; gap: 12px; background: #fff; color: var(--cfa-ink); border-radius: var(--r-lg); padding: 18px 18px 18px 22px; text-decoration: none; box-shadow: var(--sh-2); transition: transform .12s, box-shadow .15s; }
