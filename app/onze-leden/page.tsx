@@ -75,7 +75,7 @@ export default function OnzeLedenPage() {
         <div className="wrap">
           <div className="center">
             <h2 className="sec-title">Bekijk de verhalen</h2>
-            <p className="sec-sub">Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen reden om te trainen. Dit zijn hun verhalen.</p>
+            <p className="sec-sub">Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen doelen, uitdagingen en niveau. Dit zijn hun verhalen.</p>
           </div>
           <div className="vwall">
             {VIDEOS.map((v, i) => (
