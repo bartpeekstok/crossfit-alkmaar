@@ -14,7 +14,7 @@ const VIDEOS = [
   { id: "0-XtIea19I0", nm: "Bert", q: "'Ik had niet verwacht dat ik het zó leuk zou vinden'" },
   { id: "BkYbL7jvYjY", nm: "Paula", q: "'Die zware boodschappentassen? Dat gaat nu gewoon een stuk beter!'" },
   { id: "1qhbmRPtysU", nm: "Jarrald", q: "'Lang sponsor geweest van sportscholen, nu 20 kilo afgevallen'" },
-  { id: "Gz-0oIRB5hs", nm: "Coach Ingmar", q: "Inside the Box: een kijkje in de gym met coach Ingmar" },
+  { id: "Gz-0oIRB5hs", nm: "Coach Ingmar", q: "'Iedereen heeft zijn eigen doelen, uitdagingen en niveau'" },
   { id: "xLOHro8eJZM", nm: "Maarten", q: "'CFA is voor mij een veilige haven'" },
   { id: "7_p0gpFtEvk", nm: "Lisette", q: "'Ik voel me sindsdien een stuk fitter!'" },
   { id: "fI6KBasjzaA", nm: "Simon", q: "'Je ziet mensen bij iedere workout fitter en sterker worden'" },
@@ -75,7 +75,7 @@ export default function OnzeLedenPage() {
         <div className="wrap">
           <div className="center">
             <h2 className="sec-title">Bekijk de verhalen</h2>
-            <p className="sec-sub">Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen doelen, uitdagingen en niveau. Dit zijn hun verhalen.</p>
+            <p className="sec-sub">Van beginners tot gevorderden, van jong tot oud. Iedereen heeft zijn eigen reden om te trainen. Dit zijn hun verhalen.</p>
           </div>
           <div className="vwall">
             {VIDEOS.map((v, i) => (
