@@ -35,7 +35,7 @@ export default function HyroxAlkmaarPage() {
         { "@type": "Question", name: "Wat is HYROX?", acceptedAnswer: { "@type": "Answer", text: "HYROX is een fitness race waarbij je 8 rondes van 1 kilometer hardlopen afwisselt met 8 functionele workoutstations. Het is geschikt voor alle niveaus en je kunt solo of als duo (Doubles) meedoen." } },
         { "@type": "Question", name: "Is CrossFit Alkmaar een officiële HYROX gym?", acceptedAnswer: { "@type": "Answer", text: "Ja, CrossFit Alkmaar is een officiële HYROX gym met alle benodigde apparatuur, specifieke HYROX-lessen en ervaren coaches." } },
         { "@type": "Question", name: "Kan ik bij CrossFit Alkmaar trainen voor HYROX als beginner?", acceptedAnswer: { "@type": "Answer", text: "Absoluut. Onze HYROX-trainingen zijn geschikt voor alle niveaus. Start met de Kickstart en bouw in je eigen tempo op naar je eerste HYROX race." } },
-        { "@type": "Question", name: "Welke HYROX events organiseert CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "We organiseren regelmatig HYROX Physical Fitness Tests (PFT) en HYROX Simulaties. De eerstvolgende Simulaties zijn op 22 augustus en 24 oktober 2026." } },
+        { "@type": "Question", name: "Welke HYROX events organiseert CrossFit Alkmaar?", acceptedAnswer: { "@type": "Answer", text: "We organiseren regelmatig HYROX Physical Fitness Tests (PFT) en HYROX Simulaties. De eerstvolgende Simulatie is op 24 oktober 2026." } },
       ] }) }} />
 
       <section className="page-hero">
@@ -63,8 +63,7 @@ export default function HyroxAlkmaarPage() {
         <div className="wrap">
           <div className="center"><h2 className="sec-title">Aankomende HYROX events</h2></div>
           <div className="pp-grid" style={{ marginTop: 34 }}>
-            <div className="pp-item"><h3><Check />Simulatie: za 22 augustus</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-alkmaar">Meer info en inschrijven →</Link></p></div>
-            <div className="pp-item"><h3><Check />Simulatie: za 24 oktober</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-24-oktober">Meer info en inschrijven →</Link></p></div>
+            <div className="pp-item"><h3><Check />Simulatie: za 24 oktober</h3><p>Volledige HYROX race: 8x 1 km run + 8 stations. Voor beginners én ervaren atleten. <Link href="/hyrox-simulatie-alkmaar">Meer info en inschrijven →</Link></p></div>
             <div className="pp-item"><h3><Check />HYROX PFT</h3><p>De officiële Physical Fitness Test: meet waar je staat en volg je progressie richting racedag. <Link href="/hyrox-pft-alkmaar">Meer over de PFT →</Link></p></div>
             <div className="pp-item"><h3><Check />Alle events</h3><p>Van simulaties tot community-events: bekijk de volledige agenda. <Link href="/events">Naar de eventkalender →</Link></p></div>
           </div>
@@ -113,7 +112,7 @@ export default function HyroxAlkmaarPage() {
             <details open><summary>Wat is HYROX?<span className="ic"><Plus /></span></summary><div className="body">HYROX is een fitness race waarbij je 8 rondes van 1 kilometer hardlopen afwisselt met 8 functionele workoutstations. Het is geschikt voor alle niveaus en je kunt solo of als duo (Doubles) meedoen.</div></details>
             <details><summary>Is CrossFit Alkmaar een officiële HYROX gym?<span className="ic"><Plus /></span></summary><div className="body">Ja, CrossFit Alkmaar is een officiële HYROX gym met alle benodigde apparatuur, specifieke HYROX-lessen en ervaren coaches.</div></details>
             <details><summary>Kan ik als beginner trainen voor HYROX?<span className="ic"><Plus /></span></summary><div className="body">Absoluut. Start met de <Link href="/kickstart">Kickstart</Link> en bouw in je eigen tempo op naar je eerste HYROX race.</div></details>
-            <details><summary>Welke HYROX events organiseert CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">We organiseren regelmatig HYROX Physical Fitness Tests en Simulaties. De eerstvolgende Simulaties zijn op 22 augustus en 24 oktober 2026.</div></details>
+            <details><summary>Welke HYROX events organiseert CrossFit Alkmaar?<span className="ic"><Plus /></span></summary><div className="body">We organiseren regelmatig HYROX Physical Fitness Tests en Simulaties. De eerstvolgende Simulatie is op 24 oktober 2026.</div></details>
           </div>
         </div>
       </section>

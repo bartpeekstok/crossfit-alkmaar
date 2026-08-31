@@ -26,7 +26,7 @@ export default function HyroxHeerhugowaardPage() {
         { title: "Alle 8 stations", body: "Sleds, SkiErg, roeiers, sandbags, wall balls, farmers carry en lunges: alles op wedstrijdgewicht en -afstand." },
         { title: "Coaches met race-ervaring", body: "Trainers die zelf HYROX hebben gelopen en je voorbereiden op precies wat er op racedag komt." },
         { title: "HYROX-lessen op het rooster", body: "Wekelijkse HYROX-groepslessen naast CrossFit en Strength. Combineer wat bij jouw doel past." },
-        { title: "Eigen simulatie-events", body: "Test je racevorm bij onze HYROX Simulaties op 22 augustus en 24 oktober, inclusief tijdwaarneming." },
+        { title: "Eigen simulatie-events", body: "Test je racevorm bij onze HYROX Simulatie op 24 oktober, inclusief tijdwaarneming." },
       ]}
       voorwieTitle="Zo begin je"
       voorwieContent={
@@ -48,7 +48,7 @@ export default function HyroxHeerhugowaardPage() {
       faqItems={[
         { q: "Hoe ver is de gym vanaf Heerhugowaard?", aText: "Ongeveer 10 minuten met de auto naar de Phoenixstraat 33 in Alkmaar. Parkeren is gratis.", a: "Ongeveer 10 minuten met de auto naar de Phoenixstraat 33 in Alkmaar. Parkeren is gratis." },
         { q: "Hebben jullie alle HYROX-apparatuur?", aText: "Ja. Sleds, SkiErgs, roeiers, sandbags, wall balls en voldoende ruimte om alle wedstrijdonderdelen te trainen.", a: <>Ja. Sleds, SkiErgs, roeiers, sandbags, wall balls en voldoende ruimte om alle wedstrijdonderdelen te trainen. Bekijk de <Link href="/hyrox-gym-alkmaar">HYROX gym</Link>.</> },
-        { q: "Organiseren jullie ook HYROX-events?", aText: "Ja, we organiseren HYROX Simulaties en Physical Fitness Tests. De eerstvolgende Simulaties zijn op 22 augustus en 24 oktober.", a: <>Ja, we organiseren <Link href="/hyrox-simulatie-alkmaar">HYROX Simulaties</Link> en <Link href="/hyrox-pft-alkmaar">Physical Fitness Tests</Link>. De eerstvolgende Simulaties zijn op 22 augustus en 24 oktober.</> },
+        { q: "Organiseren jullie ook HYROX-events?", aText: "Ja, we organiseren HYROX Simulaties en Physical Fitness Tests. De eerstvolgende Simulatie is op 24 oktober.", a: <>Ja, we organiseren <Link href="/hyrox-simulatie-alkmaar">HYROX Simulaties</Link> en <Link href="/hyrox-pft-alkmaar">Physical Fitness Tests</Link>. De eerstvolgende Simulatie is op 24 oktober.</> },
         { q: "Trainen er meer mensen uit Heerhugowaard?", aText: "Ja, een flink deel van onze leden komt uit Heerhugowaard en Langedijk. Je traint dus met bekenden uit de buurt.", a: "Ja, een flink deel van onze leden komt uit Heerhugowaard en Langedijk. Je traint dus met bekenden uit de buurt." },
       ]}
       ctaTitle="Klaar voor je eerste HYROX?"

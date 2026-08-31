@@ -67,19 +67,6 @@ export const EVENTS: CfaEvent[] = [
     place: "CrossFit Alkmaar",
   },
   {
-    href: "/hyrox-simulatie-alkmaar",
-    title: "HYROX Simulatie",
-    dateLabel: "Zaterdag 22 augustus 2026",
-    isoDate: "2026-08-22",
-    tag: "Sluit 18 augustus",
-    img: "/redesign/assets/header-hyrox.jpg",
-    imgAlt: "Atleten tijdens een HYROX workout bij CrossFit Alkmaar",
-    text: "Een volledige HYROX race in onze eigen box: 8 rondes hardlopen afgewisseld met 8 stations. Open en Pro divisie, solo of met een buddy.",
-    slideText: "Volledige HYROX race in onze box. Open en Pro, solo of duo.",
-    time: "10:30 start",
-    place: "CrossFit Alkmaar",
-  },
-  {
     href: "https://cfalkmaar.sportbitapp.nl/web/nl/events/72325",
     external: true,
     ctaLabel: "Schrijf je in",
@@ -137,7 +124,7 @@ export const EVENTS: CfaEvent[] = [
     place: "In de lounge",
   },
   {
-    href: "/hyrox-simulatie-24-oktober",
+    href: "/hyrox-simulatie-alkmaar",
     title: "HYROX Simulatie",
     dateLabel: "Zaterdag 24 oktober 2026",
     isoDate: "2026-10-24",

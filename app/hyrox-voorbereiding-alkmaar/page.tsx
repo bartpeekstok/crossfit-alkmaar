@@ -32,7 +32,7 @@ export default function HyroxVoorbereidingAlkmaarPage() {
         <>
           <p>Of je nu je eerste HYROX doet of al meerdere races hebt gelopen - onze coaches stemmen de voorbereiding af op jouw niveau en doel. Van finishen tot podium.</p>
           <p>Nog nooit aan CrossFit gedaan? Geen probleem. Start met de <Link href="/kickstart">Kickstart</Link> en bouw de basis op die je nodig hebt voor zowel CrossFit als HYROX.</p>
-          <p>Test je voorbereiding op een echte HYROX: schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober">24 oktober</Link>.</p>
+          <p>Test je voorbereiding op een echte HYROX: schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 24 oktober</Link>.</p>
         </>
       }
       aeoTitle="Hoe bereid je je voor op HYROX?"

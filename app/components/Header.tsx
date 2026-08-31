@@ -142,7 +142,7 @@ export default function Header() {
               {eventsOpen && (
                 <div className="absolute top-full left-0 bg-[#1a1a2e] py-2 min-w-[250px] shadow-lg">
                   <Link href="/hyrox-simulatie-alkmaar" className="block px-4 py-2 hover:bg-[#2a2a4e] transition">
-                    HYROX Simulatie 22 augustus
+                    HYROX Simulatie 24 oktober
                   </Link>
                 </div>
               )}
@@ -234,7 +234,7 @@ export default function Header() {
                 </button>
                 {eventsOpen && (
                   <div className="pl-4 flex flex-col space-y-2">
-                    <Link href="/hyrox-simulatie-alkmaar" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">HYROX Simulatie 22 augustus</Link>
+                    <Link href="/hyrox-simulatie-alkmaar" onClick={closeMobileMenu} className="px-4 py-2 hover:bg-[#2a2a4e]">HYROX Simulatie 24 oktober</Link>
                   </div>
                 )}
               </>

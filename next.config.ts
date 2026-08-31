@@ -73,6 +73,8 @@ const nextConfig: NextConfig = {
       // HYROX Prep-programma geschrapt (aug 2026); oude links naar de HYROX-overzichtspagina
       { source: "/hyrox-prep", destination: "/hyrox-alkmaar", permanent: true },
       { source: "/hyrox-prep-alkmaar", destination: "/hyrox-alkmaar", permanent: true },
+      // Editiepagina samengevoegd met de evergreen simulatiepagina (SEO: één URL voor 'hyrox simulatie')
+      { source: "/hyrox-simulatie-24-oktober", destination: "/hyrox-simulatie-alkmaar", permanent: true },
       // Oude blogs die niet zijn teruggezet, naar de best passende opvolger
       {
         source: "/blog/hyrox-voor-beginners",

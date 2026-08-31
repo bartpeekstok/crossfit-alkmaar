@@ -24,7 +24,6 @@ export const REDESIGNED_PATHS = [
   "/vacatures",
   "/privacy",
   "/hyrox-simulatie-alkmaar",
-  "/hyrox-simulatie-24-oktober",
   "/hardest-mile",
   "/hyrox-alkmaar",
   "/events",

@@ -32,7 +32,7 @@ export default function HyroxTrainingPage() {
           <p>Of je nu voor je eerste HYROX traint of je PR wilt verbeteren - onze training bereidt je voor. Je bouwt kracht, conditie en techniek op in een omgeving die je pusht.</p>
           <p>Nieuwe leden starten met de <Link href="/kickstart">Kickstart</Link> om de basis-bewegingen te leren. Daarna sluit je aan bij de <Link href="/groepslessen">groepslessen</Link> waar je 10 tot 15 keer per maand kunt trainen.</p>
           <p>Wil je nog gerichter trainen? Bekijk onze <Link href="/personal-training">personal training</Link> of <Link href="/small-group-training">BUILD small group training</Link> voor extra focus op je HYROX doelen.</p>
-          <p>Een keer een echte HYROX proeven? Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober">24 oktober</Link>.</p>
+          <p>Een keer een echte HYROX proeven? Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 24 oktober</Link>.</p>
         </>
       }
       aeoTitle="Hoe train je voor HYROX?"
