@@ -4,6 +4,10 @@ export const metadata: Metadata = {
   title: "28 Day Kickstart - Starte mit Training in Alkmaar",
   description:
     "Starte deine Fitnessreise mit unserem 28 Day Kickstart in Alkmaar. In 4 Wochen baust du eine starke Basis auf mit begleitetem Training und Ernährungsberatung. Kostenloses Probetraining!",
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "28 Day Kickstart | Starte deine Transformation",
     description:

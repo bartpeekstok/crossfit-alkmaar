@@ -5,6 +5,10 @@ export const metadata: Metadata = {
   description:
     "Fitnessstudio in Alkmaar für Krafttraining, Fitness und Abnehmen. Kleingruppentraining mit persönlicher Betreuung. Für alle Niveaus, auch 50+. Buche dein kostenloses Probetraining!",
   keywords: ["Fitnessstudio Alkmaar", "Krafttraining Alkmaar", "CrossFit Alkmaar", "Personal Training Alkmaar", "Fitness Alkmaar"],
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     title: "CrossFit Alkmaar | Fitnessstudio & Krafttraining",
     description:
