@@ -16,7 +16,7 @@ type LinkItem = {
 const LINKS: LinkItem[] = [
   { href: "/free-intro", title: "Gratis intake plannen", sub: "Kennismaken met een coach, zonder verplichtingen", primary: true },
   { href: "/kickstart", title: "28 Day Kickstart", sub: "Vier weken begeleid starten" },
-  { href: "/hyrox-simulatie-24-oktober", title: "HYROX Simulatie 24 oktober", sub: "Test je racetijd", tag: "Inschrijving open" },
+  { href: "/hyrox-simulatie-alkmaar", title: "HYROX Simulatie 24 oktober", sub: "Test je racetijd", tag: "Inschrijving open" },
   { href: "/hardest-mile", title: "The Hardest Mile", sub: "Zondag 13 september, AV Hylas", tag: "Inschrijving open" },
   { href: "/onze-leden", title: "Onze leden aan het woord", sub: "Ervaringen en video's" },
 ];

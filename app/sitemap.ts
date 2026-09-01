@@ -295,13 +295,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/hyrox-simulatie-alkmaar`,
-      lastModified: new Date("2026-03-18"),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/hyrox-simulatie-24-oktober`,
-      lastModified: new Date("2026-06-12"),
+      lastModified: new Date("2026-08-28"),
       changeFrequency: "weekly",
       priority: 0.9,
     },

@@ -33,7 +33,7 @@ export default function HyroxGymAlkmaarPage() {
           <p>Bij CrossFit Alkmaar kun je op verschillende manieren trainen voor HYROX. De dagelijkse <Link href="/groepslessen">groepslessen</Link> bouwen de basis: kracht, conditie en alle functionele bewegingen die je nodig hebt.</p>
           <p>Wil je specifiekere HYROX-voorbereiding? Combineer groepslessen met <Link href="/personal-training">personal training</Link> of gebruik de Open Gym uren om gericht aan je stations te werken.</p>
           <p>Nieuw bij CrossFit? Start met de <Link href="/kickstart">Kickstart</Link> en bouw in je eigen tempo naar je eerste HYROX toe.</p>
-          <p>Klaar om het te testen? Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 22 augustus</Link> of <Link href="/hyrox-simulatie-24-oktober">24 oktober</Link>.</p>
+          <p>Klaar om het te testen? Schrijf je in voor de <Link href="/hyrox-simulatie-alkmaar">HYROX Simulatie op 24 oktober</Link>.</p>
         </>
       }
       aeoTitle="Waar train je voor HYROX?"

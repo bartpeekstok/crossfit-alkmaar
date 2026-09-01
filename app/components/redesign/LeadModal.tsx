@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { useLeadModal } from "./LeadModalContext";
+import { trackFormSubmit } from "../../lib/analytics";
 
 const WEBHOOK =
   "https://services.leadconnectorhq.com/hooks/elOOWDMoCEHJO4WhphRj/webhook-trigger/0b254396-9523-44b0-a59c-5c79dadd41b1";
@@ -166,6 +167,11 @@ export default function LeadModal() {
     } catch {
       // swallow, redirect anyway
     }
+    // Hier meten, niet via de pending_form-omweg naar /free-intro: die keten
+    // liep dood omdat LeadModalContext.open() geen trackPopupOpen() aanroept,
+    // waardoor de meeste leads nooit een form_submit in GA4 opleverden.
+    // Bewust geen pending_form zetten -- dan zou /free-intro dubbel tellen.
+    trackFormSubmit(variant);
     setSubmitted(true);
     if (cfg.redirect) {
       setTimeout(() => {

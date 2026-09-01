@@ -256,7 +256,7 @@ export default function HyroxPftAlkmaarPage() {
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-3xl font-bold text-white mb-4">CrossFit Alkmaar is een officiële<br />HYROX gym</h2>
           <p className="text-lg text-gray-200 mb-4">Deze PFT organiseerden we in samenwerking met HYROX HQ als aftrap van ons <Link href="/hyrox-training-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX-programma</Link>.</p>
-          <p className="text-gray-300 mb-8">Op 22 augustus volgt de <Link href="/hyrox-simulatie-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX Simulatie</Link>. Wil je meedoen met de volgende editie? Plan een kennismaking.</p>
+          <p className="text-gray-300 mb-8">Op 24 oktober volgt de <Link href="/hyrox-simulatie-alkmaar" className="text-white font-semibold underline hover:text-gray-200">HYROX Simulatie</Link>. Wil je meedoen met de volgende editie? Plan een kennismaking.</p>
           <button
             type="button"
             onClick={() => { trackCTAClick("hyrox_pft_mid", "hyrox-pft-alkmaar"); openPopup(); }}

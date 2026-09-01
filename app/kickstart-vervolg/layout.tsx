@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 // deel-preview.
 const OG_IMAGE = "https://www.crossfitalkmaar.com/redesign/assets/header-groepslessen.jpg";
 const OG_DESC =
-  "Je Kickstart zit er bijna op. Ontdek hoe je verder gaat bij CrossFit Alkmaar: personal training, small group, groepslessen of voedingsadvies.";
+  "Je Kickstart zit er bijna op. Ontdek hoe je verder gaat bij CrossFit Alkmaar, plus het eenmalige aanbod: 7 maanden trainen voor de prijs van 6.";
 
 export const metadata: Metadata = {
   title: "Hoe ga je verder na je Kickstart?",

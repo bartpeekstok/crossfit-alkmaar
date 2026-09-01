@@ -28,6 +28,21 @@ export default function FAQPage() {
       ),
       items: [
         {
+          question: "Hoe doe ik mee aan de WhatsApp Community?",
+          answer: (
+            <>
+              <p className="mb-3">
+                Ga naar{" "}
+                <a href="/community" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">crossfitalkmaar.com/community</a>{" "}
+                en klik op de uitnodiging, dan zit je er meteen in.
+              </p>
+              <p className="mb-3">
+                Je komt standaard in de mededelingengroep. Daar delen we alles wat er speelt in de box: rooster, events en nieuws. Geen spam, alleen belangrijke info. Vind je meer interactie leuk? In de Community staan een paar extra groepen waar je jezelf aan kunt toevoegen.
+              </p>
+            </>
+          ),
+        },
+        {
           question: "Hoe werkt SportBit?",
           answer: (
             <>
@@ -49,7 +64,14 @@ export default function FAQPage() {
           answer: (
             <>
               <p className="mb-3">
-                Het belangrijkste nieuws delen we altijd via nieuwsbrieven via e-mail. Helaas komen deze soms in je spam terecht. Om dit te voorkomen, kun je het beste ons domein @crossfitalkmaar.com als veilig markeren in je mail programma.
+                Vanaf nu vind je alles wat er speelt in de box op één plek: onze{" "}
+                <a href="/community" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WhatsApp Community</a>. Rooster, events, nieuws en de nieuwsbrief, zonder dat je je mail hoeft door te spitten.
+              </p>
+              <p className="mb-3">
+                Je komt standaard in de mededelingengroep terecht: geen spam, alleen belangrijke info. Vind je meer interactie leuk? Dan kun je jezelf daarnaast toevoegen aan een paar andere groepen.
+              </p>
+              <p className="mb-3">
+                Het belangrijkste nieuws sturen we ook nog per e-mail. Die berichten komen helaas soms in je spam terecht. Markeer ons domein @crossfitalkmaar.com daarom als veilig in je mailprogramma.
               </p>
               <p className="mb-3">
                 Daarnaast hebben we een besloten leden groep op{" "}
@@ -443,7 +465,8 @@ export default function FAQPage() {
         <div className="wrap">
           <h2 className="sec-title" style={{ color: "#fff" }}>Staat je vraag er niet tussen?</h2>
           <p className="sec-sub" style={{ margin: "14px auto 26px" }}>
-            Neem gerust contact met ons op via WhatsApp of e-mail. We helpen je graag!
+            Neem gerust contact met ons op via WhatsApp of e-mail. We helpen je graag! Al het nieuws uit de box delen we in onze{" "}
+            <a href="/community" target="_blank" rel="noopener noreferrer" style={{ color: "var(--hold)", fontWeight: 600, textDecoration: "underline" }}>WhatsApp Community</a>.
           </p>
           <a className="btn btn--gold btn--lg" href="https://wa.me/31722340560" target="_blank" rel="noopener noreferrer">
             Chat via WhatsApp

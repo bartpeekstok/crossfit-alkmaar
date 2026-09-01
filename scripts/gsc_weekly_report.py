@@ -14,6 +14,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import urllib.error
 import urllib.parse
@@ -292,6 +293,32 @@ def totals(rows):
     return sum(r["clicks"] for r in rows), sum(r["impressions"] for r in rows)
 
 
+def openstaande_voorstellen():
+    """Nog niet gemergede seo/-branches, oudste eerst.
+
+    Het logboek reports/seo/wijzigingen.md vult zich pas bij een merge, dus een
+    voorstel dat blijft liggen is voor de agent onzichtbaar -- zo werd in week
+    33 en week 36 twee keer dezelfde link op /personal-training voorgesteld.
+    Puur git, geen gh of API-token nodig: een seo/-branch die nog niet in
+    origin/main zit is per definitie een openstaand voorstel.
+    """
+    def git(*args):
+        return subprocess.run(("git",) + args, cwd=REPO_ROOT, capture_output=True,
+                              text=True, timeout=60, check=True).stdout
+    try:
+        git("fetch", "--quiet", "origin")
+        uit = []
+        for regel in git("branch", "-r", "--no-merged", "origin/main",
+                         "--list", "origin/seo/*", "--format=%(refname:short)").split():
+            naam = regel.replace("origin/", "", 1)
+            datum = git("log", "-1", "--format=%ad", "--date=short", regel).strip()
+            onderwerp = git("log", "-1", "--format=%s", regel).strip()
+            uit.append((datum, naam, onderwerp))
+        return sorted(uit)
+    except (subprocess.SubprocessError, OSError):
+        return None
+
+
 def fmt_delta(cur, prev):
     d = cur - prev
     return f"{cur} ({'+' if d >= 0 else ''}{d} t.o.v. vorige week)"
@@ -313,8 +340,14 @@ def main():
     p_cur = sa_query({**rng(cur_start, cur_end), "dimensions": ["page"], "rowLimit": 250})
     p_prev = sa_query({**rng(prev_start, prev_end), "dimensions": ["page"], "rowLimit": 250})
 
-    c_cur, i_cur = totals(q_cur)
-    c_prev, i_prev = totals(q_prev)
+    # Totalen NOOIT uit de query-dimensie optellen: Google verbergt zoektermen
+    # met weinig volume, waardoor die som maar 45-65% van het echte aantal
+    # klikken bevat -- en dat percentage wisselt per week, dus ook het verschil
+    # met vorige week wordt ruis. De date-dimensie geeft wel het volledige
+    # totaal, hetzelfde cijfer dat GSC zelf toont en dat in history.json staat.
+    c_cur, i_cur = totals(sa_query({**rng(cur_start, cur_end), "dimensions": ["date"]}))
+    c_prev, i_prev = totals(sa_query({**rng(prev_start, prev_end), "dimensions": ["date"]}))
+    c_zichtbaar, _ = totals(q_cur)
 
     prev_by_q = {r["keys"][0]: r for r in q_prev}
     prev_by_p = {r["keys"][0]: r for r in p_prev}
@@ -367,6 +400,10 @@ def main():
     out.append(f"- **Klikken:** {fmt_delta(c_cur, c_prev)}")
     out.append(f"- **Vertoningen:** {fmt_delta(i_cur, i_prev)}")
     out.append(f"- **Geindexeerd:** {indexed} van {len(sitemap_urls)} sitemap-URL's\n")
+    pct = round(100 * c_zichtbaar / c_cur) if c_cur else 0
+    out.append(f"*De zoekwoordtabel hieronder telt op tot {c_zichtbaar} klikken ({pct}% van "
+               f"{c_cur}): Google verbergt zoektermen met te weinig volume. Pagina- en "
+               f"totaalcijfers zijn wel compleet.*\n")
 
     out.append("## Top 15 zoekwoorden\n")
     out.append("| Zoekwoord | Klikken | Vorige week | Vertoningen | Positie |")
@@ -496,6 +533,18 @@ def main():
             out.append(f"- {p}")
     if not unknown and not queued:
         out.append("- Geen actie nodig: alle sitemap-URL's zijn bekend bij Google.")
+
+    open_prs = openstaande_voorstellen()
+    if open_prs:
+        out.append("\n## Openstaande voorstellen (nog niet gemerged)\n")
+        out.append("*Deze wijzigingen wachten nog op Bart. Behandel de pagina's hieronder "
+                   "als 'net aangepast': stel er deze week niets voor, ook al staan ze niet "
+                   "in `wijzigingen.md` — dat logboek vult zich pas bij een merge.*\n")
+        for datum, naam, onderwerp in open_prs:
+            out.append(f"- `{naam}` ({datum}) — {onderwerp}")
+    elif open_prs is None:
+        out.append("\n## Openstaande voorstellen\n")
+        out.append("*Niet gecontroleerd: git kon origin niet bereiken.*")
 
     report_dir = REPO_ROOT / "reports" / "gsc"
     report_dir.mkdir(parents=True, exist_ok=True)

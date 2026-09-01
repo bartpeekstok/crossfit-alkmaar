@@ -70,9 +70,24 @@ const nextConfig: NextConfig = {
   // Paginering (/blog/page/N/, /<cat>/page/N/) en onbekende oude URLs geven bewust 404.
   async redirects() {
     return [
+      // /community: korte URL voor in WhatsApp-templates (daar mogen geen
+      // chat.whatsapp.com-links in). Tijdelijke redirect: uitnodigingslink
+      // kan wijzigen. Redirects worden niet geïndexeerd (geen noindex nodig).
+      {
+        source: "/community",
+        destination: "https://chat.whatsapp.com/Kd1n2It7l6d02lM3pOcSnx",
+        permanent: false,
+      },
+      {
+        source: "/community/",
+        destination: "https://chat.whatsapp.com/Kd1n2It7l6d02lM3pOcSnx",
+        permanent: false,
+      },
       // HYROX Prep-programma geschrapt (aug 2026); oude links naar de HYROX-overzichtspagina
       { source: "/hyrox-prep", destination: "/hyrox-alkmaar", permanent: true },
       { source: "/hyrox-prep-alkmaar", destination: "/hyrox-alkmaar", permanent: true },
+      // Editiepagina samengevoegd met de evergreen simulatiepagina (SEO: één URL voor 'hyrox simulatie')
+      { source: "/hyrox-simulatie-24-oktober", destination: "/hyrox-simulatie-alkmaar", permanent: true },
       // Oude blogs die niet zijn teruggezet, naar de best passende opvolger
       {
         source: "/blog/hyrox-voor-beginners",

@@ -1,7 +1,27 @@
 import Link from "next/link";
-import TrackedYouTubeEmbed from "../components/TrackedYouTubeEmbed";
 
-const VIDEO_ID = "FNnTn4KmCzs";
+// Eenmalig vooruitbetaalaanbod aan het einde van de Kickstart.
+// Basis: CrossFit 15 credits per maand = EUR 127,50 (zie /faq).
+const PRIJS_MAAND = "€127,50";
+const PRIJS_VOORUIT = "€765";
+const PRIJS_NORMAAL = "€892,50";
+const PRIJS_EFFECTIEF = "€109,29";
+
+const WA_BERICHT =
+  "Hoi! Ik wil graag gebruikmaken van de Kickstart-aanbieding: 7 maanden trainen voor de prijs van 6.";
+const WA_LINK = `https://wa.me/31722340560?text=${encodeURIComponent(WA_BERICHT)}`;
+
+const Plus = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="var(--cfa-blue)" strokeWidth="2.5" strokeLinecap="round">
+    <path d="M12 5v14M5 12h14" />
+  </svg>
+);
+
+const Check = () => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+    <path d="M20 6L9 17l-5-5" />
+  </svg>
+);
 
 // Simpele icoontjes voor de vervolgopties (stroke-stijl, past bij .fcard .ic).
 const IconPT = () => (
@@ -29,23 +49,35 @@ const OPTIES = [
   {
     icon: <IconPT />,
     title: "Personal Training",
-    text: "Eén-op-één begeleiding, volledig op jouw doelen afgestemd. Maximale aandacht en het snelste resultaat.",
+    text: "Eén op één met je eigen coach. Elke sessie is volledig afgestemd op jouw doel, je tempo en eventuele blessures, en je krijgt continu correctie op je techniek. Je traint niets wat voor jou niet nodig is.",
+    who: "Voor wie maximale aandacht wil en het snelste resultaat. Meestal 1 tot 2 keer per week.",
   },
   {
     icon: <IconSGT />,
     title: "Small Group Training",
-    text: "Trainen in een klein groepje met persoonlijke begeleiding. De vertrouwde Kickstart-sfeer, voortgezet.",
+    text: "Trainen in een vaste groep van maximaal zes personen, met een coach die je bij naam kent en het programma op de groep aanpast. Dit lijkt het meest op de Kickstart zoals je die nu gewend bent.",
+    who: "Voor wie de vertrouwde sfeer en persoonlijke begeleiding wil vasthouden. 2 of 3 keer per week.",
   },
   {
     icon: <IconLes />,
     title: "Groepslessen",
-    text: "Energieke trainingen in de groep onder leiding van een coach. Voor structuur, plezier en community.",
+    text: "De reguliere CrossFit-lessen, elke dag op meerdere tijden. Een coach leidt de les, je traint samen met de rest van de groep en elke dag staat er een ander programma klaar. Zelf nadenken over je training hoeft nooit meer.",
+    who: "Voor wie flexibel wil plannen en energie haalt uit de groep. Van 1 keer per week tot onbeperkt.",
   },
   {
     icon: <IconVoeding />,
     title: "Voedingsadvies",
-    text: "Haal meer uit je training met een voedingsplan dat bij jou past. De andere helft van je resultaat.",
+    text: "Je training is de helft van het verhaal. Samen met een voedingscoach kijk je naar wat je eet op een gewone week en pas je aan wat echt verschil maakt. Geen streng dieet, wel een plan dat je volhoudt.",
+    who: "Voor wie zijn resultaat wil versnellen. Los te volgen of naast elk abonnement.",
   },
+];
+
+const VOORWAARDEN = [
+  `Geldt voor het abonnement CrossFit 15 credits per maand (${PRIJS_MAAND} per maand, 15 lessen per maand)`,
+  "Je betaalt zes maanden in één keer vooruit en traint zeven maanden",
+  "Alleen te gebruiken tijdens je eindgesprek aan het einde van je Kickstart",
+  "Eenmalig aanbod, daarna vervalt het",
+  "Na die zeven maanden loopt je lidmaatschap gewoon per maand door en is het maandelijks opzegbaar",
 ];
 
 export default function KickstartVervolgPage() {
@@ -57,7 +89,20 @@ export default function KickstartVervolgPage() {
           .kv-hero .inner { max-width: 1040px; }
           .kv-hero p.lede { max-width: 780px; }
           .kv-opts { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 30px auto 0; }
+          .kv-card .who { margin-top: 12px; font-size: 14.5px; color: var(--cfa-blue); font-weight: 600; }
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
+
+          .kv-deal { max-width: 720px; margin: 34px auto 0; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--hold); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 40px); }
+          .kv-price { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; }
+          .kv-price .now { font-family: var(--font-display); font-weight: 400; font-size: clamp(52px, 8vw, 82px); line-height: .9; color: var(--hold); }
+          .kv-price .was { font-family: var(--font-body); font-size: clamp(19px, 2.4vw, 24px); color: rgba(234,237,244,.62); text-decoration: line-through; }
+          .kv-price .per { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; letter-spacing: .1em; font-size: 13px; color: rgba(234,237,244,.8); }
+          .kv-eff { font-family: var(--font-body); font-size: clamp(16px, 1.8vw, 18px); line-height: 1.55; color: rgba(234,237,244,.86); text-align: center; margin: 16px auto 0; max-width: 480px; }
+          .kv-vw { list-style: none; margin: 26px 0 0; padding: 26px 0 0; border-top: 1px solid rgba(255,255,255,.14); display: grid; gap: 12px; }
+          .kv-vw li { display: flex; gap: 12px; font-family: var(--font-body); font-size: clamp(15px, 1.6vw, 16.5px); line-height: 1.5; color: rgba(234,237,244,.9); }
+          .kv-vw li svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 3px; color: var(--hold); }
+          .kv-act { margin-top: 28px; text-align: center; }
+          .kv-act p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.55; color: rgba(234,237,244,.72); margin: 14px auto 0; max-width: 420px; }
         `}</style>
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img className="bg" src="/redesign/assets/header-groepslessen.jpg" alt="" style={{ objectPosition: "center 40%" }} />
@@ -66,35 +111,46 @@ export default function KickstartVervolgPage() {
           <h1>Hoe ga je verder?</h1>
           <p className="lede">
             Je Kickstart zit er bijna op, goed bezig! Dit is hét moment om te kiezen hoe je verder gaat, zodat
-            je je resultaten vasthoudt en blijft doorgroeien. Hieronder zie je je opties.
+            je je resultaten vasthoudt en blijft doorgroeien. Hieronder zie je je opties, plus een aanbod dat
+            alleen nu geldt.
           </p>
+          <div className="cta-row">
+            <a className="btn btn--gold btn--lg" href="#aanbod">Bekijk het aanbod</a>
+          </div>
         </div>
       </section>
 
-      {/* VIDEO */}
+      {/* WAAROM DOORGAAN */}
       <section className="sec sec--ivoor">
-        <div className="wrap">
-          <div className="center reveal">
-            <h2 className="sec-title">Bekijk dit eerst</h2>
-            <p className="sec-sub">
-              In deze video vertel ik je in het kort wat je opties zijn om verder te gaan na je Kickstart.
-              Hieronder vind je alles rustig op een rij.
-            </p>
-          </div>
-          <div
-            className="reveal"
-            style={{
-              maxWidth: 860,
-              margin: "28px auto 0",
-              aspectRatio: "16 / 9",
-              borderRadius: "var(--r-lg)",
-              overflow: "hidden",
-              boxShadow: "var(--sh-3)",
-              background: "#000",
-            }}
-          >
-            <TrackedYouTubeEmbed videoId={VIDEO_ID} title="Hoe ga je verder na je Kickstart" autoplay={false} />
-          </div>
+        <div className="wrap prose">
+          <h2 className="sec-title" style={{ textAlign: "left", marginBottom: 18 }}>Je Kickstart is klaar. En nu?</h2>
+          <p>
+            Vier weken geleden stapte je hier voor het eerst binnen. Inmiddels ken je de bewegingen, weet je
+            waar alles ligt en is trainen een vast onderdeel van je week geworden. Dat laatste is misschien wel
+            de grootste winst: je hebt een gewoonte opgebouwd. De vraag is nu vooral hoe je die vasthoudt.
+          </p>
+          <p>
+            Eerlijk is eerlijk: de conditie en kracht die je in vier weken opbouwt, verdwijnen sneller dan ze
+            erbij kwamen. Val je na je Kickstart een paar weken stil, dan sta je bij een herstart vaak weer
+            bijna op je oude punt en begin je opnieuw. Pak je meteen door, dan bouw je verder op wat er al
+            staat. Dat verschil bepaalt uiteindelijk of je over een half jaar terugkijkt op vier leuke weken of
+            op het begin van iets blijvends.
+          </p>
+          <h3>Hoe het praktisch werkt</h3>
+          <p>
+            In week 4 heb je je eindgesprek met je coach. Daarin kijken we eerst terug: hoe ging het, wat is er
+            veranderd en hoe voel je je nu vergeleken met vier weken geleden. Daarna kijken we vooruit. We
+            bespreken welke vorm van trainen past bij jouw doel, je agenda en je budget, en zetten dat meteen
+            voor je klaar. Je hoeft dus niets zelf uit te zoeken, en er zit geen pauze tussen je laatste
+            Kickstart-training en je eerste training daarna.
+          </p>
+          <h3>Wat je kunt verwachten in maand twee en drie</h3>
+          <p>
+            De bewegingen die nu nog aandacht kosten gaan vanzelf voelen, en dat is precies het moment waarop
+            de gewichten omhoog kunnen. We doen benchmarkworkouts opnieuw, zodat je zwart op wit ziet wat er
+            veranderd is in plaats van dat je het moet gokken. En rond maand drie merken de meeste mensen het
+            vooral buiten de gym: de trap, de boodschappen, en hoeveel energie er 's avonds nog over is.
+          </p>
         </div>
       </section>
 
@@ -114,8 +170,77 @@ export default function KickstartVervolgPage() {
                 <div className="ic">{o.icon}</div>
                 <h3>{o.title}</h3>
                 <p>{o.text}</p>
+                <p className="who">{o.who}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* EENMALIG AANBOD */}
+      <section className="sec sec--ink" id="aanbod">
+        <div className="wrap">
+          <div className="center reveal">
+            <p className="eyebrow center-eb">Alleen nu, eenmalig</p>
+            <h2 className="sec-title" style={{ marginTop: 12 }}>7 maanden trainen, 6 maanden betalen</h2>
+            <p className="sec-sub">
+              Omdat je je Kickstart hebt afgemaakt, mag je nu eenmalig een half jaar vooruit betalen op het
+              abonnement CrossFit 15 credits per maand. Je krijgt er dan een volle maand gratis bij.
+            </p>
+          </div>
+          <div className="kv-deal reveal">
+            <div className="kv-price">
+              <span className="was">{PRIJS_NORMAAL}</span>
+              <span className="now">{PRIJS_VOORUIT}</span>
+              <span className="per">voor 7 maanden</span>
+            </div>
+            <p className="kv-eff">
+              Dat komt neer op {PRIJS_EFFECTIEF} per maand in plaats van {PRIJS_MAAND}. Je bespaart {PRIJS_MAAND},
+              precies een maand gratis trainen.
+            </p>
+            <ul className="kv-vw">
+              {VOORWAARDEN.map((v) => (
+                <li key={v}><Check />{v}</li>
+              ))}
+            </ul>
+            <div className="kv-act">
+              <a className="btn btn--gold btn--lg" href={WA_LINK} target="_blank" rel="noopener noreferrer">
+                Regel het via WhatsApp
+              </a>
+              <p>Of zeg het gewoon tegen je coach tijdens je eindgesprek, dan zetten we het daar voor je klaar.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ OVER HET AANBOD */}
+      <section className="sec sec--ivoor">
+        <div className="wrap">
+          <div className="center reveal">
+            <h2 className="sec-title">Vragen over het aanbod</h2>
+            <p className="sec-sub">De vragen die we het vaakst krijgen over vooruitbetalen. Zit jouw vraag er niet bij? Vraag het gerust aan je coach.</p>
+          </div>
+          <div className="faq">
+            <details open className="reveal">
+              <summary>Wat gebeurt er na die zeven maanden?<span className="ic"><Plus /></span></summary>
+              <div className="body">Dan loopt je lidmaatschap gewoon door als maandabonnement en is het maandelijks opzegbaar, met een opzegtermijn van één kalendermaand. Wil je op dat moment opnieuw vooruit betalen? Dat kan altijd: vanaf dan kun je elk jaar kiezen om een jaar vooruit te betalen.</div>
+            </details>
+            <details className="reveal">
+              <summary>Kan ik hier later nog gebruik van maken?<span className="ic"><Plus /></span></summary>
+              <div className="body">Nee. Dit aanbod hoort bij het einde van je Kickstart en geldt alleen tijdens je eindgesprek. Daarna vervalt het. De mogelijkheid om een jaar vooruit te betalen blijft wel altijd bestaan.</div>
+            </details>
+            <details className="reveal">
+              <summary>Wat als 15 credits te veel of te weinig blijkt?<span className="ic"><Plus /></span></summary>
+              <div className="body">15 lessen per maand komt neer op ongeveer drie keer trainen per week, hetzelfde ritme als tijdens je Kickstart. Twijfel je of dat past? Bespreek het in je eindgesprek, dan kijken we samen naar je agenda. Het vooruitbetaalvoordeel geldt alleen op dit abonnement.</div>
+            </details>
+            <details className="reveal">
+              <summary>Kan ik tussentijds pauzeren?<span className="ic"><Plus /></span></summary>
+              <div className="body">We pauzeren geen abonnementen. Raak je geblesseerd, laat het dan weten aan je coach: we kunnen bijna altijd om een blessure heen trainen en denken graag met je mee.</div>
+            </details>
+            <details className="reveal">
+              <summary>Hoe regel ik de betaling?<span className="ic"><Plus /></span></summary>
+              <div className="body">Dat spreken we samen af tijdens je eindgesprek. Je betaalt het bedrag in één keer vooruit, daarna zijn er zeven maanden lang geen incasso&apos;s.</div>
+            </details>
           </div>
         </div>
       </section>

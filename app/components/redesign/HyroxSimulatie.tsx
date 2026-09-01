@@ -117,7 +117,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
             {raceLinks
               ? raceButtons
               : closed
-                ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+                ? <a href="/hyrox-simulatie-alkmaar" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
                 : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
@@ -200,7 +200,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
             {raceLinks
               ? raceButtons
               : closed
-                ? <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+                ? <a href="/hyrox-simulatie-alkmaar" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
                 : <HyroxRegistration eventDate={dateLong} className="btn btn--gold btn--lg" />}
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function HyroxSimulatie({ dateLabel, dateLong, deadline, raceLink
           ) : closed ? (
             <>
               <p>De inschrijving voor deze editie is gesloten. De volgende HYROX Simulatie is op zaterdag 24 oktober.</p>
-              <a href="/hyrox-simulatie-24-oktober" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
+              <a href="/hyrox-simulatie-alkmaar" className="btn btn--gold btn--lg">Bekijk de volgende editie: 24 oktober</a>
             </>
           ) : (
             <>
