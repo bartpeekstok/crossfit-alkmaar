@@ -93,6 +93,8 @@ export default function KickstartVervolgPage() {
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
 
           #aanbod .eyebrow { font-size: clamp(22px, 3.6vw, 34px); letter-spacing: .12em; line-height: 1; }
+          #aanbod .sec-title { margin-top: clamp(-14px, -1vw, -4px); }
+          #aanbod .sec-sub { margin-top: 12px; }
           .kv-deal { max-width: 720px; margin: 34px auto 0; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--hold); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 40px); }
           .kv-price { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; }
           .kv-price .now { font-family: var(--font-display); font-weight: 400; font-size: clamp(52px, 8vw, 82px); line-height: .9; color: var(--hold); }
@@ -183,7 +185,7 @@ export default function KickstartVervolgPage() {
         <div className="wrap">
           <div className="center reveal">
             <p className="eyebrow center-eb">Alleen nu, eenmalig</p>
-            <h2 className="sec-title" style={{ marginTop: 2 }}>7 maanden trainen, 6 maanden betalen</h2>
+            <h2 className="sec-title">7 maanden trainen, 6 maanden betalen</h2>
             <p className="sec-sub">
               Omdat je je Kickstart hebt afgemaakt, mag je nu eenmalig een half jaar vooruit betalen op het
               CrossFit 3 keer per week abonnement (15 keer per maand). Je krijgt er dan een volle maand
