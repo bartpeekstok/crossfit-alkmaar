@@ -49,7 +49,7 @@ const OPTIES = [
   {
     icon: <IconPT />,
     title: "Personal Training",
-    text: "Eén op één met je eigen coach. Elke sessie is volledig afgestemd op jouw doel, je tempo en eventuele blessures, en je krijgt continu correctie op je techniek. Je traint niets wat voor jou niet nodig is.",
+    text: "Eén op één met je eigen coach. Elke sessie is volledig afgestemd op jouw doel, je tempo en eventuele blessures, en je krijgt continu correctie op je techniek. Je traint niets wat voor jou niet nodig is. Personal training kan ook naast de groepslessen, om aan een specifiek doel te werken.",
     who: "Voor wie maximale aandacht wil en het snelste resultaat. Meestal 1 tot 2 keer per week.",
   },
   {
