@@ -16,6 +16,9 @@ a { color: inherit; }
 .sec--chalk { background: var(--cfa-chalk); }
 .sec--ink   { background: var(--cfa-ink); color: var(--fg-on-ink); }
 .sec--blue  { background: var(--cfa-blue); color: #fff; }
+/* h1/h2/h3 krijgen in colors_and_type.css een vaste donkere kleur (--fg1). Op een
+   donkere sectie is dat onleesbaar, dus daar erven koppen de sectiekleur. */
+.sec--ink h1, .sec--ink h2, .sec--ink h3, .sec--blue h1, .sec--blue h2, .sec--blue h3 { color: inherit; }
 
 .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-head); font-weight: 700; font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--cfa-blue); margin: 0; }
 .eyebrow::before { display: none; }
