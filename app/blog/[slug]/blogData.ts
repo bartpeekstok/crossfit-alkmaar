@@ -362,11 +362,11 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "hyrox-bij-crossfit-alkmaar": {
     title: "HYROX bij CrossFit Alkmaar!",
-    date: "2026-03-16",
+    date: "2026-09-02",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Nieuws",
     image: "/images/blog/Blog hyrox.jpg",
-    excerpt: "Na jaren de HYROX-hype in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen. CrossFit Alkmaar is officieel HYROX gym!",
+    excerpt: "Na jaren de HYROX-hype in de gaten te hebben gehouden, omarmden we deze variant van CrossFit met beide armen. CrossFit Alkmaar is officieel HYROX gym, met wekelijkse trainingen en eigen simulatie-events.",
     content: `
       <p>Bij CrossFit Alkmaar waaien we niet zomaar met alle fitness hypes mee. Als we dat deden, konden we elk jaar onze sportschool weer opnieuw opbouwen en rebranden.</p>
 
@@ -374,24 +374,52 @@ export const blogPosts: { [key: string]: BlogPost } = {
 
       <h2>Van CrossFit 'hype' naar blijvertje</h2>
 
-      <p>Toen we twaalf jaar geleden begonnen met CrossFit Alkmaar, dachten veel mensen dat CrossFit een hype zou blijken te zijn. Inmiddels blijkt dat niet zo te zijn: er zijn 300 boxen in Nederland en mensen ontdekken nog steeds het plezier en het nut van sporten met CrossFit.</p>
+      <p>Toen we ruim twaalf jaar geleden begonnen met CrossFit Alkmaar, dachten veel mensen dat CrossFit een hype zou blijken te zijn. Inmiddels blijkt dat niet zo te zijn: er zijn honderden boxen in Nederland en mensen ontdekken nog steeds het plezier en het nut van sporten met CrossFit.</p>
 
       <h2>HYROX: meer dan een hype</h2>
 
-      <p>Een 'hype' die we al een paar jaar volgen is die van HYROX. Mijn eerste reactie was dat HYROX vooral een aftreksel was van CrossFit, alleen dan zonder de technische bewegingen en met (veel) meer hardlopen. Dat vond ik als CrossFitter zonde, maar toch hoorde ik steeds meer leden en andere mensen om me heen zeggen dat ze een HYROX hadden gedaan of van plan waren te doen.</p>
+      <p>Een 'hype' die we een tijd gevolgd hebben is die van HYROX. Mijn eerste reactie was dat HYROX vooral een aftreksel was van CrossFit, alleen dan zonder de technische bewegingen en met (veel) meer hardlopen. Dat vond ik als CrossFitter zonde, maar toch hoorde ik steeds meer leden en andere mensen om me heen zeggen dat ze een HYROX hadden gedaan of van plan waren te doen.</p>
 
       <p>Inmiddels heb ik zelf ook een HYROX gedaan en snap ik de populariteit. Het is natuurlijk ook wel eens lekker om gewoon even te rammen zonder allemaal zeer technische bewegingen. Daarnaast had ik na de finish gelijk al ideeën over hoe ik de volgende keer sneller zou kunnen zijn!</p>
 
-      <h2>CrossFit Alkmaar wordt officiële HYROX gym</h2>
+      <h2>CrossFit Alkmaar is officiële HYROX gym</h2>
 
-      <p>HYROX is dan ook een mooie aanvulling op ons huidige aanbod. Onze Oxygen lessen zijn al erg populair. In deze lessen doen we al wat langere workouts zonder halterstangen of technische bewegingen. Daarom zijn we inmiddels een officiële HYROX gym geworden, hebben we de eerste materialen aangeschaft en uitgebreid. Nu is het alleen nog even wachten op de sprinttrack die geïnstalleerd gaat worden begin mei en dan kan ons HYROX-aanbod van start!</p>
+      <p>HYROX is inmiddels een vast onderdeel van ons aanbod. We zijn een <a href="/hyrox-gym-alkmaar">officiële HYROX gym</a>: alle apparatuur die je op racedag tegenkomt staat gewoon bij ons, van sleds en SkiErg tot roeiers, sandbags, wall balls en kettlebells. Onze <a href="/hyrox-training-alkmaar">HYROX-trainingen</a> staan wekelijks op het rooster, naast CrossFit, Strength en Flex Friday.</p>
 
-      <h2>HYROX Simulatie op 22 augustus</h2>
+      <p>Je traint ook niet alleen. Meerdere leden bereiden zich bij ons voor op een HYROX-race, als singles, doubles en relay teams. Samen trainen maakt de <a href="/hyrox-voorbereiding-alkmaar">HYROX-voorbereiding</a> leuker én effectiever. Wil je weten waar je staat? Met de <a href="/hyrox-pft-alkmaar">HYROX Physical Fitness Test</a> meet je je progressie richting racedag.</p>
 
-      <p>Op zaterdag 22 augustus organiseren we onze eerste HYROX Simulatie! Bereid je voor op race day of doe voor het eerst een echte HYROX. Een volledige simulatie van de race zoals je die kent: 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten. <a href="/hyrox-simulatie-alkmaar" class="text-blue-600 hover:underline">Bekijk alle info en schrijf je in</a>!</p>
+      <p>Ook leden uit de regio weten ons inmiddels te vinden: een deel van onze HYROX-groep komt uit <a href="/hyrox-heerhugowaard">Heerhugowaard</a> en Langedijk, zo'n tien minuten rijden verderop.</p>
 
-      <p>Dus, na deze 'hype' een tijd in de gaten te hebben gehouden, omarmen we deze variant van CrossFit nu met beide armen! Houd onze kanalen in de gaten voor het HYROX-rooster dat vanaf mei opengaat.</p>
+      <h2>HYROX Simulaties: race day zonder de reis</h2>
+
+      <p>Sinds onze eerste HYROX Simulatie organiseren we deze events geregeld: een volledige simulatie van de race zoals je die kent, met 1 kilometer runs afgewisseld met 8 functionele workouts. Geschikt voor beginners én ervaren HYROX-atleten, inclusief tijdwaarneming zodat je precies weet waar je staat. De eerstvolgende <a href="/hyrox-simulatie-alkmaar">HYROX Simulatie</a> staat gepland op 24 oktober.</p>
+
+      <p>Dus, na deze 'hype' een tijd in de gaten te hebben gehouden, omarmen we deze variant van CrossFit inmiddels met beide armen. Geen strohalm, maar een blijvend onderdeel van hoe we bij CrossFit Alkmaar trainen.</p>
+
+      <h2>Veelgestelde vragen</h2>
+
+      <p><strong>1. Moet ik al CrossFit-ervaring hebben om te starten met HYROX?</strong> Nee. Onze HYROX-trainingen zijn geschikt voor alle niveaus. Nieuw met functioneel trainen? Start dan met de <a href="/kickstart">Kickstart</a> en bouw in je eigen tempo op.</p>
+
+      <p><strong>2. Kan ik ook met een team of duo trainen voor HYROX?</strong> Ja. We hebben leden die zich voorbereiden als single, als duo (Doubles) of in een relay team. Trainen doe je samen, ook als je uiteindelijk solo aan de start staat.</p>
+
+      <p><strong>3. Hoe weet ik of ik klaar ben voor mijn eerste HYROX?</strong> Met een HYROX Physical Fitness Test of door mee te doen aan onze HYROX Simulatie meet je precies waar je staat, inclusief tijdwaarneming voor alle onderdelen.</p>
+
+      <p>Benieuwd of HYROX bij jou past? Plan een <a href="/free-intro">gratis kennismaking</a> bij CrossFit Alkmaar en we bekijken samen hoe je begint.</p>
     `,
+    faq: [
+      {
+        question: "Moet ik al CrossFit-ervaring hebben om te starten met HYROX?",
+        answer: "Nee. Onze HYROX-trainingen zijn geschikt voor alle niveaus. Nieuw met functioneel trainen? Start dan met de Kickstart en bouw in je eigen tempo op.",
+      },
+      {
+        question: "Kan ik ook met een team of duo trainen voor HYROX?",
+        answer: "Ja. We hebben leden die zich voorbereiden als single, als duo (Doubles) of in een relay team. Trainen doe je samen, ook als je uiteindelijk solo aan de start staat.",
+      },
+      {
+        question: "Hoe weet ik of ik klaar ben voor mijn eerste HYROX?",
+        answer: "Met een HYROX Physical Fitness Test of door mee te doen aan onze HYROX Simulatie meet je precies waar je staat, inclusief tijdwaarneming voor alle onderdelen.",
+      },
+    ],
   },
   "had-je-een-steentje-in-je-schoen": {
     title: "Had je een steentje in je schoen?",
