@@ -89,7 +89,7 @@ export default function KickstartVervolgPage() {
           .kv-hero .inner { max-width: 1040px; }
           .kv-hero p.lede { max-width: 780px; }
           .kv-opts { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 30px auto 0; }
-          .kv-card .who { margin-top: 12px; font-size: 14.5px; color: var(--cfa-blue); font-weight: 600; }
+          .kv-card .who { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 16px; line-height: 1.55; color: var(--cfa-blue); font-weight: 600; }
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
 
           .kv-deal { max-width: 720px; margin: 34px auto 0; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--hold); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 40px); }
@@ -147,9 +147,9 @@ export default function KickstartVervolgPage() {
           <h3>Wat je kunt verwachten in maand twee en drie</h3>
           <p>
             De bewegingen die nu nog aandacht kosten gaan vanzelf voelen, en dat is precies het moment waarop
-            de gewichten omhoog kunnen. We doen benchmarkworkouts opnieuw, zodat je zwart op wit ziet wat er
-            veranderd is in plaats van dat je het moet gokken. En rond maand drie merken de meeste mensen het
-            vooral buiten de gym: de trap, de boodschappen, en hoeveel energie er 's avonds nog over is.
+            de gewichten wat omhoog kunnen. En rond maand drie merken de meeste mensen het vooral buiten de
+            gym: de trap, de boodschappen, en hoeveel energie er 's avonds nog over is. Dat horen we dan graag
+            tijdens je eerste 90-day check in!
           </p>
         </div>
       </section>
