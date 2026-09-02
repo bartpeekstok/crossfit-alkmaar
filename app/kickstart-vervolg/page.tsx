@@ -93,7 +93,7 @@ export default function KickstartVervolgPage() {
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
 
           #aanbod .eyebrow { font-size: clamp(22px, 3.6vw, 34px); letter-spacing: .12em; line-height: 1; }
-          #aanbod .sec-title { margin-top: clamp(-14px, -1vw, -4px); }
+          #aanbod .sec-title { margin-top: 12px; }
           #aanbod .sec-sub { margin-top: 12px; }
           .kv-deal { max-width: 720px; margin: 34px auto 0; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--hold); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 40px); }
           .kv-price { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; }
