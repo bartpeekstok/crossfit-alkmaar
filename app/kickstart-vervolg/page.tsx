@@ -62,18 +62,18 @@ const OPTIES = [
     icon: <IconLes />,
     title: "Groepslessen",
     text: "De reguliere CrossFit-lessen, elke dag op meerdere tijden. Een coach leidt de les, je traint samen met de rest van de groep en elke dag staat er een ander programma klaar. Zelf nadenken over je training hoeft nooit meer.",
-    who: "Voor wie flexibel wil plannen en energie haalt uit de groep. Van 1 keer per week tot onbeperkt.",
+    who: "Voor wie flexibel wil plannen en energie haalt uit de groep.",
   },
   {
     icon: <IconVoeding />,
     title: "Voedingsadvies",
     text: "Je training is de helft van het verhaal. Samen met een voedingscoach kijk je naar wat je eet op een gewone week en pas je aan wat echt verschil maakt. Geen streng dieet, wel een plan dat je volhoudt.",
-    who: "Voor wie zijn resultaat wil versnellen. Los te volgen of naast elk abonnement.",
+    who: "Voor wie zijn resultaat wil versnellen.",
   },
 ];
 
 const VOORWAARDEN = [
-  `Geldt voor het abonnement CrossFit 15 credits per maand (${PRIJS_MAAND} per maand, 15 lessen per maand)`,
+  `Geldt voor het CrossFit 3 keer per week abonnement, 15 keer per maand (${PRIJS_MAAND} per maand)`,
   "Je betaalt zes maanden in één keer vooruit en traint zeven maanden",
   "Alleen te gebruiken tijdens je eindgesprek aan het einde van je Kickstart",
   "Eenmalig aanbod, daarna vervalt het",
@@ -92,6 +92,7 @@ export default function KickstartVervolgPage() {
           .kv-card .who { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); font-size: 16px; line-height: 1.55; color: var(--cfa-blue); font-weight: 600; }
           @media (max-width: 720px) { .kv-opts { grid-template-columns: 1fr; } }
 
+          #aanbod .eyebrow { font-size: clamp(16px, 2.2vw, 21px); letter-spacing: .16em; }
           .kv-deal { max-width: 720px; margin: 34px auto 0; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.16); border-top: 4px solid var(--hold); border-radius: var(--r-lg); padding: clamp(26px, 3.4vw, 40px); }
           .kv-price { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: center; gap: 14px; }
           .kv-price .now { font-family: var(--font-display); font-weight: 400; font-size: clamp(52px, 8vw, 82px); line-height: .9; color: var(--hold); }
@@ -185,7 +186,8 @@ export default function KickstartVervolgPage() {
             <h2 className="sec-title" style={{ marginTop: 12 }}>7 maanden trainen, 6 maanden betalen</h2>
             <p className="sec-sub">
               Omdat je je Kickstart hebt afgemaakt, mag je nu eenmalig een half jaar vooruit betalen op het
-              abonnement CrossFit 15 credits per maand. Je krijgt er dan een volle maand gratis bij.
+              CrossFit 3 keer per week abonnement (15 keer per maand). Je krijgt er dan een volle maand
+              gratis bij.
             </p>
           </div>
           <div className="kv-deal reveal">
@@ -231,7 +233,7 @@ export default function KickstartVervolgPage() {
             </details>
             <details className="reveal">
               <summary>Wat als 15 credits te veel of te weinig blijkt?<span className="ic"><Plus /></span></summary>
-              <div className="body">15 lessen per maand komt neer op ongeveer drie keer trainen per week, hetzelfde ritme als tijdens je Kickstart. Twijfel je of dat past? Bespreek het in je eindgesprek, dan kijken we samen naar je agenda. Het vooruitbetaalvoordeel geldt alleen op dit abonnement.</div>
+              <div className="body">15 keer per maand komt neer op ongeveer drie keer trainen per week, hetzelfde ritme als tijdens je Kickstart. Twijfel je of dat past? Bespreek het in je eindgesprek, dan kijken we samen naar je agenda. Het vooruitbetaalvoordeel geldt alleen op dit abonnement.</div>
             </details>
             <details className="reveal">
               <summary>Kan ik tussentijds pauzeren?<span className="ic"><Plus /></span></summary>
