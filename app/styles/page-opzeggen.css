@@ -63,8 +63,12 @@
 .op-link { display: inline-block; margin-top: 14px; font-family: var(--font-head); font-weight: 700; font-size: 14px; letter-spacing: .04em; color: var(--cfa-blue); text-decoration: none; }
 .op-link:hover { text-decoration: underline; }
 
-/* ---- FORMULIER IETS RUIMER OP DESKTOP (broodtekst loopt via site.css) ---- */
+/* ---- DESKTOP-MATEN ----
+   Let op: deze file laadt NA site.css, dus de regel 'een broodtekst-maat op
+   desktop' daar wordt overschreven door de basismaten hierboven. De
+   broodtekst van deze pagina zetten we daarom hier zelf op var(--fs-body). */
 @media (min-width: 760px) {
+  .op-note p, .op-step p, .op-card .ok p { font-size: var(--fs-body); line-height: var(--lh-body); }
   .op-step h3 { font-size: 19px; }
   .op-part-head h3 { font-size: 21px; }
   .op-card label.fld { font-size: 13px; }

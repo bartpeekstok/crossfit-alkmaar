@@ -266,8 +266,7 @@ html.cfa-modal-open { overflow: hidden; }
 /* ---- EEN BROODTEKST-MAAT OP DESKTOP (mobiel ongewijzigd) ---- */
 @media (min-width: 760px) {
   .sec-sub, .page-hero p.lede, .prose p, .prose ul li, .fcard p,
-  .page-cta p, .ppv .quote, .ppi p, .faq .body, .pp-item p,
-  .op-note p, .op-step p, .op-card .ok p {
+  .page-cta p, .ppv .quote, .ppi p, .faq .body, .pp-item p {
     font-size: var(--fs-body);
     line-height: var(--lh-body);
   }
