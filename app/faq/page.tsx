@@ -45,7 +45,7 @@ export default function FAQPage() {
         {
           question: "Hoe werkt SportBit?",
           answer: (
-            <>
+            <p>
               Dat zie je in{" "}
               <a
                 href="https://www.youtube.com/playlist?list=PL0vONwaaFHENiMQmNuVuPmTPqp-iiCA2j"
@@ -56,7 +56,7 @@ export default function FAQPage() {
                 deze video's
               </a>
               .
-            </>
+            </p>
           ),
         },
         {
@@ -92,24 +92,24 @@ export default function FAQPage() {
         {
           question: "Waar kan ik mijn vragen stellen?",
           answer: (
-            <>
+            <p>
               Je kunt al je vragen stellen via{" "}
               <a href="https://wa.me/31722340560" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">WhatsApp</a>{" "}
               of{" "}
               <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">e-mail</a>. We proberen op weekdagen altijd binnen 24 uur te antwoorden.
-            </>
+            </p>
           ),
         },
         {
           question: "Hoe boek ik een check in gesprek?",
           answer: (
-            <>Dat doe je <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>.</>
+            <p>Dat doe je <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>.</p>
           ),
         },
         {
           question: "Een bekende van me heeft interesse, wat moet hij/zij doen?",
           answer: (
-            <>Hij/zij kan zelf een gratis kennismaking plannen, dat kan heel makkelijk <a href="https://www.crossfitalkmaar.com/free-intro/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Als er geen geschikt moment in de planner staat, kan hij/zij gegevens op onze website achterlaten.</>
+            <p>Hij/zij kan zelf een gratis kennismaking plannen, dat kan heel makkelijk <a href="https://www.crossfitalkmaar.com/free-intro/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Als er geen geschikt moment in de planner staat, kan hij/zij gegevens op onze website achterlaten.</p>
           ),
         },
         {
@@ -139,7 +139,7 @@ export default function FAQPage() {
         {
           question: "Hoe kan ik jullie helpen?",
           answer: (
-            <>Door superfit te worden bij CrossFit Alkmaar, dat is de beste reclame die er is! Met een <a href="https://g.page/r/CZw1MzAZmSpFEBM/review" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google review</a> zijn we ook heel erg blij.</>
+            <p>Door superfit te worden bij CrossFit Alkmaar, dat is de beste reclame die er is! Met een <a href="https://g.page/r/CZw1MzAZmSpFEBM/review" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Google review</a> zijn we ook heel erg blij.</p>
           ),
         },
       ],
@@ -210,7 +210,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe kan ik opzeggen?",
-          answer: (<>Dat doe je via het opzegformulier op de website: <a href="/opzeggen" className="text-blue-600 hover:underline">crossfitalkmaar.com/opzeggen</a>. Je krijgt daarna een bevestiging per e-mail met de datum waarop je lidmaatschap stopt.</>),
+          answer: (<p>Dat doe je via het opzegformulier op de website: <a href="/opzeggen" className="text-blue-600 hover:underline">crossfitalkmaar.com/opzeggen</a>. Je krijgt daarna een bevestiging per e-mail met de datum waarop je lidmaatschap stopt.</p>),
         },
         {
           question: "Kan ik mijn abonnement pauzeren?",
@@ -268,7 +268,7 @@ export default function FAQPage() {
         },
         {
           question: "Kan ik ook vrij trainen?",
-          answer: (<>Nee, je kunt bij CrossFit Alkmaar niet vrij trainen met eigen programma's. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek een check in gesprek</a> als je hier interesse in hebt.</>),
+          answer: (<p>Nee, je kunt bij CrossFit Alkmaar niet vrij trainen met eigen programma's. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek een check in gesprek</a> als je hier interesse in hebt.</p>),
         },
         {
           question: "Wat als ik een blessure heb?",
@@ -311,7 +311,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe plan ik een check in?",
-          answer: (<>Dat doe je makkelijk <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Ideaal om voor of na een training te plannen.</>),
+          answer: (<p>Dat doe je makkelijk <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">via deze link</a>. Ideaal om voor of na een training te plannen.</p>),
         },
       ],
     },
@@ -364,7 +364,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe start ik met personal training?",
-          answer: (<>Dat begint met een check in gesprek waar we bespreken wat je doelen zijn. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek je check in via deze link</a>.</>),
+          answer: (<p>Dat begint met een check in gesprek waar we bespreken wat je doelen zijn. <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Boek je check in via deze link</a>.</p>),
         },
         {
           question: "Hoe werkt het annuleren of wijzigen van afspraken?",
@@ -372,7 +372,7 @@ export default function FAQPage() {
         },
         {
           question: "Kan ik zelf kiezen met welke coach ik train?",
-          answer: (<>Jazeker, geef aan met wie je graag wilt werken tijdens <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">je check in gesprek</a>.</>),
+          answer: (<p>Jazeker, geef aan met wie je graag wilt werken tijdens <a href="https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">je check in gesprek</a>.</p>),
         },
       ],
     },
