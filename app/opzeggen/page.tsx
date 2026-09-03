@@ -276,7 +276,7 @@ export default function OpzeggenPage() {
                 <p>
                   Bedankt {form.voornaam.trim() || "voor je bericht"}. We verwerken je opzegging en
                   sturen je een bevestiging per e-mail met de datum waarop je lidmaatschap stopt. Tot
-                  die tijd ben je gewoon welkom op de mat.
+                  die tijd ben je gewoon welkom bij CrossFit Alkmaar.
                 </p>
               </div>
             ) : (
