@@ -181,6 +181,10 @@ export default function FAQPage() {
           ),
         },
         {
+          question: "Kan ik een jaar vooruit betalen?",
+          answer: "Ja, dat kan altijd op de groepslesabonnementen. Je betaalt dan 12 maanden en krijgt de 13e maand gratis. Dat regel je zelf in de SportBit app, onder 'abonnementen'. Op BUILD Small Group Training en personal training geldt dit niet.",
+        },
+        {
           question: "Kan ik credits meenemen naar de volgende maand?",
           answer: "Nee, aan de start van de nieuwe maand begin je weer met het aantal credits dat bij jouw abonnement hoort.",
         },
@@ -206,7 +210,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe kan ik opzeggen?",
-          answer: (<>Dit doe je door een e-mail te sturen naar <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">ledenservice@crossfitalkmaar.nl</a>.</>),
+          answer: (<>Dat doe je via het <a href="/opzeggen" className="text-blue-600 hover:underline">opzegformulier</a> op de website. Je krijgt daarna een bevestiging per e-mail met de datum waarop je lidmaatschap stopt.</>),
         },
         {
           question: "Kan ik mijn abonnement pauzeren?",
@@ -216,7 +220,7 @@ export default function FAQPage() {
           question: "Hoe kan ik up- of downgraden?",
           answer: (
             <>
-              <p className="mb-2">Door een e-mail te sturen naar <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">ledenservice@crossfitalkmaar.nl</a>.</p>
+              <p className="mb-2">Dat regel je zelf in de SportBit app, onder &apos;abonnementen&apos;. Kom je er niet uit? Mail dan naar <a href="mailto:ledenservice@crossfitalkmaar.nl" className="text-blue-600 hover:underline">ledenservice@crossfitalkmaar.nl</a>.</p>
               <p className="mb-2">Upgraden kan vanaf het moment dat je de upgrade doet.</p>
               <p>Downgraden kan met een kalendermaand opzegtermijn.</p>
             </>

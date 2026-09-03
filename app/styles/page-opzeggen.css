@@ -1,0 +1,60 @@
+/* /opzeggen page-specifieke styles */
+
+/* uitleg opzegtermijn */
+.op-note { max-width: 760px; margin: 26px auto 0; background: #fff; border: 1px solid var(--border); border-left: 4px solid var(--cfa-blue); border-radius: var(--r-lg); box-shadow: var(--sh-1); padding: clamp(20px,3vw,28px); }
+.op-note p { font-family: var(--font-body); font-size: 16.5px; line-height: 1.6; color: var(--fg2); margin: 0; }
+.op-note p + p { margin-top: 12px; }
+.op-note strong { font-family: var(--font-head); font-weight: 700; color: var(--fg1); }
+
+/* stappen */
+.op-steps { display: grid; grid-template-columns: repeat(3,1fr); gap: clamp(18px,2.4vw,26px); margin-top: 34px; }
+.op-step { display: flex; align-items: flex-start; gap: 14px; }
+.op-step .num { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--cfa-blue); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 15px; display: grid; place-items: center; }
+.op-step h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 17px; margin: 5px 0 6px; color: var(--fg1); }
+.op-step p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.55; color: var(--fg2); margin: 0; }
+
+/* formulier-kaart */
+.op-card { max-width: 760px; margin: 34px auto 0; background: #fff; border-radius: var(--r-lg); box-shadow: var(--sh-3); padding: clamp(24px,4vw,40px); }
+.op-part { border-top: 1px solid var(--border); margin-top: 30px; padding-top: 26px; }
+.op-part:first-of-type { border-top: none; margin-top: 0; padding-top: 0; }
+.op-part-head { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; }
+.op-part-head .no { font-family: var(--font-head); font-weight: 700; font-size: 13px; letter-spacing: .18em; color: var(--cfa-blue); }
+.op-part-head h3 { font-family: var(--font-head); font-weight: 700; text-transform: uppercase; font-size: 19px; letter-spacing: .01em; color: var(--fg1); margin: 0; }
+
+.op-card form { display: grid; gap: 0; }
+.op-fields { display: grid; gap: 14px; }
+.op-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.op-card label.fld { display: flex; flex-direction: column; gap: 5px; font-family: var(--font-head); font-weight: 600; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--fg2); }
+.op-card input, .op-card select, .op-card textarea { font-family: var(--font-body); font-size: 16px; padding: 13px 14px; border: 1.5px solid var(--border-strong); border-radius: var(--r-md); background: #fff; color: var(--fg1); width: 100%; }
+.op-card textarea { min-height: 110px; resize: vertical; }
+.op-card select { appearance: none; background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; background-size: 18px; padding-right: 40px; }
+.op-card input:focus, .op-card select:focus, .op-card textarea:focus { outline: none; border-color: var(--cfa-blue); box-shadow: var(--ring); }
+.op-card .err { border-color: var(--stop); }
+
+/* beoordelingsschaal */
+.op-scale { display: grid; gap: 8px; }
+.op-scale + .op-scale { margin-top: 16px; }
+.op-scale .q { font-family: var(--font-head); font-weight: 600; font-size: 15px; color: var(--fg1); }
+.op-opts { display: flex; flex-wrap: wrap; gap: 8px; }
+.op-opts label { position: relative; }
+.op-opts input { position: absolute; opacity: 0; width: 0; height: 0; }
+.op-opts span { display: inline-block; font-family: var(--font-body); font-size: 14px; padding: 9px 14px; border: 1.5px solid var(--border-strong); border-radius: var(--r-md); color: var(--fg2); cursor: pointer; transition: background .14s, border-color .14s, color .14s; }
+.op-opts input:checked + span { background: var(--cfa-blue); border-color: var(--cfa-blue); color: #fff; font-weight: 600; }
+.op-opts input:focus-visible + span { box-shadow: var(--ring); }
+
+.op-card .errmsg { font-family: var(--font-body); font-size: 13px; color: var(--stop); font-weight: 500; margin-top: 16px; }
+.op-card .submit { margin-top: 22px; }
+.op-card .submit:disabled { opacity: .6; cursor: default; transform: none; }
+.op-card .privacy { font-family: var(--font-body); font-size: 12.5px; color: var(--fg3); line-height: 1.5; margin: 12px 0 0; }
+
+/* succes-staat */
+.op-card .ok { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 8px 0; }
+.op-card .ok .ic { width: 56px; height: 56px; border-radius: 50%; background: var(--go); display: grid; place-items: center; }
+.op-card .ok .ic svg { width: 30px; height: 30px; color: #fff; }
+.op-card .ok h3 { font-family: var(--font-display); font-weight: 400; text-transform: uppercase; font-size: clamp(24px,3vw,32px); line-height: .98; color: var(--cfa-ink); margin: 0; }
+.op-card .ok p { font-family: var(--font-body); font-size: 15.5px; line-height: 1.55; color: var(--fg2); margin: 0; max-width: 460px; }
+
+@media (max-width: 860px) {
+  .op-steps { grid-template-columns: 1fr; gap: 18px; }
+  .op-row { grid-template-columns: 1fr; }
+}
