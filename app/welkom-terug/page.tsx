@@ -122,7 +122,7 @@ export default function WelkomTerugPage() {
                 <h3>Top, {firstName}!</h3>
                 <p>
                   We hebben je gegevens ontvangen en nemen snel contact met je op om je gratis week
-                  in te plannen. Tot snel op de mat!
+                  in te plannen. Tot snel bij CrossFit Alkmaar!
                 </p>
               </div>
             ) : (

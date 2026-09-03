@@ -35,7 +35,7 @@ export default function BedanktPage() {
             Bedankt voor je aanmelding. Je ontvangt een bevestiging via e-mail.
           </p>
           <p className="text-lg text-gray-300 mb-8">
-            We zien je op de mat bij CrossFit Alkmaar!
+            We zien je bij CrossFit Alkmaar!
           </p>
         </div>
       </section>
