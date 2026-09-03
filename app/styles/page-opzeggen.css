@@ -60,7 +60,7 @@
 }
 
 /* check in-link in de alternatievenkaarten */
-.op-link { display: inline-block; margin-top: 14px; font-family: var(--font-head); font-weight: 700; font-size: 14px; letter-spacing: .04em; color: var(--cfa-blue); text-decoration: none; }
+.op-link { display: inline-block; margin-top: 14px; font-family: var(--font-head); font-weight: 700; font-size: 15px; letter-spacing: .04em; color: var(--cfa-blue); text-decoration: none; }
 .op-link:hover { text-decoration: underline; }
 
 /* ---- DESKTOP-MATEN ----
@@ -76,5 +76,5 @@
   .op-scale .q { font-size: 17px; }
   .op-opts span { font-size: 15.5px; padding: 10px 16px; }
   .op-card .privacy { font-size: 13.5px; }
-  .op-link { font-size: 15px; }
+  .op-link { font-size: clamp(16px, 1.5vw, 20px); margin-top: 16px; }
 }
