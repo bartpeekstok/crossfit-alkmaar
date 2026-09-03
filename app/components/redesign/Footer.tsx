@@ -175,6 +175,9 @@ export default function Footer() {
                 {isEN ? "View on Google Maps →" : "Bekijk op Google Maps →"}
               </a>
             </li>
+            <li style={{ marginTop: 10 }}>
+              <Link href="/opzeggen">{isEN ? "Cancel membership" : "Opzeggen"}</Link>
+            </li>
           </ul>
         </div>
       </div>

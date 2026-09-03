@@ -210,7 +210,7 @@ export default function FAQPage() {
         },
         {
           question: "Hoe kan ik opzeggen?",
-          answer: (<>Dat doe je via het <a href="/opzeggen" className="text-blue-600 hover:underline">opzegformulier</a> op de website. Je krijgt daarna een bevestiging per e-mail met de datum waarop je lidmaatschap stopt.</>),
+          answer: (<>Dat doe je via het opzegformulier op de website: <a href="/opzeggen" className="text-blue-600 hover:underline">crossfitalkmaar.com/opzeggen</a>. Je krijgt daarna een bevestiging per e-mail met de datum waarop je lidmaatschap stopt.</>),
         },
         {
           question: "Kan ik mijn abonnement pauzeren?",
