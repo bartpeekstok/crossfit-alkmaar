@@ -60,6 +60,7 @@ const FEEDBACK_VRAGEN: { key: string; q: string }[] = [
 ];
 
 const WA_LINK = "https://wa.me/31722340560";
+const CHECKIN_LINK = "https://ghl.crossfitalkmaar.com/widget/booking/bBgBvZjuga1BPExTMj8b";
 
 export default function OpzeggenPage() {
   const [form, setForm] = useState({
@@ -191,16 +192,36 @@ export default function OpzeggenPage() {
               <h3>Blessure of drukke periode</h3>
               <p>
                 We pauzeren geen abonnementen, maar we kunnen bijna altijd om een blessure heen
-                trainen. Laat het je coach weten, dan passen we je programma aan.
+                trainen. En in een drukke periode kun je tijdelijk minder vaak komen. Leg het voor
+                aan je coach, dan passen we je programma of je frequentie aan.
               </p>
+              <a
+                className="op-link"
+                href={CHECKIN_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("opzeggen_checkin_click", { blok: "blessure" })}
+              >
+                Overleg met je coach &rarr;
+              </a>
             </div>
             <div className="fcard reveal" data-d="2">
               <div className="ic"><IconChat /></div>
-              <h3>Vijf minuten met je coach</h3>
+              <h3>Twijfel over je resultaat</h3>
               <p>
-                Twijfel je over je resultaat of je ritme? Pak even vijf minuten met je coach voor je
-                opzegt. Vaak is er een oplossing waar je zelf niet aan dacht.
+                Sta je stil of ben je je ritme kwijt? Tijdens een check in kijkt je coach met je mee
+                naar je trainingen en je doel. Daar komt vaak een oplossing uit waar je zelf niet
+                aan dacht.
               </p>
+              <a
+                className="op-link"
+                href={CHECKIN_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => trackEvent("opzeggen_checkin_click", { blok: "resultaat" })}
+              >
+                Check in inplannen &rarr;
+              </a>
             </div>
           </div>
         </div>
@@ -430,7 +451,7 @@ export default function OpzeggenPage() {
           <h2>Nog een vraag?</h2>
           <p>
             Over je opzegtermijn, je facturen of je abonnement: op de ledenservice staan de
-            antwoorden op de vragen die we het vaakst krijgen.
+            antwoorden op de vragen die we het meest krijgen.
           </p>
           <Link className="btn btn--gold btn--lg" href="/faq">Naar de ledenservice</Link>
         </div>

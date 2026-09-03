@@ -58,3 +58,7 @@
   .op-steps { grid-template-columns: 1fr; gap: 18px; }
   .op-row { grid-template-columns: 1fr; }
 }
+
+/* check in-link in de alternatievenkaarten */
+.op-link { display: inline-block; margin-top: 14px; font-family: var(--font-head); font-weight: 700; font-size: 14px; letter-spacing: .04em; color: var(--cfa-blue); text-decoration: none; }
+.op-link:hover { text-decoration: underline; }
