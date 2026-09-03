@@ -222,7 +222,7 @@ export default function KickstartVervolgPage() {
         <div className="wrap">
           <div className="center reveal">
             <h2 className="sec-title">Vragen over het aanbod</h2>
-            <p className="sec-sub">De vragen die we het vaakst krijgen over vooruitbetalen. Zit jouw vraag er niet bij? Vraag het gerust aan je coach.</p>
+            <p className="sec-sub">De vragen die we het meest krijgen over vooruitbetalen. Zit jouw vraag er niet bij? Vraag het gerust aan je coach.</p>
           </div>
           <div className="faq">
             <details open className="reveal">
