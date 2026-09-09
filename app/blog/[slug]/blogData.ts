@@ -914,39 +914,58 @@ export const blogPosts: { [key: string]: BlogPost } = {
   },
   "heeft-bankdrukken-invloed-op-buikvet": {
     title: "Heeft bankdrukken invloed op buikvet?",
-    date: "2025-03-13",
+    date: "2026-09-09",
     author: "Bart Peekstok, eigenaar CrossFit Alkmaar",
     category: "Training",
     image: "/redesign/assets/photo-box2.webp",
     excerpt: "Bankdrukken versterkt borst, triceps en schouders, maar verbrandt het ook buikvet? Zo werkt vetverbranding echt, uitgelegd door CrossFit Alkmaar.",
+    faq: [
+      {
+        question: "Kan ik met bankdrukken gericht mijn buik strakker maken?",
+        answer:
+          "Nee. Bankdrukken traint borst, triceps en schouders, en je core werkt mee voor stabiliteit, maar dat betekent niet dat het vet op je buik daardoor verdwijnt. Gericht vet verliezen op één plek in je lichaam bestaat niet: dat is de mythe van spot-reduction. Vetverlies volgt uit een calorietekort over je hele lichaam.",
+      },
+      {
+        question: "Welke training werkt dan wel het beste voor vetverlies?",
+        answer:
+          "Volledige-lichaamstraining. Oefeningen als squats, deadlifts en pull-ups zetten meerdere grote spiergroepen tegelijk aan het werk, waardoor je meer calorieën verbrandt dan met geïsoleerde oefeningen. Bij CrossFit Alkmaar combineren we krachtoefeningen zoals bankdrukken daarom altijd met dat soort functionele bewegingen en conditiewerk.",
+      },
+      {
+        question: "Is bankdrukken dan zinloos als ik vet wil verliezen?",
+        answer:
+          "Niet zinloos, wel onvolledig als je het als enige oefening doet. Bankdrukken bouwt spiermassa op, en meer spiermassa verhoogt je rustmetabolisme, wat op lange termijn helpt bij vetverlies. Combineer het met full-body workouts en let op je voeding voor het beste resultaat.",
+      },
+    ],
     content: `
       <p>Bankdrukken, ofwel de bench press, is een populaire oefening die zich richt op het versterken van de borst, triceps en schouders. Maar kan deze oefening ook helpen om buikvet te verbranden? Het antwoord is iets genuanceerder dan je misschien denkt.</p>
 
-      <p>Hoe werkt vetverbranding? Vetverbranding is het resultaat van een calorietekort, waarbij je meer calorieën verbrandt dan je consumeert. Dit gebeurt niet lokaal; je kunt niet specifiek vet verbranden op één plek in je lichaam, zoals je buik, door gerichte oefeningen te doen. Dit fenomeen staat bekend als het mythe van "spot-reduction."</p>
+      <h2>Hoe werkt vetverbranding echt?</h2>
+
+      <p>Vetverbranding is het resultaat van een calorietekort, waarbij je meer calorieën verbrandt dan je consumeert. Dit gebeurt niet lokaal; je kunt niet specifiek vet verbranden op één plek in je lichaam, zoals je buik, door gerichte oefeningen te doen. Dit fenomeen staat bekend als de mythe van "spot-reduction."</p>
 
       <p>Wat doet bankdrukken dan wel?</p>
 
       <ul>
-        <li>Indirecte vetverbranding: Hoewel bankdrukken zelf niet direct buikvet verbrandt, draagt het bij aan een verhoogd calorieverbruik door de toename van spiermassa.</li>
-        <li>Core-activatie: Tijdens het bankdrukken moet je je core aanspannen om stabiliteit te behouden. Dit versterkt je buikspieren, maar vermindert niet direct het vet dat eroverheen ligt.</li>
+        <li>Indirecte vetverbranding: hoewel bankdrukken zelf niet direct buikvet verbrandt, draagt het bij aan een verhoogd calorieverbruik door de toename van spiermassa.</li>
+        <li>Core-activatie: tijdens het bankdrukken moet je je core aanspannen om stabiliteit te behouden. Dit versterkt je buikspieren, maar vermindert niet direct het vet dat eroverheen ligt.</li>
       </ul>
 
-      <p>Hoe verlies je effectief buikvet?</p>
+      <h2>Hoe verlies je effectief buikvet?</h2>
 
       <ul>
-        <li>Voeding: Een gebalanceerd dieet met een calorietekort is essentieel. Focus op eiwitrijke maaltijden, gezonde vetten en complexe koolhydraten.</li>
-        <li>Volledige lichaamstraining: Oefeningen zoals squats, deadlifts en pull-ups betrekken meerdere spiergroepen en verhogen je algehele calorieverbranding.</li>
-        <li>Consistentie: Regelmatige training en een gezond voedingspatroon zijn de sleutels tot langdurig vetverlies.</li>
+        <li>Voeding: een gebalanceerd dieet met een calorietekort is essentieel. Focus op eiwitrijke maaltijden, gezonde vetten en complexe koolhydraten. Lees ook wat je het beste kunt <a href="/blog/wat-eet-je-voor-en-na-training">eten voor en na je training</a>.</li>
+        <li>Volledige lichaamstraining: oefeningen zoals squats, deadlifts en pull-ups betrekken meerdere spiergroepen en verhogen je algehele calorieverbranding.</li>
+        <li>Consistentie: regelmatige training en een gezond voedingspatroon zijn de sleutels tot langdurig vetverlies.</li>
       </ul>
 
-      <p>Voordelen van bankdrukken in je fitnessroutine:</p>
+      <h2>Voordelen van bankdrukken in je fitnessroutine</h2>
 
       <ul>
-        <li>Verbeterde houding: Sterkere borst- en schouderspieren dragen bij aan een betere lichaamshouding.</li>
-        <li>Functionele kracht: Bankdrukken verbetert de kracht die je nodig hebt voor dagelijkse activiteiten zoals duwen en tillen.</li>
+        <li>Verbeterde houding: sterkere borst- en schouderspieren dragen bij aan een betere lichaamshouding.</li>
+        <li>Functionele kracht: bankdrukken verbetert de kracht die je nodig hebt voor dagelijkse activiteiten zoals duwen en tillen.</li>
       </ul>
 
-      <p>Bij CrossFit Alkmaar integreren we bankdrukken in onze krachttrainingsprogramma's, maar we combineren het altijd met full-body workouts en cardiovasculaire oefeningen om je te helpen vet te verbranden en spieren op te bouwen. Onze coaches begeleiden je bij het optimaliseren van je techniek en het aanpassen van je trainingsschema aan jouw doelen.</p>
+      <p>Bij CrossFit Alkmaar integreren we bankdrukken in onze <a href="/krachttraining-alkmaar">krachttraining</a>, maar we combineren het altijd met full-body workouts en cardiovasculaire oefeningen om je te helpen vet te verbranden en spieren op te bouwen. Dat volledige-lichaamswerk zie je ook terug in onze <a href="/hyrox-alkmaar">HYROX-trainingen</a>, waar kracht en conditie samenkomen. Onze coaches begeleiden je bij het optimaliseren van je techniek en het aanpassen van je trainingsschema aan jouw doelen. Ook leden uit <a href="/crossfit-heerhugowaard">Heerhugowaard</a> en <a href="/crossfit-heiloo">Heiloo</a> trainen bij ons mee voor die aanpak.</p>
 
       <p>Wil je effectief vet verliezen en sterker worden? Kom langs bij CrossFit Alkmaar en ontdek hoe wij je kunnen helpen om je fitnessdoelen te bereiken.</p>
 
