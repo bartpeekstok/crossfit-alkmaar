@@ -56,6 +56,7 @@ export default function HyroxAlkmaarPage() {
           <p>CrossFit Alkmaar is een <Link href="/hyrox-gym-alkmaar">officiële HYROX gym</Link>. We hebben alle apparatuur die je op racedag tegenkomt: sleds, SkiErg, roeiers, sandbags, wall balls en kettlebells.</p>
           <p>Maar het verschil zit in de coaching. Onze trainers kennen de HYROX-race en helpen je met pacing, strategie en techniek. Niet alleen voor de stations, maar ook voor de 8 kilometer hardlopen ertussen.</p>
           <p>En je traint niet alleen. Meerdere leden bereiden zich voor op HYROX, als singles, doubles en relay teams. Samen trainen maakt de <Link href="/hyrox-voorbereiding-alkmaar">HYROX-voorbereiding</Link> leuker én effectiever.</p>
+          <p>Ook uit Heerhugowaard rijden regelmatig leden hierheen om te trainen: bekijk de <Link href="/hyrox-heerhugowaard">HYROX-training voor Heerhugowaard</Link>.</p>
         </div>
       </section>
 
